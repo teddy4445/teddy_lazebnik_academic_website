@@ -1,8 +1,3 @@
-/*
-Author URI: http://webthemez.com/
-Note: Licence under Creative Commons Attribution 3.0  
--------------------------------------------------------*/
-
 @import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700');
 @import url('font-awesome.css');
 @import url('animate.css');
@@ -146,4 +141,36 @@ body {
 
 .info li{
 	padding-top: 5px;
+}
+
+.alert-text {
+	margin-top: 4px;
+	padding: 6px 10px;
+	border-radius: 8px;
+	color: white;
+}
+
+.alert-text:hover{
+	color: #eeeeee;
+	font-weight: bold;
+}
+
+.bg-gray{
+	background-color: #545c5e;
+}
+
+.bg-red{
+	background-color: #BF1515;
+}
+
+.bg-blue{
+	background-color: #44449b;
+}
+
+.bg-green{
+	background-color: #357935;
+}
+
+.marge-low{
+	margin-bottom: 5px;
 }
