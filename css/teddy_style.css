@@ -10,7 +10,6 @@ body {
 .container{
 	border: 2px black solid;
 	border-radius: 10px;
-	
 }
 
 .header{
@@ -85,6 +84,7 @@ body {
 
 .personal-panel img{
 	text-align: center;
+	border-radius: 100%;
 }
 
 .personal-panel h3{
@@ -148,6 +148,7 @@ body {
 	padding: 6px 10px;
 	border-radius: 8px;
 	color: white;
+	margin-right: 10px;
 }
 
 .alert-text:hover{
@@ -171,6 +172,41 @@ body {
 	background-color: #357935;
 }
 
+.bg-yellow{
+	background-color: #ccbb00;
+}
+
+.bg-white{
+	background-color: #ffffff;
+	border: 1px solid #545c5e;
+	color:  #545c5e;
+}
+
+.bg-white:hover{
+	color: #434b4d;
+	font-weight: bold;
+}
+
 .marge-low{
 	margin-bottom: 5px;
 }
+
+
+@media only screen and (max-width: 600px) {
+	.header{
+		margin-top: 0px;
+		border-bottom: 0px;
+		/* top-left | top-right | bottom-right | bottom-left */
+		border-radius: 0px 0px 0px 0px;
+	}
+	.menu{
+		border-left: 0px black solid;
+		border-right: 0px black solid;
+	}
+	.body{
+		border: 0px black solid;
+		/* top-left | top-right | bottom-right | bottom-left */
+		border-radius: 0px 0px 0px 0px ;
+	}
+}
+
