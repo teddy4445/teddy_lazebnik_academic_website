@@ -126,6 +126,11 @@ body {
 	color: #555555;
 }
 
+#VisitCount {
+	margin-top: 10px;
+	font-size: 12px;
+}
+
 .info h3{
 	font-size: 20px;
 }
@@ -207,6 +212,9 @@ body {
 		border: 0px black solid;
 		/* top-left | top-right | bottom-right | bottom-left */
 		border-radius: 0px 0px 0px 0px ;
+	}
+	#VisitCount {
+		display: none;
 	}
 }
 

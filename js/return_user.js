@@ -1,0 +1,56 @@
+// run the logic
+onPageLoad();
+
+function onPageLoad()
+{
+	let visitCount = getCookie("VisitFlag");
+	if (visitCount == "")
+	{
+		setCookie("VisitFlag", 1, 365);
+		visitCount = "1";
+	}
+	else
+	{
+		setCookie("VisitFlag", parseInt(visitCount) + 1, 365);
+	}
+	visitCount = parseInt(visitCount);
+	// write the answer 
+	let answerString = "";
+	if (visitCount == 1){
+		answerString = "* This is your first time here, nice to meet you";
+	}
+	else if (visitCount == 2){
+		answerString = "* This is your second time here, are you looking for something spesific?";
+	}
+	else if (visitCount == 3){
+		answerString = "* Need something spesific? Just write me and let's descuess that...";
+	}
+	else if (visitCount > 3){
+		answerString = "* You are visiting a lot. Write me and maybe I would be able to help.";
+	}
+	document.getElementById("VisitCount").innerHTML = answerString;
+}
+
+function setCookie(cname, cvalue, exdays)
+{
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	var expires = "expires="+d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname)
+{
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
