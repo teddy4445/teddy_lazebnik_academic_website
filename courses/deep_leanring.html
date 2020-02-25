@@ -13,6 +13,7 @@
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
+	<script src="../js/submission_table.js"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
@@ -44,14 +45,15 @@
 				</ul>
 			</div>
 			<div class="body">
-				<div class="row">
+				<div class="fluid-container">
+					<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
 						<div class="info">
 							<h2>Numerical Analysis (21319)</h2>
 							<p>
 								This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you. <br>
 								<b>Reception time is every Tuesday from 14:00 to 15:00 in my office. (Updated for: 2019-2020)</b> <br><br>
-								<b>Final grade:</b> 20% Homework, 80% final project.
+								<b>Final grade:</b> 30% Homework, 70% final project.
 							</p>
 							<p>
 								Course Goals: In recent years there has been a major breakthrough in the field of
@@ -70,12 +72,43 @@
 							<ol>
 								<li class="marge-low">
 									The course will be similar to the Stanford's cs231n course <a href="http://cs231n.stanford.edu/" target="_blank" class="alert-text bg-gray"> Website </a>
+									<a href="https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" class="alert-text bg-gray"> Youtube Lectures </a>
+								</li>
+								<li class="marge-low">
+									Google colab should help you with the trianing speed of your models <a href="https://colab.research.google.com/" target="_blank" class="alert-text bg-gray"> Website </a>
+								</li>
+								<li class="marge-low">
+									Introducing GIT <a href="https://rogerdudler.github.io/git-guide/" target="_blank" class="alert-text bg-gray"> Website </a>
+								</li>
+								<li class="marge-low">
+									BitBacket - your GIT host provider <a href="https://bitbucket.org/" target="_blank" class="alert-text bg-gray"> Website </a>
+								</li>
+							</ol>
+							<h3>Importent notes</h3>
+							<ol>
+								<li class="marge-low">
+									<h4>Honor Code</h4>
+									You may consult any papers, books, online references, or publicly available implementations for ideas and code that you may want to incorporate into your strategy or algorithm, so long as you clearly cite your sources in your code and your project description. However, under no circumstances may you look at another group’s code or incorporate their code into your project.
+								</li>
+								<li class="marge-low">
+									<h4>Collaboration Policy</h4>
+									You can work in teams of up to 2 people. Note, that 2-people final projects should be bigger and with better results then a single person's final project.
+								</li>
+								<li class="marge-low">
+									<h4>Project Proposal</h4>
+									The project proposal should be one page, no images, font "airel" 12. Your project proposal should describe:<br>
+									1. What is the problem that you will be investigating? Why is it interesting? <br>
+									2. What data will you use? If you are collecting new data, how will you do it? <br>
+									3. What method or algorithm are you proposing? do you improve exsiting method or algorithm, if so - how?<br>
+									4. How will you evaluate your results? <br>
+									5. How will you present the results of the algorithm? (e.g. plots or figures)
 								</li>
 							</ol>
 							<h3> Lessons Material </h3>
 							<ol>
 								<li class="marge-low">
-									Lesson 1 - Knn  <a target="_blank" class="alert-text bg-red" href="#"> File </a>
+									Lesson 1 - Introduction + Knn + Linear Regression <a target="_blank" class="alert-text bg-gray" href="http://cs231n.stanford.edu/slides/2019/cs231n_2019_lecture01.pdf"> File 1</a>
+									<a target="_blank" class="alert-text bg-gray" href="http://cs231n.stanford.edu/slides/2019/cs231n_2019_lecture02.pdf"> File 2</a>
 								</li>
 								<li class="marge-low">
 									Lesson 2 - Linear Calssifcation
@@ -113,7 +146,27 @@
 							</ol>
 							<h3> Home Work </h3>
 							<ol>
+								<li>
+									Home work 1 <a target="_blank" class="alert-text bg-gray" href="../files/hw_deep_learning.pdf"> File </a>
+								</li>
 							</ol>
+							<h3> Submission Table </h3>
+							<table class="table table-striped">
+							  <thead>
+								<tr>
+								  <th scope="col">#</th>
+								  <th scope="col">ID number</th>
+								  <th scope="col">Home Work 1</th>
+								  <th scope="col">Home Work 2</th>
+								  <th scope="col">Home Work 3</th>
+								  <th scope="col">Home Work 4</th>
+								  <th scope="col">Home Work 5</th>
+								  <th scope="col">Grade So Far</th>
+								</tr>
+							  </thead>
+							  <tbody id="table_data">
+							  </tbody>
+							</table>
 						</div>
 					</div>
 					</div>
@@ -122,5 +175,22 @@
 		</div>
 	</div>
 
+	<script>
+	let table_data = document.getElementById("table_data");
+	students_data = [["312188972", 0, 0, 0, 0, 0],
+					 ["320489735", 0, 0, 0, 0, 0],
+					 ["336377064", 0, 0, 0, 0, 0],
+					 ["212360333", 0, 0, 0, 0, 0],
+					 ["211513890", 0, 0, 0, 0, 0],
+					 ["211388947", 0, 0, 0, 0, 0],
+					 ["322869439", 0, 0, 0, 0, 0],
+					 ["66530551", 0, 0, 0, 0, 0],
+					 ["36532869", 0, 0, 0, 0, 0],
+					 ["322953050", 0, 0, 0, 0, 0],
+					 ["322382607", 0, 0, 0, 0, 0],
+					 ["212172654", 0, 0, 0, 0, 0],
+					 ["204845523", 0, 0, 0, 0, 0]];
+	printSubbmitionTable(students_data);
+	</script>
 </body>
 </html>
