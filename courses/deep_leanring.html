@@ -10,6 +10,9 @@
 	<!-- css -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/teddy_style.css" rel="stylesheet">
+	
+	<!-- P5 library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
@@ -163,6 +166,11 @@
 									Home work 1 <a target="_blank" class="alert-text bg-gray" href="../files/hw_deep_learning.pdf"> File </a>
 								</li>
 							</ol>
+							<h3> Random Images of shapes (HW 2 - Training sample) </h3>
+								<p>We will do shape classifier in the course. This is a sample on a JS code which generates the shapes tagged for train and test.</p>
+								<div id="canvas_container">
+									
+								</div>
 							<h3> Submission Table </h3>
 							<table class="table table-striped">
 							  <thead>
@@ -187,7 +195,83 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Random image generator -->
+	<script>
+	const SHAPE_TYPES = 
+	[
+		1, // elipse
+		2, // circle
+		3, // rect
+		4, // square
+		5 // triangle
+	]
+	
+	// general shape type
+	class Shape 
+	{
+		constructor() 
+		{
+			this.x = 30 + random(width - 60);
+			this.y = 30 + random(height - 60);
+			this.type = SHAPE_TYPES[Math.floor(Math.random() * SHAPE_TYPES.length)];
+		}
 
+		display() 
+		{
+			switch(this.type)
+			{
+				case 1: //SHAPE_TYPES.elipse:
+					ellipse(this.x, this.y, 10 + random(20), 10 + random(20));
+					text('ellipse', 5, 20);
+					break;
+				case 2: //SHAPE_TYPES.circle:
+					var r = 10 + random(20);
+					ellipse(this.x, this.y, r, r);
+					text('circle', 5, 20);
+					break;
+				case 3: //SHAPE_TYPES.rect:
+					rect(this.x, this.y, 10 + random(20), 10 + random(20));
+					text('rect', 5, 20);
+					break;
+				case 4: //SHAPE_TYPES.square:
+					var size = 10 + random(20);
+					rect(this.x, this.y, size, size);
+					text('square', 5, 20);
+					break;
+				case 5: //SHAPE_TYPES.triangle:
+					triangle(this.x + 10 + random(20), this.y + 10 + random(20), 
+							this.x + 10 + random(20), this.y - 10 - random(20),
+							this.x - 10 - random(20), this.y - 10 - random(20));
+					text('triangle', 5, 20);
+					break;
+			}
+		}
+	}
+	
+	let shaper; // declare object
+	
+	function setup()
+	{
+		let cnv = createCanvas(200, 200); // create canvas to draw on
+		cnv.parent('canvas_container'); // set the location of the canvas in the right div
+		stroke(255); // Set line drawing color to white
+		background(0); // set BG to black
+		frameRate(24); // draw once in 4 seconds
+		textSize(16); // the text size
+		fill(255);
+	}
+	
+	function draw()
+	{
+		background(0); // set BG to black
+		shaper = new Shape();
+		shaper.display();
+		frameRate(0.25); // draw once in 4 seconds
+	}
+	</script>
+	
+	<!-- student's HW score table -->
 	<script>
 	let table_data = document.getElementById("table_data");
 	students_data = [["312188972", 0, 0, 0, 0, 0],
