@@ -167,7 +167,7 @@
 								</li>
 							</ol>
 							<h3> Random Images of shapes (HW 2 - Training sample) </h3>
-								<p>We will do shape classifier in the course. This is a sample on a JS code which generates the shapes tagged for train and test.</p>
+								<p>We will do shape classifier in the course. This is a sample on a JS code which generates the shapes tagged for train and test.<br> Click to save image...</p>
 								<button class="btn btn-danger" alt="Add Noise"  onclick="changeNoise();" id="noiseButton">Add  Noise</button><br>
 								<div id="canvas_slider"></div>
 								<div id="canvas_container">
@@ -316,6 +316,13 @@
 				rect(30 + random(width - 60), 30 + random(height - 60), 1, 1);
 			}
 		}
+	}
+	
+
+	function mouseClicked() 
+	{
+		draw_shape();
+		saveCanvas(tag, 'png');
 	}
 	
 	function downloadTrainSet()
