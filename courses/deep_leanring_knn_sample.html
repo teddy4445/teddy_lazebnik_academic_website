@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Theodore (Teddy) Lazebnik</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Theodore (Teddy) Lazebnik personal website" name="description">
+    <meta content="Teddy Lazebnik" name="author">
+	<!-- css -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/teddy_style.css" rel="stylesheet">
+	
+	<!-- P5 library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
+	<script src="../js/submission_table.js"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-154895667-1');
+	</script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-lg-2 col-md-2 col-sm-1">
+		
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-10">
+			<div class="header">
+				<h1>
+				Theodore (Teddy) Lazebnik
+				</h1>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="../index.html"> Short Bio </a></li>
+					<li><a href="../publications.html"> Publications </a></li>
+					<li><a href="../students.html"> Students </a></li>
+					<li><a href="../opensource.html"> Open Resources </a></li>
+					<li><a href="../teaching.html"> Teaching </a></li>
+					<li><a href="" class="active"> Deep Leanring for Computer Vision (Knn Sample) </a></li>
+				</ul>
+			</div>
+			<div class="body">
+				<div class="fluid-container">
+					<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="info">
+							<h3> Dataset for Knn and Xnn algorithm </h3>
+								<p>The image shows the set. Click the button to download it. Each page refresh will provide a slightly different set.</p>
+								<button class="btn btn-primary" alt="Download Train Set" onclick="downloadData();" style="margin-bottom: 20px;">Download DataSet </button>
+								<div id="canvas_container">
+									
+								</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- random function to learn sample -->
+	<script>
+	
+	let centers = [[10, 10, 10], [100, 0, 100], [-50, 50, -50], [-10 ,-10 ,-10 ], [0, 100, 0]];
+	let spreds = [30, 200, 100, 30, 200];
+	
+	let data = [];
+	
+	function setup()
+	{
+		let cnv = createCanvas(400, 400, WEBGL); // create canvas to draw on
+		cnv.parent('canvas_container'); // set the location of the canvas in the right div
+		stroke(255); // Set line drawing color to white
+		frameRate(2);
+		background(50); // set BG to black
+	}
+	
+	function draw()
+	{
+		background(50); // set BG to black-ish to remove last print
+		rectMode(CENTER);
+		noStroke();
+		translate(-50, -50, 0);
+		// run over all centers and make clouds next to them
+		for (var centerIndex = 0; centerIndex < centers.length; centerIndex++)
+		{
+			var cluster_color = color(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255))); // pick random color to this set
+			// generate random number of points to each cluster
+			for (var i = 0; i < 20 + Math.floor(random(100)); i++) 
+			{
+				push(); // print logic to this point only
+				fill(cluster_color); // make the color
+				var new_location = [Math.floor(centers[centerIndex][0] - (spreds[centerIndex]/2) + random(spreds[centerIndex])),
+							Math.floor(centers[centerIndex][1] - (spreds[centerIndex]/2) + random(spreds[centerIndex])), 
+							Math.floor(centers[centerIndex][2] - (spreds[centerIndex]/2) + random(spreds[centerIndex]))];
+				data.push([new_location, centerIndex]); // remember for later to download logic
+				translate(new_location[0], new_location[1], new_location[2]); // move the dot to the right place
+				sphere(2); // print the dot
+				pop(); // finish this dot's print logic
+			}
+		}
+		noLoop(); // stop the rendering
+	}
+	
+	function downloadData()
+	{
+		let stringData = "";
+		for (var i = 0; i < data.length; i++)
+		{
+			stringData += data[i][0].toString() + "|" + data[i][1].toString() + "\n";
+		}
+		downloadasTextFile("train_data_tags.txt", stringData);
+		alert("Finished download dataset");
+	}
+	
+	function downloadasTextFile(filename, text) {
+		var element = document.createElement('a');
+		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+		element.setAttribute('download', filename);
+
+		element.style.display = 'none';
+		document.body.appendChild(element);
+
+		element.click();
+
+		document.body.removeChild(element);
+	}
+	</script>
+</body>
+</html>
