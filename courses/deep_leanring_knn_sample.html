@@ -51,13 +51,16 @@
 				<div class="fluid-container">
 					<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
-						<div class="info">
+						<div class="info" style="text-align: center;">
 							<h3> Dataset for Knn and Xnn algorithm </h3>
 								<p>The image shows the set. Click the button to download it. Each page refresh will provide a slightly different set.</p>
-								<button class="btn btn-primary" alt="Download Train Set" onclick="downloadData();" style="margin-bottom: 20px;">Download DataSet </button>
+								<button class="btn btn-primary" id="download_btn" alt="Download Train Set" onclick="downloadData();" style="margin-bottom: 20px;">Download DataSet (2d) case</button>
 								<div id="canvas_container">
 									
 								</div>
+								<p><b>Note:</b> click on the image to redraw another set<p><br>
+								<a class="btn btn-info" alt="2 dim case" href="deep_leanring_knn_sample.html?dim=2" style="margin-top: 10px;">Show 2d Case </a>
+								<a class="btn btn-info" alt="3 dim case" href="deep_leanring_knn_sample.html?dim=3" style="margin-top: 10px;">Show 3d Case </a>
 						</div>
 					</div>
 					</div>
@@ -67,47 +70,93 @@
 	</div>
 	<!-- random function to learn sample -->
 	<script>
+	let printType = new URLSearchParams(window.location.search).get('dim');
 	
-	let centers = [[10, 10, 10], [100, 0, 100], [-50, 50, -50], [-10 ,-10 ,-10 ], [0, 100, 0]];
-	let spreds = [30, 200, 100, 30, 200];
+	let centers_2d = [[10, 10], [75, 0], [-50, 50], [-10 ,-10], [0, 75]];
+	let spreds_2d = [30, 200, 100, 30, 200];
+	let centers_3d = [[10, 10, 10], [100, 0, 100], [-50, 50, -50], [-10 ,-10 ,-10 ], [0, 100, 0]];
+	let spreds_3d = [30, 200, 100, 30, 200];
 	
 	let data = [];
 	
-	function setup()
+	if (printType == "3")
 	{
-		let cnv = createCanvas(400, 400, WEBGL); // create canvas to draw on
-		cnv.parent('canvas_container'); // set the location of the canvas in the right div
-		stroke(255); // Set line drawing color to white
-		frameRate(2);
-		background(50); // set BG to black
+		document.getElementById("download_btn").innerHTML = "Download DataSet (3d) case";
+		function setup()
+		{
+			let cnv = createCanvas(400, 400, WEBGL); // create canvas to draw on
+			cnv.parent('canvas_container'); // set the location of the canvas in the right div
+			cnv.mouseClicked(redraw); // attach listener for
+			stroke(255); // Set line drawing color to white
+			frameRate(2);
+			background(250); // set BG to black
+		}
+		
+		function draw()
+		{
+			background(250); // set BG to black-ish to remove last print
+			rectMode(CENTER);
+			angleMode(DEGREES);
+			noStroke();
+			translate(-50, -50, 0);
+			// run over all centers and make clouds next to them
+			for (var centerIndex = 0; centerIndex < centers_3d.length; centerIndex++)
+			{
+				var cluster_color = color(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255))); // pick random color to this set
+				// generate random number of points to each cluster
+				for (var i = 0; i < 40 + Math.floor(random(100)); i++) 
+				{
+					push(); // print logic to this point only
+					fill(cluster_color); // make the color
+					var new_location = [Math.floor(centers_3d[centerIndex][0] - (spreds_3d[centerIndex]/2) + random(spreds_3d[centerIndex])),
+								Math.floor(centers_3d[centerIndex][1] - (spreds_3d[centerIndex]/2) + random(spreds_3d[centerIndex])), 
+								Math.floor(centers_3d[centerIndex][2] - (spreds_3d[centerIndex]/2) + random(spreds_3d[centerIndex]))];
+					data.push([new_location, centerIndex]); // remember for later to download logic
+					translate(new_location[0], new_location[1], new_location[2]); // move the dot to the right place
+					sphere(2); // print the dot
+					pop(); // finish this dot's print logic
+				}
+			}
+			noLoop(); // stop the rendering
+		}
+	}
+	else
+	{
+		function setup()
+		{
+			let cnv = createCanvas(400, 400); // create canvas to draw on
+			cnv.parent('canvas_container'); // set the location of the canvas in the right div
+			cnv.mouseClicked(redraw); // attach listener for
+			stroke(255); // Set line drawing color to white
+			frameRate(2);
+			background(250); // set BG to black
+		}
+		
+		function draw()
+		{
+			background(250); // set BG to black-ish to remove last print
+			rectMode(CENTER);
+			angleMode(DEGREES);
+			noStroke();
+			// run over all centers and make clouds next to them
+			for (var centerIndex = 0; centerIndex < centers_3d.length; centerIndex++)
+			{
+				var cluster_color = color(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255))); // pick random color to this set
+				// generate random number of points to each cluster
+				for (var i = 0; i < 20 + Math.floor(random(100)); i++) 
+				{
+					fill(cluster_color); // make the color
+					var new_location = [150 + Math.floor(centers_2d[centerIndex][0] - (spreds_2d[centerIndex]/2) + random(spreds_2d[centerIndex])),
+										150 + Math.floor(centers_2d[centerIndex][1] - (spreds_2d[centerIndex]/2) + random(spreds_2d[centerIndex]))];
+					data.push([new_location, centerIndex]); // remember for later to download logic
+					ellipse(new_location[0], new_location[1], 4, 4); // print the dot in the right place
+				}
+			}
+			noLoop(); // stop the rendering
+		}
 	}
 	
-	function draw()
-	{
-		background(50); // set BG to black-ish to remove last print
-		rectMode(CENTER);
-		noStroke();
-		translate(-50, -50, 0);
-		// run over all centers and make clouds next to them
-		for (var centerIndex = 0; centerIndex < centers.length; centerIndex++)
-		{
-			var cluster_color = color(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255))); // pick random color to this set
-			// generate random number of points to each cluster
-			for (var i = 0; i < 20 + Math.floor(random(100)); i++) 
-			{
-				push(); // print logic to this point only
-				fill(cluster_color); // make the color
-				var new_location = [Math.floor(centers[centerIndex][0] - (spreds[centerIndex]/2) + random(spreds[centerIndex])),
-							Math.floor(centers[centerIndex][1] - (spreds[centerIndex]/2) + random(spreds[centerIndex])), 
-							Math.floor(centers[centerIndex][2] - (spreds[centerIndex]/2) + random(spreds[centerIndex]))];
-				data.push([new_location, centerIndex]); // remember for later to download logic
-				translate(new_location[0], new_location[1], new_location[2]); // move the dot to the right place
-				sphere(2); // print the dot
-				pop(); // finish this dot's print logic
-			}
-		}
-		noLoop(); // stop the rendering
-	}
+	
 	
 	function downloadData()
 	{
