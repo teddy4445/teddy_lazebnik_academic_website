@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Theodore (Teddy) Lazebnik</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Theodore (Teddy) Lazebnik personal website" name="description">
+    <meta content="Teddy Lazebnik" name="author">
+	<!-- css -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/teddy_style.css" rel="stylesheet">
+	
+	<!-- P5 library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
+	<script src="../js/submission_table.js"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-154895667-1');
+	</script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-lg-2 col-md-2 col-sm-1">
+		
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-10">
+			<div class="header">
+				<h1>
+				Theodore (Teddy) Lazebnik
+				</h1>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="../index.html"> Short Bio </a></li>
+					<li><a href="../publications.html"> Publications </a></li>
+					<li><a href="../students.html"> Students </a></li>
+					<li><a href="../opensource.html"> Open Resources </a></li>
+					<li><a href="../teaching.html"> Teaching </a></li>
+					<li><a href="" class="active"> Deep Leanring for Computer Vision (Random Poses) </a></li>
+				</ul>
+			</div>
+			<div class="body">
+				<div class="fluid-container">
+					<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="info" style="text-align: center;">
+							<h3> Random Images of Poses </h3>
+								<p>This is a poses generator - not perfect yet... </p>
+								<div id="canvas_container">
+									
+								</div>
+								<p>Allow multiple file download before using and make sure you download to an empty folder and not the Computer's desktop.</p>
+								<button class="btn btn-primary" alt="Download Train Set" onclick="downloadTrainSet();">Download Train Set (10,000 samples)</button>
+								<button class="btn btn-primary" alt="Download Test Set"  onclick="downloadTestSet();">Download Test Set (500 samples)</button>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Random image generator -->
+	<script>
+	
+	let pose; // declare pose object
+	
+	// general shape type
+	class Pose 
+	{
+		constructor() 
+		{
+			this.centerOfMass = [width/2, height/2];
+			this.chest = [this.centerOfMass[0] - 10 + random(20), this.centerOfMass[0] - width/10 - random(width/20)];
+			this.head = [this.chest[0] - 10 + random(20), this.chest[1] - width/10 - random(width/20)];
+			this.sholderLeft = [this.chest[0] - width/10, this.chest[1] - 25 + random(30)];
+			this.sholderRight = [this.chest[0] + width/10, this.chest[1] - 25 + random(30)];
+			this.elbowLeft = [this.sholderLeft[0] + 15 - random(30), this.sholderLeft[1] - width/8 + random(width/6)];
+			this.elbowRight = [this.sholderRight[0] - 15 + random(30), this.sholderRight[1] - width/8 + random(width/6)];
+			this.handLeft = [this.elbowLeft[0] + 15 - random(30), this.elbowLeft[1] - 40 + random(80)];
+			this.handRight = [this.elbowRight[0] - 15 + random(30), this.elbowRight[1] - 40 + random(80)];
+			this.b = [this.centerOfMass[0] - 10 + random(20), this.centerOfMass[1] + 15 + random(20)];
+			this.kneeLeft = [this.b[0] + 30 - random(20), this.b[1] + width/6];
+			this.kneeRight = [this.b[0] - 30 + random(20), this.b[1] + width/6];
+			this.legLeft = [this.kneeLeft[0] + 30 - random(40), this.kneeLeft[1] + width/6 + random(width/12)];
+			this.legRight = [this.kneeRight[0] - 30 + random(40), this.kneeLeft[1] + width/6 + random(width/12)];
+		}
+
+		display() 
+		{
+			var print_r = 15;
+			
+			// draw lines 
+			fill(0);
+			stroke(5);
+			line(this.centerOfMass[0], this.centerOfMass[1], this.chest[0], this.chest[1]);
+			
+			line(this.chest[0], this.chest[1], this.head[0], this.head[1]);
+			
+			line(this.chest[0], this.chest[1], this.sholderLeft[0], this.sholderLeft[1]);
+			
+			line(this.chest[0], this.chest[1], this.sholderRight[0], this.sholderRight[1]);
+			
+			line(this.sholderRight[0], this.sholderRight[1], this.elbowRight[0], this.elbowRight[1]);
+			
+			line(this.elbowRight[0], this.elbowRight[1], this.handRight[0], this.handRight[1]);
+			
+			line(this.sholderLeft[0], this.sholderLeft[1], this.elbowLeft[0], this.elbowLeft[1]);
+			
+			line(this.elbowLeft[0], this.elbowLeft[1], this.handLeft[0], this.handLeft[1]);
+			
+			line(this.centerOfMass[0], this.centerOfMass[1], this.b[0], this.b[1]);
+			
+			line(this.b[0], this.b[1], this.kneeLeft[0], this.kneeLeft[1]);
+			
+			line(this.b[0], this.b[1], this.kneeRight[0], this.kneeRight[1]);
+			
+			line(this.kneeLeft[0], this.kneeLeft[1], this.legLeft[0], this.legLeft[1]);
+			
+			line(this.kneeRight[0], this.kneeRight[1], this.legRight[0], this.legRight[1]);
+			
+			stroke(0);
+			var i = 10;
+			
+			// draw centers 
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.centerOfMass[0], this.centerOfMass[1], print_r , print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("center of body", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.chest[0], this.chest[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("chest", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.head[0], this.head[1], print_r * 1.2, print_r * 1.2);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("head", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.sholderLeft[0], this.sholderLeft[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("sholderLeft", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.sholderRight[0], this.sholderRight[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("sholderRight", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.elbowLeft[0], this.elbowLeft[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("elbowLeft", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.elbowRight[0], this.elbowRight[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("elbowRight", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.handLeft[0], this.handLeft[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("handLeft", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.handRight[0], this.handRight[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("handRight", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.b[0], this.b[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("bottom", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.kneeLeft[0], this.kneeLeft[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("kneeLeft", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.kneeRight[0], this.kneeRight[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("kneeRight", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.legLeft[0], this.legLeft[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("legLeft", 20 + print_r, i + 3);
+			i = i + 20;
+			
+			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
+			ellipse(this.legRight[0], this.legRight[1], print_r, print_r);
+			ellipse(20, i, print_r, print_r);
+			fill(0);
+			text("legRight", 20 + print_r, i + 3);
+			i = i + 20;
+		}
+	}
+	
+	function setup()
+	{
+		let cnv = createCanvas(400, 400); // create canvas to draw on
+		cnv.parent('canvas_container'); // set the location of the canvas in the right div
+		stroke(255); // Set line drawing color to white
+		background(255); // set BG to white
+		frameRate(24);
+	}
+	
+	function draw()
+	{
+		draw_shape();
+		frameRate(0.5); // draw once in 2 seconds
+	}
+	
+	function draw_shape()
+	{
+		background(255); // set BG to black
+		pose = new Pose();
+		pose.display();
+	}
+	
+	function downloadTrainSet()
+	{
+		noLoop();
+		for (var i = 0; i < 10000; i++)
+		{
+			draw_shape();
+			saveCanvas('train_image_' + i.toString(), 'png');
+		}
+		alert("Finished download train set");
+	}
+	
+	function downloadTestSet()
+	{
+		noLoop();
+		for (var i = 0; i < 500; i++)
+		{	
+			draw_shape()
+			tag_file_data += tag + "\n";
+			saveCanvas('test_image_' + i.toString(), 'png');		
+		}
+		alert("Finished download test set");
+	}
+	
+	function downloadasTextFile(filename, text) {
+		var element = document.createElement('a');
+		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+		element.setAttribute('download', filename);
+
+		element.style.display = 'none';
+		document.body.appendChild(element);
+
+		element.click();
+
+		document.body.removeChild(element);
+	}
+	</script>
+</body>
+</html>

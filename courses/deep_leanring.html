@@ -93,7 +93,7 @@
 									A good example for supervised DL model with TensorFlow.JS <a href="https://www.youtube.com/watch?v=y59-frfKR58&list=PLRqwX-V7Uu6bmMRCIoTi72aNWHo7epX4L" target="_blank" class="alert-text bg-gray"> Youtube Lectures </a>
 								</li>
 								<li class="marge-low">
-									A very partcile course by Amazonn <a href="https://www.d2l.ai/" target="_blank" class="alert-text bg-gray"> Website </a>
+									A very partcile course by Amazon <a href="https://www.d2l.ai/" target="_blank" class="alert-text bg-gray"> Website </a>
 								</li>
 							</ol>
 							<h3>Importent notes</h3>
@@ -182,19 +182,15 @@
 									Home work 2 <a target="_blank" class="alert-text bg-gray" href="../files/hw_deep_learning_2.pdf"> File </a>
 								</li>
 							</ol>
-							<h3> Random points for testing Knn and Kmeans algorithms </h3>
+							<h3> Random points for testing Knn and Kmeans algorithms (HW 1) </h3>
 							<a class="btn btn-primary" alt="Knn and Xnn" href="deep_leanring_knn_sample.html?dim=3">Go to Knn and Xnn dataset page</a>
 							
 							<h3> Random Images of shapes (HW 2 - Training sample) </h3>
-								<p>We will do shape classifier in the course. This is a sample on a JS code which generates the shapes tagged for train and test.<br> Click to save image...</p>
-								<button class="btn btn-danger" alt="Add Noise"  onclick="changeNoise();" id="noiseButton">Add  Noise</button><br>
-								<div id="canvas_slider"></div>
-								<div id="canvas_container">
-									
-								</div>
-								<p>Allow multiple file download before using and make sure you download to an empty folder and not the Computer's desktop.</p>
-								<button class="btn btn-primary" alt="Download Train Set" onclick="downloadTrainSet();">Download Train Set (10,000 samples)</button>
-								<button class="btn btn-primary" alt="Download Test Set"  onclick="downloadTestSet();">Download Test Set (500 samples)</button>
+							<a class="btn btn-primary" alt="Knn and Xnn" href="deep_leanring_fnn_sample.html">Go to random shapes dataset page</a>
+							
+							<h3> Random Images of poses  </h3>
+							<a class="btn btn-primary" alt="Knn and Xnn" href="deep_leanring_fnn_sample.html">Go to random poses dataset page</a>
+							
 							<h3> Submission Table </h3>
 							<table class="table table-striped">
 							  <thead>
@@ -219,173 +215,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<!-- Random image generator -->
-	<script>
-	
-	let shaper; // declare object
-	let tag; // declare tag
-	let slider; // the noise slider
-	let hasNoise = false; // noise flag
-	
-	function changeNoise()
-	{
-		var noiseBtn = document.getElementById("noiseButton");
-		if (hasNoise)
-		{
-			noiseButton.innerHTML = "Add Noise";
-			noiseButton.classList.add("btn-danger"); 
-			noiseButton.classList.remove("btn-success");
-		}
-		else
-		{
-			noiseButton.innerHTML = "Remove Noise";
-			noiseButton.classList.add("btn-success");
-			noiseButton.classList.remove("btn-danger"); 
-		}
-		// change state
-		hasNoise = !hasNoise;
-	}
-	
-	const SHAPE_TYPES = 
-	[
-		1, // elipse
-		2, // circle
-		3, // rect
-		4, // square
-		5 // triangle
-	]
-	
-	// general shape type
-	class Shape 
-	{
-		constructor() 
-		{
-			this.x = 30 + random(width - 60);
-			this.y = 30 + random(height - 60);
-			this.type = SHAPE_TYPES[Math.floor(Math.random() * SHAPE_TYPES.length)];
-		}
-
-		display() 
-		{
-			switch(this.type)
-			{
-				case 1: //SHAPE_TYPES.elipse:
-					ellipse(this.x, this.y, 10 + random(20), 10 + random(20));
-					text('ellipse', 5, 20);
-					tag = "ellipse";
-					break;
-				case 2: //SHAPE_TYPES.circle:
-					var r = 10 + random(20);
-					ellipse(this.x, this.y, r, r);
-					text('circle', 5, 20);
-					tag = "circle";
-					break;
-				case 3: //SHAPE_TYPES.rect:
-					rect(this.x, this.y, 10 + random(20), 10 + random(20));
-					text('rect', 5, 20);
-					tag = "rect";
-					break;
-				case 4: //SHAPE_TYPES.square:
-					var size = 10 + random(20);
-					rect(this.x, this.y, size, size);
-					text('square', 5, 20);
-					tag = "square";
-					break;
-				case 5: //SHAPE_TYPES.triangle:
-					triangle(this.x + 10 + random(20), this.y + 10 + random(20), 
-							this.x + 10 + random(20), this.y - 10 - random(20),
-							this.x - 10 - random(20), this.y - 10 - random(20));
-					text('triangle', 5, 20);
-					tag = "triangle";
-					break;
-			}
-		}
-	}
-	
-	function setup()
-	{
-		let cnv = createCanvas(200, 200); // create canvas to draw on
-		cnv.parent('canvas_container'); // set the location of the canvas in the right div
-		stroke(255); // Set line drawing color to white
-		background(0); // set BG to black
-		frameRate(24); 
-		textSize(16); // the text size
-		fill(255);
-		slider = createSlider(1, 1001, 100, 25);
-		slider.parent('canvas_slider'); // set the location of the slider in the right div
-		slider.style('width', '200px');
-	}
-	
-	function draw()
-	{
-		draw_shape();
-		frameRate(0.5); // draw once in 2 seconds
-	}
-	
-	function draw_shape()
-	{
-		background(0); // set BG to black
-		shaper = new Shape();
-		shaper.display();
-		if (hasNoise)
-		{
-			for(var i = 0; i < slider.value(); i++)
-			{
-				rect(30 + random(width - 60), 30 + random(height - 60), 1, 1);
-			}
-		}
-	}
-	
-	/*
-	function mouseClicked() 
-	{
-		draw_shape();
-		saveCanvas(tag, 'png');
-	}
-	*/
-	
-	function downloadTrainSet()
-	{
-		let tag_file_data = "";
-		noLoop();
-		for (var i = 0; i < 10000; i++)
-		{
-			draw_shape();
-			tag_file_data += tag + "\n";
-			saveCanvas('train_image_' + i.toString(), 'png');
-		}
-		downloadasTextFile("train_data_tags.txt", tag_file_data);
-		alert("Finished download train set");
-	}
-	
-	function downloadTestSet()
-	{
-		let tag_file_data = "";
-		noLoop();
-		for (var i = 0; i < 500; i++)
-		{	
-			draw_shape()
-			tag_file_data += tag + "\n";
-			saveCanvas('test_image_' + i.toString(), 'png');		
-		}
-		downloadasTextFile("test_data_tags.txt", tag_file_data);
-		alert("Finished download test set");
-	}
-	
-	function downloadasTextFile(filename, text) {
-		var element = document.createElement('a');
-		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-		element.setAttribute('download', filename);
-
-		element.style.display = 'none';
-		document.body.appendChild(element);
-
-		element.click();
-
-		document.body.removeChild(element);
-	}
-	</script>
 	
 	<!-- student's HW score table -->
 	<script>
