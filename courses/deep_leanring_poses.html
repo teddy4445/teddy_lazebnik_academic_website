@@ -58,8 +58,8 @@
 									
 								</div>
 								<p>Allow multiple file download before using and make sure you download to an empty folder and not the Computer's desktop.</p>
-								<button class="btn btn-primary" alt="Download Train Set" onclick="downloadTrainSet();">Download Train Set (10,000 samples)</button>
-								<button class="btn btn-primary" alt="Download Test Set"  onclick="downloadTestSet();">Download Test Set (500 samples)</button>
+								<button class="btn btn-primary" alt="Download Train Set" onclick="downloadTrainSet();">Download Train Set (250 samples)</button>
+								<button class="btn btn-primary" alt="Download Test Set"  onclick="downloadTestSet();">Download Test Set (25 samples)</button>
 						</div>
 					</div>
 					</div>
@@ -78,20 +78,47 @@
 	{
 		constructor() 
 		{
-			this.centerOfMass = [width/2, height/2];
-			this.chest = [this.centerOfMass[0] - 10 + random(20), this.centerOfMass[0] - width/10 - random(width/20)];
-			this.head = [this.chest[0] - 10 + random(20), this.chest[1] - width/10 - random(width/20)];
-			this.sholderLeft = [this.chest[0] - width/10, this.chest[1] - 25 + random(30)];
-			this.sholderRight = [this.chest[0] + width/10, this.chest[1] - 25 + random(30)];
-			this.elbowLeft = [this.sholderLeft[0] + 15 - random(30), this.sholderLeft[1] - width/8 + random(width/6)];
-			this.elbowRight = [this.sholderRight[0] - 15 + random(30), this.sholderRight[1] - width/8 + random(width/6)];
-			this.handLeft = [this.elbowLeft[0] + 15 - random(30), this.elbowLeft[1] - 40 + random(80)];
-			this.handRight = [this.elbowRight[0] - 15 + random(30), this.elbowRight[1] - 40 + random(80)];
-			this.b = [this.centerOfMass[0] - 10 + random(20), this.centerOfMass[1] + 15 + random(20)];
-			this.kneeLeft = [this.b[0] + 30 - random(20), this.b[1] + width/6];
-			this.kneeRight = [this.b[0] - 30 + random(20), this.b[1] + width/6];
-			this.legLeft = [this.kneeLeft[0] + 30 - random(40), this.kneeLeft[1] + width/6 + random(width/12)];
-			this.legRight = [this.kneeRight[0] - 30 + random(40), this.kneeLeft[1] + width/6 + random(width/12)];
+			this.centerOfMass = [width/2 + 50, height/2];
+			
+			var shiftPoint = DotInFixDistance(width/10, 160, 200);
+			this.chest = [this.centerOfMass[0] + shiftPoint[0], this.centerOfMass[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/12, 160, 200);
+			this.head = [this.chest[0] + shiftPoint[0], this.chest[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/12, 100, 130);
+			this.sholderLeft = [this.chest[0] + shiftPoint[0], this.chest[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/12, -100, -130);
+			this.sholderRight = [this.chest[0] + shiftPoint[0], this.chest[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/12, 0, 220);
+			this.elbowLeft = [this.sholderLeft[0] + shiftPoint[0], this.sholderLeft[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/12, 0, -220);
+			this.elbowRight = [this.sholderRight[0] + shiftPoint[0], this.sholderRight[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/12, 0, 220);
+			this.handLeft = [this.elbowLeft[0] + shiftPoint[0], this.elbowLeft[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/12, 0, -220);
+			this.handRight = [this.elbowRight[0] + shiftPoint[0], this.elbowRight[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/14, -10, -10);
+			this.b = [this.centerOfMass[0] + shiftPoint[0], this.centerOfMass[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/8, 5, 45);
+			this.kneeLeft = [this.b[0] + shiftPoint[0], this.b[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/8, -45, -5);
+			this.kneeRight = [this.b[0] + shiftPoint[0], this.b[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/8, -20, 20);
+			this.legLeft = [this.kneeLeft[0] + shiftPoint[0], this.kneeLeft[1] + shiftPoint[1]];
+			
+			shiftPoint = DotInFixDistance(width/8, -20, 20);
+			this.legRight = [this.kneeRight[0] + shiftPoint[0], this.kneeLeft[1] + shiftPoint[1]];
+			
 		}
 
 		display() 
@@ -100,7 +127,8 @@
 			
 			// draw lines 
 			fill(0);
-			stroke(5);
+			stroke('black'); 
+			strokeWeight(3);
 			line(this.centerOfMass[0], this.centerOfMass[1], this.chest[0], this.chest[1]);
 			
 			line(this.chest[0], this.chest[1], this.head[0], this.head[1]);
@@ -129,41 +157,42 @@
 			
 			stroke(0);
 			var i = 10;
+			strokeWeight(0);
 			
 			// draw centers 
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.centerOfMass[0], this.centerOfMass[1], print_r , print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("center of body", 20 + print_r, i + 3);
+			text("center of body | (" + this.centerOfMass[0] + ", " + this.centerOfMass[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.chest[0], this.chest[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("chest", 20 + print_r, i + 3);
+			text("chest | (" + this.chest[0] + ", " + this.chest[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.head[0], this.head[1], print_r * 1.2, print_r * 1.2);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("head", 20 + print_r, i + 3);
+			text("head | (" + this.head[0] + ", " + this.head[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.sholderLeft[0], this.sholderLeft[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("sholderLeft", 20 + print_r, i + 3);
+			text("sholderLeft | (" + this.sholderLeft[0] + ", " + this.sholderLeft[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.sholderRight[0], this.sholderRight[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("sholderRight", 20 + print_r, i + 3);
+			text("sholderRight | (" + this.sholderRight[0] + ", " + this.sholderRight[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			
@@ -171,65 +200,73 @@
 			ellipse(this.elbowLeft[0], this.elbowLeft[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("elbowLeft", 20 + print_r, i + 3);
+			text("elbowLeft | (" + this.elbowLeft[0] + ", " + this.elbowLeft[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.elbowRight[0], this.elbowRight[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("elbowRight", 20 + print_r, i + 3);
+			text("elbowRight | (" + this.elbowRight[0] + ", " + this.elbowRight[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.handLeft[0], this.handLeft[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("handLeft", 20 + print_r, i + 3);
+			text("handLeft | (" + this.handLeft[0] + ", " + this.handLeft[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.handRight[0], this.handRight[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("handRight", 20 + print_r, i + 3);
+			text("handRight | (" + this.handRight[0] + ", " + this.handRight[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.b[0], this.b[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("bottom", 20 + print_r, i + 3);
+			text("bottom | (" + this.b[0] + ", " + this.b[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.kneeLeft[0], this.kneeLeft[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("kneeLeft", 20 + print_r, i + 3);
+			text("kneeLeft | (" + this.kneeLeft[0] + ", " + this.kneeLeft[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.kneeRight[0], this.kneeRight[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("kneeRight", 20 + print_r, i + 3);
+			text("kneeRight | (" + this.kneeRight[0] + ", " + this.kneeRight[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.legLeft[0], this.legLeft[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("legLeft", 20 + print_r, i + 3);
+			text("legLeft | (" + this.legLeft[0] + ", " + this.legLeft[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 			
 			fill(Math.floor(random(255)), Math.floor(random(255)), Math.floor(random(255)));
 			ellipse(this.legRight[0], this.legRight[1], print_r, print_r);
 			ellipse(20, i, print_r, print_r);
 			fill(0);
-			text("legRight", 20 + print_r, i + 3);
+			text("legRight | (" + this.legRight[0] + ", " + this.legRight[1] + ")", 20 + print_r, i + 3);
 			i = i + 20;
 		}
+	}
+	
+	function DotInFixDistance(d, minAlpha, maxAlpha)
+	{
+		alphaRadian = Math.floor(random(maxAlpha - minAlpha) + minAlpha) * Math.PI / 180;
+		x2 = Math.floor(Math.sin(alphaRadian) * d);
+		y2 = Math.floor(Math.cos(alphaRadian) * d);
+		return [x2, y2];
 	}
 	
 	function setup()
@@ -257,24 +294,25 @@
 	function downloadTrainSet()
 	{
 		noLoop();
-		for (var i = 0; i < 10000; i++)
+		for (var i = 0; i < 250; i++)
 		{
 			draw_shape();
 			saveCanvas('train_image_' + i.toString(), 'png');
 		}
 		alert("Finished download train set");
+		Loop();
 	}
 	
 	function downloadTestSet()
 	{
 		noLoop();
-		for (var i = 0; i < 500; i++)
+		for (var i = 0; i < 25; i++)
 		{	
-			draw_shape()
-			tag_file_data += tag + "\n";
+			draw_shape();
 			saveCanvas('test_image_' + i.toString(), 'png');		
 		}
 		alert("Finished download test set");
+		Loop();
 	}
 	
 	function downloadasTextFile(filename, text) {
