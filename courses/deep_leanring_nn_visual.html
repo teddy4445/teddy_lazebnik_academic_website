@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Theodore (Teddy) Lazebnik</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Theodore (Teddy) Lazebnik personal website" name="description">
+    <meta content="Teddy Lazebnik" name="author">
+	<!-- css -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/teddy_style.css" rel="stylesheet">
+	
+	<!-- P5 library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
+	<script src="../js/submission_table.js"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-154895667-1');
+	</script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-lg-2 col-md-2 col-sm-1">
+		
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-10">
+			<div class="header">
+				<h1>
+				Theodore (Teddy) Lazebnik
+				</h1>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="../index.html"> Short Bio </a></li>
+					<li><a href="../publications.html"> Publications </a></li>
+					<li><a href="../students.html"> Students </a></li>
+					<li><a href="../opensource.html"> Open Resources </a></li>
+					<li><a href="../teaching.html"> Teaching </a></li>
+					<li><a href="" class="active"> Deep Leanring for Computer Vision (How my NN looks like?) </a></li>
+				</ul>
+			</div>
+			<div class="body">
+				<div class="fluid-container">
+					<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="info" style="text-align: center;">
+							<h3> How my NN looks like?</h3>
+								<p><b>Note:</b> use "," to split the layers sizes. </p>
+								<form style="text-align: left;">
+									<div class="form-group">
+									<label for="layers">Layers</label>
+										<input class="form-control" type="text" id="layers" placeholder="Layers">
+									</div>
+									<div class="form-group" style="display: none;" id="cnnPanel">
+									<label for="layers">Window Size</label>
+										<input class="form-control" type="number" min="1" max="9" id="cnnSize" placeholder="Window Size" value="3">
+									</div>
+								</form>
+								<button class="btn btn-secondary" onclick="redraw();" style="margin-top: 10px; margin-bottom: 10px;">Draw!</button>
+								<button class="btn btn-warning" onclick="redrawRandom();" style="margin-top: 10px; margin-bottom: 10px;">Draw Random!</button>
+								<div id="canvas_container">
+									
+								</div>
+								<a class="btn btn-info" alt="FNN case" href="deep_leanring_nn_visual.html?type=fnn" style="margin-top: 10px;">Show FNN Case </a>
+								<a class="btn btn-info" alt="CNN case" href="deep_leanring_nn_visual.html?type=cnn" style="margin-top: 10px;">Show CNN Case </a>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Random image generator -->
+	<script>
+	let printType = new URLSearchParams(window.location.search).get('type');
+	let nn; // declare pose object
+	
+	// general shape type
+	class NN 
+	{
+		constructor(nodesPerLayer, netType) 
+		{
+			this.layers = [];
+			var nodesSizes = nodesPerLayer.split(",");
+			for (var i = 0; i < nodesSizes.length; i++)
+			{
+				var value = parseInt(nodesSizes[i]);
+				if (value < 2 && netType == "fnn")
+				{
+					value = 2;
+					alert("layer size cannot be less then '2' at index = " + i);
+				}
+				this.layers.push(value);
+			}
+			this.netType = netType;
+		}
+
+		display(screenWidth, screenHeight, cnnSize) 
+		{
+			// find sizes
+			var circleColSpace = Math.floor(screenHeight / (max(this.layers) + 1));
+			var circleRowSpace = Math.floor(screenWidth / (this.layers.length + 1));
+			var r = Math.floor(circleColSpace / 3);
+			fill(255);
+			stroke('black'); 
+			strokeWeight(3);
+			// make all the nodes
+			for (var i = 0; i < this.layers.length; i++)
+			{
+				var thisColCircleColSpace = Math.floor(screenHeight / this.layers[i] + 1);
+				for (var j = 0; j < this.layers[i]; j++)
+				{
+					circle(circleRowSpace * (i+1), thisColCircleColSpace * (j+0.5), r);
+				}
+			}
+			
+			if (this.netType == "fnn")
+			{
+				// make all the edges
+				for (var i = 0; i < this.layers.length - 1; i++)
+				{
+					var thisColCircleColSpace = Math.floor(screenHeight / this.layers[i] + 1);
+					for (var j = 0; j < this.layers[i]; j++)
+					{
+						var nextColCircleColSpace = Math.floor(screenHeight / this.layers[i+1] + 1);
+						for (var k = 0; k < this.layers[i+1]; k++)
+						{
+							line(circleRowSpace * (i+1) + r/4, thisColCircleColSpace * (j+0.5), circleRowSpace * (i+2) - r/4, nextColCircleColSpace * (k+0.5));
+						}
+					}
+				}
+			}
+			else
+			{
+				// make all the nodes
+				for (var i = 0; i < this.layers.length - 1; i++)
+				{
+					var thisColCircleColSpace = Math.floor(screenHeight / this.layers[i] + 1);
+					for (var j = 0; j < this.layers[i]; j++)
+					{
+						var nextColCircleColSpace = Math.floor(screenHeight / this.layers[i+1] + 1);
+						line(circleRowSpace * (i+1) + r/4, thisColCircleColSpace * (j+0.5), circleRowSpace * (i+2) - r/4, nextColCircleColSpace * (Math.floor(j / cnnSize)+0.5));
+					}
+				}
+			}
+		}
+	}
+	
+	function setup()
+	{
+		let cnv = createCanvas(1000, 400); // create canvas to draw on
+		cnv.parent('canvas_container'); // set the location of the canvas in the right div
+		stroke(255); // Set line drawing color to white
+		background(240); // set BG to white
+		frameRate(24);
+		if (printType == "cnn")
+		{
+			document.getElementById("cnnPanel").style.display = "";
+		}
+		randomNN(); // generate some start random NN
+		redraw();
+	}
+	
+	function draw()
+	{
+		background(240); // set BG to white
+		nn = new NN(document.getElementById("layers").value, printType);
+		nn.display(width, height, parseInt(document.getElementById("cnnSize").value));
+		noLoop();
+	}
+	
+	function randomNN()
+	{
+		if (printType == "fnn")
+		{
+			var layersCount = Math.floor(random(6)) + 2;
+			var layersTxt = "";
+			for (var i = 0; i < layersCount; i++)
+			{
+				layersTxt += Math.floor(random(9)+2) + ",";
+			}
+		}
+		else
+		{
+			var reduceSize = parseInt(document.getElementById("cnnSize").value);
+			var firstLayer = Math.floor(random(reduceSize * reduceSize * reduceSize)) + reduceSize;
+			while (firstLayer % reduceSize != 0)
+			{
+				firstLayer += 1;
+			}
+			var reducer = 1;
+			var layersTxt = "";
+			while(firstLayer / reducer >= 1)
+			{
+				layersTxt += Math.floor(firstLayer / reducer) + ",";
+				reducer *= reduceSize;
+			}
+		}
+		layersTxt = layersTxt.substring(0, layersTxt.length - 1);
+		document.getElementById("layers").value = layersTxt;
+	}
+	
+	function redrawRandom()
+	{
+		randomNN();
+		redraw();
+	}
+	
+	</script>
+</body>
+</html>
