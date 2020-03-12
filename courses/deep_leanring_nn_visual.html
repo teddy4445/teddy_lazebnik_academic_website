@@ -59,9 +59,15 @@
 									<label for="layers">Layers</label>
 										<input class="form-control" type="text" id="layers" placeholder="Layers">
 									</div>
-									<div class="form-group" style="display: none;" id="cnnPanel">
-									<label for="layers">Window Size</label>
-										<input class="form-control" type="number" min="1" max="9" id="cnnSize" placeholder="Window Size" value="3">
+									<div  style="display: none;" id="cnnPanel">
+										<div class="form-group">
+										<label for="layers">Window Size</label>
+											<input class="form-control" type="number" min="1" max="9" id="cnnSize" placeholder="Window Size" value="3">
+										</div>
+										<div class="form-group">
+										<label for="layers">Window Movement</label>
+											<input class="form-control" type="number" min="1" max="9" id="cnnMove" placeholder="Window Movement" value="1">
+										</div>
 									</div>
 								</form>
 								<button class="btn btn-secondary" onclick="redraw();" style="margin-top: 10px; margin-bottom: 10px;">Draw!</button>
@@ -104,7 +110,7 @@
 			this.netType = netType;
 		}
 
-		display(screenWidth, screenHeight, cnnSize) 
+		display(screenWidth, screenHeight, cnnSize, cnnMove) 
 		{
 			// find sizes
 			var circleColSpace = Math.floor(screenHeight / (max(this.layers) + 1));
@@ -145,11 +151,25 @@
 				for (var i = 0; i < this.layers.length - 1; i++)
 				{
 					var thisColCircleColSpace = Math.floor(screenHeight / this.layers[i] + 1);
+					var nextColCircleColSpace = Math.floor(screenHeight / this.layers[i+1] + 1);
+					var move = 0;
+					for (var j = 0; j < this.layers[i]; j++)
+					{						
+						for (var s = 0; s < cnnSize; s++)
+						{
+							if (j < this.layers[i + 1] && j + s + move < this.layers[i])
+							{
+								line(circleRowSpace * (i+1) + r/4, thisColCircleColSpace * (j + s + move + 0.5), circleRowSpace * (i+2) - r/4, nextColCircleColSpace * (j  + 0.5));
+							}
+						}
+						move += cnnMove - 1;
+					}
+					/*
 					for (var j = 0; j < this.layers[i]; j++)
 					{
-						var nextColCircleColSpace = Math.floor(screenHeight / this.layers[i+1] + 1);
 						line(circleRowSpace * (i+1) + r/4, thisColCircleColSpace * (j+0.5), circleRowSpace * (i+2) - r/4, nextColCircleColSpace * (Math.floor(j / cnnSize)+0.5));
 					}
+					*/
 				}
 			}
 		}
@@ -174,7 +194,7 @@
 	{
 		background(240); // set BG to white
 		nn = new NN(document.getElementById("layers").value, printType);
-		nn.display(width, height, parseInt(document.getElementById("cnnSize").value));
+		nn.display(width, height, parseInt(document.getElementById("cnnSize").value), parseInt(document.getElementById("cnnMove").value));
 		noLoop();
 	}
 	
@@ -182,6 +202,8 @@
 	{
 		if (printType == "fnn")
 		{
+			var reduceSize = 3;
+			var movement = 3;
 			var layersCount = Math.floor(random(6)) + 2;
 			var layersTxt = "";
 			for (var i = 0; i < layersCount; i++)
@@ -191,22 +213,32 @@
 		}
 		else
 		{
-			var reduceSize = parseInt(document.getElementById("cnnSize").value);
-			var firstLayer = Math.floor(random(reduceSize * reduceSize * reduceSize)) + reduceSize;
-			while (firstLayer % reduceSize != 0)
+			var reduceSize = 2 + Math.floor(random(3));
+			var movement = reduceSize;
+			if (movement > reduceSize)
 			{
-				firstLayer += 1;
+				movement = reduceSize;
 			}
-			var reducer = 1;
-			var layersTxt = "";
-			while(firstLayer / reducer >= 1)
+			var layers = Math.floor(random(4)) + 2;
+			var lastLayer = Math.floor(random(5)) + 4;
+			var layerSizes = [lastLayer];
+			var countLayer = lastLayer;
+			for (var layer = 1; layer < layers; layer++)
 			{
-				layersTxt += Math.floor(firstLayer / reducer) + ",";
-				reducer *= reduceSize;
+				countLayer *= reduceSize;
+				layerSizes.push(countLayer);
+			}
+			layerSizes = layerSizes.reverse();
+			var layersTxt = "";
+			for (var i = 0; i < layerSizes.length; i++)
+			{
+				layersTxt += layerSizes[i] + ","
 			}
 		}
 		layersTxt = layersTxt.substring(0, layersTxt.length - 1);
 		document.getElementById("layers").value = layersTxt;
+		document.getElementById("cnnSize").value = reduceSize.toString();
+		document.getElementById("cnnMove").value = movement.toString();
 	}
 	
 	function redrawRandom()
