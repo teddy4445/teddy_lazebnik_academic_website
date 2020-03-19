@@ -197,6 +197,33 @@ body {
 	margin-bottom: 5px;
 }
 
+.code-section{
+	background-color: #eeeeee;
+	color: black;
+	font-size: 14pt;
+	line-height: 120%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.code-class{
+	font-weight: bold;
+	color: #cc8400;
+}
+
+.code-function{
+	font-weight: 600;
+	color: #1e00cc;
+}
+
+.code-comment{
+	font-weight: 300;
+	color: #48cc00;
+}
+
 
 @media only screen and (max-width: 600px) {
 	.header{
