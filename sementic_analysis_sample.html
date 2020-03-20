@@ -57,17 +57,30 @@
 										<div class="form-group">
 											<label for="Sentences">Sentences</label>
 											<input class="form-control" type="file" id="Sentences" placeholder="Sentences">
+											<a target="_blank" class="btn btn-info" href="data/data.txt">Show Default Set</a>
 										</div>
 										<div class="form-group">
 											<label for="Tags">Tags</label>
 											<input class="form-control" type="file" id="Tags" placeholder="Tags">
+											<a target="_blank" class="btn btn-info" href="data/tags.txt">Show Default Set</a>
 										</div>
 										<div class="form-group">
 											<label for="StopWords">Stop Words</label>
 											<input class="form-control" type="file" id="StopWords" placeholder="Stop Words">
+											<a target="_blank" class="btn btn-info" href="data/sw.txt">Show Default Set</a>
 										</div>
 									</form>
 									<button id="trainBtn" class="btn btn-primary btn-lg" onclick="train();" style="margin-top: 10px; margin-bottom: 10px;">Train</button>
+									<p>Train may take up to few minutes...<br><br></p>									
+									
+									<form style="text-align: left;">
+										<div class="form-group">
+											<label for="ModelFile">Load Model File</label>
+											<input class="form-control" type="file" id="ModelFile" placeholder="Model File">
+											<a target="_blank" class="btn btn-info" href="data/model_2_tags.txt">Show Default Model</a>
+										</div>
+									</form>
+									
 								</div>
 								
 								<div id="inferance_panel" style="display: none">
@@ -84,6 +97,20 @@
 									</form>
 									<button class="btn btn-primary btn-lg" onclick="run();" style="margin-top: 10px; margin-bottom: 10px;">Check</button>
 									<div id="plot_container">
+										
+									</div>
+									<form style="text-align: left;">
+										<div class="form-group">
+											<label for="CheckWord">Check Word</label>
+											<input class="form-control" type="text" id="CheckWord" placeholder="Check Sentence">
+										</div>
+										<div class="form-group">
+											<label for="BestTagWord">Best Tag</label>
+											<input class="form-control" type="text" id="BestTagWord" placeholder="" readonly>
+										</div>
+									</form>
+									<button class="btn btn-primary btn-lg" onclick="runWord();" style="margin-top: 10px; margin-bottom: 10px;">Check Word</button>
+									<div id="plot_container_word">
 										
 									</div>
 								</div>
@@ -112,6 +139,7 @@
 	  document.getElementById('Sentences').addEventListener('change', DataFile, false);
 	  document.getElementById('Tags').addEventListener('change', TagFile, false);
 	  document.getElementById('StopWords').addEventListener('change', StopWordsFile, false);
+	  document.getElementById('ModelFile').addEventListener('change', ModelFileLoader, false);
 	}
 
 	function DataFile(event)
@@ -155,6 +183,22 @@
 	  stopWords = event.target.result;
 	  openTrain();
 	}
+
+	function ModelFileLoader(event)
+	{
+	  const reader = new FileReader();
+	  reader.onload = ModelFileLoaderLoad;
+	  reader.readAsText(event.target.files[0]);
+	  console.log("Model file loaded");
+	}
+
+	function ModelFileLoaderLoad(event)
+	{
+		stopWordsListLower = [];
+		model = JSON.parse(event.target.result);
+		document.getElementById("inferance_panel").style.display = "";
+		document.getElementById("train_panel").style.display = "none";
+	}
 	
 	function openTrain()
 	{
@@ -166,6 +210,64 @@
 		{
 			document.getElementById("trainBtn").disabled = true;
 		}
+	}
+	
+	function runWord()
+	{
+		// get input 
+		var input = document.getElementById("CheckWord").value.trim().toLowerCase();
+		
+		tagsFinalCount = new Object();
+		if (input in model)
+		{
+			var tagsCounts = model[input];
+			for (var tag in tagsCounts)
+			{
+				tagsFinalCount[tag] = tagsCounts[tag];
+			}
+		}
+		else
+		{
+			alert("Word '" + input + "' is not in the model");
+			return false;
+		}
+		// normalize ansewr again
+		var tagsDist = NormalizeCountSpace(tagsFinalCount);
+		// pick the bigget one and show on screen
+		var maxTag = null;
+		var maxScore = 0;
+		var graphData = [];
+		for (var tag in tagsDist)
+		{
+			if (tagsDist[tag] >= maxScore)
+			{
+				maxScore = tagsDist[tag];
+				maxTag = tag;
+			}
+			graphData.push([tag, 100 * tagsDist[tag]]);
+		}
+		document.getElementById("BestTagWord").value = "Tag: " + maxTag + ", confidance: " + (Math.floor((10000 * maxScore))/100) + "%";
+		// plot the distrebution as graph
+		  var data = new google.visualization.DataTable();
+		  data.addColumn('string', 'Tag');
+		  data.addColumn('number', 'Confidance');
+
+		  data.addRows(graphData);
+
+		  var options = {
+			title: 'Tags Distrebution',
+			legend: 'none',
+			hAxis: {
+			  title: 'Tag'
+			},
+			vAxis: {
+			  title: 'Confidance (%)',
+			  ticks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+			}
+		  };
+
+		  var chart = new google.visualization.ColumnChart(document.getElementById('plot_container_word'));
+		  chart.draw(data, options);
 	}
 	
 	function run()
@@ -251,14 +353,19 @@
 			return false;
 		}
 		
+		document.getElementById("trainStatus").style.display = "";
+		
 		// make sure the stop words in the same format as the data we compare to
 		stopWordsListLower = [];
 		for (var i = 0; i < stopWordsList.length; i++)
 		{
 			stopWordsListLower.push(stopWordsList[i].trim().toLowerCase());
 		}
+		console.log("Stop Words Ready");
 		
 		var fixedData = FixData(dataSentences);
+		
+		console.log("Data is in right format");
 		
 		// build the space of each tag words
 		var tagsSapces = new Object();
@@ -275,20 +382,24 @@
 				tagsSapces[tagsList[tagIndex].trim().toLowerCase()].push(fixedData[tagIndex][wordIndex]);
 			}
 		}
+		console.log("Ready Tag list");
 		// make each space a count space
 		for (var tagItem in tagsSapces)
 		{
 			tagsSapces[tagItem] = CountSpace(tagsSapces[tagItem]);
 		}
+		console.log("Data as count space");
 		
 		// set the model
-		model = reverseKeyValue(tagsSapces)
+		model = reverseKeyValue(tagsSapces);
+		console.log("Model is ready");
 		// download it
 		downloadasTextFile("model_" + Object.keys(tagsSapces).length + "_tags.txt", JSON.stringify(model));
 		
 		// update the GUI
 		document.getElementById("inferance_panel").style.display = "";
 		document.getElementById("train_panel").style.display = "none";
+		console.log("Trian finished");
 	}
 	
 	function reverseKeyValue(tagToWords)
@@ -319,13 +430,23 @@
 			}
 		}
 		
+		var countError = 0;
+		
 		// for each word, we wish to get the count for each tag
 		for(var tag in tagToWords) 
 		{
 			allTags.push(tag);
 			for(var word in tagToWords[tag])			
 			{
-				answer[word][tag] = tagToWords[tag][word];
+				try
+				{
+					answer[word][tag] = tagToWords[tag][word];
+				}
+				catch (error)
+				{
+					countError += 1;
+					console.log("Error #" + countError + " saying: " + error + ", at tag = " + tag + " & word = " + word);
+				}
 			}
 		}
 		
@@ -409,7 +530,6 @@
 		}
 		return answerFinalWords;
 	}
-	
 	
 	function downloadasTextFile(filename, text) {
 		var element = document.createElement('a');
