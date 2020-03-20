@@ -8,15 +8,13 @@
     <meta content="Theodore (Teddy) Lazebnik personal website" name="description">
     <meta content="Teddy Lazebnik" name="author">
 	<!-- css -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/teddy_style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/teddy_style.css" rel="stylesheet">
 	
-	<!-- P5 library -->
-	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
-	<script src="../js/sentement_analysis_dict.json"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
@@ -44,7 +42,7 @@
 					<li><a href="../students.html"> Students </a></li>
 					<li><a href="../opensource.html"> Open Resources </a></li>
 					<li><a href="../teaching.html"> Teaching </a></li>
-					<li><a href="" class="active"> Deep Leanring for Computer Vision (sementic analysis) </a></li>
+					<li><a href="" class="active"> Generic Sementic Analysis Sample </a></li>
 				</ul>
 			</div>
 			<div class="body">
@@ -79,6 +77,10 @@
 											<label for="Sentence">Sentence</label>
 											<input class="form-control" type="text" id="Sentence" placeholder="Check Sentence">
 										</div>
+										<div class="form-group">
+											<label for="BestTag">Best Tag</label>
+											<input class="form-control" type="text" id="BestTag" placeholder="" readonly>
+										</div>
 									</form>
 									<button class="btn btn-primary btn-lg" onclick="run();" style="margin-top: 10px; margin-bottom: 10px;">Check</button>
 									<div id="plot_container">
@@ -95,10 +97,12 @@
 	
 	<!-- Random image generator -->
 	<script>
+	google.charts.load('current', {packages: ['corechart', 'bar']});
 	
 	let data = null;
 	let tags = null;
 	let stopWords = null;
+	let stopWordsListLower = null;
 	let model = null;
 	
 	document.getElementById("trainBtn").disabled = true;
@@ -108,10 +112,6 @@
 	  document.getElementById('Sentences').addEventListener('change', DataFile, false);
 	  document.getElementById('Tags').addEventListener('change', TagFile, false);
 	  document.getElementById('StopWords').addEventListener('change', StopWordsFile, false);
-	  loadJSON(function(response) 
-	  {
-		wordsScore = response;
-	  });
 	}
 
 	function DataFile(event)
@@ -170,23 +170,71 @@
 	
 	function run()
 	{
+		// get input 
 		var input = document.getElementById("Sentence").value;
+		// convert to the same standard
 		var inputWords = FixSentence(input);
-		var wordsScores = [];
-		for (var i = 0; i < inputWords.length; i++)
-		{
-			wordsScores.push(model[inputWords[i]]);
-		}
-		// get all the possible tags 
 		
 		// sum the values for each one
-		
+		var tagsFinalCount = [];
+		var isFirstTime = true;
+		for (var i = 0; i < inputWords.length; i++)
+		{
+			if (inputWords[i] in model)
+			{
+				// get all the possible tags 
+				if (isFirstTime)
+				{
+					for (var tag in model[inputWords[i]])
+					{
+						tagsFinalCount[tag] = 0;
+					}
+					isFirstTime = false;
+				}
+				var tagsCounts = model[inputWords[i]];
+				for (var tag in tagsCounts)
+				{
+					tagsFinalCount[tag] += tagsCounts[tag];
+				}
+			}
+		}
 		// normalize ansewr again
-		
+		var tagsDist = NormalizeCountSpace(tagsFinalCount);
 		// pick the bigget one and show on screen
-		
+		var maxTag = null;
+		var maxScore = 0;
+		var graphData = [];
+		for (var tag in tagsDist)
+		{
+			if (tagsDist[tag] >= maxScore)
+			{
+				maxScore = tagsDist[tag];
+				maxTag = tag;
+			}
+			graphData.push([tag, 100 * tagsDist[tag]]);
+		}
+		document.getElementById("BestTag").value = "Tag: " + maxTag + ", confidance: " + (Math.floor((10000 * maxScore))/100) + "%";
 		// plot the distrebution as graph
-		
+		  var data = new google.visualization.DataTable();
+		  data.addColumn('string', 'Tag');
+		  data.addColumn('number', 'Confidance');
+
+		  data.addRows(graphData);
+
+		  var options = {
+			title: 'Tags Distrebution',
+			legend: 'none',
+			hAxis: {
+			  title: 'Tag'
+			},
+			vAxis: {
+			  title: 'Confidance (%)',
+			  ticks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+			}
+		  };
+
+		  var chart = new google.visualization.ColumnChart(document.getElementById('plot_container'));
+		  chart.draw(data, options);
 	}
 	
 	function train()
@@ -204,33 +252,33 @@
 		}
 		
 		// make sure the stop words in the same format as the data we compare to
-		var stopWordsListLower = [];
+		stopWordsListLower = [];
 		for (var i = 0; i < stopWordsList.length; i++)
 		{
 			stopWordsListLower.push(stopWordsList[i].trim().toLowerCase());
 		}
 		
-		var fixedData = FixData();
+		var fixedData = FixData(dataSentences);
 		
 		// build the space of each tag words
 		var tagsSapces = new Object();
 		// first, empty list to each tag
-		for (var i = 0; i < tags.length; i++)
+		for (var i = 0; i < tagsList.length; i++)
 		{
-			tagsSapces[tags[i]] = [];
+			tagsSapces[tagsList[i].trim().toLowerCase()] = [];
 		}
 		// add words to each data to this tags spaces
-		for (var i = 0; i < tags.length; i++)
+		for (var tagIndex = 0; tagIndex < tagsList.length; tagIndex++)
 		{
-			for (var j = 0; j < fixedData[i].length; j++)
+			for (var wordIndex = 0; wordIndex < fixedData[tagIndex].length; wordIndex++)
 			{
-				tagsSapces[tags[i]].push(ixedData[i][j]);
+				tagsSapces[tagsList[tagIndex].trim().toLowerCase()].push(fixedData[tagIndex][wordIndex]);
 			}
 		}
 		// make each space a count space
-		for (var i = 0; i < tags.length; i++)
+		for (var tagItem in tagsSapces)
 		{
-			tagsSapces[tags[i]] = NormalizeCountSpace(CountSpace(tagsSapces[tags[i]]));
+			tagsSapces[tagItem] = CountSpace(tagsSapces[tagItem]);
 		}
 		
 		// set the model
@@ -245,7 +293,43 @@
 	
 	function reverseKeyValue(tagToWords)
 	{
-		// TODO: finish tomorrow
+		// find all uniqe words and tags
+		var allWords = [];
+		var allTags = [];
+		for(var tag in tagToWords) 
+		{
+			allTags.push(tag);
+			for(var word in tagToWords[tag])			
+			{
+				if (!(word in allWords))
+				{
+					allWords.push(word);
+				}
+			}
+		}
+		
+		// init answer but without weights 
+		var answer = new Object();
+		for (var wordIndex = 0; wordIndex < allWords.length; wordIndex++)
+		{
+			answer[allWords[wordIndex]] = new Object();
+			for (var tagIndex = 0; tagIndex < allTags.length; tagIndex++)
+			{
+				answer[allWords[wordIndex]][allTags[tagIndex]] = 0;
+			}
+		}
+		
+		// for each word, we wish to get the count for each tag
+		for(var tag in tagToWords) 
+		{
+			allTags.push(tag);
+			for(var word in tagToWords[tag])			
+			{
+				answer[word][tag] = tagToWords[tag][word];
+			}
+		}
+		
+		return answer;
 	}
 	
 	function CountSpace(repeatWords)
@@ -267,13 +351,12 @@
 	
 	function NormalizeCountSpace(countSpace)
 	{
-		// use L2 normalization
+		// use L1 normalization
 		var sum = 0;
 		for(var key in countSpace) 
 		{
-			sum += countSpace[key] * countSpace[key];
+			sum += countSpace[key];
 		}
-		sum = Math.sqrt(sum);
 		
 		var normalizedCounts = new Object();
 		for(var key in countSpace) 
@@ -283,7 +366,7 @@
 		return normalizedCounts;
 	}
 	
-	function FixData()
+	function FixData(dataSentences)
 	{
 		// fix text //
 		// remove double spaces, non letters 
@@ -308,12 +391,12 @@
 		var answerWords = answer.split(" ");
 		// remove stop words
 		var answerFinalWords = [];
-		for (var i = 0; i < words.length; i++)
+		for (var i = 0; i < answerWords.length; i++)
 		{
 			var isStopWord = false;
 			for (var j = 0; j < stopWordsListLower.length; j++)
 			{
-				if (words[i] == stopWordsListLower[j])
+				if (answerWords[i] == stopWordsListLower[j])
 				{
 					isStopWord = true;
 					break;
@@ -321,7 +404,7 @@
 			}
 			if (!isStopWord)
 			{
-				answerFinalWords.push(words[i]);
+				answerFinalWords.push(answerWords[i]);
 			}
 		}
 		return answerFinalWords;
