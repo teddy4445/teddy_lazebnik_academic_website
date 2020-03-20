@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Theodore (Teddy) Lazebnik</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Theodore (Teddy) Lazebnik personal website" name="description">
+    <meta content="Teddy Lazebnik" name="author">
+	<!-- css -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/teddy_style.css" rel="stylesheet">
+	
+	<!-- P5 library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
+	<script src="../js/sentement_analysis_dict.json"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-154895667-1');
+	</script>
+</head>
+
+<body onload="init()">
+	<div class="row">
+		<div class="col-lg-2 col-md-2 col-sm-1">
+		
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-10">
+			<div class="header">
+				<h1>
+				Theodore (Teddy) Lazebnik
+				</h1>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="../index.html"> Short Bio </a></li>
+					<li><a href="../publications.html"> Publications </a></li>
+					<li><a href="../students.html"> Students </a></li>
+					<li><a href="../opensource.html"> Open Resources </a></li>
+					<li><a href="../teaching.html"> Teaching </a></li>
+					<li><a href="" class="active"> Deep Leanring for Computer Vision (sementic analysis) </a></li>
+				</ul>
+			</div>
+			<div class="body">
+				<div class="fluid-container">
+					<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="info">
+							<h3> General Sementic Analysis </h3>
+								<div id="train_panel">
+									<p><b>Train Panel</b></p>
+									<form style="text-align: left;">
+										<div class="form-group">
+											<label for="Sentences">Sentences</label>
+											<input class="form-control" type="file" id="Sentences" placeholder="Sentences">
+										</div>
+										<div class="form-group">
+											<label for="Tags">Tags</label>
+											<input class="form-control" type="file" id="Tags" placeholder="Tags">
+										</div>
+										<div class="form-group">
+											<label for="StopWords">Stop Words</label>
+											<input class="form-control" type="file" id="StopWords" placeholder="Stop Words">
+										</div>
+									</form>
+									<button id="trainBtn" class="btn btn-primary btn-lg" onclick="train();" style="margin-top: 10px; margin-bottom: 10px;">Train</button>
+								</div>
+								
+								<div id="inferance_panel" style="display: none">
+									<p><b>Inferance Panel</b></p>
+									<form style="text-align: left;">
+										<div class="form-group">
+											<label for="Sentence">Sentence</label>
+											<input class="form-control" type="text" id="Sentence" placeholder="Check Sentence">
+										</div>
+									</form>
+									<button class="btn btn-primary btn-lg" onclick="run();" style="margin-top: 10px; margin-bottom: 10px;">Check</button>
+									<div id="plot_container">
+										
+									</div>
+								</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Random image generator -->
+	<script>
+	
+	let data = null;
+	let tags = null;
+	let stopWords = null;
+	let model = null;
+	
+	document.getElementById("trainBtn").disabled = true;
+	
+	function init()
+	{
+	  document.getElementById('Sentences').addEventListener('change', DataFile, false);
+	  document.getElementById('Tags').addEventListener('change', TagFile, false);
+	  document.getElementById('StopWords').addEventListener('change', StopWordsFile, false);
+	  loadJSON(function(response) 
+	  {
+		wordsScore = response;
+	  });
+	}
+
+	function DataFile(event)
+	{
+	  const reader = new FileReader();
+	  reader.onload = DataFileLoad;
+	  reader.readAsText(event.target.files[0]);
+	  console.log("Data file loaded");
+	}
+
+	function DataFileLoad(event)
+	{
+	  data = event.target.result;
+	  openTrain();
+	}
+
+	function TagFile(event)
+	{
+	  const reader = new FileReader();
+	  reader.onload = TagFileLoad;
+	  reader.readAsText(event.target.files[0]);
+	  console.log("Tags file loaded");
+	}
+
+	function TagFileLoad(event)
+	{
+	  tags = event.target.result;
+	  openTrain();
+	}
+
+	function StopWordsFile(event)
+	{
+	  const reader = new FileReader();
+	  reader.onload = StopWordsFileLoad;
+	  reader.readAsText(event.target.files[0]);
+	  console.log("StopWords file loaded");
+	}
+
+	function StopWordsFileLoad(event)
+	{
+	  stopWords = event.target.result;
+	  openTrain();
+	}
+	
+	function openTrain()
+	{
+		if (data != null && tags != null & stopWords != null)
+		{
+			document.getElementById("trainBtn").disabled = false;
+		}
+		else
+		{
+			document.getElementById("trainBtn").disabled = true;
+		}
+	}
+	
+	function run()
+	{
+		var input = document.getElementById("Sentence").value;
+		var inputWords = FixSentence(input);
+		var wordsScores = [];
+		for (var i = 0; i < inputWords.length; i++)
+		{
+			wordsScores.push(model[inputWords[i]]);
+		}
+		// get all the possible tags 
+		
+		// sum the values for each one
+		
+		// normalize ansewr again
+		
+		// pick the bigget one and show on screen
+		
+		// plot the distrebution as graph
+		
+	}
+	
+	function train()
+	{
+		// prepare data objects
+		var dataSentences = data.split("\n");
+		var tagsList = tags.split("\n");
+		var stopWordsList = stopWords.split("\n");
+		
+		// check valid sizes
+		if (dataSentences.length != tagsList.length)
+		{
+			alert("The number of samples and tags are not the same - abording train");
+			return false;
+		}
+		
+		// make sure the stop words in the same format as the data we compare to
+		var stopWordsListLower = [];
+		for (var i = 0; i < stopWordsList.length; i++)
+		{
+			stopWordsListLower.push(stopWordsList[i].trim().toLowerCase());
+		}
+		
+		var fixedData = FixData();
+		
+		// build the space of each tag words
+		var tagsSapces = new Object();
+		// first, empty list to each tag
+		for (var i = 0; i < tags.length; i++)
+		{
+			tagsSapces[tags[i]] = [];
+		}
+		// add words to each data to this tags spaces
+		for (var i = 0; i < tags.length; i++)
+		{
+			for (var j = 0; j < fixedData[i].length; j++)
+			{
+				tagsSapces[tags[i]].push(ixedData[i][j]);
+			}
+		}
+		// make each space a count space
+		for (var i = 0; i < tags.length; i++)
+		{
+			tagsSapces[tags[i]] = NormalizeCountSpace(CountSpace(tagsSapces[tags[i]]));
+		}
+		
+		// set the model
+		model = reverseKeyValue(tagsSapces)
+		// download it
+		downloadasTextFile("model_" + Object.keys(tagsSapces).length + "_tags.txt", JSON.stringify(model));
+		
+		// update the GUI
+		document.getElementById("inferance_panel").style.display = "";
+		document.getElementById("train_panel").style.display = "none";
+	}
+	
+	function reverseKeyValue(tagToWords)
+	{
+		// TODO: finish tomorrow
+	}
+	
+	function CountSpace(repeatWords)
+	{
+		var counts = new Object();
+		for (var i = 0; i < repeatWords.length; i++)
+		{
+			if (repeatWords[i] in counts)
+			{
+				counts[repeatWords[i]] += 1;
+			}
+			else
+			{
+				counts[repeatWords[i]] = 1;
+			}
+		}
+		return counts;
+	}
+	
+	function NormalizeCountSpace(countSpace)
+	{
+		// use L2 normalization
+		var sum = 0;
+		for(var key in countSpace) 
+		{
+			sum += countSpace[key] * countSpace[key];
+		}
+		sum = Math.sqrt(sum);
+		
+		var normalizedCounts = new Object();
+		for(var key in countSpace) 
+		{
+			normalizedCounts[key] = countSpace[key] / sum;
+		}
+		return normalizedCounts;
+	}
+	
+	function FixData()
+	{
+		// fix text //
+		// remove double spaces, non letters 
+		var fixedSentences = [];
+		for (var i = 0; i < dataSentences.length; i++)
+		{
+			fixedSentences.push(FixSentence(dataSentences[i]));
+		}
+		return fixedSentences;
+	}
+	
+	function FixSentence(sent)
+	{
+		// remove non-alphanumeric chars and keep spaces
+		var answer = sent.trim().toLowerCase().replace(/[^0-9a-z ]/gi, ''); 
+		// remove double spaces
+		while (answer.includes("  "))
+		{
+			answer = answer.replace("  ", " ");
+		}
+		// get tokens 
+		var answerWords = answer.split(" ");
+		// remove stop words
+		var answerFinalWords = [];
+		for (var i = 0; i < words.length; i++)
+		{
+			var isStopWord = false;
+			for (var j = 0; j < stopWordsListLower.length; j++)
+			{
+				if (words[i] == stopWordsListLower[j])
+				{
+					isStopWord = true;
+					break;
+				}
+			}
+			if (!isStopWord)
+			{
+				answerFinalWords.push(words[i]);
+			}
+		}
+		return answerFinalWords;
+	}
+	
+	
+	function downloadasTextFile(filename, text) {
+		var element = document.createElement('a');
+		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+		element.setAttribute('download', filename);
+
+		element.style.display = 'none';
+		document.body.appendChild(element);
+
+		element.click();
+
+		document.body.removeChild(element);
+	}
+	</script>
+</body>
+</html>
