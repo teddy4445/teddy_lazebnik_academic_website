@@ -588,7 +588,7 @@
 			{
 				var items = lines[i].substring(15).split(":");
 				var newTag = items[0].replace("-", "").trim();
-				if (item.length == 2 && !newTag.includes("added") && !newTag.includes("removed") && !newTag.includes("changed to"))
+				if (items.length == 2 && !newTag.includes("added") && !newTag.includes("removed") && !newTag.includes("changed to"))
 				{
 					tags.push(newTag);
 					data.push(items[1]);
