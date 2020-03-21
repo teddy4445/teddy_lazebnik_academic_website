@@ -587,9 +587,10 @@
 			if (initDate.includes("/") && initDate.includes(":") && initDate.includes(",") && !lines[i].includes("<Media omitted>") && !lines[i].includes("end-to-end encryption"))
 			{
 				var items = lines[i].substring(15).split(":");
-				if (item.length == 2)
+				var newTag = items[0].replace("-", "").trim();
+				if (item.length == 2 && !newTag.includes("added") && !newTag.includes("removed") && !newTag.includes("changed to"))
 				{
-					tags.push(items[0].replace("-", "").trim());
+					tags.push(newTag);
 					data.push(items[1]);
 				}
 			}
