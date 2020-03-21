@@ -79,6 +79,13 @@
 											<input class="form-control" type="file" id="ModelFile" placeholder="Model File">
 											<a target="_blank" class="btn btn-info" href="data/model_2_tags.txt">Show Default Model</a>
 										</div>
+									</form>						
+									
+									<form style="text-align: left;">
+										<div class="form-group">
+											<label for="WhatsAppFile">WhatsApp Chat File</label>
+											<input class="form-control" type="file" id="WhatsAppFile" placeholder="Chats App Chat File">
+										</div>
 									</form>
 									
 								</div>
@@ -140,6 +147,7 @@
 	  document.getElementById('Tags').addEventListener('change', TagFile, false);
 	  document.getElementById('StopWords').addEventListener('change', StopWordsFile, false);
 	  document.getElementById('ModelFile').addEventListener('change', ModelFileLoader, false);
+	  document.getElementById('WhatsAppFile').addEventListener('change', WhatsAppFileLoader, false);
 	}
 
 	function DataFile(event)
@@ -196,6 +204,23 @@
 	{
 		stopWordsListLower = [];
 		model = JSON.parse(event.target.result);
+		document.getElementById("inferance_panel").style.display = "";
+		document.getElementById("train_panel").style.display = "none";
+	}
+
+	function WhatsAppFileLoader(event)
+	{
+	  const reader = new FileReader();
+	  reader.onload = WhatsAppFileLoaderLoad;
+	  reader.readAsText(event.target.files[0]);
+	  console.log("WhatsApp file loaded");
+	}
+
+	function WhatsAppFileLoaderLoad(event)
+	{
+		processWhatsAppChat(event.target.result);
+		console.log("WhatsApp file processed");
+		train();
 		document.getElementById("inferance_panel").style.display = "";
 		document.getElementById("train_panel").style.display = "none";
 	}
@@ -342,9 +367,19 @@
 	function train()
 	{
 		// prepare data objects
-		var dataSentences = data.split("\n");
-		var tagsList = tags.split("\n");
-		var stopWordsList = stopWords.split("\n");
+		try
+		{
+			var dataSentences = data.split("\n");
+			var tagsList = tags.split("\n");
+			var stopWordsList = stopWords.split("\n");
+		}
+		catch (error)
+		{
+			console.log("trying to check global data as lists and not strings");			
+			var dataSentences = data;
+			var tagsList = tags;
+			var stopWordsList = stopWords;
+		}
 		
 		// check valid sizes
 		if (dataSentences.length != tagsList.length)
@@ -352,8 +387,6 @@
 			alert("The number of samples and tags are not the same - abording train");
 			return false;
 		}
-		
-		document.getElementById("trainStatus").style.display = "";
 		
 		// make sure the stop words in the same format as the data we compare to
 		stopWordsListLower = [];
@@ -502,7 +535,7 @@
 	function FixSentence(sent)
 	{
 		// remove non-alphanumeric chars and keep spaces
-		var answer = sent.trim().toLowerCase().replace(/[^0-9a-z ]/gi, ''); 
+		var answer = sent.trim().toLowerCase().replace(/[^a-zа-яא-ת ]/gi, ''); 
 		// remove double spaces
 		while (answer.includes("  "))
 		{
@@ -529,6 +562,26 @@
 			}
 		}
 		return answerFinalWords;
+	}
+	
+	function processWhatsAppChat(chatData)
+	{
+		// first, run one each line
+		var lines = chatData.split("\n");
+		tags = [];
+		data = [];
+		for (var i = 0; i < lines.length; i++)
+		{
+			var initDate = lines[i].substring(0,15);
+			if (initDate.includes("/") && initDate.includes(":") && initDate.includes(","))
+			{
+				var items = lines[i].substring(15).split(":");
+				tags.push(items[0].replace("-", "").trim());
+				data.push(items[1]);
+			}
+		}
+		// TODO: find a way to hold stop words for many languages inside this function
+		stopWords = [];
 	}
 	
 	function downloadasTextFile(filename, text) {
