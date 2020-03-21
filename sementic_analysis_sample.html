@@ -525,9 +525,19 @@
 		// fix text //
 		// remove double spaces, non letters 
 		var fixedSentences = [];
+		var errorCount = 0;
 		for (var i = 0; i < dataSentences.length; i++)
 		{
-			fixedSentences.push(FixSentence(dataSentences[i]));
+			try
+			{
+				fixedSentences.push(FixSentence(dataSentences[i]));
+			}
+			catch (error)
+			{
+				errorCount += 1;
+				console.log("Error #" + errorCount + ", saying: " + error);
+				fixedSentences.push([]);
+			}
 		}
 		return fixedSentences;
 	}
@@ -573,7 +583,7 @@
 		for (var i = 0; i < lines.length; i++)
 		{
 			var initDate = lines[i].substring(0,15);
-			if (initDate.includes("/") && initDate.includes(":") && initDate.includes(","))
+			if (initDate.includes("/") && initDate.includes(":") && initDate.includes(",") && !lines[i].includes("<Media omitted>") && !lines[i].includes("end-to-end encryption"))
 			{
 				var items = lines[i].substring(15).split(":");
 				tags.push(items[0].replace("-", "").trim());
