@@ -427,7 +427,8 @@
 		model = reverseKeyValue(tagsSapces);
 		console.log("Model is ready");
 		// download it
-		downloadasTextFile("model_" + Object.keys(tagsSapces).length + "_tags.txt", JSON.stringify(model));
+		// TODO: return it later
+		//downloadasTextFile("model_" + Object.keys(tagsSapces).length + "_tags.txt", JSON.stringify(model));
 		
 		// update the GUI
 		document.getElementById("inferance_panel").style.display = "";
