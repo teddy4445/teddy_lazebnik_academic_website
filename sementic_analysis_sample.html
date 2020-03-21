@@ -587,8 +587,11 @@
 			if (initDate.includes("/") && initDate.includes(":") && initDate.includes(",") && !lines[i].includes("<Media omitted>") && !lines[i].includes("end-to-end encryption"))
 			{
 				var items = lines[i].substring(15).split(":");
-				tags.push(items[0].replace("-", "").trim());
-				data.push(items[1]);
+				if (item.length == 2)
+				{
+					tags.push(items[0].replace("-", "").trim());
+					data.push(items[1]);
+				}
 			}
 		}
 		// TODO: find a way to hold stop words for many languages inside this function
