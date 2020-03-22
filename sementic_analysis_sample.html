@@ -12,6 +12,7 @@
     <link href="css/teddy_style.css" rel="stylesheet">
     
 	<!-- stemmer logics -->
+	<script src="js/stemmers.js"></script>
 	<script src="js/PorterStemmer.js"></script>
 	
 
@@ -2054,6 +2055,8 @@ youre</p>
 	let stopWordsListLower = null;
 	let model = null;
 	
+	let russianStemmer = new RussianStemmer();
+	
 	/*
 	$(document).ready(function()
 	{
@@ -2493,10 +2496,42 @@ youre</p>
 			}
 			if (!isStopWord)
 			{
+				var stemWord = StemWord(answerWords[i]);
 				answerFinalWords.push(answerWords[i]);
 			}
 		}
 		return answerFinalWords;
+	}
+	
+	function StemWord(word)
+	{
+		var answer = stemmer(word);
+		answer = russianStemmer.stemWord(answer);
+		while (answer.startsWith("ב") || answer.startsWith("ה") || answer.startsWith("ו"))
+		{
+			answer = answer.substring(1);
+		}
+		if (answer.startsWith("כש"))
+		{
+			answer = answer.substring(2);
+		}
+		if (answer.startsWith("ל"))
+		{
+			answer = answer.substring(1);
+		}
+		if (answer.endsWith("ות"))
+		{
+			answer = answer.substring(0, answer.length - 2) + "ה";
+		}
+		if (answer.endsWith("ים"))
+		{
+			answer = answer.substring(0, answer.length - 2);
+		}
+		if (answer.endsWith("ה"))
+		{
+			answer = answer.substring(0, answer.length - 1);
+		}
+		return answer;
 	}
 	
 	function processWhatsAppChat(chatData)
