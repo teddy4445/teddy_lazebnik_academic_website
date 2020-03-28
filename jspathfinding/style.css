@@ -1,0 +1,146 @@
+html, body
+{
+	padding: 0px;
+}
+
+.center{
+	text-align: center;
+}
+
+.spacer{
+	margin-top: 20px;
+}
+
+.spacer-1{
+	margin-bottom: 20px;
+}
+
+.head{
+	font-size: 18pt !important;
+	color: black;
+	text-align: center;
+}
+
+.title{
+	font-size: 14pt !important;
+	color: gray;
+}
+
+/* game button */
+
+.round-button {
+	margin-top: 10px;
+	margin-right: 20px;
+	box-sizing: border-box;
+	display:block;
+	width:80px;
+	height:80px;
+	line-height: 20px;
+	border: 6px solid #aaa;
+	border-radius: 50%;
+	color:#f5f5f5;
+	text-align:center;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.5);
+	font-size:20px;
+	font-weight:bold;
+	transition: all 0.3s ease;
+	display: inline;
+	float: left;
+}
+.round-button:hover {
+	background-color: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 10px rgba(255,255,100,1);
+	text-shadow: 0px 0px 10px rgba(255,255,100,1);
+	color: white;
+}
+.round-button:disabled {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.act-button {
+	margin-top: 10px;
+	margin-right: 20px;
+	box-sizing: border-box;
+	display:block;
+	width:200px;
+	height:80px;
+	line-height: 20px;
+	border: 6px solid #aaa;
+	border-radius: 5%;
+	color:#f5f5f5;
+	text-align:center;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.5);
+	font-size:20px;
+	font-weight:bold;
+	transition: all 0.3s ease;
+	display: inline;
+	float: left;
+}
+.act-button:hover {
+	background-color: rgba(0,0,0,0.6);
+	box-shadow: 0px 0px 10px rgba(255,255,100,1);
+	text-shadow: 0px 0px 10px rgba(255,255,100,1);
+	text-decoration: none;
+	color: white;
+}
+
+.act-button-small {
+	margin-top: 10px;
+	margin-right: 20px;
+	box-sizing: border-box;
+	width:200px;
+	height:40px;
+	line-height: 10px;
+	border: 6px solid #aaa;
+	border-radius: 5%;
+	color:#f5f5f5;
+	text-align:center;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.5);
+	font-size:20px;
+	transition: all 0.3s ease;
+}
+
+.act-button-small:hover {
+	background-color: rgba(0,0,0,0.6);
+	text-shadow: 0px 0px 10px rgba(255,255,100,1);
+	text-decoration: none;
+	color: white;
+}
+.act-button-small:disabled {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.act-button-mini {
+	margin-top: 10px;
+	margin-right: 20px;
+	box-sizing: border-box;
+	width:80px;
+	height:40px;
+	line-height: 10px;
+	border: 6px solid #777;
+	border-radius: 5%;
+	color:#000;
+	text-align:center;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.3);
+	font-size:20px;
+	transition: all 0.3s ease;
+}
+
+.act-button-mini:hover {
+	background-color: rgba(0,0,0,0.4);
+	text-decoration: none;
+	color: white;
+}
+.act-button-mini:disabled {
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	border: 6px solid #555;
+}
+
+/* end - game button */
