@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Theodore (Teddy) Lazebnik</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Theodore (Teddy) Lazebnik personal website" name="description">
+    <meta content="Teddy Lazebnik" name="author">
+	<link rel='icon' href='img/favicon.ico' type='image/x-icon'/ >
+	<!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/teddy_style.css" rel="stylesheet">
+    
+	<!-- stemmer logics -->
+	<script src="js/stemmers.js"></script>
+	<script src="js/PorterStemmer.js"></script>
+	
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-154895667-1');
+	</script>
+</head>
+
+<body onload="init()">
+	<div class="row">
+		<div class="col-lg-2 col-md-2 col-sm-1">
+		
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-10">
+			<div class="header">
+				<h1>
+				Theodore (Teddy) Lazebnik
+				</h1>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="index.html"> Short Bio </a></li>
+					<li><a href="publications.html"> Publications </a></li>
+					<li><a href="students.html"> Students </a></li>
+					<li><a href="opensource.html"> Open Resources </a></li>
+					<li><a href="teaching.html"> Teaching </a></li>
+					<li><a href="" class="active"> Assosiative Words Grouper </a></li>
+				</ul>
+			</div>
+			<div class="body">
+				<div class="fluid-container">
+					<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="info">
+							<h2 style="text-align: center;"> Assosiative Words Grouper </h2>
+								<div id="train_panel">
+									<p><b>Loading Data Panel</b></p>
+									<p>Load the data file you wish to work on. You can download the default data set and upload it as well. <br><b>Note: </b>Loading process may take up to few seconds...<br><br></p>	
+									<form style="text-align: left;">
+										<div class="form-group">
+											<label for="dataFile">Source and reaction data file</label>
+											<input class="form-control" type="file" id="dataFile" placeholder="Source and reaction data file">
+											<br><a target="_blank" class="btn btn-info pull-right" href="data/source_and_reaction_data.txt">Show Default Set</a>
+										</div>
+									</form>		
+
+									<p>
+										How to use the system:
+										<ol>
+											<li>Upload the data file (includes the source and reaction words in a list in each line separate by ",".</li>
+											<li>You will see the source word and response words (source in the box and the response in a list). Each one will have index next to it.</li>
+											<li>Add the indexes of the words of the same group into the "Group words indexes" input box with "," between each index.</li>
+											<li>You may add the group to exsiting group using the "add to group" button and feeling the group index. You can add as new group using the "add to new group" button.</li>
+											<li>You can go to the next set or previous set each time. A mark saying on which set you are at will be shown on the top of the window.</li>
+											<li>Make sure to save the working process from time to time and when you done. The saving will keep your currnet location and groups and be used next time you need to upload your work.</li>
+										</ol>
+									</p>									
+									
+								</div>
+								
+								<div id="inferance_panel" style="display: none">
+									<p><b>Working Data Panel</b></p>
+									<div class="row">
+										<div class="col-lg-5 col-md-5 col-sm-12"  style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; ">
+											<p id="IndexWord" style="font-size: 18pt;">
+												0 = אינדקס בדיקה
+											</p>
+										</div>
+										<div class="col-lg-5 col-md-5 col-sm-12" style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; font-size: 18pt;">
+											<p id="firstWord" style="font-size: 18pt;">
+												מילת גירוי: מילה
+											</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+											<h2 style=" margin-right: 3%;">
+												מילות גירוי
+											</h2>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+											<p id="responseWords"  style="font-size: 12pt;">
+												,(1) מילה
+												,(2) מילה
+												,(3) מילה
+												,(4) מילה
+												,(5) מילה
+											</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+											<h2 style=" margin-right: 3%;">
+												קבוצות
+											</h2>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+											<p id="groups"  style="font-size: 12pt;">
+												קבוצה 1: מילה 1, מילה 2, מילה 3<br>
+												קבוצה 2: מילה 1, מילה 2, מילה 3<br>
+												קבוצה 3: מילה 1, מילה 2, מילה 3<br>
+												קבוצה 4: מילה 1, מילה 2, מילה 3<br>
+											</p>
+										</div>
+									</div>
+									<form style="text-align: left;">
+										<div class="form-group">
+											<label for="group_indexes">Group words indexes</label>
+											<input class="form-control" type="text" id="group_indexes" placeholder="Write here your indexes to group with ','">
+											<small>For example: 0,5,7,9</small>
+										</div>
+									</form>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<div class="form-group">
+												<input class="form-control" style="width: 50%; display: inline;" min="0" type="number" id="class_index" placeholder="Group Index">
+												<button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">Add To Group</button>
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 100%;  margin-top: 10px; margin-bottom: 10px;">Add To New Group</button>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-4 col-md-4 col-sm-12">
+											<button class="btn btn-primary btn-lg" onclick="next();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">Next Words</button>
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-12">
+											<button class="btn btn-success btn-lg" onclick="downloadData();" style=" width: 100%; margin-top: 10px; margin-bottom: 10px;">Save Work</button>
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-12">
+											<button class="btn btn-primary btn-lg" onclick="previous();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">Previous Words</button>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Random image generator -->
+	<script>
+	
+	let data = "";
+	let groups = [];
+	let readyData = [];
+	let sourceWords = [];
+	let wordIndex = 0;
+	let CLUSTER_DATA_SPLITER = "---CLUSTERS DATA BELOW HERE---";
+	
+	function init()
+	{
+	  document.getElementById('dataFile').addEventListener('change', LoadDataFile, false);
+	}
+
+	function LoadDataFile(event)
+	{
+	  const reader = new FileReader();
+	  reader.onload = DataFileLoaded;
+	  reader.readAsText(event.target.files[0]);
+	}
+
+	function DataFileLoaded(event)
+	{
+		data = event.target.result;
+		document.getElementById('train_panel').style.display = "none";
+		document.getElementById('inferance_panel').style.display = "";
+		loadScreen();
+	}
+	
+	function loadScreen()
+	{
+		var clustersFlag = false;
+		var clustersFirstLineIndex = 0;
+		
+		var list_data = data.split("\n");
+		readyData = [];
+		for (var i = 0; i < list_data.length; i++)
+		{
+			// stop here and start adding to clusters
+			if (list_data[i] == CLUSTER_DATA_SPLITER)
+			{
+				clustersFirstLineIndex = i + 1;
+				clustersFlag = true;
+				break;
+			}
+			var new_row = [];
+			if (list_data[i].length < 5)
+			{
+				continue;
+			}
+			var items = list_data[i].split(",");
+			sourceWords.push(items[0]);
+			for (var j = 0; j < items.length; j++)
+			{
+				new_row.push(items[j]);
+			}
+			readyData.push(new_row);
+		}
+		
+		if (clustersFlag)
+		{
+			for (var i = clustersFirstLineIndex; i < list_data.length; i++)
+			{
+				if (list_data[i].length < 5)
+				{
+					continue;
+				}
+				var new_row = [];
+				var items = list_data[i].split(",");
+				for (var j = 0; j < items.length; j++)
+				{
+					new_row.push(items[j]);
+				}
+				groups.push(new_row);
+			}
+		}
+		
+		try
+		{
+			wordIndex =  parseInt(localStorage.getItem("wordIndex"));
+			if (wordIndex === null)
+			{
+				wordIndex = 0;
+			}
+			else
+			{
+				alert("loaded last working location");
+			}
+			if (wordIndex < 0 || wordIndex > readyData.length)
+			{
+				wordIndex = 0;
+			}
+		}
+		catch (error)
+		{
+			wordIndex = 0;
+		}
+		refreshScreen();
+	}
+	
+	function refreshScreen()
+	{
+		var newResponseWords = "";
+		for (var i = 1; i < readyData[wordIndex].length; i++)
+		{
+			newResponseWords += "(" + i + ") " + readyData[wordIndex][i] + "<br>";
+		}
+		var groupsText = "";
+		for (var i = 0; i < groups.length; i++)
+		{
+			groupsText += "(" + i + ") קבוצה: ";
+			for (var j = 0; j < groups[i].length; j++)
+			{
+				groupsText += groups[i][j] + ", "
+			}
+			groupsText += "<br>";
+		}
+		
+		document.getElementById("IndexWord").innerHTML = "אינדקס בדיקה <br> " + (wordIndex + 1)+ " / " + readyData.length;
+		document.getElementById("firstWord").innerHTML = "מי גירוי  <br> " + sourceWords[wordIndex] + " (0) ";
+		document.getElementById("responseWords").innerHTML = newResponseWords;
+		document.getElementById("groups").innerHTML = groupsText;
+		document.getElementById('group_indexes').value = "";
+	}
+	
+	function addToGroup()
+	{
+		try
+		{
+			var groupIndex = parseInt(document.getElementById('class_index').value);
+			var indexValues = document.getElementById('group_indexes').value;
+			
+			if (groupIndex < 0 || groupIndex > groups.length)
+			{
+				alert("While trying to add to group, the group with index " + groupIndex + " was not found");
+				return;
+			}
+			
+			var items = indexValues.split(",");
+			for (var i = 0; i < items.length; i++)
+			{
+				try
+				{
+					var value = readyData[wordIndex][parseInt(items[i])];
+					if (value.length > 1)
+					{
+						groups[groupIndex].push(value);
+					}
+				}
+				catch (error)
+				{
+					alert("While trying to add to group, the word index " + items[i] + " was not found");
+				}
+			}
+			refreshScreen();
+		}
+		catch (error)
+		{
+			alert("erorr at 'addToGroup': " + error);
+		}
+	}
+	
+	function addToNewGroup()
+	{
+		try
+		{
+			var indexValues = document.getElementById('group_indexes').value;
+			var items = indexValues.split(",");
+			group_answers = [];
+			for (var i = 0; i < items.length; i++)
+			{
+				try
+				{
+					var value = readyData[wordIndex][parseInt(items[i])];
+					if (value.length > 1)
+					{
+						group_answers.push(value);
+					}
+				}
+				catch (error)
+				{
+					alert("While trying to add to new group, the word index " + items[i] + " was not found");
+				}
+			}
+			if (group_answers.length < 2)
+			{
+				alert("A group must contain at least 2 words");
+			}
+			else
+			{
+				groups.push(group_answers);
+			}
+			refreshScreen();
+		}
+		catch (error)
+		{
+			alert("erorr at 'addToNewGroup': " + error);
+		}
+	}
+	
+	function next()
+	{
+		if (wordIndex + 1 == readyData.length)
+		{
+			alert("This is the final set, cannot go forward");
+			return;
+		}
+		wordIndex += 1;
+		localStorage.setItem("wordIndex", wordIndex);
+		refreshScreen();
+	}
+	
+	function previous()
+	{
+		if (wordIndex - 1 == -1)
+		{
+			alert("This is the first set, cannot go back");
+			return;
+		}
+		wordIndex -= 1;
+		localStorage.setItem("wordIndex", wordIndex);
+		refreshScreen();
+	}
+	
+	function downloadData()
+	{
+		var file_data = "";
+		for (var i = 0; i < readyData.length; i++)
+		{
+			for (var j = 0; j < readyData[i].length; j++)
+			{
+				file_data += readyData[i][j];
+				if (j != readyData[i].length - 1)
+				{
+					file_data += ",";
+				}
+			}
+			file_data += "\n";
+		}
+		file_data += CLUSTER_DATA_SPLITER + "\n";
+		for (var i = 0; i < groups.length; i++)
+		{
+			for (var j = 0; j < groups[i].length; j++)
+				{
+					file_data += groups[i][j];
+					if (j != groups[i].length - 1)
+					{
+						file_data += ",";
+					}
+			}
+			file_data += "\n";
+		}
+		
+		downloadasTextFile("groups_data.txt", file_data);
+	}
+	
+	function downloadasTextFile(filename, text) {
+		var element = document.createElement('a');
+		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+		element.setAttribute('download', filename);
+
+		element.style.display = 'none';
+		document.body.appendChild(element);
+
+		element.click();
+
+		document.body.removeChild(element);
+	}
+	</script>
+</body>
+</html>
