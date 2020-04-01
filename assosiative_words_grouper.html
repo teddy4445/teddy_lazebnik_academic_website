@@ -250,12 +250,14 @@
 		try
 		{
 			wordIndex =  parseInt(localStorage.getItem("wordIndex"));
-			if (wordIndex === null)
+			if (wordIndex === null || isNaN(wordIndex))
 			{
 				wordIndex = 0;
 			}
 			else
 			{
+				wordIndex++;
+				wordIndex--;
 				alert("loaded last working location");
 			}
 			if (wordIndex < 0 || wordIndex > readyData.length)
