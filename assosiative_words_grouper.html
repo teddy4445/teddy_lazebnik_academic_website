@@ -77,40 +77,37 @@
 											<li>You may add the group to exsiting group using the "add to group" button and feeling the group index. You can add as new group using the "add to new group" button.</li>
 											<li>You can go to the next set or previous set each time. A mark saying on which set you are at will be shown on the top of the window.</li>
 											<li>Make sure to save the working process from time to time and when you done. The saving will keep your currnet location and groups and be used next time you need to upload your work.</li>
+											
+											<li><b>Note:</b> Your work will be auto saved each 5 minutes to make sure you do not lost too much work in case you forget to save it yourself.</li>
+											
 										</ol>
 									</p>									
 									
 								</div>
 								
 								<div id="inferance_panel" style="display: none">
-									<p><b>Working Data Panel</b></p>
 									<div class="row">
 										<div class="col-lg-5 col-md-5 col-sm-12"  style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; ">
 											<p id="IndexWord" style="font-size: 18pt;">
-												0 = אינדקס בדיקה
+												אינדקס בדיקה
 											</p>
 										</div>
 										<div class="col-lg-5 col-md-5 col-sm-12" style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; font-size: 18pt;">
 											<p id="firstWord" style="font-size: 18pt;">
-												מילת גירוי: מילה
+												מילת גירוי
 											</p>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
 											<h2 style=" margin-right: 3%;">
-												מילות גירוי
+												מילות תגובה
 											</h2>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
 											<p id="responseWords"  style="font-size: 12pt;">
-												,(1) מילה
-												,(2) מילה
-												,(3) מילה
-												,(4) מילה
-												,(5) מילה
 											</p>
 										</div>
 									</div>
@@ -124,40 +121,44 @@
 									<div class="row">
 										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
 											<p id="groups"  style="font-size: 12pt;">
-												קבוצה 1: מילה 1, מילה 2, מילה 3<br>
-												קבוצה 2: מילה 1, מילה 2, מילה 3<br>
-												קבוצה 3: מילה 1, מילה 2, מילה 3<br>
-												קבוצה 4: מילה 1, מילה 2, מילה 3<br>
 											</p>
 										</div>
 									</div>
-									<form style="text-align: left;">
+									<form style="text-align: right;">
 										<div class="form-group">
-											<label for="group_indexes">Group words indexes</label>
-											<input class="form-control" type="text" id="group_indexes" placeholder="Write here your indexes to group with ','">
-											<small>For example: 0,5,7,9</small>
+											<label for="group_indexes">האינקסים של המילים</label>
+											<input class="form-control" type="text" id="group_indexes" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק">
+											<small>לדגומה: 0,1,4,5,7</small>
 										</div>
 									</form>
 									<div class="row">
 										<div class="col-lg-6 col-md-6 col-sm-12">
 											<div class="form-group">
-												<input class="form-control" style="width: 50%; display: inline;" min="0" type="number" id="class_index" placeholder="Group Index">
-												<button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">Add To Group</button>
+												<button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
+												<input class="form-control" style="width: 50%; display: inline;" min="0" type="number" id="class_index" placeholder="אינקס הקבוצה">
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 100%;  margin-top: 10px; margin-bottom: 10px;">Add To New Group</button>
+											<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 100%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-lg-4 col-md-4 col-sm-12">
-											<button class="btn btn-primary btn-lg" onclick="next();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">Next Words</button>
+											<button class="btn btn-primary btn-lg" onclick="next();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">מילים הבאות</button>
 										</div>
 										<div class="col-lg-4 col-md-4 col-sm-12">
-											<button class="btn btn-success btn-lg" onclick="downloadData();" style=" width: 100%; margin-top: 10px; margin-bottom: 10px;">Save Work</button>
+											<button class="btn btn-success btn-lg" onclick="downloadData();" style=" width: 100%; margin-top: 10px; margin-bottom: 10px;">שמור עבודה</button>
 										</div>
 										<div class="col-lg-4 col-md-4 col-sm-12">
-											<button class="btn btn-primary btn-lg" onclick="previous();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">Previous Words</button>
+											<button class="btn btn-primary btn-lg" onclick="previous();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">מילים קודמות</button>
+										</div>
+									</div>
+									<div class="row" style="margin-top: 100px;">
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="form-group">
+												<button class="btn btn-danger" onclick="jumpWordIndex();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">עבור לסט מילים המתאים</button>
+												<input class="form-control" style="width: 50%; display: inline;" min="0" type="number" id="jump_index" placeholder=" אינדקס הסט שתרצה לעבור אליו">
+											</div>
 										</div>
 									</div>
 								</div>
@@ -177,6 +178,7 @@
 	let readyData = [];
 	let sourceWords = [];
 	let wordIndex = 0;
+	let isChangeDone = false;
 	let CLUSTER_DATA_SPLITER = "---CLUSTERS DATA BELOW HERE---";
 	
 	function init()
@@ -270,6 +272,7 @@
 			wordIndex = 0;
 		}
 		refreshScreen();
+		setInterval(autoSave, 300000);
 	}
 	
 	function refreshScreen()
@@ -285,13 +288,17 @@
 			groupsText += "(" + i + ") קבוצה: ";
 			for (var j = 0; j < groups[i].length; j++)
 			{
-				groupsText += groups[i][j] + ", "
+				groupsText += groups[i][j];
+				if (j != groups[i].length - 1)
+				{
+					groupsText += ", ";
+				}
 			}
 			groupsText += "<br>";
 		}
 		
 		document.getElementById("IndexWord").innerHTML = "אינדקס בדיקה <br> " + (wordIndex + 1)+ " / " + readyData.length;
-		document.getElementById("firstWord").innerHTML = "מי גירוי  <br> " + sourceWords[wordIndex] + " (0) ";
+		document.getElementById("firstWord").innerHTML = "מילת גירוי<br> " + sourceWords[wordIndex] + " (0) ";
 		document.getElementById("responseWords").innerHTML = newResponseWords;
 		document.getElementById("groups").innerHTML = groupsText;
 		document.getElementById('group_indexes').value = "";
@@ -319,6 +326,7 @@
 					if (value.length > 1)
 					{
 						groups[groupIndex].push(value);
+						isChangeDone = true;
 					}
 				}
 				catch (error)
@@ -349,6 +357,7 @@
 					if (value.length > 1)
 					{
 						group_answers.push(value);
+						isChangeDone = true;
 					}
 				}
 				catch (error)
@@ -384,6 +393,30 @@
 		refreshScreen();
 	}
 	
+	function jumpWordIndex()
+	{
+		try
+		{
+			var newWordIndex = parseInt(document.getElementById('jump_index').value) - 1;
+			document.getElementById('jump_index').value = "";
+			if (newWordIndex > readyData.length)
+			{
+				newWordIndex = readyData.length - 1;
+			}
+			else if (newWordIndex < 0)
+			{
+				newWordIndex = 0;
+			}
+			wordIndex = newWordIndex;
+			localStorage.setItem("wordIndex", wordIndex);
+			refreshScreen();
+		}
+		catch (error)
+		{
+			alert("Cannot perform the jump function because " + error);
+		}
+	}
+	
 	function previous()
 	{
 		if (wordIndex - 1 == -1)
@@ -394,6 +427,15 @@
 		wordIndex -= 1;
 		localStorage.setItem("wordIndex", wordIndex);
 		refreshScreen();
+	}
+	
+	function autoSave()
+	{
+		if (isChangeDone)
+		{
+			isChangeDone = false;
+			downloadData();
+		}
 	}
 	
 	function downloadData()
@@ -425,7 +467,7 @@
 			file_data += "\n";
 		}
 		
-		downloadasTextFile("groups_data.txt", file_data);
+		downloadasTextFile("groups_data" + getCurrentTimeDateString() + ".csv", file_data);
 	}
 	
 	function downloadasTextFile(filename, text) {
@@ -439,6 +481,15 @@
 		element.click();
 
 		document.body.removeChild(element);
+	}
+	
+	function getCurrentTimeDateString()
+	{
+		var today = new Date();
+		var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+		var dateTime = date+' '+time;
+		return dateTime;
 	}
 	</script>
 </body>
