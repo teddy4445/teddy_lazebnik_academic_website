@@ -89,7 +89,7 @@
 									<div class="row">
 										<div class="col-lg-5 col-md-5 col-sm-12"  style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; ">
 											<p id="IndexWord" style="font-size: 18pt;">
-												אינדקס בדיקה
+												אינדקס בדיקה 
 											</p>
 										</div>
 										<div class="col-lg-5 col-md-5 col-sm-12" style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; font-size: 18pt;">
@@ -107,7 +107,7 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-											<p id="responseWords"  style="font-size: 12pt;">
+											<p id="responseWords"  style="font-size: 12pt; max-height: 400px;"">
 											</p>
 										</div>
 									</div>
@@ -120,7 +120,7 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-											<p id="groups"  style="font-size: 12pt;">
+											<p id="groups"  style="font-size: 12pt; max-height: 400px;">
 											</p>
 										</div>
 									</div>
@@ -134,30 +134,31 @@
 									<div class="row">
 										<div class="col-lg-6 col-md-6 col-sm-12">
 											<div class="form-group">
+												<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_index" placeholder="שם הקבוצה">
 												<button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
-												<input class="form-control" style="width: 50%; display: inline;" min="0" type="number" id="class_index" placeholder="אינקס הקבוצה">
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 100%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
+											<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_new_index" placeholder="שם חדש לקבוצה">
+											<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-lg-4 col-md-4 col-sm-12">
-											<button class="btn btn-primary btn-lg" onclick="next();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">מילים הבאות</button>
+											<button class="btn btn-primary btn-lg" onclick="next();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">לקבוצת המילים הבאה</button>
 										</div>
 										<div class="col-lg-4 col-md-4 col-sm-12">
 											<button class="btn btn-success btn-lg" onclick="downloadData();" style=" width: 100%; margin-top: 10px; margin-bottom: 10px;">שמור עבודה</button>
 										</div>
 										<div class="col-lg-4 col-md-4 col-sm-12">
-											<button class="btn btn-primary btn-lg" onclick="previous();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">מילים קודמות</button>
+											<button class="btn btn-primary btn-lg" onclick="previous();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">לקבוצת המילים הקודמת</button>
 										</div>
 									</div>
 									<div class="row" style="margin-top: 100px;">
 										<div class="col-lg-12 col-md-12 col-sm-12">
 											<div class="form-group">
-												<button class="btn btn-danger" onclick="jumpWordIndex();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">עבור לסט מילים המתאים</button>
 												<input class="form-control" style="width: 50%; display: inline;" min="0" type="number" id="jump_index" placeholder=" אינדקס הסט שתרצה לעבור אליו">
+												<button class="btn btn-danger" onclick="jumpWordIndex();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">עבור לסט מילים המתאים</button>
 											</div>
 										</div>
 									</div>
@@ -285,8 +286,8 @@
 		var groupsText = "";
 		for (var i = 0; i < groups.length; i++)
 		{
-			groupsText += "(" + i + ") קבוצה: ";
-			for (var j = 0; j < groups[i].length; j++)
+			groupsText += "קבוצה  (" + groups[i][0] + "): ";
+			for (var j = 1; j < groups[i].length; j++)
 			{
 				groupsText += groups[i][j];
 				if (j != groups[i].length - 1)
@@ -302,18 +303,29 @@
 		document.getElementById("responseWords").innerHTML = newResponseWords;
 		document.getElementById("groups").innerHTML = groupsText;
 		document.getElementById('group_indexes').value = "";
+		window.scrollTo(0, 0);
 	}
 	
 	function addToGroup()
 	{
 		try
 		{
-			var groupIndex = parseInt(document.getElementById('class_index').value);
+			var groupName = document.getElementById('class_index').value;
 			var indexValues = document.getElementById('group_indexes').value;
 			
-			if (groupIndex < 0 || groupIndex > groups.length)
+			var foundGroupIndex = -1;
+			for (var i = 0; i < groups.length; i++)
 			{
-				alert("While trying to add to group, the group with index " + groupIndex + " was not found");
+				if (groupName in groups[i][0])
+				{
+					foundGroupIndex = i;
+					break;
+				}
+			}
+			
+			if (foundGroupIndex == -1)
+			{
+				alert("While trying to add to group, the group with name " + groupName + " was not found");
 				return;
 			}
 			
@@ -325,7 +337,7 @@
 					var value = readyData[wordIndex][parseInt(items[i])];
 					if (value.length > 1)
 					{
-						groups[groupIndex].push(value);
+						groups[foundGroupIndex].push(value);
 						isChangeDone = true;
 					}
 				}
@@ -346,9 +358,27 @@
 	{
 		try
 		{
+			var groupName = document.getElementById('class_new_index').value;
 			var indexValues = document.getElementById('group_indexes').value;
+			
+			var foundGroupIndex = -1;
+			for (var i = 0; i < groups.length; i++)
+			{
+				if (groupName == groups[i][0])
+				{
+					foundGroupIndex = i;
+					break;
+				}
+			}
+			
+			if (foundGroupIndex == -1)
+			{
+				alert("While trying to add a new group, the group with name " + groupName + " was already found so the action has been stoped");
+				return;
+			}
+			
 			var items = indexValues.split(",");
-			group_answers = [];
+			group_answers = [groupName];
 			for (var i = 0; i < items.length; i++)
 			{
 				try
@@ -365,7 +395,7 @@
 					alert("While trying to add to new group, the word index " + items[i] + " was not found");
 				}
 			}
-			if (group_answers.length < 2)
+			if (group_answers.length < 3)
 			{
 				alert("A group must contain at least 2 words");
 			}
@@ -373,12 +403,26 @@
 			{
 				groups.push(group_answers);
 			}
+			document.getElementById('class_new_index').value = "";
+			reorderGroups();
 			refreshScreen();
 		}
 		catch (error)
 		{
 			alert("erorr at 'addToNewGroup': " + error);
 		}
+	}
+	
+	function reorderGroups()
+	{
+		groups.sort(function(a, b)
+		{
+		  var keyA = a[0];
+		  var keyB = b[0];
+		  if (keyA < keyB) return -1;
+		  if (keyA > keyB) return 1;
+		  return 0;
+		});
 	}
 	
 	function next()
