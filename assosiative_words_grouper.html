@@ -99,6 +99,13 @@
 										</div>
 									</div>
 									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="progress" style="height: 30px; font-weight: bold;">
+												<div class="progress-bar" role="progressbar" style="font-size: 14pt; line-height: 1.8; width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="pb">25%</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
 										<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
 											<h2 style=" margin-right: 3%;">
 												מילות תגובה
@@ -281,7 +288,10 @@
 		var newResponseWords = "";
 		for (var i = 1; i < readyData[wordIndex].length; i++)
 		{
-			newResponseWords += "(" + i + ") " + readyData[wordIndex][i] + "<br>";
+			if (!wordInGroups(readyData[wordIndex][i]))
+			{
+				newResponseWords += "(" + i + ") " + readyData[wordIndex][i] + "<br>";
+			}
 		}
 		var groupsText = "";
 		for (var i = 0; i < groups.length; i++)
@@ -303,6 +313,11 @@
 		document.getElementById("responseWords").innerHTML = newResponseWords;
 		document.getElementById("groups").innerHTML = groupsText;
 		document.getElementById('group_indexes').value = "";
+		
+		pb = document.getElementById('pb');
+		pb.innerHTML = Math.floor(100 * (1 + wordIndex) / readyData.length) + "%";
+		pb.style.width = (100 * (1 + wordIndex) / readyData.length) + "%";
+		
 		window.scrollTo(0, 0);
 	}
 	
@@ -310,13 +325,13 @@
 	{
 		try
 		{
-			var groupName = document.getElementById('class_index').value;
+			var groupName = document.getElementById('class_index').value.trim()
 			var indexValues = document.getElementById('group_indexes').value;
 			
 			var foundGroupIndex = -1;
 			for (var i = 0; i < groups.length; i++)
 			{
-				if (groupName in groups[i][0])
+				if (groupName == groups[i][0])
 				{
 					foundGroupIndex = i;
 					break;
@@ -358,7 +373,7 @@
 	{
 		try
 		{
-			var groupName = document.getElementById('class_new_index').value;
+			var groupName = document.getElementById('class_new_index').value.trim();
 			var indexValues = document.getElementById('group_indexes').value;
 			
 			var foundGroupIndex = -1;
@@ -371,7 +386,7 @@
 				}
 			}
 			
-			if (foundGroupIndex == -1)
+			if (foundGroupIndex != -1)
 			{
 				alert("While trying to add a new group, the group with name " + groupName + " was already found so the action has been stoped");
 				return;
@@ -479,6 +494,28 @@
 		{
 			isChangeDone = false;
 			downloadData();
+		}
+	}
+	
+	function wordInGroups(checkWord)
+	{
+		try
+		{
+			for (var i = 0; i < groups.length; i++)
+			{
+				for (var j = 1; j < groups[i].length; j++)
+				{
+					if (checkWord == groups[i][j])
+					{
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+		catch (error)
+		{
+			alert("erorr at 'wordInGroups': " + error);
 		}
 	}
 	
