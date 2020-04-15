@@ -121,7 +121,7 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-											<p id="responseWords"  style="font-size: 12pt; max-height: 400px;"">
+											<p id="responseWords"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
 											</p>
 										</div>
 									</div>
@@ -134,7 +134,7 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-											<p id="groups"  style="font-size: 12pt; max-height: 400px;">
+											<p id="groups"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
 											</p>
 										</div>
 									</div>
@@ -342,13 +342,17 @@
 		var groupsText = "";
 		for (var i = 0; i < groups.length; i++)
 		{
-			groupsText += "קבוצה  (" + groups[i][0] + "): ";
+			groupsText += "קבוצה  (" + groups[i][0] + ")" + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteGroup(" + i + ")'>X</button>" + ": ";
 			for (var j = 1; j < groups[i].length; j++)
 			{
-				groupsText += groups[i][j];
+				groupsText += groups[i][j] + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteWordFromGroup(" + i + ", " + j + ")'>X</button>";
 				if (j != groups[i].length - 1)
 				{
 					groupsText += ", ";
+				}
+				else
+				{
+					groupsText += ". (סה'כ " + (groups[i].length - 1) + " מילים)";
 				}
 			}
 			groupsText += "<br>";
@@ -366,6 +370,19 @@
 		
 		window.scrollTo(0, 0);
 	}
+	
+	function deleteGroup(groupIndex)
+	{
+		groups.splice(groupIndex, 1);
+		refreshScreen();
+	}
+	
+	function deleteWordFromGroup(groupIndex, deleteWordIndex)
+	{
+		groups[groupIndex].splice(deleteWordIndex, 1);
+		refreshScreen();
+	}
+
 	
 	function addToGroup()
 	{

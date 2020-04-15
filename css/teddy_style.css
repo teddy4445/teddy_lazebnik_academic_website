@@ -224,6 +224,12 @@ body {
 	color: #48cc00;
 }
 
+.word-group-delete-btn{
+	font-size: 8px;
+	padding: 2px 4px;
+	margin-right: 5px;
+}
+
 
 @media only screen and (max-width: 600px) {
 	.header{
