@@ -285,6 +285,23 @@
 			readyData.push(new_row);
 		}
 		
+		// order from smallest to biggest
+		var swap = true;
+		while (swap)
+		{				
+			swap = false;
+			for (var i = 0; i < readyData.length - 1; i++)
+			{
+				if (readyData[i].length > readyData[i + 1].length)
+				{
+					var b = readyData[i + 1];
+					readyData[i + 1] = readyData[i];
+					readyData[i] = b;
+					swap = true;
+				}
+			}
+		}
+		
 		if (clustersFlag)
 		{
 			for (var i = clustersFirstLineIndex; i < list_data.length; i++)
