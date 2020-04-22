@@ -297,6 +297,11 @@
 					var b = readyData[i + 1];
 					readyData[i + 1] = readyData[i];
 					readyData[i] = b;
+					
+					b = sourceWords[i+1];
+					sourceWords[i+1] = sourceWords[i];
+					sourceWords[i] = b;
+					
 					swap = true;
 				}
 			}
