@@ -18,7 +18,7 @@ function printSubbmitionTable(students_data)
 			next_row_element.appendChild(next_cell);
 		}
 		var next_cell = document.createElement('td');
-		next_cell.innerHTML = (score / students_data[i].length).toFixed(1);
+		next_cell.innerHTML = (score / (students_data[i].length - 1)).toFixed(1);
 		next_row_element.appendChild(next_cell);
 		table_data.appendChild(next_row_element);
 	}
