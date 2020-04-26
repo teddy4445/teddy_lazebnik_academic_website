@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Medical Nanorobotics Flow Graph</title>
+  <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+  <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <!--<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.js"></script>-->
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <script language="javascript" type="text/javascript" src="flow_graph.js"></script>
+  <script language="javascript" type="text/javascript" src="edge.js"></script>
+  <script language="javascript" type="text/javascript" src="node.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script language="javascript" type="text/javascript" src="chart.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="plot_style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row center spacer">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1 class="center head">Medical Nanorobotics Flow Graph Generator</h1>
+			</div>
+		</div>
+		<div id="main">
+			<div class="row spacer">
+				<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2" id="game-holder">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="stat-box bg-grad-default">
+								<h2>Nodes #</h2>
+								<p id="nodes_count">0</p>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="stat-box bg-grad-default">
+								<h2>Edges #</h2>
+								<p id="edges_count">0</p>
+							</div>
+						</div>
+					</div>
+					<!-- The game-->
+					<div id="game"></div>
+					<!-- End - The game-->
+				</div>
+			</div>
+			<div class="row spacer">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+					<div id="histogramGraph"></div>
+					<p> State distribution over population per generation</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
