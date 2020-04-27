@@ -79,9 +79,16 @@ function closeLoadModelPanel()
 	IS_PANEL_OPEN = false;
 }
 
-function load_model()
+$(document).on('change', '#fg_load_file', function(event) 
 {
-	// fg = JSON.parse();
+  var reader = new FileReader();
+
+  reader.onload = function(event) 
+  {
+	  fg = FlowGraph.from_json(JSON.parse(event.target.result));
+  }
+
+	reader.readAsText(event.target.files[0]);
 	$('#load_data_file').hide();
-	IS_PANEL_OPEN = false;
-}
+	IS_PANEL_OPEN = false;	
+});

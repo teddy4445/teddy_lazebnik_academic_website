@@ -131,6 +131,11 @@ async function mouseClicked()
 		// check if next to node, if does - remove it
 		if (nextToNode != ERROR_VALUE)
 		{
+			// just to make sure we don't delete something marked
+			if (fg.is_node_marked(nextToNode))
+			{
+				fg.unmark_node(nextToNode);
+			}
 			fg.delete_node(nextToNode);
 		}
 		else // check if need to delete edge
@@ -205,9 +210,5 @@ function putMouse()
 	strokeWeight(3);
 	line(mouseX - 5, mouseY, mouseX + 5, mouseY);
 	line(mouseX, mouseY - 5, mouseX, mouseY + 5);
-	
-	
-	if (keyIsDown(69)) // 'E' key code
-	{
-	}
+
 }

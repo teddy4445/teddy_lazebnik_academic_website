@@ -8,6 +8,11 @@ class Edge
 		this.type = type;
 	}
 	
+	static from_json(json)
+	{
+		return new Edge(json.start_node_id, json.end_node_id, json.w, json.type);
+	}
+	
 	show(nodes) 
 	{
 		try

@@ -28,6 +28,11 @@ class Node
 		this.ts = ts;
 	}
 	
+	static from_json(json)
+	{
+		return new Node(json.id, json.x, json.y, json.type, json.organ_name, json.lip, json.ts);
+	}
+	
 	mark()
 	{
 		this.marked = true;

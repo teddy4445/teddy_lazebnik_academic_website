@@ -8,6 +8,21 @@ class FlowGraph
 		this._running_id = 1;
 	}
 	
+	static from_json(json)
+	{
+		var answer = new FlowGraph();
+		answer._running_id = json._running_id;
+		for (var i = 0; i < json.nodes.length; i++)
+		{
+			answer.nodes.push(Node.from_json(json.nodes[i]));
+		}
+		for (var i = 0; i < json.edges.length; i++)
+		{
+			answer.edges.push(Edge.from_json(json.edges[i]));
+		}
+		return answer;
+	}
+	
 	nodes_count()
 	{
 		return this.nodes.length;
