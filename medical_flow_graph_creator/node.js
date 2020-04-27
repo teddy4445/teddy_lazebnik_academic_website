@@ -1,3 +1,19 @@
+class Point
+{
+	constructor(x, y)
+	{
+		this.x = x;
+		this.y = y;
+	}
+	
+	show() 
+	{
+		var r = MAX_R / 4;
+		ellipse(this.x, this.y, r, r);
+	}
+	
+}
+
 class Node
 {
 	constructor(id, x, y, type)

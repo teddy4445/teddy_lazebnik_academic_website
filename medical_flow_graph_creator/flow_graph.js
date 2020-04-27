@@ -5,6 +5,7 @@ class FlowGraph
 		this.nodes = [];
 		this.edges = [];
 		this._marked_nodes = 0;
+		this._running_id = 1;
 	}
 	
 	nodes_count()
@@ -24,20 +25,62 @@ class FlowGraph
 	
 	add_node(x, y, type)
 	{
-		this.nodes.push(new Node(this.nodes.length + 1, x, y, type));
+		this.nodes.push(new Node(this._running_id, x, y, type));
+		console.log("Add node with id = " + this._running_id);
+		this._running_id += 1;
+	}
+	
+	delete_node(node_index)
+	{
+		var node_id = this.nodes[node_index].id;
+		var i = 0;
+		while(i < this.edges.length)
+		{
+			if (this.edges[i].start_node_id == node_id || this.edges[i].end_node_id == node_id)
+			{
+				this.edges.splice(i, 1);
+				i -= 1;
+			}
+			i += 1;
+		}
+		this.nodes.splice(node_index, 1);
+		console.log("Delete node with id = " + node_id);
+	}
+	
+	try_delete_edge(x, y)
+	{
+		var id_to_index = {};
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			id_to_index[this.nodes[i].id] = i;
+		}
+		
+		for (var i = 0; i < this.edges.length; i++)
+		{
+			if (distToSegment(new Point(x, y), this.nodes[id_to_index[this.edges[i].start_node_id]], this.nodes[id_to_index[this.edges[i].end_node_id]]) < MAX_R)
+			{
+				console.log("Delete edge with points: (" + this.edges[i].start_node_id + ", " + this.edges[i].end_node_id + ")");
+				this.edges.splice(i, 1);
+				break;
+			}
+		}
 	}
 	
 	add_edge(node_i_index, node_j_index, w, type)
-	{	
+	{
+		var node_i_id = this.nodes[node_i_index].id;
+		var node_j_id = this.nodes[node_j_index].id;
+		
 		for (var i = 0; i < this.edges.length; i++)
 		{
-			if ((this.edges[i].start_node_index == node_i_index && this.edges[i].end_node_index == node_j_index) || 
-				(this.edges[i].start_node_index == node_j_index && this.edges[i].end_node_index == node_i_index))
+			if ((this.edges[i].start_node_id == node_i_id && this.edges[i].end_node_id == node_j_id) || 
+				(this.edges[i].start_node_id == node_j_id && this.edges[i].end_node_id == node_i_id))
 			{
 				return false;
 			}
 		}
-		this.edges.push(new Edge(node_i_index, node_j_index, w, type));
+		this.edges.push(new Edge(node_i_id, node_j_id, w, type));
+		console.log("Add edge with points: (" + node_i_id + ", " + node_j_id + ")");
 		return true;
 	}
 	
@@ -103,8 +146,8 @@ class FlowGraph
 		}
 		for (var i = 0; i < this.edges.length; i++)
 		{
-			degreesPerNode[this.edges[i].start_node_index] += 2;
-			degreesPerNode[this.edges[i].end_node_index] += 2;
+			degreesPerNode[this.edges[i].start_node_id] += 2;
+			degreesPerNode[this.edges[i].end_node_id] += 2;
 		}
 		
 		var degrees = {};

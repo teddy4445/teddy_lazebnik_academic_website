@@ -4,6 +4,7 @@
 var ERROR_VALUE = -1;
 var zIndex = 300;
 var gridSize = 40;
+var box_size = 1;
 let fg = null;
 var histogramData = [];
 
@@ -23,6 +24,7 @@ var MAX_R = 30;
 function setup() {
 	// set up the simulator in the page
 	widthElement = document.getElementById('game-holder').getBoundingClientRect().width;
+	box_size = widthElement / gridSize;
 	var cnv = createCanvas(widthElement, widthElement);
 	cnv.parent('game');
 	fg = new FlowGraph();
@@ -33,8 +35,8 @@ function setup() {
 function draw() 
 {
 	drawGrid();
-	putMouse();
 	fg.show();
+	putMouse();
 }
 
 
@@ -50,7 +52,7 @@ function mouseClicked()
 		{
 			// add new node
 			// TODO: get status from GUI
-			fg.add_node(mouseX, mouseY, ORGAN);
+			fg.add_node(Math.round(mouseX / box_size) * box_size, Math.round(mouseY / box_size) * box_size, ORGAN);
 		}
 		else // picked a node 
 		{
@@ -121,7 +123,14 @@ function drawGrid()
 
 function putMouse()
 {
-	stroke(255, 204, 0);
+	if (!keyIsDown(16))
+	{
+		stroke(255, 204, 0);	
+	}
+	else
+	{
+		stroke(255, 50, 0);
+	}
 	strokeWeight(3);
 	line(mouseX - 5, mouseY, mouseX + 5, mouseY);
 	line(mouseX, mouseY - 5, mouseX, mouseY + 5);
