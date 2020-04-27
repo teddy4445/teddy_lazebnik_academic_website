@@ -49,7 +49,7 @@ function draw()
 async function mouseClicked() 
 {
 	// if panel open, ignore short keys
-	if (IS_PANEL_OPEN)
+	if (IS_PANEL_OPEN || keyIsDown(69)) // 'E' key code
 	{
 		return;
 	}
@@ -91,6 +91,7 @@ async function mouseClicked()
 					await sleep(1000);
 				}
 				var organ_name = document.getElementById("organ_name").value;
+				document.getElementById("organ_name").value = "";
 				var lip = document.getElementById("lip").value;
 				var ts = document.getElementById("ts").value;
 			}
@@ -180,7 +181,7 @@ function putMouse()
 	else if (keyIsDown(69)) // 'E' key code
 	{
 		// check if "edit" mode is on
-		fill(255);
+		fill(220);
 		rect(0, 0, widthElement, 25);
 		fill(0);
 		text(fg.node_status(mouseX, mouseY), 5, 20);
