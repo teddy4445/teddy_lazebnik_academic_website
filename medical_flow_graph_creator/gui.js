@@ -59,6 +59,17 @@ function keyPressed()
 		$('#load_data_file').show();
 		IS_PANEL_OPEN = true;
 	}
+	
+	if (keyCode === 82) // code of 'r'
+	{
+		if (fg.nodes_count() == 0)
+		{
+			alert("add at least one node to the flow graph");
+			return;
+		}
+		$('#release_fg_panel').show();
+		IS_PANEL_OPEN = true;
+	}
 }
 
 // download a .txt file into your computer
@@ -77,6 +88,36 @@ function closeLoadModelPanel()
 {
 	$('#load_data_file').hide();
 	IS_PANEL_OPEN = false;
+}
+
+function closeReleasePanel()
+{
+	$('#release_fg_panel').hide();
+	IS_PANEL_OPEN = false;
+}
+
+function releaseModel()
+{
+	var answer = fg.to_string();
+	
+	var population_of_nanorobotics_size = document.getElementById("population_of_nanorobotics_size").value;
+	var population_of_nanorobotics_half_life = document.getElementById("population_of_nanorobotics_half_life").value;
+	var mnr_state_code = document.getElementById("mnr_state_code").value;
+	var injection_node_index = document.getElementById("injection_node_index").value;
+	var global_interaction_protocol = document.getElementById("global_interaction_protocol").value;
+	
+	if (population_of_nanorobotics_size == "" ||
+		population_of_nanorobotics_half_life == "" ||
+		mnr_state_code == "" ||
+		injection_node_index == "" ||
+		global_interaction_protocol == "")
+	{
+		alert("Fill all the needed data");
+		return false;
+	}
+	answer += "\nnano_size = " + population_of_nanorobotics_size + "\npopulation_decay = MnrPopulationDecay(original_size=nano_size, half_life=" + population_of_nanorobotics_half_life + ")\nmnr_population = MnrPopulation(initial_population=[MNR(index=index,kill_tics=population_decay.get_next_kill_tics(),state=" + mnr_state_code + ")for index in range(nano_size)])\nflow_graph.inject_population(node_index=" + injection_node_index + ", population=mnr_population.get_population())\nglobal_interaction_protocol = GlobalInteractionProtocol(global_interaction_protocol=" + global_interaction_protocol + "())\nmodel = BloodMnrModel(flow_graph=flow_graph,mnr_population=mnr_population,global_interaction_protocol=global_interaction_protocol)";
+	
+	downloadasTextFile("fg_with_metadata_py_code.txt", answer);
 }
 
 $(document).on('change', '#fg_load_file', function(event) 

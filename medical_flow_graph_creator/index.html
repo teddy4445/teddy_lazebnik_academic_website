@@ -42,8 +42,9 @@
 									<li> Hold "E" to enter edit \ info mode, click on a node to edit it</li>
 									<li> Hit "O" to 'add Organ node' mode</li>
 									<li> Hit "B" to 'add Blood Vassal node' mode</li>
-									<li> Hit "s" to save your work into Python code and JS model</li>
-									<li> Hit "l" to open load model screen</li>
+									<li> Hit "S" to save your work into Python code and JS model</li>
+									<li> Hit "L" to open load model screen</li>
+									<li> Hit "R" to release the flow graph with the additinal info for the full model</li>
 								</ol>
 							</p>
 						</div>
@@ -151,6 +152,57 @@
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal" onclick="return closeLoadModelPanel();">Cancel</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div class="modal fade" id="release_fg_panel" tabindex="-1" role="dialog" aria-labelledby="release_fg_panel_label" aria-hidden="true" style="opacity: 1; top: 40%; padding-top: 20px;">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="release_fg_panel_label">Release Model</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="return closeReleasePanel();">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="form-group">
+						<label for="population_of_nanorobotics_size">Population Of Nanorobotics Size</label>
+						<input type="number" min="1" max="9999999" class="form-control" id="population_of_nanorobotics_size" placeholder="Population Of Nanorobotics Size">
+				  </div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				  <div class="form-group">
+						<label for="population_of_nanorobotics_half_life">Population Of Nanorobotics Half Life</label>
+						<input type="number" min="1" max="9999999" class="form-control" id="population_of_nanorobotics_half_life" placeholder="Population Of Nanorobotics Half Life">
+				  </div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				  <div class="form-group">
+					<label for="mnr_state_code">MNR state code</label>
+					<input type="text" class="form-control" id="mnr_state_code" placeholder="MNR state code">
+				  </div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				  <div class="form-group">
+						<label for="injection_node_index">Injection Node Index</label>
+						<input type="number" min="1" class="form-control" id="injection_node_index" placeholder="Injection Node Index">
+				  </div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				  <div class="form-group">
+					<label for="global_interaction_protocol">Global Interaction Protocol</label>
+					<input type="text" class="form-control" id="global_interaction_protocol" placeholder="Global Interaction Protocol">
+				  </div>
+				</div>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal" onclick="return closeReleasePanel();">Cancel</button>
+			<button type="button" class="btn btn-success btn-lg" onclick="return releaseModel();">Download</button>
 		  </div>
 		</div>
 	  </div>
