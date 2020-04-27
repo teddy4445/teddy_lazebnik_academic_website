@@ -15,7 +15,12 @@ var RED_TYPE = 2;
 // nodes
 var ORGAN = 1;
 var BLOOD_VASSAL = 2;
-var MAX_R = 30;
+var MAX_R = 0;
+
+// organ status
+var NODE_STATUS = "o";
+var ORGAN_PANEL_OPEN = false;
+var IS_PANEL_OPEN = false;
 
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
@@ -24,7 +29,8 @@ var MAX_R = 30;
 function setup() {
 	// set up the simulator in the page
 	widthElement = document.getElementById('game-holder').getBoundingClientRect().width;
-	box_size = widthElement / gridSize;
+	box_size = widthElement / gridSize * 2;
+	MAX_R = box_size - 1;
 	var cnv = createCanvas(widthElement, widthElement);
 	cnv.parent('game');
 	fg = new FlowGraph();
@@ -40,19 +46,55 @@ function draw()
 }
 
 
-function mouseClicked() 
+async function mouseClicked() 
 {
+	// if panel open, ignore short keys
+	if (IS_PANEL_OPEN)
+	{
+		return;
+	}
+	
+	var nowMouseX = mouseX;
+	var nowMouseY = mouseY;
+	
+	// if click outside the panel, ignore it
+	if (mouseX > widthElement || mouseX < 0 || mouseY > widthElement || mouseY < 0)
+	{
+		return;
+	}
+	
 	// find if hiting some node
-	var nextToNode = fg.nextToNode(mouseX, mouseY);
+	var nextToNode = fg.nextToNode(nowMouseX, nowMouseY);
 	
 	if (!keyIsDown(16))
 	{
 		// check if next to node, if not this is a new node
 		if (nextToNode == ERROR_VALUE)
-		{
+		{	
+			var organ_name = "";
+			var lip = "";
+			var ts = 1;
 			// add new node
-			// TODO: get status from GUI
-			fg.add_node(Math.round(mouseX / box_size) * box_size, Math.round(mouseY / box_size) * box_size, ORGAN);
+			var node_type = ORGAN;
+			if (NODE_STATUS == "b")
+			{
+				node_type = BLOOD_VASSAL;
+			}
+			else
+			{
+				$('#organ_add_panel').show();
+				ORGAN_PANEL_OPEN = true;
+				IS_PANEL_OPEN = true;
+				noLoop();
+				while(ORGAN_PANEL_OPEN)
+				{
+					await sleep(1000);
+				}
+				var organ_name = document.getElementById("organ_name").value;
+				var lip = document.getElementById("lip").value;
+				var ts = document.getElementById("ts").value;
+			}
+			fg.add_node(Math.round(nowMouseX / box_size) * box_size, Math.round(nowMouseY / box_size) * box_size, node_type, organ_name, lip, ts);
 		}
 		else // picked a node 
 		{
@@ -68,7 +110,12 @@ function mouseClicked()
 				if (fg.picked_status())
 				{
 					var pickedIndex = fg.get_picked_node();
-					fg.add_edge(pickedIndex, nextToNode, 1, RED_TYPE);
+					var w = document.getElementById("edge_w").value;
+					if (w == "")
+					{
+						w = 1;
+					}
+					fg.add_edge(pickedIndex, nextToNode, parseInt(w), RED_TYPE);
 					fg.unmark_node(pickedIndex);
 				}
 				else
@@ -123,27 +170,43 @@ function drawGrid()
 
 function putMouse()
 {
-	if (!keyIsDown(16))
+	strokeWeight(0);
+	if (keyIsDown(16)) // 'shift' key code
 	{
-		stroke(255, 204, 0);	
+		fill(255);
+		text("-", mouseX - 7, mouseY - 5);
+		stroke(255, 50, 0);	
+	}
+	else if (keyIsDown(69)) // 'E' key code
+	{
+		// check if "edit" mode is on
+		fill(255);
+		rect(0, 0, widthElement, 25);
+		fill(0);
+		text(fg.node_status(mouseX, mouseY), 5, 20);
+		text("i", mouseX - 7, mouseY - 5);
+		stroke(0, 100, 255);
 	}
 	else
 	{
-		stroke(255, 50, 0);
+		textSize(10);
+		if (NODE_STATUS == "o")
+		{
+			text("o", mouseX - 7, mouseY - 5);
+			stroke(150, 100, 200);
+		}
+		else
+		{
+			text("b", mouseX - 7, mouseY - 5);
+			stroke(255, 204, 0);	
+		}
 	}
 	strokeWeight(3);
 	line(mouseX - 5, mouseY, mouseX + 5, mouseY);
 	line(mouseX, mouseY - 5, mouseX, mouseY + 5);
-}
-
-// download a .txt file into your computer
-function downloadasTextFile(filename, text) 
-{
-	var element = document.createElement('a');
-	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-	element.setAttribute('download', filename);	
-	element.style.display = 'none';
-	document.body.appendChild(element);
-	element.click();	
-	document.body.removeChild(element);
+	
+	
+	if (keyIsDown(69)) // 'E' key code
+	{
+	}
 }

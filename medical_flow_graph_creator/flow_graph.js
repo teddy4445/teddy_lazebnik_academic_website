@@ -23,9 +23,9 @@ class FlowGraph
 		return (this._marked_nodes > 0);
 	}
 	
-	add_node(x, y, type)
+	add_node(x, y, type, organ_name, lip, ts)
 	{
-		this.nodes.push(new Node(this._running_id, x, y, type));
+		this.nodes.push(new Node(this._running_id, x, y, type, organ_name, lip, ts));
 		console.log("Add node with id = " + this._running_id);
 		this._running_id += 1;
 	}
@@ -137,6 +137,19 @@ class FlowGraph
 		}
 	}
 	
+	node_status(x, y)
+	{
+		var node_index = this.nextToNode(x, y);
+		if (node_index == ERROR_VALUE)
+		{
+			return "";
+		}	
+		else
+		{
+			return this.nodes[node_index].to_string_status();
+		}
+	}
+	
 	degree_histogram()
 	{
 		var degreesPerNode = [];
@@ -168,5 +181,35 @@ class FlowGraph
 			answer.push([parseInt(value), degrees[value]]);
 		}
 		return answer;
+	}
+	
+	to_string()
+	{
+		var edges = "edges = [";
+		for (var i = 0; i < this.edges.length; i++)
+		{
+			edges += this.edges[i].to_string();
+			if (i != this.edges.length - 1)
+			{
+				edges += ", ";
+			}
+		}
+		edges += "]";
+		var organs = "organs = [";
+		var vassals = "vassals = [";
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			if (this.nodes[i].type == ORGAN)
+			{
+				organs += this.nodes[i].to_string() + ", ";
+			}
+			else
+			{
+				vassals += this.nodes[i].to_string() + ", ";
+			}
+		} 
+		organs += "]";
+		vassals += "]";
+		return edges + "\n" + vassals + "\n" + organs + "\nMnrFlowGraph(organs=organs, vassals=vassals, edges=edges)";
 	}
 }

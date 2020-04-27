@@ -16,13 +16,16 @@ class Point
 
 class Node
 {
-	constructor(id, x, y, type)
+	constructor(id, x, y, type, organ_name, lip, ts)
 	{
 		this.id = id;
 		this.x = x;
 		this.y = y;
 		this.type = type;
 		this.marked = false;
+		this.organ_name = organ_name;
+		this.lip = lip;
+		this.ts = ts;
 	}
 	
 	mark()
@@ -39,8 +42,16 @@ class Node
 	{
 		if (!this.marked)
 		{
-			fill("yellow");
-			stroke("yellow");	
+			if (this.type == ORGAN)
+			{				
+				fill(150, 100, 200);
+				stroke(150, 100, 200);
+			}
+			else
+			{
+				fill("yellow");
+				stroke("yellow");	
+			}
 		}
 		else
 		{
@@ -62,8 +73,31 @@ class Node
 		text('' + this.id, this.x - 10, this.y - 10);
 	}
 	
-	to_string()
+	to_string(drugs_string)
 	{
-		return "Node()";
+		if (this.type == ORGAN)
+		{
+			return "OrganNode(population=[], time_span=" + this.ts + ", location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + ", 0], " +
+			"local_interaction_protocol=" + this.lip + ", name=\"" + this.organ_name + "\", drugs=" + drugs_string + ", index=" + this.id + ")";	
+		}
+		else
+		{
+			// TODO: change vassal_type to be dynamic
+			return "VassalNode(population=[], color=True, location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + ", 0], vassal_type=VassalNode.type_artery, index=" + this.id + ")";
+		}
+	}
+	
+	to_string_status()
+	{
+		if (this.type == ORGAN)
+		{
+			return "Organ(ts=" + this.ts + ", location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + "], " +
+			"lip=" + this.lip + ", name=\"" + this.organ_name + "\", id=" + this.id + ")";	
+		}
+		else
+		{
+			// TODO: change vassal_type to be dynamic
+			return "Vassal(location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + "], id=" + this.id + ")";
+		}
 	}
 }

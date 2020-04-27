@@ -21,7 +21,7 @@ class Edge
 				stroke("#4285F4");
 			}
 			stroke("#fcce76");
-			strokeWeight(this.w);
+			strokeWeight(this.w / 100);
 			
 			var start_node = null;
 			var end_node = null;
@@ -47,6 +47,6 @@ class Edge
 	
 	to_string()
 	{
-		return "Edge()";
+		return "WEdge(source_node_index=" + this.start_node_id + ", target_node_index=" + this.end_node_id + ", score=" + this.w + ")";
 	}
 }

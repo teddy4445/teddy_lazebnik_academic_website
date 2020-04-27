@@ -4,9 +4,11 @@
   <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
   <!-- uncomment lines below to include extra p5 libraries -->
   <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <!--<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.js"></script>-->
   <script language="javascript" type="text/javascript" src="math.js"></script>
+  <script language="javascript" type="text/javascript" src="gui.js"></script>
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
   <script language="javascript" type="text/javascript" src="flow_graph.js"></script>
   <script language="javascript" type="text/javascript" src="edge.js"></script>
@@ -28,6 +30,23 @@
 			<div class="row spacer">
 				<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2" id="game-holder">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<p>
+								Operation rules:
+								<ol>
+									<li> Click on the screen to add a node</li>
+									<li> Click on a node to pick it, click again to unpick it</li>
+									<li> Pick two nodes to add a edge between them</li>
+									<li> Pick two nodes to add a edge between them</li>
+									<li> Hold "shift" to enter delete mode, click on either node or edge to delete it</li>
+									<li> Hold "E" to enter edit \ info mode, click on a node to edit it</li>
+									<li> Hit "O" to 'add Organ node' mode</li>
+									<li> Hit "B" to 'add Blood Vassal node' mode</li>
+									<li> Hit "s" to save your work into Python code and JS model</li>
+									<li> Hit "l" to open load model screen</li>
+								</ol>
+							</p>
+						</div>
 						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 							<div class="stat-box bg-grad-default">
 								<h2>Nodes #</h2>
@@ -40,6 +59,25 @@
 								<p id="edges_count">0</p>
 							</div>
 						</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
+						<form>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+									<label for="node_type">Node Type</label>
+									<select id="node_type" class="form-control" onchange="return changeNodeStatus();">
+										<option value="o" selected> Organ </option> 
+										<option value="b"> Blood Vassal </option> 
+									</select>
+							  </div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							  <div class="form-group">
+								<label for="edge_w">Edge Score</label>
+								<input type="number" min="0" max="9999" class="form-control" id="edge_w" placeholder="Edge Score" value="100">
+							  </div>
+							</div>
+						</form>
 					</div>
 					<!-- The game-->
 					<div id="game"></div>
@@ -54,5 +92,71 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- pop ups -->
+	
+	<div class="modal fade" id="organ_add_panel" tabindex="-1" role="dialog" aria-labelledby="organ_add_panel_label" aria-hidden="true" style="opacity: 1; top: 40%; padding-top: 20px;">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="organ_add_panel_label">Organ Settings</h5>
+		  </div>
+		  <div class="modal-body">
+			<form>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label for="organ_name">Name</label>
+						<input type="text" class="form-control" id="organ_name" placeholder="Organ Name">
+				  </div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				  <div class="form-group">
+					<label for="lip">LIP</label>
+					<input type="text" class="form-control" id="lip" placeholder="Local Interaction Protocol">
+				  </div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				  <div class="form-group">
+					<label for="ts">Time Span</label>
+					<input type="number" min="1" max="999" class="form-control" id="ts" placeholder="Time Span">
+				  </div>
+				</div>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-success btn-lg" onclick="return setOrganNodeSettings();">Add</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div class="modal fade" id="load_data_file" tabindex="-1" role="dialog" aria-labelledby="load_data_file_label" aria-hidden="true" style="opacity: 1; top: 40%; padding-top: 20px;">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="load_data_file_label">Load Model</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="return closeLoadModelPanel();">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="form-group">
+						<label for="fg_load_file">Flow Graph File</label>
+						<input type="file" class="form-control" id="fg_load_file" placeholder="Flow Graph File">
+				  </div>
+				</div>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal" onclick="return closeLoadModelPanel();">Cancel</button>
+			<button type="button" class="btn btn-success btn-lg" onclick="return load_model();">Load</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<!-- end - pop ups -->
 </body>
 </html>
