@@ -9,6 +9,7 @@
   <!--<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.js"></script>-->
   <script language="javascript" type="text/javascript" src="math.js"></script>
   <script language="javascript" type="text/javascript" src="gui.js"></script>
+  <script language="javascript" type="text/javascript" src="vassal_calculator.js"></script>
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
   <script language="javascript" type="text/javascript" src="flow_graph.js"></script>
   <script language="javascript" type="text/javascript" src="edge.js"></script>
@@ -91,6 +92,26 @@
 					<p> State distribution over population per generation</p>
 				</div>
 			</div>
+			<div class="row spacer">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+					<h3>Table of rat's main vassals </h3>
+					<p></p>
+					<table class="table">
+					  <thead>
+						<tr>
+						  <th scope="col">#</th>
+						  <th scope="col">Name</th>
+						  <th scope="col">Length (mm)</th>
+						  <th scope="col">Diameter (mm)</th>
+						  <th scope="col">Distensibility (10^-3 1/ mmHg)</th>
+						  <th scope="col">Model Blood Nodes</th>
+						</tr>
+					  </thead>
+					  <tbody id="vassals_table">
+					  </tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 	
@@ -157,7 +178,7 @@
 	  </div>
 	</div>
 	
-	<div class="modal fade" id="release_fg_panel" tabindex="-1" role="dialog" aria-labelledby="release_fg_panel_label" aria-hidden="true" style="opacity: 1; top: 40%; padding-top: 20px;">
+	<div class="modal fade" id="release_fg_panel" tabindex="-1" role="dialog" aria-labelledby="release_fg_panel_label" aria-hidden="true" style="opacity: 1; top: 25%; padding-top: 20px;">
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -207,7 +228,114 @@
 		</div>
 	  </div>
 	</div>
-	
 	<!-- end - pop ups -->
+	
+	<script>
+		$(document).ready(function() 
+		{
+			data = [[1, "Ascending arota", 2.6, 1.41, 2.95],
+					[2, "Aortic arch A", 0.7, 1.33, 2.79],
+					[3, "Brachiocephalic trunk", 2.1, 0.8, 1.97],
+					[4, "", , , ],
+					[5, "", , , ],
+					[6, "", , , ],
+					[7, "", , , ],
+					[8, "", , , ],
+					[9, "", , , ],
+					[10, "", , , ],
+					[11, "", , , ],
+					[12, "", , , ],
+					[13, "", , , ],
+					[14, "", , , ],
+					[15, "", , , ],
+					[16, "", , , ],
+					[17, "", , , ],
+					[18, "", , , ],
+					[19, "", , , ],
+					[20, "", , , ],
+					[21, "", , , ],
+					[22, "", , , ],
+					[23, "", , , ],
+					[24, "", , , ],
+					[25, "", , , ],
+					[26, "", , , ],
+					[27, "", , , ],
+					[28, "", , , ],
+					[29, "", , , ],
+					[30, "", , , ],
+					[31, "", , , ],
+					[32, "", , , ],
+					[33, "", , , ],
+					[34, "", , , ],
+					[35, "", , , ],
+					[36, "", , , ],
+					[37, "", , , ],
+					[38, "", , , ],
+					[39, "", , , ],
+					[40, "", , , ],
+					[41, "", , , ],
+					[42, "", , , ],
+					[43, "", , , ],
+					[44, "", , , ],
+					[45, "", , , ],
+					[46, "", , , ],
+					[47, "", , , ],
+					[48, "", , , ],
+					[49, "", , , ],
+					[50, "", , , ],
+					[51, "", , , ],
+					[52, "", , , ],
+					[53, "", , , ],
+					[54, "", , , ],
+					[55, "", , , ],
+					[56, "", , , ],
+					[57, "", , , ],
+					[58, "", , , ],
+					[59, "", , , ],
+					[60, "", , , ],
+					[61, "", , , ],
+					[62, "", , , ],
+					[63, "", , , ],
+					[64, "", , , ],
+					[65, "", , , ],
+					[66, "", , , ],
+					[67, "", , , ],
+					[68, "", , , ],
+					[69, "", , , ],
+					[70, "", , , ],
+					[71, "", , , ],
+					[72, "", , , ],
+					[73, "", , , ],
+					[74, "", , , ],
+					[75, "", , , ],
+					[76, "", , , ],
+					[77, "", , , ],
+					[78, "", , , ],
+					[79, "", , , ],
+					[80, "", , , ],
+					[81, "", , , ],
+					[82, "", , , ],
+					[83, "", , , ],
+					[84, "", , , ],
+					[85, "", , , ]]
+					
+			var table_data = $('#vassals_table');
+			for (var i = 0; i < data.length; i++)
+			{
+				var row_data = "<tr>";
+				row_data += "<th scope='row'>" + data[i][0] + "</th>"
+				for (var j = 1; j < data[i].length; j++) 
+				{
+					row_data += "<td>" + data[i][j] + "</td>";
+				}
+				var velocity = Math.round(VassalCalculator.calc_vassal_from_table(data[i][2], data[i][3], data[i][4]));
+				row_data += "<td><b>" + velocity + "</b></td>";
+				row_data += "</tr>";
+				table_data.append(row_data);
+				data[i].push(velocity);
+			}
+		});
+	</script>
+	
 </body>
 </html>
