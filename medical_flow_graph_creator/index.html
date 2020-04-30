@@ -46,6 +46,16 @@
 									<li> Hit "S" to save your work into Python code and JS model</li>
 									<li> Hit "L" to open load model screen</li>
 									<li> Hit "R" to release the flow graph with the additinal info for the full model</li>
+									<li> Hold "shift + crtl" to add a Rat's model vassal nodes edge between two node</li>
+								</ol>
+							</p>
+							<p>
+								Visual view
+								<ol>
+									<li> Yellow dot: blood vassal node</li>
+									<li> Perpule dot: organ node</li>
+									<li> Yellow line: normal edge</li>
+									<li> Green line: line with multiple nodes from spesific organ</li>
 								</ol>
 							</p>
 						</div>
@@ -93,6 +103,36 @@
 				</div>
 			</div>
 			<div class="row spacer">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center" id="blood_vassal_node_form">
+					<h3>Model's Blood Vassal Node Physical Size </h3>
+					<form>
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+								<div class="form-group">
+									<label for="factor">factor</label>
+									<input type="number"  class="form-control" id="factor" value="3.14159" readonly>
+								</div>
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								<div class="form-group">
+									<label for="bv_s_length">Length (mm)</label>
+									<input type="number" min="0" max="1000" class="form-control" id="bv_s_length" placeholder="Length (mm)" value="0.01">
+								</div>
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								<div class="form-group">
+									<label for="bv_s_radius">Radius (mm)</label>
+									<input type="number" min="0" max="1000" class="form-control" id="bv_s_radius" placeholder="Length (mm)" value="1">
+								</div>
+							</div>
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+								<div class="form-group">
+									<button type="button" style="margin-top: 25px;" class="btn btn-primary btn-block" onclick="return update_table_velocity();">Update</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
 					<h3>Table of rat's main vassals </h3>
 					<p></p>
@@ -147,6 +187,33 @@
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-success btn-lg" onclick="return setOrganNodeSettings();">Add</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div class="modal fade" id="rat_blood_vassal_panel" tabindex="-1" role="dialog" aria-labelledby="rat_blood_vassal_label" aria-hidden="true" style="opacity: 1; top: 40%; padding-top: 20px;">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="rat_blood_vassal_label">Rat Blood Vassal Used</h5>
+		  </div>
+		  <div class="modal-body">
+			<form>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="form-group">
+						<label for="model_bv_node_count">Model Blood Vassal Node Count</label>
+						<select id="model_bv_node_count" class="form-control">
+							<option value=""> Pick Rat Vassal </option>
+						</select>
+						<input type="hidden" id="value_holder_rat_blood_vassals" value="">
+						<input type="hidden" id="value_holder_rat_blood_vassals_name" value="">
+				  </div>
+				</div>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-success btn-lg" onclick="return PickRatBloodVassal();">Pick</button>
 		  </div>
 		</div>
 	  </div>
@@ -231,93 +298,131 @@
 	<!-- end - pop ups -->
 	
 	<script>
+		var data = null;
+		function update_table_velocity()
+		{
+			// load data
+			var l = document.getElementById("bv_s_length").value / 1000;
+			var r = document.getElementById("bv_s_radius").value / 1000;
+			model_standard_size = r * r * l;
+			
+			// reset the list
+			var selectElement = document.getElementById("model_bv_node_count");		
+			while (selectElement.length > 0) {
+			  selectElement.remove(0);
+			}
+			
+			// update table
+			for (var i = 0; i < data.length; i++)
+			{
+				var velocity = Math.round(VassalCalculator.calc_vassal_from_table(data[i][2], data[i][3], data[i][4]));
+				document.getElementById("val_" + i).innerHTML = "<b>" + velocity + "</b>";
+				data[i][data[i].length - 1] = velocity;
+			}
+			
+			// update select in popup panel in build
+			add_select_options();
+		}
+		
+		function add_select_options()
+		{
+			var selectElement = document.getElementById("model_bv_node_count");	
+			for (var i = 0; i < data.length; i++)
+			{
+				var option = document.createElement("option");
+				option.text = data[i][0] + " | " + data[i][1];
+				option.value = data[i][data[i].length - 1];
+				selectElement.add(option);
+			}
+		}
+		
 		$(document).ready(function() 
 		{
 			data = [[1, "Ascending arota", 2.6, 1.41, 2.95],
 					[2, "Aortic arch A", 0.7, 1.33, 2.79],
 					[3, "Brachiocephalic trunk", 2.1, 0.8, 1.97],
-					[4, "", , , ],
-					[5, "", , , ],
-					[6, "", , , ],
-					[7, "", , , ],
-					[8, "", , , ],
-					[9, "", , , ],
-					[10, "", , , ],
-					[11, "", , , ],
-					[12, "", , , ],
-					[13, "", , , ],
-					[14, "", , , ],
-					[15, "", , , ],
-					[16, "", , , ],
-					[17, "", , , ],
-					[18, "", , , ],
-					[19, "", , , ],
-					[20, "", , , ],
-					[21, "", , , ],
-					[22, "", , , ],
-					[23, "", , , ],
-					[24, "", , , ],
-					[25, "", , , ],
-					[26, "", , , ],
-					[27, "", , , ],
-					[28, "", , , ],
-					[29, "", , , ],
-					[30, "", , , ],
-					[31, "", , , ],
-					[32, "", , , ],
-					[33, "", , , ],
-					[34, "", , , ],
-					[35, "", , , ],
-					[36, "", , , ],
-					[37, "", , , ],
-					[38, "", , , ],
-					[39, "", , , ],
-					[40, "", , , ],
-					[41, "", , , ],
-					[42, "", , , ],
-					[43, "", , , ],
-					[44, "", , , ],
-					[45, "", , , ],
-					[46, "", , , ],
-					[47, "", , , ],
-					[48, "", , , ],
-					[49, "", , , ],
-					[50, "", , , ],
-					[51, "", , , ],
-					[52, "", , , ],
-					[53, "", , , ],
-					[54, "", , , ],
-					[55, "", , , ],
-					[56, "", , , ],
-					[57, "", , , ],
-					[58, "", , , ],
-					[59, "", , , ],
-					[60, "", , , ],
-					[61, "", , , ],
-					[62, "", , , ],
-					[63, "", , , ],
-					[64, "", , , ],
-					[65, "", , , ],
-					[66, "", , , ],
-					[67, "", , , ],
-					[68, "", , , ],
-					[69, "", , , ],
-					[70, "", , , ],
-					[71, "", , , ],
-					[72, "", , , ],
-					[73, "", , , ],
-					[74, "", , , ],
-					[75, "", , , ],
-					[76, "", , , ],
-					[77, "", , , ],
-					[78, "", , , ],
-					[79, "", , , ],
-					[80, "", , , ],
-					[81, "", , , ],
-					[82, "", , , ],
-					[83, "", , , ],
-					[84, "", , , ],
-					[85, "", , , ]]
+					[4, "Right common carotid", 10.2, 0.52, 1.52],
+					[5, "Right external carotid", 2.6, 0.42, 1.27],
+					[6, "Right internal carotid", 1.8, 0.41, 1.42],
+					[7, "Right subclavian A", 1.2, 0.55, 1.68],
+					[8, "Right vertebral", 13.3, 0.4, 1.13],
+					[9, "Right axillary", 7.8, 0.35, 1.11],
+					[10, "Costocervical trunk", 2.7, 0.26, 0.93],
+					[11, "Internal mammary", 5.1, 0.25, 0.93],
+					[12, "Left common carotid", 13.3, 0.63, 1.55],
+					[13, "Left internal carotid", 1.8, 0.44, 1.43],
+					[14, "Left external carotid", 2.6, 0.43, 1.27],
+					[15, "Aortic arch B", 1.2, 1.2, 2.58],
+					[16, "Left subclavian A", 1.8, 0.61, 1.58],
+					[17, "Left vertebral", 13.2, 0.34, 1.12],
+					[18, "Left subclavian B", 6.1, 0.4, 1.36],
+					[19, "Left axillary", 3, 0.25, 0.92],
+					[20, "Left cervical trunk", 2.4, 0.32, 1.1],
+					[21, "Thoracic aorta A", 12.2, 1.16, 2.45],
+					[22, "Intercostals", 1.6, 0.51, 1.42],
+					[23, "Thiracuc aorta B", 12.2, 1.11, 2.39],
+					[24, "Left suprarenal", 3, 0.33, 1.04],
+					[25, "Thoracic aorta C", 2.3, 1.06, 1.04],
+					[26, "Coeliac", 3.1, 0.46, 1.32],
+					[27, "Hepatic", 3.4, 0.24, 0.86],
+					[28, "Lieno-gastric", 5.1, 0.31, 0.98],
+					[29, "Lieno-pancreatic", 6.9, 0.29, 0.96],
+					[30, "Abdominal aorta A", 1.8, 1.0, 2.26],
+					[31, "Superior mesenteric", 4.7, 0.6, 1.56],
+					[32, "Ileocolic", 1.3, 0.31, 0.94],
+					[33, "Ileac and jejunal branches", 2.6, 0.55, 1.48],
+					[34, "Abdominal aorta B", 0.4, 0.93, 2.14],
+					[35, "Right renal", 2.9, 0.51, 1.4],
+					[36, "Abdominal aorta C", 1.9, 0.88, 2.06],
+					[37, "Right spermatic artery", 5.1, 0.26, 0.87],
+					[38, "Abdominal aorta D", 1.2, 0.85, 2.00],
+					[39, "Left renal", 1.5, 0.47, 1.33],
+					[40, "Abdominal aorta E", 1.0, 0.80, 1.94],
+					[41, "Left spermatic artery", 5.3, 0.23, 0.83],
+					[42, "Abdominal aorta F", 9.0, 0.78, 1.85],
+					[43, "Middle caudal", 28.1, 0.34, 0.96],
+					[44, "Abdominal aorta G", 0.7, 0.7, 1.77],
+					[45, "Common iliac", 3.4, 0.51, 1.41],
+					[46, "Common iliac", 3.4, 0.51, 1.41],
+					[47, "Inner iliac", 4.0, 0.23, 0.77],
+					[48, "External iliac", 1.5, 0.48, 1.36],
+					[49, "Pudic-epigastric trunk", 1.3, 0.27, 0.88],
+					[50, "Femoral", 8.6, 0.47, 1.32],
+					[51, "Posterior tibial", 4.3, 0.30, 0.98],
+					[52, "Anterior tibial", 3.0, 0.35, 0.98],
+					[53, "Inner iliac", 4.0, 0.23, 0.77],
+					[54, "External iliac", 1.5, 0.48, 1.36],
+					[55, "Pudic-epigastric trunk", 1.3, 0.27, 0.88],
+					[56, "Femoral", 8.6, 0.47, 1.32],
+					[57, "Posterior tibial", 4.3, 0.30, 0.98],
+					[58, "Anterior tibial", 3.0, 0.35, 0.98],
+					[59, "Right subclavian B", 0.7, 0.53, 1.62],
+					[60, "Maxillary", 8.3, 0.26, 1.23],
+					[61, "Ophthalmic", 3.2, 0.33, 1.13],
+					[62, "Internal carotid sinus", 4.8, 0.35, 1.36],
+					[63, "Anterior choroidal", 1.3, 0.19, 0.78],
+					[64, "ICA distal", 1.5, 0.28, 1.12],
+					[65, "Posterior cerebral C", 2.7, 0.22, 0.84],
+					[66, "Posterior cerebral B", 3.5, 0.22, 2.0],
+					[67, "Posterior cerebral A", 2.6, 0.19, 1.01],
+					[68, "Posterior cerebral A", 2.6, 0.19, 1.01],
+					[69, "Basilar artery", 4.8, 0.23, 1.33],
+					[70, "Posterior cerebral B", 3.5, 0.22, 1.83],
+					[71, "Posterior cerebral C", 2.7, 0.22, 0.90],
+					[72, "Middle cerebral", 2.2, 0.19, 0.86],
+					[73, "Anterior cerebral", 2.6, 0.24, 1.00],
+					[74, "Supraorbital", 2.1, 0.31, 2.0],
+					[75, "Naso-frontal", 2.0, 0.19, 1.59],
+					[76, "Anterior facial", 3.2, 0.18, 1.47],
+					[77, "Anterior cerebral", 2.6, 0.24, 2.07],
+					[78, "Middle cerebral", 2.2, 0.19, 1.82],
+					[79, "ICA distal", 1.5, 0.28, 1.20],
+					[80, "Anterior choroidal", 1.3, 0.19, 0.83],
+					[81, "Internal carotid sinus", 4.8, 0.35, 1.37],
+					[82, "Ophthalmic", 3.2, 0.33, 1.22],
+					[83, "fac. occ. left sup. thy. asc. ph. lyng. fac.", 3.2, 0.19, 1.05],
+					[84, "Maxillary", 8.3, 0.26, 1.24],
+					[85, "fac. occ. left sup. thy. asc. ph. lyng. fac.", 3.2, 0.19, 1.04]]
 					
 			var table_data = $('#vassals_table');
 			for (var i = 0; i < data.length; i++)
@@ -329,11 +434,14 @@
 					row_data += "<td>" + data[i][j] + "</td>";
 				}
 				var velocity = Math.round(VassalCalculator.calc_vassal_from_table(data[i][2], data[i][3], data[i][4]));
-				row_data += "<td><b>" + velocity + "</b></td>";
+				row_data += "<td id='val_" + i + "'><b>" + velocity + "</b></td>";
 				row_data += "</tr>";
 				table_data.append(row_data);
 				data[i].push(velocity);
 			}
+			
+			// build options list
+			add_select_options();
 		});
 	</script>
 	

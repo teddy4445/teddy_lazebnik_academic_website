@@ -1,3 +1,47 @@
+class ShowEdge
+{
+	constructor(x1, y1, x2, y2, name)
+	{
+		this.x1 = x1;
+		this.y1 = y1;
+		this.x2 = x2;
+		this.y2 = y2;
+		this.name = name;
+		this.centerPoint = halfWayDot(this.x1, this.y1, this.x2, this.y2);
+		var m = line_m(this.x1, this.y1, this.x2, this.y2);
+		if (m == 0)
+		{
+			this.rotation = Math.atan(m) / Math.PI * 180;
+		}
+		else
+		{
+			this.rotation = 0;
+		}
+	}
+	
+	static from_json(json)
+	{
+		return new ShowEdge(json.x1, json.y1, json.x2, json.y2, json.name);
+	}
+	
+	show(nodes) 
+	{
+		strokeWeight(1);
+		stroke(6, 255, 136);
+		line(this.x1, this.y1, this.x2, this.y2);	
+		strokeWeight(0);
+		textSize(10);
+		rectMode(CENTER);
+		angleMode(DEGREES);
+		push();
+		var text_width = textWidth(this.name);
+		translate(this.centerPoint.x - text_width / 2, this.centerPoint.y);
+		rotate(this.rotation);
+		text(this.name, 0, 0);
+		pop();
+	}
+}
+
 class Edge
 {
 	constructor(start_node_id, end_node_id, w, type)
@@ -6,6 +50,7 @@ class Edge
 		this.end_node_id = end_node_id;
 		this.w = w;
 		this.type = type;
+		this.need_show = true;
 	}
 	
 	static from_json(json)
@@ -13,8 +58,24 @@ class Edge
 		return new Edge(json.start_node_id, json.end_node_id, json.w, json.type);
 	}
 	
+	hide()
+	{
+		this.need_show = false;
+	}
+	
+	allow_show()
+	{
+		this.need_show = true;
+	}
+	
 	show(nodes) 
 	{
+		// if don't need to show just jump it
+		if (!this.need_show)
+		{
+			return;
+		}
+		
 		try
 		{
 			if (this.type == RED_TYPE)

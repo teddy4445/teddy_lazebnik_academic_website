@@ -27,6 +27,27 @@ function setOrganNodeSettings()
 	return true;
 }
 
+function PickRatBloodVassal()
+{
+	var e = document.getElementById("model_bv_node_count");
+	var rat_blood_value = e.options[e.selectedIndex].value;
+	document.getElementById("value_holder_rat_blood_vassals").value = rat_blood_value;
+	document.getElementById("value_holder_rat_blood_vassals_name").value = e.options[e.selectedIndex].innerHTML.split("|")[1];
+	
+	if (rat_blood_value == "")
+	{
+		alert("You need to pick an element");
+		return false;
+	}
+	// delete this option
+	e.remove(e.selectedIndex);
+	
+	$('#rat_blood_vassal_panel').hide();
+	setTimeout(function(){ RAT_BLOOD_PANEL_OPEN = false; }, 20);
+	loop();
+	return true;
+}
+
 
 function keyPressed() 
 {

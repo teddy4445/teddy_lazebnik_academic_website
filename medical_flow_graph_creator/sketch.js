@@ -20,6 +20,7 @@ var MAX_R = 0;
 // organ status
 var NODE_STATUS = "o";
 var ORGAN_PANEL_OPEN = false;
+var RAT_BLOOD_PANEL_OPEN = false;
 var IS_PANEL_OPEN = false;
 
 
@@ -66,7 +67,54 @@ async function mouseClicked()
 	// find if hiting some node
 	var nextToNode = fg.nextToNode(nowMouseX, nowMouseY);
 	
-	if (!keyIsDown(16))
+	if (keyIsDown(16) && keyIsDown(17)) // if 'shift' + 'crtl' pressed 
+	{
+		if (nextToNode != ERROR_VALUE)
+		{	
+			if (fg.picked_status())
+			{
+				var pickedIndex = fg.get_picked_node();
+				$('#rat_blood_vassal_panel').show();
+				RAT_BLOOD_PANEL_OPEN = true;
+				IS_PANEL_OPEN = true;
+				noLoop();
+				while(RAT_BLOOD_PANEL_OPEN)
+				{
+					await sleep(1000);
+				}
+				// put points
+				var nodes_count = parseInt(document.getElementById("value_holder_rat_blood_vassals").value);
+				var nodes_name = document.getElementById("value_holder_rat_blood_vassals_name").value;
+				var MIN_W = 100;
+				for (var i = 1; i < nodes_count - 1; i++)
+				{
+					var point = locationBetweenDots(fg.nodes[pickedIndex], fg.nodes[nextToNode], nodes_count - 1 - i, nodes_count - 1);
+					fg.add_node(point.x, point.y, BLOOD_VASSAL, nodes_name + " (" + i + ")", "", 1);
+					fg.nodes[fg.nodes.length - 1].hide();
+					// add line from first dot
+					if (i == 1)
+					{
+						fg.add_edge(pickedIndex, fg.nodes.length - 1, MIN_W);
+					}	
+					else // dot between 2 lines
+					{
+						fg.add_edge(fg.nodes.length - 1,fg.nodes.length - 2, 100);
+					}
+					fg.edges[fg.edges.length - 1].hide();
+				}
+				fg.add_edge(fg.nodes.length - 1, nextToNode, MIN_W); // close line
+				fg.edges[fg.edges.length - 1].hide();
+				fg.add_show_edge(pickedIndex, nextToNode, nodes_name); // close line
+				fg.unmark_node(pickedIndex);
+				IS_PANEL_OPEN = false;
+			}
+			else
+			{
+				fg.mark_node(nextToNode);
+			}
+		}
+	}
+	else if (!keyIsDown(16)) // if 'shift' is not pressed
 	{
 		// check if next to node, if not this is a new node
 		if (nextToNode == ERROR_VALUE)
@@ -107,17 +155,21 @@ async function mouseClicked()
 			else // not a picked node
 			{
 				// if second node or first
-				// TODO: get w and status from GUI
 				if (fg.picked_status())
 				{
-					var pickedIndex = fg.get_picked_node();
-					var w = document.getElementById("edge_w").value;
-					if (w == "")
+					$('#rat_blood_vassal_panel').show();
+					IS_PANEL_OPEN = true;
+					noLoop();
+					while(IS_PANEL_OPEN)
 					{
-						w = 1;
+						await sleep(1000);
 					}
-					fg.add_edge(pickedIndex, nextToNode, parseInt(w), RED_TYPE);
+					var nodes_count = document.getElementById("value_holder_rat_blood_vassals").value
+					alert("nodes = " + nodes_count);
+					/*
+					fg.add_edge(pickedIndex, nextToNode, 100, RED_TYPE);
 					fg.unmark_node(pickedIndex);
+					*/
 				}
 				else
 				{
@@ -148,6 +200,12 @@ async function mouseClicked()
 	document.getElementById("nodes_count").innerHTML = "" + fg.nodes_count();
 	document.getElementById("edges_count").innerHTML = "" + fg.edges_count();
 	
+	// just to make sure won't be changes in the table 
+	if (fg.nodes_count() > 0)
+	{
+		document.getElementById("blood_vassal_node_form").style.display = "none";
+	}
+	
 	// update graph
 	drawHistogram();
 }
@@ -177,7 +235,14 @@ function drawGrid()
 function putMouse()
 {
 	strokeWeight(0);
-	if (keyIsDown(16)) // 'shift' key code
+	
+	if (keyIsDown(16) && keyIsDown(17)) // 'shift' + "crtl" key code
+	{
+		fill(255);
+		text("m", mouseX - 10, mouseY - 5);
+		stroke(6, 255, 136);
+	}
+	else if (keyIsDown(16)) // 'shift' key code
 	{
 		fill(255);
 		text("-", mouseX - 7, mouseY - 5);
@@ -185,7 +250,7 @@ function putMouse()
 	}
 	else if (keyIsDown(69)) // 'E' key code
 	{
-		// check if "edit" mode is on
+		// check if "move" mode is on
 		fill(220);
 		rect(0, 0, widthElement, 25);
 		fill(0);

@@ -1,4 +1,4 @@
-var NANO = Math.pow(10, -12);
+var model_standard_size = Math.pow(10, -12);
 
 class VassalCalculator
 {
@@ -19,7 +19,12 @@ class VassalCalculator
 		var d = -0.24984539;
 		var x = diameter;
 		var y  = distensibility;
-		return a * x + b * x * x + c + y + d * y * y;
+		var answer = a * x + b * x * x + c + y + d * y * y;
+		if (answer < 0)
+		{
+			answer = 0.01;
+		}
+		return answer;
 	}
 	
 	/*
@@ -51,7 +56,7 @@ class VassalCalculator
 	*/
 	static calc_vassal_count(length, diameter, velocety)
 	{
-		return velocety * diameter * diameter * length / NANO;
+		return velocety * diameter * diameter * length / model_standard_size;
 	}
 	
 	/*
@@ -61,6 +66,6 @@ class VassalCalculator
 	*/
 	static calc_vassal_from_table(length, diameter, distensibility)
 	{
-		return VassalCalculator.calc_vassal_count(length / 1000, diameter / 1000, VassalCalculator.tranform(diameter, distensibility));
+		return VassalCalculator.calc_vassal_count(length / 1000, diameter / 1000, VassalCalculator.tranform(diameter, distensibility)) + 1;
 	}
 }

@@ -4,6 +4,7 @@ class FlowGraph
 	{
 		this.nodes = [];
 		this.edges = [];
+		this.show_edges = [];
 		this._marked_nodes = 0;
 		this._running_id = 1;
 	}
@@ -19,6 +20,10 @@ class FlowGraph
 		for (var i = 0; i < json.edges.length; i++)
 		{
 			answer.edges.push(Edge.from_json(json.edges[i]));
+		}
+		for (var i = 0; i < json.ShowEdge.length; i++)
+		{
+			answer.show_edges.push(ShowEdge.from_json(json.edges[i]));
 		}
 		return answer;
 	}
@@ -99,6 +104,13 @@ class FlowGraph
 		return true;
 	}
 	
+	add_show_edge(start_node_index, end_node_index, name)
+	{
+		this.show_edges.push(new ShowEdge(this.nodes[start_node_index].x, this.nodes[start_node_index].y,
+										  this.nodes[end_node_index].x, this.nodes[end_node_index].y,
+										  name));
+	}
+	
 	nextToNode(x, y)
 	{
 		for (var i = 0; i < this.nodes.length; i++)
@@ -149,6 +161,10 @@ class FlowGraph
 		for (var i = 0; i < this.edges.length; i++)
 		{
 			this.edges[i].show(this.nodes);
+		}
+		for (var i = 0; i < this.show_edges.length; i++)
+		{
+			this.show_edges[i].show(this.nodes);
 		}
 	}
 	

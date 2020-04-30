@@ -22,3 +22,22 @@ function distToSegment(point, line_start_point, line_end_point)
 { 
 	return Math.sqrt(distToSegmentSquared(point, line_start_point, line_end_point)); 
 }
+
+function locationBetweenDots(dot1, dot2, i, k)
+{
+	return new Point((dot1.x * i + dot2.x * (k - i)) / k, (dot1.y * i + dot2.y * (k - i)) / k);
+}
+
+function line_m(x1, y1, x2, y2)
+{
+	if (x2 - x1 != 0)
+	{
+		return (y2 - y1) / (x2 - x1);
+	}
+	return 0;
+}
+
+function halfWayDot(x1, y1, x2, y2)
+{
+	return new Point((x1 + x2 ) / 2, (y1 + y2 ) / 2);
+}

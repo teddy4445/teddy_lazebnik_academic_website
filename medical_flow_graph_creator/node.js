@@ -26,11 +26,22 @@ class Node
 		this.organ_name = organ_name;
 		this.lip = lip;
 		this.ts = ts;
+		this.need_show = true;
 	}
 	
 	static from_json(json)
 	{
-		return new Node(json.id, json.x, json.y, json.type, json.organ_name, json.lip, json.ts);
+		return new Node(json.id, json.x, json.y, json.type, json.organ_name, json.lip, json.ts, json.need_show);
+	}
+	
+	hide()
+	{
+		this.need_show = false;
+	}
+	
+	allow_show()
+	{
+		this.need_show = true;
 	}
 	
 	mark()
@@ -45,6 +56,12 @@ class Node
 	
 	show() 
 	{
+		// if don't need to show just jump it
+		if (!this.need_show)
+		{
+			return;
+		}
+		
 		if (!this.marked)
 		{
 			if (this.type == ORGAN)
