@@ -106,7 +106,6 @@ async function mouseClicked()
 				fg.edges[fg.edges.length - 1].hide();
 				fg.add_show_edge(pickedIndex, nextToNode, nodes_name); // close line
 				fg.unmark_node(pickedIndex);
-				IS_PANEL_OPEN = false;
 			}
 			else
 			{
@@ -157,19 +156,14 @@ async function mouseClicked()
 				// if second node or first
 				if (fg.picked_status())
 				{
-					$('#rat_blood_vassal_panel').show();
-					IS_PANEL_OPEN = true;
-					noLoop();
-					while(IS_PANEL_OPEN)
+					var pickedIndex = fg.get_picked_node();
+					var w = document.getElementById("edge_w").value;
+					if (w == "")
 					{
-						await sleep(1000);
+						w = 1;
 					}
-					var nodes_count = document.getElementById("value_holder_rat_blood_vassals").value
-					alert("nodes = " + nodes_count);
-					/*
-					fg.add_edge(pickedIndex, nextToNode, 100, RED_TYPE);
+					fg.add_edge(pickedIndex, nextToNode, parseInt(w), RED_TYPE);
 					fg.unmark_node(pickedIndex);
-					*/
 				}
 				else
 				{

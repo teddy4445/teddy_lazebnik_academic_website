@@ -91,14 +91,11 @@ class FlowGraph
 		var node_i_id = this.nodes[node_i_index].id;
 		var node_j_id = this.nodes[node_j_index].id;
 		
-		for (var i = 0; i < this.edges.length; i++)
+		if (this.has_this_edge(node_i_index, node_j_index))
 		{
-			if ((this.edges[i].start_node_id == node_i_id && this.edges[i].end_node_id == node_j_id) || 
-				(this.edges[i].start_node_id == node_j_id && this.edges[i].end_node_id == node_i_id))
-			{
-				return false;
-			}
+			return false;
 		}
+		
 		this.edges.push(new Edge(node_i_id, node_j_id, w, type));
 		console.log("Add edge with points: (" + node_i_id + ", " + node_j_id + ")");
 		return true;
@@ -106,9 +103,30 @@ class FlowGraph
 	
 	add_show_edge(start_node_index, end_node_index, name)
 	{
+		if (this.has_this_edge(start_node_index, end_node_index))
+		{
+			this.try_delete_edge(this.nodes[start_node_index].x, this.nodes[end_node_index].y);
+		}
+		
 		this.show_edges.push(new ShowEdge(this.nodes[start_node_index].x, this.nodes[start_node_index].y,
 										  this.nodes[end_node_index].x, this.nodes[end_node_index].y,
 										  name));
+	}
+	
+	has_this_edge(node_i_index, node_j_index)
+	{
+		var node_i_id = this.nodes[node_i_index].id;
+		var node_j_id = this.nodes[node_j_index].id;
+		
+		for (var i = 0; i < this.edges.length; i++)
+		{
+			if ((this.edges[i].start_node_id == node_i_id && this.edges[i].end_node_id == node_j_id) || 
+				(this.edges[i].start_node_id == node_j_id && this.edges[i].end_node_id == node_i_id))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	nextToNode(x, y)

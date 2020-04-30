@@ -9,7 +9,7 @@ class ShowEdge
 		this.name = name;
 		this.centerPoint = halfWayDot(this.x1, this.y1, this.x2, this.y2);
 		var m = line_m(this.x1, this.y1, this.x2, this.y2);
-		if (m == 0)
+		if (m != 0)
 		{
 			this.rotation = Math.atan(m) / Math.PI * 180;
 		}

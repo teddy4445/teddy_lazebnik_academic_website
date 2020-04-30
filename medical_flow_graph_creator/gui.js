@@ -43,7 +43,8 @@ function PickRatBloodVassal()
 	e.remove(e.selectedIndex);
 	
 	$('#rat_blood_vassal_panel').hide();
-	setTimeout(function(){ RAT_BLOOD_PANEL_OPEN = false; }, 20);
+	RAT_BLOOD_PANEL_OPEN = false;
+	setTimeout(function(){ IS_PANEL_OPEN = false; }, 20);
 	loop();
 	return true;
 }
