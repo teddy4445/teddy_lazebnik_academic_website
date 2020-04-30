@@ -153,6 +153,19 @@ class FlowGraph
 		return ERROR_VALUE;
 	}
 	
+	pick_only(node_id)
+	{
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			this.nodes[i].marked = false;
+			if(this.nodes[i].id == node_id)
+			{
+				this.nodes[i].marked = true;
+			}
+		}
+		this._marked_nodes = 1;
+	}
+	
 	is_node_marked(node_index)
 	{
 		return this.nodes[node_index].marked;

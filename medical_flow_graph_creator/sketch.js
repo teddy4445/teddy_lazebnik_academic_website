@@ -106,10 +106,12 @@ async function mouseClicked()
 				fg.edges[fg.edges.length - 1].hide();
 				fg.add_show_edge(pickedIndex, nextToNode, nodes_name); // close line
 				fg.unmark_node(pickedIndex);
+				document.getElementById("node_id").value = "";
 			}
 			else
 			{
 				fg.mark_node(nextToNode);
+				document.getElementById("node_id").value = fg.nodes[nextToNode].id;
 			}
 		}
 	}
@@ -150,6 +152,7 @@ async function mouseClicked()
 			if (fg.is_node_marked(nextToNode))
 			{
 				fg.unmark_node(nextToNode);
+				document.getElementById("node_id").value = "";
 			}
 			else // not a picked node
 			{
@@ -164,10 +167,12 @@ async function mouseClicked()
 					}
 					fg.add_edge(pickedIndex, nextToNode, parseInt(w), RED_TYPE);
 					fg.unmark_node(pickedIndex);
+					document.getElementById("node_id").value = "";
 				}
 				else
 				{
 					fg.mark_node(nextToNode);
+					document.getElementById("node_id").value = fg.nodes[nextToNode].id;
 				}
 			}
 		}

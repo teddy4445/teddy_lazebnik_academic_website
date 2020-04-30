@@ -49,6 +49,21 @@ function PickRatBloodVassal()
 	return true;
 }
 
+function pickNode()
+{
+	var node_id = document.getElementById("node_id").value;
+	
+	// do nothing if no node id
+	if (node_id == "")
+	{
+		return false;
+	}
+	
+	// check if we have such node, if we do - pick it, unpick all other nodes
+	fg.pick_only(node_id);
+	return false;
+}
+
 
 function keyPressed() 
 {

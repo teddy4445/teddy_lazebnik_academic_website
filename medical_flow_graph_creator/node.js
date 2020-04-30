@@ -57,7 +57,7 @@ class Node
 	show() 
 	{
 		// if don't need to show just jump it
-		if (!this.need_show)
+		if (!this.need_show && !this.marked)
 		{
 			return;
 		}
