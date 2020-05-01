@@ -134,6 +134,7 @@ class FlowGraph
 					if(this.nodes[node_index].organ_name.includes(name))
 					{
 						this.delete_node(node_index);
+						node_index -= 1;
 					}
 				}
 				
