@@ -39,8 +39,9 @@ function PickRatBloodVassal()
 		alert("You need to pick an element");
 		return false;
 	}
+	// Don't delete cause this makes problem with the delete option in the model
 	// delete this option
-	e.remove(e.selectedIndex);
+	// e.remove(e.selectedIndex);
 	
 	$('#rat_blood_vassal_panel').hide();
 	RAT_BLOOD_PANEL_OPEN = false;
@@ -106,6 +107,19 @@ function keyPressed()
 		}
 		$('#release_fg_panel').show();
 		IS_PANEL_OPEN = true;
+	}
+	
+	if (keyIsDown(17) && keyIsDown(90)) // 'crtl' + 'z' keys download
+	{
+		// load last model
+		if (last_fg.size() != 0)
+		{
+			fg = last_fg.pop();	
+		}
+		else
+		{
+			alert("No more undo action avalible"); 
+		}
 	}
 }
 

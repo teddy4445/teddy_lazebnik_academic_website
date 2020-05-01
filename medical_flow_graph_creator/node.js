@@ -12,6 +12,11 @@ class Point
 		ellipse(this.x, this.y, r, r);
 	}
 	
+	copy()
+	{
+		return new Point(this.x, this.y);
+	}
+	
 }
 
 class Node
@@ -29,9 +34,18 @@ class Node
 		this.need_show = true;
 	}
 	
+	copy()
+	{
+		var answer = new Node(this.id, this.x, this.y, this.type, this.organ_name, this.lip, this.ts);
+		answer.need_show = this.need_show;
+		return answer;
+	}
+	
 	static from_json(json)
 	{
-		return new Node(json.id, json.x, json.y, json.type, json.organ_name, json.lip, json.ts, json.need_show);
+		var answer = new Node(json.id, json.x, json.y, json.type, json.organ_name, json.lip, json.ts);
+		answer.need_show = json.need_show;
+		return answer;
 	}
 	
 	hide()

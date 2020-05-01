@@ -9,7 +9,15 @@ class ShowEdge
 		this.name = name;
 		this.centerPoint = halfWayDot(this.x1, this.y1, this.x2, this.y2);
 		var m = line_m(this.x1, this.y1, this.x2, this.y2);
-		if (m != 0)
+		if (this.y1 == this.y2)
+		{
+			this.rotation = 0;
+		}
+		else if (this.x1 == this.x2)
+		{
+			this.rotation = 90;
+		}
+		else if (m != 0)
 		{
 			this.rotation = Math.atan(m) / Math.PI * 180;
 		}
@@ -19,9 +27,18 @@ class ShowEdge
 		}
 	}
 	
+	copy()
+	{
+		var answer = new ShowEdge(this.x1, this.y1, this.x2, this.y2, this.name);
+		answer.need_show = this.need_show;
+		return answer;
+	}
+	
 	static from_json(json)
 	{
-		return new ShowEdge(json.x1, json.y1, json.x2, json.y2, json.name);
+		var answer = new ShowEdge(json.x1, json.y1, json.x2, json.y2, json.name);
+		answer.need_show = json.need_show;
+		return answer;
 	}
 	
 	show(nodes) 
@@ -53,9 +70,18 @@ class Edge
 		this.need_show = true;
 	}
 	
+	copy()
+	{
+		var answer = new Edge(this.start_node_id, this.end_node_id, this.w, this.type);
+		answer.need_show = this.need_show;
+		return answer;
+	}
+	
 	static from_json(json)
 	{
-		return new Edge(json.start_node_id, json.end_node_id, json.w, json.type);
+		var answer = new Edge(json.start_node_id, json.end_node_id, json.w, json.type);
+		answer.need_show = json.need_show;
+		return answer;
 	}
 	
 	hide()

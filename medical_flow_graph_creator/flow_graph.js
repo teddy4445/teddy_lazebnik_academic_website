@@ -1,3 +1,14 @@
+let last_fg = new Stack();
+
+function add_last_fq(new_fq)
+{
+	last_fg.push(new_fq);	
+	if (last_fg.size() > 10)
+	{
+		last_fg.pop();
+	}
+}
+
 class FlowGraph
 {
 	constructor()
@@ -7,6 +18,25 @@ class FlowGraph
 		this.show_edges = [];
 		this._marked_nodes = 0;
 		this._running_id = 1;
+	}
+	
+	copy()
+	{
+		var answer = new FlowGraph();
+		answer._running_id = this._running_id;
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			answer.nodes.push(this.nodes[i].copy());
+		}
+		for (var i = 0; i < this.edges.length; i++)
+		{
+			answer.edges.push(this.edges[i].copy());
+		}
+		for (var i = 0; i < this.show_edges.length; i++)
+		{
+			answer.show_edges.push(this.show_edges[i].copy());
+		}
+		return answer;
 	}
 	
 	static from_json(json)
@@ -21,9 +51,9 @@ class FlowGraph
 		{
 			answer.edges.push(Edge.from_json(json.edges[i]));
 		}
-		for (var i = 0; i < json.ShowEdge.length; i++)
+		for (var i = 0; i < json.show_edges.length; i++)
 		{
-			answer.show_edges.push(ShowEdge.from_json(json.edges[i]));
+			answer.show_edges.push(ShowEdge.from_json(json.show_edges[i]));
 		}
 		return answer;
 	}
@@ -45,6 +75,7 @@ class FlowGraph
 	
 	add_node(x, y, type, organ_name, lip, ts)
 	{
+		add_last_fq(this.copy());
 		this.nodes.push(new Node(this._running_id, x, y, type, organ_name, lip, ts));
 		console.log("Add node with id = " + this._running_id);
 		this._running_id += 1;
@@ -52,6 +83,7 @@ class FlowGraph
 	
 	delete_node(node_index)
 	{
+		add_last_fq(this.copy());
 		var node_id = this.nodes[node_index].id;
 		var i = 0;
 		while(i < this.edges.length)
@@ -77,8 +109,9 @@ class FlowGraph
 		
 		for (var i = 0; i < this.edges.length; i++)
 		{
-			if (distToSegment(new Point(x, y), this.nodes[id_to_index[this.edges[i].start_node_id]], this.nodes[id_to_index[this.edges[i].end_node_id]]) < MAX_R)
+			if (this.edges[i].need_show && distToSegment(new Point(x, y), this.nodes[id_to_index[this.edges[i].start_node_id]], this.nodes[id_to_index[this.edges[i].end_node_id]]) < MAX_R)
 			{
+				add_last_fq(this.copy());
 				console.log("Delete edge with points: (" + this.edges[i].start_node_id + ", " + this.edges[i].end_node_id + ")");
 				this.edges.splice(i, 1);
 				break;
@@ -86,8 +119,33 @@ class FlowGraph
 		}
 	}
 	
+	try_delete_show_edge(x, y)
+	{	
+		for (var i = 0; i < this.show_edges.length; i++)
+		{
+			if (distToSegment(new Point(x, y), new Point(this.show_edges[i].x1, this.show_edges[i].y1), new Point(this.show_edges[i].x2, this.show_edges[i].y2)) < MAX_R)
+			{
+				add_last_fq(this.copy());
+				var name = this.show_edges[i].name;
+				console.log("Delete show edge named: " + name);
+				
+				for (var node_index = 0; node_index < this.nodes.length; node_index++)
+				{
+					if(this.nodes[node_index].organ_name.includes(name))
+					{
+						this.delete_node(node_index);
+					}
+				}
+				
+				this.show_edges.splice(i, 1);
+				break;
+			}
+		}
+	}
+	
 	add_edge(node_i_index, node_j_index, w, type)
 	{
+		add_last_fq(this.copy());
 		var node_i_id = this.nodes[node_i_index].id;
 		var node_j_id = this.nodes[node_j_index].id;
 		
@@ -103,6 +161,7 @@ class FlowGraph
 	
 	add_show_edge(start_node_index, end_node_index, name)
 	{
+		add_last_fq(this.copy());
 		if (this.has_this_edge(start_node_index, end_node_index))
 		{
 			this.try_delete_edge(this.nodes[start_node_index].x, this.nodes[end_node_index].y);
@@ -133,7 +192,7 @@ class FlowGraph
 	{
 		for (var i = 0; i < this.nodes.length; i++)
 		{
-			if(int(dist(this.nodes[i].x, this.nodes[i].y, x, y)) < MAX_R)
+			if(int(dist(this.nodes[i].x, this.nodes[i].y, x, y)) < MAX_R && this.nodes[i].need_show)
 			{
 				return i;
 			}

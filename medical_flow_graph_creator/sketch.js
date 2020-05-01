@@ -192,6 +192,7 @@ async function mouseClicked()
 		else // check if need to delete edge
 		{
 			fg.try_delete_edge(mouseX, mouseY);
+			fg.try_delete_show_edge(mouseX, mouseY);
 		}
 	}
 	
@@ -218,7 +219,7 @@ function drawGrid()
 	// make box's lines white
 	fill(255);
 	stroke(255);
-	strokeWeight(1);
+	strokeWeight(0.1);
 	// print - lines 
 	for (var index = 0; index < gridSize; index++)
 	{
