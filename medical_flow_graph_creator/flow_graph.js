@@ -5,7 +5,7 @@ function add_last_fq(new_fq)
 	last_fg.push(new_fq);	
 	if (last_fg.size() > 10)
 	{
-		last_fg.pop();
+		last_fg.pop_end();
 	}
 }
 

@@ -65,6 +65,10 @@ class Stack {
        return this._items.splice( -count, count )
   }
 
+  pop_end(count=1){
+    return this._items.splice(0, count)
+  }
+
   peek(){
     // see what's the last item in stack
     return this._items[this._items.length-1]
