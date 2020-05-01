@@ -191,14 +191,21 @@ class FlowGraph
 	
 	nextToNode(x, y)
 	{
+		var best_node = ERROR_VALUE;
+		var best_score = MAX_R + 1;
 		for (var i = 0; i < this.nodes.length; i++)
 		{
-			if(int(dist(this.nodes[i].x, this.nodes[i].y, x, y)) < MAX_R && this.nodes[i].need_show)
+			var score = int(dist(this.nodes[i].x, this.nodes[i].y, x, y));
+			if(score < MAX_R && this.nodes[i].need_show)
 			{
-				return i;
+				if (score < best_score)
+				{
+					best_node = i;
+					best_score = score;
+				}
 			}
 		}
-		return ERROR_VALUE;
+		return best_node;
 	}
 	
 	get_picked_node()

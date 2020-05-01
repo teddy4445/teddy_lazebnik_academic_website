@@ -114,7 +114,15 @@ function keyPressed()
 		// load last model
 		if (last_fg.size() != 0)
 		{
+			// load last fg
 			fg = last_fg.pop();	
+			
+			// update stats
+			document.getElementById("nodes_count").innerHTML = "" + fg.nodes_count();
+			document.getElementById("edges_count").innerHTML = "" + fg.edges_count();
+	
+			// update graph
+			drawHistogram();
 		}
 		else
 		{
