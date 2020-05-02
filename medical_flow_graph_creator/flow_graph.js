@@ -60,7 +60,19 @@ class FlowGraph
 	
 	nodes_count()
 	{
-		return this.nodes.length;
+		var answer = 0;
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			if (this.nodes[i].type == ORGAN)
+			{
+				answer += 1;
+			}
+			else 
+			{
+				answer += 2;
+			}
+		}
+		return answer;
 	}
 	
 	edges_count()
@@ -312,8 +324,25 @@ class FlowGraph
 		return answer;
 	}
 	
-	to_string()
+	to_string(drugs)
 	{
+		var organs = "organs = [";
+		var vassals = "vassals = ["; 	
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			if (this.nodes[i].type == ORGAN)
+			{
+				organs += this.nodes[i].to_string(drugs) + ", ";
+			}
+			else
+			{
+				vassals += this.nodes[i].to_string(drugs, true) + ", ";
+				vassals += this.nodes[i].to_string(drugs, false) + ", ";
+			}
+		} 
+		organs += "]";
+		vassals += "]";
+		
 		var edges = "edges = [";
 		for (var i = 0; i < this.edges.length; i++)
 		{
@@ -324,21 +353,7 @@ class FlowGraph
 			}
 		}
 		edges += "]";
-		var organs = "organs = [";
-		var vassals = "vassals = [";
-		for (var i = 0; i < this.nodes.length; i++)
-		{
-			if (this.nodes[i].type == ORGAN)
-			{
-				organs += this.nodes[i].to_string() + ", ";
-			}
-			else
-			{
-				vassals += this.nodes[i].to_string() + ", ";
-			}
-		} 
-		organs += "]";
-		vassals += "]";
+		
 		return edges + "\n" + vassals + "\n" + organs + "\nMnrFlowGraph(organs=organs, vassals=vassals, edges=edges)";
 	}
 }
