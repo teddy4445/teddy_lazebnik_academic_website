@@ -183,7 +183,7 @@ function releaseModel()
 	drugs_string += "}";
 	
 	var answer = fg.to_string(drugs_string);
-	answer += "\nnano_size = " + population_of_nanorobotics_size + "\npopulation_decay = MnrPopulationDecay(original_size=nano_size, half_life=" + population_of_nanorobotics_half_life + ")\nmnr_population = MnrPopulation(initial_population=[MNR(index=index, kill_tics=population_decay.get_next_kill_tics(), state=" + mnr_state_code + ") for index in range(nano_size)])\nflow_graph.inject_population(node_index=" + injection_node_index + ", population=mnr_population.get_population())\nglobal_interaction_protocol = GlobalInteractionProtocol(global_interaction_protocol=" + global_interaction_protocol + "())\nmodel = BloodMnrModel(flow_graph=flow_graph, mnr_population=mnr_population, global_interaction_protocol=global_interaction_protocol)";
+	answer += "\nflow_graph = ConvertGraphToCircular.convert(fg=flow_graph)\nnano_size = " + population_of_nanorobotics_size + "\npopulation_decay = MnrPopulationDecay(original_size=nano_size, half_life=" + population_of_nanorobotics_half_life + ")\nmnr_population = MnrPopulation(initial_population=[MNR(index=index, kill_tics=population_decay.get_next_kill_tics(), state=" + mnr_state_code + ") for index in range(nano_size)])\nflow_graph.inject_population(node_index=" + injection_node_index + ", population=mnr_population.get_population())\nglobal_interaction_protocol = GlobalInteractionProtocol(global_interaction_protocol=" + global_interaction_protocol + "())\nmodel = BloodMnrModel(flow_graph=flow_graph, mnr_population=mnr_population, global_interaction_protocol=global_interaction_protocol)";
 	
 	downloadasTextFile("fg_with_metadata_py_code.txt", answer);
 	$('#release_fg_panel').hide();

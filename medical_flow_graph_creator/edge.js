@@ -139,6 +139,6 @@ class Edge
 	
 	to_string()
 	{
-		return "WEdge(source_node_index=" + this.start_node_id + ", target_node_index=" + this.end_node_id + ", score=" + this.w + ")";
+		return "WEdge(source_node_index=" + (this.start_node_id - 1) + ", target_node_index=" + (this.end_node_id - 1) + ", score=" + this.w + ")";
 	}
 }

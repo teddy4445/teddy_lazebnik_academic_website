@@ -114,12 +114,12 @@ class Node
 		if (this.type == ORGAN)
 		{
 			return "OrganNode(population=[], time_span=" + this.ts + ", location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + ", 0], " +
-			"local_interaction_protocol=" + this.lip + ", name=\"" + this.organ_name + "\", drugs=" + drugs_string + ", index=" + this.id + ")";	
+			"local_interaction_protocol=" + this.lip + ", name=\"" + this.organ_name + "\", drugs=" + drugs_string + ", index=" + (this.id-1) + ")";	
 		}
 		else
 		{
 			// TODO: change vassal_type to be dynamic
-			return "VassalNode(population=[], color=True, location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + ", 0], vassal_type=VassalNode.type_artery, index=" + this.id + ")";
+			return "VassalNode(population=[], color=True, location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + ", 0], vassal_type=VassalNode.type_artery, index=" + (this.id-1) + ")";
 		}
 	}
 	

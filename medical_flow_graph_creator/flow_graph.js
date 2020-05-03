@@ -18,12 +18,14 @@ class FlowGraph
 		this.show_edges = [];
 		this._marked_nodes = 0;
 		this._running_id = 1;
+		this._delete_happend = 0;
 	}
 	
 	copy()
 	{
 		var answer = new FlowGraph();
 		answer._running_id = this._running_id;
+		answer._delete_happend = this._delete_happend;
 		for (var i = 0; i < this.nodes.length; i++)
 		{
 			answer.nodes.push(this.nodes[i].copy());
@@ -88,9 +90,45 @@ class FlowGraph
 	add_node(x, y, type, organ_name, lip, ts)
 	{
 		add_last_fq(this.copy());
-		this.nodes.push(new Node(this._running_id, x, y, type, organ_name, lip, ts));
+		var next_id = this._running_id;
+		var change_in_delete = false;
+		if (this._delete_happend > 0)
+		{
+			change_in_delete = true;
+			var ids = [];
+			for (var i = 0; i < this.nodes.length; i++)
+			{
+				ids.push(this.nodes[i].id);
+			}
+			
+			if(ids.length == 0)
+			{
+				this._running_id = 1;
+				this._delete_happend = 0;
+			}
+			else
+			{
+				ids.sort();
+				for (var i = 0; i < ids.length - 1; i++)
+				{
+					if(ids[i + 1] - ids[i] != 1)
+					{
+						next_id = ids[i] + 1;
+					}
+				}	
+				if (next_id == this._running_id)
+				{
+					next_id = Math.max(...ids) + 1;
+				}
+				this._delete_happend -= 1;
+			}
+		}
+		this.nodes.push(new Node(next_id, x, y, type, organ_name, lip, ts));
 		console.log("Add node with id = " + this._running_id);
-		this._running_id += 1;
+		if (this._delete_happend == 0 && !change_in_delete)
+		{
+			this._running_id += 1;
+		}
 	}
 	
 	delete_node(node_index)
@@ -109,6 +147,7 @@ class FlowGraph
 		}
 		this.nodes.splice(node_index, 1);
 		console.log("Delete node with id = " + node_id);
+		this._delete_happend += 1;
 	}
 	
 	try_delete_edge(x, y)
@@ -336,8 +375,7 @@ class FlowGraph
 			}
 			else
 			{
-				vassals += this.nodes[i].to_string(drugs, true) + ", ";
-				vassals += this.nodes[i].to_string(drugs, false) + ", ";
+				vassals += this.nodes[i].to_string(drugs) + ", ";
 			}
 		} 
 		organs += "]";
@@ -354,6 +392,6 @@ class FlowGraph
 		}
 		edges += "]";
 		
-		return edges + "\n" + vassals + "\n" + organs + "\nMnrFlowGraph(organs=organs, vassals=vassals, edges=edges)";
+		return edges + "\n" + vassals + "\n" + organs + "\nflow_graph = MnrFlowGraph(organs=organs, vassals=vassals, edges=edges)";
 	}
 }
