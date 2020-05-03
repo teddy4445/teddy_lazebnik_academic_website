@@ -367,15 +367,22 @@ class FlowGraph
 	{
 		var organs = "organs = [";
 		var vassals = "vassals = ["; 	
+		var organs_count = 0; 	
+		var vassal_count = 0;
 		for (var i = 0; i < this.nodes.length; i++)
 		{
 			if (this.nodes[i].type == ORGAN)
 			{
-				organs += this.nodes[i].to_string(drugs) + ", ";
+				organs += this.nodes[i].to_string(drugs, organs_count) + ", ";
+				organs_count += 1;	
 			}
-			else
+		} 
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			if (this.nodes[i].type != ORGAN)
 			{
-				vassals += this.nodes[i].to_string(drugs) + ", ";
+				vassals += this.nodes[i].to_string(drugs, vassal_count + organs_count) + ", ";
+				vassal_count += 1;	
 			}
 		} 
 		organs += "]";

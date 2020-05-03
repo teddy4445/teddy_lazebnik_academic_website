@@ -187,6 +187,7 @@ function releaseModel()
 	
 	downloadasTextFile("fg_with_metadata_py_code.txt", answer);
 	$('#release_fg_panel').hide();
+	IS_PANEL_OPEN = false;
 }
 
 $(document).on('change', '#fg_load_file', function(event) 

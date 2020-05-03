@@ -109,17 +109,22 @@ class Node
 		text('' + this.id, this.x - 10, this.y - 10);
 	}
 	
-	to_string(drugs_string)
+	to_string(drugs_string, override_index=-1)
 	{
+		if (override_index == -1)
+		{
+			override_index == this.id - 1;
+		}
+		
 		if (this.type == ORGAN)
 		{
 			return "OrganNode(population=[], time_span=" + this.ts + ", location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + ", 0], " +
-			"local_interaction_protocol=" + this.lip + ", name=\"" + this.organ_name + "\", drugs=" + drugs_string + ", index=" + (this.id-1) + ")";	
+			"local_interaction_protocol=" + this.lip + ", name=\"" + this.organ_name + "\", drugs=" + drugs_string + ", index=" + override_index + ")";	
 		}
 		else
 		{
 			// TODO: change vassal_type to be dynamic
-			return "VassalNode(population=[], color=True, location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + ", 0], vassal_type=VassalNode.type_artery, index=" + (this.id-1) + ")";
+			return "VassalNode(population=[], color=True, location=[" + Math.floor(this.x) + ", " + Math.floor(this.y) + ", 0], vassal_type=VassalNode.type_artery, index=" + override_index + ")";
 		}
 	}
 	
