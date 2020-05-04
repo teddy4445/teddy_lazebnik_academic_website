@@ -68,6 +68,7 @@ class Edge
 		this.w = w;
 		this.type = type;
 		this.need_show = true;
+		this.tringle_dots = [];
 	}
 	
 	copy()
@@ -113,6 +114,7 @@ class Edge
 				stroke("#4285F4");
 			}
 			stroke("#fcce76");
+			fill("#a20420");
 			strokeWeight(this.w / 100);
 			
 			var start_node = null;
@@ -129,7 +131,76 @@ class Edge
 				}
 			}
 			// print line
-			line(start_node.x, start_node.y, end_node.x, end_node.y);			
+			line(start_node.x, start_node.y, end_node.x, end_node.y);		
+			// check if need to calc tringle_dots or not
+			if (this.tringle_dots.length == 0)
+			{
+				var dist = 5;
+				var dist_squre = dist * dist;
+				
+				if (end_node.x == start_node.x)
+				{
+					var base_y = end_node.y - dist;
+					if (end_node.y < start_node.y)
+					{
+						base_y = end_node.y + dist;
+					}
+					var second_point = new Point(end_node.x + dist, base_y);
+					var third_point = new Point(end_node.x - dist, base_y);
+				}
+				else if (end_node.y == start_node.y)
+				{
+					var base_x = end_node.x - dist;
+					if (end_node.x < start_node.x)
+					{
+						base_x = end_node.x + dist;
+					}
+					var second_point = new Point(base_x, end_node.y + dist);
+					var third_point = new Point(base_x, end_node.y - dist);
+				}
+				else
+				{					
+					var m = line_m(start_node.x, start_node.y, end_node.x, end_node.y);
+					var ortogonal_m = -1 / m;
+					var inner_dist = 1;
+					if (end_node.x > start_node.x)
+					{
+						while (dist2d(new Point(end_node.x - inner_dist, end_node.y - inner_dist * m), end_node) < dist_squre)
+						{
+							inner_dist += 1;
+						}
+						var base_x = end_node.x - inner_dist;
+						var base_y = end_node.y - inner_dist * m;
+					}
+					else
+					{
+						while (dist2d(new Point(end_node.x + inner_dist, end_node.y + inner_dist * m), end_node) < dist_squre)
+						{
+							inner_dist += 1;
+						}
+						var base_x = end_node.x + inner_dist;
+						var base_y = end_node.y + inner_dist * m;
+					}
+					inner_dist = 1;
+					while (dist2d(new Point(base_x + inner_dist, base_y + inner_dist * ortogonal_m), new Point(base_x - inner_dist, base_y - inner_dist * ortogonal_m)) < dist_squre)
+					{
+						inner_dist += 1;
+					}
+					var second_point = new Point(base_x + inner_dist, base_y + inner_dist * ortogonal_m);
+					var third_point = new Point(base_x - inner_dist, base_y - inner_dist * ortogonal_m);
+				}
+				
+				this.tringle_dots.push(end_node);
+				this.tringle_dots.push(second_point);
+				this.tringle_dots.push(third_point);
+			}
+			// print direction triangle
+			triangle(this.tringle_dots[0].x, 
+					this.tringle_dots[0].y, 
+					this.tringle_dots[1].x, 
+					this.tringle_dots[1].y, 
+					this.tringle_dots[2].x, 
+					this.tringle_dots[2].y)			
 		}
 		catch (error)
 		{

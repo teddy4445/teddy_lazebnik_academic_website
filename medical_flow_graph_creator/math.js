@@ -37,6 +37,15 @@ function line_m(x1, y1, x2, y2)
 	return 0;
 }
 
+function line_from_dot_and_m(x1, y1, m)
+{
+	if (x2 - x1 != 0)
+	{
+		return (y2 - y1) / (x2 - x1);
+	}
+	return 0;
+}
+
 function halfWayDot(x1, y1, x2, y2)
 {
 	return new Point((x1 + x2 ) / 2, (y1 + y2 ) / 2);
