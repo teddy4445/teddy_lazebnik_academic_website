@@ -25,6 +25,65 @@ class ShowEdge
 		{
 			this.rotation = 0;
 		}
+		this.tringle_dots = [];
+		var dist = 5;
+		var dist_squre = dist * dist;
+		var start_node = new Point(x1, y1);
+		var end_node = new Point(x2, y2);
+		if (end_node.x == start_node.x)
+		{
+			var base_y = end_node.y - dist;
+			if (end_node.y < start_node.y)
+			{
+				base_y = end_node.y + dist;
+			}
+			var second_point = new Point(end_node.x + dist, base_y);
+			var third_point = new Point(end_node.x - dist, base_y);
+		}
+		else if (end_node.y == start_node.y)
+		{
+			var base_x = end_node.x - dist;
+			if (end_node.x < start_node.x)
+			{
+				base_x = end_node.x + dist;
+			}
+			var second_point = new Point(base_x, end_node.y + dist);
+			var third_point = new Point(base_x, end_node.y - dist);
+		}
+		else
+		{					
+			var m = line_m(start_node.x, start_node.y, end_node.x, end_node.y);
+			var ortogonal_m = -1 / m;
+			var inner_dist = 1;
+			if (end_node.x > start_node.x)
+			{
+				while (dist2d(new Point(end_node.x - inner_dist, end_node.y - inner_dist * m), end_node) < dist_squre)
+				{
+					inner_dist += 1;
+				}
+				var base_x = end_node.x - inner_dist;
+				var base_y = end_node.y - inner_dist * m;
+			}
+			else
+			{
+				while (dist2d(new Point(end_node.x + inner_dist, end_node.y + inner_dist * m), end_node) < dist_squre)
+				{
+					inner_dist += 1;
+				}
+				var base_x = end_node.x + inner_dist;
+				var base_y = end_node.y + inner_dist * m;
+			}
+			inner_dist = 1;
+			while (dist2d(new Point(base_x + inner_dist, base_y + inner_dist * ortogonal_m), new Point(base_x - inner_dist, base_y - inner_dist * ortogonal_m)) < dist_squre)
+			{
+				inner_dist += 1;
+			}
+			var second_point = new Point(base_x + inner_dist, base_y + inner_dist * ortogonal_m);
+			var third_point = new Point(base_x - inner_dist, base_y - inner_dist * ortogonal_m);
+		}
+		this.tringle_dots.push(end_node);
+		this.tringle_dots.push(second_point);
+		this.tringle_dots.push(third_point);
 	}
 	
 	copy()
@@ -56,6 +115,14 @@ class ShowEdge
 		rotate(this.rotation);
 		text(this.name, 0, 0);
 		pop();
+		// print direction triangle
+		fill(0, 220, 111);
+		triangle(this.tringle_dots[0].x, 
+				this.tringle_dots[0].y, 
+				this.tringle_dots[1].x, 
+				this.tringle_dots[1].y, 
+				this.tringle_dots[2].x, 
+				this.tringle_dots[2].y)	
 	}
 }
 
@@ -189,7 +256,6 @@ class Edge
 					var second_point = new Point(base_x + inner_dist, base_y + inner_dist * ortogonal_m);
 					var third_point = new Point(base_x - inner_dist, base_y - inner_dist * ortogonal_m);
 				}
-				
 				this.tringle_dots.push(end_node);
 				this.tringle_dots.push(second_point);
 				this.tringle_dots.push(third_point);
