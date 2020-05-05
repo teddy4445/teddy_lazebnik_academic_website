@@ -59,7 +59,7 @@ async function mouseClicked()
 	var nowMouseY = mouseY;
 	
 	// if click outside the panel, ignore it
-	if (mouseX > widthElement || mouseX < 0 || mouseY > widthElement || mouseY < 0)
+	if (mouseX > widthElement || mouseX < 0 || mouseY > widthElement * 2 || mouseY < 0)
 	{
 		return;
 	}
