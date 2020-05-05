@@ -34,7 +34,7 @@ function PickRatBloodVassal()
 	document.getElementById("value_holder_rat_blood_vassals").value = rat_blood_value;
 	var id_and_name = e.options[e.selectedIndex].innerHTML.split("|");
 	document.getElementById("value_holder_rat_blood_vassals_name").value = id_and_name[1];
-	document.getElementById("edge_w").value = data[parseInt(id_and_name[0])][3] * 1000; // 3 is the index of the radius in the array
+	document.getElementById("edge_w").value = data[parseInt(id_and_name[0])-1][3] * 1000; // 3 is the index of the radius in the array
 	
 	if (rat_blood_value == "")
 	{
@@ -194,13 +194,16 @@ function releaseModel()
 
 $(document).on('change', '#fg_load_file', function(event) 
 {
-  var reader = new FileReader();
-
-  reader.onload = function(event) 
-  {
-	  fg = FlowGraph.from_json(JSON.parse(event.target.result));
-  }
-
+	var reader = new FileReader();
+	reader.onload = function(event) 
+	{
+		fg = FlowGraph.from_json(JSON.parse(event.target.result));
+	
+		// update stats
+		document.getElementById("nodes_count").innerHTML = "" + fg.nodes_count();
+		document.getElementById("edges_count").innerHTML = "" + fg.edges_count();
+	}
+	
 	reader.readAsText(event.target.files[0]);
 	$('#load_data_file').hide();
 	IS_PANEL_OPEN = false;	
