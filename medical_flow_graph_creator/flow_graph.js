@@ -215,7 +215,7 @@ class FlowGraph
 		return true;
 	}
 	
-	add_show_edge(start_node_index, end_node_index, name)
+	add_show_edge(start_node_index, end_node_index, name, edge_status)
 	{
 		IS_PANEL_OPEN = true;
 		add_last_fq(this.copy());
@@ -226,7 +226,7 @@ class FlowGraph
 		
 		this.show_edges.push(new ShowEdge(this.nodes[start_node_index].x, this.nodes[start_node_index].y,
 										  this.nodes[end_node_index].x, this.nodes[end_node_index].y,
-										  name));
+										  name, edge_status));
 		IS_PANEL_OPEN = false;
 	}
 	

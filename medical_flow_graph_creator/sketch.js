@@ -19,6 +19,7 @@ var MAX_R = 0;
 
 // organ status
 var NODE_STATUS = "o";
+var EDGE_STATUS = "a";
 var ORGAN_PANEL_OPEN = false;
 var RAT_BLOOD_PANEL_OPEN = false;
 var IS_PANEL_OPEN = false;
@@ -87,6 +88,13 @@ async function mouseClicked()
 				var nodes_count = parseInt(document.getElementById("value_holder_rat_blood_vassals").value);
 				var nodes_name = document.getElementById("value_holder_rat_blood_vassals_name").value;
 				var w = document.getElementById("edge_w").value;
+				// right type of edge
+				var edge_status = RED_TYPE;
+				if (EDGE_STATUS == "v")
+				{
+					edge_status = BLUE_TYPE;
+				}
+				
 				for (var i = 1; i < nodes_count - 1; i++)
 				{
 					var point = locationBetweenDots(fg.nodes[pickedIndex], fg.nodes[nextToNode], nodes_count - 1 - i, nodes_count - 1);
@@ -95,17 +103,17 @@ async function mouseClicked()
 					// add line from first dot
 					if (i == 1)
 					{
-						fg.add_edge(pickedIndex, fg.nodes.length - 1, w);
+						fg.add_edge(pickedIndex, fg.nodes.length - 1, w, edge_status);
 					}	
 					else // dot between 2 lines
 					{
-						fg.add_edge(fg.nodes.length - 2, fg.nodes.length - 1, w);
+						fg.add_edge(fg.nodes.length - 2, fg.nodes.length - 1, w, edge_status);
 					}
 					fg.edges[fg.edges.length - 1].hide();
 				}
-				fg.add_edge(fg.nodes.length - 1, nextToNode, w); // close line
+				fg.add_edge(fg.nodes.length - 1, nextToNode, w, edge_status); // close line
 				fg.edges[fg.edges.length - 1].hide();
-				fg.add_show_edge(pickedIndex, nextToNode, nodes_name); // close line
+				fg.add_show_edge(pickedIndex, nextToNode, nodes_name, edge_status); // the line to show in the visualization but not in the model
 				fg.unmark_node(pickedIndex);
 				document.getElementById("node_id").value = "";
 				document.getElementById("edge_w").value = old_w;
@@ -166,8 +174,13 @@ async function mouseClicked()
 					if (w == "")
 					{
 						w = 1;
+					}					
+					var edge_status = RED_TYPE;
+					if (EDGE_STATUS == "v")
+					{
+						edge_status = BLUE_TYPE;
 					}
-					fg.add_edge(pickedIndex, nextToNode, parseInt(w), RED_TYPE);
+					fg.add_edge(pickedIndex, nextToNode, parseInt(w), edge_status);
 					fg.unmark_node(pickedIndex);
 					document.getElementById("node_id").value = "";
 				}
@@ -218,6 +231,13 @@ function drawGrid()
 {
 	background(0); // make the canvas black
 	var boxSize = widthElement / gridSize;
+	
+	// set the center lines
+	strokeWeight(1);
+	stroke(120);
+	line(0, boxSize * gridSize, height, boxSize * gridSize);
+	line(boxSize * gridSize / 2, 0, boxSize * gridSize / 2, width * 2);
+	
 	// make box's lines white
 	fill(255);
 	stroke(255);
@@ -256,7 +276,7 @@ function putMouse()
 		// check if "move" mode is on
 		fill(220);
 		rect(0, 0, widthElement, boxSize * 1.5);
-		fill(0);
+		fill(255);
 		text(fg.node_status(mouseX, mouseY), 5, 20);
 		text("i", mouseX - 7, mouseY - 5);
 		stroke(0, 100, 255);

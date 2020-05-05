@@ -1,12 +1,13 @@
 class ShowEdge
 {
-	constructor(x1, y1, x2, y2, name)
+	constructor(x1, y1, x2, y2, name, type)
 	{
 		this.x1 = x1;
 		this.y1 = y1;
 		this.x2 = x2;
 		this.y2 = y2;
 		this.name = name;
+		this.type = type;
 		this.centerPoint = halfWayDot(this.x1, this.y1, this.x2, this.y2);
 		var m = line_m(this.x1, this.y1, this.x2, this.y2);
 		if (this.y1 == this.y2)
@@ -81,21 +82,21 @@ class ShowEdge
 			var second_point = new Point(base_x + inner_dist, base_y + inner_dist * ortogonal_m);
 			var third_point = new Point(base_x - inner_dist, base_y - inner_dist * ortogonal_m);
 		}
-		this.tringle_dots.push(end_node);
+		this.tringle_dots.push(new Point(end_node.x, end_node.y));
 		this.tringle_dots.push(second_point);
 		this.tringle_dots.push(third_point);
 	}
 	
 	copy()
 	{
-		var answer = new ShowEdge(this.x1, this.y1, this.x2, this.y2, this.name);
+		var answer = new ShowEdge(this.x1, this.y1, this.x2, this.y2, this.name, this.type);
 		answer.need_show = this.need_show;
 		return answer;
 	}
 	
 	static from_json(json)
 	{
-		var answer = new ShowEdge(json.x1, json.y1, json.x2, json.y2, json.name);
+		var answer = new ShowEdge(json.x1, json.y1, json.x2, json.y2, json.name, json.type);
 		answer.need_show = json.need_show;
 		return answer;
 	}
@@ -112,10 +113,38 @@ class ShowEdge
 		push();
 		var text_width = textWidth(this.name);
 		fill(255);
-		translate(this.centerPoint.x - text_width / 2, this.centerPoint.y);
+		var shift = 3;
+		if (this.rotation == 90) // x1 = x2
+		{
+			translate(this.centerPoint.x + shift, this.centerPoint.y - text_width / 2);	
+		}
+		else if (this.rotation == 0) // y1 = y2
+		{
+			translate(this.centerPoint.x - text_width / 2, this.centerPoint.y - shift);		
+		}
+		else if(this.rotation > 0 && this.rotation < 90)
+		{
+			translate(this.centerPoint.x - text_width * this.rotation / 180, this.centerPoint.y - text_width * this.rotation / 180);		
+		}
+		else if(this.rotation < 0 && this.rotation > -90)
+		{
+			translate(this.centerPoint.x - text_width / 2, this.centerPoint.y - text_width * Math.atan(this.rotation) / 6.28);		
+		}
+		
 		rotate(this.rotation);
 		text(this.name, 0, 0);
 		pop();
+		// print the type of this vassal
+		if (this.type == RED_TYPE)
+		{
+			fill("#a20420");
+		}
+		else if (this.type == BLUE_TYPE)
+		{
+			fill("#4224FF");
+		}
+		var r = 8;
+		ellipse(this.centerPoint.x, this.centerPoint.y, r, r);
 		// print direction triangle
 		fill(0, 220, 111);
 		triangle(this.tringle_dots[0].x, 
@@ -176,13 +205,14 @@ class Edge
 			if (this.type == RED_TYPE)
 			{
 				stroke("#DB4437");
+				fill("#a20420");
 			}
 			else if (this.type == BLUE_TYPE)
 			{
 				stroke("#4285F4");
+				fill("#4224FF");
 			}
-			stroke("#fcce76");
-			fill("#a20420");
+			// stroke("#fcce76");
 			strokeWeight(this.w);
 			
 			var start_node = null;
@@ -257,7 +287,7 @@ class Edge
 					var second_point = new Point(base_x + inner_dist, base_y + inner_dist * ortogonal_m);
 					var third_point = new Point(base_x - inner_dist, base_y - inner_dist * ortogonal_m);
 				}
-				this.tringle_dots.push(end_node);
+				this.tringle_dots.push(new Point(end_node.x, end_node.y));
 				this.tringle_dots.push(second_point);
 				this.tringle_dots.push(third_point);
 			}

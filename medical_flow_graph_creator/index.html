@@ -44,6 +44,8 @@
 									<li> Hold "E" to enter edit \ info mode, click on a node to edit it</li>
 									<li> Hit "O" to 'add Organ node' mode</li>
 									<li> Hit "B" to 'add Blood Vassal node' mode</li>
+									<li> Hit "A" to 'add Artery edge' mode</li>
+									<li> Hit "V" to 'add Vein edge' mode</li>
 									<li> Hit "S" to save your work into Python code and JS model</li>
 									<li> Hit "L" to open load model screen</li>
 									<li> Hit "R" to release the flow graph with the additinal info for the full model</li>
@@ -56,7 +58,9 @@
 								<ol>
 									<li> Yellow dot: blood vassal node</li>
 									<li> Perpule dot: organ node</li>
-									<li> Yellow line: normal edge</li>
+									<li> Blue line: Artery edge</li>
+									<li> Red line: Vien edge</li>
+									<li> Red line: Vien edge</li>
 									<li> Green line: line with multiple nodes from spesific organ</li>
 								</ol>
 							</p>
@@ -91,7 +95,7 @@
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
 						<form>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 								<div class="form-group">
 									<label for="node_type">Node Type</label>
 									<select id="node_type" class="form-control" onchange="return changeNodeStatus();">
@@ -100,9 +104,18 @@
 									</select>
 							  </div>
 							</div>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 							  <div class="form-group">
-								<label for="edge_w">Edge Score</label>
+								<label for="edge_type">Edge Type</label>
+								<select id="edge_type" class="form-control" onchange="return changeEdgeStatus();">
+									<option value="a" selected> Artery </option> 
+									<option value="v"> Vein </option> 
+								</select>
+							  </div>
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							  <div class="form-group">
+								<label for="edge_w">Edge weight</label>
 								<input type="number" min="0" max="10000" class="form-control" id="edge_w" placeholder="Edge Score" value="1">
 							  </div>
 							</div>

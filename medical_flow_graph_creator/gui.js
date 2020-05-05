@@ -8,6 +8,12 @@ function changeNodeStatus()
 	NODE_STATUS = e.options[e.selectedIndex].value;
 }
 
+function changeEdgeStatus()
+{
+	var e = document.getElementById("edge_type");
+	EDGE_STATUS = e.options[e.selectedIndex].value;
+}
+
 function setOrganNodeSettings()
 {
 	var organ_name = document.getElementById("organ_name").value;
@@ -33,7 +39,7 @@ function PickRatBloodVassal()
 	var rat_blood_value = e.options[e.selectedIndex].value;
 	document.getElementById("value_holder_rat_blood_vassals").value = rat_blood_value;
 	var id_and_name = e.options[e.selectedIndex].innerHTML.split("|");
-	document.getElementById("value_holder_rat_blood_vassals_name").value = id_and_name[1];
+	document.getElementById("value_holder_rat_blood_vassals_name").value = "[" + id_and_name[0] + "] " + id_and_name[1];
 	document.getElementById("edge_w").value = data[parseInt(id_and_name[0])-1][3] * 1000; // 3 is the index of the radius in the array
 	
 	if (rat_blood_value == "")
@@ -86,6 +92,18 @@ function keyPressed()
 	{
 		document.getElementById("node_type").selectedIndex = 1;
 		NODE_STATUS = "b";
+	}
+	
+	if (keyCode === 65) // code of 'a'
+	{
+		document.getElementById("edge_type").selectedIndex = 0;
+		EDGE_STATUS = "a";
+	}
+	
+	if (keyCode === 86) // code of 'v'
+	{
+		document.getElementById("edge_type").selectedIndex = 1;
+		EDGE_STATUS = "v";
 	}
 	
 	if (keyCode === 83) // code of 's'

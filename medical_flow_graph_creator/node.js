@@ -91,8 +91,8 @@ class Node
 		}
 		else
 		{
-			fill("red");
-			stroke("red");	
+			fill("white");
+			stroke("white");	
 		}
 		var r = MAX_R / 3;
 		if (this.status == ORGAN)
@@ -106,7 +106,7 @@ class Node
 		fill(255, 255, 255);
 		strokeWeight(0);
 		textSize(12);
-		text('' + this.id, this.x - 10, this.y - 10);
+		text('' + this.id, this.x - 10 - (this.id.toString().length - 1) * 3, this.y - 10);
 	}
 	
 	to_string(drugs_string, override_index=-1)
