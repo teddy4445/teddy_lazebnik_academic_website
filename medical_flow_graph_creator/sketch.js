@@ -32,7 +32,7 @@ function setup() {
 	widthElement = document.getElementById('game-holder').getBoundingClientRect().width;
 	box_size = widthElement / gridSize * 2;
 	MAX_R = box_size - 1;
-	var cnv = createCanvas(widthElement, widthElement);
+	var cnv = createCanvas(widthElement, widthElement * 2);
 	cnv.parent('game');
 	fg = new FlowGraph();
 	noCursor();
@@ -73,6 +73,7 @@ async function mouseClicked()
 		{	
 			if (fg.picked_status())
 			{
+				var old_w = document.getElementById("edge_w").value;
 				var pickedIndex = fg.get_picked_node();
 				$('#rat_blood_vassal_panel').show();
 				RAT_BLOOD_PANEL_OPEN = true;
@@ -98,7 +99,7 @@ async function mouseClicked()
 					}	
 					else // dot between 2 lines
 					{
-						fg.add_edge(fg.nodes.length - 1,fg.nodes.length - 2, 100);
+						fg.add_edge(fg.nodes.length - 2, fg.nodes.length - 1, w);
 					}
 					fg.edges[fg.edges.length - 1].hide();
 				}
@@ -107,6 +108,7 @@ async function mouseClicked()
 				fg.add_show_edge(pickedIndex, nextToNode, nodes_name); // close line
 				fg.unmark_node(pickedIndex);
 				document.getElementById("node_id").value = "";
+				document.getElementById("edge_w").value = old_w;
 			}
 			else
 			{
@@ -221,14 +223,14 @@ function drawGrid()
 	stroke(255);
 	strokeWeight(0.1);
 	// print - lines 
-	for (var index = 0; index < gridSize; index++)
+	for (var index = 0; index < gridSize * 2; index++)
 	{
 		line(0, boxSize * index, height, boxSize * index);
 	}
 	// print | lines 
 	for (var index = 0; index < gridSize; index++)
 	{
-		line(boxSize * index, 0, boxSize * index, width);
+		line(boxSize * index, 0, boxSize * index, width * 2);
 	}
 }
 
@@ -250,9 +252,10 @@ function putMouse()
 	}
 	else if (keyIsDown(69)) // 'E' key code
 	{
+		var boxSize = widthElement / gridSize;
 		// check if "move" mode is on
 		fill(220);
-		rect(0, 0, widthElement, 25);
+		rect(0, 0, widthElement, boxSize * 1.5);
 		fill(0);
 		text(fg.node_status(mouseX, mouseY), 5, 20);
 		text("i", mouseX - 7, mouseY - 5);
@@ -261,6 +264,7 @@ function putMouse()
 	else
 	{
 		textSize(10);
+		fill(255);
 		if (NODE_STATUS == "o")
 		{
 			text("o", mouseX - 7, mouseY - 5);

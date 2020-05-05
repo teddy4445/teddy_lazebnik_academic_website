@@ -62,24 +62,12 @@ class FlowGraph
 	
 	nodes_count()
 	{
-		var answer = 0;
-		for (var i = 0; i < this.nodes.length; i++)
-		{
-			if (this.nodes[i].type == ORGAN)
-			{
-				answer += 1;
-			}
-			else 
-			{
-				answer += 2;
-			}
-		}
-		return answer;
+		return this.nodes.length;
 	}
 	
 	edges_count()
 	{
-		return this.edges.length * 2;
+		return this.edges.length;
 	}
 	
 	picked_status()
@@ -103,17 +91,25 @@ class FlowGraph
 			
 			if(ids.length == 0)
 			{
-				this._running_id = 1;
+				this._running_id = 2;
 				this._delete_happend = 0;
+				next_id = 1;
+			}
+			
+			else if(!ids.includes(1))
+			{
+				this._delete_happend -= 1;
+				next_id = 1;
 			}
 			else
 			{
-				ids.sort();
+				ids.sort((a,b)=>a-b);
 				for (var i = 0; i < ids.length - 1; i++)
 				{
 					if(ids[i + 1] - ids[i] != 1)
 					{
 						next_id = ids[i] + 1;
+						break;
 					}
 				}	
 				if (next_id == this._running_id)
@@ -124,7 +120,7 @@ class FlowGraph
 			}
 		}
 		this.nodes.push(new Node(next_id, x, y, type, organ_name, lip, ts));
-		console.log("Add node with id = " + this._running_id);
+		console.log("Add node with id = " + next_id);
 		if (this._delete_happend == 0 && !change_in_delete)
 		{
 			this._running_id += 1;
@@ -133,25 +129,30 @@ class FlowGraph
 	
 	delete_node(node_index)
 	{
+		IS_PANEL_OPEN = true;
 		add_last_fq(this.copy());
 		var node_id = this.nodes[node_index].id;
 		var i = 0;
+		var delete_edge_count = 0;
 		while(i < this.edges.length)
 		{
 			if (this.edges[i].start_node_id == node_id || this.edges[i].end_node_id == node_id)
 			{
 				this.edges.splice(i, 1);
 				i -= 1;
+				delete_edge_count += 1;
 			}
 			i += 1;
 		}
 		this.nodes.splice(node_index, 1);
-		console.log("Delete node with id = " + node_id);
+		console.log("Delete node with id = " + node_id + ", with " + delete_edge_count + " edges");
 		this._delete_happend += 1;
+		IS_PANEL_OPEN = false;
 	}
 	
 	try_delete_edge(x, y)
 	{
+		IS_PANEL_OPEN = true;
 		var id_to_index = {};
 		for (var i = 0; i < this.nodes.length; i++)
 		{
@@ -168,10 +169,12 @@ class FlowGraph
 				break;
 			}
 		}
+		IS_PANEL_OPEN = false;
 	}
 	
 	try_delete_show_edge(x, y)
 	{	
+		IS_PANEL_OPEN = true;
 		for (var i = 0; i < this.show_edges.length; i++)
 		{
 			if (distToSegment(new Point(x, y), new Point(this.show_edges[i].x1, this.show_edges[i].y1), new Point(this.show_edges[i].x2, this.show_edges[i].y2)) < MAX_R)
@@ -193,6 +196,7 @@ class FlowGraph
 				break;
 			}
 		}
+		IS_PANEL_OPEN = false;
 	}
 	
 	add_edge(node_i_index, node_j_index, w, type)
@@ -213,6 +217,7 @@ class FlowGraph
 	
 	add_show_edge(start_node_index, end_node_index, name)
 	{
+		IS_PANEL_OPEN = true;
 		add_last_fq(this.copy());
 		if (this.has_this_edge(start_node_index, end_node_index))
 		{
@@ -222,6 +227,7 @@ class FlowGraph
 		this.show_edges.push(new ShowEdge(this.nodes[start_node_index].x, this.nodes[start_node_index].y,
 										  this.nodes[end_node_index].x, this.nodes[end_node_index].y,
 										  name));
+		IS_PANEL_OPEN = false;
 	}
 	
 	has_this_edge(node_i_index, node_j_index)

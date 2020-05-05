@@ -111,6 +111,7 @@ class ShowEdge
 		angleMode(DEGREES);
 		push();
 		var text_width = textWidth(this.name);
+		fill(255);
 		translate(this.centerPoint.x - text_width / 2, this.centerPoint.y);
 		rotate(this.rotation);
 		text(this.name, 0, 0);
