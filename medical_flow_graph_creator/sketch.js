@@ -85,7 +85,7 @@ async function mouseClicked()
 				// put points
 				var nodes_count = parseInt(document.getElementById("value_holder_rat_blood_vassals").value);
 				var nodes_name = document.getElementById("value_holder_rat_blood_vassals_name").value;
-				var MIN_W = 100;
+				var w = document.getElementById("edge_w").value;
 				for (var i = 1; i < nodes_count - 1; i++)
 				{
 					var point = locationBetweenDots(fg.nodes[pickedIndex], fg.nodes[nextToNode], nodes_count - 1 - i, nodes_count - 1);
@@ -94,7 +94,7 @@ async function mouseClicked()
 					// add line from first dot
 					if (i == 1)
 					{
-						fg.add_edge(pickedIndex, fg.nodes.length - 1, MIN_W);
+						fg.add_edge(pickedIndex, fg.nodes.length - 1, w);
 					}	
 					else // dot between 2 lines
 					{
@@ -102,7 +102,7 @@ async function mouseClicked()
 					}
 					fg.edges[fg.edges.length - 1].hide();
 				}
-				fg.add_edge(fg.nodes.length - 1, nextToNode, MIN_W); // close line
+				fg.add_edge(fg.nodes.length - 1, nextToNode, w); // close line
 				fg.edges[fg.edges.length - 1].hide();
 				fg.add_show_edge(pickedIndex, nextToNode, nodes_name); // close line
 				fg.unmark_node(pickedIndex);

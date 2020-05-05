@@ -182,7 +182,7 @@ class Edge
 			}
 			stroke("#fcce76");
 			fill("#a20420");
-			strokeWeight(this.w / 100);
+			strokeWeight(this.w);
 			
 			var start_node = null;
 			var end_node = null;

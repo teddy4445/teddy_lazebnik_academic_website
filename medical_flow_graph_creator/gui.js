@@ -32,7 +32,9 @@ function PickRatBloodVassal()
 	var e = document.getElementById("model_bv_node_count");
 	var rat_blood_value = e.options[e.selectedIndex].value;
 	document.getElementById("value_holder_rat_blood_vassals").value = rat_blood_value;
-	document.getElementById("value_holder_rat_blood_vassals_name").value = e.options[e.selectedIndex].innerHTML.split("|")[1];
+	var id_and_name = e.options[e.selectedIndex].innerHTML.split("|");
+	document.getElementById("value_holder_rat_blood_vassals_name").value = id_and_name[1];
+	document.getElementById("edge_w").value = data[parseInt(id_and_name[0])][3] * 1000; // 3 is the index of the radius in the array
 	
 	if (rat_blood_value == "")
 	{
