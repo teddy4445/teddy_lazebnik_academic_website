@@ -275,9 +275,14 @@ function putMouse()
 		var boxSize = widthElement / gridSize;
 		// check if "move" mode is on
 		fill(220);
-		rect(0, 0, widthElement, boxSize * 1.5);
+		var textStatus = fg.node_status(mouseX, mouseY);
+		if (textStatus != "")
+		{
+			rect(0, Math.max(0, mouseY - 200), Math.min(textWidth(textStatus) + 20, widthElement), boxSize * 1.5);
+			fill(0);
+			text(textStatus, 5, Math.max(20, mouseY - 180));	
+		}
 		fill(255);
-		text(fg.node_status(mouseX, mouseY), 5, 20);
 		text("i", mouseX - 7, mouseY - 5);
 		stroke(0, 100, 255);
 	}
