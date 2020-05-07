@@ -109,7 +109,7 @@ class Node
 		text('' + this.id, this.x - 10 - (this.id.toString().length - 1) * 3, this.y - 10);
 	}
 	
-	to_string(drugs_string, override_index=-1)
+	to_string(drugs_string = "{}", override_index=-1)
 	{
 		if (override_index == -1)
 		{
