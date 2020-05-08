@@ -179,6 +179,7 @@
 									<a target="_blank" class="alert-text bg-gray" href="https://ml5js.org/"> ML5.js </a>
 									<a target="_blank" class="alert-text bg-gray" href="https://github.com/CodingTrain/Toy-Neural-Network-JS/blob/master/examples/neuroevolution-flappybird/ga.js"> Toy Neural Network (JS) </a>
 									<a target="_blank" class="alert-text bg-gray" href="https://www.youtube.com/watch?v=c6y21FkaUqw"> Neuroevolution Flappy Bird Video </a> <br><br>
+									<iframe width="875" height="492" src="https://www.youtube.com/embed/iHjBP7aGCiw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</li>
 								<li class="marge-low">
 									Lesson 9 - Detection and Segmentation
@@ -223,6 +224,25 @@
 							<a class="btn btn-primary" alt="Knn and Xnn" href="deep_leanring_poses.html">Go to random poses dataset page</a>
 							
 							<h3> Submission Table </h3>
+							<h4> Project </h4>
+							<table class="table table-striped">
+							  <thead>
+								<tr>
+								  <th scope="col">#</th>
+								  <th scope="col">ID number</th>
+								  <th scope="col">Proposal</th>
+								  <th scope="col">Project paper</th>
+								  <th scope="col">Code</th>
+								  <th scope="col">Presentation file</th>
+								  <th scope="col">Presentation in class</th>
+								  <th scope="col">Results + Complexity + Inovation</th>
+								  <th scope="col">Grade So Far</th>
+								</tr>
+							  </thead>
+							  <tbody id="table_data_2">
+							  </tbody>
+							</table>
+							<h4> Home Work </h4>
 							<table class="table table-striped">
 							  <thead>
 								<tr>
@@ -249,16 +269,29 @@
 	<script>
 	let table_data = document.getElementById("table_data");
 	students_data = [["312188972", 90, 100, 90],
-					 ["320489735", 95, 95, 40],
-					 ["317186310", 60, 0, 90],
+					 ["320489735", 95, 95, 80],
+					 ["317186310", 60, 75, 90],
 					 ["322869439", 100, 95, 100],
 					 ["212360333", 100, 95, 100],
-					 ["336377064", 95, 95, 40],
+					 ["336377064", 95, 95, 80],
 					 ["211513890", 100, 100, 90],
 					 ["212172654", 100, 100, 90],
 					 ["066530551", 100, 100, 90],
 					 ["036532869", 100, 100, 90]];
-	printSubbmitionTable(students_data);
+	printSubbmitionTable(table_data, students_data);
+	
+	let table_data2 = document.getElementById("table_data_2");
+	students_data = [["312188972", 0, 0, 0, 0, 0, 0],
+					 ["320489735", 0, 0, 0, 0, 0, 0],
+					 ["317186310", 0, 0, 0, 0, 0, 0],
+					 ["322869439", 0, 0, 0, 0, 0, 0],
+					 ["212360333", 0, 0, 0, 0, 0, 0],
+					 ["336377064", 0, 0, 0, 0, 0, 0],
+					 ["211513890", 0, 0, 0, 0, 0, 0],
+					 ["212172654", 0, 0, 0, 0, 0, 0],
+					 ["066530551", 0, 0, 0, 0, 0, 0],
+					 ["036532869", 0, 0, 0, 0, 0, 0]];
+	printSubbmitionTable(table_data2, students_data);
 	</script>
 </body>
 </html>

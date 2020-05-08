@@ -1,4 +1,4 @@
-function printSubbmitionTable(students_data)
+function printSubbmitionTable(table_object, students_data)
 {
 	for (var i = 0; i < students_data.length; i++ )
 	{
@@ -20,6 +20,6 @@ function printSubbmitionTable(students_data)
 		var next_cell = document.createElement('td');
 		next_cell.innerHTML = (score / (students_data[i].length - 1)).toFixed(1);
 		next_row_element.appendChild(next_cell);
-		table_data.appendChild(next_row_element);
+		table_object.appendChild(next_row_element);
 	}
 }
