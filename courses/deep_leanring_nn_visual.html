@@ -28,58 +28,60 @@
 </head>
 
 <body>
-	<div class="row">
-		<div class="col-lg-2 col-md-2 col-sm-1">
-		
-		</div>
-		<div class="col-lg-8 col-md-8 col-sm-10">
-			<div class="header">
-				<h1>
-				Theodore (Teddy) Lazebnik
-				</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-1 col-md-1 col-sm-1">
+			
 			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="../index.html"> Short Bio </a></li>
-					<li><a href="../publications.html"> Publications </a></li>
-					<li><a href="../students.html"> Students </a></li>
-					<li><a href="../opensource.html"> Open Resources </a></li>
-					<li><a href="../teaching.html"> Teaching </a></li>
-					<li><a href="" class="active"> Deep Leanring for Computer Vision (How my NN looks like?) </a></li>
-				</ul>
-			</div>
-			<div class="body">
-				<div class="fluid-container">
-					<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12">
-						<div class="info" style="text-align: center;">
-							<h3> How my NN looks like?</h3>
-								<p><b>Note:</b> use "," to split the layers sizes. </p>
-								<form style="text-align: left;">
-									<div class="form-group">
-									<label for="layers">Layers</label>
-										<input class="form-control" type="text" id="layers" placeholder="Layers">
-									</div>
-									<div  style="display: none;" id="cnnPanel">
+			<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="header">
+					<h1>
+					Theodore (Teddy) Lazebnik
+					</h1>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="../index.html"> Short Bio </a></li>
+						<li><a href="../publications.html"> Publications </a></li>
+						<li><a href="../students.html"> Students </a></li>
+						<li><a href="../opensource.html"> Open Resources </a></li>
+						<li><a href="../teaching.html"> Teaching </a></li>
+						<li><a href="" class="active"> Deep Leanring for Computer Vision (How my NN looks like?) </a></li>
+					</ul>
+				</div>
+				<div class="body">
+					<div class="fluid-container">
+						<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12">
+							<div class="info" style="text-align: center;">
+								<h3> How my NN looks like?</h3>
+									<p><b>Note:</b> use "," to split the layers sizes. </p>
+									<form style="text-align: left;">
 										<div class="form-group">
-										<label for="layers">Window Size</label>
-											<input class="form-control" type="number" min="1" max="9" id="cnnSize" placeholder="Window Size" value="3">
+										<label for="layers">Layers</label>
+											<input class="form-control" type="text" id="layers" placeholder="Layers">
 										</div>
-										<div class="form-group">
-										<label for="layers">Window Movement</label>
-											<input class="form-control" type="number" min="1" max="9" id="cnnMove" placeholder="Window Movement" value="1">
+										<div  style="display: none;" id="cnnPanel">
+											<div class="form-group">
+											<label for="layers">Window Size</label>
+												<input class="form-control" type="number" min="1" max="9" id="cnnSize" placeholder="Window Size" value="3">
+											</div>
+											<div class="form-group">
+											<label for="layers">Window Movement</label>
+												<input class="form-control" type="number" min="1" max="9" id="cnnMove" placeholder="Window Movement" value="1">
+											</div>
 										</div>
+									</form>
+									<button class="btn btn-secondary" onclick="redraw();" style="margin-top: 10px; margin-bottom: 10px;">Draw!</button>
+									<button class="btn btn-warning" onclick="redrawRandom();" style="margin-top: 10px; margin-bottom: 10px;">Draw Random!</button>
+									<div id="canvas_container">
+										
 									</div>
-								</form>
-								<button class="btn btn-secondary" onclick="redraw();" style="margin-top: 10px; margin-bottom: 10px;">Draw!</button>
-								<button class="btn btn-warning" onclick="redrawRandom();" style="margin-top: 10px; margin-bottom: 10px;">Draw Random!</button>
-								<div id="canvas_container">
-									
-								</div>
-								<a class="btn btn-info" alt="FNN case" href="deep_leanring_nn_visual.html?type=fnn" style="margin-top: 10px;">Show FNN Case </a>
-								<a class="btn btn-info" alt="CNN case" href="deep_leanring_nn_visual.html?type=cnn" style="margin-top: 10px;">Show CNN Case </a>
+									<a class="btn btn-info" alt="FNN case" href="deep_leanring_nn_visual.html?type=fnn" style="margin-top: 10px;">Show FNN Case </a>
+									<a class="btn btn-info" alt="CNN case" href="deep_leanring_nn_visual.html?type=cnn" style="margin-top: 10px;">Show CNN Case </a>
+							</div>
 						</div>
-					</div>
+						</div>
 					</div>
 				</div>
 			</div>

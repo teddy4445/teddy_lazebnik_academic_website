@@ -24,360 +24,361 @@
 </head>
 
 <body>
-	<div class="row">
-		<div class="col-lg-2 col-md-2 col-sm-1">
-		
-		</div>
-		<div class="col-lg-8 col-md-8 col-sm-10">
-			<div class="header">
-				<h1>
-				Theodore (Teddy) Lazebnik
-				</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-1 col-md-1 col-sm-1">
+			
 			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="../index.html"> Short Bio </a></li>
-					<li><a href="../publications.html"> Publications </a></li>
-					<li><a href="../students.html"> Students </a></li>
-					<li><a href="../opensource.html"> Open Resources </a></li>
-					<li><a href="../teaching.html"> Teaching </a></li>
-					<li><a href="" class="active"> Tools for Numerical Analysis (Zero point Py code)</a></li>
-				</ul>
-			</div>
-			<div class="body">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12">
-						<div class="info">
-							<h2>Tools for Numerical Analysis (83214)</h2>
-							<p>
-								The Following code is an example of simple implementation of the 4 algorithms for zero-point finding.
-							</p>
-							
-							<div class="code-section">
-								<div class="code-function">import math</div>
-<div class="code-comment"># just for showing in class</div>								
-								<div class="code-function">import time</div><br>
+			<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="header">
+					<h1>
+					Theodore (Teddy) Lazebnik
+					</h1>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="../index.html"> Short Bio </a></li>
+						<li><a href="../publications.html"> Publications </a></li>
+						<li><a href="../students.html"> Students </a></li>
+						<li><a href="../opensource.html"> Open Resources </a></li>
+						<li><a href="../teaching.html"> Teaching </a></li>
+						<li><a href="" class="active"> Tools for Numerical Analysis (Zero point Py code)</a></li>
+					</ul>
+				</div>
+				<div class="body">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12">
+							<div class="info">
+								<h2>Tools for Numerical Analysis (83214)</h2>
+								<p>
+									The Following code is an example of simple implementation of the 4 algorithms for zero-point finding.
+								</p>
+								
+								<div class="code-section">
+									<div class="code-function">import math</div>
+	<div class="code-comment"># just for showing in class</div>								
+									<div class="code-function">import time</div><br>
 
-								<div class="code-comment"># consts #</div>
-								delay = 0
-								<div class="code-comment"># end - consts #</div><br>
-
-
-								<div class="code-function">def f(x: float) -> float:</div>
-								<div class="code-comment">
-									"""
-									:param x: the input of the function
-									:return: x^3 + 1
-									"""
-									</div>
-									return x**3 + 1 <br><br>
+									<div class="code-comment"># consts #</div>
+									delay = 0
+									<div class="code-comment"># end - consts #</div><br>
 
 
-								<div class="code-function">def df(x: float) -> float:</div>
-								<div class="code-comment">
-									"""
-									:param x: the input of the function
-									:return: 3x^2
-									"""
-									</div>
-									return 3 * x**2<br><br>
-
-
-								<div class="code-function">def f1(x: float):</div>
-								<div class="code-comment">
-									"""
-									:param x: the input of the function
-									:return: sin(x) * x - pi
-									"""
-									</div>
-									return math.sin(x) * x - math.pi<br><br>
-
-
-								<div class="code-function">def df1(x: float):</div>
-								<div class="code-comment">
-									"""
-									:param x: the input of the function
-									:return: cos(x) * x + sin(x)
-									"""
-									</div>
-									return math.cos(x) * x + math.sin(x)<br><br>
-
-
-								<div class="code-function">def f2(x: float):</div>
-								<div class="code-comment">
-									"""
-									:param x: the input of the function
-									:return: e^(-1/x^2)
-									"""
-									</div>
-									return math.exp(-1/(x**2))<br><br>
-
-
-								<div class="code-function">def df2(x: float):</div>
-								<div class="code-comment">
-									"""
-									:param x: the input of the function
-									:return: 3x^2
-									"""
-									</div>
-									return 2 * math.exp(-1/(x**2)) / x**3<br><br>
-
-
-								<div class="code-class">class Bisection:</div>
-								<div class="code-comment">
-									"""
-									bisection method for a given function
-									"""
-									</div>
-<br>
-									@staticmethod
-									<div class="code-function">def run(function,
-											a: float,
-											b: float,
-											precision: float) -> float:</div>
-											<div class="code-comment">
-										"""
-										run the bisection method of a function and start conditions [a,b]
-										:param function: the function to run
-										:param a: the smaller location
-										:param b: the upper location
-										:param precision: how accurate we want the answer
-										:return: where function = 0 inside [a,b]
-										"""
-										</div>
-										<div class="code-comment">
-										# first, make sure b > a</div>
-										if b < a:<br>
-											temp = a<br>
-											a = b<br>
-											b = temp<br>
-											<div class="code-comment">
-										# make sure the function decrease and then increase</div>
-										if not (function(b) > 0 > function(a) or function(a) > 0 > function(b)):
-											return "error"
-											<div class="code-comment">
-										# make the calculation itself</div>
-										index = 1<br>
-										while (b-a) > precision:<br>
-											c = (a + b) / 2<br>
-											print("#{}: [{},{}] | c={}".format(index, a, b, c))<br>
-											if function(a) * function(c) > 0:<br>
-												a = c<br>
-											else:<br>
-												b = c<br>
-											time.sleep(delay)  # Delays for 'delay' seconds. Make anything more cool at class<br>
-											index += 1<br>
-										print('Found solution after {} iterations.'.format(index))<br>
-										return c<br><br>
-
-									@staticmethod
-									<div class="code-function">def run_sample():</div>
+									<div class="code-function">def f(x: float) -> float:</div>
 									<div class="code-comment">
 										"""
-										A sample of running the Bisection algorithm
+										:param x: the input of the function
+										:return: x^3 + 1
 										"""
 										</div>
-										return Bisection.run(function=f,
-															 a=-5,
-															 b=5,
-															 precision=0.0001)<br><br>
+										return x**3 + 1 <br><br>
 
 
-								<div class="code-class">class RegulaFalsi:</div>
-								<div class="code-comment">
-									"""
-									Regula Falsi method for a given function
-									"""
-									</div>
-
-									@staticmethod
-									<div class="code-function">def run(function,
-											a: float,
-											b: float,
-											precision: float,
-											max_iter: int) -> float:</div>
-											<div class="code-comment">
-										"""
-										run the bisection method of a function and start conditions [a,b]
-										:param function: the function to run
-										:param a: the smaller location
-										:param b: the upper location
-										:param max_iter: how many iteration we allow in the process
-										:param precision: how accurate we want the answer
-										:return: where function = 0 inside [a,b]
-										"""
-										</div>
-										# first, make sure b > a
-										if b < a:<br>
-											temp = a<br>
-											a = b<br>
-											b = temp<br>
-										xn = (a + b) / 2<br>
-										m = (b - a) / (function(b) - function(a))<br>
-										for n in range(max_iter):<br>
-											f_xn = function(xn)<br>
-											if abs(f_xn) < precision:<br>
-												print('Found solution after {} iterations.'.format(n))<br>
-												return xn<br>
-											xn = xn - f_xn * m<br>
-											print("#{}: Xn = {}".format(n, xn))<br>
-											time.sleep(delay) <br>
-										print('Exceeded maximum iterations. No solution found.')<br>
-										return "error"<br>
-
-									@staticmethod
-									<div class="code-function">def run_sample():</div>
+									<div class="code-function">def df(x: float) -> float:</div>
 									<div class="code-comment">
 										"""
-										A sample of running the Bisection algorithm
+										:param x: the input of the function
+										:return: 3x^2
 										"""
 										</div>
-										return RegulaFalsi.run(function=f,
-															   a=-5,
-															   b=5,
-															   precision=0.0001,
-															   max_iter=100)<br><br>
+										return 3 * x**2<br><br>
 
 
-								<div class="code-class">class Secant:</div>
-								<div class="code-comment">
-									"""
-									Secant method for a given function
-									"""
-									</div>
-
-									@staticmethod
-									<div class="code-function">def run(function,
-											a: float,
-											b: float,
-											precision: float) -> float:</div>
-											<div class="code-comment">
+									<div class="code-function">def f1(x: float):</div>
+									<div class="code-comment">
 										"""
-										run the bisection method of a function and start conditions [a,b]
-										:param function: the function to run
-										:param a: the smaller location
-										:param b: the upper location
-										:param precision: how accurate we want the answer
-										:return: where function = 0 inside [a,b]
+										:param x: the input of the function
+										:return: sin(x) * x - pi
 										"""
-										# first, make sure b > a</div>
-										if b < a:<br>
-											temp = a<br>
-											a = b<br>
-											b = temp<br>
+										</div>
+										return math.sin(x) * x - math.pi<br><br>
+
+
+									<div class="code-function">def df1(x: float):</div>
+									<div class="code-comment">
+										"""
+										:param x: the input of the function
+										:return: cos(x) * x + sin(x)
+										"""
+										</div>
+										return math.cos(x) * x + math.sin(x)<br><br>
+
+
+									<div class="code-function">def f2(x: float):</div>
+									<div class="code-comment">
+										"""
+										:param x: the input of the function
+										:return: e^(-1/x^2)
+										"""
+										</div>
+										return math.exp(-1/(x**2))<br><br>
+
+
+									<div class="code-function">def df2(x: float):</div>
+									<div class="code-comment">
+										"""
+										:param x: the input of the function
+										:return: 3x^2
+										"""
+										</div>
+										return 2 * math.exp(-1/(x**2)) / x**3<br><br>
+
+
+									<div class="code-class">class Bisection:</div>
+									<div class="code-comment">
+										"""
+										bisection method for a given function
+										"""
+										</div>
+	<br>
+										@staticmethod
+										<div class="code-function">def run(function,
+												a: float,
+												b: float,
+												precision: float) -> float:</div>
+												<div class="code-comment">
+											"""
+											run the bisection method of a function and start conditions [a,b]
+											:param function: the function to run
+											:param a: the smaller location
+											:param b: the upper location
+											:param precision: how accurate we want the answer
+											:return: where function = 0 inside [a,b]
+											"""
+											</div>
 											<div class="code-comment">
-										# make sure the function decrease and then increase</div>
-										if not (function(b) > 0 > function(a) or function(a) > 0 > function(b)):
-											return "error"
-											<div class="code-comment">
-										# make the calculation itself </div>
-										index = 1<br>
-										x0 = a<br>
-										x1 = b<br>
-										while abs(x1-x0) > precision:<br>
-											try:<br>
-												x2 = (x0 * function(x1) - x1 * function(x0)) / (function(x1) - function(x0))<br>
-												print("#{}: [{},{}] | c={}".format(index, x0, x1, x2))<br>
-												time.sleep(delay)  <br>
-												x0 = x1<br>
-												x1 = x2<br>
+											# first, make sure b > a</div>
+											if b < a:<br>
+												temp = a<br>
+												a = b<br>
+												b = temp<br>
+												<div class="code-comment">
+											# make sure the function decrease and then increase</div>
+											if not (function(b) > 0 > function(a) or function(a) > 0 > function(b)):
+												return "error"
+												<div class="code-comment">
+											# make the calculation itself</div>
+											index = 1<br>
+											while (b-a) > precision:<br>
+												c = (a + b) / 2<br>
+												print("#{}: [{},{}] | c={}".format(index, a, b, c))<br>
+												if function(a) * function(c) > 0:<br>
+													a = c<br>
+												else:<br>
+													b = c<br>
+												time.sleep(delay)  # Delays for 'delay' seconds. Make anything more cool at class<br>
 												index += 1<br>
-											except Exception as error:<br>
-												break<br>
-										print('Found solution after {} iterations.'.format(index))<br>
-										return x1<br><br>
+											print('Found solution after {} iterations.'.format(index))<br>
+											return c<br><br>
 
-									@staticmethod
-									<div class="code-function">def run_sample():</div>
+										@staticmethod
+										<div class="code-function">def run_sample():</div>
+										<div class="code-comment">
+											"""
+											A sample of running the Bisection algorithm
+											"""
+											</div>
+											return Bisection.run(function=f,
+																 a=-5,
+																 b=5,
+																 precision=0.0001)<br><br>
+
+
+									<div class="code-class">class RegulaFalsi:</div>
 									<div class="code-comment">
 										"""
-										A sample of running the Bisection algorithm
+										Regula Falsi method for a given function
 										"""
 										</div>
-										return Secant.run(function=f,
-														  a=-5,
-														  b=5,
-														  precision=0.0001)<br><br>
+
+										@staticmethod
+										<div class="code-function">def run(function,
+												a: float,
+												b: float,
+												precision: float,
+												max_iter: int) -> float:</div>
+												<div class="code-comment">
+											"""
+											run the bisection method of a function and start conditions [a,b]
+											:param function: the function to run
+											:param a: the smaller location
+											:param b: the upper location
+											:param max_iter: how many iteration we allow in the process
+											:param precision: how accurate we want the answer
+											:return: where function = 0 inside [a,b]
+											"""
+											</div>
+											# first, make sure b > a
+											if b < a:<br>
+												temp = a<br>
+												a = b<br>
+												b = temp<br>
+											xn = (a + b) / 2<br>
+											m = (b - a) / (function(b) - function(a))<br>
+											for n in range(max_iter):<br>
+												f_xn = function(xn)<br>
+												if abs(f_xn) < precision:<br>
+													print('Found solution after {} iterations.'.format(n))<br>
+													return xn<br>
+												xn = xn - f_xn * m<br>
+												print("#{}: Xn = {}".format(n, xn))<br>
+												time.sleep(delay) <br>
+											print('Exceeded maximum iterations. No solution found.')<br>
+											return "error"<br>
+
+										@staticmethod
+										<div class="code-function">def run_sample():</div>
+										<div class="code-comment">
+											"""
+											A sample of running the Bisection algorithm
+											"""
+											</div>
+											return RegulaFalsi.run(function=f,
+																   a=-5,
+																   b=5,
+																   precision=0.0001,
+																   max_iter=100)<br><br>
 
 
-								<div class="code-class">class NewtonRaphson:</div>
-								<div class="code-comment">
-									"""
-									Secant method for a given function
-									"""
-									</div>
-
-									@staticmethod
-									<div class="code-function">def run(function,
-											div_function,
-											init_x: float,
-											precision: float,
-											max_iter: int) -> float:</div>
-											<div class="code-comment">
-										"""
-										run the bisection method of a function and start conditions [a,b]
-										:param function: the function to run
-										:param div_function: the function's diversion to run
-										:param init_x: the seed point of the run
-										:param max_iter: how many iteration we allow in the process
-										:param precision: how accurate we want the answer
-										:return: where function = 0 inside [a,b]
-										"""
-										</div>
-										xn = init_x<br>
-										for n in range(max_iter):<br>
-											f_xn = function(xn)<br>
-											if abs(f_xn) < precision:<br>
-												print('Found solution after {} iterations.'.format(n))<br>
-												return xn<br>
-											divf_xn = div_function(xn)<br>
-											if divf_xn == 0:<br>
-												print('Zero derivative. No solution found.')<br>
-												return "error"<br>
-											xn = xn - f_xn / divf_xn<br>
-											print("#{}: Xn = {}".format(n, xn))<br>
-											time.sleep(delay) <br>
-										print('Exceeded maximum iterations. No solution found.')<br>
-										return "error"<br><br>
-
-									@staticmethod
-									<div class="code-function">def run_sample():</div>
+									<div class="code-class">class Secant:</div>
 									<div class="code-comment">
 										"""
-										A sample of running the Bisection algorithm
+										Secant method for a given function
 										"""
 										</div>
-										return NewtonRaphson.run(function=f,
-																 div_function=df,
-																 precision=0.0001,
-																 init_x=1,
-																 max_iter=100)<br><br>
+
+										@staticmethod
+										<div class="code-function">def run(function,
+												a: float,
+												b: float,
+												precision: float) -> float:</div>
+												<div class="code-comment">
+											"""
+											run the bisection method of a function and start conditions [a,b]
+											:param function: the function to run
+											:param a: the smaller location
+											:param b: the upper location
+											:param precision: how accurate we want the answer
+											:return: where function = 0 inside [a,b]
+											"""
+											# first, make sure b > a</div>
+											if b < a:<br>
+												temp = a<br>
+												a = b<br>
+												b = temp<br>
+												<div class="code-comment">
+											# make sure the function decrease and then increase</div>
+											if not (function(b) > 0 > function(a) or function(a) > 0 > function(b)):
+												return "error"
+												<div class="code-comment">
+											# make the calculation itself </div>
+											index = 1<br>
+											x0 = a<br>
+											x1 = b<br>
+											while abs(x1-x0) > precision:<br>
+												try:<br>
+													x2 = (x0 * function(x1) - x1 * function(x0)) / (function(x1) - function(x0))<br>
+													print("#{}: [{},{}] | c={}".format(index, x0, x1, x2))<br>
+													time.sleep(delay)  <br>
+													x0 = x1<br>
+													x1 = x2<br>
+													index += 1<br>
+												except Exception as error:<br>
+													break<br>
+											print('Found solution after {} iterations.'.format(index))<br>
+											return x1<br><br>
+
+										@staticmethod
+										<div class="code-function">def run_sample():</div>
+										<div class="code-comment">
+											"""
+											A sample of running the Bisection algorithm
+											"""
+											</div>
+											return Secant.run(function=f,
+															  a=-5,
+															  b=5,
+															  precision=0.0001)<br><br>
 
 
-								if __name__ == '__main__':<br>
-								<div class="code-comment"> # delete this line to make the code work fast<br> </div>
-									delay = 0.5 
+									<div class="code-class">class NewtonRaphson:</div>
+									<div class="code-comment">
+										"""
+										Secant method for a given function
+										"""
+										</div>
 
-									print("Bisection Method\n")  <div class="code-comment"> # method title </div>
-									print("Run answer is: {}".format(Bisection.run_sample()))
-									print("\n") <div class="code-comment"> # just to make space in the prints between the functions </div>
-									print("Regula-Falsi Method\n")  # method title
-									print("Run answer is: {}".format(RegulaFalsi.run_sample()))
-									print("\n") <div class="code-comment"> # just to make space in the prints between the functions </div>
-									print("Secant Method\n")  # method title
-									print("Run answer is: {}".format(Secant.run_sample()))
-									print("\n") <div class="code-comment"> # just to make space in the prints between the functions </div>
-									print("Newton-Raphson Method\n")  # method title
-									print("Run answer is: {}".format(NewtonRaphson.run_sample()))
+										@staticmethod
+										<div class="code-function">def run(function,
+												div_function,
+												init_x: float,
+												precision: float,
+												max_iter: int) -> float:</div>
+												<div class="code-comment">
+											"""
+											run the bisection method of a function and start conditions [a,b]
+											:param function: the function to run
+											:param div_function: the function's diversion to run
+											:param init_x: the seed point of the run
+											:param max_iter: how many iteration we allow in the process
+											:param precision: how accurate we want the answer
+											:return: where function = 0 inside [a,b]
+											"""
+											</div>
+											xn = init_x<br>
+											for n in range(max_iter):<br>
+												f_xn = function(xn)<br>
+												if abs(f_xn) < precision:<br>
+													print('Found solution after {} iterations.'.format(n))<br>
+													return xn<br>
+												divf_xn = div_function(xn)<br>
+												if divf_xn == 0:<br>
+													print('Zero derivative. No solution found.')<br>
+													return "error"<br>
+												xn = xn - f_xn / divf_xn<br>
+												print("#{}: Xn = {}".format(n, xn))<br>
+												time.sleep(delay) <br>
+											print('Exceeded maximum iterations. No solution found.')<br>
+											return "error"<br><br>
+
+										@staticmethod
+										<div class="code-function">def run_sample():</div>
+										<div class="code-comment">
+											"""
+											A sample of running the Bisection algorithm
+											"""
+											</div>
+											return NewtonRaphson.run(function=f,
+																	 div_function=df,
+																	 precision=0.0001,
+																	 init_x=1,
+																	 max_iter=100)<br><br>
+
+
+									if __name__ == '__main__':<br>
+									<div class="code-comment"> # delete this line to make the code work fast<br> </div>
+										delay = 0.5 
+
+										print("Bisection Method\n")  <div class="code-comment"> # method title </div>
+										print("Run answer is: {}".format(Bisection.run_sample()))
+										print("\n") <div class="code-comment"> # just to make space in the prints between the functions </div>
+										print("Regula-Falsi Method\n")  # method title
+										print("Run answer is: {}".format(RegulaFalsi.run_sample()))
+										print("\n") <div class="code-comment"> # just to make space in the prints between the functions </div>
+										print("Secant Method\n")  # method title
+										print("Run answer is: {}".format(Secant.run_sample()))
+										print("\n") <div class="code-comment"> # just to make space in the prints between the functions </div>
+										print("Newton-Raphson Method\n")  # method title
+										print("Run answer is: {}".format(NewtonRaphson.run_sample()))
+								</div>
+								
 							</div>
-							
 						</div>
-					</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>

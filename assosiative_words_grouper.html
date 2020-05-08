@@ -31,154 +31,156 @@
 </head>
 
 <body onload="init()">
-	<div class="row">
-		<div class="col-lg-2 col-md-2 col-sm-1">
-		
-		</div>
-		<div class="col-lg-8 col-md-8 col-sm-10">
-			<div class="header">
-				<h1>
-				Theodore (Teddy) Lazebnik
-				</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-1 col-md-1 col-sm-1">
+			
 			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="index.html"> Short Bio </a></li>
-					<li><a href="publications.html"> Publications </a></li>
-					<li><a href="students.html"> Students </a></li>
-					<li><a href="opensource.html"> Open Resources </a></li>
-					<li><a href="teaching.html"> Teaching </a></li>
-					<li><a href="" class="active"> Assosiative Words Grouper </a></li>
-				</ul>
-			</div>
-			<div class="body">
-				<div class="fluid-container">
-					<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12">
-						<div class="info">
-							<h2 style="text-align: center;"> Assosiative Words Grouper </h2>
-								<div id="train_panel">
-									<p><b>Loading Data Panel</b></p>
-									<p>Load the data file you wish to work on. You can download the default data set and upload it as well. <br><b>Note: </b>Loading process may take up to few seconds...<br><br></p>	
-									<form style="text-align: left;">
-										<div class="form-group">
-											<label for="dataFile">Source and reaction data file</label>
-											<input class="form-control" type="file" id="dataFile" placeholder="Source and reaction data file">
-											<br><a target="_blank" class="btn btn-info pull-right" href="data/source_and_reaction_data.txt">Show Default Set</a>
-										</div>
-									</form>		
+			<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="header">
+					<h1>
+					Theodore (Teddy) Lazebnik
+					</h1>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="index.html"> Short Bio </a></li>
+						<li><a href="publications.html"> Publications </a></li>
+						<li><a href="students.html"> Students </a></li>
+						<li><a href="opensource.html"> Open Resources </a></li>
+						<li><a href="teaching.html"> Teaching </a></li>
+						<li><a href="" class="active"> Assosiative Words Grouper </a></li>
+					</ul>
+				</div>
+				<div class="body">
+					<div class="fluid-container">
+						<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12">
+							<div class="info">
+								<h2 style="text-align: center;"> Assosiative Words Grouper </h2>
+									<div id="train_panel">
+										<p><b>Loading Data Panel</b></p>
+										<p>Load the data file you wish to work on. You can download the default data set and upload it as well. <br><b>Note: </b>Loading process may take up to few seconds...<br><br></p>	
+										<form style="text-align: left;">
+											<div class="form-group">
+												<label for="dataFile">Source and reaction data file</label>
+												<input class="form-control" type="file" id="dataFile" placeholder="Source and reaction data file">
+												<br><a target="_blank" class="btn btn-info pull-right" href="data/source_and_reaction_data.txt">Show Default Set</a>
+											</div>
+										</form>		
 
-									<p>
-										How to use the system:
-										<ol>
-											<li>Upload the data file (includes the source and reaction words in a list in each line separate by ",".</li>
-											<li>You will see the source word and response words (source in the box and the response in a list). Each one will have index next to it.</li>
-											<li>Add the indexes of the words of the same group into the "Group words indexes" input box with "," between each index.</li>
-											<li>You may add the group to exsiting group using the "add to group" button and feeling the group index. You can add as new group using the "add to new group" button.</li>
-											<li>You can go to the next set or previous set each time. A mark saying on which set you are at will be shown on the top of the window.</li>
-											<li>Make sure to save the working process from time to time and when you done. The saving will keep your currnet location and groups and be used next time you need to upload your work.</li>
-											
-											<li><b>Note:</b> Your work will be auto saved each 5 minutes to make sure you do not lost too much work in case you forget to save it yourself.</li>
-											
-										</ol>
-									</p>	
+										<p>
+											How to use the system:
+											<ol>
+												<li>Upload the data file (includes the source and reaction words in a list in each line separate by ",".</li>
+												<li>You will see the source word and response words (source in the box and the response in a list). Each one will have index next to it.</li>
+												<li>Add the indexes of the words of the same group into the "Group words indexes" input box with "," between each index.</li>
+												<li>You may add the group to exsiting group using the "add to group" button and feeling the group index. You can add as new group using the "add to new group" button.</li>
+												<li>You can go to the next set or previous set each time. A mark saying on which set you are at will be shown on the top of the window.</li>
+												<li>Make sure to save the working process from time to time and when you done. The saving will keep your currnet location and groups and be used next time you need to upload your work.</li>
+												
+												<li><b>Note:</b> Your work will be auto saved each 5 minutes to make sure you do not lost too much work in case you forget to save it yourself.</li>
+												
+											</ol>
+										</p>	
 
-									<form style="text-align: left;">
-										<div class="form-group">
-											<label for="wordsPeerFile">(One time) Convert your file of peers of words to the dataset needed for the grouper system</label>
-											<input class="form-control" type="file" id="wordsPeerFile" placeholder="Source and reaction peers file">
-										</div>
-									</form>										
+										<form style="text-align: left;">
+											<div class="form-group">
+												<label for="wordsPeerFile">(One time) Convert your file of peers of words to the dataset needed for the grouper system</label>
+												<input class="form-control" type="file" id="wordsPeerFile" placeholder="Source and reaction peers file">
+											</div>
+										</form>										
+										
+									</div>
 									
-								</div>
-								
-								<div id="inferance_panel" style="display: none">
-									<div class="row">
-										<div class="col-lg-5 col-md-5 col-sm-12"  style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; ">
-											<p id="IndexWord" style="font-size: 18pt;">
-												אינדקס בדיקה 
-											</p>
-										</div>
-										<div class="col-lg-5 col-md-5 col-sm-12" style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; font-size: 18pt;">
-											<p id="firstWord" style="font-size: 18pt;">
-												מילת גירוי
-											</p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12 col-md-12 col-sm-12">
-											<div class="progress" style="height: 30px; font-weight: bold;">
-												<div class="progress-bar" role="progressbar" style="font-size: 14pt; line-height: 1.8; width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="pb">25%</div>
+									<div id="inferance_panel" style="display: none">
+										<div class="row">
+											<div class="col-lg-5 col-md-5 col-sm-12"  style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; ">
+												<p id="IndexWord" style="font-size: 18pt;">
+													אינדקס בדיקה 
+												</p>
+											</div>
+											<div class="col-lg-5 col-md-5 col-sm-12" style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; font-size: 18pt;">
+												<p id="firstWord" style="font-size: 18pt;">
+													מילת גירוי
+												</p>
 											</div>
 										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-											<h2 style=" margin-right: 3%;">
-												מילות תגובה
-											</h2>
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12">
+												<div class="progress" style="height: 30px; font-weight: bold;">
+													<div class="progress-bar" role="progressbar" style="font-size: 14pt; line-height: 1.8; width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="pb">25%</div>
+												</div>
+											</div>
 										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-											<p id="responseWords"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-											</p>
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+												<h2 style=" margin-right: 3%;">
+													מילות תגובה
+												</h2>
+											</div>
 										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-											<h2 style=" margin-right: 3%;">
-												קבוצות
-											</h2>
+										<div class="row">
+											<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+												<p id="responseWords"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+												</p>
+											</div>
 										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-											<p id="groups"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-											</p>
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+												<h2 style=" margin-right: 3%;">
+													קבוצות
+												</h2>
+											</div>
 										</div>
-									</div>
-									<form style="text-align: right;">
-										<div class="form-group">
-											<label for="group_indexes">האינקסים של המילים</label>
-											<input class="form-control" type="text" id="group_indexes" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק">
-											<small>לדגומה: 0,1,4,5,7</small>
+										<div class="row">
+											<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+												<p id="groups"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+												</p>
+											</div>
 										</div>
-									</form>
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-12">
+										<form style="text-align: right;">
 											<div class="form-group">
-												<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_index" placeholder="שם הקבוצה">
-												<button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
+												<label for="group_indexes">האינקסים של המילים</label>
+												<input class="form-control" type="text" id="group_indexes" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק">
+												<small>לדגומה: 0,1,4,5,7</small>
+											</div>
+										</form>
+										<div class="row">
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="form-group">
+													<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_index" placeholder="שם הקבוצה">
+													<button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
+												</div>
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_new_index" placeholder="שם חדש לקבוצה">
+												<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
 											</div>
 										</div>
-										<div class="col-lg-6 col-md-6 col-sm-12">
-											<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_new_index" placeholder="שם חדש לקבוצה">
-											<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
+										<div class="row">
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<button class="btn btn-primary btn-lg" onclick="next();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">לקבוצת המילים הבאה</button>
+											</div>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<button class="btn btn-success btn-lg" onclick="downloadData();" style=" width: 100%; margin-top: 10px; margin-bottom: 10px;">שמור עבודה</button>
+											</div>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<button class="btn btn-primary btn-lg" onclick="previous();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">לקבוצת המילים הקודמת</button>
+											</div>
 										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-4 col-md-4 col-sm-12">
-											<button class="btn btn-primary btn-lg" onclick="next();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">לקבוצת המילים הבאה</button>
-										</div>
-										<div class="col-lg-4 col-md-4 col-sm-12">
-											<button class="btn btn-success btn-lg" onclick="downloadData();" style=" width: 100%; margin-top: 10px; margin-bottom: 10px;">שמור עבודה</button>
-										</div>
-										<div class="col-lg-4 col-md-4 col-sm-12">
-											<button class="btn btn-primary btn-lg" onclick="previous();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">לקבוצת המילים הקודמת</button>
-										</div>
-									</div>
-									<div class="row" style="margin-top: 100px;">
-										<div class="col-lg-12 col-md-12 col-sm-12">
-											<div class="form-group">
-												<input class="form-control" style="width: 50%; display: inline;" min="0" type="number" id="jump_index" placeholder=" אינדקס הסט שתרצה לעבור אליו">
-												<button class="btn btn-danger" onclick="jumpWordIndex();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">עבור לסט מילים המתאים</button>
+										<div class="row" style="margin-top: 100px;">
+											<div class="col-lg-12 col-md-12 col-sm-12">
+												<div class="form-group">
+													<input class="form-control" style="width: 50%; display: inline;" min="0" type="number" id="jump_index" placeholder=" אינדקס הסט שתרצה לעבור אליו">
+													<button class="btn btn-danger" onclick="jumpWordIndex();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">עבור לסט מילים המתאים</button>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+							</div>
 						</div>
-					</div>
+						</div>
 					</div>
 				</div>
 			</div>
