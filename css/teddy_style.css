@@ -1,10 +1,33 @@
 @import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700');
-@import url('font-awesome.css');
-@import url('animate.css');
+
+
 body {
     font-family: sans-serif;
     font-size: 14px;
     font-weight: 300;
+}
+
+::-webkit-scrollbar{
+	width: 0px;
+}
+
+#ScrollPath{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+#progressBar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: rgb(42,23,177);
+	background: linear-gradient(0deg, rgba(42,23,177,1) 0%, rgba(66,132,211,1) 100%);
 }
 
 .container{
@@ -13,9 +36,9 @@ body {
 
 .header{
 	margin-top: 20px;
-	background-color: #094D7B;
+	background-color: #0E53A7;
 	color: white;
-	border: 2px #094D7B solid;
+	border: 2px #0E53A7 solid;
 	border-bottom: 0px;
 	/* top-left | top-right | bottom-right | bottom-left */
 	border-radius: 10px 10px 0px 0px;
@@ -147,6 +170,76 @@ body {
 .info li{
 	padding-top: 5px;
 	font-size: 16px;
+}
+
+.cool-btn{
+	border: 0px;
+	display: inline-block;
+	font-size: 12pt;
+	letter-spacing: 2px;
+	padding: 6px 18px;
+	border-radius: 40px;
+	color: white;
+	overflow: hidden;
+	position: relative;
+}
+
+.col-btn-href{
+	display: none;
+}
+
+.ripple{
+	position: absolute;
+	background: #fff;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	border-radius: 50%;
+	animation: animate 1s linear infinite;
+}
+
+@keyframes animate{
+	0% {
+		width: 0px;
+		height: 0px;
+		opacity: 0.5;
+	}
+	100% {
+		width: 1000px;
+		height: 1000px;
+		opacity: 0;
+	}
+}
+
+.cool-btn-gray{
+	background: rgb(11,7,40);
+	background: linear-gradient(270deg, rgba(11,7,40,1) 0%, rgba(203, 207, 212, 1) 100%);
+}
+
+.cool-btn-gray:hover{
+	border: 1px solid rgb(11,7,40);
+	padding: 5px 17px;
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25) !important;
+}
+
+.cool-btn-yellow{
+	background: rgb(177,152,6);
+	background: linear-gradient(270deg, rgba(177,152,6,1) 0%, rgba(255,250,166,1) 100%);
+	color: black !important;
+}
+
+.cool-btn-blue{
+	background: rgb(42,23,177);
+	background: linear-gradient(270deg, rgba(42,23,177,1) 0%, rgba(66,132,211,1) 100%);
+}
+
+.cool-btn-green{
+	background: rgb(6,139,57);
+	background: linear-gradient(270deg, rgba(6,139,57,1) 0%, rgba(202,251,233,1) 100%);
+}
+
+.cool-btn-red{
+	background: rgb(150,3,3);
+background: linear-gradient(270deg, rgba(150,3,3,1) 0%, rgba(236,207,134,1) 100%);
 }
 
 .alert-text {

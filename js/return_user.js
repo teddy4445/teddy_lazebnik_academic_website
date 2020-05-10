@@ -1,6 +1,38 @@
 // run the logic
 onPageLoad();
 
+let progress = document.getElementById("progressBar");
+let totalHeight = document.body.scrollHeight - window.innerHeight;
+progress.style.height = "0%";
+
+const buttons = document.querySelectorAll('button');
+let rippleCounter = 0;
+buttons.forEach(btn => {
+	if (btn.classList.contains("cool-btn"))
+	{
+		btn.addEventListener('click', function(e){
+			let x = e.clientX - e.offsetHeight; //- e.target.offsetLeft * 2;
+			let y = e.clientY - e.offsetWidth; //- e.target.offsetTop;
+			
+			let ripples = document.createElement('span');
+			ripples.style.left = x + "px";
+			ripples.style.top = y + "px";
+			ripples.classList.add("ripple");
+			this.appendChild(ripples);
+			
+			setTimeout(() => {
+				ripples.remove();
+				window.open(document.getElementById(this.id + "_href").innerHTML, "_blank");
+			}, 1000);
+		})
+	}
+})
+
+window.onscroll = function (){
+	let progressHeight = (window.pageYOffset / totalHeight) * 100;
+	progress.style.height = progressHeight + "%";
+};
+
 function onPageLoad()
 {
 	let visitCount = getCookie("VisitFlag");
