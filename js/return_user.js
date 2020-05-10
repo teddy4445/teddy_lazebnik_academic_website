@@ -60,7 +60,14 @@ function onPageLoad()
 	else if (visitCount > 3){
 		answerString = "* You are visiting a lot. Write me and maybe I would be able to help.";
 	}
-	document.getElementById("VisitCount").innerHTML = answerString;
+	try
+	{
+		document.getElementById("VisitCount").innerHTML = answerString;	
+	}
+	catch (error)
+	{
+		
+	}
 }
 
 function setCookie(cname, cvalue, exdays)
