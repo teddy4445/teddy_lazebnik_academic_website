@@ -133,6 +133,7 @@
 				</div>
 			</div>
 			<div class="row spacer">
+				<!--
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center" id="blood_vassal_node_form">
 					<h3>Model's Blood Vassal Node Physical Size </h3>
 					<form>
@@ -163,6 +164,7 @@
 						</div>
 					</form>
 				</div>
+				-->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
 					<h3>Table of rat's main vassals </h3>
 					<p></p>
@@ -473,7 +475,8 @@
 				{
 					row_data += "<td>" + data[i][j] + "</td>";
 				}
-				var velocity = Math.round(VassalCalculator.calc_vassal_from_table(data[i][2], data[i][3], data[i][4]));
+				// var velocity = Math.round(VassalCalculator.calc_vassal_from_table(data[i][2], data[i][3], data[i][4]));
+				var velocity = Math.floor(data[i][2]) + 1;
 				row_data += "<td id='val_" + i + "'><b>" + velocity + "</b></td>";
 				row_data += "</tr>";
 				table_data.append(row_data);
