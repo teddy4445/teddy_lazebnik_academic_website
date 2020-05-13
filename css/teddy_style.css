@@ -441,6 +441,32 @@ h2{
 	margin-right: 5px;
 }
 
+.cookie-alert{
+    position: fixed;
+    bottom: 50px;
+    left:10%;
+    width: 80%;
+}
+
+.star-btn{
+	width: 30px;
+	height: 30px;
+	padding: 0px 0px;
+	margin: 0px 0px;
+	background: transparent;
+	border: 0px;
+	vertical-align: middle;
+}
+
+.star-btn:hover{
+	opacity: 0.9;
+}
+
+.star-btn svg{
+	width: 30px;
+	height: 30px;
+}
+
 
 @media only screen and (max-width: 600px) {
 	.header{
@@ -460,6 +486,13 @@ h2{
 	}
 	#VisitCount {
 		display: none;
+	}
+
+	.cookie-alert{
+		position: fixed;
+		bottom: 50px;
+		left:5%;
+		width: 90%;
 	}
 }
 
