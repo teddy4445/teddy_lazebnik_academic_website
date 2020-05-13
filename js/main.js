@@ -131,7 +131,7 @@ function addStarPages()
 	var page_links = starPages.split(",");
 	
 	var page_links = starPages.split(",");
-	var innerHtmlLiElement = '<li id="star-list" class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="starMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teaching</a><div class="dropdown-menu" aria-labelledby="starMenu">';
+	var innerHtmlLiElement = '<li id="star-list" class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="starMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stared</a><div class="dropdown-menu" aria-labelledby="starMenu">';
 	for (var i = 0; i < page_links.length; i++)
 	{
 		var linkAndName = page_links[i].split("|");
@@ -174,6 +174,7 @@ function starThisPage(addThisPage)
 		thisPageName = url_parts.slice(-1)[0].replace(".html", "");
 	}
 	var new_page = window.location.href + "|" + thisPageName;
+	new_page = new_page.replace("index.html", "");
 	if (addThisPage)
 	{
 		if (cookie_data == "")
