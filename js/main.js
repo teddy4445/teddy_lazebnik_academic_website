@@ -117,8 +117,17 @@ function addStarPages()
 		perant.innerHTML += '<button class="star-btn" id="star_btn" onclick="starThisPage(true)"> ' + EMPTY_STAR_CODE + ' </button>';
 		return;
 	}
+	var url_parts = location.href.split("/");
+	var thisPageName = "";
+	if (url_parts.slice(-1)[0] == "")
+	{
+		thisPageName = "index"
+	}
+	else
+	{
+		thisPageName = url_parts.slice(-1)[0].replace(".html", "");
+	}
 	
-	var thisPageName = location.href.split("/").slice(-1).replace(".html", "");;
 	var page_links = starPages.split(",");
 	
 	var page_links = starPages.split(",");
@@ -154,7 +163,17 @@ function addStarPages()
 function starThisPage(addThisPage)
 {
 	var cookie_data = getCookie("starPages");
-	var new_page = window.location.href + "|" + location.href.split("/").slice(-1);
+	var url_parts = location.href.split("/");
+	var thisPageName = "";
+	if (url_parts.slice(-1)[0] == "")
+	{
+		thisPageName = "index"
+	}
+	else
+	{
+		thisPageName = url_parts.slice(-1)[0].replace(".html", "");
+	}
+	var new_page = window.location.href + "|" + thisPageName;
 	if (addThisPage)
 	{
 		if (cookie_data == "")
