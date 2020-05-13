@@ -9,8 +9,8 @@
     <meta content="Teddy Lazebnik" name="author">
 	<link rel='icon' href='../img/favicon.ico' type='image/x-icon'/ >
 	<!-- css -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/teddy_style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="../css/teddy_style.css" rel="stylesheet">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
@@ -26,147 +26,174 @@
 <body>
 	<div id="progressBar"></div>
 	<div id="ScrollPath"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-1 col-md-1 col-sm-1">
-			
-			</div>
-			<div class="col-lg-10 col-md-10 col-sm-10">
-				<div class="header">
-					<h1>
-					Theodore (Teddy) Lazebnik
-					</h1>
-				</div>
-				<div class="menu">
-					<ul>
-						<li><a href="../index.html"> Short Bio </a></li>
-						<li><a href="../publications.html"> Publications </a></li>
-						<li><a href="../students.html"> Students </a></li>
-						<li><a href="../opensource.html"> Open Resources </a></li>
-						<li><a href="../teaching.html"> Teaching </a></li>
-						<li><a href="" class="active"> Linear Mathematical Optimization </a></li>
-					</ul>
-				</div>
-				<div class="body">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12">
-							<div class="info">
-								<h2>Introduction to Linear Mathematical Optimization (88369)</h2>
-								<p>
-									This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you. <br>
-									<b>Reception time is every Tuesday from 14:00 to 15:00 in my office. (Updated for: 2019-2020)</b>
-								</p>
-								<p>
-									The course focuses on linear optimization. This field provides mathematical tools for decision making and finding optimal cases for real-life situations.
-									The field "burn" in U.K. at the 1930's when the British army gathered academics to provide scientific decisions for the usage of the army's resources.
-								</p>
-								<h3> Sources </h3>
-								<ol>
-									<li class="marge-low">
-										A nice summery of the main algorithm in the course <a target="_blank" class="alert-text bg-gray" href="https://www3.nd.edu/~dgalvin1/30210/30210_F07/presentations/simplex_full.pdf"> Website (PDF)</a> 
-									</li>
-									<li class="marge-low">
-										Simplex in 10 pages (Hebrew) <a target="_blank" class="alert-text bg-gray" href="http://highmath.haifa.ac.il/data/alle1-26/alle13/alle13-9.pdf"> Website (PDF)</a> 
-									</li>
-									<li class="marge-low">
-										A book about optimization - you need only the first chapter (Hebrew) <a target="_blank" class="alert-text bg-gray" href="https://www.cse.huji.ac.il/~nogar02/integrali/files/DOptimization-2013.pdf"> Website (PDF)</a> 
-									</li>
-									<li class="marge-low">
-										An introduction and technical notes for LP <a target="_blank" class="alert-text bg-gray" href="https://sites.math.washington.edu/~burke/crs/407/notes/section1.pdf"> Website (PDF)</a> 
-									</li>
-								</ol>
-								<h3> Lessons Material </h3>
-								<ol>
-									<li class="marge-low">
-										Lesson 1 - Introduction to Simplex method and linear optimization background 
-										<a target="_blank" class="alert-text bg-gray" href="https://en.wikipedia.org/wiki/George_Dantzig"> Website - history </a>
-										<a target="_blank" class="alert-text bg-gray" href="http://www.math.wsu.edu/faculty/genz/364/lessons/l3034.pdf"> File - Presentation </a>
-									</li>
-									<li class="marge-low">
-										Lesson 2 - Linear Plaining (LP) and graphic-based solutions 
-										<a target="_blank" class="alert-text bg-gray" href="linear_mathematical_optimization_2d_sample.html"> Website </a>
-									</li>
-									<li class="marge-low">
-										Lesson 3 - Simplex Algorithm for LP problems 
-										<a target="_blank" class="alert-text bg-gray" href="http://www.phpsimplex.com/en/simplex_method_example.htm"> Website 1 </a>
-										<a target="_blank" class="alert-text bg-gray" href="http://www.ms.uky.edu/~jack/2010-01-MA162/2010-02-25-MA162Lab.pdf"> Website 2 </a>
-										<a target="_blank" class="alert-text bg-gray" href="http://math.uww.edu/~mcfarlat/s-prob.htm"> Website 3 </a>
-										<br><br>
-										
-										<img src="../img/courses/linear_optimization/linear_optimization_lession3.png" alt="feasibule difinition">
-									</li>
-									<li class="marge-low">
-										Lesson 4 - Two Phase Simplex Algorithm
-										<a target="_blank" class="alert-text bg-gray" href="http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf"> Example 1 </a>
-										<a target="_blank" class="alert-text bg-gray" href="http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf"> Example 2 </a>
-										<a target="_blank" class="alert-text bg-gray" href="http://www.universalteacherpublications.com/univ/ebooks/or/Ch3/twophase1.htm"> Example 3 </a>
-										<a target="_blank" class="alert-text bg-gray" href="https://www.math.ubc.ca/~anstee/math340/340simplexalgorithmoverview.pdf"> Algorithm (PDF) </a>
-										<br><br>
-										<p>
-											Two-Phase Method Steps Algorithm
-											<ol>
-												<li><b>Phase-1</b><br> a. Form a new objective function by assigning zero to every original variable (including slack and surplus variables) and -1 to each of the artificial variables.
-												<br>b. Using simplex method, try to eliminate the artificial varibles from the basis.
-												<br> c. The solution at the end of Phase-1 is the initial basic feasible solution for Phase-2.</li>
-												<li>
-												<b>Phase-2</b><br> a. The original objective function is used and coefficient of artificial variable is 0 (so artificial variable is removed from the calculation process).
-												<br>b. Then simplex algorithm is used to find optimal solution.<br>
-												</li>
-											</ol>
-										</p>
-									</li>
-									<li class="marge-low">
-										Lesson 5 - Dual theory for linear optimization problems
-									</li>
-									<li class="marge-low">
-										Lesson 6 - Dual Simplex analysis
-									</li>
-									<li class="marge-low">
-										Lesson 7 - network, tranfer and other LP problems modeling
-									</li>
-									<li class="marge-low">
-										Lesson 8 - Integer LP problems and solutions (1)
-									</li>
-									<li class="marge-low">
-										Lesson 9 - Integer LP problems and solutions (2)
-									</li>
-								</ol>
-								<h3> Home work </h3>
-								<ol>
-									<li class="marge-low">
-										Home Work 1 <a target="_blank" class="alert-text bg-gray" href="../files/88369-hw-01.pdf"> File (PDF)</a> 
-									</li>
-									<li class="marge-low">
-										Home Work 2 <a target="_blank" class="alert-text bg-gray" href="../files/OR-Exercise 3.pdf"> File (PDF)</a> 
-									</li>
-									<li class="marge-low">
-										Home Work 3 <a target="_blank" class="alert-text bg-gray" href="../files/OR-Exercise 4.pdf"> File (PDF)</a> 
-									</li>
-								</ol>
-								<h3> Home work answers</h3>
-								<ol>
-									<li class="marge-low">
-										Home Work answer 1 
-										<a target="_blank" class="alert-text bg-gray" href="../files/88369-hw-01-sol.pdf"> File (PDF)</a> 
-										<a target="_blank" class="alert-text bg-gray"  href="../files/linear_optimization_hw_1_answer_1_3.pdf">File (PDF) - A. 1,3</a>
-										<br> Answer for question (4b): [Question 4a and 5 is similar] <br>
-										<iframe src="https://www.desmos.com/calculator/zgl3gs7qlf?embed" width="400px" height="400px" style="border: 1px solid #ccc" frameborder=0></iframe>
-									</li>
-									<li class="marge-low">
-										Home Work answer 2 <a target="_blank" class="alert-text bg-gray" href="../files/88369-hw-02-sol.pdf"> File (PDF)</a> 
-									</li>
-									<li class="marge-low">
-										Home Work answer 3 <a target="_blank" class="alert-text bg-gray" href="../files/88369-hw-04-sol.pdf"> File (PDF)</a> 
-									</li>
-								</ol>
-							</div>
+	<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<nav class="navbar navbar-expand-lg">
+				  <a class="navbar-brand" href="../index.html" id="logo">Theodore (Teddy) Lazebnik</a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<img class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item">
+						<a class="nav-link" href="../index.html">Short Bio</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../publications.html">Publications</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../opensource.html">Open Resources</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Teaching
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="../courses/deep_leanring.html">Deep Learning</a>
+						  <a class="dropdown-item" href="../courses/numerical.html">Numerical Analysis</a>
+						  <a class="dropdown-item" href="../courses/linear_mathematical_optimization.html">Linear Optimization</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="../teaching.html">All classes</a>
 						</div>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../students.html">Students</a>
+					  </li>
+					</ul>
+					<div class="form-inline my-2 my-lg-0">
+					  <input class="form-control mr-sm-2" id="search-data" type="search" placeholder="Page Name" aria-label="Page Name">
+					  <button class="btn btn-outline-white my-2 my-sm-0" onclick="return searchPage();">Search</button>
+					</div>
+				  </div>
+				</nav>
+				<div class="body">
+					<div class="fluid-container">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="info">
+									<h2>Introduction to Linear Mathematical Optimization (88369)</h2>
+									<p>
+										This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you. <br>
+										<b>Reception time is every Tuesday from 14:00 to 15:00 in my office. (Updated for: 2019-2020)</b>
+									</p>
+									<p>
+										The course focuses on linear optimization. This field provides mathematical tools for decision making and finding optimal cases for real-life situations.
+										The field "burn" in U.K. at the 1930's when the British army gathered academics to provide scientific decisions for the usage of the army's resources.
+									</p>
+									<h3> Sources </h3>
+									<ol>
+										<li class="marge-low">
+											A nice summery of the main algorithm in the course <a target="_blank" class="alert-text bg-gray" href="https://www3.nd.edu/~dgalvin1/30210/30210_F07/presentations/simplex_full.pdf"> Website (PDF)</a> 
+										</li>
+										<li class="marge-low">
+											Simplex in 10 pages (Hebrew) <a target="_blank" class="alert-text bg-gray" href="http://highmath.haifa.ac.il/data/alle1-26/alle13/alle13-9.pdf"> Website (PDF)</a> 
+										</li>
+										<li class="marge-low">
+											A book about optimization - you need only the first chapter (Hebrew) <a target="_blank" class="alert-text bg-gray" href="https://www.cse.huji.ac.il/~nogar02/integrali/files/DOptimization-2013.pdf"> Website (PDF)</a> 
+										</li>
+										<li class="marge-low">
+											An introduction and technical notes for LP <a target="_blank" class="alert-text bg-gray" href="https://sites.math.washington.edu/~burke/crs/407/notes/section1.pdf"> Website (PDF)</a> 
+										</li>
+									</ol>
+									<h3> Lessons Material </h3>
+									<ol>
+										<li class="marge-low">
+											Lesson 1 - Introduction to Simplex method and linear optimization background 
+											<a target="_blank" class="alert-text bg-gray" href="https://en.wikipedia.org/wiki/George_Dantzig"> Website - history </a>
+											<a target="_blank" class="alert-text bg-gray" href="http://www.math.wsu.edu/faculty/genz/364/lessons/l3034.pdf"> File - Presentation </a>
+										</li>
+										<li class="marge-low">
+											Lesson 2 - Linear Plaining (LP) and graphic-based solutions 
+											<a target="_blank" class="alert-text bg-gray" href="linear_mathematical_optimization_2d_sample.html"> Website </a>
+										</li>
+										<li class="marge-low">
+											Lesson 3 - Simplex Algorithm for LP problems 
+											<a target="_blank" class="alert-text bg-gray" href="http://www.phpsimplex.com/en/simplex_method_example.htm"> Website 1 </a>
+											<a target="_blank" class="alert-text bg-gray" href="http://www.ms.uky.edu/~jack/2010-01-MA162/2010-02-25-MA162Lab.pdf"> Website 2 </a>
+											<a target="_blank" class="alert-text bg-gray" href="http://math.uww.edu/~mcfarlat/s-prob.htm"> Website 3 </a>
+											<br><br>
+											
+											<img src="../img/courses/linear_optimization/linear_optimization_lession3.png" style="width: 100%; max-width: 560px;" alt="feasibule difinition">
+										</li>
+										<li class="marge-low">
+											Lesson 4 - Two Phase Simplex Algorithm
+											<a target="_blank" class="alert-text bg-gray" href="http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf"> Example 1 </a>
+											<a target="_blank" class="alert-text bg-gray" href="http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf"> Example 2 </a>
+											<a target="_blank" class="alert-text bg-gray" href="http://www.universalteacherpublications.com/univ/ebooks/or/Ch3/twophase1.htm"> Example 3 </a>
+											<a target="_blank" class="alert-text bg-gray" href="https://www.math.ubc.ca/~anstee/math340/340simplexalgorithmoverview.pdf"> Algorithm (PDF) </a>
+											<br><br>
+											<p>
+												Two-Phase Method Steps Algorithm
+												<ol>
+													<li><b>Phase-1</b><br> a. Form a new objective function by assigning zero to every original variable (including slack and surplus variables) and -1 to each of the artificial variables.
+													<br>b. Using simplex method, try to eliminate the artificial varibles from the basis.
+													<br> c. The solution at the end of Phase-1 is the initial basic feasible solution for Phase-2.</li>
+													<li>
+													<b>Phase-2</b><br> a. The original objective function is used and coefficient of artificial variable is 0 (so artificial variable is removed from the calculation process).
+													<br>b. Then simplex algorithm is used to find optimal solution.<br>
+													</li>
+												</ol>
+											</p>
+										</li>
+										<li class="marge-low">
+											Lesson 5 - Dual theory for linear optimization problems
+										</li>
+										<li class="marge-low">
+											Lesson 6 - Dual Simplex analysis
+										</li>
+										<li class="marge-low">
+											Lesson 7 - network, tranfer and other LP problems modeling
+										</li>
+										<li class="marge-low">
+											Lesson 8 - Integer LP problems and solutions (1)
+										</li>
+										<li class="marge-low">
+											Lesson 9 - Integer LP problems and solutions (2)
+										</li>
+									</ol>
+									<h3> Home work </h3>
+									<ol>
+										<li class="marge-low">
+											Home Work 1 <a target="_blank" class="alert-text bg-gray" href="../files/88369-hw-01.pdf"> File (PDF)</a> 
+										</li>
+										<li class="marge-low">
+											Home Work 2 <a target="_blank" class="alert-text bg-gray" href="../files/OR-Exercise 3.pdf"> File (PDF)</a> 
+										</li>
+										<li class="marge-low">
+											Home Work 3 <a target="_blank" class="alert-text bg-gray" href="../files/OR-Exercise 4.pdf"> File (PDF)</a> 
+										</li>
+									</ol>
+									<h3> Home work answers</h3>
+									<ol>
+										<li class="marge-low">
+											Home Work answer 1 
+											<a target="_blank" class="alert-text bg-gray" href="../files/88369-hw-01-sol.pdf"> File (PDF)</a> 
+											<a target="_blank" class="alert-text bg-gray"  href="../files/linear_optimization_hw_1_answer_1_3.pdf">File (PDF) - A. 1,3</a>
+											<br> Answer for question (4b): [Question 4a and 5 is similar] <br>
+											<iframe src="https://www.desmos.com/calculator/zgl3gs7qlf?embed" width="400px" height="400px" style="border: 1px solid #ccc" frameborder=0></iframe>
+										</li>
+										<li class="marge-low">
+											Home Work answer 2 <a target="_blank" class="alert-text bg-gray" href="../files/88369-hw-02-sol.pdf"> File (PDF)</a> 
+										</li>
+										<li class="marge-low">
+											Home Work answer 3 <a target="_blank" class="alert-text bg-gray" href="../files/88369-hw-04-sol.pdf"> File (PDF)</a> 
+										</li>
+									</ol>
+								</div>
+							</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-    <script src="../js/return_user.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script> 
 </body>
 </html>
