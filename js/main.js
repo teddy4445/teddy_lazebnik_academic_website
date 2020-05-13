@@ -160,12 +160,52 @@ function searchPage()
 	}
 	else
 	{
-		$("#error-search").show();	
+		opacityAnimation("error-search", 250, true);
 		return false;
 	}
 	document.getElementById("search-data").value = "";
 	window.open(pageLink);
 	return false;
+}
+
+function closeSearchAlert(){
+	opacityAnimation("error-search", 250, false);
+}
+
+function opacityAnimation(element_id, miliseconds, is_show = true) {
+  var elem = document.getElementById(element_id);
+  var FPMS = 10;
+  var frameCount = Math.floor(miliseconds / FPMS);
+  var frameIndex = 0;
+  if (is_show)
+  {
+	document.getElementById(element_id).style.opacity = 0;
+  }
+  else
+  {
+	document.getElementById(element_id).style.opacity = 1;
+  }
+  document.getElementById(element_id).style.display = "";
+  var id = setInterval(frame, FPMS);
+  function frame() {
+    if (frameIndex == frameCount) {
+      clearInterval(id);
+	  if (!is_show)
+	  {
+		document.getElementById(element_id).style.display = "none";  
+	  }
+    } else {
+	  if (is_show)
+	  {
+		elem.style.opacity = frameIndex / frameCount;
+	  }
+	  else
+	  {
+		  elem.style.opacity = 1 - (frameIndex / frameCount);   
+	  }
+    }
+	frameIndex++;
+  }
 }
 
 function setCookie(cname, cvalue, exdays)
