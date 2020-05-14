@@ -304,6 +304,27 @@ h2{
 	}
 }
 
+.cool-btn-cite {
+	margin-top: 10px;
+	border: 0px;
+	display: inline-block;
+	font-size: 10pt;
+	padding: 2px 0px;
+	border-radius: 0px;
+	letter-spacing: 1.25px;
+	color: black;
+	background: transparent !important;
+}
+
+.cool-btn-cite:hover {
+	color: #0E53A7 !important;
+}
+
+.cool-btn-cite img{
+	max-height: 14px;
+	margin-left: 10px;
+}
+
 .cool-btn-gray{
 	background-color: #28313b;
 	background: linear-gradient(90deg, #6c7680 0%, #28313b 74%);
