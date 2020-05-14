@@ -467,6 +467,16 @@ h2{
 	height: 30px;
 }
 
+.nobull {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.card-img-top{
+	max-height: 200px;
+	height: 100%;
+}
+
 
 @media only screen and (max-width: 600px) {
 	.header{

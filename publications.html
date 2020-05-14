@@ -72,26 +72,49 @@
 					<div class="row">
 						<div class="col-lg-8 col-md-8 col-sm-12" style="padding-right: 5px;">
 							<div class="info">
-										<div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none" id="error-search">
-										  <strong>Page Not found</strong>, I am still working on our inner website search engine. Try again or use the navigation bar.
-										  <button type="button" class="close" onclick="return closeSearchAlert()" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										  </button>
-										</div>
+								<div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none" id="error-search">
+								  <strong>Page Not found</strong>, I am still working on our inner website search engine. Try again or use the navigation bar.
+								  <button type="button" class="close" onclick="return closeSearchAlert()" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								  </button>
+								</div>
 								<h2> Publications </h2>
-								<h3> Journals </h3>
-								<ol>
-									<li class="marge-low">
-										T. Lazebnik and S. Yanetz, <a href="summeries/matrix_exponent.html">"A stable algorithm for numerical matrix exponent"</a>, Functional Differential Equations (2016).
-										<br><br><button class="cool-btn cool-btn-gray" id="cool_btn_1"> Paper </button>
-										<div class="col-btn-href" id="cool_btn_1_href">files/matrix_exponent.pdf</div>
-									</li>
-									<li class="marge-low">
-										T. Lazebnik and S. Yanetz, S. Bunimovich-Mendrazitsky, and N. Aaroni, <a href="summeries/bcg_pde_10_eq_paper.html">"Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling"</a>, Functional Differential Equations (2019). 
-										<br><br><button class="cool-btn cool-btn-gray" id="cool_btn_2"> Paper </button>
-										<div class="col-btn-href" id="cool_btn_2_href">files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf</div> 
-									</li>
-								</ol>
+								
+								<div class="row">
+									<div class="col-lg-12 col-md-12 col-sm-12">
+										<h3> Journals </h3>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-12">
+										<div class="card">
+										  <img class="card-img-top" src="img/papers/expm.png" alt="Card image cap">
+										  <div class="card-body">
+											<h5 class="card-title"><a href="summeries/matrix_exponent.html">A stable algorithm for numerical matrix exponent</a></h5>
+											<ol class="nobull card-text">
+												<li><b>Authors:</b> Teddy Lazebnik and Shlomo Yanetz</li>
+												<li><b>Journal:</b> Functional Differential Equations </li>
+												<li><b>Year:</b> 2016 </li>
+											</ol>
+											<button class="cool-btn cool-btn-gray" id="cool_btn_1"> Paper </button>
+											<div class="col-btn-href" id="cool_btn_1_href">files/matrix_exponent.pdf</div>
+										  </div>
+										</div>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-12">
+										<div class="card">
+										  <img class="card-img-top" src="img/papers/bcg_cancer_pde.png" alt="Card image cap">
+										  <div class="card-body">
+											<h5 class="card-title"><a href="summeries/bcg_pde_10_eq_paper.html">Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling</a></h5>
+											<ol class="nobull card-text">
+												<li><b>Authors:</b> Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni</li>
+												<li><b>Journal:</b> Functional Differential Equations </li>
+												<li><b>Year:</b> 2019 </li>
+											</ol>
+											<button class="cool-btn cool-btn-gray" id="cool_btn_2"> Paper </button>
+											<div class="col-btn-href" id="cool_btn_2_href">files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf</div> 
+										  </div>
+										</div>
+									</div>
+								</div>
 								
 								<h3> Conferences </h3>
 								<ol>
