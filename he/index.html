@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="he">
 <head>
     <meta charset="utf-8">
     <title>Theodore (Teddy) Lazebnik</title>
@@ -9,8 +9,8 @@
     <meta content="Teddy Lazebnik" name="author">
 	<link rel='icon' href='../img/favicon.ico' type='image/x-icon'/ >
 	<!-- css -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/teddy_style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="../css/teddy_style.css" rel="stylesheet">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
@@ -24,42 +24,125 @@
 </head>
 
 <body>
-	<div class="container">
+	<div id="progressBar"></div>
+	<div id="ScrollPath"></div>
 		<div class="row">
-			<div class="col-lg-1 col-md-1 col-sm-1">
-			
-			</div>
-			<div class="col-lg-10 col-md-10 col-sm-10">
-				<div class="pull-left" style="margin-top: 20px;">
-					<a href="../index.html"><img src="../img/english.jpg" alt="English" width="30px" style="margin-right: 5px;" /></a>
-					<a href="../he/index.html"><img src="../img/hebrew.png" alt="Hebrew" width="30px" style="margin-right: 5px;" /></a>
-					<a href="../ru/index.html"><img src="../img/russian.png" alt="Russian" width="30px" style="margin-right: 5px;" /></a>
-				</div>
-			</div>
-		</div>
-		<div class="row" style="direction: rtl">
-			<div class="col-lg-1 col-md-1 col-sm-1">
-			
-			</div>
-			<div class="col-lg-10 col-md-10 col-sm-10">
-				<div class="header">
-					<h1 style="margin-right: 15px">
-						טדי (תאודור) לזבניק
-					</h1>
-				</div>
-				<!--
-				<div class="menu" style="direction: rtl">
-					<ul>
-						<li><a href="index.html" class="active"> Short Bio </a></li>
-						<li><a href="publications.html"> Publications </a></li>
-						<li><a href="students.html"> Students </a></li>
-						<li><a href="opensource.html"> Open Resources </a></li>
-						<li><a href="teaching.html"> Teaching </a></li>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<nav class="navbar navbar-expand-lg">
+				  <a class="navbar-brand" href="index.html" id="logo">טדי (תאודור) לזבניק</a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<img class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item">
+						<a class="nav-link active" href="index.html">Short Bio</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../publications.html">Publications</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../opensource.html">Open Resources</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Teaching
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="../courses/deep_leanring.html">Deep Learning</a>
+						  <a class="dropdown-item" href="../courses/numerical.html">Numerical Analysis</a>
+						  <a class="dropdown-item" href="../courses/linear_mathematical_optimization.html">Linear Optimization</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="../teaching.html">All classes</a>
+						</div>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../students.html">Students</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../index.html"><img src="../img/english.jpg" alt="English" width="30px" /></a>
+					  </li>
+					  <!--
+					  <li class="nav-item">
+						<a class="nav-link" href="../he/index.html"><img src="../img/hebrew.png" alt="Hebrew" width="30px" /></a>
+					  </li>
+					  -->
+					  <li class="nav-item">
+						<a class="nav-link" href="../ru/index.html"><img src="../img/russian.png" alt="Russian" width="30px" /></a>
+					  </li>
 					</ul>
-				</div>
-				-->
+					<div class="form-inline my-2 my-lg-0">
+					  <input class="form-control mr-sm-2" id="search-data" type="search" placeholder="שם הדף" aria-label="שם הדף">
+					  <button class="btn btn-outline-white my-2 my-sm-0" onclick="return searchPage();">חפש</button>
+					</div>
+				  </div>
+				</nav>
 				<div class="body">
 					<div class="row">
+						<div class="col-lg-8 col-md-8 col-sm-12" style="padding-right: 5px;">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<div class="info" style="text-align: right; direction: rtl;">
+										<div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none" id="error-search"  style="text-align: left">
+										  <strong>Page Not found</strong>, I am still working on our inner website search engine. Try again or use the navigation bar.
+										  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										  </button>
+										</div>
+										<h2> בביליוגרפיה </h2>
+										<p>
+											אני סטודנט לתואר שלישי בפרויקט <a href="http://u.cs.biu.ac.il/~galk/research/tolkien/" target="_blank"><b>"TOLKIN"</b></a>, חלק מקבוצת המחקר <a target="_blank" href="http://u.cs.biu.ac.il/~galk/maverick/">"MAVERICK"</a> במחלקה <a href="https://cs.biu.ac.il/en" target="_blank"> למדעי המחשב </a>, <a href="https://www1.biu.ac.il/" target="_blank">באוניברסיטת בר אילן</a>;
+											 תחת הנחיתם של <a target="_blank" href="http://u.cs.biu.ac.il/~galk/">פרופ. גל קמינקא </a> ו <a target="_blank" href="https://physics.biu.ac.il/en/node/1384">דר. חנה ויטמן</a>.  בנוסף, שותף (ומפתח אלגוריתמים) בחברת<a target="_blank" href="http://dnc-algo.com"> DnC-algo</a>. 
+										</p>
+										<p>
+											המחקר שלי מתמקד בננורובטיקה רפואית מנקודת מבט חישובית \ מתמטית. ספציפית, מודליזציה של פרוטקולי טיפול שמבוססים על אינטרקציה ביולוגית, כימית ופיזיקלית בין ננורובוטים שונים עם הסביבה
+											ובין עצמם על מנת לתכנן טיפול ואנליזה במחזור הדם של חולה. 
+											בנוסף, אני מתעניין בפתרונות נומרים ויציבות של משוואות דיפרנציאליות חלקיות ורגילות - במיוחד כאלה המגיעים מביולוגיה.
+										</p>
+										<p>
+											בוגר תואר ראשון (2016) ותואר שני (2018) במתמטיקה שימושית בבר אילן.<br>
+											את קורות החיים המלאים אפשר למצוא <a target="_blank" href="files/cv.pdf" style="font-weight: bold">כאן</a>.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="row"  style="text-align: right;  direction: rtl;">
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<h3>  פרויקטים נוכחים </h3>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-12">
+									<div class="card text-center">
+									  <div class="card-body">
+										<h5 class="card-title">מדעי המחשב</h5>
+										<p class="card-text">סימולאציה של ננורובוטיקה רפואית במחזור הדם</p>
+										<button class="cool-btn cool-btn-blue" id="cool_btn_3"  data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="אין תוכן נוסף כרגע"> קרא עוד </button>
+										<div class="col-btn-href" id="cool_btn_3_href">#</div>	
+									  </div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-12">
+									<div class="card text-center">
+									  <div class="card-body">
+										<h5 class="card-title">מתמטיקה</h5>
+										<p class="card-text">מודל מתמטי מורחב לטיפול סרטן שלפוחית השתן על ידי שחפת (BCG) עם דגש על גאומטריה</p>
+										<button class="cool-btn cool-btn-blue" id="cool_btn_2"  data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="אין תוכן נוסף כרגע"> קרא עוד </button>
+										<div class="col-btn-href" id="cool_btn_2_href">#</div>	
+									  </div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-12">
+									<div class="card text-center">
+									  <div class="card-body">
+										<h5 class="card-title">מדעי המחשב ומדעי המוח</h5>
+										<p class="card-text">מרחק אסואציטיבי בעברית והקשר שלו לדיכאון.</p>
+										<button class="cool-btn cool-btn-blue" id="cool_btn_1"  data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="אין תוכן נוסף כרגע"> קרא עוד </button>
+										<div class="col-btn-href" id="cool_btn_1_href">#</div>	
+									  </div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12">
 							<div class="personal-panel">
 								<img src="../img/teddy.png" title="Teddy Lazebnik" width="200px;">
@@ -75,39 +158,15 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-8 col-md-8 col-sm-12" style="padding-left: 5px;">
-							<div class="info">
-								<h2> בביליוגרפיה </h2>
-								<p>
-									אני סטודנט לתואר שלישי בפרויקט <a href="http://u.cs.biu.ac.il/~galk/research/tolkien/" target="_blank"><b>"TOLKIN"</b></a>, חלק מקבוצת המחקר <a target="_blank" href="http://u.cs.biu.ac.il/~galk/maverick/">"MAVERICK"</a> במחלקה <a href="https://cs.biu.ac.il/en" target="_blank"> למדעי המחשב </a>, <a href="https://www1.biu.ac.il/" target="_blank">באוניברסיטת בר אילן</a>;
-									 תחת הנחיתו של <a target="_blank" href="http://u.cs.biu.ac.il/~galk/">פרופ. גל קמינקא </a> ו <a target="_blank" href="https://physics.biu.ac.il/en/node/1384">דר. חנה ויטמן</a>.  בנוסף, שותף (ומפתח אלגוריתמים) בחברת<a target="_blank" href="http://dnc-algo.com"> DnC-algo</a>. 
-								</p>
-								<p>
-									 המחקר שלי מתפקס בננורובטיקה רפואית וביולוגית. בעיקר, מודליזציה של פרוטקולי טיפול מבוססים על אינטרקציה ביו-כימיה של ננוחליקים שמכילים תרופה שמשתחררת באיזור החולה בלבד במחזור הדם.
-									אני גם מתעניין בפתרונות ויציבות של משוואות דיפרנציאליות חלקיות ורגילות (במיוחד כאלה שמגיעים מביולוגיה).
-								</p>
-								<p>
-									בוגר תואר ראשון (2016) ותואר שני (2018) במתמטיקה שימושית בבר אילן.<br>
-									קורות החיים המלאים שאפשר למצוא <a target="_blank" href="files/cv.pdf" style="font-weight: bold">כאן</a>.
-								</p>
-								<h3> פרויקטים נוכחים </h3>
-								<ol>
-									<li class="marge-low">
-										סימולאציה של ננורובוטיקה רפואית במחזור הדם
-									</li>
-									<li class="marge-low">
-										מודל מתמטי מורחב לטיפול סרטן שלפוחית השתן על ידי שחפת (BCG) עם דגש על גאומטריה
-									</li>
-									<li class="marge-low">
-										מרחק אסואציטיבי בעברית והקשר שלו לדיכאון.
-									</li>
-								</ol>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script> 
 </body>
 </html>

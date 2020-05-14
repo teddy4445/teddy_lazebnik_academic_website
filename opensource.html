@@ -9,8 +9,8 @@
     <meta content="Teddy Lazebnik" name="author">
 	<link rel='icon' href='img/favicon.ico' type='image/x-icon'/ >
 	<!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/teddy_style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="css/teddy_style.css" rel="stylesheet">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
@@ -26,31 +26,57 @@
 <body>
 	<div id="progressBar"></div>
 	<div id="ScrollPath"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-1 col-md-1 col-sm-1">
-			
-			</div>
-			<div class="col-lg-10 col-md-10 col-sm-10">
-				<div class="header">
-					<h1>
-					Theodore (Teddy) Lazebnik
-					</h1>
-				</div>
-				<div class="menu">
-					<ul>
-						<li><a href="index.html"> Short Bio </a></li>
-						<li><a href="publications.html"> Publications </a></li>
-						<li><a href="students.html"> Students </a></li>
-						<li><a href="opensource.html" class="active"> Open Resources </a></li>
-						<li><a href="teaching.html" > Teaching </a></li>
+	<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<nav class="navbar navbar-expand-lg">
+				  <a class="navbar-brand" href="index.html" id="logo">Theodore (Teddy) Lazebnik</a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<img class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item">
+						<a class="nav-link" href="index.html">Short Bio</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="publications.html">Publications</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link active" href="opensource.html">Open Resources</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Teaching
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="courses/deep_leanring.html">Deep Learning</a>
+						  <a class="dropdown-item" href="courses/numerical.html">Numerical Analysis</a>
+						  <a class="dropdown-item" href="courses/linear_mathematical_optimization.html">Linear Optimization</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="teaching.html">All classes</a>
+						</div>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="students.html">Students</a>
+					  </li>
 					</ul>
-				</div>
+					<div class="form-inline my-2 my-lg-0">
+					  <input class="form-control mr-sm-2" id="search-data" type="search" placeholder="Page Name" aria-label="Page Name">
+					  <button class="btn btn-outline-white my-2 my-sm-0" onclick="return searchPage();">Search</button>
+					</div>
+				  </div>
+				</nav>
 				<div class="body">
 					<div class="row">
 						<div class="col-lg-8 col-md-8 col-sm-12">
 							<div class="info">
-								<h2> Open Resources </h2>
+										<div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none" id="error-search">
+										  <strong>Page Not found</strong>, I am still working on our inner website search engine. Try again or use the navigation bar.
+										  <button type="button" class="close" onclick="return closeSearchAlert()" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										  </button>
+										</div>
 								<h3> Open Source </h3>
 								<ol>
 									<li class="marge-low">
@@ -192,7 +218,11 @@
 			</div>
 		</div>
 	</div>
-
-    <script src="js/return_user.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script> 
 </body>
 </html>

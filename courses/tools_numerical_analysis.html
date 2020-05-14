@@ -9,8 +9,8 @@
     <meta content="Teddy Lazebnik" name="author">
 	<link rel='icon' href='../img/favicon.ico' type='image/x-icon'/ >
 	<!-- css -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/teddy_style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="../css/teddy_style.css" rel="stylesheet">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
@@ -26,99 +26,132 @@
 <body>
 	<div id="progressBar"></div>
 	<div id="ScrollPath"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-1 col-md-1 col-sm-1">
-			
-			</div>
-			<div class="col-lg-10 col-md-10 col-sm-10">
-				<div class="header">
-					<h1>
-					Theodore (Teddy) Lazebnik
-					</h1>
-				</div>
-				<div class="menu">
-					<ul>
-						<li><a href="../index.html"> Short Bio </a></li>
-						<li><a href="../publications.html"> Publications </a></li>
-						<li><a href="../students.html"> Students </a></li>
-						<li><a href="../opensource.html"> Open Resources </a></li>
-						<li><a href="../teaching.html"> Teaching </a></li>
-						<li><a href="" class="active"> Tools for Numerical Analysis </a></li>
-					</ul>
-				</div>
-				<div class="body">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12">
-							<div class="info">
-								<h2>Tools for Numerical Analysis (83214)</h2>
-								<p>
-									This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you. <br>
-									<b>Reception time is every Tuesday from 14:00 to 15:00 in my office. (Updated for: 2019-2020)</b>
-								</p>
-								<h3> Sources </h3>
-								<ol>
-									The course's "Module" page <a target="_blank" class="alert-text bg-blue" href="https://lemida.biu.ac.il/course/view.php?id=49737"> Website </a>
-								</ol>
-								<h3> Lessons Material </h3>
-								<ol>
-									<li class="marge-low">
-										Lesson 1 - Introduction to numerical analysis and numerical error
-										<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_1_a.pdf"> File 1 </a>
-										<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_1_b.pdf"> File 2 </a>
-										<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_1_c.pdf"> File 3 </a>
-										<br>(Thanks to Oz Pirvandy) <a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_1_d.pdf"> Main Lecture </a>
-									</li>
-									<li class="marge-low">
-										Lesson 2 - More numerical error and zero points of a function 
-										<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_2.pdf"> File 1 </a><br>(Thanks to Oz Pirvandy) 
-									</li>
-									<li class="marge-low">
-										Lesson 3 - Continue zero points of a function, fix points and some Matlab Code
-										<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_3.pdf"> File 1 </a><br>(Thanks to Oz Pirvandy) 
-									</li>
-									<li class="marge-low">
-										Lesson 4 - LU and Gauss methods
-										<a target="_blank" class="alert-text bg-gray" href="../files/linear_numerical_presentation.pptx"> File 1 </a> 
-									</li>numerical_tools_lession_5_file_
-									<li class="marge-low">
-										Lesson 5 - LU and SVD methods
-										<a target="_blank" class="alert-text bg-gray" href="../files/numerical_tools_lession_5_file_0.pptx"> File 1 - Lu Example</a>
-										<a target="_blank" class="alert-text bg-gray" href="../files/numerical_tools_lession_5_file_3.pptx"> File 2 - LU Analysis</a>
-										<a target="_blank" class="alert-text bg-gray" href="../files/numerical_tools_lession_5_file_0.pptx"> File 3 - SVD Algorithm</a>
-										<a target="_blank" class="alert-text bg-gray" href="../files/numerical_tools_lession_5_file_0.pptx"> File 4 - SVD Example</a> 
-									</li>
-									<li class="marge-low">
-										Lesson 6 - Linear Iterative methods
-										<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_5.pptx"> File </a>
-									</li>
-									<li class="marge-low">
-										Lesson 7 - Yakobi-Zidal method and interpolation 
-										<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_6.pptx"> File </a>
-									</li>
-								</ol>
-								
-								<h3> Function Zero Point Python Code </h3>
-								<a class="btn btn-primary" alt="Knn and Xnn" href="tools_numerical_analysis_py_optimization.html">Show Me The Code</a>
-								
-								<h3> Home Work </h3>
-								<ol>
-									<li class="marge-low">
-										Home work 1 - until the 21.4.2020 <a target="_blank" class="alert-text bg-gray" href="../files/hw_tools_for_numerical_analysis_1.pdf"> File </a>
-									</li>
-									<li class="marge-low">
-										Home work 2 - until the 5.5.2020 <a target="_blank" class="alert-text bg-gray" href="../files/hw_tools_for_numerical_analysis_2.pdf"> File </a><br>
-									</li>
-								</ol>
-								
-							</div>
+	<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<nav class="navbar navbar-expand-lg">
+				  <a class="navbar-brand" href="../index.html" id="logo">Theodore (Teddy) Lazebnik</a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<img class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item">
+						<a class="nav-link" href="../index.html">Short Bio</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../publications.html">Publications</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../opensource.html">Open Resources</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Teaching
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="../courses/deep_leanring.html">Deep Learning</a>
+						  <a class="dropdown-item" href="../courses/numerical.html">Numerical Analysis</a>
+						  <a class="dropdown-item" href="../courses/linear_mathematical_optimization.html">Linear Optimization</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="../teaching.html">All classes</a>
 						</div>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../students.html">Students</a>
+					  </li>
+					</ul>
+					<div class="form-inline my-2 my-lg-0">
+					  <input class="form-control mr-sm-2" id="search-data" type="search" placeholder="Page Name" aria-label="Page Name">
+					  <button class="btn btn-outline-white my-2 my-sm-0" onclick="return searchPage();">Search</button>
+					</div>
+				  </div>
+				</nav>
+				<div class="body">
+					<div class="fluid-container">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="info">
+										<div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none" id="error-search">
+										  <strong>Page Not found</strong>, I am still working on our inner website search engine. Try again or use the navigation bar.
+										  <button type="button" class="close" onclick="return closeSearchAlert()" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										  </button>
+										</div>
+									<h2>Tools for Numerical Analysis (83214)</h2>
+									<p>
+										This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you. <br>
+										<b>Reception time is every Tuesday from 14:00 to 15:00 in my office. (Updated for: 2019-2020)</b>
+									</p>
+									<h3> Sources </h3>
+									<ol>
+										The course's "Module" page <a target="_blank" class="alert-text bg-blue" href="https://lemida.biu.ac.il/course/view.php?id=49737"> Website </a>
+									</ol>
+									<h3> Lessons Material </h3>
+									<ol>
+										<li class="marge-low">
+											Lesson 1 - Introduction to numerical analysis and numerical error
+											<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_1_a.pdf"> File 1 </a>
+											<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_1_b.pdf"> File 2 </a>
+											<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_1_c.pdf"> File 3 </a>
+											<br>(Thanks to Oz Pirvandy) <a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_1_d.pdf"> Main Lecture </a>
+										</li>
+										<li class="marge-low">
+											Lesson 2 - More numerical error and zero points of a function 
+											<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_2.pdf"> File 1 </a><br>(Thanks to Oz Pirvandy) 
+										</li>
+										<li class="marge-low">
+											Lesson 3 - Continue zero points of a function, fix points and some Matlab Code
+											<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_3.pdf"> File 1 </a><br>(Thanks to Oz Pirvandy) 
+										</li>
+										<li class="marge-low">
+											Lesson 4 - LU and Gauss methods
+											<a target="_blank" class="alert-text bg-gray" href="../files/linear_numerical_presentation.pptx"> File 1 </a> 
+										</li>numerical_tools_lession_5_file_
+										<li class="marge-low">
+											Lesson 5 - LU and SVD methods
+											<a target="_blank" class="alert-text bg-gray" href="../files/numerical_tools_lession_5_file_0.pptx"> File 1 - Lu Example</a>
+											<a target="_blank" class="alert-text bg-gray" href="../files/numerical_tools_lession_5_file_3.pptx"> File 2 - LU Analysis</a>
+											<a target="_blank" class="alert-text bg-gray" href="../files/numerical_tools_lession_5_file_0.pptx"> File 3 - SVD Algorithm</a>
+											<a target="_blank" class="alert-text bg-gray" href="../files/numerical_tools_lession_5_file_0.pptx"> File 4 - SVD Example</a> 
+										</li>
+										<li class="marge-low">
+											Lesson 6 - Linear Iterative methods
+											<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_5.pptx"> File </a><br>(Thanks to Oz Pirvandy) 
+										</li>
+										<li class="marge-low">
+											Lesson 7 - Yakobi-Zidal method and interpolation 
+											<a target="_blank" class="alert-text bg-gray" href="../files/tools_numerical_lession_6.pptx"> File </a><br>(Thanks to Oz Pirvandy) 
+										</li>
+									</ol>
+									
+									<h3> Function Zero Point Python Code </h3>
+									<a class="btn btn-primary" alt="Knn and Xnn" href="tools_numerical_analysis_py_optimization.html">Show Me The Code</a><br><br>
+									
+									<h3> Home Work </h3>
+									<ol>
+										<li class="marge-low">
+											Home work 1 - until the 21.4.2020 <a target="_blank" class="alert-text bg-gray" href="../files/hw_tools_for_numerical_analysis_1.pdf"> File </a>
+										</li>
+										<li class="marge-low">
+											Home work 2 - until the 5.5.2020 <a target="_blank" class="alert-text bg-gray" href="../files/hw_tools_for_numerical_analysis_2.pdf"> File </a><br>
+										</li>
+									</ol>
+									
+								</div>
+							</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-    <script src="../js/return_user.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script> 
 </body>
 </html>
