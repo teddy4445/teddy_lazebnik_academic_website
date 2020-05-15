@@ -469,6 +469,25 @@ h2{
     width: 80%;
 }
 
+.global-error-alert{
+    position: fixed;
+	text-align: center;
+    bottom: 50%;
+	font-size: 18pt;
+    left:10%;
+    width: 80%;
+}
+
+.btn-light{
+	background: white;
+	border: 1px solid white;
+}
+
+.btn-light:hover{
+	background: transparent;
+	border: 1px solid white;
+}
+
 .star-btn{
 	width: 30px;
 	height: 30px;
