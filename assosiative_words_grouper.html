@@ -305,14 +305,24 @@
 		readyData = [];
 		for (var i = 0; i < list_data.length; i++)
 		{
+			if (i == 0 && (list_data[i].includes("col") || list_data[i].includes("Col")))
+			{
+				continue;
+			}
+			
 			// stop here and start adding to clusters
-			if (list_data[i] == CLUSTER_DATA_SPLITER)
+			if (list_data[i].includes(CLUSTER_DATA_SPLITER))
 			{
 				clustersFirstLineIndex = i + 1;
 				clustersFlag = true;
 				break;
 			}
 			var new_row = [];
+			while (list_data[i].endsWith(","))
+			{
+				list_data[i] = list_data[i].substring(0, list_data[i].length - 1);
+			}
+			
 			if (list_data[i].length < 5)
 			{
 				continue;

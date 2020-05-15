@@ -226,7 +226,7 @@ function searchPage()
 	{
 		return;
 	}
-	else if (containsName(pageName, ["home", "bio", "main"]))
+	else if (containsName(pageName, ["home", "bio", "main", "teddy", "lazebnik"]))
 	{
 		pageLink = "index.html";
 	}
@@ -254,15 +254,15 @@ function searchPage()
 	{
 		pageLink = "http://dnc-algo.com/";
 	}
-	else if (containsName(pageName, ["gal", "kaminka", "advisor"]))
+	else if (containsName(pageName, ["gal", "kaminka", "advisor", "prof"]))
 	{
 		pageLink = "http://u.cs.biu.ac.il/~galk/";
 	}
-	else if (containsName(pageName, ["maverick", "group"]))
+	else if (containsName(pageName, ["maverick", "group", "robotics"]))
 	{
 		pageLink = "http://u.cs.biu.ac.il/~galk/maverick/";
 	}
-	else if (containsName(pageName, ["hana", "weitman"]))
+	else if (containsName(pageName, ["hana", "weitman", "dr"]))
 	{
 		pageLink = "https://physics.biu.ac.il/en/node/1384";
 	}
@@ -277,6 +277,18 @@ function searchPage()
 	else if (containsName(pageName, ["optim", "line"]))
 	{
 		pageLink = "courses/linear_mathematical_optimization.html";
+	}
+	else if (containsName(pageName, ["nano", "medical", "medical"]))
+	{
+		pageLink = "https://www.linkedin.com/pulse/daily-issues-solutions-nano-bioinformatic-research-teddy-lazebnik/";
+	}
+	else if (containsName(pageName, ["ode", "pde", "bcg"]))
+	{
+		pageLink = "summeries/bcg_pde_10_eq_paper.html";
+	}
+	else if (containsName(pageName, ["linkedin", "social"]))
+	{
+		pageLink = "https://www.linkedin.com/in/teddy-lazebnik/";
 	}
 	else
 	{
@@ -298,39 +310,53 @@ function closeAlert(alertID)
 }
 
 function opacityAnimation(element_id, miliseconds, is_show = true) {
-  var elem = document.getElementById(element_id);
-  var FPMS = 10;
-  var frameCount = Math.floor(miliseconds / FPMS);
-  var frameIndex = 0;
-  if (is_show)
-  {
-	document.getElementById(element_id).style.opacity = 0;
-  }
-  else
-  {
-	document.getElementById(element_id).style.opacity = 1;
-  }
-  document.getElementById(element_id).style.display = "";
-  var id = setInterval(frame, FPMS);
-  function frame() {
-    if (frameIndex == frameCount) {
-      clearInterval(id);
-	  if (!is_show)
-	  {
-		document.getElementById(element_id).style.display = "none";  
-	  }
-    } else {
+	try
+	{	
+	  var elem = document.getElementById(element_id);
+	  var FPMS = 10;
+	  var frameCount = Math.floor(miliseconds / FPMS);
+	  var frameIndex = 0;
 	  if (is_show)
 	  {
-		elem.style.opacity = frameIndex / frameCount;
+		document.getElementById(element_id).style.opacity = 0;
 	  }
 	  else
 	  {
-		  elem.style.opacity = 1 - (frameIndex / frameCount);   
+		document.getElementById(element_id).style.opacity = 1;
 	  }
-    }
-	frameIndex++;
-  }
+	  document.getElementById(element_id).style.display = "";
+	  var id = setInterval(frame, FPMS);	
+	}
+	catch (error)
+	{
+		console.log("Error at 'opacityAnimation' saying: " + error);
+	}
+	  function frame() {
+		  try
+		  {
+			if (frameIndex == frameCount) {
+			  clearInterval(id);
+			  if (!is_show)
+			  {
+				document.getElementById(element_id).style.display = "none";  
+			  }
+			} else {
+			  if (is_show)
+			  {
+				elem.style.opacity = frameIndex / frameCount;
+			  }
+			  else
+			  {
+				  elem.style.opacity = 1 - (frameIndex / frameCount);   
+			  }
+			}
+			frameIndex++;  
+		  }
+		  catch (error)
+		  {
+			  console.log("Error at 'opacityAnimation -> frame' saying: " + error);
+		  }
+	  }
 }
 
 function setCookie(cname, cvalue, exdays)
