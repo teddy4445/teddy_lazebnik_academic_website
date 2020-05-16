@@ -33,7 +33,7 @@ body {
 }
 
 .fluid-container{
-    max-width: 1000px;
+    max-width: max(1000px, 70%);
     margin-right: auto;
     margin-left: auto;
 }
