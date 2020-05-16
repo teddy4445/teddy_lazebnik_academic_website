@@ -185,25 +185,68 @@ body {
 }
 
 .personal-panel{
-	background-color: #eeeeee;
-	padding: 10px 15px;
 	border-radius: 10px 10px 10px 10px;
 	text-align: center;
-	border: 1px solid #ededed;
 	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.personal-panel-header{
+	border-radius: 10px 10px 0px 0px;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	transition: 0.5s;
+	padding-bottom: 20px;
+}
+
+.personal-panel-body{
+	border-radius: 0px 0px 10px 10px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	text-align: left;
+}
+
+.personal-panel-body svg{
+	margin-top: 10px;
+	width: 24px;
+	height: 24px;
+}
+
+.personal-panel-body p{
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.personal-panel-body img{
+	margin-top: 10px;
+	width: 32px;
+	height: 32px;
+}
+
+.personal-panel .header-img{
+	border-radius: 10px 10px 0px 0px !important;
+	text-align: center;
+	width: 100%;
+}
+
 .personal-panel img{
+	border-radius: 10px 10px 0px 0px;
 	text-align: center;
 	border-radius: 100%;
 }
 
 .personal-panel h3{
 	font-size: 18px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+	color: #0E53A7;
 }
 
 .personal-panel h2{
-	font-size: 20px;
+	font-size: 14pt;
 	text-align: left;
 }
 
@@ -223,7 +266,9 @@ body {
 
 .personal-panel h5{
 	margin-top: 10px;
-	font-size: 16px;
+	font-size: 14pt;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .personal-panel a{
@@ -515,6 +560,59 @@ h2{
 .card-img-top{
 	max-height: 200px;
 	height: 100%;
+}
+
+canvas
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hover-element{
+	z-index: 9999;
+	position: fixed;
+	overflow: hidden;
+	width: 800px;
+	height: 600px;
+	top: calc(50% - 300px);
+	left: calc(50% - 400px);
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	padding: 20px 20px;
+	overflow-y: scroll;
+	box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 1) !important;
+	font-weight: bold;
+}
+
+.hover-element h1{
+	text-align: center;
+	font-size: 26pt;
+	margin-bottom: 20px;
+	font-weight: 900;
+	letter-spacing: 1.5;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+.hover-element p{
+	text-align: left;
+	font-size: 16pt;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+.hover-element button{
+	border: 0px;
+	background: rgb(170,0,0);
+	background: radial-gradient(circle, rgba(170,0,0,1) 0%, rgba(47,0,0,1) 100%);
+	padding: 10px 15px;
+	border-radius: 10px;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 16pt;
+	width: 100%;
+	margin-top: 10px;
 }
 
 
