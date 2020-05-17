@@ -11,7 +11,8 @@
 	<!-- css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link href="css/teddy_style.css" rel="stylesheet">
-
+	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
@@ -97,7 +98,7 @@
 											<h3> Journals </h3>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="card">
+											<div  data-aos="fade-up" class="card">
 											  <img class="card-img-top" src="img/papers/expm.png" alt="Card image cap">
 											  <div class="card-body">
 												<h5 class="card-title"><a href="summeries/matrix_exponent.html">A stable algorithm for numerical matrix exponent</a></h5>
@@ -114,7 +115,7 @@
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="card">
+											<div  data-aos="fade-up" class="card">
 											  <img class="card-img-top" src="img/papers/bcg_cancer_pde.png" alt="Card image cap">
 											  <div class="card-body">
 												<h5 class="card-title"><a href="summeries/bcg_pde_10_eq_paper.html">Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling</a></h5>
@@ -138,7 +139,7 @@
 											<h3> Conferences </h3>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="card">
+											<div  data-aos="fade-up" class="card">
 											  <img class="card-img-top" src="img/papers/expm_2.png" alt="Card image cap">
 											  <div class="card-body">
 												<h5 class="card-title"><a href="summeries/matrix_exponent.html">A highly stable implementation for numerical matrix exponent in Matlab and C</a></h5>
@@ -155,7 +156,7 @@
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="card">
+											<div  data-aos="fade-up" class="card">
 											  <img class="card-img-top" src="img/papers/bcg_cancer_pde_2.png" alt="Card image cap">
 											  <div class="card-body">
 												<h5 class="card-title"><a href="summeries/bcg_pde_10_eq.html">PDE Modeling of Bladder Cancer Treatment Using BCG Immunotherapy</a></h5>
@@ -179,7 +180,7 @@
 											<h3> Abstracts </h3>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="card">
+											<div  data-aos="fade-up" class="card">
 											  <img class="card-img-top" src="img/papers/hemi.png" style="height: 100px;" alt="Card image cap">
 											  <div class="card-body">
 												<h5 class="card-title">Energy Efficiency in 2d Quadratic Hamiltonian</h5>
@@ -197,7 +198,7 @@
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="card">
+											<div  data-aos="fade-up" class="card">
 											  <img class="card-img-top" src="img/papers/rivendell.png" alt="Card image cap">
 											  <div class="card-body">
 												<h5 class="card-title">Rivendell: Project-Based Academic Search Engine</h5>
@@ -220,7 +221,7 @@
 											<h3> Submitted </h3>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="card">
+											<div  data-aos="fade-up" class="card">
 											  <div class="card-body">
 												<h5 class="card-title">Rivendell: Project-Based Academic Search Engine</h5>
 												<ol class="nobull card-text">
@@ -240,7 +241,7 @@
 											<h3> Consulting </h3>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="card">
+											<div  data-aos="fade-up" class="card">
 											  <div class="card-body">
 												<h5 class="card-title">Return on Data</h5>
 												<ol class="nobull card-text">
@@ -306,6 +307,12 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script> 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	  AOS.init({
+		duration: 1000,
+	  });
+	</script>
+	<script src="js/main.js"></script> 
 </body>
 </html>
