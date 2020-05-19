@@ -1,5 +1,72 @@
-// Dwitter Shim by Frank Force 2020
-// License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+$( document ).ready(function() {
+    var index = 1;
+	var next_btn = $("#next_btn_" + index);
+	while(next_btn.length)
+	{
+		next_btn.click(function(event){
+			next_btn_click(parseInt(event.target.id.split("_")[2]));
+		});
+		index++;
+		next_btn = $("#next_btn_" + index);
+	}
+    var index = 2;
+	var prev_btn = $("#prev_btn_" + index);
+	while(prev_btn.length)
+	{
+		prev_btn.click(function(event){
+			prev_btn_click(parseInt(event.target.id.split("_")[2]));
+		});
+		index++;
+		prev_btn = $("#prev_btn_" + index);
+	}
+	
+	// show the first panel on screen load
+	$("#panel_1").animate({
+		opacity: 1
+		}, 1000, function() {
+		// Animation complete.
+	});
+});
+
+
+function next_btn_click(current_index)
+{
+	$("#panel_" + current_index).animate({
+		opacity: 0,
+		left: "-=50%",
+		}, 1000, function() {
+		display: "none"
+	});
+	var nextPanel = $("#panel_" + (current_index + 1));
+	nextPanel.show();
+	nextPanel.css("left", "calc(100% - 400px)");
+	nextPanel.delay(250).animate({
+		opacity: 1,
+		left: "-=50%",
+		}, 1000, function() {
+		// Animation complete.
+	});
+}
+
+function prev_btn_click(current_index)
+{
+	$("#panel_" + current_index).animate({
+		opacity: 0,
+		left: "+=50%",
+		}, 1000, function() {
+		display: "none"
+	});
+	var nextPanel = $("#panel_" + (current_index - 1));
+	nextPanel.show();
+	nextPanel.css("left", "calc(0% - 400px)");
+	nextPanel.delay(250).animate({
+		opacity: 1,
+		left: "+=50%",
+		}, 1000, function() {
+		// Animation complete.
+	});
+}
+
 
 function u(t) { // dwitter code goes here
 
