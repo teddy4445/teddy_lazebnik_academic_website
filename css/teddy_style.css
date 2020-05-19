@@ -615,6 +615,12 @@ canvas
 	margin-top: 10px;
 }
 
+.hover-element li{
+	text-align: left;
+	font-size: 16pt;
+	margin-left: 15px;
+}
+
 
 @media only screen and (max-width: 600px) {
 	.header{
