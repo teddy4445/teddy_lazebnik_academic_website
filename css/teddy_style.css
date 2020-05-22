@@ -42,6 +42,14 @@ body {
 	width: 100% !important;
 }
 
+.desktop{
+	
+}
+
+.mobile{
+	display: none;
+}
+
 @media (min-width: 1800){
 	.container{
 		width: 100% !important;
@@ -630,6 +638,15 @@ canvas
 
 
 @media only screen and (max-width: 600px) {
+	
+	.desktop{
+		display: none;
+	}
+
+	.mobile{
+		display: inherit;
+	}
+	
 	.header{
 		margin-top: 0px;
 		border-bottom: 0px;
