@@ -322,6 +322,10 @@
 			{
 				list_data[i] = list_data[i].substring(0, list_data[i].length - 1);
 			}
+			while (list_data[i].startsWith(","))
+			{
+				list_data[i] = list_data[i].substring(1, list_data[i].length);
+			}
 			
 			if (list_data[i].length < 5)
 			{
