@@ -129,7 +129,7 @@
 												<button class="cool-btn cool-btn-gray" id="cool_btn_2"> Paper </button>
 												<div class="col-btn-href" id="cool_btn_2_href">files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf</div> 
 												
-												<!-- <br><br><a class="cool-btn cool-btn-cite" href="#"> <img src="https://img.icons8.com/metro/26/000000/download.png"/> Cite this publication </a> -->
+												<br><br><a class="cool-btn cool-btn-cite" data-toggle="modal" data-target="#model_2"> <img src="https://img.icons8.com/metro/26/000000/download.png"/> Cite this publication </a> 
 											  </div>
 											</div>
 										</div>
@@ -239,7 +239,7 @@
 									
 									<div class="row">
 										<div class="col-lg-12 col-md-12 col-sm-12">
-											<h3 data-aos="fade-up" > Consulting </h3>
+											<h3 data-aos="fade-up" > Consulted </h3>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-12">
 											<div  data-aos="fade-up" class="card">
@@ -306,8 +306,6 @@
 	
 	  <div class="modal fade" id="model_1" role="dialog">
 		<div class="modal-dialog">
-		
-		  <!-- Modal content-->
 		  <div class="modal-content">
 			<div class="modal-body">
 				<div class="row" style="margin-bottom: 20px;">
@@ -363,7 +361,66 @@
 				</div>
 			</div>
 		  </div>
-		  
+		</div>
+	  </div>
+	  
+	  <div class="modal fade" id="model_2" role="dialog">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-body">
+				<div class="row" style="margin-bottom: 20px;">
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<h3>Citation</h3>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+						<form id="cite_form_2">
+						  <div class="form-check desktop">
+							  <label>
+								<input type="radio" class="option-input radio" name="cite1" id="cite_2_1" value="1" onclick="cite_update(2, 1)" checked />
+									AMA
+							  </label>
+							  <label>
+								<input type="radio" class="option-input radio" name="cite1" id="cite_2_2" value="2" onclick="cite_update(2, 2)"/>
+									MLA
+							  </label>
+							  <label>
+								<input type="radio" class="option-input radio" name="cite1" id="cite_2_3" value="3" onclick="cite_update(2, 3)"/>
+									APA
+							  </label>
+							  <label>
+								<input type="radio" class="option-input radio" name="cite1" id="cite_2_4" value="4" onclick="cite_update(2, 4)"/>
+									NLM
+							  </label>
+						  </div>
+						  <div class="form-group mobile">
+							<label for="cite_mobile_1">Select citation Type</label>
+							<select class="form-control" id="cite_mobile_2" onchange="cite_update_mobile(2)">
+							  <option value="1">AMA</option>
+							  <option value="2">MLA</option>
+							  <option value="3">APA</option>
+							  <option value="4">NLM</option>
+							</select>
+						  </div>
+						</form>
+					</div>
+					<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+						<p class="citation-box" id="cite_21">Lazebnik T, Yanetz S, Bunimovich-Mendrazitsky S, Aaroni N. Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations. 2020.</p>
+						<p class="citation-box" id="cite_22" style="display: none;">Lazebnik Teddy, Yanetz Shlomo, Bunimovich-Mendrazitsky Svetlana, Aaroni Niva. "Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling". Functional Differential Equations, 2020.</p>
+						<p class="citation-box" id="cite_23" style="display: none;">Lazebnik T., Yanetz S., Bunimovich-Mendrazitsky S., Aaroni N. (2020). Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations.</p>
+						<p class="citation-box" id="cite_24" style="display: none;">Lazebnik T, Yanetz S, Bunimovich-Mendrazitsky S, Aaroni N. Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations. 2020.</p>
+						
+						<button id="cite_copy_btn_2" class="btn btn-primary btn-block" style="margin: 0px 5px; background: #0E53A7;" onclick="cite_copy(2)" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Click to copy citation in this format">
+						  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M65.36,0v20.64l6.88,6.88v-20.64h51.6v41.28h41.28v89.44h-51.6v6.88h58.48v-101.1575l-43.3225,-43.3225zM130.72,11.7175l29.5625,29.5625h-29.5625zM0,27.52v144.48h106.64v-101.1575l-0.9675,-1.075l-41.28,-41.28l-1.075,-0.9675zM6.88,34.4h51.6v41.28h41.28v89.44h-92.88zM65.36,39.345l29.455,29.455h-29.455z"></path></g></g></svg> Copy Citation
+						</button>
+					</div>
+				</div>
+			</div>
+		  </div>
 		</div>
 	  </div>
 	
