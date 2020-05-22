@@ -374,7 +374,10 @@
 				var items = list_data[i].split(",");
 				for (var j = 0; j < items.length; j++)
 				{
-					new_row.push(items[j]);
+					if (items[j].length > 0)
+					{
+						new_row.push(items[j]);
+					}
 				}
 				groups.push(new_row);
 			}
