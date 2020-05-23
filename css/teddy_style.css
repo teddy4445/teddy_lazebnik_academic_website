@@ -32,6 +32,10 @@ body {
 	z-index: 999;
 }
 
+button:focus{
+	border: 0px;
+}
+
 .fluid-container{
     max-width: max(1000px, 70%);
     margin-right: auto;
@@ -217,9 +221,11 @@ body {
 }
 
 .personal-panel-body svg{
-	margin-top: 10px;
+	margin-top: 5px;
 	width: 24px;
 	height: 24px;
+	margin-left: 10px;
+	margin-right: 20px;
 }
 
 .personal-panel-body p{
@@ -284,7 +290,7 @@ body {
 }
 
 .personal-panel a img{
-	margin-right: 10px;
+	margin-left: 8px;
 }
 
 .personal-panel a:hover {
@@ -636,6 +642,49 @@ canvas
 	width: 100%;
 }
 
+.mobile-space{
+	padding-left: 0px;
+}
+
+.btn-search{
+	border-top-left-radius: 0px; 
+	border-bottom-left-radius: 0px; 
+	border: 0px;
+	background: white;
+	width: 50px !important;
+}
+
+.btn-search:hover{
+	border: 0px;
+}
+
+.input-search{
+	border-top-right-radius: 0px; 
+	border-bottom-right-radius: 0px; 
+	border: 1px solid white;
+	width: calc(100% - 50px) !important;
+}
+
+.flex-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-box-full{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdown-menu {
+	
+}
 
 @media only screen and (max-width: 600px) {
 	
@@ -662,7 +711,26 @@ canvas
 		/* top-left | top-right | bottom-right | bottom-left */
 		border-radius: 0px 0px 0px 0px ;
 	}
+	
 	#VisitCount {
+		display: none;
+	}
+
+	.mobile-space{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	.dropdown-menu {
+		background: #0E53A7;
+		border: 0px;
+	}
+	
+	.navbar a.dropdown-item{
+		color: white;
+	}
+
+	.navbar .dropdown-divider{
 		display: none;
 	}
 

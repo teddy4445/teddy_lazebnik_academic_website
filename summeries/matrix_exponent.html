@@ -38,43 +38,51 @@
 	<div id="progressBar"></div>
 	<div id="ScrollPath"></div>
 		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12">
+			<div class="col-lg-12 col-md-12 col-sm-12 mobile-space">
 				<nav class="navbar navbar-expand-lg">
-				  <a class="navbar-brand" href="../index.html" id="logo">Theodore (Teddy) Lazebnik</a>
+				  <a class="navbar-brand" href="index.html" id="logo">Theodore (Teddy) Lazebnik</a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<img class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
 				  </button>
 
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
-					  <li class="nav-item">
-						<a class="nav-link" href="../index.html">Short Bio</a>
+					  <li class="nav-item form-inline mobile" style="padding-bottom: 10px;">					  
+						  <input type="text" class="form-control input-search" id="search-data" type="search" placeholder="Search" aria-label="Search">
+						  <div class="input-group-append">
+							<button class="btn btn-outline-white btn-search" onclick="return searchPage();"><img src="https://img.icons8.com/android/24/000000/search.png"/></button>
+						  </div>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" href="../publications.html">Publications</a>
+						<a class="nav-link active" href="index.html">Short Bio</a>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" href="../opensource.html">Open Resources</a>
+						<a class="nav-link" href="publications.html">Publications</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="opensource.html">Open Resources</a>
 					  </li>
 					  <li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						  Teaching
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="../courses/deep_leanring.html">Deep Learning</a>
-						  <a class="dropdown-item" href="../courses/numerical.html">Numerical Analysis</a>
-						  <a class="dropdown-item" href="../courses/linear_mathematical_optimization.html">Linear Optimization</a>
+						  <a class="dropdown-item" href="courses/deep_leanring.html">Deep Learning</a>
+						  <a class="dropdown-item" href="courses/numerical.html">Numerical Analysis</a>
+						  <a class="dropdown-item" href="courses/linear_mathematical_optimization.html">Linear Optimization</a>
 						  <div class="dropdown-divider"></div>
-						  <a class="dropdown-item" href="../teaching.html">All classes</a>
+						  <a class="dropdown-item" href="teaching.html">All classes</a>
 						</div>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" href="../students.html">Students</a>
+						<a class="nav-link" href="students.html">Students</a>
 					  </li>
 					</ul>
-					<div class="form-inline my-2 my-lg-0">
-					  <input class="form-control mr-sm-2" id="search-data" type="search" placeholder="Page Name" aria-label="Page Name">
-					  <button class="btn btn-outline-white my-2 my-sm-0" onclick="return searchPage();">Search</button>
+					<div class="form-inline my-2 my-lg-0 desktop">
+					  <input type="text" class="form-control input-search" id="search-data-2" type="search" placeholder="Search" aria-label="Search">
+					  <div class="input-group-append">
+						<button class="btn btn-outline-white btn-search" onclick="return searchPage();"><img src="https://img.icons8.com/android/24/000000/search.png"/></button>
+					  </div>
 					</div>
 				  </div>
 				</nav>

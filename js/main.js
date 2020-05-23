@@ -218,15 +218,22 @@ function starThisPage(addThisPage)
 function searchPage()
 {
 	var pageName = document.getElementById("search-data").value;
+	var pageName2 = document.getElementById("search-data-2").value;
 	pageName = pageName.toLowerCase().trim();
+	pageName2 = pageName2.toLowerCase().trim();
 	
-	var pageLink = "";
 	
-	if (pageName == "")
+	if (pageName == "" && pageName2 == "")
 	{
 		return;
 	}
-	else if (containsName(pageName, ["home", "bio", "main", "teddy", "lazebnik"]))
+	else if (pageName == "" && pageName2 != "" )
+	{
+		pageName = pageName2;
+	}
+	
+	var pageLink = "";
+	if (containsName(pageName, ["home", "bio", "main", "teddy", "lazebnik"]))
 	{
 		pageLink = "index.html";
 	}
