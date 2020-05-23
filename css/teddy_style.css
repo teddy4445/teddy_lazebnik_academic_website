@@ -576,7 +576,7 @@ h2{
 	height: 100%;
 }
 
-canvas
+.canvas
 {
     position: absolute;
     top: 50%;
