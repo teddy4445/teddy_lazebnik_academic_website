@@ -159,12 +159,12 @@ function addStarPages(need_alert)
 	var alertCode = "";
 	if (pageStared)
 	{
-		starCode = '<button class="star-btn" id="star_btn" onclick="starThisPage(false)"> ' + FULL_STAR_CODE + ' </button>';
+		starCode = '<button class="star-btn" id="star_btn" onclick="return starThisPage(false);"> ' + FULL_STAR_CODE + ' </button>';
 		alertCode = '<div class="alert alert-dark cookie-alert" role="alert" id="star_alert"> <strong>Stared:</strong> you have added page "' + thisPageName + '" to your favorite pages on this computer and can be find in the menu .</div>';
 	}
 	else
 	{
-		starCode = '<button class="star-btn" id="star_btn" onclick="starThisPage(true)"> ' + EMPTY_STAR_CODE + ' </button>';
+		starCode = '<button class="star-btn" id="star_btn" onclick="return starThisPage(true);"> ' + EMPTY_STAR_CODE + ' </button>';
 		alertCode = '<div class="alert alert-dark cookie-alert" role="alert" id="star_alert"> <strong>Unstared:</strong> you have removed page "' + thisPageName + '" from your favorite pages on this computer. </div>';
 	}
 	
@@ -246,6 +246,7 @@ function starThisPage(addThisPage)
 	
 	// build right data again
 	addStarPages(true);
+	return false;
 }
 
 function searchPage()
