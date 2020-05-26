@@ -111,21 +111,6 @@ function addStarPages(need_alert)
 	let starPages = getCookie("starPages");
 	var perant = document.getElementsByClassName("navbar-nav mr-auto")[0];
 	var pageStared = false;
-	
-	if (starPages == "")
-	{
-		var starCode = '<button class="star-btn" id="star_btn" onclick="starThisPage(true)"> ' + EMPTY_STAR_CODE + ' </button>';
-		// if mobile or desktop version
-		if (getWidth() < 1000)
-		{
-			document.getElementById("logo").innerHTML += starCode; // mobile 
-		}
-		else
-		{
-			perant.innerHTML += starCode; // desktop
-		}
-		return;
-	}
 	var url_parts = location.href.split("/");
 	var thisPageName = "";
 	if (url_parts.slice(-1)[0] == "")
@@ -137,23 +122,27 @@ function addStarPages(need_alert)
 		thisPageName = url_parts.slice(-1)[0].replace(".html", "");
 	}
 	
-	var page_links = starPages.split(",");
 	
-	var page_links = starPages.split(",");
-	var innerHtmlLiElement = '<li id="star-list" class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="starMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stared</a><div class="dropdown-menu" aria-labelledby="starMenu">';
-	for (var i = 0; i < page_links.length; i++)
+	
+	if (starPages == "")
 	{
-		var linkAndName = page_links[i].split("|");
-		innerHtmlLiElement += '<a class="dropdown-item" href="' + linkAndName[0].trim() + '">' + linkAndName[1].trim() + '</a>';
-		
-		if (linkAndName.includes(thisPageName))
+		var page_links = starPages.split(",");
+		var page_links = starPages.split(",");
+		var innerHtmlLiElement = '<li id="star-list" class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="starMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stared</a><div class="dropdown-menu" aria-labelledby="starMenu">';
+		for (var i = 0; i < page_links.length; i++)
 		{
-			pageStared = true;
+			var linkAndName = page_links[i].split("|");
+			innerHtmlLiElement += '<a class="dropdown-item" href="' + linkAndName[0].trim() + '">' + linkAndName[1].trim() + '</a>';
+			
+			if (linkAndName.includes(thisPageName))
+			{
+				pageStared = true;
+			}
 		}
+		innerHtmlLiElement += '</div></li>';
+		
+		perant.innerHTML += innerHtmlLiElement;
 	}
-	innerHtmlLiElement += '</div></li>';
-	
-	perant.innerHTML += innerHtmlLiElement;
 	
 	var starCode = "";
 	var alertCode = "";
@@ -196,7 +185,7 @@ function addStarPages(need_alert)
 function starThisPage(addThisPage)
 {
 	var cookie_data = getCookie("starPages");
-	var url_parts = location.href.split("/");
+	var url_parts = location.href.replace("https", "http").split("/");
 	var thisPageName = "";
 	if (url_parts.slice(-1)[0] == "")
 	{
@@ -204,7 +193,7 @@ function starThisPage(addThisPage)
 	}
 	else
 	{
-		thisPageName = url_parts.replace("https", "http").slice(-1)[0].replace(".html", "");
+		thisPageName = url_parts.slice(-1)[0].replace(".html", "");
 	}
 	var new_page = window.location.href + "|" + thisPageName;
 	new_page = new_page.replace("index.html", "");
