@@ -103,10 +103,10 @@ function onPageLoad()
 		setCookie("seeCookieMessage", true, 7);
 		opacityAnimation("cookie-box", 250, true);
 	}
-	addStarPages();
+	addStarPages(false);
 }
 
-function addStarPages()
+function addStarPages(need_alert)
 {
 	let starPages = getCookie("starPages");
 	var perant = document.getElementsByClassName("navbar-nav mr-auto")[0];
@@ -114,7 +114,16 @@ function addStarPages()
 	
 	if (starPages == "")
 	{
-		perant.innerHTML += '<button class="star-btn" id="star_btn" onclick="starThisPage(true)"> ' + EMPTY_STAR_CODE + ' </button>';
+		var starCode = '<button class="star-btn" id="star_btn" onclick="starThisPage(true)"> ' + EMPTY_STAR_CODE + ' </button>';
+		// if mobile or desktop version
+		if (getWidth() < 1000)
+		{
+			document.getElementById("logo").innerHTML += starCode; // mobile 
+		}
+		else
+		{
+			perant.innerHTML += starCode; // desktop
+		}
 		return;
 	}
 	var url_parts = location.href.split("/");
@@ -144,20 +153,44 @@ function addStarPages()
 	}
 	innerHtmlLiElement += '</div></li>';
 	
-	perant.innerHTML += innerHtmlLiElement;
+	perant.innerHTML = innerHtmlLiElement + perant.innerHTML;
 	
 	var starCode = "";
+	var alertCode = "";
 	if (pageStared)
 	{
-		perant.innerHTML += '<button class="star-btn" id="star_btn" onclick="starThisPage(false)"> ' + FULL_STAR_CODE + ' </button>';
+		starCode = '<button class="star-btn" id="star_btn" onclick="starThisPage(false)"> ' + FULL_STAR_CODE + ' </button>';
+		alertCode = '<div class="alert alert-dark cookie-alert" role="alert" id="star_alert"> <strong>Stared:</strong> you have added page "' + thisPageName + '" to your favorite pages on this computer and can be find in the menu .</div>';
 	}
 	else
 	{
-		perant.innerHTML += '<button class="star-btn" id="star_btn" onclick="starThisPage(true)"> ' + EMPTY_STAR_CODE + ' </button>';
+		starCode = '<button class="star-btn" id="star_btn" onclick="starThisPage(true)"> ' + EMPTY_STAR_CODE + ' </button>';
+		alertCode = '<div class="alert alert-dark cookie-alert" role="alert" id="star_alert"> <strong>Unstared:</strong> you have removed page "' + thisPageName + '" from your favorite pages on this computer. </div>';
 	}
 	
-	perant.innerHTML += starCode;
+	// if mobile or desktop version
+	if (getWidth() < 1000)
+	{
+		document.getElementById("logo").innerHTML += starCode; // mobile 
+	}
+	else
+	{
+		perant.innerHTML += starCode; // desktop
+	}
 	
+	if (need_alert)
+	{	
+		// add alert code as well 
+		document.body.innerHTML += alertCode;
+		// make it remove after 2 seconds
+		setTimeout(() => {
+			closeAlert("star_alert");
+			setTimeout(() => {
+				var star_btn = document.getElementById("star_btn");
+				star_btn.parentNode.removeChild(star_btn);}, 500);
+		}, 2000);
+		
+	}
 }
 
 function starThisPage(addThisPage)
@@ -212,7 +245,7 @@ function starThisPage(addThisPage)
 	catch (error) {	}
 	
 	// build right data again
-	addStarPages();
+	addStarPages(true);
 }
 
 function searchPage()

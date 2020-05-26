@@ -7,6 +7,8 @@ body {
     font-weight: 500;
 }
 
+button:focus {outline:0;}
+
 ::-webkit-scrollbar{
 	width: 0px;
 }
@@ -72,7 +74,7 @@ button:focus{
 .navbar-brand{
 	padding-left: 10px;
 	padding-right: 10px;
-	font-size: 18pt;
+	font-size: 18pt !important;
 	font-weight: 600;
 }
 
@@ -172,6 +174,12 @@ button:focus{
 	.row{
 		margin-right: 0px;
 		margin-left: 0px;
+	}
+
+	.navbar a{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 12pt;
 	}
 
 	.navbar a:hover{
@@ -714,6 +722,11 @@ h2{
 	
 	#VisitCount {
 		display: none;
+	}
+	
+	#star_btn{
+		margin-left: 10px;
+		margin-top: -15px;
 	}
 
 	.mobile-space{
