@@ -153,7 +153,7 @@ function addStarPages(need_alert)
 	}
 	innerHtmlLiElement += '</div></li>';
 	
-	perant.innerHTML = innerHtmlLiElement + perant.innerHTML;
+	perant.innerHTML += innerHtmlLiElement;
 	
 	var starCode = "";
 	var alertCode = "";
