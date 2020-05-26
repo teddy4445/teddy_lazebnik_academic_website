@@ -186,7 +186,7 @@ function addStarPages(need_alert)
 		setTimeout(() => {
 			closeAlert("star_alert");
 			setTimeout(() => {
-				var star_btn = document.getElementById("star_btn");
+				var star_btn = document.getElementById("star_alert");
 				star_btn.parentNode.removeChild(star_btn);}, 500);
 		}, 2000);
 		
