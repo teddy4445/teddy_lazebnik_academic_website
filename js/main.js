@@ -204,7 +204,7 @@ function starThisPage(addThisPage)
 	}
 	else
 	{
-		thisPageName = url_parts.slice(-1)[0].replace(".html", "");
+		thisPageName = url_parts.replace("https", "http").slice(-1)[0].replace(".html", "");
 	}
 	var new_page = window.location.href + "|" + thisPageName;
 	new_page = new_page.replace("index.html", "");
