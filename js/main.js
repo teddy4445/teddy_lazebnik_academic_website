@@ -124,7 +124,7 @@ function addStarPages(need_alert)
 	
 	
 	
-	if (starPages == "")
+	if (starPages != "")
 	{
 		var page_links = starPages.split(",");
 		var page_links = starPages.split(",");
