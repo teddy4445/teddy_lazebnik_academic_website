@@ -20,6 +20,132 @@ var doc2 = {
 };
 docs.push(doc2);
 
+var doc3 = {
+    "id": 3,
+    "title": "Publications",
+    "body": "Published journal, counferance, abstract, and submited academic papers and presentations",
+    "shortBody": "Published academic papers and presentations",
+	"url": "publications.html",
+};
+docs.push(doc3);
+
+var doc4 = {
+    "id": 4,
+    "title": "Teaching",
+    "body": "Teaching academic courses splited by year, university, semester, and course",
+    "shortBody": "Academic course that I teach",
+	"url": "teaching.html",
+};
+docs.push(doc4);
+
+var doc5 = {
+    "id": 5,
+    "title": "Students",
+    "body": "Current and alumni students. either projects or research",
+    "shortBody": "Current and alumni students. Either projects or research...",
+	"url": "students.html",
+};
+docs.push(doc5);
+
+var doc6 = {
+    "id": 6,
+    "title": "Rivendell",
+    "body": "Rivendell an academic papers meta-search engine (part of my Ph.D.). Using project-based search improving life time and single time search protocols",
+    "shortBody": "Rivendell is an academic papers meta-search engine.",
+	"url": "http://rivendell.cs.biu.ac.il/",
+};
+docs.push(doc6);
+
+var doc7 = {
+    "id": 7,
+    "title": "DnC",
+    "body": "DnC algo is an outsource company focusing on algorithms, machine learning, deep learning and AI.",
+    "shortBody": "DnC-algo is an outsource company focusing on algorithms",
+	"url": "http://dnc-algo.com/",
+};
+docs.push(doc7);
+
+var doc8 = {
+    "id": 8,
+    "title": "Gal A. Kaminka",
+    "body": "I lead the research group, where we seek to understand social intelligence; how a single mind becomes one of many. Our research includes plan-, intent- and goal- recognition, multi-robot systems, autonomous agents, artificial social intellignece, molecular robots (nanobots), and architectures for intelligence.",
+    "shortBody": "Gal A. Kaminka Is a proffesor in Bar Ilan University, CS dept. and my advisor",
+	"url": "http://u.cs.biu.ac.il/~galk/",
+};
+docs.push(doc8);
+
+var doc9 = {
+    "id": 9,
+    "title": "Maverick Group",
+    "body": "The MAVERICK research group conducts research at the absolute cutting edge of artificial intelligence and robotics. We are interested in both mechanisms (algorithms that do one thing well), as well as in architectures (systems that integrate mechanisms, to do many things well). Broadly speaking, we are interested in how to build artificial social minds. This translates into specific interests and research projects combining planning, execution, and machine learning in areas such as multi-robot coordination and teamwork, robot swarms (including molecular robots (nanobots)), plan recognition, behavior recognition, and goal recognition.",
+    "shortBody": "The MAVERICK research group conducts research at the absolute cutting edge of artificial intelligence and robotics.",
+	"url": "http://u.cs.biu.ac.il/~galk/maverick/",
+};
+docs.push(doc9);
+
+var doc10 = {
+    "id": 10,
+    "title": "Hana Weitman",
+    "body": "Dr. Hana Weitman - physics, advisor, nanorobotics",
+    "shortBody": "Dr. Hana Weitman personal BIU website",
+	"url": "https://physics.biu.ac.il/en/node/1384",
+};
+docs.push(doc10);
+
+var doc11 = {
+    "id": 11,
+    "title": "Deep Learning Course",
+    "body": "Deep learning for computer vision course. HIT (holon) leactering for math class.",
+    "shortBody": "Deep learning for computer vision course page",
+	"url": "courses/deep_leanring.html",
+};
+docs.push(doc11);
+
+var doc12 = {
+    "id": 12,
+    "title": "Tools For Numerical Analysis Course",
+    "body": "Tools For Numerical Analysis Course. BIU - bar ilan university, eng. dept.",
+    "shortBody": "Tools For Numerical Analysis Course page",
+	"url": "courses/tools_numerical_analysis.html",
+};
+docs.push(doc12);
+
+var doc13 = {
+    "id": 13,
+    "title": "Linear Mathematical Optimization Course",
+    "body": "Linear Mathematical Optimization Course. BIU - bar ilan university, math. dept.",
+    "shortBody": "Linear Mathematical Optimization Course page",
+	"url": "courses/linear_mathematical_optimization.html",
+};
+docs.push(doc13);
+
+var doc14 = {
+    "id": 14,
+    "title": "Daily issues solutions nano-bioinformatic research",
+    "body": "whether in an academy or the free market, as a nano-bioinformatics researcher you will handle the following issues in the journey achieving the desired solution:",
+    "shortBody": "A blog post (LinkedIn) about the daily issues and solution to them of nano researcher",
+	"url": "https://www.linkedin.com/pulse/daily-issues-solutions-nano-bioinformatic-research-teddy-lazebnik/",
+};
+docs.push(doc14);
+
+var doc15 = {
+    "id": 15,
+    "title": "Teddy Lazebnik LinkedIn Profile",
+    "body": "LinkedIn business social media profile",
+    "shortBody": "My LinkedIn profile page",
+	"url": "https://www.linkedin.com/in/teddy-lazebnik/",
+};
+docs.push(doc15);
+
+var doc16 = {
+    "id": 16,
+    "title": "Elizaveta (Liza) Lazebnik",
+    "body": "Elizaveta Lize Lazebnik Savchenko personal website",
+    "shortBody": "Lize Lazebnik's personal website",
+	"url": "http://lizalazebnik,info",
+};
+docs.push(doc15);
+
 
 var index = elasticlunr(function () {
     this.addField('title');
@@ -102,90 +228,6 @@ function GetParamsLoad(param_name)
 function buildSearchResultAnswer(index, title, score, short_body, url)
 {
 	return '<div class="col-lg-12 col-md-12 col-sm-12" ><div class="card text-center"><div class="card-body"><h5 class="card-title">' + title + ' <small>(' + Math.floor(10000 * score) / 100 + '%)</small></h5><p class="card-text">' + short_body + '</p><a class="cool-btn cool-btn-gray" id="cool_btn_' + index + '" href="' + url + '"> Take Me There </a></div></div></div>';
-}
-
-function searchPageOld()
-{
-	
-	var pageName = getQuery();
-	if (pageName == "")
-	{
-		return false;
-	}
-	
-	var pageLink = "";
-	if (containsName(pageName, ["home", "bio", "main", "teddy", "lazebnik"]))
-	{
-		pageLink = "index.html";
-	}
-	else if (containsName(pageName, ["public", "paper", "research", "conference", "abstract"]))
-	{
-		pageLink = "publications.html";
-	}
-	else if (containsName(pageName, ["student", "chen", "shira", "tamar", "pedro"]))
-	{
-		pageLink = "students.html";
-	}
-	else if (containsName(pageName, ["code", "project", "open", "blog", "story"]))
-	{
-		pageLink = "opensource.html";
-	}
-	else if (containsName(pageName, ["teach", "course", "semester", "learn"]))
-	{
-		pageLink = "teaching.html";
-	}
-	else if (containsName(pageName, ["rivendell", "tolkin"]))
-	{
-		pageLink = "http://rivendell.cs.biu.ac.il/";
-	}
-	else if (containsName(pageName, ["dnc", "algo", "company"]))
-	{
-		pageLink = "http://dnc-algo.com/";
-	}
-	else if (containsName(pageName, ["gal", "kaminka", "advisor", "prof"]))
-	{
-		pageLink = "http://u.cs.biu.ac.il/~galk/";
-	}
-	else if (containsName(pageName, ["maverick", "group", "robotics"]))
-	{
-		pageLink = "http://u.cs.biu.ac.il/~galk/maverick/";
-	}
-	else if (containsName(pageName, ["hana", "weitman", "dr"]))
-	{
-		pageLink = "https://physics.biu.ac.il/en/node/1384";
-	}
-	else if (containsName(pageName, ["dl", "deep"]))
-	{
-		pageLink = "courses/deep_leanring.html";
-	}
-	else if (containsName(pageName, ["numeric", "analy"]))
-	{
-		pageLink = "courses/tools_numerical_analysis.html";
-	}
-	else if (containsName(pageName, ["optim", "line"]))
-	{
-		pageLink = "courses/linear_mathematical_optimization.html";
-	}
-	else if (containsName(pageName, ["nano", "medical", "medical"]))
-	{
-		pageLink = "https://www.linkedin.com/pulse/daily-issues-solutions-nano-bioinformatic-research-teddy-lazebnik/";
-	}
-	else if (containsName(pageName, ["ode", "pde", "bcg"]))
-	{
-		pageLink = "summeries/bcg_pde_10_eq_paper.html";
-	}
-	else if (containsName(pageName, ["linkedin", "social"]))
-	{
-		pageLink = "https://www.linkedin.com/in/teddy-lazebnik/";
-	}
-	else
-	{
-		opacityAnimation("error-search", 250, true);
-		return false;
-	}
-	document.getElementById("search-data").value = "";
-	window.open(pageLink);
-	return false;
 }
 
 function getQuery()
