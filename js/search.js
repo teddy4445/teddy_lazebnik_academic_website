@@ -5,7 +5,7 @@ docs = [];
 var doc1 = {
     "id": 1,
     "title": "Home Page",
-    "body": "The home page in English for the website. Current projects and bio review",
+    "body": "The home page in English for the website. Current projects and bio review My research focus on medical and biological nanoparticles (focusing on nanorobotics). Spesificly, modeling a curing protocol based on bio-physical interactions of targeted drug delivery nanoparticles in the blood. I am also intrested in numerical solving and stabalization of ODE and PDE systems (especially, ones originated in a biological setup). I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics in Bar-Ilan University. My complete CV can be found here",
     "shortBody": "Short Bio and current projects review",
 	"url": "index.html",
 };
@@ -14,7 +14,7 @@ docs.push(doc1);
 var doc2 = {
     "id": 2,
     "title": "Open Source",
-    "body": "Open source projects and technical blog posts",
+    "body": "Open source projects and technical blog posts. Lightweight JS pathfinding genetic programming. Hebrew associative word distance calculator. A python class generator. Infinite run game in Unity (C#). Tower collapse game in Unity (C#). Pubmed and arXiv paper downloader. K-means great again. Academic PDF to TXT. Home Darts ScoreBoard. ",
     "shortBody": "Open source projects and technical blog posts",
 	"url": "opensource.html",
 };
@@ -23,7 +23,7 @@ docs.push(doc2);
 var doc3 = {
     "id": 3,
     "title": "Publications",
-    "body": "Published journal, counferance, abstract, and submited academic papers and presentations",
+    "body": "Published journal, counferance, abstract, and submited academic papers and presentations. Energy Efficiency in 2d Quadratic Hamiltonian. Return on Data ( Noam Kolt )  Yale Law and Policy Review",
     "shortBody": "Published academic papers and presentations",
 	"url": "publications.html",
 };
@@ -41,7 +41,7 @@ docs.push(doc4);
 var doc5 = {
     "id": 5,
     "title": "Students",
-    "body": "Current and alumni students. either projects or research",
+    "body": "Current and alumni students. either projects or research. Chen Tal-Schachar, Shira Min Hahar, Tamar Feuchtwanger, Pedro Nissan, Property-Value tagging tool,  explicit collaborative learning.",
     "shortBody": "Current and alumni students. Either projects or research...",
 	"url": "students.html",
 };
@@ -142,7 +142,7 @@ var doc16 = {
     "title": "Elizaveta (Liza) Lazebnik",
     "body": "Elizaveta Lize Lazebnik Savchenko personal website",
     "shortBody": "Lize Lazebnik's personal website",
-	"url": "http://lizalazebnik,info",
+	"url": "http://lizalazebnik.info",
 };
 docs.push(doc16);
 
