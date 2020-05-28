@@ -144,7 +144,7 @@ var doc16 = {
     "shortBody": "Lize Lazebnik's personal website",
 	"url": "http://lizalazebnik,info",
 };
-docs.push(doc15);
+docs.push(doc16);
 
 
 var index = elasticlunr(function () {
@@ -209,10 +209,15 @@ function update_search_results()
 	// we can assume results >= 1 and show them
 	document.getElementById("query_place").innerHTML = "Search results For \"" + query + "\"";
 	var resultListHtml = "";
+	var scores_norm = 0;
+	for (var i = 0; i < results.length; i++)
+	{
+		scores_norm += parseFloat(results[i]["score"]);
+	}
 	for (var i = 0; i < results.length; i++)
 	{
 		var thisDoc = docs[parseInt(results[i]["ref"])-1];
-		resultListHtml += buildSearchResultAnswer(i, thisDoc["title"], results[i]["score"], thisDoc["shortBody"], thisDoc["url"]);
+		resultListHtml += buildSearchResultAnswer(i, thisDoc["title"], parseFloat(results[i]["score"]) / scores_norm, thisDoc["shortBody"], thisDoc["url"]);
 	}
 	
 	// set the data in the page
