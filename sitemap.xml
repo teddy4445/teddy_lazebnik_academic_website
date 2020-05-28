@@ -4,8 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>http://teddylazebnik.info/</loc>
@@ -242,6 +240,4 @@
   <lastmod>2020-05-26T20:16:36+00:00</lastmod>
   <priority>0.51</priority>
 </url>
-
-
 </urlset>

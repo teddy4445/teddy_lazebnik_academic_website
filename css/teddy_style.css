@@ -345,6 +345,11 @@ h2{
 	position: relative;
 }
 
+a.cool-btn:hover{
+	color: white;
+	text-decoration: none;
+}
+
 .col-btn-href{
 	display: none;
 }
