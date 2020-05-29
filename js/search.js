@@ -195,7 +195,7 @@ function update_search_results()
 	// if not query - forward to the 404 page
 	if (query == null)
 	{
-		window.open("404.html");
+		window.location.replace(("404.html");
 	}
 	// if we have query
 	var results = index.search(query, {

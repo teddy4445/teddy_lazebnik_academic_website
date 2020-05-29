@@ -272,6 +272,11 @@ button:focus{
 	text-align: left;
 }
 
+.personal-panel h1{
+	font-size: 14pt;
+	text-align: left;
+}
+
 .personal-panel ul{
 	list-style-type: none;
 	text-align: left;
@@ -314,14 +319,18 @@ button:focus{
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
-
-h3{
-	font-size: 20pt;
+h1{
+	font-size: 24pt;
 }
 
 h2{
 	font-size: 24pt;
 }
+
+h3{
+	font-size: 20pt;
+}
+
 
 .info p{
 	padding-top: 15px;
