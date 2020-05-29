@@ -191,7 +191,7 @@ function searchPage()
 function update_search_results()
 {
 	// load query
-	var query = GetParamsLoad(PARAM_QUERY);
+	var query = decodeURI(GetParamsLoad(PARAM_QUERY));
 	// if not query - forward to the 404 page
 	if (query == null)
 	{
