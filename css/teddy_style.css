@@ -958,4 +958,18 @@ a.cool-btn:hover{
 	font-weight: 500;
 }
 
+@media only screen and (max-width: 600px) {
+	
+	.chatbot-btn{
+		right: 5%;
+	}
+	
+	.chatbot-panel{
+		bottom: 1%;
+		right: 1%;
+		width: 99%;
+	}
+	
+}
+
 /* end - chatbot section */
