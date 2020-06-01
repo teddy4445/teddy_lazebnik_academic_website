@@ -7,7 +7,7 @@ var doc1 = {
     "title": "Home Page",
     "body": "The home page in English for the website. Current projects and bio review My research focus on medical and biological nanoparticles (focusing on nanorobotics). Spesificly, modeling a curing protocol based on bio-physical interactions of targeted drug delivery nanoparticles in the blood. I am also intrested in numerical solving and stabalization of ODE and PDE systems (especially, ones originated in a biological setup). I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics in Bar-Ilan University. My complete CV can be found here",
     "shortBody": "Short Bio and current projects review",
-	"url": "index.html",
+	"url": "/index.html",
 };
 docs.push(doc1);
 
@@ -16,7 +16,7 @@ var doc2 = {
     "title": "Open Source",
     "body": "Open source projects and technical blog posts. Lightweight JS pathfinding genetic programming. Hebrew associative word distance calculator. A python class generator. Infinite run game in Unity (C#). Tower collapse game in Unity (C#). Pubmed and arXiv paper downloader. K-means great again. Academic PDF to TXT. Home Darts ScoreBoard. ",
     "shortBody": "Open source projects and technical blog posts",
-	"url": "opensource.html",
+	"url": "/opensource.html",
 };
 docs.push(doc2);
 
@@ -25,7 +25,7 @@ var doc3 = {
     "title": "Publications",
     "body": "Published journal, counferance, abstract, and submited academic papers and presentations. Energy Efficiency in 2d Quadratic Hamiltonian. Return on Data ( Noam Kolt )  Yale Law and Policy Review",
     "shortBody": "Published academic papers and presentations",
-	"url": "publications.html",
+	"url": "/publications.html",
 };
 docs.push(doc3);
 
@@ -34,7 +34,7 @@ var doc4 = {
     "title": "Teaching",
     "body": "Teaching academic courses splited by year, university, semester, and course",
     "shortBody": "Academic course that I teach",
-	"url": "teaching.html",
+	"url": "/teaching.html",
 };
 docs.push(doc4);
 
@@ -43,7 +43,7 @@ var doc5 = {
     "title": "Students",
     "body": "Current and alumni students. either projects or research. Chen Tal-Schachar, Shira Min Hahar, Tamar Feuchtwanger, Pedro Nissan, Property-Value tagging tool,  explicit collaborative learning.",
     "shortBody": "Current and alumni students. Either projects or research...",
-	"url": "students.html",
+	"url": "/students.html",
 };
 docs.push(doc5);
 
@@ -97,7 +97,7 @@ var doc11 = {
     "title": "Deep Learning Course",
     "body": "Deep learning for computer vision course. HIT (holon) leactering for math class.",
     "shortBody": "Deep learning for computer vision course page",
-	"url": "courses/deep_leanring.html",
+	"url": "/courses/deep_leanring.html",
 };
 docs.push(doc11);
 
@@ -106,7 +106,7 @@ var doc12 = {
     "title": "Tools For Numerical Analysis Course",
     "body": "Tools For Numerical Analysis Course. BIU - bar ilan university, eng. dept.",
     "shortBody": "Tools For Numerical Analysis Course page",
-	"url": "courses/tools_numerical_analysis.html",
+	"url": "/courses/tools_numerical_analysis.html",
 };
 docs.push(doc12);
 
@@ -115,7 +115,7 @@ var doc13 = {
     "title": "Linear Mathematical Optimization Course",
     "body": "Linear Mathematical Optimization Course. BIU - bar ilan university, math. dept.",
     "shortBody": "Linear Mathematical Optimization Course page",
-	"url": "courses/linear_mathematical_optimization.html",
+	"url": "/courses/linear_mathematical_optimization.html",
 };
 docs.push(doc13);
 
@@ -151,7 +151,7 @@ var doc17 = {
     "title": "Assosiative Words Grouper",
     "body": "You will see the source word and response words (source in the box and the response in a list). Each one will have index next to it. Add the indexes of the words of the same group into the Group words indexes input box with  between each index. You can go to the next set or previous set each time. A mark saying on which set you are at will be shown on the top of the window.",
     "shortBody": "Allowing associative words grouper from source-target dataset.",
-	"url": "assosiative_words_grouper.html",
+	"url": "/assosiative_words_grouper.html",
 };
 docs.push(doc17);
 
