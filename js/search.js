@@ -146,6 +146,15 @@ var doc16 = {
 };
 docs.push(doc16);
 
+var doc17 = {
+    "id": 17,
+    "title": "Assosiative Words Grouper",
+    "body": "You will see the source word and response words (source in the box and the response in a list). Each one will have index next to it. Add the indexes of the words of the same group into the Group words indexes input box with  between each index. You can go to the next set or previous set each time. A mark saying on which set you are at will be shown on the top of the window.",
+    "shortBody": "Allowing associative words grouper from source-target dataset.",
+	"url": "assosiative_words_grouper.html",
+};
+docs.push(doc17);
+
 
 var index = elasticlunr(function () {
     this.addField('title');
