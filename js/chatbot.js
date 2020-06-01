@@ -8,7 +8,7 @@ class ChatBot
 	{
 		this.messages = [];
 		
-		this.brain = new ChatBotBrain({});
+		this.brain = new ChatBotBrain(ChatBotBrain.loadQnA());
 		
 		// build the GUI
 		this.init_chatbot(first_message);
@@ -197,10 +197,92 @@ class ChatBotBrain
 		this.qna = qna;
 	}
 	
-	response(message)
+	static loadQnA()
 	{
-		// TODO: add here some cool logic
-		return new Massage(false, "text", "answer");
+		return JSON.parse(document.getElementById('chatbot-qna-data').innerHTML);
+	}
+	
+	static damerauLevenshteinDistance(source, target) 
+	{
+	  if (!source || source.length === 0)
+		if (!target || target.length === 0)
+		  return 0;
+		else
+		  return target.length;
+	  else if (!target)
+		return source.length;
+
+	  var sourceLength = source.length;
+	  var targetLength = target.length;
+	  var score = [];
+
+	  var INF = sourceLength + targetLength;
+	  score[0] = [INF];
+	  for (var i=0 ; i <= sourceLength ; i++) { score[i + 1] = []; score[i + 1][1] = i; score[i + 1][0] = INF; }
+	  for (var i=0 ; i <= targetLength ; i++) { score[1][i + 1] = i; score[0][i + 1] = INF; }
+
+	  var sd = {};
+	  var combinedStrings = source + target;
+	  var combinedStringsLength = combinedStrings.length;
+	  for(var i=0 ; i < combinedStringsLength ; i++) {
+		var letter = combinedStrings[i];
+		if (!sd.hasOwnProperty(letter))
+		  sd[letter] = 0;
+	  }
+
+	  for (var i=1 ; i <= sourceLength ; i++) {
+		var DB = 0;
+		for (var j=1 ; j <= targetLength ; j++) {
+		  var i1 = sd[target[j - 1]];
+		  var j1 = DB;
+
+		  if (source[i - 1] == target[j - 1]) {
+			score[i + 1][j + 1] = score[i][j];
+			DB = j;
+		  }
+		  else
+			score[i + 1][j + 1] = Math.min(score[i][j], Math.min(score[i + 1][j], score[i][j + 1])) + 1;
+
+		  score[i + 1][j + 1] = Math.min(score[i + 1][j + 1], score[i1][j1] + (i - i1 - 1) + 1 + (j - j1 - 1));
+		}
+		sd[source[i - 1]] = i;
+	  }
+	  return score[sourceLength + 1][targetLength + 1];
+	}
+	
+	response(message, min_distance = 4)
+	{
+		// run over all the q's in the qna object in the memory
+		var NOT_FOUND_INDEX = -1;
+		
+		var best_dist = 99999;
+		var best_answer_index = NOT_FOUND_INDEX;
+		var len = bot.brain.qna.length;
+		var message_words = message.trim().split(" ").length;
+		message = message.trim().toLowerCase();
+		for (var i = 0; i < len; i++)
+		{
+			var q = bot.brain.qna[i]["q"];
+			var this_dist = ChatBotBrain.damerauLevenshteinDistance(message, q);
+			if (this_dist < best_dist && this_dist < min_distance)
+			{
+				best_dist = this_dist;
+				best_answer_index = i;
+			}
+		}
+		
+		// if not found - show default error
+		var answer_array;
+		if (best_answer_index == NOT_FOUND_INDEX)
+		{
+			answer_array = ["I am not know how to answer this yet", "I don't really sure what to say", "I am still study, will be able to answer more soon"]
+		}
+		else
+		{		
+			answer_array = this.qna[best_answer_index]["a"];
+		}
+		var answer = answer_array[Math.floor(Math.random() * answer_array.length)]	
+		return new Massage(false, "text", answer);
 	}
 }
 
@@ -213,3 +295,8 @@ class Massage{
 		this.content = content;
 	}
 }
+
+
+// global technical functions //
+
+// end - global technical functions //

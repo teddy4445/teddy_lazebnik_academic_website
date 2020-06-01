@@ -214,11 +214,34 @@
 	<script src="js/main.js"></script> 
 	<script src="js/search.js"></script>	
 	<script src="js/chatbot.js"></script>	
+	<script id="chatbot-qna-data">
+		[
+		   {
+			  "q":"what is your name",
+			  "a":[
+				 "Virtual Teddy"
+			  ]
+		   },
+		   {
+			  "q":"what is your name",
+			  "a":[
+				 "Virtual Teddy"
+			  ]
+		   },
+		   {
+			  "q":"how are you",
+			  "a":[
+				 "I am fine, thank you",
+				 "Nothing new, thanks"
+			  ]
+		   }
+		]
+	</script>
 	<script>
 	  AOS.init({
 		duration: 1000,
 	  });
-	  var bot = new ChatBot("I am this website's personal guide. Nice to meet you user! ");
+	  var bot = new ChatBot("Nice to meet you user! ");
 	</script>
 </body>
 </html>
