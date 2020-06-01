@@ -281,12 +281,16 @@
 		var source_and_reaction_sets = {};
 		for (var i = 0; i < peerLines.length; i++)
 		{
+			if (peerLines[i].length < 3)
+			{
+				continue;
+			}
 			var source_response_words = peerLines[i].split(",");
 			if (source_and_reaction_sets[source_response_words[0]] === undefined)
 			{
 				source_and_reaction_sets[source_response_words[0]] = [];
 			}
-			source_and_reaction_sets[source_response_words[0]].push(source_response_words[1]);
+			source_and_reaction_sets[source_response_words[0]].push(source_response_words[1].trim());
 		}
 		var fileFormatString = "";
 		for (key in source_and_reaction_sets)
@@ -327,6 +331,7 @@
 				break;
 			}
 			var new_row = [];
+			list_data[i] = list_data[i].trim();
 			while (list_data[i].endsWith(","))
 			{
 				list_data[i] = list_data[i].substring(0, list_data[i].length - 1);
@@ -394,6 +399,9 @@
 		
 		try
 		{
+			wordIndex = 0;
+			// remove cause the user's didn't like it 
+			/*
 			wordIndex =  parseInt(localStorage.getItem("wordIndex"));
 			if (wordIndex === null || isNaN(wordIndex))
 			{
@@ -403,12 +411,13 @@
 			{
 				wordIndex++;
 				wordIndex--;
-				alert("loaded last working location");
+				alert("loaded last working location"); 
 			}
 			if (wordIndex < 0 || wordIndex > readyData.length)
 			{
 				wordIndex = 0;
 			}
+			*/
 		}
 		catch (error)
 		{
