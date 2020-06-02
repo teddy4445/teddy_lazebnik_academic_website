@@ -199,7 +199,17 @@ class ChatBotBrain
 	
 	static loadQnA()
 	{
-		return JSON.parse(document.getElementById('chatbot-qna-data').innerHTML);
+		return DEFALT_DATA;
+	}
+	
+	static preprocess_message(message)
+	{
+		message = message.replace(/[_-]/g, ' ').replace(/[^a-z0-9 ]/gi,'').toLowerCase().trim();
+		while (message.includes("  "))
+		{
+			message = message.replace("  ", " ");
+		}
+		return message;
 	}
 	
 	static damerauLevenshteinDistance(source, target) 
@@ -255,27 +265,36 @@ class ChatBotBrain
 		// run over all the q's in the qna object in the memory
 		var NOT_FOUND_INDEX = -1;
 		
-		var best_dist = 99999;
-		var best_answer_index = NOT_FOUND_INDEX;
-		var len = bot.brain.qna.length;
-		var message_words = message.trim().split(" ").length;
-		message = message.trim().toLowerCase();
-		for (var i = 0; i < len; i++)
-		{
-			var q = bot.brain.qna[i]["q"];
-			var this_dist = ChatBotBrain.damerauLevenshteinDistance(message, q);
-			if (this_dist < best_dist && this_dist < min_distance)
+		message = ChatBotBrain.preprocess_message(message);
+		
+		// edge case - message after removal is empty
+		if (message != "")
+		{	
+			var best_dist = 99999;
+			var best_answer_index = NOT_FOUND_INDEX;
+			var len = bot.brain.qna.length;
+			var message_words = message.trim().split(" ").length;
+			for (var i = 0; i < len; i++)
 			{
-				best_dist = this_dist;
-				best_answer_index = i;
+				var q = bot.brain.qna[i]["q"];
+				var this_dist = ChatBotBrain.damerauLevenshteinDistance(message, q);
+				if (this_dist < best_dist && this_dist < min_distance)
+				{
+					best_dist = this_dist;
+					best_answer_index = i;
+				}
 			}
 		}
 		
 		// if not found - show default error
 		var answer_array;
-		if (best_answer_index == NOT_FOUND_INDEX)
+		if (message == "")
 		{
-			answer_array = ["I am not know how to answer this yet", "I don't really sure what to say", "I am still study, will be able to answer more soon"]
+			answer_array = ["Not sure I get that... try English next time", "Sorry, only English at the moment", "Sorry, currently I am speaking only English"];
+		}
+		else if (best_answer_index == NOT_FOUND_INDEX)
+		{
+			answer_array = ["I am not know how to answer this yet", "I don't really sure what to say", "I am still study, will be able to answer more soon"];
 		}
 		else
 		{		
@@ -300,3 +319,77 @@ class Massage{
 // global technical functions //
 
 // end - global technical functions //
+
+// default data //
+
+let DEFALT_DATA = 
+	[
+	   {
+		  "q":"what is your name",
+		  "a":[
+			 "Teddy Lazebnik"
+		  ]
+	   },
+	   {
+		  "q":"how old are you",
+		  "a":[
+			 "Not relevent",
+			 "Why is it important? (Rhetorical Question)",
+			 "I would like to keep it to myself at this point"
+		  ]
+	   },
+	   {
+		  "q":"how are you",
+		  "a":[
+			 "I am fine, thank you",
+			 "Nothing new, thanks"
+		  ]
+	   },
+	   {
+		  "q":"are you a male",
+		  "a":[
+			 "Yes"
+		  ]
+	   },
+	   {
+		  "q":"what is your gender",
+		  "a":[
+			 "Male"
+		  ]
+	   },
+	   {
+		  "q":"do you believe in god",
+		  "a":[
+			 "No, I am not"
+		  ]
+	   },
+	   {
+		  "q":"what courses do you teach",
+		  "a":[
+			 "I teach several courses. You can find out more in the <a href='/teaching.html'>teaching page</a>",
+			 "Check out the <a href='/teaching.html'>teaching page</a> to see what courses do I teach"
+		  ]
+	   },
+	   {
+		  "q":"publications",
+		  "a":[
+			 "I have public few papers over the years... Check out <a href='/publications.html'>publications page</a> for more details"
+		  ]
+	   },
+	   {
+		  "q":"office",
+		  "a":[
+			 "Bar Ilan Uni', Building 203, room 109",
+			 "Building 203, room 109 (Bar Ilan Univesity)",
+			 "room 109, Building 203, Bar Ilan Univesity, Ramat Gan, Isreal, Earth, Milky Way",
+		  ]
+	   },
+	   {
+		  "q":"reception time",
+		  "a":[
+			 "Via Email (lazebnik.teddy@gmail.com)"
+		  ]
+	   }
+	]
+
+// end - default data //
