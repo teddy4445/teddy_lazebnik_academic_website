@@ -3,7 +3,7 @@
 // canvas Z-Index
 var ERROR_VALUE = -1;
 var zIndex = 300;
-var gridSize = 40;
+var gridSize = 80;
 var box_size = 1;
 let fg = null;
 var histogramData = [];
