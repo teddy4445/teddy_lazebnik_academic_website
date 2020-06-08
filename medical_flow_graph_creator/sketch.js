@@ -23,6 +23,8 @@ var EDGE_STATUS = "a";
 var ORGAN_PANEL_OPEN = false;
 var RAT_BLOOD_PANEL_OPEN = false;
 var IS_PANEL_OPEN = false;
+var is_copyed = false;
+var IS_PRINT_MODE = false;
 
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
@@ -278,9 +280,9 @@ function putMouse()
 		var textStatus = fg.node_status(mouseX, mouseY);
 		if (textStatus != "")
 		{
-			rect(0, Math.max(0, mouseY - 200), Math.min(textWidth(textStatus) + 20, widthElement), boxSize * 1.5);
+			rect(0, Math.max(0, mouseY - 200), Math.min(2 * textWidth(textStatus) + 20, widthElement), boxSize * 3);
 			fill(0);
-			text(textStatus, 5, Math.max(20, mouseY - 180));	
+			text(textStatus, 5, Math.max(20, mouseY - 200));	
 		}
 		fill(255);
 		text("i", mouseX - 7, mouseY - 5);

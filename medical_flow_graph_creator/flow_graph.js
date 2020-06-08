@@ -203,7 +203,7 @@ class FlowGraph
 	{
 		add_last_fq(this.copy());
 		var node_i_id = this.nodes[node_i_index].id;
-		var node_j_id = this.nodes[node_j_index].id;
+		var node_j_id = this.nodes[node_j_index].id;	
 		
 		if (this.has_this_edge(node_i_index, node_j_index))
 		{
@@ -367,6 +367,54 @@ class FlowGraph
 			answer.push([parseInt(value), degrees[value]]);
 		}
 		return answer;
+	}
+	
+	copy_reverse()
+	{
+		// find the most "x" location and add to it 'x_marge' to all new edges
+		var max_x = 0;
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			if (this.nodes[i].x > max_x)
+			{
+				max_x = this.nodes[i].x;
+			}
+		}
+		var last_id = this._running_id - 1;
+		// add all the needed nodes
+		var so_far_nodes = this.nodes.length;
+		for (var i = 0; i < so_far_nodes; i++)
+		{
+			var this_node = this.nodes[i];
+			this_node.allow_show(); // show on the original graph too
+			this.add_node(this_node.x + max_x, this_node.y, BLOOD_VASSAL, "", "", this_node.ts);
+		}
+		// add all edges and show edges but on the opposite side
+		var so_far_edges = this.edges.length;
+		for (var i = 0; i < so_far_edges; i++)
+		{
+			var this_edge = this.edges[i];
+			var new_type = BLUE_TYPE;
+			if (this_edge.type == BLUE_TYPE)
+			{
+				new_type = RED_TYPE;
+			}
+			this.edges.push(new Edge(last_id + this_edge.end_node_id , last_id + this_edge.start_node_id, this_edge.w, new_type, false));
+		}
+		var so_far_show_edges = this.show_edges.length;
+		for (var i = 0; i < so_far_show_edges; i++)
+		{
+			var this_show_edge = this.show_edges[i];
+			var new_type = BLUE_TYPE;
+			if (this_show_edge.type == BLUE_TYPE)
+			{
+				new_type = RED_TYPE;
+			}
+			this.show_edges.push(new ShowEdge(this_show_edge.x2 + max_x, this_show_edge.y2,
+											  this_show_edge.x1 + max_x, this_show_edge.y1,
+											  this_show_edge.name + " (backward)",
+											  new_type));
+		}
 	}
 	
 	to_string(drugs)

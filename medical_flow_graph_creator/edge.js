@@ -158,13 +158,13 @@ class ShowEdge
 
 class Edge
 {
-	constructor(start_node_id, end_node_id, w, type)
+	constructor(start_node_id, end_node_id, w, type, need_show = true)
 	{
 		this.start_node_id = start_node_id;
 		this.end_node_id = end_node_id;
 		this.w = w;
 		this.type = type;
-		this.need_show = true;
+		this.need_show = need_show;
 		this.tringle_dots = [];
 	}
 	

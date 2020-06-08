@@ -118,6 +118,12 @@ function keyPressed()
 		IS_PANEL_OPEN = true;
 	}
 	
+	if (keyCode === 76) // code of 'p'
+	{
+		$('#load_data_file').show();
+		IS_PANEL_OPEN = true;
+	}
+	
 	if (keyCode === 82) // code of 'r'
 	{
 		if (fg.nodes_count() == 0)
@@ -147,6 +153,30 @@ function keyPressed()
 		else
 		{
 			alert("No more undo action avalible"); 
+		}
+	}
+	
+	if (keyIsDown(17) && keyIsDown(67)) // 'crtl' + 'c' keys download
+	{
+		// load last model
+		if (fg.nodes_count() > 0 && !is_copyed && fg._delete_happend == 0)
+		{
+			// load last fg
+			fg.copy_reverse();
+			
+			// update stats
+			document.getElementById("nodes_count").innerHTML = "" + fg.nodes_count();
+			document.getElementById("edges_count").innerHTML = "" + fg.edges_count();
+	
+			// update graph
+			drawHistogram();
+			
+			// make sure no 2 copies on the same graph has been done
+			is_copyed = true;
+		}
+		else
+		{
+			alert("Cannot copy a graph more then once"); 
 		}
 	}
 }
