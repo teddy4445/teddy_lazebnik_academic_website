@@ -53,7 +53,7 @@ function draw()
 async function mouseClicked() 
 {
 	// if panel open, ignore short keys
-	if (IS_PANEL_OPEN || keyIsDown(69)) // 'E' key code
+	if (IS_PANEL_OPEN || keyIsDown(69) || IS_PRINT_MODE) // 'E' key code
 	{
 		return;
 	}
@@ -231,7 +231,15 @@ async function mouseClicked()
 // print the grid, just to make things nice to show
 function drawGrid()
 {
-	background(0); // make the canvas black
+	if (IS_PRINT_MODE)
+	{
+		background(255); // make the canvas black
+		return;
+	}
+	else
+	{
+		background(0); // make the canvas black	
+	}
 	var boxSize = widthElement / gridSize;
 	
 	// set the center lines

@@ -71,7 +71,7 @@ class Node
 	show() 
 	{
 		// if don't need to show just jump it
-		if (!this.need_show && !this.marked)
+		if (!this.need_show && !this.marked && !IS_PRINT_MODE)
 		{
 			return;
 		}
@@ -91,8 +91,16 @@ class Node
 		}
 		else
 		{
-			fill("white");
-			stroke("white");	
+			if (IS_PRINT_MODE)
+			{
+				fill("black");
+				stroke("black");	
+			}
+			else
+			{
+				fill("white");
+				stroke("white");		
+			}
 		}
 		var r = MAX_R / 3;
 		if (this.status == ORGAN)
@@ -103,10 +111,20 @@ class Node
 		ellipse(this.x, this.y, r, r);
 		
 		// print id
-		fill(255, 255, 255);
-		strokeWeight(0);
-		textSize(12);
-		text('' + this.id, this.x - 10 - (this.id.toString().length - 1) * 3, this.y - 10);
+		if (!IS_PRINT_MODE)
+		{
+			fill(255, 255, 255);	
+			strokeWeight(0);
+			textSize(12);
+			text('' + this.id, this.x - 10 - (this.id.toString().length - 1) * 3, this.y - 10);
+		}
+		else if(this.type == ORGAN)
+		{
+			fill(0, 0, 0);	
+			strokeWeight(0);
+			textSize(12);
+			text('' + this.organ_name, this.x - 10 - (this.id.toString().length - 1) * 3, this.y - 10);
+		}
 	}
 	
 	to_string(drugs_string = "{}", override_index=-1)

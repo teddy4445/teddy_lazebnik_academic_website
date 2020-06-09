@@ -103,6 +103,11 @@ class ShowEdge
 	
 	show(nodes) 
 	{
+		if (IS_PRINT_MODE)
+		{
+			return;
+		}
+		
 		strokeWeight(1);
 		stroke(6, 255, 136);
 		line(this.x1, this.y1, this.x2, this.y2);	
@@ -195,7 +200,7 @@ class Edge
 	show(nodes) 
 	{
 		// if don't need to show just jump it
-		if (!this.need_show)
+		if (!this.need_show && !IS_PRINT_MODE)
 		{
 			return;
 		}
@@ -213,7 +218,15 @@ class Edge
 				fill("#4224FF");
 			}
 			// stroke("#fcce76");
-			strokeWeight(this.w);
+			
+			if (IS_PRINT_MODE)
+			{
+				strokeWeight(this.w / 100);	
+			}
+			else
+			{
+				strokeWeight(this.w);	
+			}
 			
 			var start_node = null;
 			var end_node = null;
@@ -292,12 +305,15 @@ class Edge
 				this.tringle_dots.push(third_point);
 			}
 			// print direction triangle
-			triangle(this.tringle_dots[0].x, 
-					this.tringle_dots[0].y, 
-					this.tringle_dots[1].x, 
-					this.tringle_dots[1].y, 
-					this.tringle_dots[2].x, 
-					this.tringle_dots[2].y)			
+			if (!IS_PRINT_MODE)
+			{
+				triangle(this.tringle_dots[0].x, 
+						this.tringle_dots[0].y, 
+						this.tringle_dots[1].x, 
+						this.tringle_dots[1].y, 
+						this.tringle_dots[2].x, 
+						this.tringle_dots[2].y)	
+			}		
 		}
 		catch (error)
 		{

@@ -118,10 +118,9 @@ function keyPressed()
 		IS_PANEL_OPEN = true;
 	}
 	
-	if (keyCode === 76) // code of 'p'
+	if (keyCode === 80) // code of 'p'
 	{
-		$('#load_data_file').show();
-		IS_PANEL_OPEN = true;
+		IS_PRINT_MODE = !IS_PRINT_MODE;
 	}
 	
 	if (keyCode === 82) // code of 'r'
