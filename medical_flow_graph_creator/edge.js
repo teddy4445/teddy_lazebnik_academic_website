@@ -221,7 +221,7 @@ class Edge
 			
 			if (IS_PRINT_MODE)
 			{
-				strokeWeight(this.w / 100);	
+				strokeWeight(this.w / 1000);	
 			}
 			else
 			{
