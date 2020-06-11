@@ -30355,7 +30355,7 @@
     {
       "start_node_id": 424,
       "end_node_id": 891,
-      "w": 1,
+      "w": 10000,
       "type": 2,
       "need_show": true,
       "tringle_dots": [
@@ -30376,7 +30376,7 @@
     {
       "start_node_id": 421,
       "end_node_id": 888,
-      "w": 1,
+      "w": 10000,
       "type": 2,
       "need_show": true,
       "tringle_dots": [
@@ -30397,7 +30397,7 @@
     {
       "start_node_id": 445,
       "end_node_id": 912,
-      "w": 1,
+      "w": 10000,
       "type": 2,
       "need_show": true,
       "tringle_dots": [
@@ -30418,7 +30418,7 @@
     {
       "start_node_id": 441,
       "end_node_id": 908,
-      "w": 1,
+      "w": 10000,
       "type": 2,
       "need_show": true,
       "tringle_dots": [
@@ -30439,7 +30439,7 @@
     {
       "start_node_id": 435,
       "end_node_id": 902,
-      "w": 1,
+      "w": 10000,
       "type": 2,
       "need_show": true,
       "tringle_dots": [
