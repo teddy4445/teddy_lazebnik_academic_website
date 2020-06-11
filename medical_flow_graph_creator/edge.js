@@ -221,11 +221,16 @@ class Edge
 			
 			if (IS_PRINT_MODE)
 			{
-				strokeWeight(this.w / 1000);	
+				var show_w = this.w / 1000;
+				if (show_w < 1)
+				{
+					show_w = 1;
+				}
+				strokeWeight(show_w);	
 			}
 			else
 			{
-				strokeWeight(this.w);	
+				strokeWeight(1);	
 			}
 			
 			var start_node = null;
