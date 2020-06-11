@@ -309,17 +309,33 @@ class FlowGraph
 	
 	show()
 	{
-		for (var i = 0; i < this.nodes.length; i++)
+		if (!IS_PRINT_MODE)
 		{
-			this.nodes[i].show();
+			for (var i = 0; i < this.nodes.length; i++)
+			{
+				this.nodes[i].show();
+			}
+			for (var i = 0; i < this.edges.length; i++)
+			{
+				this.edges[i].show(this.nodes);
+			}
+			for (var i = 0; i < this.show_edges.length; i++)
+			{
+				this.show_edges[i].show(this.nodes);
+			}
 		}
-		for (var i = 0; i < this.edges.length; i++)
+		else
 		{
-			this.edges[i].show(this.nodes);
-		}
-		for (var i = 0; i < this.show_edges.length; i++)
-		{
-			this.show_edges[i].show(this.nodes);
+			// the order is replaced and the show edges is useless so do not run on it 
+			for (var i = 0; i < this.edges.length; i++)
+			{
+				this.edges[i].show(this.nodes);
+			}
+			for (var i = 0; i < this.nodes.length; i++)
+			{
+				this.nodes[i].show();
+			}
+			
 		}
 	}
 	
