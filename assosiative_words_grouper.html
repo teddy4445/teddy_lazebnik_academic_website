@@ -105,7 +105,7 @@
 											<span aria-hidden="true">&times;</span>
 										  </button>
 										</div>
-								<h1 style="text-align: center;"> Assosiative Words Grouper </h1>
+								<h1 style="text-align: center;"> חיבור מערכות מילים </h1>
 									<div id="train_panel">
 										<p><b>Loading Data Panel</b></p>
 										<p>Load the data file you wish to work on. You can download the default data set and upload it as well. <br><b>Note: </b>Loading process may take up to few seconds...<br><br></p>	
@@ -163,97 +163,101 @@
 										</div>
 										
 										<div class="row">
-											<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-												<h1 style=" margin-right: 3%;">
-													מילות תגובה לאיחוד
-												</h1>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-												<p id="responseWords"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-												</p>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-												<h1 style=" margin-right: 3%;">
-													קבוצות לאיחוד אסוציאטיבי
-												</h1>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-												<p id="groups"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-												</p>
-											</div>
-										</div>
-										<form style="text-align: right;">
-											<div class="form-group">
-												<label for="group_indexes">האינקסים של המילים</label>
-												<input class="form-control" type="text" id="group_indexes" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק">
-												<small>לדגומה: 0,1,4,5,7</small>
-											</div>
-										</form>
-										<div class="row">
 											<div class="col-lg-6 col-md-6 col-sm-12">
-												<div class="form-group">
-													<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_index" placeholder="שם הקבוצה">
-													<button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+														<h1 style=" margin-right: 3%;">
+															מילות תגובה זהות
+														</h1>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+														<p id="responseWordsSame"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+														</p>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+														<h1 style=" margin-right: 3%;">
+															קבוצות מילים זהות
+														</h1>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+														<p id="groupsSame"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+														</p>
+													</div>
+												</div>
+												<form style="text-align: right;">
+													<div class="form-group">
+														<label for="group_indexes">האינקסים של המילים</label>
+														<input class="form-control" type="text" id="group_indexes_same" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק">
+														<small>לדגומה: 0,1,4,5,7</small>
+													</div>
+												</form>
+												<div class="row">
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<div class="form-group">
+															<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_index_same" placeholder="שם הקבוצה">
+															<button class="btn btn-warning" onclick="addToGroupSame();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
+														</div>
+													</div>
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_new_index_same" placeholder="שם חדש לקבוצה">
+														<button class="btn btn-warning" onclick="addToNewGroupSame();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
+													</div>
 												</div>
 											</div>
 											<div class="col-lg-6 col-md-6 col-sm-12">
-												<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_new_index" placeholder="שם חדש לקבוצה">
-												<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
-											</div>
-										</div>
-										
-										<div class="row">
-											<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-												<h1 style=" margin-right: 3%;">
-													מילות תגובה זהות
-												</h1>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-												<p id="responseWordsSame"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-												</p>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-												<h1 style=" margin-right: 3%;">
-													קבוצות מילים זהות
-												</h1>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
-												<p id="groupsSame"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-												</p>
-											</div>
-										</div>
-										<form style="text-align: right;">
-											<div class="form-group">
-												<label for="group_indexes">האינקסים של המילים</label>
-												<input class="form-control" type="text" id="group_indexes_same" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק">
-												<small>לדגומה: 0,1,4,5,7</small>
-											</div>
-										</form>
-										<div class="row">
-											<div class="col-lg-6 col-md-6 col-sm-12">
-												<div class="form-group">
-													<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_index_same" placeholder="שם הקבוצה">
-													<button class="btn btn-warning" onclick="addToGroupSame();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+														<h1 style=" margin-right: 3%;">
+															מילות תגובה לאיחוד
+														</h1>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+														<p id="responseWords"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+														</p>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+														<h1 style=" margin-right: 3%;">
+															קבוצות לאיחוד אסוציאטיבי
+														</h1>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+														<p id="groups"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+														</p>
+													</div>
+												</div>
+												<form style="text-align: right;">
+													<div class="form-group">
+														<label for="group_indexes">האינקסים של המילים</label>
+														<input class="form-control" type="text" id="group_indexes" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק">
+														<small>לדגומה: 0,1,4,5,7</small>
+													</div>
+												</form>
+												<div class="row">
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<div class="form-group">
+															<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_index" placeholder="שם הקבוצה">
+															<button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
+														</div>
+													</div>
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_new_index" placeholder="שם חדש לקבוצה">
+														<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
+													</div>
 												</div>
 											</div>
-											<div class="col-lg-6 col-md-6 col-sm-12">
-												<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_new_index_same" placeholder="שם חדש לקבוצה">
-												<button class="btn btn-warning" onclick="addToNewGroupSame();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
-											</div>
 										</div>
-										
 										
 										<div class="row">
 											<div class="col-lg-4 col-md-4 col-sm-12">
@@ -367,7 +371,9 @@
 	function loadScreen()
 	{
 		var clustersFlag = false;
+		var sameWordsFlag = false;
 		var clustersFirstLineIndex = 0;
+		var sameWordsFirstLineIndex = 0;
 		
 		var list_data = data.split("\n");
 		readyData = [];
@@ -378,35 +384,42 @@
 				continue;
 			}
 			
-			// stop here and start adding to clusters
-			if (list_data[i].includes(CLUSTER_DATA_SPLITER))
+			// jump here and start adding to clusters
+			if (list_data[i].includes(SAME_WORDS_DATA_SPLITER))
+			{
+				sameWordsFirstLineIndex = i + 1;
+				sameWordsFlag = true;
+			}
+			else if (list_data[i].includes(CLUSTER_DATA_SPLITER))
 			{
 				clustersFirstLineIndex = i + 1;
 				clustersFlag = true;
-				break;
 			}
-			var new_row = [];
-			list_data[i] = list_data[i].trim();
-			while (list_data[i].endsWith(","))
+			else if (!sameWordsFlag && !clustersFlag)
 			{
-				list_data[i] = list_data[i].substring(0, list_data[i].length - 1);
+				var new_row = [];
+				list_data[i] = list_data[i].trim();
+				while (list_data[i].endsWith(","))
+				{
+					list_data[i] = list_data[i].substring(0, list_data[i].length - 1);
+				}
+				while (list_data[i].startsWith(","))
+				{
+					list_data[i] = list_data[i].substring(1, list_data[i].length);
+				}
+				
+				if (list_data[i].length < 5)
+				{
+					continue;
+				}
+				var items = list_data[i].split(",");
+				sourceWords.push(items[0]);
+				for (var j = 0; j < items.length; j++)
+				{
+					new_row.push(items[j]);
+				}
+				readyData.push(new_row);
 			}
-			while (list_data[i].startsWith(","))
-			{
-				list_data[i] = list_data[i].substring(1, list_data[i].length);
-			}
-			
-			if (list_data[i].length < 5)
-			{
-				continue;
-			}
-			var items = list_data[i].split(",");
-			sourceWords.push(items[0]);
-			for (var j = 0; j < items.length; j++)
-			{
-				new_row.push(items[j]);
-			}
-			readyData.push(new_row);
 		}
 		
 		// order from smallest to biggest
@@ -435,6 +448,10 @@
 		{
 			for (var i = clustersFirstLineIndex; i < list_data.length; i++)
 			{
+				if (list_data[i].includes(SAME_WORDS_DATA_SPLITER))
+				{
+					break;
+				}
 				if (list_data[i].length < 5)
 				{
 					continue;
@@ -449,6 +466,27 @@
 					}
 				}
 				groups.push(new_row);
+			}
+		}
+		
+		if (sameWordsFlag)
+		{
+			for (var i = sameWordsFirstLineIndex; i < list_data.length; i++)
+			{
+				if (list_data[i].length < 5)
+				{
+					continue;
+				}
+				var new_row = [];
+				var items = list_data[i].split(",");
+				for (var j = 0; j < items.length; j++)
+				{
+					if (items[j].length > 0)
+					{
+						new_row.push(items[j]);
+					}
+				}
+				groupsSame.push(new_row);
 			}
 		}
 		
@@ -492,6 +530,15 @@
 				newResponseWords += "(" + i + ") " + readyData[wordIndex][i] + "<br>";
 			}
 		}
+		var newResponseWordsSame = "";
+		for (var i = 1; i < readyData[wordIndex].length; i++)
+		{
+			if (!wordInGroupsSame(readyData[wordIndex][i]))
+			{
+				newResponseWordsSame += "(" + i + ") " + readyData[wordIndex][i] + "<br>";
+			}
+		}
+		
 		var groupsText = "";
 		for (var i = 0; i < groups.length; i++)
 		{
@@ -511,10 +558,37 @@
 			groupsText += "<br><br>";
 		}
 		
+		var groupsSameText = "";
+		for (var i = 0; i < groupsSame.length; i++)
+		{
+			groupsSameText += "שם מקורי  (" + groupsSame[i][0] + ")" + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteGroupSame(" + i + ")'>X</button>" + ": ";
+			for (var j = 1; j < groupsSame[i].length; j++)
+			{
+				groupsSameText += groupsSame[i][j] + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteWordFromGroupSame(" + i + ", " + j + ")'>X</button>";
+				if (j != groupsSame[i].length - 1)
+				{
+					groupsSameText += ", ";
+				}
+				else
+				{
+					groupsSameText += ". (סה''כ " + (groupsSame[i].length - 1) + " מילים)";
+				}
+			}
+			groupsSameText += "<br><br>";
+		}
+		
+		document.getElementById('group_indexes').value = "";
+		document.getElementById('class_index').value = "";
+		document.getElementById('class_new_index').value = "";
+		document.getElementById('group_indexes_same').value = "";
+		document.getElementById('class_new_index_same').value = "";
+		document.getElementById('class_index_same').value = "";
 		document.getElementById("IndexWord").innerHTML = "אינדקס בדיקה <br> " + (wordIndex + 1)+ " / " + readyData.length;
 		document.getElementById("firstWord").innerHTML = "מילת גירוי<br> " + sourceWords[wordIndex] + " (0) ";
 		document.getElementById("responseWords").innerHTML = newResponseWords;
+		document.getElementById("responseWordsSame").innerHTML = newResponseWordsSame;
 		document.getElementById("groups").innerHTML = groupsText;
+		document.getElementById("groupsSame").innerHTML = groupsSameText;
 		document.getElementById('group_indexes').value = "";
 		
 		pb = document.getElementById('pb');
@@ -530,9 +604,21 @@
 		refreshScreen();
 	}
 	
+	function deleteGroupSame(groupIndex)
+	{
+		groupsSame.splice(groupIndex, 1);
+		refreshScreen();
+	}
+	
 	function deleteWordFromGroup(groupIndex, deleteWordIndex)
 	{
 		groups[groupIndex].splice(deleteWordIndex, 1);
+		refreshScreen();
+	}
+	
+	function deleteWordFromGroupSame(groupIndex, deleteWordIndex)
+	{
+		groupsSame[groupIndex].splice(deleteWordIndex, 1);
 		refreshScreen();
 	}
 
@@ -582,6 +668,55 @@
 		catch (error)
 		{
 			alert("erorr at 'addToGroup': " + error);
+		}
+	}
+
+	
+	function addToGroupSame()
+	{
+		try
+		{
+			var groupName = document.getElementById('class_index_same').value.trim()
+			var indexValues = document.getElementById('group_indexes_same').value;
+			
+			var foundGroupIndex = -1;
+			for (var i = 0; i < groupsSame.length; i++)
+			{
+				if (groupName == groupsSame[i][0])
+				{
+					foundGroupIndex = i;
+					break;
+				}
+			}
+			
+			if (foundGroupIndex == -1)
+			{
+				alert("While trying to add to group, the group with name " + groupName + " was not found");
+				return;
+			}
+			
+			var items = indexValues.split(",");
+			for (var i = 0; i < items.length; i++)
+			{
+				try
+				{
+					var value = readyData[wordIndex][parseInt(items[i])];
+					if (value.length > 1)
+					{
+						groupsSame[foundGroupIndex].push(value);
+						isChangeDone = true;
+					}
+				}
+				catch (error)
+				{
+					alert("While trying to add to group, the word index " + items[i] + " was not found");
+				}
+			}
+			refreshScreen();
+		}
+		catch (error)
+		{
+			alert("erorr at 'addToGroupSame': " + error);
 		}
 	}
 	
@@ -641,6 +776,65 @@
 		catch (error)
 		{
 			alert("erorr at 'addToNewGroup': " + error);
+		}
+	}
+	
+	function addToNewGroupSame()
+	{
+		try
+		{
+			var groupName = document.getElementById('class_new_index_same').value.trim();
+			var indexValues = document.getElementById('group_indexes_same').value;
+			
+			var foundGroupIndex = -1;
+			for (var i = 0; i < groupsSame.length; i++)
+			{
+				if (groupName == groupsSame[i][0])
+				{
+					foundGroupIndex = i;
+					break;
+				}
+			}
+			
+			if (foundGroupIndex != -1)
+			{
+				alert("While trying to add a new group, the group with name " + groupName + " was already found so the action has been stoped");
+				return;
+			}
+			
+			var items = indexValues.split(",");
+			group_answers = [groupName];
+			for (var i = 0; i < items.length; i++)
+			{
+				try
+				{
+					var value = readyData[wordIndex][parseInt(items[i])];
+					if (value.length > 1)
+					{
+						group_answers.push(value);
+						isChangeDone = true;
+					}
+				}
+				catch (error)
+				{
+					alert("While trying to add to new group, the word index " + items[i] + " was not found");
+				}
+			}
+			if (group_answers.length < 3)
+			{
+				alert("A group must contain at least 2 words");
+			}
+			else
+			{
+				groupsSame.push(group_answers);
+			}
+			document.getElementById('class_new_index').value = "";
+			reorderGroups();
+			refreshScreen();
+		}
+		catch (error)
+		{
+			alert("erorr at 'addToNewGroupSame': " + error);
 		}
 	}
 	
@@ -715,13 +909,23 @@
 	
 	function wordInGroups(checkWord)
 	{
+		return wordInDict(checkWord, groups);
+	}
+	
+	function wordInGroupsSame(checkWord)
+	{
+		return wordInDict(checkWord, groupsSame);
+	}
+	
+	function wordInDict(checkWord, dict)
+	{
 		try
 		{
-			for (var i = 0; i < groups.length; i++)
+			for (var i = 0; i < dict.length; i++)
 			{
-				for (var j = 1; j < groups[i].length; j++)
+				for (var j = 1; j < dict[i].length; j++)
 				{
-					if (checkWord == groups[i][j])
+					if (checkWord == dict[i][j])
 					{
 						return true;
 					}
@@ -731,7 +935,7 @@
 		}
 		catch (error)
 		{
-			alert("erorr at 'wordInGroups': " + error);
+			alert("erorr at 'wordInGroupsSame' with checkWord = '" + checkWord + "' and dict = '" + dict + "': " + error);
 		}
 	}
 	
