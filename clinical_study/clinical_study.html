@@ -175,7 +175,10 @@
 			if (new_val == "")
 			{
 				document.getElementById("label_" + name + "_" + parameters[i]).style.color = "red";
-				document.getElementById(name + "_" + parameters[i]).focus();
+				if (!is_broken)
+				{
+					document.getElementById(name + "_" + parameters[i]).focus();
+				}
 				is_broken = true;
 			}
 			else
