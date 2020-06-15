@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Clinical Study - Teddy Lazebnik</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="A simple GUI for the clinical study developed by Teddy Lazebnik" name="description">
+    <meta content="Teddy Lazebnik" name="author">
+	<link rel='icon' href='../img/favicon.ico' type='image/x-icon'/ >
+	<!-- css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="../css/teddy_style.css" rel="stylesheet">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-154895667-1');
+	</script>
+	<!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:1812929,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+</head>
+
+<body>
+	<div id="progressBar"></div>
+	<div id="ScrollPath"></div>
+	<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 mobile-space">
+				<nav class="navbar navbar-expand-lg">
+				  <a class="navbar-brand" href="../index.html" id="logo">Theodore (Teddy) Lazebnik</a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<img class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item form-inline mobile" style="padding-bottom: 10px;">					  
+						  <input type="text" class="form-control input-search" id="search-data" type="search" placeholder="Search" aria-label="Search">
+						  <div class="input-group-append">
+							<button class="btn btn-outline-white btn-search" onclick="return searchPage();"><img src="https://img.icons8.com/android/24/000000/search.png"/></button>
+						  </div>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../index.html">Short Bio</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../publications.html">Publications</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../opensource.html">Open Resources</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Teaching
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="../courses/deep_leanring.html">Deep Learning</a>
+						  <a class="dropdown-item" href="../courses/numerical.html">Numerical Analysis</a>
+						  <a class="dropdown-item" href="../courses/linear_mathematical_optimization.html">Linear Optimization</a>
+						  <a class="dropdown-item" href="../courses/tools_numerical_analysis.html">Tools For Numerical Analysis</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="../teaching.html">All classes</a>
+						</div>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../students.html">Students</a>
+					  </li>
+					</ul>
+					<div class="form-inline my-2 my-lg-0 desktop">
+					  <input type="text" class="form-control input-search" id="search-data-2" type="search" placeholder="Search" aria-label="Search">
+					  <div class="input-group-append">
+						<button class="btn btn-outline-white btn-search" onclick="return searchPage();"><img src="https://img.icons8.com/android/24/000000/search.png"/></button>
+					  </div>
+					</div>
+				  </div>
+				</nav>
+				<div class="body">
+					<div class="fluid-container">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="info">
+									<div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none" id="error-search">
+									  <strong>Page Not found</strong>, I am still working on our inner website search engine. Try again or use the navigation bar.
+									  <button type="button" class="close" onclick="return closeSearchAlert()" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									  </button>
+									</div>
+									
+									<h1>Clinical Trial Data Machine Learning GUI</h1>
+									
+									<div id="panel">
+									</div>
+									
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script> 
+	<script src="../js/search.js"></script> 
+	
+	<script>
+	let name_aki = "AKI01";
+	let name_postComplication = "postComplication1Y2N";
+	let parms_aki = ["Size_cm", "renalScore4_12", "age", "BaseHb", "OT", "EBL", "weight", "height"];
+	let parms_postComplication = ["height", "collSysOpenY1N2", "Upper1Mid2Hillar3Lower4", "Central1Peripheral2", "renalScore4_12", "clinTNEW", "Ptnew", "pathologicN", "Pmnew", "worstGrade1_4"];
+	
+	generate_forms();
+	
+	function generate_forms()
+	{
+		generate_form(name_aki, "aki_form", parms_aki);
+		generate_form(name_postComplication, "postComplication_form", parms_postComplication);
+	}
+	
+	function list_to_str(items)
+	{
+		answer = "[";
+		for (var i = 0; i < items.length; i++)
+		{
+			answer += "'" + items[i] + "',"
+		}
+		answer = answer.substring(0, answer.length - 1);
+		answer += "]"
+		return answer;
+	}
+	
+	function generate_form(name, form_id, coloums)
+	{
+		var panel = document.getElementById("panel");
+		panel.innerHTML += '<h3>' + name + ' prediction</h3><div class="card"><div class="card-body"><div id="' + form_id + '"></div></div></div><br><br>';
+		panel_form = document.getElementById(form_id);
+		var form_html = "";
+		for (var i = 0; i < coloums.length; i++)
+		{
+			form_html += '<div class="form-group">';
+			form_html += '<label id="label_' + name + '_' + coloums[i] + '" for="' + coloums[i] + '">' + coloums[i] + ' </label>';
+			form_html += '<input type="text" class="form-control" id="' + name + '_' + coloums[i] + '" aria-describedby="' + coloums[i] + '" placeholder="' + coloums[i] + '">';
+			form_html += '</div>';
+		}
+		form_html += '<br><button type="submit" class="cool-btn cool-btn-gray" id="predict_btn_' + name + '" onclick="return run_prediction(\'' + name + '\', ' + list_to_str(coloums) + ', predict_' + name + ');"> Predict </button>';
+		form_html += '<br><br><p id="answer_' + name + '"> </p>';
+		panel_form.innerHTML += form_html;
+	}
+	
+	function run_prediction(name, parameters, sat)
+	{
+		var values = [];
+		var is_broken = false;
+		for (var i = 0; i < parameters.length; i++)
+		{
+			var new_val = document.getElementById(name + "_" + parameters[i]).value;
+			if (new_val == "")
+			{
+				document.getElementById("label_" + name + "_" + parameters[i]).style.color = "red";
+				document.getElementById(name + "_" + parameters[i]).focus();
+				is_broken = true;
+			}
+			else
+			{
+				var float_new_val = parseFloat(new_val);
+				if (!isNaN(float_new_val))
+				{
+					values.push(float_new_val);
+					document.getElementById("label_" + name + "_" + parameters[i]).style.color = "black";
+				}
+				else
+				{
+					document.getElementById("label_" + name + "_" + parameters[i]).style.color = "red";
+					var input_place = document.getElementById(name + "_" + parameters[i]);
+					input_place.value = "";
+					input_place.focus();
+				}
+			}
+		}
+		if (!is_broken)
+		{
+			document.getElementById("answer_" + name).innerHTML = "<h3>The prediction is: <b>" + sat(values) + "</b></h3>";
+		}
+		else
+		{
+			document.getElementById("answer_" + name).innerHTML = "";
+		}
+		// just to make sure the form won't break
+		return false;
+	}
+	
+	
+	function predict_AKI01(values){
+	  if (values[4] <= 147.0)
+		if (values[3] <= 14.550000190734863)
+		  if (values[2] <= 45.5)
+			if (values[6] <= 22.5)
+			  if (values[0] <= 4.25)
+				return 0;
+			  else
+				return 1;
+			else
+			  return 0;
+		  else
+			if (values[0] <= 5.450000047683716)
+			  if (values[3] <= 13.75)
+				return 0;
+			  else
+				return 0;
+			else
+			  if (values[5] <= 57.5)
+				return 0;
+			  else
+				return 0;
+		else
+		  if (values[6] <= 101.0)
+			if (values[2] <= 75.5)
+			  if (values[1] <= 9.5)
+				return 0;
+			  else
+				return 0;
+			else
+			  return 1;
+		  else
+			return 1;
+	  else
+		if (values[6] <= 110.5)
+		  if (values[2] <= 58.5)
+			if (values[0] <= 2.899999976158142)
+			  return 0;
+			else
+			  if (values[5] <= 22.5)
+				return 0;
+			  else
+				return 1;
+		  else
+			if (values[5] <= 110.0)
+			  if (values[4] <= 158.0)
+				return 1;
+			  else
+				return 1;
+			else
+			  return 1;
+		else
+		  return 0;
+	}
+	
+	
+	function predict_postComplication1Y2N(values)
+	{
+		  if (values[4] <= 147.0)
+			if (values[3] <= 14.550000190734863)
+			  if (values[2] <= 45.5)
+				if (values[6] <= 22.5)
+				  if (values[0] <= 4.25)
+					return 0;
+				  else
+					return 1;
+				else
+				  return 0;
+			  else
+				if (values[0] <= 5.450000047683716)
+				  if (values[3] <= 13.75)
+					return 0;
+				  else
+					return 0;
+				else
+				  if (values[5] <= 57.5)
+					return 0;
+				  else
+					return 0;
+			else
+			  if (values[6] <= 101.0)
+				if (values[2] <= 75.5)
+				  if (values[1] <= 9.5)
+					return 0;
+				  else
+					return 0;
+				else
+				  return 1;
+			  else
+				return 1;
+		  else
+			if (values[6] <= 110.5)
+			  if (values[2] <= 58.5)
+				if (values[0] <= 2.899999976158142)
+				  return 0;
+				else
+				  if (values[5] <= 22.5)
+					return 0;
+				  else
+					return 1;
+			  else
+				if (values[5] <= 110.0)
+				  if (values[4] <= 158.0)
+					return 1;
+				  else
+					return 1;
+				else
+				  return 1;
+			else
+			  return 0;
+		}
+	
+	</script>
+</body>
+</html>
