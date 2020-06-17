@@ -167,12 +167,12 @@
 												<div class="row">
 													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
 														<h1 style=" margin-right: 3%;">
-															מילות תגובה זהות
+															הגדרת מילים זהות
 														</h1>
 													</div>
 												</div>
 												<div class="row">
-													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #edffff;">
 														<p id="responseWordsSame"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
 														</p>
 													</div>
@@ -180,12 +180,12 @@
 												<div class="row">
 													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
 														<h1 style=" margin-right: 3%;">
-															קבוצות מילים זהות
+															מילים זהות
 														</h1>
 													</div>
 												</div>
 												<div class="row">
-													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #edffff;">
 														<p id="groupsSame"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
 														</p>
 													</div>
@@ -214,12 +214,12 @@
 												<div class="row">
 													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
 														<h1 style=" margin-right: 3%;">
-															מילות תגובה לאיחוד
+															מיון מילות תגובה לקבוצות מילים
 														</h1>
 													</div>
 												</div>
 												<div class="row">
-													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fbf2ff;">
 														<p id="responseWords"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
 														</p>
 													</div>
@@ -227,12 +227,12 @@
 												<div class="row">
 													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
 														<h1 style=" margin-right: 3%;">
-															קבוצות לאיחוד אסוציאטיבי
+															קבוצות מילים
 														</h1>
 													</div>
 												</div>
 												<div class="row">
-													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fdfdfd;">
+													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fbf2ff;">
 														<p id="groups"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
 														</p>
 													</div>
@@ -561,7 +561,7 @@
 		var groupsSameText = "";
 		for (var i = 0; i < groupsSame.length; i++)
 		{
-			groupsSameText += "שם מקורי  (" + groupsSame[i][0] + ")" + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteGroupSame(" + i + ")'>X</button>" + ": ";
+			groupsSameText += "מילה  (" + groupsSame[i][0] + ")" + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteGroupSame(" + i + ")'>X</button>" + ": ";
 			for (var j = 1; j < groupsSame[i].length; j++)
 			{
 				groupsSameText += groupsSame[i][j] + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteWordFromGroupSame(" + i + ", " + j + ")'>X</button>";
