@@ -460,12 +460,15 @@
 				var items = list_data[i].split(",");
 				for (var j = 0; j < items.length; j++)
 				{
-					if (items[j].length > 0)
+					if (items[j].trim().length > 0)
 					{
 						new_row.push(items[j]);
 					}
 				}
-				groups.push(new_row);
+				if (new_row.length > 0)
+				{
+					groups.push(new_row);
+				}
 			}
 		}
 		
@@ -481,12 +484,15 @@
 				var items = list_data[i].split(",");
 				for (var j = 0; j < items.length; j++)
 				{
-					if (items[j].length > 0)
+					if (items[j].trim().length > 0)
 					{
 						new_row.push(items[j]);
 					}
 				}
-				groupsSame.push(new_row);
+				if (new_row.length > 0)
+				{
+					groupsSame.push(new_row);
+				}
 			}
 		}
 		
@@ -542,7 +548,7 @@
 		var groupsText = "";
 		for (var i = 0; i < groups.length; i++)
 		{
-			groupsText += "קבוצה  (" + groups[i][0] + ")" + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteGroup(" + i + ")'>X</button>" + ": ";
+			groupsText += "קבוצה  (<b>" + groups[i][0] + "</b>)" + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteGroup(" + i + ")'>X</button>" + ": ";
 			for (var j = 1; j < groups[i].length; j++)
 			{
 				groupsText += groups[i][j] + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteWordFromGroup(" + i + ", " + j + ")'>X</button>";
@@ -561,7 +567,7 @@
 		var groupsSameText = "";
 		for (var i = 0; i < groupsSame.length; i++)
 		{
-			groupsSameText += "מילה  (" + groupsSame[i][0] + ")" + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteGroupSame(" + i + ")'>X</button>" + ": ";
+			groupsSameText += "מילה  (<b>" + groupsSame[i][0] + "</b>)" + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteGroupSame(" + i + ")'>X</button>" + ": ";
 			for (var j = 1; j < groupsSame[i].length; j++)
 			{
 				groupsSameText += groupsSame[i][j] + "<button class='btn btn-danger word-group-delete-btn' onclick='return deleteWordFromGroupSame(" + i + ", " + j + ")'>X</button>";
