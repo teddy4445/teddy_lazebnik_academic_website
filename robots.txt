@@ -1,0 +1,3 @@
+Sitemap: http://teddylazebnik.info/sitemap.xml
+User-agent: *
+Disallow:
