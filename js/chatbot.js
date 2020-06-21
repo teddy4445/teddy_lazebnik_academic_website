@@ -3,7 +3,7 @@ let MESSAGE_TYPE = ["text", "img", "audio", "video"];
 class ChatBot
 {
 	
-	constructor(first_message)
+	constructor(first_message = "Nice to meet you user! Ask me anything...")
 	{
 		this.messages = [];
 		
@@ -441,6 +441,7 @@ class WordToVec
 		{
 			answer = WordToVec.add(answer, this.get_representation(words[word_index]));
 		}
+		answer = WordToVec.scallar(answer, 1/words.length);
 		return answer;
 	}
 	
@@ -547,6 +548,31 @@ let DEFALT_DATA =
 			],
 		  "a":[
 			 new MassageContant(MassageContant.TYPE_TEXT, "Teddy Lazebnik")
+		  ]
+	   },
+	   {
+		  "q":[
+			"helo",
+			"nice to meet you",
+			"hi",
+			],
+		  "a":[
+			 new MassageContant(MassageContant.TYPE_TEXT, "Hello"),
+			 new MassageContant(MassageContant.TYPE_TEXT, "Nice to meet you"),
+			 new MassageContant(MassageContant.TYPE_TEXT, "Welcome"),
+		  ]
+	   },
+	   {
+		  "q":[
+			"bye",
+			"goodbye",
+			"see you",
+			],
+		  "a":[
+			 new MassageContant(MassageContant.TYPE_TEXT, "Chao"),
+			 new MassageContant(MassageContant.TYPE_TEXT, "Bye Bye"),
+			 new MassageContant(MassageContant.TYPE_TEXT, "Hope to see you again"),
+			 new MassageContant(MassageContant.TYPE_TEXT, "It was nice talking with you")
 		  ]
 	   },
 	   {
