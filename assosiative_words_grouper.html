@@ -774,9 +774,9 @@
 			else
 			{
 				groups.push(group_answers);
+				reorderGroups(groups);
 			}
 			document.getElementById('class_new_index').value = "";
-			reorderGroups();
 			refreshScreen();
 		}
 		catch (error)
@@ -833,9 +833,9 @@
 			else
 			{
 				groupsSame.push(group_answers);
+				reorderGroups(groupsSame);
 			}
 			document.getElementById('class_new_index').value = "";
-			reorderGroups();
 			refreshScreen();
 		}
 		catch (error)
@@ -844,7 +844,7 @@
 		}
 	}
 	
-	function reorderGroups()
+	function reorderGroups(groups)
 	{
 		groups.sort(function(a, b)
 		{
