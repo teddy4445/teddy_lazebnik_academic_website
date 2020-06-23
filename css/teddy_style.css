@@ -626,6 +626,15 @@ a.cool-btn:hover{
 	font-weight: bold;
 }
 
+.hover-element a{
+	color: rgba(170,0,0,1);
+}
+
+.hover-element a:hover{
+	text-decoration: none;
+	color: rgba(47,0,0,1)
+}
+
 .hover-element h1{
 	text-align: center;
 	font-size: 26pt;
