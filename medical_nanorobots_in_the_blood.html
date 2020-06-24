@@ -34,130 +34,271 @@
 	</script>
 </head>
 <body style="overflow: hidden;">
-	<canvas id="c" width="1920" height="1080"></canvas>
+	<canvas id="c" class="canvas-bg" width="1920" height="1080"></canvas>
 	
-	<div id="panel_1" class="hover-element" style="opacity: 0;">
-		<h1>Medical Nanorobotics Research <br> The Full Story</h1>
-		<p> 
-			Join us in the journy of medical nanorobotics in the blood system. In this journy we will review the research steps needed to develop multirobotics medical 
-			treatmenat protocol. 
-		</p>
-		<p> 
-			We will review the following steps:
-			<ol>
-				<li>Rivendell Search Engine</li>
-				<li>Elrond's MNR Library</li>
-				<li>Nanosim Simulator</li>
-				<li>Bilbo Compiler</li>
-			</ol>
-		</p>
-		<div class="row">
-			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-				<button id="next_btn_1"> Next </button>
+	<div class="canvas-bg-content">
+		<div id="panel_1" class="hover-element" style="opacity: 0;">
+			<h1>Medical Nanorobotics Research <br> The Full Story</h1>
+			<p> 
+				Join us in the journy of medical nanorobotics in the blood system. In this journy we will review the research steps needed to develop multirobotics medical 
+				treatmenat protocol. 
+			</p>
+			<p> 
+				We will review the following steps:
+				<ol>
+					<li>Rivendell Search Engine</li>
+					<li>Elrond's MNR Library</li>
+					<li>Nanosim Simulator</li>
+					<li>Bilbo Compiler</li>
+				</ol>
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="exit"> Exit </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_1"> Next </button>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="panel_2" class="hover-element" style="opacity: 0; display: none;">
-		<h1>Motivation</h1>
-		<p>
-			Imagine yourself that a paitent comes to the doctor's office (or doing an online meeting).
-			The doctor (or AI platform) assess the paitent's condition and decides on the sutable treatmenat protocol.
-		</p>
-		<p>	
-			In the case where the paitent needs drug-based treatmenat the doctor will enter into the computer both the paitent's personal data and the requested medicine.
-			The computer will generate a recipe for a printer to print a personalized medical nanorobotics (MNRs) drug. 
-		</p>
-		<p>	
-			By a simple injection of the capsule's content to the bloodstream of the paitent, the doctor can proceed to the next paitent, knowing that the MNRs taking care on this paitent.
-		</p>
-		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="prev_btn_2"> Previous </button>
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="next_btn_2"> Next </button>
-			</div>
-		</div>
-	</div>
-	
-	<div id="panel_3" class="hover-element" style="opacity: 0; display: none;">
-		<h1>Our Scope</h1>
-		<p>
-			There is active research on both <a target="_blank" href="http://proceedings.mlr.press/v56/Choi16.pdf" title="Doctor AI: Predicting Clinical Events via Recurrent Neural Networks">AI platform to replace doctors</a> and <a target="_blank" href="https://www.nature.com/articles/s41570-018-0058-y" title="3D printing for chemical, pharmaceutical and biological applications">biological printers</a>. These subjects are out of the scope of our work.
-		</p>
-		<p>	
-			We are intrested in the part from the moment the user (either human or AI doctor) is describing the needed treatmenat protocol and providing the paitent's personal data and up to the moment where the computer produce the recipe for the MNRs capsule.
-		</p>
-		<p>	
-			It is possible to divide this process into 4 main components. First, a programming languge for the user. Second, a library of MNR that can be used in the recipe. Third, a compiler generating a MNR recipe from the user's progam and the library. Fourth, a simulator to make sure the recipe is correct and potensioly improve it.
-		</p>
-		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="prev_btn_3"> Previous </button>
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="next_btn_3"> Next </button>
+		
+		<div id="panel_2" class="hover-element" style="opacity: 0; display: none;">
+			<h1>Motivation</h1>
+			<p>
+				Imagine yourself that a paitent comes to the doctor's office (or doing an online meeting).
+				The doctor (or AI platform) assess the paitent's condition and decides on the sutable treatmenat protocol.
+			</p>
+			<p>	
+				In the case where the paitent needs drug-based treatmenat the doctor will enter into the computer both the paitent's personal data and the requested medicine.
+				The computer will generate a recipe for a printer to print a personalized medical nanorobotics (MNRs) drug. 
+			</p>
+			<p>	
+				By a simple injection of the capsule's content to the bloodstream of the paitent, the doctor can proceed to the next paitent, knowing that the MNRs taking care on this paitent.
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_2"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_2"> Next </button>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="panel_4" class="hover-element" style="opacity: 0; display: none;">
-		<h1>The Tolkien Project</h1>
-		<p>
-			The <a href="http://u.cs.biu.ac.il/~galk/research/tolkien/" title="Tolkin project" target="_blank">Tolkien Project</a> is the name of this research and includes all the components described.
-		</p>
-		<p>
-			At the beginning, <a target="_blank" href="https://www.linkedin.com/in/inbal-wiesel-kapah-4527ba94/" title="Inbal Wiesel-Kapah"> Inbal Wiesel-Kapah</a> develop the  <a target="_blank" href="http://u.cs.biu.ac.il/~galk/publications/papers/ijcai16.pdf" title="Rule-Based Programming of Molecular Robot Swarms for Biomedical Applications"> Athelas programming language and the Bilbo compiler</a>.
-			Wiesel-Kapan et al. develop a rule-based programming language allowing the user to abstractly design the action of the population of different MNRs. The Bilbo compiler was able to provide a recipe of multiple types of MNRs with different payloads.
-		</p>
-		<p>
-			It is possible to add to Wiesel-Kapan et al.'s model several elements to advance the model for what we want to achieve. 
-		</p>
-		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="prev_btn_4"> Previous </button>
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="next_btn_4"> Next </button>
-			</div>
-		</div>
-	</div>
-	
-	<div id="panel_5" class="hover-element" style="opacity: 0; display: none;">
-		<h1>The Tolkien Project - Overview</h1>
-		<p>
-			The relationship between the different components of the Tolkien project can be presented as:
-		</p>
-		<img src="img/tolkin_presentation/tolkin_components.png" width="100%" alt="Tolkien Project Components">
-		<p>
-			That said, this graph is not complete as it does not takes into condsidration the paitent's personal data.
-		</p>
-		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="prev_btn_5"> Previous </button>
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="next_btn_5"> Next </button>
+		
+		<div id="panel_3" class="hover-element" style="opacity: 0; display: none;">
+			<h1>Our Scope</h1>
+			<p>
+				There is active research on both <a target="_blank" href="http://proceedings.mlr.press/v56/Choi16.pdf" title="Doctor AI: Predicting Clinical Events via Recurrent Neural Networks">AI platform to replace doctors</a> and <a target="_blank" href="https://www.nature.com/articles/s41570-018-0058-y" title="3D printing for chemical, pharmaceutical and biological applications">biological printers</a>. These subjects are out of the scope of our work.
+			</p>
+			<p>	
+				We are intrested in the part from the moment the user (either human or AI doctor) is describing the needed treatmenat protocol and providing the paitent's personal data and up to the moment where the computer produce the recipe for the MNRs capsule.
+			</p>
+			<p>	
+				It is possible to divide this process into 4 main components. First, a programming languge for the user. Second, a library of MNR that can be used in the recipe. Third, a compiler generating a MNR recipe from the user's progam and the library. Fourth, a simulator to make sure the recipe is correct and potensioly improve it.
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_3"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_3"> Next </button>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="panel_6" class="hover-element" style="opacity: 0; display: none;">
-		<h1>The Tolkien Project - Overview</h1>
-		<p>
-			The relationship between the different components of the Tolkien project can be presented as:
-		</p>
-		<img src="img/tolkin_presentation/tolkin_components.png" width="100%" alt="Tolkien Project Components">
-		<p>
-			That said, this graph is not complete as it does not takes into condsidration the paitent's personal data.
-		</p>
-		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="prev_btn_6"> Previous </button>
+		
+		<div id="panel_4" class="hover-element" style="opacity: 0; display: none;">
+			<h1>The Tolkien Project</h1>
+			<p>
+				The <a href="http://u.cs.biu.ac.il/~galk/research/tolkien/" title="Tolkin project" target="_blank">Tolkien Project</a> is the name of this research and includes all the components described.
+			</p>
+			<p>
+				At the beginning, <a target="_blank" href="https://www.linkedin.com/in/inbal-wiesel-kapah-4527ba94/" title="Inbal Wiesel-Kapah"> Inbal Wiesel-Kapah</a> develop the  <a target="_blank" href="http://u.cs.biu.ac.il/~galk/publications/papers/ijcai16.pdf" title="Rule-Based Programming of Molecular Robot Swarms for Biomedical Applications"> Athelas programming language and the Bilbo compiler</a>.
+				Wiesel-Kapan et al. develop a rule-based programming language allowing the user to abstractly design the action of the population of different MNRs. The Bilbo compiler was able to provide a recipe of multiple types of MNRs with different payloads.
+			</p>
+			<p>
+				It is possible to add to Wiesel-Kapan et al.'s model several elements to advance the model for what we want to achieve. 
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_4"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_4"> Next </button>
+				</div>
 			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-				<button id="next_btn_6"> Next </button>
+		</div>
+		
+		<div id="panel_5" class="hover-element" style="opacity: 0; display: none;">
+			<h1>The Tolkien Project - Overview</h1>
+			<p>
+				The relationship between the different components of the Tolkien project can be presented as:
+			</p>
+			<img src="img/tolkin_presentation/tolkin_components.png" width="100%" alt="Tolkien Project Components">
+			<p>
+				That said, this graph is not complete as it does not takes into condsidration the paitent's personal data.
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_5"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_5"> Next </button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="panel_6" class="hover-element" style="opacity: 0; display: none;">
+			<h1>Athelas Language</h1>
+			<p>
+				The Athelas Language developed by Wiesel-Kapan et al. is a rule-based programming paradigm.
+				Each statment in Athelas is made of 4 clauses: Initialize, When, Actions, Until. 
+			</p>
+			<p>
+				Athelas allowing to design which MNRs will operate (aka. expose a payload) according to some condition on abstract location in the body and fulfillment of some condition.
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_6"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_6"> Next </button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="panel_7" class="hover-element" style="opacity: 0; display: none;">
+			<h1>Bilbo Compiler</h1>
+			<p>
+				The Bilbo compiler developed by Wiesel-Kapan et al. getting as input a Athelas-written program and returns a list of MNRs with the right parameters (spesificly, their payload). 
+				<br> The algorithm behind Bilbo shown to be <i>complete, sound, and halts</i>. 
+			</p>
+			<p>
+				Bilbo is not able to tell the right amount of MNRs per MNR type with the spesific parameters. In addition, same MNR can be different in multiple parameters except there payload.
+			</p>
+			<p>
+				Moreover, Bilbo is not able to make sure the actions, conditions or location are biologicaly valid per the assigned MNR.
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_7"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_7"> Next </button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="panel_8" class="hover-element" style="opacity: 0; display: none;">
+			<h1>Frodo Compiler</h1>
+			<p>
+				The Frodo compiler is the final goal of the Tolkin project. Frodo compiler should extend the Bilbo compiler to handle automatic usage of library of MNRs with big range or chemical, biological and physical properties.
+				
+			</p>
+			<p>
+				In addition, the Frodo compiler will take advantage on in-silico (simulated) performance of the suggested result to optimize it. <br> 
+				The outcome of Frodo is almost identical to the one from Bilbo; Frodo adds the amount of MNRs needed to perform the requested task. 
+			</p>
+			<p>
+				Currently, Frodo Compiler is not yet developed as it depands on several other components first, which will be reviewed now...
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_8"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_8"> Next </button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="panel_9" class="hover-element" style="opacity: 0; display: none;">
+			<h1>Elrond's Library</h1>
+			<p>
+				MNRs are very different from each other. By reviewing 200 academic papers, using domain experts, we manully extract the following list of major properties:<br>
+				core meterial, size, magnetic, shape, charge, membrance, cell-penetration, surface area, toxicity, payload, treatmenat or \ and analysis, used for in-vivo or \ and in-vitro.
+			</p>
+			<p>
+				Elrond's library is a system that takes academic papers in English in PDF file format and extracting instances of MNRs with there properties and values. 
+				After extracting the information, the system organize it a rational database, while marging properties of the same MNR types and alerting confilicts in values for the same property.
+			</p>
+			<p>
+				Currently, a DB with 100 records and 5 properties has been extracted with a good accuracy. Multiple <a href="opensource.html" title="open source projects" target="_blank"> open source projects </a> have been published from this research.
+			</p>
+			<p>
+				Finding the articles needed for the Elrond's library was a challging task by itself. Existing search engines was not good enough for the task.  
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_9"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_9"> Next </button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="panel_10" class="hover-element" style="opacity: 0; display: none;">
+			<h1>Rivendell</h1>
+			<p>
+				<a href="rivendell.cs.biu.ac.il" title="rivendell search engine" target="_blank">Rivendell</a> is an academic meta-search engine working on Pubmed and arXiv. Rivendell uses a new searching approch called "project-based search" designed by academics for academics. 
+			</p>
+			<p>
+				Rivendell handles parall search for different projects by asking the user to explicitly divide she's searchs into groups (called <i>projects</i>).
+				By explicitly marking search results as relevant and irrelevant, Rivendell learns the user's preferances and personalize the results over time for each project.
+			</p>
+			<p>
+				In addition, Rivendell has a "back door" for MNR related searchs - taking advantage of relevant marked search results from searches contins list of enetity words related to MNRs. In this way, Rivendell is gathering papers for Elrond's Library.
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_10"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_10"> Next </button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="panel_11" class="hover-element" style="opacity: 0; display: none;">
+			<h1>Nanosim Simulator</h1>
+			<p>
+				A mathematical model treating the in-vivo circulatory system as a flow graph and MNRs as final state machines (FSM) implemeneted as a stochastic graph-based simulator.
+			</p>
+			<p>
+				The Nanosim simulator is able to answer both prediction questions (aka. Forward queries) given the initial state of the system and the "what should happen to get" questions (aka. Backward queries).
+			</p>
+			<p>
+				Nanosim has been tested relative to in-vivo lab results, and found to provide very good initial results.
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_11"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="next_btn_11"> Next </button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="panel_12" class="hover-element" style="opacity: 0; display: none;">
+			<h1>Future Work</h1>
+			<p>
+				Futher research is conducted while you are reading these lines... This presentation is regullarly updated with new results and extantion of the presented results with more details.
+			</p>
+			<p>
+				If you find this research interesting and wish to know more or even participent - please feel free to contact us.
+			</p>
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="prev_btn_12"> Previous </button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button id="finish"> Finish </button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -168,5 +309,35 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/mnr.js"></script> 
+	<script>
+		add_progress_bar();
+		
+		function add_progress_bar()
+		{
+			var index = 1;
+			var count = 0;
+			while (!(document.getElementById("panel_" + index) === null))
+			{
+				count++;
+				index++;
+			}
+			for (var i = 0; i < count; i++)
+			{
+				var percent = Math.round(100 * (i+1) /  count);
+				var panel = document.getElementById("panel_" + (i+1));
+				var pg = document.createElement("div");
+				pg.innerHTML = '<div class="progress" style="margin-bottom: 20px; background-color: rgba(47,0,0,1);"><div class="progress-bar progress-bar-striped " role="progressbar" style="background-color: rgba(170,0,0,1)!important; width: ' + percent + '%" aria-valuenow="' + percent + '" aria-valuemin="0" aria-valuemax="100">' + percent + '%</div></div>';
+				panel.prepend(pg);
+			}
+			
+			if(screen.width < 1080)
+			{
+				var message = document.createElement("div");
+				message.style.textAlign = "center";
+				message.innerHTML = "<h1 style='padding-top: 20px;'> This screen is currently avalible on desktop only </h1><a class='btn btn-primary' style='margin: 20px 20px;' href='index.html' title='exit'>Go Back To Home Page</a>"
+				document.body.prepend(message);
+			}
+		}
+	</script>
 </body>
 </html>
