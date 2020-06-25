@@ -26,6 +26,14 @@ $( document ).ready(function() {
 		}, 1000, function() {
 		// Animation complete.
 	});
+	
+	$("#exit").click(function(event){
+		window.location.href = "index.html";
+	});
+	
+	$("#finish").click(function(event){
+		window.location.href = "index.html";
+	});
 });
 
 
@@ -95,6 +103,7 @@ let loop = (frameTime) =>
   {
     // fill window
     const aspect = c.width/c.height;
+	/*
     if (aspect > innerWidth/innerHeight)
     {
       c.style.height = '100%';
@@ -105,6 +114,7 @@ let loop = (frameTime) =>
       c.style.width = '100%';
       c.style.height = '';
     }
+	*/
   }
 }
 
