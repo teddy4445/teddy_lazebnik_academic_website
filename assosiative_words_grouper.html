@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Assosiative Words Grouper - Teddy Lazebnik</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="An online confterbale GUI to spliter triger-answer list of words into assosiative groups of words for machine learning tasks" name="description">
-    <meta content="Teddy Lazebnik" name="author">
-	<link rel='icon' href='img/favicon.ico' type='image/x-icon'/ >
-	<!-- css -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link href="css/teddy_style.css" rel="stylesheet">
-    
-	<!-- stemmer logics -->
-	<script src="js/stemmers.js"></script>
-	<script src="js/PorterStemmer.js"></script>
-	
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Assosiative Words Grouper - Teddy Lazebnik
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="An online confterbale GUI to spliter triger-answer list of words into assosiative groups of words for machine learning tasks" name="description"/>
+  <meta content="Teddy Lazebnik" name="author"/>
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!-- css -->
+  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
+  <link href="css/teddy_style.css" rel="stylesheet"/>
+  <!-- stemmer logics -->
+  <script src="js/stemmers.js">
+  </script>
+  <script src="js/PorterStemmer.js">
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+  <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
 	  gtag('config', 'UA-154895667-1');
-	</script>
-	<!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
-	<script>
-		(function(h,o,t,j,a,r){
+  </script>
+  <!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
+  <script>
+   (function(h,o,t,j,a,r){
 			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
 			h._hjSettings={hjid:1812929,hjsv:6};
 			a=o.getElementsByTagName('head')[0];
@@ -38,260 +41,346 @@
 			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
 			a.appendChild(r);
 		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-	</script>
-</head>
-
-<body onload="init()">
-	<div id="progressBar"></div>
-	<div id="ScrollPath"></div>
-	<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 mobile-space">
-				<nav class="navbar navbar-expand-lg">
-				  <a class="navbar-brand" href="index.html" id="logo">Theodore (Teddy) Lazebnik</a>
-				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<img class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
-				  </button>
-
-				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mr-auto">
-					  <li class="nav-item form-inline mobile" style="padding-bottom: 10px;">					  
-						  <input type="text" class="form-control input-search" id="search-data" type="search" placeholder="Search" aria-label="Search">
-						  <div class="input-group-append">
-							<button class="btn btn-outline-white btn-search" onclick="return searchPage();"><img src="https://img.icons8.com/android/24/000000/search.png"/></button>
-						  </div>
-					  </li>
-					  <li class="nav-item">
-						<a title="home page" class="nav-link" href="index.html">Short Bio</a>
-					  </li>
-					  <li class="nav-item">
-						<a class="nav-link" href="publications.html">Publications</a>
-					  </li>
-					  <li class="nav-item">
-						<a class="nav-link" href="opensource.html">Open Resources</a>
-					  </li>
-					  <li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  Teaching
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="courses/deep_leanring.html">Deep Learning</a>
-						  <a class="dropdown-item" href="courses/numerical.html">Numerical Analysis</a>
-						  <a class="dropdown-item" href="courses/linear_mathematical_optimization.html">Linear Optimization</a>
-						  <a class="dropdown-item" href="courses/tools_numerical_analysis.html">Tools For Numerical Analysis</a>
-						  <div class="dropdown-divider"></div>
-						  <a class="dropdown-item" href="teaching.html">All classes</a>
-						</div>
-					  </li>
-					  <li class="nav-item">
-						<a class="nav-link" href="students.html">Students</a>
-					  </li>
-					</ul>
-					<div class="form-inline my-2 my-lg-0 desktop">
-					  <input type="text" class="form-control input-search" id="search-data-2" type="search" placeholder="Search" aria-label="Search">
-					  <div class="input-group-append">
-						<button class="btn btn-outline-white btn-search" onclick="return searchPage();"><img src="https://img.icons8.com/android/24/000000/search.png"/></button>
-					  </div>
-					</div>
-				  </div>
-				</nav>
-				<div class="body">
-					<div class="fluid-container">
-						<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12">
-							<div class="info">
-										<div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none" id="error-search">
-										  <strong>Page Not found</strong>, I am still working on our inner website search engine. Try again or use the navigation bar.
-										  <button type="button" class="close" onclick="return closeSearchAlert()" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										  </button>
-										</div>
-								<h1 style="text-align: center;"> חיבור מערכות מילים </h1>
-									<div id="train_panel">
-										<p><b>Loading Data Panel</b></p>
-										<p>Load the data file you wish to work on. You can download the default data set and upload it as well. <br><b>Note: </b>Loading process may take up to few seconds...<br><br></p>	
-										<form style="text-align: left;">
-											<div class="form-group">
-												<label for="dataFile">Source and reaction data file</label>
-												<input class="form-control" type="file" id="dataFile" placeholder="Source and reaction data file">
-												<br><a target="_blank" class="btn btn-info pull-right" href="data/source_and_reaction_data.txt">Show Default Set</a>
-											</div>
-										</form>		
-
-										<p>
-											How to use the system:
-											<ol>
-												<li>Upload the data file (includes the source and reaction words in a list in each line separate by ",".</li>
-												<li>You will see the source word and response words (source in the box and the response in a list). Each one will have index next to it.</li>
-												<li>Add the indexes of the words of the same group into the "Group words indexes" input box with "," between each index.</li>
-												<li>You may add the group to exsiting group using the "add to group" button and feeling the group index. You can add as new group using the "add to new group" button.</li>
-												<li>You can go to the next set or previous set each time. A mark saying on which set you are at will be shown on the top of the window.</li>
-												<li>Make sure to save the working process from time to time and when you done. The saving will keep your currnet location and groups and be used next time you need to upload your work.</li>
-												
-												<li><b>Note:</b> Your work will be auto saved each 5 minutes to make sure you do not lost too much work in case you forget to save it yourself.</li>
-												
-											</ol>
-										</p>	
-
-										<form style="text-align: left;">
-											<div class="form-group">
-												<label for="wordsPeerFile">(One time) Convert your file of peers of words to the dataset needed for the grouper system</label>
-												<input class="form-control" type="file" id="wordsPeerFile" placeholder="Source and reaction peers file">
-											</div>
-										</form>										
-										
-									</div>
-									
-									<div id="inferance_panel" style="display: none">
-										<div class="row">
-											<div class="col-lg-5 col-md-5 col-sm-12"  style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; ">
-												<p id="IndexWord" style="font-size: 18pt;">
-													אינדקס בדיקה 
-												</p>
-											</div>
-											<div class="col-lg-5 col-md-5 col-sm-12" style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; font-size: 18pt;">
-												<p id="firstWord" style="font-size: 18pt;">
-													מילת גירוי
-												</p>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-lg-12 col-md-12 col-sm-12">
-												<div class="progress" style="height: 30px; font-weight: bold;">
-													<div class="progress-bar" role="progressbar" style="font-size: 14pt; line-height: 1.8; width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="pb">25%</div>
-												</div>
-											</div>
-										</div>
-										
-										<div class="row">
-											<div class="col-lg-6 col-md-6 col-sm-12">
-												<div class="row">
-													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-														<h1 style=" margin-right: 3%;">
-															הגדרת מילים זהות
-														</h1>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #edffff;">
-														<p id="responseWordsSame"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-														</p>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-														<h1 style=" margin-right: 3%;">
-															מילים זהות
-														</h1>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #edffff;">
-														<p id="groupsSame"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-														</p>
-													</div>
-												</div>
-												<form style="text-align: right;">
-													<div class="form-group">
-														<label for="group_indexes">האינקסים של המילים</label>
-														<input class="form-control" type="text" id="group_indexes_same" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק">
-														<small>לדגומה: 0,1,4,5,7</small>
-													</div>
-												</form>
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-sm-12">
-														<div class="form-group">
-															<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_index_same" placeholder="שם הקבוצה">
-															<button class="btn btn-warning" onclick="addToGroupSame();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-sm-12">
-														<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_new_index_same" placeholder="שם חדש לקבוצה">
-														<button class="btn btn-warning" onclick="addToNewGroupSame();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-12">
-												<div class="row">
-													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-														<h1 style=" margin-right: 3%;">
-															מיון מילות תגובה לקבוצות מילים
-														</h1>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fbf2ff;">
-														<p id="responseWords"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-														</p>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
-														<h1 style=" margin-right: 3%;">
-															קבוצות מילים
-														</h1>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-lg-11 col-md-11 col-sm-11"  style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fbf2ff;">
-														<p id="groups"  style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
-														</p>
-													</div>
-												</div>
-												<form style="text-align: right;">
-													<div class="form-group">
-														<label for="group_indexes">האינקסים של המילים</label>
-														<input class="form-control" type="text" id="group_indexes" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק">
-														<small>לדגומה: 0,1,4,5,7</small>
-													</div>
-												</form>
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-sm-12">
-														<div class="form-group">
-															<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_index" placeholder="שם הקבוצה">
-															<button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה הנבחרת</button>
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-sm-12">
-														<input class="form-control" style="width: 50%; display: inline;" type="text" id="class_new_index" placeholder="שם חדש לקבוצה">
-														<button class="btn btn-warning" onclick="addToNewGroup();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">הוסף לקבוצה חדשה</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										
-										<div class="row">
-											<div class="col-lg-4 col-md-4 col-sm-12">
-												<button class="btn btn-primary btn-lg" onclick="next();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">לקבוצת המילים הבאה</button>
-											</div>
-											<div class="col-lg-4 col-md-4 col-sm-12">
-												<button class="btn btn-success btn-lg" onclick="downloadData();" style=" width: 100%; margin-top: 10px; margin-bottom: 10px;">שמור עבודה</button>
-											</div>
-											<div class="col-lg-4 col-md-4 col-sm-12">
-												<button class="btn btn-primary btn-lg" onclick="previous();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">לקבוצת המילים הקודמת</button>
-											</div>
-										</div>
-										<div class="row" style="margin-top: 100px;">
-											<div class="col-lg-12 col-md-12 col-sm-12">
-												<div class="form-group">
-													<input class="form-control" style="width: 50%; display: inline;" min="0" type="number" id="jump_index" placeholder=" אינדקס הסט שתרצה לעבור אליו">
-													<button class="btn btn-danger" onclick="jumpWordIndex();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">עבור לסט מילים המתאים</button>
-												</div>
-											</div>
-										</div>
-									</div>
-							</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- Random image generator -->
-	<script>
-	
-	let data = "";
+  </script>
+ </head>
+ <body onload="init()">
+  <div id="progressBar">
+  </div>
+  <div id="ScrollPath">
+  </div>
+  <div class="row">
+   <div class="col-lg-12 col-md-12 col-sm-12 mobile-space">
+    <nav class="navbar navbar-expand-lg">
+     <a class="navbar-brand" href="index.html" id="logo" title="Theodore (Teddy) Lazebnik">
+      Theodore (Teddy) Lazebnik
+     </a>
+     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+      <img alt="menu" class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+       <li class="nav-item form-inline mobile" style="padding-bottom: 10px;">
+        <input aria-label="Search" class="form-control input-search" id="search-data" placeholder="Search" type="search"/>
+        <div class="input-group-append">
+         <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
+          <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
+         </button>
+        </div>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="index.html" title="home page">
+         Short Bio
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="publications.html" title="Publications">
+         Publications
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="opensource.html" title="Open Resources">
+         Open Resources
+        </a>
+       </li>
+       <li class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Teaching">
+         Teaching
+        </a>
+        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+         <a class="dropdown-item" href="courses/deep_leanring.html" title="Deep Learning">
+          Deep Learning
+         </a>
+         <a class="dropdown-item" href="courses/numerical.html" title="Numerical Analysis">
+          Numerical Analysis
+         </a>
+         <a class="dropdown-item" href="courses/linear_mathematical_optimization.html" title="Linear Optimization">
+          Linear Optimization
+         </a>
+         <a class="dropdown-item" href="courses/tools_numerical_analysis.html" title="Tools For Numerical Analysis">
+          Tools For Numerical Analysis
+         </a>
+         <div class="dropdown-divider">
+         </div>
+         <a class="dropdown-item" href="teaching.html" title="All classes">
+          All classes
+         </a>
+        </div>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="students.html" title="Students">
+         Students
+        </a>
+       </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0 desktop">
+       <input aria-label="Search" class="form-control input-search" id="search-data-2" placeholder="Search" type="search"/>
+       <div class="input-group-append">
+        <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
+         <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
+        </button>
+       </div>
+      </div>
+     </div>
+    </nav>
+    <div class="body">
+     <div class="fluid-container">
+      <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="info">
+         <div class="alert alert-danger alert-dismissible fade show" id="error-search" role="alert" style="display: none">
+          <strong>
+           Page Not found
+          </strong>
+          , I am still working on our inner website search engine. Try again or use the navigation bar.
+          <button aria-label="Close" class="close" onclick="return closeSearchAlert()" type="button">
+           <span aria-hidden="true">
+            ×
+           </span>
+          </button>
+         </div>
+         <h1 style="text-align: center;">
+          חיבור מערכות מילים
+         </h1>
+         <div id="train_panel">
+          <p>
+           <b>
+            Loading Data Panel
+           </b>
+          </p>
+          <p>
+           Load the data file you wish to work on. You can download the default data set and upload it as well.
+           <br/>
+           <b>
+            Note:
+           </b>
+           Loading process may take up to few seconds...
+           <br/>
+           <br/>
+          </p>
+          <form style="text-align: left;">
+           <div class="form-group">
+            <label for="dataFile">
+             Source and reaction data file
+            </label>
+            <input class="form-control" id="dataFile" placeholder="Source and reaction data file" type="file"/>
+            <br/>
+            <a class="btn btn-info pull-right" href="data/source_and_reaction_data.txt" target="_blank" title="Show Default Set">
+             Show Default Set
+            </a>
+           </div>
+          </form>
+          <p>
+           How to use the system:
+           <ol>
+            <li>
+             Upload the data file (includes the source and reaction words in a list in each line separate by ",".
+            </li>
+            <li>
+             You will see the source word and response words (source in the box and the response in a list). Each one will have index next to it.
+            </li>
+            <li>
+             Add the indexes of the words of the same group into the "Group words indexes" input box with "," between each index.
+            </li>
+            <li>
+             You may add the group to exsiting group using the "add to group" button and feeling the group index. You can add as new group using the "add to new group" button.
+            </li>
+            <li>
+             You can go to the next set or previous set each time. A mark saying on which set you are at will be shown on the top of the window.
+            </li>
+            <li>
+             Make sure to save the working process from time to time and when you done. The saving will keep your currnet location and groups and be used next time you need to upload your work.
+            </li>
+            <li>
+             <b>
+              Note:
+             </b>
+             Your work will be auto saved each 5 minutes to make sure you do not lost too much work in case you forget to save it yourself.
+            </li>
+           </ol>
+          </p>
+          <form style="text-align: left;">
+           <div class="form-group">
+            <label for="wordsPeerFile">
+             (One time) Convert your file of peers of words to the dataset needed for the grouper system
+            </label>
+            <input class="form-control" id="wordsPeerFile" placeholder="Source and reaction peers file" type="file"/>
+           </div>
+          </form>
+         </div>
+         <div id="inferance_panel" style="display: none">
+          <div class="row">
+           <div class="col-lg-5 col-md-5 col-sm-12" style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; ">
+            <p id="IndexWord" style="font-size: 18pt;">
+             אינדקס בדיקה
+            </p>
+           </div>
+           <div class="col-lg-5 col-md-5 col-sm-12" style="margin: 20px 3.5%; text-align: center; border: 2px black solid; border-radius: 10px; background-color: #eee; font-size: 18pt;">
+            <p id="firstWord" style="font-size: 18pt;">
+             מילת גירוי
+            </p>
+           </div>
+          </div>
+          <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="progress" style="height: 30px; font-weight: bold;">
+             <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar" id="pb" role="progressbar" style="font-size: 14pt; line-height: 1.8; width: 25%;">
+              25%
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="row">
+           <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+              <h1 style=" margin-right: 3%;">
+               הגדרת מילים זהות
+              </h1>
+             </div>
+            </div>
+            <div class="row">
+             <div class="col-lg-11 col-md-11 col-sm-11" style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #edffff;">
+              <p id="responseWordsSame" style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+              </p>
+             </div>
+            </div>
+            <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+              <h1 style=" margin-right: 3%;">
+               מילים זהות
+              </h1>
+             </div>
+            </div>
+            <div class="row">
+             <div class="col-lg-11 col-md-11 col-sm-11" style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #edffff;">
+              <p id="groupsSame" style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+              </p>
+             </div>
+            </div>
+            <form style="text-align: right;">
+             <div class="form-group">
+              <label for="group_indexes">
+               האינקסים של המילים
+              </label>
+              <input class="form-control" id="group_indexes_same" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק" type="text"/>
+              <small>
+               לדגומה: 0,1,4,5,7
+              </small>
+             </div>
+            </form>
+            <div class="row">
+             <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+               <input class="form-control" id="class_index_same" placeholder="שם הקבוצה" style="width: 50%; display: inline;" type="text"/>
+               <button class="btn btn-warning" onclick="addToGroupSame();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">
+                הוסף לקבוצה הנבחרת
+               </button>
+              </div>
+             </div>
+             <div class="col-lg-6 col-md-6 col-sm-12">
+              <input class="form-control" id="class_new_index_same" placeholder="שם חדש לקבוצה" style="width: 50%; display: inline;" type="text"/>
+              <button class="btn btn-warning" onclick="addToNewGroupSame();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">
+               הוסף לקבוצה חדשה
+              </button>
+             </div>
+            </div>
+           </div>
+           <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+              <h1 style=" margin-right: 3%;">
+               מיון מילות תגובה לקבוצות מילים
+              </h1>
+             </div>
+            </div>
+            <div class="row">
+             <div class="col-lg-11 col-md-11 col-sm-11" style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fbf2ff;">
+              <p id="responseWords" style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+              </p>
+             </div>
+            </div>
+            <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right;">
+              <h1 style=" margin-right: 3%;">
+               קבוצות מילים
+              </h1>
+             </div>
+            </div>
+            <div class="row">
+             <div class="col-lg-11 col-md-11 col-sm-11" style="margin-top: 20px; margin-bottom: 20px; margin-left: 4%; margin-right: 4%; text-align: right; border: 2px black solid; border-radius: 10px; background-color: #fbf2ff;">
+              <p id="groups" style="font-size: 12pt; max-height: 400px;  overflow-y: auto; overflow-x: auto;">
+              </p>
+             </div>
+            </div>
+            <form style="text-align: right;">
+             <div class="form-group">
+              <label for="group_indexes">
+               האינקסים של המילים
+              </label>
+              <input class="form-control" id="group_indexes" placeholder="רשום את האינקסים של המילים פה כאשר ביניהם יש פסיק" type="text"/>
+              <small>
+               לדגומה: 0,1,4,5,7
+              </small>
+             </div>
+            </form>
+            <div class="row">
+             <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+               <input class="form-control" id="class_index" placeholder="שם הקבוצה" style="width: 50%; display: inline;" type="text"/>
+               <button class="btn btn-warning" onclick="addToGroup();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">
+                הוסף לקבוצה הנבחרת
+               </button>
+              </div>
+             </div>
+             <div class="col-lg-6 col-md-6 col-sm-12">
+              <input class="form-control" id="class_new_index" placeholder="שם חדש לקבוצה" style="width: 50%; display: inline;" type="text"/>
+              <button class="btn btn-warning" onclick="addToNewGroup();" style="width: 45%;  margin-top: 10px; margin-bottom: 10px;">
+               הוסף לקבוצה חדשה
+              </button>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="row">
+           <div class="col-lg-4 col-md-4 col-sm-12">
+            <button class="btn btn-primary btn-lg" onclick="next();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">
+             לקבוצת המילים הבאה
+            </button>
+           </div>
+           <div class="col-lg-4 col-md-4 col-sm-12">
+            <button class="btn btn-success btn-lg" onclick="downloadData();" style=" width: 100%; margin-top: 10px; margin-bottom: 10px;">
+             שמור עבודה
+            </button>
+           </div>
+           <div class="col-lg-4 col-md-4 col-sm-12">
+            <button class="btn btn-primary btn-lg" onclick="previous();" style="width: 100%; margin-top: 10px; margin-bottom: 10px;">
+             לקבוצת המילים הקודמת
+            </button>
+           </div>
+          </div>
+          <div class="row" style="margin-top: 100px;">
+           <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="form-group">
+             <input class="form-control" id="jump_index" min="0" placeholder=" אינדקס הסט שתרצה לעבור אליו" style="width: 50%; display: inline;" type="number"/>
+             <button class="btn btn-danger" onclick="jumpWordIndex();" style="width: 45%; margin-top: 10px; margin-bottom: 10px;">
+              עבור לסט מילים המתאים
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<!-- Random image generator -->
+<script>
+ let data = "";
 	let groups = [];
 	let groupsSame = [];
 	let readyData = [];
@@ -1011,13 +1100,18 @@
 		var dateTime = date+' '+time;
 		return dateTime;
 	}
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script> 
-	<script src="js/search.js"></script>	
-</body>
-</html>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+</script>
+<script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+</script>
+<script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+</script>
+<script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+</script>
+<script src="js/main.js">
+</script>
+<script src="js/search.js">
+</script>

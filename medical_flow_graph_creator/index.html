@@ -1,146 +1,237 @@
 <html>
-<head>
-	<title>Medical Nanorobotics Flow Graph</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Medical Nanorobotics Flow Graph Generator GUI with special abilities (part of Teddy Lazebnik's Ph.D. research)" name="description">
-    <meta content="Teddy Lazebnik" name="author">
-	<link rel='icon' href='../img/favicon.ico' type='image/x-icon'/ >
-	
-  <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+ <head>
+  <title>
+   Medical Nanorobotics Flow Graph
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Medical Nanorobotics Flow Graph Generator GUI with special abilities (part of Teddy Lazebnik's Ph.D. research)" name="description"/>
+  <meta content="Teddy Lazebnik" name="author"/>
+  <link href="../img/favicon.ico" rel="icon" type="image/x-icon"/>
+  <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js" type="text/javascript">
+  </script>
   <!-- uncomment lines below to include extra p5 libraries -->
-  <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" rel="stylesheet"/>
   <!--<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.js"></script>-->
-  <script language="javascript" type="text/javascript" src="ds.js"></script>
-  <script language="javascript" type="text/javascript" src="math.js"></script>
-  <script language="javascript" type="text/javascript" src="gui.js"></script>
-  <script language="javascript" type="text/javascript" src="vassal_calculator.js"></script>
-  <script language="javascript" type="text/javascript" src="sketch.js"></script>
-  <script language="javascript" type="text/javascript" src="flow_graph.js"></script>
-  <script language="javascript" type="text/javascript" src="edge.js"></script>
-  <script language="javascript" type="text/javascript" src="node.js"></script>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script language="javascript" type="text/javascript" src="chart.js"></script>
-  
-  <link rel="stylesheet" type="text/css" href="plot_style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-</head>
-<body>
-	<div class="">
-		<div class="row center spacer">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h1 class="center head">Medical Nanorobotics Flow Graph Generator</h1>
-			</div>
-		</div>
-		<div id="main">
-			<div class="row spacer">
-				<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2" id="game-holder">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<p>
-								Operation rules:
-								<ol>
-									<li> Click on the screen to add a node</li>
-									<li> Click on a node to pick it, click again to unpick it</li>
-									<li> Pick two nodes to add a edge between them</li>
-									<li> Pick two nodes to add a edge between them</li>
-									<li> Hold "shift" to enter delete mode, click on either node or edge to delete it</li>
-									<li> Hold "E" to enter edit \ info mode, click on a node to edit it</li>
-									<li> Hit "O" to 'add Organ node' mode</li>
-									<li> Hit "B" to 'add Blood Vassal node' mode</li>
-									<li> Hit "A" to 'add Artery edge' mode</li>
-									<li> Hit "V" to 'add Vein edge' mode</li>
-									<li> Hit "P" to enter the "presentation" mode showing the full stracture of the graph (hit again to return to edit mode)</li>
-									<li> Hit "S" to save your work into Python code and JS model</li>
-									<li> Hit "L" to open load model screen</li>
-									<li> Hit "R" to release the flow graph with the additinal info for the full model</li>
-									<li> Hold "shift + crtl" to add a Rat's model vassal nodes edge between two node</li>
-									<li> Hit "crtl + z" to undo the last action (up to 10 actions)</li>
-									<li> Hit "crtl + p" to copy the graph with the negative flow next to the original graph (1 time per graph)</li>
-								</ol>
-							</p>
-							<p>
-								Visual view
-								<ol>
-									<li> Yellow dot: blood vassal node</li>
-									<li> Perpule dot: organ node</li>
-									<li> Blue line: Artery edge</li>
-									<li> Red line: Vien edge</li>
-									<li> Red line: Vien edge</li>
-									<li> Green line: line with multiple nodes from spesific organ</li>
-								</ol>
-							</p>
-						</div>
-						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-							<div class="stat-box bg-grad-default">
-								<h2>Nodes #</h2>
-								<p id="nodes_count">0</p>
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-							<div class="stat-box bg-grad-default">
-								<h2>Edges #</h2>
-								<p id="edges_count">0</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
-						<form>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-								<div class="form-group">
-									<label for="node_id">Node Id</label>
-									<input type="number" min="1" class="form-control" id="node_id" placeholder="Node Id">
-								</div>
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-								<div class="form-group">
-									<button class="btn btn-block btn-primary" onclick="return pickNode();" style="margin-top: 24px;"> Mark </button>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
-						<form>
-							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-								<div class="form-group">
-									<label for="node_type">Node Type</label>
-									<select id="node_type" class="form-control" onchange="return changeNodeStatus();">
-										<option value="o" selected> Organ </option> 
-										<option value="b"> Blood Vassal </option> 
-									</select>
-							  </div>
-							</div>
-							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-							  <div class="form-group">
-								<label for="edge_type">Edge Type</label>
-								<select id="edge_type" class="form-control" onchange="return changeEdgeStatus();">
-									<option value="a" selected> Artery </option> 
-									<option value="v"> Vein </option> 
-								</select>
-							  </div>
-							</div>
-							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-							  <div class="form-group">
-								<label for="edge_w">Edge weight</label>
-								<input type="number" min="0" max="10000" class="form-control" id="edge_w" placeholder="Edge Score" value="10000">
-							  </div>
-							</div>
-						</form>
-					</div>
-					<!-- The game-->
-					<div id="game"></div>
-					<!-- End - The game-->
-				</div>
-			</div>
-			<div class="row spacer">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
-					<div id="histogramGraph"></div>
-					<p> State distribution over population per generation</p>
-				</div>
-			</div>
-			<div class="row spacer">
-				<!--
+  <script language="javascript" src="ds.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="math.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="gui.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="vassal_calculator.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="sketch.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="flow_graph.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="edge.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="node.js" type="text/javascript">
+  </script>
+  <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="chart.js" type="text/javascript">
+  </script>
+  <link href="plot_style.css" rel="stylesheet" type="text/css"/>
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="">
+   <div class="row center spacer">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+     <h1 class="center head">
+      Medical Nanorobotics Flow Graph Generator
+     </h1>
+    </div>
+   </div>
+   <div id="main">
+    <div class="row spacer">
+     <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2" id="game-holder">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p>
+         Operation rules:
+         <ol>
+          <li>
+           Click on the screen to add a node
+          </li>
+          <li>
+           Click on a node to pick it, click again to unpick it
+          </li>
+          <li>
+           Pick two nodes to add a edge between them
+          </li>
+          <li>
+           Pick two nodes to add a edge between them
+          </li>
+          <li>
+           Hold "shift" to enter delete mode, click on either node or edge to delete it
+          </li>
+          <li>
+           Hold "E" to enter edit \ info mode, click on a node to edit it
+          </li>
+          <li>
+           Hit "O" to 'add Organ node' mode
+          </li>
+          <li>
+           Hit "B" to 'add Blood Vassal node' mode
+          </li>
+          <li>
+           Hit "A" to 'add Artery edge' mode
+          </li>
+          <li>
+           Hit "V" to 'add Vein edge' mode
+          </li>
+          <li>
+           Hit "P" to enter the "presentation" mode showing the full stracture of the graph (hit again to return to edit mode)
+          </li>
+          <li>
+           Hit "S" to save your work into Python code and JS model
+          </li>
+          <li>
+           Hit "L" to open load model screen
+          </li>
+          <li>
+           Hit "R" to release the flow graph with the additinal info for the full model
+          </li>
+          <li>
+           Hold "shift + crtl" to add a Rat's model vassal nodes edge between two node
+          </li>
+          <li>
+           Hit "crtl + z" to undo the last action (up to 10 actions)
+          </li>
+          <li>
+           Hit "crtl + p" to copy the graph with the negative flow next to the original graph (1 time per graph)
+          </li>
+         </ol>
+        </p>
+        <p>
+         Visual view
+         <ol>
+          <li>
+           Yellow dot: blood vassal node
+          </li>
+          <li>
+           Perpule dot: organ node
+          </li>
+          <li>
+           Blue line: Artery edge
+          </li>
+          <li>
+           Red line: Vien edge
+          </li>
+          <li>
+           Red line: Vien edge
+          </li>
+          <li>
+           Green line: line with multiple nodes from spesific organ
+          </li>
+         </ol>
+        </p>
+       </div>
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="stat-box bg-grad-default">
+         <h2>
+          Nodes #
+         </h2>
+         <p id="nodes_count">
+          0
+         </p>
+        </div>
+       </div>
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="stat-box bg-grad-default">
+         <h2>
+          Edges #
+         </h2>
+         <p id="edges_count">
+          0
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
+       <form>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+         <div class="form-group">
+          <label for="node_id">
+           Node Id
+          </label>
+          <input class="form-control" id="node_id" min="1" placeholder="Node Id" type="number"/>
+         </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+         <div class="form-group">
+          <button class="btn btn-block btn-primary" onclick="return pickNode();" style="margin-top: 24px;">
+           Mark
+          </button>
+         </div>
+        </div>
+       </form>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1">
+       <form>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+         <div class="form-group">
+          <label for="node_type">
+           Node Type
+          </label>
+          <select class="form-control" id="node_type" onchange="return changeNodeStatus();">
+           <option selected="" value="o">
+            Organ
+           </option>
+           <option value="b">
+            Blood Vassal
+           </option>
+          </select>
+         </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+         <div class="form-group">
+          <label for="edge_type">
+           Edge Type
+          </label>
+          <select class="form-control" id="edge_type" onchange="return changeEdgeStatus();">
+           <option selected="" value="a">
+            Artery
+           </option>
+           <option value="v">
+            Vein
+           </option>
+          </select>
+         </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+         <div class="form-group">
+          <label for="edge_w">
+           Edge weight
+          </label>
+          <input class="form-control" id="edge_w" max="10000" min="0" placeholder="Edge Score" type="number" value="10000"/>
+         </div>
+        </div>
+       </form>
+      </div>
+      <!-- The game-->
+      <div id="game">
+      </div>
+      <!-- End - The game-->
+     </div>
+    </div>
+    <div class="row spacer">
+     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+      <div id="histogramGraph">
+      </div>
+      <p>
+       State distribution over population per generation
+      </p>
+     </div>
+    </div>
+    <div class="row spacer">
+     <!--
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center" id="blood_vassal_node_form">
 					<h3>Model's Blood Vassal Node Physical Size </h3>
 					<form>
@@ -172,183 +263,246 @@
 					</form>
 				</div>
 				-->
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
-					<h3>Table of rat's main vassals </h3>
-					<p></p>
-					<table class="table">
-					  <thead>
-						<tr>
-						  <th scope="col">#</th>
-						  <th scope="col">Name</th>
-						  <th scope="col">Length (mm)</th>
-						  <th scope="col">Diameter (mm)</th>
-						  <th scope="col">Distensibility (10^-3 1/ mmHg)</th>
-						  <th scope="col">Model Blood Nodes</th>
-						</tr>
-					  </thead>
-					  <tbody id="vassals_table">
-					  </tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- pop ups -->
-	
-	<div class="modal fade" id="organ_add_panel" tabindex="-1" role="dialog" aria-labelledby="organ_add_panel_label" aria-hidden="true" style="opacity: 1; top: 40%; padding-top: 20px;">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h5 class="modal-title" id="organ_add_panel_label">Organ Settings</h5>
-		  </div>
-		  <div class="modal-body">
-			<form>
-				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-					<div class="form-group">
-						<label for="organ_name">Name</label>
-						<input type="text" class="form-control" id="organ_name" placeholder="Organ Name">
-				  </div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-				  <div class="form-group">
-					<label for="lip">LIP</label>
-					<input type="text" class="form-control" id="lip" placeholder="Local Interaction Protocol">
-				  </div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-				  <div class="form-group">
-					<label for="ts">Time Span</label>
-					<input type="number" min="1" max="999" class="form-control" id="ts" placeholder="Time Span">
-				  </div>
-				</div>
-			</form>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-success btn-lg" onclick="return setOrganNodeSettings();">Add</button>
-		  </div>
-		</div>
-	  </div>
-	</div>
-	
-	<div class="modal fade" id="rat_blood_vassal_panel" tabindex="-1" role="dialog" aria-labelledby="rat_blood_vassal_label" aria-hidden="true" style="opacity: 1; top: 40%; padding-top: 20px;">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h5 class="modal-title" id="rat_blood_vassal_label">Rat Blood Vassal Used</h5>
-		  </div>
-		  <div class="modal-body">
-			<form>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="form-group">
-						<label for="model_bv_node_count">Model Blood Vassal Node Count</label>
-						<select id="model_bv_node_count" class="form-control">
-							<option value=""> Pick Rat Vassal </option>
-						</select>
-						<input type="hidden" id="value_holder_rat_blood_vassals" value="">
-						<input type="hidden" id="value_holder_rat_blood_vassals_name" value="">
-				  </div>
-				</div>
-			</form>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-success btn-lg" onclick="return PickRatBloodVassal();">Pick</button>
-		  </div>
-		</div>
-	  </div>
-	</div>
-	
-	<div class="modal fade" id="load_data_file" tabindex="-1" role="dialog" aria-labelledby="load_data_file_label" aria-hidden="true" style="opacity: 1; top: 40%; padding-top: 20px;">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h5 class="modal-title" id="load_data_file_label">Load Model</h5>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="return closeLoadModelPanel();">
-			  <span aria-hidden="true">&times;</span>
-			</button>
-		  </div>
-		  <div class="modal-body">
-			<form>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="form-group">
-						<label for="fg_load_file">Flow Graph File</label>
-						<input type="file" class="form-control" id="fg_load_file" placeholder="Flow Graph File">
-				  </div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<a class="btn btn-warning" target="_blank" href="343_nodes_model.txt" style="margin-top: 20px;"> 343 Rat model's file (1 organ)</a><br>
-					<a class="btn btn-warning" target="_blank" href="467_nodes_7_organs.txt" style="margin-top: 20px;"> 467 Rat model's file (7 organs) </a><br>
-					<a class="btn btn-warning" target="_blank" href="full_934_nodes_7_organs.txt" style="margin-top: 20px;">Circular 934 Rat model's file (6 organs) </a>
-				</div>
-			</form>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal" onclick="return closeLoadModelPanel();">Cancel</button>
-		  </div>
-		</div>
-	  </div>
-	</div>
-	
-	<div class="modal fade" id="release_fg_panel" tabindex="-1" role="dialog" aria-labelledby="release_fg_panel_label" aria-hidden="true" style="opacity: 1; top: 25%; padding-top: 20px;">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h5 class="modal-title" id="release_fg_panel_label">Release Model</h5>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="return closeReleasePanel();">
-			  <span aria-hidden="true">&times;</span>
-			</button>
-		  </div>
-		  <div class="modal-body">
-			<form>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="form-group">
-						<label for="population_of_nanorobotics_size">Population Of Nanorobotics Size</label>
-						<input type="number" min="1" max="9999999" class="form-control" id="population_of_nanorobotics_size" placeholder="Population Of Nanorobotics Size">
-				  </div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				  <div class="form-group">
-						<label for="population_of_nanorobotics_half_life">Population Of Nanorobotics Half Life</label>
-						<input type="number" min="1" max="9999999" class="form-control" id="population_of_nanorobotics_half_life" placeholder="Population Of Nanorobotics Half Life">
-				  </div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				  <div class="form-group">
-					<label for="mnr_state_code">MNR state code</label>
-					<input type="text" class="form-control" id="mnr_state_code" placeholder="MNR state code">
-				  </div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				  <div class="form-group">
-						<label for="injection_node_index">Injection Node Index</label>
-						<input type="number" min="1" class="form-control" id="injection_node_index" placeholder="Injection Node Index">
-				  </div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				  <div class="form-group">
-					<label for="global_interaction_protocol">Global Interaction Protocol</label>
-					<input type="text" class="form-control" id="global_interaction_protocol" placeholder="Global Interaction Protocol">
-				  </div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				  <div class="form-group">
-					<label for="drugs">Drugs</label>
-					<input type="text" class="form-control" id="drugs" placeholder="Drugs">
-				  </div>
-				</div>
-			</form>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal" onclick="return closeReleasePanel();">Cancel</button>
-			<button type="button" class="btn btn-success btn-lg" onclick="return releaseModel();">Download</button>
-		  </div>
-		</div>
-	  </div>
-	</div>
-	<!-- end - pop ups -->
-	
-	<script>
-		var data = null;
+     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+      <h3>
+       Table of rat's main vassals
+      </h3>
+      <p>
+      </p>
+      <table class="table">
+       <thead>
+        <tr>
+         <th scope="col">
+          #
+         </th>
+         <th scope="col">
+          Name
+         </th>
+         <th scope="col">
+          Length (mm)
+         </th>
+         <th scope="col">
+          Diameter (mm)
+         </th>
+         <th scope="col">
+          Distensibility (10^-3 1/ mmHg)
+         </th>
+         <th scope="col">
+          Model Blood Nodes
+         </th>
+        </tr>
+       </thead>
+       <tbody id="vassals_table">
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- pop ups -->
+  <div aria-hidden="true" aria-labelledby="organ_add_panel_label" class="modal fade" id="organ_add_panel" role="dialog" style="opacity: 1; top: 40%; padding-top: 20px;" tabindex="-1">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title" id="organ_add_panel_label">
+       Organ Settings
+      </h5>
+     </div>
+     <div class="modal-body">
+      <form>
+       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="form-group">
+         <label for="organ_name">
+          Name
+         </label>
+         <input class="form-control" id="organ_name" placeholder="Organ Name" type="text"/>
+        </div>
+       </div>
+       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="form-group">
+         <label for="lip">
+          LIP
+         </label>
+         <input class="form-control" id="lip" placeholder="Local Interaction Protocol" type="text"/>
+        </div>
+       </div>
+       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="form-group">
+         <label for="ts">
+          Time Span
+         </label>
+         <input class="form-control" id="ts" max="999" min="1" placeholder="Time Span" type="number"/>
+        </div>
+       </div>
+      </form>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-success btn-lg" onclick="return setOrganNodeSettings();" type="button">
+       Add
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div aria-hidden="true" aria-labelledby="rat_blood_vassal_label" class="modal fade" id="rat_blood_vassal_panel" role="dialog" style="opacity: 1; top: 40%; padding-top: 20px;" tabindex="-1">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title" id="rat_blood_vassal_label">
+       Rat Blood Vassal Used
+      </h5>
+     </div>
+     <div class="modal-body">
+      <form>
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+         <label for="model_bv_node_count">
+          Model Blood Vassal Node Count
+         </label>
+         <select class="form-control" id="model_bv_node_count">
+          <option value="">
+           Pick Rat Vassal
+          </option>
+         </select>
+         <input id="value_holder_rat_blood_vassals" type="hidden" value=""/>
+         <input id="value_holder_rat_blood_vassals_name" type="hidden" value=""/>
+        </div>
+       </div>
+      </form>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-success btn-lg" onclick="return PickRatBloodVassal();" type="button">
+       Pick
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div aria-hidden="true" aria-labelledby="load_data_file_label" class="modal fade" id="load_data_file" role="dialog" style="opacity: 1; top: 40%; padding-top: 20px;" tabindex="-1">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title" id="load_data_file_label">
+       Load Model
+      </h5>
+      <button aria-label="Close" class="close" data-dismiss="modal" onclick="return closeLoadModelPanel();" type="button">
+       <span aria-hidden="true">
+        ×
+       </span>
+      </button>
+     </div>
+     <div class="modal-body">
+      <form>
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+         <label for="fg_load_file">
+          Flow Graph File
+         </label>
+         <input class="form-control" id="fg_load_file" placeholder="Flow Graph File" type="file"/>
+        </div>
+       </div>
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <a class="btn btn-warning" href="343_nodes_model.txt" style="margin-top: 20px;" target="_blank" title="343 Rat model's file (1 organ)">
+         343 Rat model's file (1 organ)
+        </a>
+        <br/>
+        <a class="btn btn-warning" href="467_nodes_7_organs.txt" style="margin-top: 20px;" target="_blank" title="467 Rat model's file (7 organs)">
+         467 Rat model's file (7 organs)
+        </a>
+        <br/>
+        <a class="btn btn-warning" href="full_934_nodes_7_organs.txt" style="margin-top: 20px;" target="_blank" title="Circular 934 Rat model's file (6 organs)">
+         Circular 934 Rat model's file (6 organs)
+        </a>
+       </div>
+      </form>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-secondary btn-lg" data-dismiss="modal" onclick="return closeLoadModelPanel();" type="button">
+       Cancel
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div aria-hidden="true" aria-labelledby="release_fg_panel_label" class="modal fade" id="release_fg_panel" role="dialog" style="opacity: 1; top: 25%; padding-top: 20px;" tabindex="-1">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title" id="release_fg_panel_label">
+       Release Model
+      </h5>
+      <button aria-label="Close" class="close" data-dismiss="modal" onclick="return closeReleasePanel();" type="button">
+       <span aria-hidden="true">
+        ×
+       </span>
+      </button>
+     </div>
+     <div class="modal-body">
+      <form>
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+         <label for="population_of_nanorobotics_size">
+          Population Of Nanorobotics Size
+         </label>
+         <input class="form-control" id="population_of_nanorobotics_size" max="9999999" min="1" placeholder="Population Of Nanorobotics Size" type="number"/>
+        </div>
+       </div>
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+         <label for="population_of_nanorobotics_half_life">
+          Population Of Nanorobotics Half Life
+         </label>
+         <input class="form-control" id="population_of_nanorobotics_half_life" max="9999999" min="1" placeholder="Population Of Nanorobotics Half Life" type="number"/>
+        </div>
+       </div>
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+         <label for="mnr_state_code">
+          MNR state code
+         </label>
+         <input class="form-control" id="mnr_state_code" placeholder="MNR state code" type="text"/>
+        </div>
+       </div>
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+         <label for="injection_node_index">
+          Injection Node Index
+         </label>
+         <input class="form-control" id="injection_node_index" min="1" placeholder="Injection Node Index" type="number"/>
+        </div>
+       </div>
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+         <label for="global_interaction_protocol">
+          Global Interaction Protocol
+         </label>
+         <input class="form-control" id="global_interaction_protocol" placeholder="Global Interaction Protocol" type="text"/>
+        </div>
+       </div>
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+         <label for="drugs">
+          Drugs
+         </label>
+         <input class="form-control" id="drugs" placeholder="Drugs" type="text"/>
+        </div>
+       </div>
+      </form>
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-secondary btn-lg" data-dismiss="modal" onclick="return closeReleasePanel();" type="button">
+       Cancel
+      </button>
+      <button class="btn btn-success btn-lg" onclick="return releaseModel();" type="button">
+       Download
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- end - pop ups -->
+  <script>
+   var data = null;
 		function update_table_velocity()
 		{
 			// load data
@@ -502,7 +656,6 @@
 			// build options list
 			add_select_options();
 		});
-	</script>
-	
-</body>
+  </script>
+ </body>
 </html>
