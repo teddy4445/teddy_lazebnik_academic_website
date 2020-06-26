@@ -175,6 +175,12 @@
 									provide practical tools for using them. The course focuses mainly on image processing
 									and, consequently, on convolutional neural networks.
          </p>
+		 <h3>
+          Final Projects Page
+         </h3>
+         <a class="btn btn-primary" href="deep_leanring_presentations.html" title="Student's final deep learning projects">
+          Check out the student's final projects 
+         </a>
          <h3>
           Sources
          </h3>
@@ -505,11 +511,44 @@
           Go to random poses dataset page
          </a>
          <h3>
-          Submission Table
+          <br>Submission Table
          </h3>
+         <h4>
+          Final Grade
+         </h4>
+			<b>Note:</b> the score is calculated using the weights [0.7, 0.3].
+         <table class="table table-striped">
+          <thead>
+           <tr>
+            <th scope="col">
+             #
+            </th>
+            <th scope="col">
+             ID number
+            </th>
+            <th scope="col">
+             Project Grade
+            </th>
+            <th scope="col">
+             HW Grade
+            </th>
+            <th scope="col">
+             Final Grade
+            </th>
+           </tr>
+          </thead>
+          <tbody id="table_data_3">
+          </tbody>
+         </table>
+         <p class="table-message">
+          This table is not shown in mobile version
+         </p>
          <h4>
           Project
          </h4>
+		 <p>
+			<b>Note:</b> the score is calculated using the weights [0.1, 0.25, 0.25, 0.1, 0.1, 0.2].
+		 </p>
          <table class="table table-striped">
           <thead>
            <tr>
@@ -551,6 +590,9 @@
          <h4>
           Home Work
          </h4>
+		 <p>
+			<b>Note:</b> the score is calculated using the weights [0.33, 0.33, 0.33].
+		 </p>
          <table class="table table-striped">
           <thead>
            <tr>
@@ -605,17 +647,30 @@
 	printSubbmitionTable(table_data, students_data);
 	
 	let table_data2 = document.getElementById("table_data_2");
-	students_data = [["312188972", 0, 0, 0, 0, 0, 0],
-					 ["320489735", 0, 0, 0, 0, 0, 0],
-					 ["317186310", 0, 0, 0, 0, 0, 0],
-					 ["322869439", 0, 0, 0, 0, 0, 0],
-					 ["212360333", 0, 0, 0, 0, 0, 0],
-					 ["336377064", 0, 0, 0, 0, 0, 0],
-					 ["211513890", 0, 0, 0, 0, 0, 0],
-					 ["212172654", 0, 0, 0, 0, 0, 0],
-					 ["066530551", 0, 0, 0, 0, 0, 0],
-					 ["036532869", 0, 0, 0, 0, 0, 0]];
-	printSubbmitionTable(table_data2, students_data);
+	students_data = [["312188972", 100, 0, 0, 0, 0, 0],
+					 ["320489735", 100, 95, 80, 75, 95, 100],
+					 ["317186310", 100, 0, 0, 0, 0, 0],
+					 ["322869439", 100, 0, 0, 0, 0, 0],
+					 ["212360333", 100, 0, 0, 0, 0, 0],
+					 ["336377064", 100, 95, 80, 75, 95, 100],
+					 ["211513890", 100, 0, 0, 0, 0, 0],
+					 ["212172654", 100, 0, 0, 0, 0, 0],
+					 ["066530551", 100, 0, 0, 0, 0, 0],
+					 ["036532869", 100, 0, 0, 0, 0, 0]];
+	printSubbmitionTable(table_data2, students_data, [0.1, 0.25, 0.25, 0.1, 0.1, 0.2]);
+	
+	let table_data3 = document.getElementById("table_data_3");
+	final_grade = [["312188972", 0, 0],
+					 ["320489735", 91, 90],
+					 ["317186310", 0, 0],
+					 ["322869439", 0, 0],
+					 ["212360333", 0, 0],
+					 ["336377064", 91, 90],
+					 ["211513890", 0, 0],
+					 ["212172654", 0, 0],
+					 ["066530551", 0, 0],
+					 ["036532869", 0, 0]];
+	printSubbmitionTable(table_data3, final_grade, [0.7, 0.3]);
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
