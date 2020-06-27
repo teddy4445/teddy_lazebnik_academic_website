@@ -157,7 +157,36 @@
 			The following 5 projects have been developed by the students of the course as there final project. All the credit for the content is belongs to them of course.
          </p>
 		 
-         <h2>
+		 
+		 <div class="row" style="margin-bottom: 40px; margin-top: 40px;">
+			<div class="col-sm-1 col-md-1 col-lg-1">
+			</div>
+			
+			<div class="col-sm-2 col-md-2 col-lg-2">
+				<a style="margin-bottom: 20px;" class="btn btn-info" href="#proj1">Go To 'Figure Skating Jump Video Classification' project</a>
+			</div>
+			
+			<div class="col-sm-2 col-md-2 col-lg-2">
+				<a style="margin-bottom: 20px;" class="btn btn-info" href="#proj2">Go To 'The MURA challenge' project</a>
+			</div>
+			
+			<div class="col-sm-2 col-md-2 col-lg-2">
+				<a style="margin-bottom: 20px;" class="btn btn-info" href="#proj3">Go To 'Seasonal Color Classification' project</a>
+			</div>
+			
+			<div class="col-sm-2 col-md-2 col-lg-2">
+				<a style="margin-bottom: 20px;" class="btn btn-info" href="#proj4">Go To 'Colorization of grayscale images' project</a>
+			</div>
+			
+			<div class="col-sm-2 col-md-2 col-lg-2">
+				<a style="margin-bottom: 20px;" class="btn btn-info" href="#proj5">Go To 'Image Completion with DCGAN' project</a>
+			</div>
+			
+			<div class="col-sm-1 col-md-1 col-lg-1">
+			</div>
+		 </div>
+		 
+         <h2 id="proj1">
 			Figure Skating Jump Video Classification
          </h2>
          <h4>
@@ -167,7 +196,7 @@
 			
 		 </p>
 		 
-         <h2>
+         <h2 id="proj2">
 			The MURA challenge 
          </h2>
          <h4>
@@ -177,7 +206,7 @@
 			
 		 </p>
 		 
-         <h2>
+         <h2 id="proj3">
 			Seasonal Color Classification
          </h2>
          <h4>
@@ -187,7 +216,7 @@
 			
 		 </p>
 		 
-         <h2>
+         <h2 id="proj4">
 			Colorization of grayscale images
          </h2>
          <h4>
@@ -197,14 +226,26 @@
 			
 		 </p>
 		 
-         <h2>
-			Colorization of grayscale images
+         <h2 id="proj5">
+			Image Completion with DCGAN
          </h2>
          <h4>
-			By: Dan Levy and Shay Malchin
+			By: Dan Levy and Shay Malkin
          </h4>
          <p>
-			
+			This work aims to effectively solve the problem of image inpainting. Our goal is to inpaint an image
+of a human face that has missing areas of pixels in a way that looks natural to the human eye. Many
+methods have been used for solving this problem, the best of which is by using a trained Generative
+Adversarial Network to produce an image that resembles the corrupted image and use it to fill in
+the missing parts. In this work, we’ve built and trained our own Deep Convolutional Generative
+Adversarial Network and used it, with proper techniques to inpaint images.
+		 </p>
+		 <p>
+			<a style="margin-bottom: 20px;"  class="btn btn-primary btn-lg" target="_blank" title="Code and Paper" href="https://bitbucket.org/teddy_lazebnik/face-inpainting-using-a-dcgan/src/master/">Code + Paper</a>
+			<a style="margin-bottom: 20px;"  class="btn btn-primary btn-lg" target="_blank" title="Presentation" href="../files/students/dl_course/DCGAN Image Completion_presentation-converted.pdf">Presentation</a>
+		 </p>
+		 <p>
+			<embed src="../files/students/dl_course/deep_learning_poster-2020.pdf" width="100%" height="800px" />
 		 </p>
 		 
         </div>
@@ -218,31 +259,7 @@
 </html>
 <!-- student's HW score table -->
 <script>
- let table_data = document.getElementById("table_data");
-	students_data = [["312188972", 90, 100, 90],
-					 ["320489735", 95, 95, 80],
-					 ["317186310", 60, 75, 90],
-					 ["322869439", 100, 95, 100],
-					 ["212360333", 100, 95, 100],
-					 ["336377064", 95, 95, 80],
-					 ["211513890", 100, 100, 90],
-					 ["212172654", 100, 100, 90],
-					 ["066530551", 100, 100, 90],
-					 ["036532869", 100, 100, 90]];
-	printSubbmitionTable(table_data, students_data);
-	
-	let table_data2 = document.getElementById("table_data_2");
-	students_data = [["312188972", 0, 0, 0, 0, 0, 0],
-					 ["320489735", 0, 0, 0, 0, 0, 0],
-					 ["317186310", 0, 0, 0, 0, 0, 0],
-					 ["322869439", 0, 0, 0, 0, 0, 0],
-					 ["212360333", 0, 0, 0, 0, 0, 0],
-					 ["336377064", 0, 0, 0, 0, 0, 0],
-					 ["211513890", 0, 0, 0, 0, 0, 0],
-					 ["212172654", 0, 0, 0, 0, 0, 0],
-					 ["066530551", 0, 0, 0, 0, 0, 0],
-					 ["036532869", 0, 0, 0, 0, 0, 0]];
-	printSubbmitionTable(table_data2, students_data);
+ 
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
