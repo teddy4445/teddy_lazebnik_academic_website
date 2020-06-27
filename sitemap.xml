@@ -7,13 +7,13 @@
 
 <url>
   <loc>http://teddylazebnik.info/</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <lastmod>2020-06-26T20:16:36+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/index.html</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-06-26T20:16:36+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/publications.html</loc>
@@ -22,42 +22,42 @@
 </url>
 <url>
   <loc>http://teddylazebnik.info/opensource.html</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <lastmod>2020-06-22T20:16:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/courses/deep_leanring.html</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <lastmod>2020-06-26T20:16:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/courses/numerical.html</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <lastmod>2020-06-24T20:16:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/courses/linear_mathematical_optimization.html</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <lastmod>2020-06-21T20:16:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/teaching.html</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <lastmod>2020-06-22T20:16:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/students.html</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <lastmod>2020-06-22T20:16:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/he/index.html</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <lastmod>2020-06-26T20:16:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/ru/index.html</loc>
-  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <lastmod>2020-06-26T20:16:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -69,6 +69,11 @@
   <loc>http://teddylazebnik.info/summeries/matrix_exponent.html</loc>
   <lastmod>2020-05-26T20:16:36+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://teddylazebnik.info/files/matrix_exponent.pdf</loc>
+  <lastmod>2020-06-01T20:16:36+00:00</lastmod>
+  <priority>0.44</priority>
 </url>
 <url>
   <loc>http://teddylazebnik.info/summeries/bcg_pde_10_eq_paper.html</loc>
@@ -239,5 +244,40 @@
   <loc>http://teddylazebnik.info/courses/deep_leanring_knn_sample.html?dim=2</loc>
   <lastmod>2020-05-26T20:16:36+00:00</lastmod>
   <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://teddylazebnik.info/files/return_on_data.pdf</loc>
+  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://teddylazebnik.info/files/Treatment_of_Bladder_Cancer___conference.pdf</loc>
+  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://teddylazebnik.info/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf</loc>
+  <lastmod>2020-05-26T20:16:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://teddylazebnik.info/courses/deep_leanring_presentations.html</loc>
+  <lastmod>2020-06-27T10:45:16+00:00</lastmod>
+  <priority>0.66</priority>
+</url>
+<url>
+  <loc>https://teddylazebnik.info/medical_nanorobots_in_the_blood.html</loc>
+  <lastmod>2020-06-27T10:45:16+00:00</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://teddylazebnik.info/assosiative_words_grouper.html</loc>
+  <lastmod>2020-06-24T10:45:16+00:00</lastmod>
+  <priority>0.66</priority>
+</url>
+<url>
+  <loc>http://teddylazebnik.info/medical_flow_graph_creator/index.html</loc>
+  <lastmod>2020-06-18T10:45:16+00:00</lastmod>
+  <priority>0.66</priority>
 </url>
 </urlset>
