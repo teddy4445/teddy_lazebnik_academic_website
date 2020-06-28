@@ -45,8 +45,7 @@
      The Full Story
     </h1>
     <p>
-     Join us in the journey of medical nanorobotics in the blood system. In this journey, we will review the research steps needed to develop multi robotics medical 
-                treatment protocol.
+		Join us in the journey of medical nanorobotics in the circulatory system. In this journey, we will review the research steps needed to develop multi robotics medical treatment protocol.
     </p>
     <p>
      We will review the following steps:
@@ -75,8 +74,8 @@
                 The doctor (or AI platform) assesses the patient's condition and decides on a suitable treatment protocol.
     </p>
     <p>
-     In order to provide a  medical nanorobotics (MNRs) based personalized treatment, the system requires as input, the patient's data and the requested medicine (as identified by the doctor).
-                The system than generates a recipe for a printer to print personalized MNRs drug.
+		In order to provide a  medical nanorobotics (MNRs) based personalized treatment, the system requires as input, the patient's data and the requested medicine (as identified by the doctor).
+        The system then generates a recipe for a printer to print personalized MNRs drug.
     </p>
     <p>
      By a simple injection of the capsule's content to the bloodstream of the patient, the doctor can proceed to the next patient, knowing that the MNRs taking care of this patient.
@@ -136,10 +135,9 @@
      </a>
      develops the
      <a href="http://u.cs.biu.ac.il/~galk/publications/papers/ijcai16.pdf" target="_blank" title="Rule-Based Programming of Molecular Robot Swarms for Biomedical Applications">
-      Athelas programming language and the Bilbo compiler
+      Athelas programming language and the Bilbo compiler.
      </a>
-     .
-				Wiesel-Kapan et al. develop a rule-based programming language allowing the user to abstractly design the action of the population of different MNRs. The Bilbo compiler was able to provide a recipe of multiple types of MNRs with different payloads.
+	 Wiesel-Kapan et al. developed a rule-based programming language allowing the user to abstractly design the action of the population of different MNRs. The Bilbo compiler was able to provide a recipe of multiple types of MNRs with various payloads.
     </p>
     <p>
      It is possible to add to Wiesel-Kapan et al.'s model several elements to advance the model for what we want to achieve.
@@ -167,22 +165,22 @@
      The project is divided into six components.
      <ol>
       <li>
-       Rivendell - academic meta-search engine that in the scope of this project learn how MNR researches searching finding relevant papers on the subject.
+       Rivendell - academic meta-search engine that in the scope of this project learns how MNR researches finding relevant papers on the subject.
       </li>
       <li>
-       Elrond's MNR Library - a system that gets academic papers related to MNRs and extracts instances of MNRs with there properties.
+       Elrond's MNR Library - a system that gets academic papers related to MNRs and extracts instances of MNRs with their properties.
       </li>
       <li>
        Athelas Language - A programming language allowing to program MNR-based treatment protocols.
       </li>
       <li>
-       Bilbo \ Frodo compiler - a software that able to get a program written in Athelas and return a description (recipe) of the needed MNRs to the treatment.
+       Bilbo \ Frodo compiler - a software that is able to get a program written in Athelas and return a description (recipe) of the needed MNRs to the treatment.
       </li>
       <li>
        Nanosim Simulator - a simulator of the MNRs flow in the circulatory system.
       </li>
       <li>
-       Lembas Bread Recipe - A description language for a combination of different MNRs with varying properties and amounts.
+       Lembas Bread Recipe - A description language for a combination of different MNRs with varying properties and quantities.
       </li>
      </ol>
     </p>
@@ -211,7 +209,7 @@
      Bilbo Compiler
     </h1>
     <p>
-     The Bilbo compiler developed by Wiesel-Kapan et al. getting as input an Athelas-written program and returns a list of MNRs with the right parameters (specifically, their payload).
+     The Bilbo compiler developed by Wiesel-Kapan et al. is getting as input an Athelas-written program and returns a list of MNRs with the right parameters (specifically, their payload).
      <br/>
      The algorithm behind Bilbo shown to be
      <i>
@@ -220,7 +218,7 @@
      .
     </p>
     <p>
-     Bilbo is not able to tell the right amount of MNRs per MNR type with the specific parameters. In addition, the same MNR can be different in multiple parameters except for there payload.
+     Bilbo is not able to tell the right amount of MNRs per MNR type with the specific parameters. In addition, the same MNR can be different in multiple parameters except for their payload.
     </p>
     <p>
      Moreover, Bilbo is not able to make sure the actions, conditions, or location are biologically valid per the assigned MNR.
@@ -253,7 +251,7 @@
     </p>
     <p>
      Elrond's library is a system that takes academic papers in English in PDF file format and extracting instances of MNRs with there properties and values. 
-                After extracting the information, the system organizes it a rational database, while margin properties of the same MNR types and alerting conflicts in values for the same property.
+                After extracting the information, the system organizes it in a rational database, while merging properties of the same MNR types and alerting conflicts in values for the same property.
     </p>
     <p>
      Currently, a DB with 100 records and 5 properties has been extracted with a good accuracy. Multiple
@@ -271,21 +269,21 @@
      Rivendell
     </h1>
     <p>
-     <a href="rivendell.cs.biu.ac.il" target="_blank" title="rivendell search engine">
+     <a href="http://rivendell.cs.biu.ac.il" target="_blank" title="rivendell search engine">
       Rivendell
      </a>
      is an academic meta-search engine working on Pubmed and arXiv. Rivendell uses a new searching approach called "project-based search" designed by academics for academics.
     </p>
     <p>
-     Rivendell handles parallel search for different projects by asking the user to explicitly divide she searches into groups (called
+     Rivendell handles parallel search for different projects by asking the user to explicitly divide what she searches into groups (called
      <i>
       projects
      </i>
      ).
-                By explicitly marking search results as relevant and irrelevant, Rivendell learns the user's preferences and personalize the results over time for each project.
+                By explicitly marking search results as relevant and irrelevant, Rivendell learns the user's preferences and personalizes the results over time for each project.
     </p>
     <p>
-     In addition, Rivendell has a "back door" for MNR related searches - taking advantage of relevant marked search results from searches contains a list of entity words related to MNRs. In this way, Rivendell is gathering papers for Elrond's Library.
+     In addition, Rivendell has a "backdoor" for MNR related searches - taking advantage of relevant marked search results from searches contains a list of entity words related to MNRs. In this way, Rivendell is gathering papers for Elrond's Library.
     </p>
    </div>
    <div class="hover-element" id="panel_11" style="opacity: 0; display: none;">
