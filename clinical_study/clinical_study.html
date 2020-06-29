@@ -236,7 +236,8 @@
 		}
 		if (!is_broken)
 		{
-			document.getElementById("answer_" + name).innerHTML = "<h3>The prediction is: <b>" + sat(values) + "</b></h3>";
+			var predict_with_conf = sat(values);
+			document.getElementById("answer_" + name).innerHTML = "<h3>The prediction is: <b>" + predict_with_conf[0] + " with (" + predict_with_conf[1] + "% confidence)</b></h3>";
 		}
 		else
 		{
@@ -245,6 +246,7 @@
 		// just to make sure the form won't break
 		return false;
 	}
+	
 	function predict_postComplication1Y2N(values)
 	{
 	  if (values[9] <= 173.0)
