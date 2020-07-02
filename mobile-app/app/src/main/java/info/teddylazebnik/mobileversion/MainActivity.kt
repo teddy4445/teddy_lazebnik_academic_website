@@ -1,4 +1,4 @@
-package com.example.mobileversion
+package info.teddylazebnik.mobileversion
 
 import android.annotation.SuppressLint
 import android.content.Intent
