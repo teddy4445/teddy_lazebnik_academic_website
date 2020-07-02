@@ -112,6 +112,7 @@ button:focus{
 	color: #0E53A7;
 	margin-right: 0px;
 	margin-left: 0px;
+	padding-left: 30px !important;
 }
 
 .navbar a.dropdown-item:hover{
@@ -184,6 +185,7 @@ button:focus{
 		padding-top: 10px;
 		padding-bottom: 10px;
 		font-size: 12pt;
+		padding-left: 10px !important;
 	}
 
 	.navbar a:hover{
