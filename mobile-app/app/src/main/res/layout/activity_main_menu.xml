@@ -23,25 +23,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/mainHeaderText"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:gravity="center_vertical|center"
-                android:text="@string/menu_header"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:typeface="normal" />
-
             <Button
                 android:id="@+id/mainTeachingBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:drawableTop="@drawable/ic_launcher"
+                android:gravity="center_vertical|center"
+                android:drawableTop="@drawable/main_manu_teaching"
                 android:text="@string/main_menu_btn_1"
                 android:textColor="@android:color/white"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
                 android:textStyle="bold" />
 
             <Button
@@ -49,36 +41,52 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:drawableTop="@drawable/ic_launcher"
+                android:gravity="center_vertical|center"
+                android:drawableTop="@drawable/main_manu_code"
                 android:textColor="@android:color/white"
-                android:text="@string/main_menu_btn_2" />
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/main_menu_btn_2"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/mainTechnicalBlogBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:drawableTop="@drawable/ic_launcher"
+                android:gravity="center_vertical|center"
+                android:drawableTop="@drawable/main_manu_posts"
                 android:textColor="@android:color/white"
-                android:text="@string/main_menu_btn_3" />
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/main_menu_btn_3"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/mainAcademicStudentsBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:drawableTop="@drawable/ic_launcher"
+                android:gravity="center_vertical|center"
+                android:drawableTop="@drawable/main_manu_students"
                 android:textColor="@android:color/white"
-                android:text="@string/main_menu_btn_4" />
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/main_menu_btn_4"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/mainPublicationsBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:drawableTop="@drawable/ic_launcher"
+                android:gravity="center_vertical|center"
+                android:drawableTop="@drawable/main_manu_papers"
                 android:textColor="@android:color/white"
-                android:text="@string/main_menu_btn_5" />
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/main_menu_btn_5"
+                android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
 

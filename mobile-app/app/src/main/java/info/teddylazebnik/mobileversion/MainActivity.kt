@@ -11,22 +11,26 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
+    val EXTRA_MESSAGE = "info.teddylazebnik.mobileversion.MESSAGE"
+
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        openWebView()
+
+        // Get the Intent that started this activity and extract the string
+        openWebView(intent.getStringExtra(EXTRA_MESSAGE))
     }
 
     /*
         Open the website's on full screen as the application
      */
-    private fun openWebView()
+    private fun openWebView(pageUrl: String)
     {
         val mWebView = findViewById<WebView>(R.id.website)
         val webSettings = mWebView.settings
         webSettings.javaScriptEnabled = true
-        mWebView.loadUrl(getString(R.string.website_url))
+        mWebView.loadUrl(pageUrl)
         mWebView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
                 if (Uri.parse(url).host == "teddylazebnik.info") {
