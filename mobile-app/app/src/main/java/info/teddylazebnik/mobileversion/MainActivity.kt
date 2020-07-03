@@ -40,7 +40,22 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 return true
             }
+
+            override fun onPageFinished(view: WebView?, url: String?) {
+                super.onPageFinished(view, url)
+                // remove personal card - no need in app version
+                /*
+                mWebView.loadUrl(
+                    "javascript:(function() { try { var personalCard = document.getElementById('personal_card'); element.parentNode.removeChild(element); } catch (error) {console.log('Android App personal card not found')}})()"
+                )
+                */
+                mWebView.loadUrl("javascript:(".plus(ReadFile("website_personal_card.js")).plus(")()"))
+            }
         }
         WebView.setWebContentsDebuggingEnabled(false)
+    }
+
+    private fun ReadFile(fileName: String): String{
+        return application.assets.open(fileName).bufferedReader().use { it.readText() }
     }
 }
