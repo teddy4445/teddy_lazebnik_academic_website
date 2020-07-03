@@ -13,4 +13,8 @@
     <string name="main_menu_btn_4">Academic Student\'s projects</string>
     <string name="main_menu_btn_5">Academic Publications</string>
 
+    <!-- teaching messages page -->
+    <string name="teaching_messages_header">Teaching Messages</string>
+    <string name="teaching_messages_filter_btn">Filter</string>
+
 </resources>
