@@ -20,4 +20,12 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <!-- Main Menu application theme. -->
+    <style name="MainMenu" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
 </resources>

@@ -18,7 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainMenuActivity"
+            android:theme="@style/MainMenu">
+        </activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme">
         </activity>
     </application>
 

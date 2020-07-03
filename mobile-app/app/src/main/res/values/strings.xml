@@ -1,4 +1,16 @@
 <resources>
+
+    <!-- global -->
     <string name="app_name">Teddy Lazebnik</string>
     <string name="website_url">https://teddylazebnik.info</string>
+    <string name="title_activity_main_menu">Main Menu</string>
+
+    <!-- main menu page -->
+    <string name="menu_header">Main Menu</string>
+    <string name="main_menu_btn_1">Teaching</string>
+    <string name="main_menu_btn_2">Open Source</string>
+    <string name="main_menu_btn_3">Technical Blog</string>
+    <string name="main_menu_btn_4">Academic Student\'s projects</string>
+    <string name="main_menu_btn_5">Academic Publications</string>
+
 </resources>
