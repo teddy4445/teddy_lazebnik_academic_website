@@ -4,10 +4,11 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
-import java.time.format.FormatStyle
 
 @RequiresApi(Build.VERSION_CODES.O)
 class TeachingMessageObj(raw_data: String) {
+
+    private val DATE_FORMAT = "dd.MM.yyyy"
 
     public var course: String = ""
     public var date: LocalDate = LocalDate.now()
@@ -16,13 +17,13 @@ class TeachingMessageObj(raw_data: String) {
     init {
         val elements = raw_data.split("~")
         this.course = elements[0]
-        this.date = LocalDate.parse(elements[1], DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT))
+        this.date = LocalDate.parse(elements[1], DateTimeFormatter.ofPattern("dd.MM.yyyy"))
         this.message = elements[2]
     }
 
     public fun dateString(): String
     {
-        return this.date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        return this.date.format(DateTimeFormatter.ofPattern(DATE_FORMAT));
     }
 
     public fun passFilter(course: String, after_date: LocalDate): Boolean
