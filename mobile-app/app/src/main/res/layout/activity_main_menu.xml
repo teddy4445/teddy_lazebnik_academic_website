@@ -24,6 +24,19 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/mainTeachingMessagesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical|center"
+                android:drawableTop="@drawable/main_manu_teaching_message"
+                android:text="@string/main_menu_teaching_messages_btn"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold" />
+
+            <Button
                 android:id="@+id/mainTeachingBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

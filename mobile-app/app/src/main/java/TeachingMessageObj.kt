@@ -20,6 +20,11 @@ class TeachingMessageObj(raw_data: String) {
         this.message = elements[2]
     }
 
+    public fun dateString(): String
+    {
+        return this.date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    }
+
     public fun passFilter(course: String, after_date: LocalDate): Boolean
     {
         return (this.course.contains(course) && this.date.isAfter(after_date))

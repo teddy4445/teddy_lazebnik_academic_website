@@ -54,6 +54,21 @@ class MainMenuActivity : AppCompatActivity() {
             changeBtnHeight(manuBunsIds[btnIndex], btnHieght)
             addClickEvent(manuBunsIds[btnIndex], domain.plus(webPagesLink[btnIndex]))
         }
+
+        // add the teaching messages button the event
+        val teachingMessagesBtn: Button = findViewById(R.id.mainTeachingMessagesBtn)
+        teachingMessagesBtn.setOnClickListener{
+            openTeachingMessagesActivity()
+        }
+    }
+
+    /*
+        Open the teaching messages window
+    */
+    private fun openTeachingMessagesActivity()
+    {
+        val intent = Intent(this, TeachingMessages::class.java)
+        startActivity(intent)
     }
 
     /*
@@ -85,4 +100,5 @@ class MainMenuActivity : AppCompatActivity() {
     private fun dpToPx(dp: Int): Int {
         return (dp * Resources.getSystem().getDisplayMetrics().density).toInt()
     }
+
 }

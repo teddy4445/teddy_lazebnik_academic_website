@@ -12,9 +12,13 @@
     <string name="main_menu_btn_3">Technical Blog</string>
     <string name="main_menu_btn_4">Academic Student\'s projects</string>
     <string name="main_menu_btn_5">Academic Publications</string>
+    <string name="main_menu_teaching_messages_btn">Courses Messages</string>
 
     <!-- teaching messages page -->
     <string name="teaching_messages_header">Teaching Messages</string>
-    <string name="teaching_messages_filter_btn">Filter</string>
+    <string name="teaching_message_filter_btn">Filter</string>
+    <string name="teaching_messages_course_input">Course Name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

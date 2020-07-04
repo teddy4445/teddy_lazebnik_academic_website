@@ -8,7 +8,7 @@ import kotlin.collections.ArrayList
 @RequiresApi(Build.VERSION_CODES.O)
 class TeachingMessageList(raw_data: String) {
 
-    private val objects = ArrayList<TeachingMessageObj>()
+    public val objects = ArrayList<TeachingMessageObj>()
 
     init {
         for (line in raw_data.split("\n"))
