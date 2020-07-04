@@ -2,6 +2,7 @@ package info.teddylazebnik.mobileversion
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import java.lang.Exception
 import java.time.LocalDate
 import kotlin.collections.ArrayList
 
@@ -13,7 +14,14 @@ class TeachingMessageList(raw_data: String) {
     init {
         for (line in raw_data.split("\n"))
         {
-            objects.add(TeachingMessageObj(line))
+            try
+            {
+                objects.add(TeachingMessageObj(line))
+            }
+            catch (error: Exception)
+            {
+
+            }
         }
     }
 
@@ -24,7 +32,14 @@ class TeachingMessageList(raw_data: String) {
         {
             if (message.passFilter(course, after_date))
             {
-                passObjects.add(message)
+                try
+                {
+                    passObjects.add(message)
+                }
+                catch (error: Exception)
+                {
+
+                }
             }
         }
         return passObjects
