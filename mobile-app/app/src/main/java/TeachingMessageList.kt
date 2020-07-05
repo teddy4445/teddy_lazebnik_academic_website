@@ -9,23 +9,28 @@ import kotlin.collections.ArrayList
 @RequiresApi(Build.VERSION_CODES.O)
 class TeachingMessageList(raw_data: String) {
 
-    public val objects = ArrayList<TeachingMessageObj>()
+    public var objects: ArrayList<TeachingMessageObj> = ArrayList<TeachingMessageObj>()
 
     init {
-        for (line in raw_data.split("\n"))
-        {
-            try
-            {
+        for (line in raw_data.split("\n")) {
+            try {
                 objects.add(TeachingMessageObj(line))
-            }
-            catch (error: Exception)
-            {
+            } catch (error: Exception) {
 
             }
         }
     }
 
-    public fun filter(course: String, after_date: LocalDate): ArrayList<TeachingMessageObj>
+    constructor(messagesObjArray: ArrayList<TeachingMessageObj>) : this("") {
+        this.objects = messagesObjArray
+    }
+
+    public fun size(): Int
+    {
+        return this.objects.size
+    }
+
+    public fun filter(course: String, after_date: LocalDate?): TeachingMessageList
     {
         val passObjects =  ArrayList<TeachingMessageObj>()
         for (message in objects)
@@ -42,7 +47,7 @@ class TeachingMessageList(raw_data: String) {
                 }
             }
         }
-        return passObjects
+        return TeachingMessageList(passObjects)
     }
 
     public fun getAllCourses(): ArrayList<String>

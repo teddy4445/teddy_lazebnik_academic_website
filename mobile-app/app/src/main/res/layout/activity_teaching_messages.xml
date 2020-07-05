@@ -48,7 +48,7 @@
                 android:background="@android:color/white"
                 android:ems="10"
                 android:inputType="textAutoComplete"
-                android:text="@string/teaching_messages_course_input"
+                android:hint="@string/teaching_messages_course_input"
                 android:textColor="@color/colorPrimary" />
 
             <EditText
@@ -63,6 +63,7 @@
                 android:background="@android:color/white"
                 android:paddingStart="15dp"
                 android:ems="10"
+                android:hint="@string/teaching_messages_date_input"
                 android:inputType="date"
                 android:textColor="@color/colorPrimary" />
 

@@ -18,7 +18,9 @@
     <string name="teaching_messages_header">Teaching Messages</string>
     <string name="teaching_message_filter_btn">Filter</string>
     <string name="teaching_messages_course_input">Course Name</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="teaching_messages_date_input">Messages From</string>
+
+    <!-- my custom app intro page -->
+    <string name="title_activity_my_custom_app_intro">Intro</string>
 
 </resources>

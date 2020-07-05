@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="info.teddylazebnik.mobileversion">
-
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TeachingMessages"></activity>
+
+        <activity
+            android:name=".MyCustomAppIntro"
+            android:label="@string/title_activity_my_custom_app_intro">
+        </activity>
+
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Splash">
@@ -21,12 +27,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainMenuActivity"
-            android:theme="@style/MainMenu"></activity>
+            android:theme="@style/MainMenu" />
+
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme"></activity>
-    </application>
+            android:theme="@style/AppTheme" />
 
+        <activity android:name=".TeachingMessages" />
+
+    </application>
 </manifest>
