@@ -1,13 +1,13 @@
 package info.teddylazebnik.mobileversion
 
 import android.content.Context
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import info.teddylazebnik.mobileversion.adapters.TeachingMessagesAdapter
 import java.lang.Exception
 import java.net.URL
 import java.time.LocalDate
@@ -16,7 +16,7 @@ import java.time.LocalDate
 class TeachingMessages : AppCompatActivity() {
 
     private val handler = Handler()
-    private var massageList: TeachingMessageList? = null
+    private var messageList: TeachingMessageList? = null
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,7 @@ class TeachingMessages : AppCompatActivity() {
         Thread(Runnable {
             // read messages file, parse it and generate message list
             val messagesRawData = URL("https://teddylazebnik.info/app-messages.txt").readText()
-            massageList = TeachingMessageList(raw_data = messagesRawData)
+            messageList = TeachingMessageList(raw_data = messagesRawData)
             // update UI
             handler.post(runnable);
         }).start()
@@ -41,11 +41,11 @@ class TeachingMessages : AppCompatActivity() {
     private val runnable = Runnable {
         if (!isFinishing) {
             // build GUI
-            massageList?.let { buildMessageList(it) }
+            messageList?.let { buildMessageList(it) }
 
             // build courses filter
             val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.teachingMessagesCourseFilterInput)
-            autoCompleteTextView.setAdapter(massageList?.let { buildCoursesFilter(this, it) })
+            autoCompleteTextView.setAdapter(messageList?.let { buildCoursesFilter(this, it) })
         }
     }
 
@@ -53,12 +53,21 @@ class TeachingMessages : AppCompatActivity() {
         Build messages list in the GUI - linear view with message view in a list
     */
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun buildMessageList(massageList: TeachingMessageList)
+    private fun buildMessageList(messageList: TeachingMessageList)
     {
-        for (messageObj in massageList.objects)
-        {
-            teachingMessagesCard.newInstance(messageObj.course, messageObj.dateString(), messageObj.message)
+        // find the view we wish to insert list into
+        var messagesListView = findViewById<ListView>(R.id.teachingMessagesList)
+
+        // inject to view
+        messagesListView.adapter = TeachingMessagesAdapter(this, R.layout.teaching_message_card, messageList.objects)
+
+        // add click event to each item
+        //TODO: fix later
+        /*
+        messagesListView.setOnItemClickListener{ parent: AdapterView, view: View, position: Int, id: Long) ->
+            Toast.makeText(this, messageList.objects[position].course, Toast.LENGTH_SHORT).show()
         }
+         */
     }
 
     /*
@@ -119,7 +128,7 @@ class TeachingMessages : AppCompatActivity() {
             messagesDateInputObj = null
         }
         // filter list
-        val leftMessages = massageList?.filter(
+        val leftMessages = messageList?.filter(
             course = courseNameInput.text.toString(),
             after_date = messagesDateInputObj
         )
@@ -130,7 +139,8 @@ class TeachingMessages : AppCompatActivity() {
             }
             else
             {
-                // TODO: if list empty show error message without list
+                Toast.makeText(this, "No results - showing all", Toast.LENGTH_SHORT).show()
+                messageList?.let { buildMessageList(it) }
             }
         }
     }
