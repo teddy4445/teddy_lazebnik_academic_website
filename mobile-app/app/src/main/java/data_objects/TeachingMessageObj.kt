@@ -1,8 +1,7 @@
-package info.teddylazebnik.mobileversion
+package info.teddylazebnik.mobileversion.data_objects
 
 import android.os.Build
 import androidx.annotation.RequiresApi
-import java.lang.Exception
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 

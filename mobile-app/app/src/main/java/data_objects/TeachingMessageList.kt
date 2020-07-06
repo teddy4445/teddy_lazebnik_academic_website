@@ -1,4 +1,4 @@
-package info.teddylazebnik.mobileversion
+package info.teddylazebnik.mobileversion.data_objects
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -14,7 +14,11 @@ class TeachingMessageList(raw_data: String) {
     init {
         for (line in raw_data.split("\n")) {
             try {
-                objects.add(TeachingMessageObj(line))
+                objects.add(
+                    TeachingMessageObj(
+                        line
+                    )
+                )
             } catch (error: Exception) {
 
             }
@@ -47,7 +51,9 @@ class TeachingMessageList(raw_data: String) {
                 }
             }
         }
-        return TeachingMessageList(passObjects)
+        return TeachingMessageList(
+            passObjects
+        )
     }
 
     public fun getAllCourses(): ArrayList<String>

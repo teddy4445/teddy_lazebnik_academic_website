@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import info.teddylazebnik.mobileversion.R
-import info.teddylazebnik.mobileversion.TeachingMessageObj
+import info.teddylazebnik.mobileversion.data_objects.TeachingMessageObj
 
 class TeachingMessagesAdapter(
     private val cont: Context,

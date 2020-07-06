@@ -1,22 +1,34 @@
 package info.teddylazebnik.mobileversion
 
+import android.app.job.JobInfo
+import android.app.job.JobScheduler
+import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import info.teddylazebnik.mobileversion.jobs.TeachingListRetrieveJob
 import java.io.File
 import java.io.FileOutputStream
 
+
 class SplashActivity : AppCompatActivity() {
 
+    private val TAG = "SplashActivity"
     private val handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private val runnable = Runnable {
         if (!isFinishing) {
+            scheduleJob()
             if (checkIfFirstTime())
             {
                 startActivity(Intent(applicationContext, MyCustomAppIntro::class.java))
@@ -30,11 +42,13 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onResume() {
         super.onResume()
         handler.postDelayed(runnable, 500);
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onPause() {
         super.onPause()
         handler.removeCallbacks(runnable)
@@ -60,6 +74,30 @@ class SplashActivity : AppCompatActivity() {
                 stream.close()
             }
             return true
+        }
+    }
+
+
+    @RequiresApi(Build.VERSION_CODES.N)
+    fun scheduleJob()
+    {
+        // consts of cycle
+        val cyclicTime = 2000.toLong() // 24 * 60 * 60 * 1000.toLong()
+        val cyclicDelayTime = cyclicTime - 1000 // 1000 * 60
+
+        val teachMessageJobObj = ComponentName(this, TeachingListRetrieveJob::class.java)
+        val info = JobInfo.Builder(1, teachMessageJobObj)
+            .setRequiresCharging(false)
+            .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
+            .setPersisted(true)
+            .setPeriodic(cyclicTime)
+            .build()
+        val scheduler = getSystemService(Context.JOB_SCHEDULER_SERVICE) as JobScheduler
+        val resultCode = scheduler.schedule(info)
+        if (resultCode == JobScheduler.RESULT_SUCCESS) {
+            Log.d(TAG,"Job scheduled")
+        } else {
+            Log.d(TAG,"Job scheduling failed")
         }
     }
 }

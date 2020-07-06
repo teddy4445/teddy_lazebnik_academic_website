@@ -8,12 +8,20 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import info.teddylazebnik.mobileversion.adapters.TeachingMessagesAdapter
+import info.teddylazebnik.mobileversion.data_objects.TeachingMessageList
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
 import java.lang.Exception
 import java.net.URL
 import java.time.LocalDate
 
 
 class TeachingMessages : AppCompatActivity() {
+
+    companion object {
+        val listMessageFilePath: String = "teaching_messages.txt"
+    }
 
     private val handler = Handler()
     private var messageList: TeachingMessageList? = null
@@ -28,13 +36,36 @@ class TeachingMessages : AppCompatActivity() {
             filterList()
         }
 
-        Thread(Runnable {
-            // read messages file, parse it and generate message list
-            val messagesRawData = URL("https://teddylazebnik.info/app-messages.txt").readText()
-            messageList = TeachingMessageList(raw_data = messagesRawData)
-            // update UI
-            handler.post(runnable);
-        }).start()
+        try
+        {
+            val path: File = this.filesDir
+            val file = File(path, listMessageFilePath)
+            val messagesRawData = FileInputStream(file).bufferedReader().use { it.readText() }
+            messageList =
+                TeachingMessageList(
+                    raw_data = messagesRawData
+                )
+            allPrepare(messageList)
+        }
+        catch (error: Exception)
+        {
+            Thread(Runnable {
+                // read messages file, parse it and generate message list
+                val messagesRawData = URL("https://teddylazebnik.info/app-messages.txt").readText()
+                messageList =
+                    TeachingMessageList(
+                        raw_data = messagesRawData
+                    )
+                // save results
+                val path: File = this.filesDir
+                val file = File(path, listMessageFilePath)
+                val stream = FileOutputStream(file)
+                stream.write(messagesRawData.toByteArray())
+                stream.close()
+                // update UI
+                handler.post(runnable);
+            }).start()
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -47,6 +78,20 @@ class TeachingMessages : AppCompatActivity() {
             val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.teachingMessagesCourseFilterInput)
             autoCompleteTextView.setAdapter(messageList?.let { buildCoursesFilter(this, it) })
         }
+    }
+
+    /*
+        Run all operations needed to prepare the activity for usage
+     */
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun allPrepare(messageList: TeachingMessageList?)
+    {
+        // build the list view
+        messageList?.let { buildMessageList(it) }
+
+        // build courses filter to autocomplete field
+        val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.teachingMessagesCourseFilterInput)
+        autoCompleteTextView.setAdapter(messageList?.let { buildCoursesFilter(this, it) })
     }
 
     /*
@@ -92,7 +137,7 @@ class TeachingMessages : AppCompatActivity() {
         Filter the messages according to the user's inputs
      */
     @RequiresApi(Build.VERSION_CODES.O)
-    public fun filterList()
+    fun filterList()
     {
         // first, get the user's data
         val courseNameInput: AutoCompleteTextView =
