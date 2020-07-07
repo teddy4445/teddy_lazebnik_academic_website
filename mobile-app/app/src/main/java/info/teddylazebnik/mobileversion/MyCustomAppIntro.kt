@@ -51,7 +51,7 @@ class MyCustomAppIntro : AppIntro2() {
                 titleColor = Color.WHITE,
                 imageDrawable  = R.drawable.splash_icon,
                 descriptionColor = Color.WHITE,
-                backgroundColor = getResources().getColor(R.color.colorPrimary)
+                backgroundColor = getResources().getColor(R.color.colorPrimaryComplete)
             )
         )
 
@@ -75,7 +75,7 @@ class MyCustomAppIntro : AppIntro2() {
                 titleColor = Color.WHITE,
                 imageDrawable  = R.drawable.main_manu_code,
                 descriptionColor = Color.WHITE,
-                backgroundColor =  getResources().getColor(R.color.colorPrimary)
+                backgroundColor =  getResources().getColor(R.color.colorPrimaryComplete2)
             )
         )
 
@@ -87,7 +87,7 @@ class MyCustomAppIntro : AppIntro2() {
                 titleColor = Color.WHITE,
                 imageDrawable  = R.drawable.main_manu_students,
                 descriptionColor = Color.WHITE,
-                backgroundColor =  getResources().getColor(R.color.colorPrimaryDarkest)
+                backgroundColor =  getResources().getColor(R.color.colorPrimaryComplete3)
             )
         )
     }
