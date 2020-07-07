@@ -10,7 +10,7 @@
     <string name="main_menu_btn_1">Teaching</string>
     <string name="main_menu_btn_2">Open Source</string>
     <string name="main_menu_btn_3">Technical Blog</string>
-    <string name="main_menu_btn_4">Academic Student\'s projects</string>
+    <string name="main_menu_btn_4">Student\'s projects</string>
     <string name="main_menu_btn_5">Academic Publications</string>
     <string name="main_menu_teaching_messages_btn">Courses Messages</string>
 

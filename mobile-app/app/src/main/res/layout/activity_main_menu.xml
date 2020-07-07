@@ -6,101 +6,266 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/mainLinearLayout"
+            android:id="@+id/mainManuList1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/mainTeachingMessagesBtn"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="@null"
-                android:gravity="center_vertical|center"
-                android:drawableTop="@drawable/main_manu_teaching_message"
-                android:text="@string/main_menu_teaching_messages_btn"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:textStyle="bold" />
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/mainTeachingBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:gravity="center_vertical|center"
-                android:drawableTop="@drawable/main_manu_teaching"
-                android:text="@string/main_menu_btn_1"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/mainTeachingMessagesImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/main_manu_teaching_message" />
 
-            <Button
-                android:id="@+id/mainOpenSoruceBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:gravity="center_vertical|center"
-                android:drawableTop="@drawable/main_manu_code"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:text="@string/main_menu_btn_2"
-                android:textStyle="bold" />
+                <View
+                    android:id="@+id/mainTeachingMessagesDivider"
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center|top"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
 
-            <Button
-                android:id="@+id/mainTechnicalBlogBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:gravity="center_vertical|center"
-                android:drawableTop="@drawable/main_manu_posts"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:text="@string/main_menu_btn_3"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/mainTeachingMessagesText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/main_menu_teaching_messages_btn"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
 
-            <Button
-                android:id="@+id/mainAcademicStudentsBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:gravity="center_vertical|center"
-                android:drawableTop="@drawable/main_manu_students"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:text="@string/main_menu_btn_4"
-                android:textStyle="bold"/>
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/mainPublicationsBtn"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="@null"
-                android:gravity="center_vertical|center"
-                android:drawableTop="@drawable/main_manu_papers"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:text="@string/main_menu_btn_5"
-                android:textStyle="bold"/>
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDarkest"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mainTeachingBtnImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/main_manu_teaching" />
+
+                <View
+                    android:id="@+id/mainTeachingBtnDivider"
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center|top"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/mainTeachingBtnText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:text="@string/main_menu_btn_1"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
         </LinearLayout>
-    </ScrollView>
 
+        <LinearLayout
+            android:id="@+id/mainManuList2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryComplete4"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mainOpenSoruceImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/main_manu_code" />
+
+                <View
+                    android:id="@+id/mainOpenSoruceBtnDivider"
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center|top"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/mainOpenSoruceBtnText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/main_menu_btn_3"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryComplete"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mainTechnicalBlogImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/main_manu_posts" />
+
+                <View
+                    android:id="@+id/mainTechnicalBlogDivider"
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center|top"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/mainTechnicalBlogText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/main_menu_btn_2"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mainManuList3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@color/colorPrimaryComplete2"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mainPublicationsImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/main_manu_papers" />
+
+                <View
+                    android:id="@+id/mainPublicationsDivider"
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center|top"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/mainPublicationsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/main_menu_btn_5"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryComplete3"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mainAcademicStudentsImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/main_manu_students" />
+
+                <View
+                    android:id="@+id/mainAcademicStudentsDivider"
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center|top"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/mainAcademicStudentsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/main_menu_btn_4"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

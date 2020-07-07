@@ -82,15 +82,15 @@ class SplashActivity : AppCompatActivity() {
     fun scheduleJob()
     {
         // consts of cycle
-        val cyclicTime = 2000.toLong() // 24 * 60 * 60 * 1000.toLong()
-        val cyclicDelayTime = cyclicTime - 1000 // 1000 * 60
+        val cyclicTime = 60 * 60 * 1000.toLong()
+        val cyclicDelayTime = cyclicTime - 30 * 60 * 1000.toLong()
 
         val teachMessageJobObj = ComponentName(this, TeachingListRetrieveJob::class.java)
         val info = JobInfo.Builder(1, teachMessageJobObj)
             .setRequiresCharging(false)
             .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
             .setPersisted(true)
-            .setPeriodic(cyclicTime)
+            .setPeriodic(cyclicTime, cyclicDelayTime)
             .build()
         val scheduler = getSystemService(Context.JOB_SCHEDULER_SERVICE) as JobScheduler
         val resultCode = scheduler.schedule(info)
