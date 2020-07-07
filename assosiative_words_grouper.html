@@ -431,13 +431,13 @@
 			}
 			var source_response_words = peerLines[i].split(",");
 			
-			if (source_and_reaction_sets[source_response_words[0]] === undefined)
+			if (source_and_reaction_sets[source_response_words[0].trim()] === undefined)
 			{
-				source_and_reaction_sets[source_response_words[0]] = [];
+				source_and_reaction_sets[source_response_words[0].trim()] = [];
 			}
-			if (!source_and_reaction_sets[source_response_words[0]].includes(source_response_words[1].trim())) // prevent douplicates in the line
+			if (!source_and_reaction_sets[source_response_words[0].trim()].includes(source_response_words[1].trim())) // prevent douplicates in the line
 			{
-				source_and_reaction_sets[source_response_words[0]].push(source_response_words[1].trim());
+				source_and_reaction_sets[source_response_words[0].trim()].push(source_response_words[1].trim());
 			}
 		}
 		var fileFormatString = "";
