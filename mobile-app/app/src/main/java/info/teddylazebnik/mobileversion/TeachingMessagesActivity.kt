@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -17,8 +18,8 @@ import java.net.URL
 import java.time.LocalDate
 
 
-class TeachingMessages : AppCompatActivity() {
-
+class TeachingMessagesActivity : AppCompatActivity(), FilterTeachingMessagesDialog.FilterTeachingMessagesDialogListener
+{
     companion object {
         val listMessageFilePath: String = "teaching_messages.txt"
     }
@@ -31,9 +32,9 @@ class TeachingMessages : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_teaching_messages)
 
-        val filterBtn: Button = findViewById<Button>(R.id.teachingMessagesFilterBtn)
-        filterBtn.setOnClickListener{
-            filterList()
+        val filterPanelBtn: View = findViewById(R.id.teachingMessagesFloatBtn)
+        filterPanelBtn.setOnClickListener {
+            showFilterDialog()
         }
 
         try
@@ -75,8 +76,10 @@ class TeachingMessages : AppCompatActivity() {
             messageList?.let { buildMessageList(it) }
 
             // build courses filter
+            /*
             val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.teachingMessagesCourseFilterInput)
             autoCompleteTextView.setAdapter(messageList?.let { buildCoursesFilter(this, it) })
+             */
         }
     }
 
@@ -134,19 +137,29 @@ class TeachingMessages : AppCompatActivity() {
     }
 
     /*
+        Open the filter dialog
+     */
+    private fun showFilterDialog()
+    {
+        val filterDialog: FilterTeachingMessagesDialog = FilterTeachingMessagesDialog()
+        filterDialog.show(supportFragmentManager, "Filter Dialog")
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun applyTexts(courseName: String, courseDate: String) {
+        filterList(courseName, courseDate)
+    }
+
+    /*
         Filter the messages according to the user's inputs
      */
     @RequiresApi(Build.VERSION_CODES.O)
-    fun filterList()
+    fun filterList(courseName: String, courseDate: String)
     {
-        // first, get the user's data
-        val courseNameInput: AutoCompleteTextView =
-            findViewById(R.id.teachingMessagesCourseFilterInput)
-        val messagesDateInput: EditText = findViewById(R.id.teachingMessagesDateFilterInput)
         var messagesDateInputObj: LocalDate? = null
         try
         {
-            var dateElements =messagesDateInput.text.toString()
+            var dateElements = courseDate
                 .replace("/", ".")
                 .replace("-", ".")
                 .split(".")
@@ -174,7 +187,7 @@ class TeachingMessages : AppCompatActivity() {
         }
         // filter list
         val leftMessages = messageList?.filter(
-            course = courseNameInput.text.toString(),
+            course = courseName,
             after_date = messagesDateInputObj
         )
         // if filter fine - show new list

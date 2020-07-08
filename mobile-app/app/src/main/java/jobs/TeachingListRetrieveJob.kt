@@ -6,15 +6,14 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.job.JobParameters
 import android.app.job.JobService
-import android.content.Context
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Build
+import android.preference.PreferenceManager
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import info.teddylazebnik.mobileversion.R
-import info.teddylazebnik.mobileversion.TeachingMessages
+import info.teddylazebnik.mobileversion.TeachingMessagesActivity
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -40,13 +39,13 @@ class TeachingListRetrieveJob : JobService() {
             {
                 val messagesRawData = URL("https://teddylazebnik.info/app-messages.txt").readText()
                 val path: File = this.filesDir
-                val file = File(path, TeachingMessages.listMessageFilePath)
+                val file = File(path, TeachingMessagesActivity.listMessageFilePath)
                 if (file.exists())
                 {
                     val oldMessagesRawData = FileInputStream(file).bufferedReader().use { it.readText() }
                     val numberOfcurrentMessages = messagesRawData.split("\n").size
                     val numberOfNewMessages = oldMessagesRawData.split("\n").size
-                    if (numberOfcurrentMessages != numberOfNewMessages)
+                    if (numberOfcurrentMessages != numberOfNewMessages && PreferenceManager.getDefaultSharedPreferences(this).getString("notifications", "false") == "true")
                     {
                         createNotificationOnNewMessages(numberOfNewMessages - numberOfcurrentMessages)
                     }
@@ -73,7 +72,7 @@ class TeachingListRetrieveJob : JobService() {
     fun createNotificationOnNewMessages(numberOfMessages: Int)
     {
         // the notification is clicked, this intent will come into action
-        val intent = Intent(this, TeachingMessages::class.java)
+        val intent = Intent(this, TeachingMessagesActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
 
         // the text to show in the message

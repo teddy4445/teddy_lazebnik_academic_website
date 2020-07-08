@@ -3,13 +3,10 @@ package info.teddylazebnik.mobileversion
 import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
-import android.util.DisplayMetrics
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import java.security.AccessController.getContext
 
 
 @Suppress("DEPRECATION")
@@ -60,7 +57,8 @@ class MainMenuActivity : AppCompatActivity() {
     private fun fixLayoutPositions()
     {
         // fix buttons height
-        val btnHieght = Math.ceil(((Resources.getSystem().getDisplayMetrics().heightPixels).toDouble() / linesId.size)).toInt()
+        val settingsHeightInPx = (90 * Resources.getSystem().getDisplayMetrics().density).toInt()
+        val btnHieght = Math.ceil(((Resources.getSystem().getDisplayMetrics().heightPixels - settingsHeightInPx).toDouble() / linesId.size)).toInt()
         for (viewIndex in 0 until linesId.size)
         {
             changeViewHeight(linesId[viewIndex], btnHieght)
@@ -84,6 +82,18 @@ class MainMenuActivity : AppCompatActivity() {
         teachingMessagesText.setOnClickListener{
             openTeachingMessagesActivity()
         }
+
+        // add the teaching messages button the event
+        val settingsImg: ImageView = findViewById(R.id.mainSettingsImg)
+        settingsImg.setOnClickListener{
+            openSettingsActivity()
+        }
+
+        // add the teaching messages button the event
+        val settingsText: TextView = findViewById(R.id.mainSettingsText)
+        teachingMessagesText.setOnClickListener{
+            openSettingsActivity()
+        }
     }
 
     /*
@@ -91,7 +101,16 @@ class MainMenuActivity : AppCompatActivity() {
     */
     private fun openTeachingMessagesActivity()
     {
-        val intent = Intent(this, TeachingMessages::class.java)
+        val intent = Intent(this, TeachingMessagesActivity::class.java)
+        startActivity(intent)
+    }
+
+    /*
+        Open the settings window
+    */
+    private fun openSettingsActivity()
+    {
+        val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
     }
 

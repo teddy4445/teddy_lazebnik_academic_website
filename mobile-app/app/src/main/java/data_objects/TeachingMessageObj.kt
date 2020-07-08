@@ -31,13 +31,13 @@ class TeachingMessageObj(raw_data: String) {
     {
         when {
             course != "" && after_date != null -> {
-                return (this.course.contains(course) && this.date.isAfter(after_date))
+                return (this.course.toLowerCase().trim().contains(course.toLowerCase().trim()) && this.date.isAfter(after_date))
             }
             course == "" && after_date != null -> {
                 return this.date.isAfter(after_date)
             }
             course != "" && after_date == null -> {
-                return this.course.contains(course)
+                return this.course.toLowerCase().trim().contains(course.toLowerCase().trim())
             }
             course == "" && after_date == null -> {
                 return true

@@ -13,6 +13,7 @@
     <string name="main_menu_btn_4">Student\'s projects</string>
     <string name="main_menu_btn_5">Academic Publications</string>
     <string name="main_menu_teaching_messages_btn">Courses Messages</string>
+    <string name="main_menu_settings_btn">Settings</string>
 
     <!-- teaching messages page -->
     <string name="teaching_messages_header">Teaching Messages</string>
@@ -22,5 +23,19 @@
 
     <!-- my custom app intro page -->
     <string name="title_activity_my_custom_app_intro">Intro</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Notifications</string>
+    <string name="feedback_header">Feedback</string>
+
+    <!-- notifications Preferences -->
+
+    <!-- feedback Preferences -->
+    <string name="notification_preference">Enable message notifications</string>
+    <string name="notifications_summary_on">Allow to get all the notification related to this application</string>
+    <string name="notifications_summary_off">"Denide to get all the notification related to this application. Some operations may be unavailable… "</string>
+    <string name="teaching_message_filter_cancel_btn">Cancel</string>
+    <string name="filterDialogHeader">Filter Teaching Messages</string>
 
 </resources>

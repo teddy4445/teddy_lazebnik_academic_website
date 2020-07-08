@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TeachingMessages">
+    tools:context=".TeachingMessagesActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/teachingMessagesFloatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:background="@android:color/white"
+        app:srcCompat="@drawable/white_filter" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,69 +28,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="15dp"
-            android:text="@string/teaching_messages_header"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <AutoCompleteTextView
-            android:id="@+id/teachingMessagesCourseFilterInput"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="5dp"
-            android:background="@android:color/white"
-            android:ems="10"
-            android:hint="@string/teaching_messages_course_input"
-            android:inputType="textAutoComplete"
-            android:paddingStart="15dp"
-            android:textColor="@color/colorPrimary" />
-
-        <EditText
-            android:id="@+id/teachingMessagesDateFilterInput"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="5dp"
-            android:background="@android:color/white"
-            android:ems="10"
-            android:hint="@string/teaching_messages_date_input"
-            android:inputType="date"
-            android:paddingStart="15dp"
-            android:textColor="@color/colorPrimary" />
-
-        <Button
-            android:id="@+id/teachingMessagesFilterBtn"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="5dp"
-            android:background="@android:color/white"
-            android:drawableStart="@drawable/filter_icon"
-            android:gravity="center_vertical|center"
-            android:paddingStart="120dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="120dp"
-            android:paddingBottom="5dp"
-            android:text="@string/teaching_message_filter_btn"
-            android:textColor="@color/colorPrimary"
-            android:textSize="24sp" />
-
         <ListView
             android:id="@+id/teachingMessagesList"
             android:layout_width="match_parent"
@@ -88,4 +35,5 @@
 
         </ListView>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
