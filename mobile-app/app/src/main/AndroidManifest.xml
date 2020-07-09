@@ -14,19 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".TechnicalBlogActivity"></activity>
+        <activity android:name=".CoursesActivity" />
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings">
-
-        </activity>
-
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".MyCustomAppIntro"
-            android:label="@string/title_activity_my_custom_app_intro">
-
-        </activity>
-
+            android:label="@string/title_activity_my_custom_app_intro" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Splash">
@@ -36,17 +31,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainMenuActivity"
             android:theme="@style/MainMenu" />
-
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
-
-        <activity android:name=".TeachingMessagesActivity"
-            android:theme="@style/ListTheme"  />
+        <activity
+            android:name=".TeachingMessagesActivity"
+            android:theme="@style/ListTheme" />
 
         <service
             android:name=".jobs.TeachingListRetrieveJob"

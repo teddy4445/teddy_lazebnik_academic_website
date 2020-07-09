@@ -110,12 +110,9 @@ class TeachingMessagesActivity : AppCompatActivity(), FilterTeachingMessagesDial
         messagesListView.adapter = TeachingMessagesAdapter(this, R.layout.teaching_message_card, messageList.objects)
 
         // add click event to each item
-        //TODO: fix later
-        /*
-        messagesListView.setOnItemClickListener{ parent: AdapterView, view: View, position: Int, id: Long) ->
+        messagesListView.setOnItemClickListener { parent, view, position, id ->
             Toast.makeText(this, messageList.objects[position].course, Toast.LENGTH_SHORT).show()
         }
-         */
     }
 
     /*

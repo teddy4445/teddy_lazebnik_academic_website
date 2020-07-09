@@ -1,38 +1,40 @@
-package info.teddylazebnik.mobileversion.adapters
+package adapters
 
-import android.os.Build
+import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import data_objects.Course
+import data_objects.TechnicalBlog
 import info.teddylazebnik.mobileversion.R
 import info.teddylazebnik.mobileversion.data_objects.TeachingMessageObj
 
-class TeachingMessagesAdapter(
-private val cont: Context,
-private val resources: Int,
-private val items: List<TeachingMessageObj>): ArrayAdapter<TeachingMessageObj>(cont, resources, items)
+class TechnicalBlogAdapter(
+    private val cont: Context,
+    private val resources: Int,
+    private val items: List<TechnicalBlog>): ArrayAdapter<TechnicalBlog>(cont, resources, items)
 {
 
-    @RequiresApi(Build.VERSION_CODES.O)
+    val MAX_DESCRIPTION_CHARS = 120
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         // get the context to work with
         val layoutInflater: LayoutInflater = LayoutInflater.from(context)
         val view: View = layoutInflater.inflate(resources, null)
 
         // find the elements we wish to put info in
-        val courseName = view.findViewById<TextView>(R.id.courseName)
-        val messageDate = view.findViewById<TextView>(R.id.courseMessageDate)
-        val message = view.findViewById<TextView>(R.id.courseMessage)
+        val titleObj = view.findViewById<TextView>(R.id.technicalBlogPostTitle)
+        val descriptionObj = view.findViewById<TextView>(R.id.technicalBlogPostDes)
 
         // put the data inside the view
-        var item: TeachingMessageObj = items[position]
-        courseName.text = item.course
-        messageDate.text = item.dateString()
-        message.text = item.message
+        var item: TechnicalBlog = items[position]
+        titleObj.text = item.title
+        descriptionObj.text = item.shortDescription(letters = MAX_DESCRIPTION_CHARS)
 
         // return generated view
         return view
@@ -42,7 +44,7 @@ private val items: List<TeachingMessageObj>): ArrayAdapter<TeachingMessageObj>(c
         return items.size
     }
 
-    override fun getItem(position: Int): TeachingMessageObj {
+    override fun getItem(position: Int): TechnicalBlog {
         return items[position]
     }
 

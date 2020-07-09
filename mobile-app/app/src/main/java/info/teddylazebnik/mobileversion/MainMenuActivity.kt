@@ -12,13 +12,18 @@ import androidx.appcompat.app.AppCompatActivity
 @Suppress("DEPRECATION")
 class MainMenuActivity : AppCompatActivity() {
 
-    val EXTRA_MESSAGE = "info.teddylazebnik.mobileversion.MESSAGE"
+
+    companion object {
+        public val EXTRA_MESSAGE = "info.teddylazebnik.mobileversion.MESSAGE"
+        public val domain: String = "https://teddylazebnik.info/"
+    }
 
     val linesId = ArrayList<Int>()
     val manuImgIds = ArrayList<Int>()
     val manuTextIds = ArrayList<Int>()
     val webPagesLink = ArrayList<String>()
-    val domain: String = "https://teddylazebnik.info/"
+
+    val buttonsCounts: Int = 6
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,17 +63,10 @@ class MainMenuActivity : AppCompatActivity() {
     {
         // fix buttons height
         val settingsHeightInPx = (90 * Resources.getSystem().getDisplayMetrics().density).toInt()
-        val btnHieght = Math.ceil(((Resources.getSystem().getDisplayMetrics().heightPixels - settingsHeightInPx).toDouble() / linesId.size)).toInt()
+        val btnHieght = Math.ceil(((Resources.getSystem().getDisplayMetrics().heightPixels - settingsHeightInPx).toDouble() / (buttonsCounts/2))).toInt()
         for (viewIndex in 0 until linesId.size)
         {
             changeViewHeight(linesId[viewIndex], btnHieght)
-        }
-
-        // add click to buttons
-        for (btnIndex in 0 until manuImgIds.size)
-        {
-            addImgClickEvent(manuImgIds[btnIndex], domain.plus(webPagesLink[btnIndex]))
-            addTextClickEvent(manuTextIds[btnIndex], domain.plus(webPagesLink[btnIndex]))
         }
 
         // add the teaching messages button the event
@@ -94,6 +92,30 @@ class MainMenuActivity : AppCompatActivity() {
         teachingMessagesText.setOnClickListener{
             openSettingsActivity()
         }
+
+        // add the courses button the event
+        val coursesImg: ImageView = findViewById(R.id.mainTeachingBtnImg)
+        coursesImg.setOnClickListener{
+            openCoursesActivity()
+        }
+
+        // add the courses button the event
+        val coursesText: TextView = findViewById(R.id.mainTeachingBtnText)
+        coursesText.setOnClickListener{
+            openCoursesActivity()
+        }
+
+        // add the courses button the event
+        val tachnicalBlogImg: ImageView = findViewById(R.id.mainTechnicalBlogImg)
+        tachnicalBlogImg.setOnClickListener{
+            openBlogsActivity()
+        }
+
+        // add the courses button the event
+        val tachnicalBlogText: TextView = findViewById(R.id.mainTechnicalBlogText)
+        tachnicalBlogText.setOnClickListener{
+            openBlogsActivity()
+        }
     }
 
     /*
@@ -115,6 +137,24 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     /*
+        Open the courses list window
+    */
+    private fun openCoursesActivity()
+    {
+        val intent = Intent(this, CoursesActivity::class.java)
+        startActivity(intent)
+    }
+
+    /*
+        Open the courses list window
+    */
+    private fun openBlogsActivity()
+    {
+        val intent = Intent(this, TechnicalBlogActivity::class.java)
+        startActivity(intent)
+    }
+
+    /*
         Change the a spesific btn's height by id
      */
     private fun changeViewHeight(btn_id: Int, height: Int)
@@ -124,32 +164,4 @@ class MainMenuActivity : AppCompatActivity() {
         params.height = height
         btn.setLayoutParams(params)
     }
-
-    private fun addImgClickEvent(btn_id: Int, webPage: String)
-    {
-        val btn: ImageView = findViewById(btn_id) as ImageView
-        btn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, webPage)
-            }
-            startActivity(intent)
-        }
-    }
-
-    private fun addTextClickEvent(btn_id: Int, webPage: String)
-    {
-        val btn: TextView = findViewById(btn_id) as TextView
-        btn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, webPage)
-            }
-            startActivity(intent)
-        }
-    }
-
-    // get px of the screen from dp 
-    private fun dpToPx(dp: Int): Int {
-        return (dp * Resources.getSystem().getDisplayMetrics().density).toInt()
-    }
-
 }

@@ -1,38 +1,41 @@
-package info.teddylazebnik.mobileversion.adapters
+package adapters
 
-import android.os.Build
+import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import data_objects.Course
 import info.teddylazebnik.mobileversion.R
 import info.teddylazebnik.mobileversion.data_objects.TeachingMessageObj
 
-class TeachingMessagesAdapter(
-private val cont: Context,
-private val resources: Int,
-private val items: List<TeachingMessageObj>): ArrayAdapter<TeachingMessageObj>(cont, resources, items)
+class CourseAdapter(
+    private val cont: Context,
+    private val resources: Int,
+    private val items: List<Course>): ArrayAdapter<Course>(cont, resources, items)
 {
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         // get the context to work with
         val layoutInflater: LayoutInflater = LayoutInflater.from(context)
         val view: View = layoutInflater.inflate(resources, null)
 
         // find the elements we wish to put info in
-        val courseName = view.findViewById<TextView>(R.id.courseName)
-        val messageDate = view.findViewById<TextView>(R.id.courseMessageDate)
-        val message = view.findViewById<TextView>(R.id.courseMessage)
+        val nameObj = view.findViewById<TextView>(R.id.courseCardName)
+        val dateObj = view.findViewById<TextView>(R.id.courseCardDate)
+        val descriptionObj = view.findViewById<TextView>(R.id.courseCardDes)
+        val uniObj = view.findViewById<TextView>(R.id.courseCardUni)
 
         // put the data inside the view
-        var item: TeachingMessageObj = items[position]
-        courseName.text = item.course
-        messageDate.text = item.dateString()
-        message.text = item.message
+        var item: Course = items[position]
+        nameObj.text = item.title
+        dateObj.text = "${item.year} (Sem. ${item.semester})"
+        descriptionObj.text = item.description
+        uniObj.text = item.uni
 
         // return generated view
         return view
@@ -42,7 +45,7 @@ private val items: List<TeachingMessageObj>): ArrayAdapter<TeachingMessageObj>(c
         return items.size
     }
 
-    override fun getItem(position: Int): TeachingMessageObj {
+    override fun getItem(position: Int): Course {
         return items[position]
     }
 

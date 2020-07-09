@@ -136,7 +136,7 @@
                     android:gravity="center_vertical|center"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/main_menu_btn_3"
+                    android:text="@string/main_menu_btn_2"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
 
@@ -175,7 +175,7 @@
                     android:gravity="center_vertical|center"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/main_menu_btn_2"
+                    android:text="@string/main_menu_btn_3"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
 
