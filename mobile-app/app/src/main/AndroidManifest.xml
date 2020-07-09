@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TechnicalBlogActivity"></activity>
+        <activity android:name=".AcademicPapersActivity"></activity>
+        <activity android:name=".StudentsActivity" />
+        <activity android:name=".OpenSourceProjectsActivity" />
+        <activity android:name=".TechnicalBlogActivity" />
         <activity android:name=".CoursesActivity" />
         <activity
             android:name=".SettingsActivity"

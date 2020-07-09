@@ -89,7 +89,7 @@ class MainMenuActivity : AppCompatActivity() {
 
         // add the teaching messages button the event
         val settingsText: TextView = findViewById(R.id.mainSettingsText)
-        teachingMessagesText.setOnClickListener{
+        settingsText.setOnClickListener{
             openSettingsActivity()
         }
 
@@ -105,16 +105,52 @@ class MainMenuActivity : AppCompatActivity() {
             openCoursesActivity()
         }
 
-        // add the courses button the event
+        // add the technical blog button the event
         val tachnicalBlogImg: ImageView = findViewById(R.id.mainTechnicalBlogImg)
         tachnicalBlogImg.setOnClickListener{
             openBlogsActivity()
         }
 
-        // add the courses button the event
+        // add the technical blog button the event
         val tachnicalBlogText: TextView = findViewById(R.id.mainTechnicalBlogText)
         tachnicalBlogText.setOnClickListener{
             openBlogsActivity()
+        }
+
+        // add the open source button the event
+        val openSourceImg: ImageView = findViewById(R.id.mainOpenSoruceImg)
+        openSourceImg.setOnClickListener{
+            openOpenSourceProjectActivity()
+        }
+
+        // add the open source button the event
+        val openSourceText: TextView = findViewById(R.id.mainOpenSoruceBtnText)
+        openSourceText.setOnClickListener{
+            openOpenSourceProjectActivity()
+        }
+
+        // add the students button the event
+        val studentsImg: ImageView = findViewById(R.id.mainAcademicStudentsImg)
+        studentsImg.setOnClickListener{
+            openStudentsActivity()
+        }
+
+        // add the students button the event
+        val studentsText: TextView = findViewById(R.id.mainAcademicStudentsText)
+        studentsText.setOnClickListener{
+            openStudentsActivity()
+        }
+
+        // add the students button the event
+        val academicPublicationsImg: ImageView = findViewById(R.id.mainPublicationsImg)
+        academicPublicationsImg.setOnClickListener{
+            openPapersActivity()
+        }
+
+        // add the students button the event
+        val academicPublicationsText: TextView = findViewById(R.id.mainPublicationsText)
+        academicPublicationsText.setOnClickListener{
+            openPapersActivity()
         }
     }
 
@@ -151,6 +187,33 @@ class MainMenuActivity : AppCompatActivity() {
     private fun openBlogsActivity()
     {
         val intent = Intent(this, TechnicalBlogActivity::class.java)
+        startActivity(intent)
+    }
+
+    /*
+        Open the Open Source Project list window
+    */
+    private fun openOpenSourceProjectActivity()
+    {
+        val intent = Intent(this, OpenSourceProjectsActivity::class.java)
+        startActivity(intent)
+    }
+
+    /*
+        Open the students list window
+    */
+    private fun openStudentsActivity()
+    {
+        val intent = Intent(this, StudentsActivity::class.java)
+        startActivity(intent)
+    }
+
+    /*
+        Open the academic papers list window
+    */
+    private fun openPapersActivity()
+    {
+        val intent = Intent(this, AcademicPapersActivity::class.java)
         startActivity(intent)
     }
 
