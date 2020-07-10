@@ -2,13 +2,11 @@ package info.teddylazebnik.mobileversion
 
 import adapters.CourseAdapter
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
-import androidx.annotation.RequiresApi
+import data.DbManager
 import data_objects.Course
-import info.teddylazebnik.mobileversion.data_objects.TeachingMessageList
 
 class CoursesActivity : AppCompatActivity() {
 
@@ -17,6 +15,8 @@ class CoursesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_teaching_courses)
+
+        items = DbManager().readDefaultJson(DbManager.COURSE) as ArrayList<Course>
 
         // build courses
         // TODO: move later to database or remote online file
