@@ -34,7 +34,12 @@ class TeachingMessageList(raw_data: String) {
         return this.objects.size
     }
 
-    public fun filter(course: String, after_date: LocalDate?): TeachingMessageList
+    fun sort() {
+        objects.sortWith(compareBy({it.date}))
+        objects.reverse()
+    }
+
+    fun filter(course: String, after_date: LocalDate?): TeachingMessageList
     {
         val passObjects =  ArrayList<TeachingMessageObj>()
         for (message in objects)

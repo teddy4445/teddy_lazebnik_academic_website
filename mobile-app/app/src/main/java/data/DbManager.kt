@@ -1,8 +1,10 @@
 package data
 
+import android.os.Build
 import android.os.Handler
 import android.os.SystemClock
 import android.util.Log
+import androidx.annotation.RequiresApi
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import data_objects.*
@@ -36,14 +38,21 @@ open class DbManager {
         val DOMAIN_JSON: String = "https://teddylazebnik.info/app_jsons/"
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     public fun updateDataAll(dataAppFolder: File) {
         try
         {
-            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
-            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
-            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH), OPEN_SOURCE_PROJECT_JSON_PATH)
-            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
-            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
+            if (DbUpdateManager.checkLastUpdate(dataAppFolder, DbUpdateManager.SECONDS_IN_HALF_DAY))
+            {
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH), OPEN_SOURCE_PROJECT_JSON_PATH)
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
+
+                // update last time used
+                DbUpdateManager.updateDbDate(dataAppFolder)
+            }
         }
         catch (error: Exception)
         {

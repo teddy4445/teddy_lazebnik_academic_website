@@ -14,6 +14,15 @@ class TeachingMessageObj(raw_data: String) {
     var date: LocalDate = LocalDate.now()
     var message: String = ""
 
+    companion object {
+        fun sort(teachingMessages: ArrayList<TeachingMessageObj>): ArrayList<TeachingMessageObj> {
+            val answer = teachingMessages.filterNotNull() as ArrayList<TeachingMessageObj>
+            answer.sortWith(compareBy({it.date}))
+            answer.reverse()
+            return answer
+        }
+    }
+
     init {
         val elements = raw_data.split("~")
         this.course = elements[0]

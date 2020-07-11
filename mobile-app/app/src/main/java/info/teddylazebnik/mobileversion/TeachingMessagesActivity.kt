@@ -10,6 +10,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import info.teddylazebnik.mobileversion.adapters.TeachingMessagesAdapter
 import info.teddylazebnik.mobileversion.data_objects.TeachingMessageList
+import info.teddylazebnik.mobileversion.data_objects.TeachingMessageObj
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -89,6 +90,8 @@ class TeachingMessagesActivity : AppCompatActivity(), FilterTeachingMessagesDial
     @RequiresApi(Build.VERSION_CODES.O)
     private fun allPrepare(messageList: TeachingMessageList?)
     {
+        // sort list
+        messageList?.sort()
         // build the list view
         messageList?.let { buildMessageList(it) }
 
