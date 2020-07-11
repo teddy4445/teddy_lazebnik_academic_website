@@ -37,7 +37,7 @@
    },
    {
       "title":"K-means great again",
-      "description":"This project provides three different extensions for the K-means and Knn algorithm provided in the "sklearn" module. First, X-means which finds the best 'k' hyper-parameter in K-means automatically for given possible set of K's. Second, n-regression convert the classic Knn classification problem to a regression predictor. Third, Knn over time allowing to find casters using the Knn algorithm with a strong time component. This technique inherently using changing of clusters over time and not just another dimension in the feature-space.",
+      "description":"This project provides three different extensions for the K-means and Knn algorithm provided in the \"sklearn\" module. First, X-means which finds the best 'k' hyper-parameter in K-means automatically for given possible set of K's. Second, n-regression convert the classic Knn classification problem to a regression predictor. Third, Knn over time allowing to find casters using the Knn algorithm with a strong time component. This technique inherently using changing of clusters over time and not just another dimension in the feature-space.",
       "pageLink":"https://bitbucket.org/teddy_lazebnik/knn_over_time/src/master/",
       "tags":["Python", "ML"]
    },

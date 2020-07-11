@@ -49,7 +49,7 @@ class SplashActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onResume() {
         super.onResume()
-        handler.postDelayed(runnable, 500);
+        handler.postDelayed(runnable, 10);
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
