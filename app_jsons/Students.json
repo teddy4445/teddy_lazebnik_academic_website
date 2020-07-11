@@ -13,7 +13,7 @@
       "pageLink":"https://www.linkedin.com/in/shiraminhahar/",
       "isAlumni":true,
       "year":2019,
-      "degree":2
+      "degree":1
    },
    {
       "title":"Tamar Feuchtwanger",
@@ -21,7 +21,7 @@
       "pageLink":"https://www.linkedin.com/in/tamar-feuchtwanger/",
       "isAlumni":true,
       "year":2019,
-      "degree":2
+      "degree":1
    },
    {
       "title":"Pedro Nissan",
@@ -29,6 +29,6 @@
       "pageLink": "https://www.linkedin.com/in/pedram-pedro-nissani-we-re-hiring-0840b022/",
       "isAlumni":true,
       "year":2019,
-      "degree":1
+      "degree":2
    },
 ]
