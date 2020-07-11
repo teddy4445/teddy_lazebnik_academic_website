@@ -4,8 +4,9 @@ class AcademicPaper(title: String, description: String, pageLink: String, author
 
     companion object {
         fun sort(papers: ArrayList<AcademicPaper>): ArrayList<AcademicPaper> {
-            papers.sortWith(compareBy({-1 * it.year}))
-            return papers
+            var answer  = papers.filterNotNull() as ArrayList<AcademicPaper>
+            answer.sortWith(compareBy({-1 * it.year}))
+            return answer
         }
     }
 

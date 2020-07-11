@@ -4,8 +4,9 @@ class Students(title: String, description: String, pageLink: String, isAlumni: B
 
     companion object {
         fun sort(students: ArrayList<Students>): ArrayList<Students> {
-            students.sortWith(compareBy({it.isAlumni}, {it.degree}))
-            return students
+            val answer = students.filterNotNull() as ArrayList<Students>
+            answer.sortWith(compareBy({it.isAlumni}, {it.degree}))
+            return answer
         }
     }
 

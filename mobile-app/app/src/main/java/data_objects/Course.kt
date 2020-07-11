@@ -8,8 +8,9 @@ class Course(title: String, year: Int, semester: Int, uni: String, description: 
 
     companion object {
         fun sort(courses : ArrayList<Course>): ArrayList<Course> {
-            courses.sortWith(compareBy({-1*it.year}, {2 - it.semester}, {it.title}))
-            return courses
+            var answer  = courses.filterNotNull() as ArrayList<Course>
+            answer.sortWith(compareBy({-1*it.year}, {2 - it.semester}, {it.title}))
+            return answer
         }
     }
 

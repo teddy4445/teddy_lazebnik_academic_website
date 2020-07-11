@@ -8,8 +8,9 @@ class TechnicalBlog(title: String, description: String, pageLink: String) : List
 
     companion object {
         fun sort(blogs : ArrayList<TechnicalBlog>): ArrayList<TechnicalBlog> {
-            blogs.sortWith(compareBy({it.title}))
-            return blogs
+            var answer  = blogs.filterNotNull() as ArrayList<TechnicalBlog>
+            answer.sortWith(compareBy({it.title}))
+            return answer
         }
     }
 

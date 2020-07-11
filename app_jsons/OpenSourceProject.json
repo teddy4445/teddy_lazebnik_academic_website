@@ -43,7 +43,7 @@
    },
    {
       "title":"Academic PDF to TXT",
-      "description":"The project written in Java allowing a user to convert academic papers in a PDF format to a TXT extracting the text of the paper using several techniques. Currently, it support the following geometrical \ format elements popular in academic papers: 1. 2 coloum texts - by spliting the page into 2 pages, one per coloum. 2. Graphs, tables and images - finding the boundery of each one of them in a page and removing it by overriding with white rectangle. 3. Equeations - the OCR providing short and non-words from equeations which is mostly cleared in the post-processing stage.",
+      "description":"The project written in Java allowing a user to convert academic papers in a PDF format to a TXT extracting the text of the paper using several techniques. Currently, it support the following geometrical format elements popular in academic papers: 1. 2 coloum texts - by spliting the page into 2 pages, one per coloum. 2. Graphs, tables and images - finding the boundery of each one of them in a page and removing it by overriding with white rectangle. 3. Equeations - the OCR providing short and non-words from equeations which is mostly cleared in the post-processing stage.",
       "pageLink":"https://bitbucket.org/galk-opensource/paper-pdf-text-extractor/src/master/",
       "tags":["Java", "OCR"]
    },

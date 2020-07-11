@@ -4,8 +4,9 @@ class OpenSourceProject(title: String, description: String, pageLink: String, ta
 
     companion object {
         fun sort(openSourceProjectsList : ArrayList<OpenSourceProject>): ArrayList<OpenSourceProject> {
-            openSourceProjectsList.sortWith(compareBy({it.title}))
-            return openSourceProjectsList
+            val answer = openSourceProjectsList.filterNotNull() as ArrayList<OpenSourceProject>
+            answer.sortWith(compareBy({it.title}))
+            return answer
         }
     }
 

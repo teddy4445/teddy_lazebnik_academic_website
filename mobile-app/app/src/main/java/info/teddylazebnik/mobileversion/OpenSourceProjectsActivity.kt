@@ -18,7 +18,6 @@ class OpenSourceProjectsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_open_source_projects)
-
         // build courses
         items = DbManager().readDefaultJson(this.filesDir, DbManager.OPEN_SOURCE_PROJECT) as ArrayList<OpenSourceProject>
         // sort according to order
