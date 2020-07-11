@@ -1,50 +1,34 @@
 [
    {
-      "title":"Numerical Analysis",
-      "description":"Numerical analysis and applied tools for real world problems",
-      "pageLink":"/courses/numerical.html",
+      "title":"Chen Tal-Schachar",
+      "description":"Working on Rivendell v.3 with explicit collaborative learning. (Gal A. Kaminka as main advisor)",
+      "pageLink":"https://www.linkedin.com/in/chen-tal-shachar/",
+      "isAlumni":false,
       "year":2020,
-      "semester":1,
-      "uni":"BIU, HIT"
+      "degree":2
    },
    {
-      "title":"Linear Mathematical Optimization",
-      "description":"This field provides mathematical tools for decision making and finding optimal cases for real-life situations",
-      "pageLink":"/courses/linear_mathematical_optimization.html",
-      "year":2020,
-      "semester":2,
-      "uni":"BIU"
-   },
-   {
-      "title":"Tools for Numerical Analysis",
-      "description":"Numerical analysis and applied tools for real world problems for Eng.",
-      "pageLink":"/courses/tools_numerical_analysis.html",
-      "year":2020,
-      "semester":2,
-      "uni":"BIU"
-   },
-   {
-      "title":"Tools for Numerical Analysis",
-      "description":"The mathematical and applied field of Neural Networks and provide practical tools for using them. The course focuses mainly on image processing and, consequently, on convolutional neural networks.",
-      "pageLink":"/courses/deep_leanring.html",
-      "year":2020,
-      "semester":2,
-      "uni":"HIT"
-   },
-   {
-      "title":"Partial Differential Equations",
-      "description":"Analytical solutions for Partial Differential Equations (linear and second order)",
-      "pageLink":"",
+      "title":"Shira Min Hahar",
+      "description":"Worked on Property-Value tagging tool as website",
+      "pageLink":"https://www.linkedin.com/in/shiraminhahar/",
+      "isAlumni":true,
       "year":2019,
-      "semester":1,
-      "uni":"BIU"
+      "degree":2
    },
    {
-      "title":"Linear Mathematical Optimization",
-      "description":"This field provides mathematical tools for decision making and finding optimal cases for real-life situations",
-      "pageLink":"/courses/linear_mathematical_optimization.html",
+      "title":"Tamar Feuchtwanger",
+      "description":"Worked on Property-Value tagging tool as website",
+      "pageLink":"https://www.linkedin.com/in/tamar-feuchtwanger/",
+      "isAlumni":true,
       "year":2019,
-      "semester":2,
-      "uni":"BIU"
-   }
+      "degree":2
+   },
+   {
+      "title":"Pedro Nissan",
+      "description":"Worked on Rivendell v.2 with online learning search engine personalization. (Gal A. Kaminka as main advisor)",
+      "pageLink": "https://www.linkedin.com/in/pedram-pedro-nissani-we-re-hiring-0840b022/",
+      "isAlumni":true,
+      "year":2019,
+      "degree":1
+   },
 ]
