@@ -49,7 +49,7 @@ class CoursesActivity : AppCompatActivity() {
             semester = 1,
             uni = "BIU",
             pageLink = "",
-            description = "The mathematical and applied field of Neural Networks and provide practical tools for using them. The course focuses mainly on image processing and, consequently, on convolutional neural networks."))
+            description = "Analytical solutions for Partial Differential Equations (linear and second order)"))
         items.add(Course(title = "Linear Mathematical Optimization",
             year = 2019,
             semester = 2,

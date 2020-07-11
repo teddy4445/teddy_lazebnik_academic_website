@@ -11,6 +11,7 @@ import android.os.Handler
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import data.DbManager
 import info.teddylazebnik.mobileversion.jobs.TeachingListRetrieveJob
 import java.io.File
 import java.io.FileOutputStream
@@ -28,7 +29,10 @@ class SplashActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.N)
     private val runnable = Runnable {
         if (!isFinishing) {
+            // set job to repeat data
             scheduleJob()
+            // download all data
+            DbManager().updateDataAll()
             if (checkIfFirstTime())
             {
                 startActivity(Intent(applicationContext, MyCustomAppIntro::class.java))

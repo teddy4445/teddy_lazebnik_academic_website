@@ -1,6 +1,7 @@
 package data
 
 import android.os.Handler
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import org.json.JSONObject
 import com.google.gson.Gson
@@ -14,7 +15,10 @@ import java.net.URL
 
 open class DbManager {
 
+    private val TAG = "DbManager"
     private val handler = Handler()
+
+    private var finishCall = true
 
     companion object {
         val COURSE: String = "Course"
@@ -29,33 +33,52 @@ open class DbManager {
         val STUDENTS_JSON_PATH = "Students.json"
         val TECHNICAL_BLOG_JSON_PATH = "TechnicalBlog.json"
 
-        val DOMAIN_JSON: String = "http://teddylazebnik.info/json/"
+        val DOMAIN_JSON: String = "https://teddylazebnik.info/app_jsons/"
     }
 
     public fun updateDataAll() {
-        updateDataRaw(DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
-        updateDataRaw(DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
-        updateDataRaw(DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH), OPEN_SOURCE_PROJECT_JSON_PATH)
-        updateDataRaw(DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
-        updateDataRaw(DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
+        try
+        {
+            while (finishCall) {
+                updateDataRaw(DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
+            }
+            while (finishCall){
+                updateDataRaw(DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
+            }
+            while (finishCall) {
+                updateDataRaw(DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH),OPEN_SOURCE_PROJECT_JSON_PATH)
+            }
+            while (finishCall) {
+                updateDataRaw(DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
+            }
+            while (finishCall) {
+                updateDataRaw(DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
+            }
+        }
+        catch (error: Exception)
+        {
+            Log.e(TAG, "Cannot update files because: $error")
+        }
     }
 
     public fun updateData(className: String) {
-        when (className) {
-            COURSE -> {
-                updateDataRaw(DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
-            }
-            ACADEMIC_PAPER -> {
-                updateDataRaw(DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
-            }
-            OPEN_SOURCE_PROJECT -> {
-                updateDataRaw(DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH), OPEN_SOURCE_PROJECT_JSON_PATH)
-            }
-            STUDENTS -> {
-                updateDataRaw(DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
-            }
-            TECHNICAL_BLOG -> {
-                updateDataRaw(DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
+        while (finishCall){
+            when (className) {
+                COURSE -> {
+                    updateDataRaw(DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
+                }
+                ACADEMIC_PAPER -> {
+                    updateDataRaw(DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
+                }
+                OPEN_SOURCE_PROJECT -> {
+                    updateDataRaw(DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH), OPEN_SOURCE_PROJECT_JSON_PATH)
+                }
+                STUDENTS -> {
+                    updateDataRaw(DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
+                }
+                TECHNICAL_BLOG -> {
+                    updateDataRaw(DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
+                }
             }
         }
     }
@@ -63,6 +86,7 @@ open class DbManager {
     public fun updateDataRaw(link: String, saveFilePath: String)
     {
         Thread(Runnable {
+            finishCall = false
             // read messages file, parse it and generate message list
             val data = URL(link).readText()
             // save results
@@ -70,6 +94,7 @@ open class DbManager {
             val stream = FileOutputStream(file)
             stream.write(data.toByteArray())
             stream.close()
+            finishCall = true
         }).start()
     }
 

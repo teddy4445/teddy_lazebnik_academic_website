@@ -1,0 +1,58 @@
+[
+   {
+      "title":"A stable algorithm for numerical matrix exponent",
+      "description":"",
+      "pageLink":"https://teddylazebnik.info/files/matrix_exponent.pdf",
+      "year":2016,
+      "journal":"Functional Differential Equations",
+      "authors":["Teddy Lazebnik", "Shlomo Yanetz"]
+   },
+   {
+      "title":"Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling",
+      "description":"",
+      "pageLink":"https://teddylazebnik.info/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf",
+      "year":2019,
+      "journal":"Functional Differential Equations",
+      "authors":["Teddy Lazebnik", "Shlomo Yanetz", "Svetlana Bunimovich-Mendrazitsky", "Niva Aaroni"]
+   },
+   {
+      "title":"A highly stable implementation for numerical matrix exponent in Matlab and C",
+      "description":"",
+      "pageLink":"https://teddylazebnik.info/files/matrix_exponent_stable.pptx",
+      "year":2017,
+      "journal":"Functional Differential Equations",
+      "authors":["Teddy Lazebnik", "Shlomo Yanetz"]
+   },
+   {
+      "title":"PDE Modeling of Bladder Cancer Treatment Using BCG Immunotherapy",
+      "description":"",
+      "pageLink":"https://teddylazebnik.info/files/Treatment_of_Bladder_Cancer___conference.pptx",
+      "year":2019,
+      "journal":"Functional Differential Equations",
+      "authors":["Teddy Lazebnik", "Shlomo Yanetz", "Svetlana Bunimovich-Mendrazitsky"]
+   },
+   {
+      "title":"Energy Efficiency in 2d Quadratic Hamiltonian",
+      "description":"",
+      "pageLink":"https://teddylazebnik.info/files/Treatment_of_Bladder_Cancer___conference.pptx",
+      "year":2015,
+      "journal":"Technion Press",
+      "authors":["Teddy Lazebnik", "Barry Ginat"]
+   },
+   {
+      "title":"Rivendell: Project-Based Academic Search Engine",
+      "description":"",
+      "pageLink":"https://teddylazebnik.info/files/files/nano_confirance.pptx",
+      "year":2019,
+      "journal":"Bar Ilan Nanotechnology and Advanced Materials",
+      "authors":["Teddy Lazebnik", "Hana Weitman", "Yoav Goldberg", "Gal A. Kaminka"]
+   },
+   {
+      "title":"Return on Data",
+      "description":"",
+      "pageLink":"https://teddylazebnik.info/files/return_on_data.pdf",
+      "year":2019,
+      "journal":"Yale Law and Policy Review",
+      "authors":["Noam Kolt"]
+   },
+]

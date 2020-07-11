@@ -12,6 +12,7 @@ import android.os.Build
 import android.preference.PreferenceManager
 import android.util.Log
 import androidx.core.app.NotificationCompat
+import data.DbManager
 import info.teddylazebnik.mobileversion.R
 import info.teddylazebnik.mobileversion.TeachingMessagesActivity
 import java.io.File
@@ -53,6 +54,10 @@ class TeachingListRetrieveJob : JobService() {
                 val stream = FileOutputStream(file)
                 stream.write(messagesRawData.toByteArray())
                 stream.close()
+
+                // update the other screens for json files
+                DbManager().updateDataAll()
+
                 Log.d(TAG, "Job finished")
                 jobFinished(params, false)
             }

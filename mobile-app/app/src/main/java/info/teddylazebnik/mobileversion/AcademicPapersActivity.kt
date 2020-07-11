@@ -37,7 +37,7 @@ class AcademicPapersActivity : AppCompatActivity() {
             authors = arrayListOf("Teddy Lazebnik", "Shlomo Yanetz"),
             journal = "Functional Differential Equations",
             year = 2016))
-        items.add(AcademicPaper(title = "PDE Modeling of Bladder Cancer Treatment Using BCG ImmunotherapyC",
+        items.add(AcademicPaper(title = "PDE Modeling of Bladder Cancer Treatment Using BCG Immunotherapy",
             description = "",
             pageLink = "https://teddylazebnik.info/files/Treatment_of_Bladder_Cancer___conference.pptx",
             authors = arrayListOf("Teddy Lazebnik", "Shlomo Yanetz", "Svetlana Bunimovich-Mendrazitsky"),
@@ -48,7 +48,7 @@ class AcademicPapersActivity : AppCompatActivity() {
             pageLink = "https://teddylazebnik.info/files/Treatment_of_Bladder_Cancer___conference.pptx",
             authors = arrayListOf("Teddy Lazebnik", "Barry Ginat"),
             journal = "Technion Press",
-            year = 2019))
+            year = 2015))
         items.add(AcademicPaper(title = "Rivendell: Project-Based Academic Search Engine",
             description = "",
             pageLink = "https://teddylazebnik.info/files/files/nano_confirance.pptx",
