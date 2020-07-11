@@ -14,6 +14,7 @@ open class DbManager {
 
     private val TAG = "DbManager"
     private val WAIT_CALL_TIME_MS = 50
+    private val TIMEOUT_MS = 2000
     private var callData = ""
     private val handler = Handler()
 
@@ -85,6 +86,10 @@ open class DbManager {
             Log.i(TAG, "Wait for ${count * WAIT_CALL_TIME_MS} ms for $link")
             count++
             SystemClock.sleep(WAIT_CALL_TIME_MS.toLong());
+            if (count * WAIT_CALL_TIME_MS > TIMEOUT_MS)
+            {
+                return
+            }
         }
 
         // save results
