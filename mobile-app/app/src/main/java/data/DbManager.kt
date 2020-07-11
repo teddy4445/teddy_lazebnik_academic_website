@@ -1,14 +1,11 @@
 package data
 
 import android.os.Handler
+import android.os.SystemClock
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
-import org.json.JSONObject
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import data_objects.*
-import info.teddylazebnik.mobileversion.TeachingMessagesActivity
-import info.teddylazebnik.mobileversion.data_objects.TeachingMessageList
 import java.io.File
 import java.io.FileOutputStream
 import java.net.URL
@@ -16,6 +13,8 @@ import java.net.URL
 open class DbManager {
 
     private val TAG = "DbManager"
+    private val WAIT_CALL_TIME_MS = 50
+    private var callData = ""
     private val handler = Handler()
 
     private var finishCall = true
@@ -36,24 +35,14 @@ open class DbManager {
         val DOMAIN_JSON: String = "https://teddylazebnik.info/app_jsons/"
     }
 
-    public fun updateDataAll() {
+    public fun updateDataAll(dataAppFolder: File) {
         try
         {
-            while (finishCall) {
-                updateDataRaw(DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
-            }
-            while (finishCall){
-                updateDataRaw(DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
-            }
-            while (finishCall) {
-                updateDataRaw(DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH),OPEN_SOURCE_PROJECT_JSON_PATH)
-            }
-            while (finishCall) {
-                updateDataRaw(DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
-            }
-            while (finishCall) {
-                updateDataRaw(DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
-            }
+            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
+            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
+            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH), OPEN_SOURCE_PROJECT_JSON_PATH)
+            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
+            updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
         }
         catch (error: Exception)
         {
@@ -61,41 +50,49 @@ open class DbManager {
         }
     }
 
-    public fun updateData(className: String) {
-        while (finishCall){
-            when (className) {
-                COURSE -> {
-                    updateDataRaw(DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
-                }
-                ACADEMIC_PAPER -> {
-                    updateDataRaw(DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
-                }
-                OPEN_SOURCE_PROJECT -> {
-                    updateDataRaw(DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH), OPEN_SOURCE_PROJECT_JSON_PATH)
-                }
-                STUDENTS -> {
-                    updateDataRaw(DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
-                }
-                TECHNICAL_BLOG -> {
-                    updateDataRaw(DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
-                }
+    public fun updateData(dataAppFolder: File, className: String) {
+        when (className) {
+            COURSE -> {
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
+            }
+            ACADEMIC_PAPER -> {
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(ACADEMIC_PAPER_JSON_PATH), ACADEMIC_PAPER_JSON_PATH)
+            }
+            OPEN_SOURCE_PROJECT -> {
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH), OPEN_SOURCE_PROJECT_JSON_PATH)
+            }
+            STUDENTS -> {
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
+            }
+            TECHNICAL_BLOG -> {
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
             }
         }
     }
 
-    public fun updateDataRaw(link: String, saveFilePath: String)
-    {
+    public fun updateDataRaw(dataAppFolder: File, link: String, saveFilePath: String) {
+        callData = ""
+
         Thread(Runnable {
-            finishCall = false
             // read messages file, parse it and generate message list
-            val data = URL(link).readText()
-            // save results
-            val file = File(AppCompatActivity().filesDir, saveFilePath)
-            val stream = FileOutputStream(file)
-            stream.write(data.toByteArray())
-            stream.close()
-            finishCall = true
+            callData = URL(link).readText()
         }).start()
+
+        // lock until we have answer
+        var count = 1
+        while (callData == "")
+        {
+            Log.i(TAG, "Wait for ${count * WAIT_CALL_TIME_MS} ms for $link")
+            count++
+            SystemClock.sleep(WAIT_CALL_TIME_MS.toLong());
+        }
+
+        // save results
+        val file = File(dataAppFolder, saveFilePath)
+        val stream = FileOutputStream(file)
+        stream.write(callData.toByteArray())
+        Log.i(TAG, "Save ${8 * callData.length} bytes for $link")
+        stream.close()
     }
 
     public fun writeDefaultJson(className: String, contentJson: String)
@@ -119,23 +116,23 @@ open class DbManager {
         }
     }
 
-    public fun readDefaultJson(className: String): List<*>?
+    public fun readDefaultJson(dataAppFolder: File, className: String): List<*>?
     {
         when (className) {
             COURSE -> {
-                return readJsonFromFile(COURSE_JSON_PATH, className)
+                return readJsonFromFile(dataAppFolder, COURSE_JSON_PATH, className)
             }
             ACADEMIC_PAPER -> {
-                return readJsonFromFile(ACADEMIC_PAPER_JSON_PATH, className)
+                return readJsonFromFile(dataAppFolder, ACADEMIC_PAPER_JSON_PATH, className)
             }
             OPEN_SOURCE_PROJECT -> {
-                return readJsonFromFile(OPEN_SOURCE_PROJECT_JSON_PATH, className)
+                return readJsonFromFile(dataAppFolder, OPEN_SOURCE_PROJECT_JSON_PATH, className)
             }
             STUDENTS -> {
-                return readJsonFromFile(STUDENTS_JSON_PATH, className)
+                return readJsonFromFile(dataAppFolder, STUDENTS_JSON_PATH, className)
             }
             TECHNICAL_BLOG -> {
-                return readJsonFromFile(TECHNICAL_BLOG_JSON_PATH, className)
+                return readJsonFromFile(dataAppFolder, TECHNICAL_BLOG_JSON_PATH, className)
             }
         }
         return null
@@ -146,9 +143,9 @@ open class DbManager {
         File(filePath).writeText(contentJson)
     }
 
-    public fun readJsonFromFile(filePath: String, className: String): List<*>?
+    public fun readJsonFromFile(dataAppFolder: File, fileName: String, className: String): List<*>?
     {
-        return readJson(File(filePath).readText(Charsets.UTF_8), className)
+        return readJson(File(dataAppFolder, fileName).readText(), className)
     }
 
     public fun readJson(jsonString: String, className: String): List<*>?

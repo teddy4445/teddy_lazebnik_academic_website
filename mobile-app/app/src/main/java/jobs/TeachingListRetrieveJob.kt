@@ -56,7 +56,7 @@ class TeachingListRetrieveJob : JobService() {
                 stream.close()
 
                 // update the other screens for json files
-                DbManager().updateDataAll()
+                DbManager().updateDataAll(this.filesDir)
 
                 Log.d(TAG, "Job finished")
                 jobFinished(params, false)

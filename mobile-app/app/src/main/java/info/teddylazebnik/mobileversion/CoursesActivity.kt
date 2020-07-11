@@ -15,47 +15,8 @@ class CoursesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_teaching_courses)
-
-        items = DbManager().readDefaultJson(DbManager.COURSE) as ArrayList<Course>
-
         // build courses
-        // TODO: move later to database or remote online file
-        items.add(Course(title = "Numerical Analysis",
-            year = 2020,
-            semester = 1,
-            uni = "BIU, HIT",
-            pageLink = "/courses/numerical.html",
-            description = "Numerical analysis and applied tools for real world problems"))
-        items.add(Course(title = "Linear Mathematical Optimization",
-            year = 2020,
-            semester = 2,
-            uni = "BIU",
-            pageLink = "/courses/linear_mathematical_optimization.html",
-            description = "This field provides mathematical tools for decision making and finding optimal cases for real-life situations"))
-        items.add(Course(title = "Tools for Numerical Analysis",
-            year = 2020,
-            semester = 2,
-            uni = "BIU",
-            pageLink = "/courses/tools_numerical_analysis.html",
-            description = "Numerical analysis and applied tools for real world problems for Eng."))
-        items.add(Course(title = "Deep Learning for Computer Vision",
-            year = 2020,
-            semester = 2,
-            uni = "HIT",
-            pageLink = "/courses/deep_leanring.html",
-            description = "The mathematical and applied field of Neural Networks and provide practical tools for using them. The course focuses mainly on image processing and, consequently, on convolutional neural networks."))
-        items.add(Course(title = "Partial Differential Equations",
-            year = 2019,
-            semester = 1,
-            uni = "BIU",
-            pageLink = "",
-            description = "Analytical solutions for Partial Differential Equations (linear and second order)"))
-        items.add(Course(title = "Linear Mathematical Optimization",
-            year = 2019,
-            semester = 2,
-            uni = "BIU",
-            pageLink = "/courses/linear_mathematical_optimization.html",
-            description = "This field provides mathematical tools for decision making and finding optimal cases for real-life situations"))
+        items = DbManager().readDefaultJson(this.filesDir, DbManager.COURSE) as ArrayList<Course>
         // sort according to order
         this.items = Course.sort(this.items)
         // build UI

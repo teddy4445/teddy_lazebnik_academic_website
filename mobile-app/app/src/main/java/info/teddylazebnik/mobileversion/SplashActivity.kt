@@ -32,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
             // set job to repeat data
             scheduleJob()
             // download all data
-            DbManager().updateDataAll()
+            DbManager().updateDataAll(this.filesDir)
             if (checkIfFirstTime())
             {
                 startActivity(Intent(applicationContext, MyCustomAppIntro::class.java))
