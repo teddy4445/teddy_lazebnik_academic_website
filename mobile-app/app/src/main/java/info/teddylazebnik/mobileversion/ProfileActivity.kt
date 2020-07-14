@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+        setContentView(R.layout.activity_profile_full)
 
         // build up the screen right
         addClickActions()
@@ -65,13 +65,20 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun openEmail() {
-        intent = Intent(Intent.ACTION_VIEW)
-            .setType("plain/text")
-            .setData(Uri.parse("lazebnik.teddy@gmail.com"))
-            .setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail")
-            .putExtra(Intent.EXTRA_SUBJECT, "Message from app")
-            .putExtra(Intent.EXTRA_TEXT, "Hi Teddy, I am writing you about: \n");
-        startActivity(intent);
+        try
+        {
+            intent = Intent(Intent.ACTION_VIEW)
+                .setType("plain/text")
+                .setData(Uri.parse("lazebnik.teddy@gmail.com"))
+                .setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail")
+                .putExtra(Intent.EXTRA_SUBJECT, "Message from app")
+                .putExtra(Intent.EXTRA_TEXT, "Hi Teddy, I am writing you about: \n");
+            startActivity(intent);
+        }
+        catch (error: Exception)
+        {
+            Toast.makeText(this, "Service not available right now", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun openDialer()
@@ -79,6 +86,7 @@ class ProfileActivity : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_DIAL)
         intent.data = Uri.parse("tel:0545524589")
         startActivity(intent)
+        Toast.makeText(this, "Not available right now", Toast.LENGTH_SHORT).show()
     }
 
     private fun openMap()

@@ -274,7 +274,7 @@
             android:layout_height="90dp"
             android:background="@android:color/black"
             android:orientation="horizontal"
-            android:weightSum="1">
+            android:weightSum="2">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -285,9 +285,10 @@
 
                 <ImageView
                     android:id="@+id/mainSettingsImg"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
+                    android:paddingStart="10dp"
                     android:layout_height="match_parent"
-                    android:layout_gravity="end"
+                    android:layout_gravity="center_vertical|center_horizontal"
                     android:paddingTop="15dp"
                     android:paddingBottom="15dp"
                     app:srcCompat="@drawable/main_menu_settings" />
@@ -317,14 +318,15 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:background="@android:color/black"
+                android:background="@color/colorPrimaryComplete5"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/mainProfileImg"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
+                    android:paddingStart="10dp"
                     android:layout_height="match_parent"
-                    android:layout_gravity="end"
+                    android:layout_gravity="center_vertical|center_horizontal"
                     android:paddingTop="15dp"
                     android:paddingBottom="15dp"
                     app:srcCompat="@drawable/white_profile_icon" />

@@ -6,14 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/teaching_course_menu"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@color/colorPrimaryComplete4"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/personalPanelHeader"
@@ -23,10 +21,9 @@
             android:gravity="center_horizontal|center_vertical"
             android:paddingTop="20dp"
             android:paddingBottom="10dp"
-            android:textFontWeight="bold"
-            android:textSize="22sp"
             android:text="@string/teddy_lazebnik"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/personalPanelHeaderSecond"
@@ -38,7 +35,6 @@
             android:paddingBottom="10dp"
             android:text="@string/personal_panel_intrests"
             android:textColor="@color/white"
-            android:textFontWeight="bold"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -213,13 +209,13 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryComplete4"
             android:gravity="start|center_vertical"
+            android:paddingStart="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:paddingStart="20dp"
             android:text="@string/personal_panel_current_projects_header"
             android:textColor="@color/white"
-            android:textFontWeight="bold"
             android:textSize="20sp"
+            android:textStyle="bold"
             tools:layout_editor_absoluteY="420dp" />
 
         <LinearLayout
@@ -254,7 +250,6 @@
                         android:paddingBottom="10dp"
                         android:text="CS"
                         android:textColor="@android:color/white"
-                        android:textFontWeight="bold"
                         android:textSize="18sp" />
 
                     <View
@@ -279,6 +274,12 @@
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="?android:attr/listDivider" />
 
             <LinearLayout
                 android:id="@+id/personalPanelCurrentProjectItem2"
@@ -306,7 +307,6 @@
                         android:paddingBottom="10dp"
                         android:text="Math"
                         android:textColor="@android:color/white"
-                        android:textFontWeight="bold"
                         android:textSize="18sp" />
 
                     <View
@@ -331,6 +331,12 @@
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="?android:attr/listDivider" />
 
             <LinearLayout
                 android:id="@+id/personalPanelCurrentProjectItem3"
@@ -358,7 +364,6 @@
                         android:paddingBottom="10dp"
                         android:text="CS"
                         android:textColor="@android:color/white"
-                        android:textFontWeight="bold"
                         android:textSize="18sp" />
 
                     <View
@@ -383,6 +388,12 @@
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="?android:attr/listDivider" />
         </LinearLayout>
     </LinearLayout>
 

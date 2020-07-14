@@ -155,13 +155,13 @@ class MainMenuActivity : AppCompatActivity() {
 
         // add the profile button the event
         val profileImg: ImageView = findViewById(R.id.mainProfileImg)
-        academicPublicationsImg.setOnClickListener{
+        profileImg.setOnClickListener{
             openProfileActivity()
         }
 
         // add the students button the event
         val profileText: TextView = findViewById(R.id.mainProfileText)
-        academicPublicationsText.setOnClickListener{
+        profileText.setOnClickListener{
             openProfileActivity()
         }
     }
