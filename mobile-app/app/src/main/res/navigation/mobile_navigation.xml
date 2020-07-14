@@ -8,18 +8,18 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="info.teddylazebnik.mobileversion.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="Resources"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="info.teddylazebnik.mobileversion.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="Notes"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="info.teddylazebnik.mobileversion.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="Additional"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

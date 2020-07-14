@@ -14,6 +14,7 @@
     <string name="main_menu_btn_5">Academic Publications</string>
     <string name="main_menu_teaching_messages_btn">Courses Messages</string>
     <string name="main_menu_settings_btn">Settings</string>
+    <string name="main_menu_profile_btn">Profile</string>
 
     <!-- teaching messages page -->
     <string name="teaching_messages_header">Teaching Messages</string>
@@ -52,5 +53,12 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="teddy_lazebnik">Teddy Lazebnik</string>
+    <string name="personal_panel_pnone">+972 545524589</string>
+    <string name="personal_panel_email">lazebnik.teddy@gmail.com</string>
+    <string name="personal_panel_office">Bar Ilan University \n Building 202, Room 109</string>
+    <string name="personal_profile_social">My LinkedIn</string>
+    <string name="personal_panel_intrests">Medical Nanorobotics, Numerical Analysis, PDE Stabilization, Biomathematics</string>
+    <string name="personal_panel_current_projects_header">Current Projects:</string>
 
 </resources>

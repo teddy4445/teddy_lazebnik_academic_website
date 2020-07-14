@@ -13,9 +13,9 @@ class AcademicCourseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_academic_course)
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        val navView: BottomNavigationView = findViewById(R.id.teaching_course_menu)
 
-        val navController = findNavController(R.id.nav_host_fragment)
+        val navController = findNavController(R.id.teaching_course_menu)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
