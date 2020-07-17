@@ -4,6 +4,7 @@ import adapters.TechnicalBlogAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ListView
 import data.DbManager
 import data_objects.Course
@@ -22,6 +23,12 @@ class TechnicalBlogActivity : AppCompatActivity() {
         this.items = TechnicalBlog.sort(this.items)
         // build UI
         buildList(items)
+
+        // add button event
+        val profileImg: View = findViewById(R.id.TechnicalBlogFloatBtn)
+        profileImg.setOnClickListener{
+            showTextActivity()
+        }
     }
 
     /*
@@ -42,5 +49,17 @@ class TechnicalBlogActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
+    }
+
+    /*
+        Open the text view activity
+     */
+    private fun showTextActivity()
+    {
+        val intent = Intent(this, TextActivity::class.java).apply {
+            putExtra(MainMenuActivity.EXTRA_MESSAGE, getString(R.string.long_text_blog))
+            putExtra(TextActivity.EXTRA_ENTITY, getString(R.string.activity_technical_blog))
+        }
+        startActivity(intent)
     }
 }

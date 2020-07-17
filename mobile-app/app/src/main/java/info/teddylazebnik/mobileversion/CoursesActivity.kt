@@ -4,9 +4,12 @@ import adapters.CourseAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.ListView
 import data.DbManager
 import data_objects.Course
+import info.teddylazebnik.mobileversion.MainMenuActivity.Companion.EXTRA_MESSAGE
 
 class CoursesActivity : AppCompatActivity() {
 
@@ -21,6 +24,12 @@ class CoursesActivity : AppCompatActivity() {
         this.items = Course.sort(this.items)
         // build UI
         buildList(items)
+
+        // add button event
+        val profileImg: View = findViewById(R.id.teachingCoursesFloatBtn)
+        profileImg.setOnClickListener{
+            showTextActivity()
+        }
     }
 
     /*
@@ -41,5 +50,17 @@ class CoursesActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
+    }
+
+    /*
+        Open the text view activity
+     */
+    private fun showTextActivity()
+    {
+        val intent = Intent(this, TextActivity::class.java).apply {
+            putExtra(MainMenuActivity.EXTRA_MESSAGE, getString(R.string.long_text_teaching_philosophy))
+            putExtra(TextActivity.EXTRA_ENTITY, getString(R.string.activity_teaching_courses))
+        }
+        startActivity(intent)
     }
 }

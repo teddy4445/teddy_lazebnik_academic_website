@@ -3,7 +3,6 @@
     package="info.teddylazebnik.mobileversion">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -18,10 +17,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ProfileActivity"
-            android:label="@string/title_activity_profile">
-        </activity>
+            android:name=".TextActivity"
+            android:noHistory="true">
 
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"></activity>
         <activity
             android:name=".AcademicCourseActivity"
             android:label="@string/title_activity_academic_course" />
