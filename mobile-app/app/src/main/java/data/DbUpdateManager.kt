@@ -10,7 +10,7 @@ open class DbUpdateManager {
 
     companion object{
         val DB_UPDATE = "db_update.txt"
-        val SECONDS_IN_HALF_DAY =  1 // 43200
+        val SECONDS_IN_HALF_DAY = 43200
 
         @RequiresApi(Build.VERSION_CODES.O)
         fun checkLastUpdate(dataAppFolder: File, deltaInSeconds: Int): Boolean {

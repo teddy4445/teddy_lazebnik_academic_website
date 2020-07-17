@@ -1,41 +1,47 @@
 package info.teddylazebnik.mobileversion
 
 import android.os.Bundle
-import android.widget.Toast
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.tabs.TabLayout
+import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.TextView
+import com.google.gson.JsonObject
 import data.DbManager
-import data_objects.AcademicCourse
-import data_objects.Course
+import data_objects.Students
+import info.teddylazebnik.mobileversion.ui.main.SectionsPagerAdapter
+import org.json.JSONObject
+import java.io.File
 
 class AcademicCourseActivity : AppCompatActivity() {
 
-    var items: ArrayList<AcademicCourse> = ArrayList()
+    var dataJson: JSONObject = JSONObject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_academic_course)
-        val navView: BottomNavigationView = findViewById(R.id.teaching_course_menu)
+        val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
+        val viewPager: ViewPager = findViewById(R.id.view_pager)
+        viewPager.adapter = sectionsPagerAdapter
+        val tabs: TabLayout = findViewById(R.id.tabs)
+        tabs.setupWithViewPager(viewPager)
 
-        val navController = findNavController(R.id.teaching_course_menu)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        // load data from DB file
+        dataJson = JSONObject(File(this.filesDir, DbManager.TEACHING_JSON_PATH).readText())
+        // get only this course data
+        dataJson = dataJson.get(intent.getStringExtra(MainMenuActivity.EXTRA_MESSAGE)) as JSONObject
 
-        // build courses
-        items = DbManager().readDefaultJson(this.filesDir, DbManager.TEACHING) as ArrayList<AcademicCourse>
+        // set title
+        val title: TextView = findViewById(R.id.teaching_title)
+        title.text = dataJson.get("title") as CharSequence?
 
-        // toast
-        Toast.makeText(this, items[0].toString(), Toast.LENGTH_LONG).show()
+        val fab: FloatingActionButton = findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
     }
 }

@@ -41,7 +41,7 @@ open class DbManager {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    public fun updateDataAll(dataAppFolder: File) {
+    fun updateDataAll(dataAppFolder: File) {
         try
         {
             if (DbUpdateManager.checkLastUpdate(dataAppFolder, DbUpdateManager.SECONDS_IN_HALF_DAY))
@@ -63,7 +63,7 @@ open class DbManager {
         }
     }
 
-    public fun updateData(dataAppFolder: File, className: String) {
+    fun updateData(dataAppFolder: File, className: String) {
         when (className) {
             COURSE -> {
                 updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(COURSE_JSON_PATH), COURSE_JSON_PATH)
@@ -86,7 +86,7 @@ open class DbManager {
         }
     }
 
-    public fun updateDataRaw(dataAppFolder: File, link: String, saveFilePath: String) {
+    fun updateDataRaw(dataAppFolder: File, link: String, saveFilePath: String) {
         callData = ""
 
         Thread(Runnable {
@@ -115,7 +115,7 @@ open class DbManager {
         stream.close()
     }
 
-    public fun writeDefaultJson(className: String, contentJson: String)
+    fun writeDefaultJson(className: String, contentJson: String)
     {
         when (className) {
             COURSE -> {
@@ -139,7 +139,7 @@ open class DbManager {
         }
     }
 
-    public fun readDefaultJson(dataAppFolder: File, className: String): List<*>?
+    fun readDefaultJson(dataAppFolder: File, className: String): List<*>?
     {
         when (className) {
             COURSE -> {
@@ -164,17 +164,17 @@ open class DbManager {
         return null
     }
 
-    public fun writeJsonFile(filePath: String, contentJson: String)
+    fun writeJsonFile(filePath: String, contentJson: String)
     {
         File(filePath).writeText(contentJson)
     }
 
-    public fun readJsonFromFile(dataAppFolder: File, fileName: String, className: String): List<*>?
+    fun readJsonFromFile(dataAppFolder: File, fileName: String, className: String): List<*>?
     {
         return readJson(File(dataAppFolder, fileName).readText(), className)
     }
 
-    public fun readJson(jsonString: String, className: String): List<*>?
+    fun readJson(jsonString: String, className: String): List<*>?
     {
         when (className) {
             COURSE -> {

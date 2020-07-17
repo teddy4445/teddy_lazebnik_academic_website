@@ -70,4 +70,9 @@
     <string name="long_text_students">I am always looking for great students (both undergraduates and M.Sc.). If you are a good student (from the CS. or Math. department in BIU), and you are curious about research and want to learn, we should talk. Expect hard work, but also lots of fun! Currently, I can only co-advise. \n\n The following topics are projects that I find intresting to do. That said, this list is incomplete; and open to other topics you may have. \n First, micro-expressions recognition using a standard camera. \n Second, numerical solution for two-phase floyd in a cylinder (navier-stokes equations). \n Third, Property-Value extraction from academic papers in English. \n </string>
     <string name="long_text_blog">If you want to write a technical blog post together, I would like to, just propose a subject and lets discuss it. I suggest to review my last posts to see what are my current interests. \n\n I do not write paid posts or promote any product - just posts that may benefit the community and share meaningful information and insights. </string>
 
+    <!-- Teaching Courses Page -->
+    <string name="teaching_courses_page_tab_1">Sources</string>
+    <string name="teaching_courses_page_tab_2">Notes</string>
+    <string name="teaching_courses_page_tab_3">Additional</string>
+
 </resources>
