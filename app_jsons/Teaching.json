@@ -1,5 +1,5 @@
 {
-	"deep_leanring":
+	"Deep Learning":
 	{
 		"title": "Deep Leanring for Computer Vision",
 		"code": "21319",
@@ -307,7 +307,7 @@
 			}
 		]
 	},
-	"numerical":
+	"Numerical Analysis":
 	{
 		
 		"title": "Numerical Analysis",
@@ -422,7 +422,7 @@
 			}
 		]
 	},
-	"linear_mathematical_optimization":
+	"Linear Mathematical Optimization":
 	{
 		
 		"title": "Introduction to Linear Mathematical Optimization",
@@ -616,7 +616,7 @@
 			}
 		]
 	},
-	"numerical_tools":
+	"Tools for Numerical Analysis":
 	{
 		
 		"title": "Tools for Numerical Analysis",
@@ -800,6 +800,21 @@
 				"name": "Home Work (3)",
 				"link": "https://teddylazebnik.info/files/hw_tools_for_numerical_analysis_3.pdf"
 			}
+		]
+	},
+	"Partial Differential Equations":
+	{
+		"title": "Partial Differential Equations",
+		"code": "88241",
+		"description": "Analytical solutions for Partial Differential Equations (linear and second order)",
+		"sources":
+		[
+		],
+		"teachingNotes":
+		[
+		],
+		"additionalData":
+		[
 		]
 	}
 }

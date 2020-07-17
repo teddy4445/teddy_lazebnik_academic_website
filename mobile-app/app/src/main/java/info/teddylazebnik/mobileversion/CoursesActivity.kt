@@ -45,8 +45,8 @@ class CoursesActivity : AppCompatActivity() {
 
         // add click event to each item
         ListView.setOnItemClickListener { parent, view, position, id ->
-            val intent = Intent(this, MainActivity::class.java).apply {
-                putExtra(MainMenuActivity.EXTRA_MESSAGE, MainMenuActivity.domain.plus(items[position].pageLink))
+            val intent = Intent(this, AcademicCourseActivity::class.java).apply {
+                putExtra(MainMenuActivity.EXTRA_MESSAGE, items[position].title)
             }
             startActivity(intent)
         }
