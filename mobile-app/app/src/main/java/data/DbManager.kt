@@ -28,12 +28,14 @@ open class DbManager {
         val OPEN_SOURCE_PROJECT: String = "OpenSourceProject"
         val STUDENTS: String = "Students"
         val TECHNICAL_BLOG: String = "TechnicalBlog"
+        val TEACHING: String = "Teaching"
 
         val COURSE_JSON_PATH = "Course.json"
         val ACADEMIC_PAPER_JSON_PATH = "AcademicPaper.json"
         val OPEN_SOURCE_PROJECT_JSON_PATH = "OpenSourceProject.json"
         val STUDENTS_JSON_PATH = "Students.json"
         val TECHNICAL_BLOG_JSON_PATH = "TechnicalBlog.json"
+        val TEACHING_JSON_PATH = "Teaching.json"
 
         val DOMAIN_JSON: String = "https://teddylazebnik.info/app_jsons/"
     }
@@ -49,6 +51,7 @@ open class DbManager {
                 updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(OPEN_SOURCE_PROJECT_JSON_PATH), OPEN_SOURCE_PROJECT_JSON_PATH)
                 updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(STUDENTS_JSON_PATH), STUDENTS_JSON_PATH)
                 updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(TEACHING_JSON_PATH), TEACHING_JSON_PATH)
 
                 // update last time used
                 DbUpdateManager.updateDbDate(dataAppFolder)
@@ -76,6 +79,9 @@ open class DbManager {
             }
             TECHNICAL_BLOG -> {
                 updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(TECHNICAL_BLOG_JSON_PATH), TECHNICAL_BLOG_JSON_PATH)
+            }
+            TEACHING -> {
+                updateDataRaw(dataAppFolder, DOMAIN_JSON.plus(TEACHING_JSON_PATH), TEACHING_JSON_PATH)
             }
         }
     }
@@ -127,6 +133,9 @@ open class DbManager {
             TECHNICAL_BLOG -> {
                 writeJsonFile(TECHNICAL_BLOG_JSON_PATH, contentJson)
             }
+            TEACHING -> {
+                writeJsonFile(TEACHING_JSON_PATH, contentJson)
+            }
         }
     }
 
@@ -147,6 +156,9 @@ open class DbManager {
             }
             TECHNICAL_BLOG -> {
                 return readJsonFromFile(dataAppFolder, TECHNICAL_BLOG_JSON_PATH, className)
+            }
+            TEACHING -> {
+                return readJsonFromFile(dataAppFolder, TEACHING_JSON_PATH, className)
             }
         }
         return null
@@ -182,6 +194,10 @@ open class DbManager {
                 return Gson().fromJson(jsonString, listObjects)
             }
             TECHNICAL_BLOG -> {
+                val listObjects =  object : TypeToken<List<TechnicalBlog>>() {}.type
+                return Gson().fromJson(jsonString, listObjects)
+            }
+            TEACHING -> {
                 val listObjects =  object : TypeToken<List<TechnicalBlog>>() {}.type
                 return Gson().fromJson(jsonString, listObjects)
             }
