@@ -1,0 +1,805 @@
+{
+	"deep_leanring":
+	{
+		"title": "Deep Leanring for Computer Vision",
+		"code": "21319",
+		"description": "Course Goals: In recent years there has been a major breakthrough in the field of artificial neural networks, especially in deep neural networks (namely, networks with many layers). Deep learning is the term coined for the training of such networks, which have shown superiority over other machine learning algorithms in many applications. Nowadays, deep neural networks provide the best performance in tasks such as, voice recognition, object detection, image classification and content suggestion. These networks gradually take over standard machine learning algorithms and we are at the heart of a new generation, where voice recognition and image recognition are based on them fully. In this course we will explain the mathematics at the core of neural networks models, and provide practical tools for using them. The course focuses mainly on image processing and, consequently, on convolutional neural networks.",
+		"sources":
+		[
+			{
+				"name": "Stanford's cs231n course website",
+				"link": "http://cs231n.stanford.edu/"
+			},
+			{
+				"name": "Stanford's cs231n course video lecture",
+				"link": "https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv"
+			},
+			{
+				"name": "Google colab should help you with the trianing speed of your models",
+				"link": "https://colab.research.google.com/"
+			},
+			{
+				"name": "Introducing GIT",
+				"link": "https://rogerdudler.github.io/git-guide/"
+			},
+			{
+				"name": "BitBacket - your GOTO GIT host provider",
+				"link": "https://bitbucket.org/"
+			},
+			{
+				"name": "If you want fun youtube video about NN - this is the one I reccomend",
+				"link": "https://www.youtube.com/watch?v=XJ7HLz9VYz0&list=PLRqwX-V7Uu6Y7MdSCaIfsxc561QI0U0Tb"
+			},
+			{
+				"name": "A good example for supervised DL model with TensorFlow.JS",
+				"link": "https://www.youtube.com/watch?v=y59-frfKR58&list=PLRqwX-V7Uu6bmMRCIoTi72aNWHo7epX4L"
+			},
+			{
+				"name": "A very practical course by Amazon",
+				"link": "https://www.d2l.ai/"
+			},
+			{
+				"name": "A 20-Year Roadmap for AI Research lecture",
+				"link": "https://underline.io/lecture/45-a-20-year-roadmap-for-ai-research"
+			}
+		],
+		"teachingNotes":
+		[	
+			{
+				"name": "Lesson 1 - Introduction + Knn + Linear Regression",
+				"date": "1.4.20",
+				"links": 
+				[
+					{
+						"name": "Lecture BIU",
+						"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/iml2018_lecture1.pdf"
+					},
+					{
+						"name": "Lecture Stanford 1",
+						"link": "http://cs231n.stanford.edu/slides/2019/cs231n_2019_lecture01.pdf"
+					},
+					{
+						"name": "Lecture Stanford 2",
+						"link": "http://cs231n.stanford.edu/slides/2019/cs231n_2019_lecture02.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 2 - Linear Calssifcation and NN stracture",
+				"date": "8.4.20",
+				"links": 
+				[
+					{
+						"name": "Lecture CMU",
+						"link": "https://www.cs.cmu.edu/~avrim/ML10/lect0125.pdf"
+					},
+					{
+						"name": "Python Preception",
+						"link": "https://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/"
+					},
+					{
+						"name": "Perceptron",
+						"link": "http://www.inference.org.uk/mackay/itprnn/ps/471.481.pdf"
+					},
+					{
+						"name": "Lecture Stanford 3",
+						"link": "http://cs231n.stanford.edu/slides/2019/cs231n_2019_lecture03.pdf"
+					},
+					{
+						"name": "Lecture Stanford 3",
+						"link": "http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.86805&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false"
+					}
+				]
+			},
+			{
+				"name": "Lesson 3 - Backpropagation and FcNN",
+				"date": "15.4.20",
+				"links": 
+				[
+					{
+						"name": "Lecture Stanford 4",
+						"link": "http://cs231n.stanford.edu/slides/2019/cs231n_2019_lecture04.pdf"
+					},
+					{
+						"name": "Lecture BIU",
+						"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/iml2018_lecture6.pdf"
+					},
+					{
+						"name": "Lecture BIU 2",
+						"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/ch4_from_deng.pdf"
+					},
+					{
+						"name": "Video lecture",
+						"link": "https://youtu.be/ciUGihyYYSw"
+					},
+				]
+			},
+			{
+				"name": "Lesson 4 - Convolutional Neural Networks (CNN)",
+				"date": "22.4.20",
+				"links": 
+				[
+					{
+						"name": "Lecture Stanford 5",
+						"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/iml2018_lecture7.pdf"
+					},
+					{
+						"name": "CNN",
+						"link": "https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/"
+					},
+					{
+						"name": "CNN - keras",
+						"link": "https://towardsdatascience.com/building-a-convolutional-neural-network-cnn-in-keras-329fbbadc5f5/"
+					},
+					{
+						"name": "MNIST - dataset",
+						"link": "http://yann.lecun.com/exdb/mnist/"
+					},
+					{
+						"name": "Video lecture",
+						"link": "https://youtu.be/Cwy0GuD6XGM"
+					}
+				]
+			},
+			{
+				"name": "Lesson 5 - Training NN (I) | Hardware and Software",
+				"date": "29.4.20",
+				"links": 
+				[
+					{
+						"name": "Lecture Stanford 6",
+						"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture08.pdf"
+					},
+					{
+						"name": "Video lecture",
+						"link": "https://youtu.be/SXV9Usof-o8"
+					}
+				]
+			},
+			{
+				"name": "Lesson 6 - Training NN (II) | FNN and CNN Architectures",
+				"date": "05.5.20",
+				"links": 
+				[
+					{
+						"name": "Lecture Stanford 7",
+						"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture09.pdf"
+					},
+					{
+						"name": "Video lecture",
+						"link": "https://youtu.be/puZrVE96MXg"
+					}
+				]
+			},
+			{
+				"name": "Lesson 7 - Mid-semester project proposals and ideas",
+				"date": "12.5.20",
+				"links": 
+				[
+					{
+						"name": "Video lecture",
+						"link": "https://youtu.be/a4iomV5jW6s"
+					}
+				]
+			},
+			{
+				"name": "Lesson 8 - RNNs",
+				"date": "12.5.20",
+				"links": 
+				[
+					{
+						"name": "Lecture Stanford 8",
+						"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture10.pdf"
+					},
+					{
+						"name": "TensorFlow.js",
+						"link": "https://www.tensorflow.org/js/demos"
+					},
+					{
+						"name": "TensorFlow.js (demos)",
+						"link": "https://www.tensorflow.org/js/tutorials"
+					},
+					{
+						"name": "ML5.js",
+						"link": "https://ml5js.org/"
+					},
+					{
+						"name": "Toy Nuural Network JS",
+						"link": "https://github.com/CodingTrain/Toy-Neural-Network-JS/blob/master/examples/neuroevolution-flappybird/ga.js"
+					},
+					{
+						"name": "Neuroevolution Flappy Bird Video",
+						"link": "https://www.youtube.com/watch?v=c6y21FkaUqw"
+					},
+					{
+						"name": "Video lecture",
+						"link": "https://youtu.be/iHjBP7aGCiw"
+					},
+				]
+			},
+			{
+				"name": "Lesson 9 - Detection and Segmentation",
+				"date": "19.5.20",
+				"links": 
+				[
+					{
+						"name": "Lecture Stanford 9",
+						"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture11.pdf"
+					},
+					{
+						"name": "Video lecture",
+						"link": "https://youtu.be/wLWsa2iMfx0"
+					}
+				]
+			},
+			{
+				"name": "Lesson 10 - Generative Models",
+				"date": "26.5.20",
+				"links": 
+				[
+					{
+						"name": "Lecture Stanford 10",
+						"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture12.pdf"
+					},
+					{
+						"name": "Video lecture",
+						"link": "https://youtu.be/K24tiI2hZB0"
+					}
+				]
+			},
+			{
+				"name": "Lesson 11 - Visualizing and Understanding NN",
+				"date": "2.6.20",
+				"links": 
+				[
+					{
+						"name": "Lecture Stanford 11",
+						"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture13.pdf"
+					},
+					{
+						"name": "Video lecture",
+						"link": "https://youtu.be/s3jYwycCFmk"
+					}
+				]
+			},
+		],
+		"additionalData":
+		[
+			{
+				"name": "Final Projects Page",
+				"link": "https://teddylazebnik.info/courses/deep-learning-presentations.html"
+			},
+			{
+				"name": "Project Proposal Instractions File",
+				"link": "https://teddylazebnik.info/files/dl_project_proposal.pdf"
+			},
+			{
+				"name": "Project Paper Instractions File",
+				"link": "https://teddylazebnik.info/files/deeplearning-project-paper.pdf"
+			},
+			{
+				"name": "Home work 1",
+				"link": "https://teddylazebnik.info/files/hw_deep_learning.pdf"
+			},
+			{
+				"name": "Home work 2",
+				"link": "https://teddylazebnik.info/files/hw_deep_learning_2.pdf"
+			},
+			{
+				"name": "Home work 3",
+				"link": "https://teddylazebnik.info/files/hw_deep_learning_3.pdf"
+			},
+			{
+				"name": "How my NN looks like?",
+				"link": "https://teddylazebnik.info/courses/deep_leanring_nn_visual.html?type=fnn"
+			},
+			{
+				"name": "Random points for testing Knn and Kmeans algorithms (HW 1)",
+				"link": "https://teddylazebnik.info/courses/deep_leanring_knn_sample.html?dim=3"
+			},
+			{
+				"name": "Random Images of shapes (HW 3 - Training sample)",
+				"link": "https://teddylazebnik.info/courses/deep_leanring_fnn_sample.html"
+			},
+			{
+				"name": "Random points for testing Knn and Kmeans algorithms (HW 1)",
+				"link": "https://teddylazebnik.info/courses/deep_leanring_poses.html"
+			}
+		]
+	},
+	"numerical":
+	{
+		
+		"title": "Numerical Analysis",
+		"code": "88376",
+		"description": "In this course, we will learn applied tools and theorom in the field of numerical analysis.",
+		"sources":
+		[
+			{
+				"name": "Summery of the course a year ago (2018) by Mordehi part 1",
+				"link": "https://math-wiki.com/images/2/28/Aln83214_2019_part1.pdf"
+			},
+			{
+				"name": "Summery of the course a year ago (2018) by Mordehi part 2",
+				"link": "https://math-wiki.com/images/2/28/Aln83214_2019_part2.pdf"
+			},
+			{
+				"name": "A wonderfull book with all the subject of the course in the first five chapters",
+				"link": "http://www.math.uni.wroc.pl/~olech/metnum2/Podreczniki/(eBook)%20Introduction%20to%20Numerical%20Analysis%20-%20J.Stoer,R.Bulirsch.pdf"
+			},
+			{
+				"name": "BIU 2019 (a) Exam by Dr. Michal Michali, thanks to Ohav Levy",
+				"link": "https://teddylazebnik.info/files/numerical_analysis_sample_exam_2019_a.pdf"
+			},
+		],
+		"teachingNotes":
+		[
+			{
+				"name": "Lesson 9 - Legendre and Chebyshev polynomials",
+				"date": "1.6.20",
+				"links": 
+				[
+					{
+						"name": "File 1",
+						"link": "https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%95%D7%9E%D7%99_%D7%9C%D7%96%27%D7%A0%D7%93%D7%A8"
+					},
+					{
+						"name": "File 2",
+						"link": "https://teddylazebnik.info/files/numerical_analysis_polynoms.pdf"
+					},
+					{
+						"name": "File 3",
+						"link": "https://www.hamichlol.org.il/%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%95%D7%9E%D7%99_%D7%A6%27%D7%91%D7%99%D7%A9%D7%91"
+					},
+				]
+			},
+			{
+				"name": "Lesson 10 - Interpolation by Lagrange method",
+				"date": "8.6.20",
+				"links": 
+				[
+					{
+						"name": "File 1",
+						"link": "http://u.cs.biu.ac.il/~zarosih/68/NMFiles/tirgul9.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 11 - Cubic Spline method",
+				"date": "15.6.20",
+				"links": 
+				[
+					{
+						"name": "File 1",
+						"link": "https://www.math.ntnu.no/emner/TMA4215/2008h/cubicsplines.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 12 - Numerical Differentiation",
+				"date": "22.6.20",
+				"links": 
+				[
+					{
+						"name": "File 1",
+						"link": "http://math-wiki.com/images/2/2c/%D7%AA%D7%A8%D7%92%D7%95%D7%9C_13.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 13 - Numerical Integration",
+				"date": "29.6.20",
+				"links": 
+				[
+					{
+						"name": "File 1",
+						"link": "https://teddylazebnik.info/files/numerical_analysis_numerical_Integration.pdf"
+					}
+				]
+			}
+		],
+		"additionalData":
+		[
+			{
+				"name": "Home Work (1)",
+				"link": "https://teddylazebnik.info/files/numerical_analysis_hw_2.pdf"
+			},
+			{
+				"name": "Home Work (2)",
+				"link": "https://teddylazebnik.info/files/numerical_analysis_hw_1.pdf"
+			},
+			{
+				"name": "Home Work (3)",
+				"link": "https://teddylazebnik.info/files/numerical_analysis_hw_3.pdf"
+			},
+			{
+				"name": "Home Work (4)",
+				"link": "https://teddylazebnik.info/files/numerical_analysis_hw_4.pdf"
+			},
+			{
+				"name": "Home Work (1) Answers",
+				"link": "https://teddylazebnik.info/files/home_work_1_answer.pdf"
+			}
+		]
+	},
+	"linear_mathematical_optimization":
+	{
+		
+		"title": "Introduction to Linear Mathematical Optimization",
+		"code": "88369",
+		"description": "The course focuses on linear optimization. This field provides mathematical tools for decision making and finding optimal cases for real-life situations. The field burn in U.K. at the 1930's when the British army gathered academics to provide scientific decisions for the usage of the army's resources.",
+		"sources":
+		[
+			{
+				"name": "A nice summery of the main algorithm in the course",
+				"link": "https://www3.nd.edu/~dgalvin1/30210/30210_F07/presentations/simplex_full.pdf"
+			},
+			{
+				"name": "Simplex in 10 pages (Hebrew)",
+				"link": "http://highmath.haifa.ac.il/data/alle1-26/alle13/alle13-9.pdf"
+			},
+			{
+				"name": "A book about optimization - you need only the first chapter (Hebrew)",
+				"link": "https://www.cs.huji.ac.il/~nogar02/integrali/files/DOptimization-2013.pdf"
+			},
+			{
+				"name": "An introduction and technical notes for LP",
+				"link": "https://sites.math.washington.edu/~burke/crs/407/notes/section1.pdf"
+			},
+		],
+		"teachingNotes":
+		[
+			{
+				"name": "Lesson 1 - Introduction to Simplex method and linear optimization background ",
+				"date": "1.4.20",
+				"links": 
+				[
+					{
+						"name": "History",
+						"link": "https://en.wikipedia.org/wiki/George_Dantzig"
+					},
+					{
+						"name": "Presentation",
+						"link": "http://www.math.wsu.edu/faculty/genz/364/lessons/l3034.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 2 - Linear Plaining (LP) and graphic-based solutions",
+				"date": "8.4.20",
+				"links": 
+				[
+					{
+						"name": "Sample",
+						"link": "https://teddylazebnik.info/courses/linear_mathematical_optimization_2d_sample.html"
+					}
+				]
+			},
+			{
+				"name": "Lesson 3 - Simplex Algorithm for LP problems",
+				"date": "15.4.20",
+				"links": 
+				[
+					{
+						"name": "Example 1",
+						"link": "http://www.phpsimplex.com/en/simplex_method_example.htm"
+					},
+					{
+						"name": "Example 2",
+						"link": "http://www.ms.uky.edu/~jack/2010-01-MA162/2010-02-25-MA162Lab.pdf"
+					},
+					{
+						"name": "Example 3",
+						"link": "http://math.uww.edu/~mcfarlat/s-prob.htm"
+					}
+				]
+			},
+			{
+				"name": "Lesson 4 - Two Phase Simplex Algorithm",
+				"date": "22.4.20",
+				"links": 
+				[
+					{
+						"name": "Example 1",
+						"link": "http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf"
+					},
+					{
+						"name": "Example 2",
+						"link": "http://www.universalteacherpublications.com/univ/ebooks/or/Ch3/twophase1.htm"
+					},
+					{
+						"name": "Algorithm",
+						"link": "https://www.math.ubc.ca/~anstee/math340/340simplexalgorithmoverview.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 5 - Dual theory for linear optimization problems",
+				"date": "29.4.20",
+				"links": 
+				[
+					{
+						"name": "Slides 1",
+						"link": "https://teddylazebnik.info/files/linear_optimization_big_m_1.pdf"
+					},
+					{
+						"name": "Slides 2",
+						"link": "https://teddylazebnik.info/files/linear_optimization_big_m_2.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 6 - Dual theory for linear optimization problems",
+				"date": "06.5.20",
+				"links": 
+				[
+					{
+						"name": "Example",
+						"link": "https://teddylazebnik.info/files/dual_simplex_example_1.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 7 - Dual Simplex analysis",
+				"date": "13.5.20",
+				"links": 
+				[
+					{
+						"name": "Example",
+						"link": "https://teddylazebnik.info/files/dual_simplex_example_2.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 8 - network, tranfer and other LP problems modeling",
+				"date": "20.5.20",
+				"links": 
+				[
+					{
+						"name": "Example",
+						"link": "https://prnt.sc/sxngio"
+					}
+				]
+			},
+			{
+				"name": "Lesson 9 - Integer LP problems and solutions (1)",
+				"date": "27.5.20",
+				"links": 
+				[
+					{
+						"name": "Example",
+						"link": "http://web.mit.edu/15.053/www/AMP-Chapter-09.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 10 - Gradient Decent",
+				"date": "04.6.20",
+				"links": 
+				[
+					{
+						"name": "Algorithm",
+						"link": "https://people.seas.harvard.edu/~yaron/AM221-S16/lecture_notes/AM221_lecture9.pdf"
+					}
+				]
+			}
+		],
+		"additionalData":
+		[
+			{
+				"name": "Home Work (1)",
+				"link": "https://teddylazebnik.info/files/88369-hw-01.pdf"
+			},
+			{
+				"name": "Home Work (2)",
+				"link": "https://teddylazebnik.info/files/OR-Exercise%203.pdf"
+			},
+			{
+				"name": "Home Work (3)",
+				"link": "https://teddylazebnik.info/files/OR-Exercise%204.pdf"
+			},
+			{
+				"name": "Home Work Answers (1) - part 1",
+				"link": "https://teddylazebnik.info/files/88369-hw-01-sol.pdf"
+			},
+			{
+				"name": "Home Work Answers (1) - part 2",
+				"link": "https://teddylazebnik.info/files/linear_optimization_hw_1_answer_1_3.pdf"
+			},
+			{
+				"name": "Home Work (2) Answers",
+				"link": "https://teddylazebnik.info/files/88369-hw-02-sol.pdf"
+			},
+			{
+				"name": "Home Work (3) Answers",
+				"link": "https://teddylazebnik.info/files/88369-hw-04-sol.pdf"
+			}
+		]
+	},
+	"numerical_tools":
+	{
+		
+		"title": "Tools for Numerical Analysis",
+		"code": "83214",
+		"description": "In this course, we will learn applied tools and theorom in the field of numerical analysis.",
+		"sources":
+		[
+			{
+				"name": "A wonderfull book with all the subject of the course in the first five chapters",
+				"link": "http://www.math.uni.wroc.pl/~olech/metnum2/Podreczniki/(eBook)%20Introduction%20to%20Numerical%20Analysis%20-%20J.Stoer,R.Bulirsch.pdf"
+			}
+		],
+		"teachingNotes":
+		[
+			{
+				"name": "Lesson 1 - Introduction to numerical analysis and numerical error",
+				"date": "1.4.20",
+				"links": 
+				[
+					{
+						"name": "Lecture 1",
+						"link": "https://teddylazebnik.info/files/tools_numerical_lession_1_a.pdf"
+					},
+					{
+						"name": "Error In Numerical Methods",
+						"link": "https://teddylazebnik.info/files/tools_numerical_lession_1_b.pdf"
+					},
+					{
+						"name": "Numerical methods",
+						"link": "https://teddylazebnik.info/files/tools_numerical_lession_1_c.pdf"
+					},
+					{
+						"name": "Practice 1",
+						"link": "https://teddylazebnik.info/files/tools_numerical_lession_1_d.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 2 - More numerical error and zero points of a function",
+				"date": "8.4.20",
+				"links": 
+				[
+					{
+						"name": "Lecture",
+						"link": "https://teddylazebnik.info/files/tools_numerical_lession_2.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 3 - Continue zero points of a function, fix points and some Matlab Code",
+				"date": "15.4.20",
+				"links": 
+				[
+					{
+						"name": "Lecture",
+						"link": "https://teddylazebnik.info/files/tools_numerical_lession_3.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 4 - LU and Gauss methods",
+				"date": "22.4.20",
+				"links": 
+				[
+					{
+						"name": "Example 1",
+						"link": "https://teddylazebnik.info/files/linear_numerical_presentation.pptx"
+					}
+				]
+			},
+			{
+				"name": "Lesson 5 - LU and SVD methods",
+				"date": "29.4.20",
+				"links": 
+				[
+				]
+			},
+			{
+				"name": "Lesson 6 -  Linear Iterative methods",
+				"date": "06.5.20",
+				"links": 
+				[
+				]
+			},
+			{
+				"name": "Lesson 7 - Yakobi-Zidal method and interpolation",
+				"date": "13.5.20",
+				"links": 
+				[
+				]
+			},
+			{
+				"name": "Lesson 8 - Yakobi-Zidal method and interpolation",
+				"date": "20.5.20",
+				"links": 
+				[
+				]
+			},
+			{
+				"name": "Lesson 9 - Least Squres",
+				"date": "27.5.20",
+				"links": 
+				[
+					{
+						"name": "Example",
+						"link": "https://web.williams.edu/Mathematics/sjmiller/public_html/BrownClasses/54/handouts/MethodLeastSquares.pdf"
+					},
+					{
+						"name": "Example 2",
+						"link": "http://math.mit.edu/~gs/linearalgebra/ila0403.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 10 - (Fast) Fourier Transform",
+				"date": "04.6.20",
+				"links": 
+				[
+					{
+						"name": "Algorithm",
+						"link": "https://teddylazebnik.info/files/numerical_tools_lession_9_a.pdf"
+					},
+					{
+						"name": "Algorithm 2",
+						"link": "https://teddylazebnik.info/files/numerical_tools_lession_9_b.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 11 - Numerical Differentiation",
+				"date": "11.6.20",
+				"links": 
+				[
+					{
+						"name": "Lecture",
+						"link": "http://math-wiki.com/images/2/2c/%D7%AA%D7%A8%D7%92%D7%95%D7%9C_13.pdf"
+					},
+					{
+						"name": "Methods",
+						"link": "https://teddylazebnik.info/files/numerical_tools_lession_10.PDF"
+					}
+				]
+			},
+			{
+				"name": "Lesson 12 - Numerical Integration",
+				"date": "18.6.20",
+				"links": 
+				[
+					{
+						"name": "Lecture",
+						"link": "https://teddylazebnik.info/files/numerical_analysis_numerical_Integration.pdf"
+					}
+				]
+			},
+			{
+				"name": "Lesson 13 - Numerical ODE Solvers",
+				"date": "25.6.20",
+				"links": 
+				[
+				]
+			},
+			{
+				"name": "Lesson 13 - Numerical PDE Solvers",
+				"date": "1.7.20",
+				"links": 
+				[
+				]
+			}
+		],
+		"additionalData":
+		[
+			{
+				"name": "Home Work (1)",
+				"link": "https://teddylazebnik.info/files/hw_tools_for_numerical_analysis_1.pdf"
+			},
+			{
+				"name": "Home Work (2)",
+				"link": "https://teddylazebnik.info/files/hw_tools_for_numerical_analysis_2.pdf"
+			},
+			{
+				"name": "Home Work (3)",
+				"link": "https://teddylazebnik.info/files/hw_tools_for_numerical_analysis_3.pdf"
+			}
+		]
+	}
+}
