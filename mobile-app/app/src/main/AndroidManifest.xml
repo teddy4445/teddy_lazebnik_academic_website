@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission." />
 
     <application
         android:allowBackup="true"
@@ -19,7 +18,7 @@
         <activity
             android:name=".AcademicCourseActivity"
             android:label="@string/title_activity_academic_course"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TextActivity"
             android:noHistory="true" />
