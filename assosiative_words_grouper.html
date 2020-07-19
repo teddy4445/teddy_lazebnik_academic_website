@@ -857,15 +857,9 @@
 					alert("While trying to add to new group, the word index " + items[i] + " was not found");
 				}
 			}
-			if (group_answers.length < 3)
-			{
-				alert("A group must contain at least 2 words");
-			}
-			else
-			{
-				groups.push(group_answers);
-				reorderGroups(groups);
-			}
+			
+			groups.push(group_answers);
+			reorderGroups(groups);
 			document.getElementById('class_new_index').value = "";
 			refreshScreen();
 		}
@@ -916,15 +910,8 @@
 					alert("While trying to add to new group, the word index " + items[i] + " was not found");
 				}
 			}
-			if (group_answers.length < 2)
-			{
-				alert("A group must contain at least 2 words");
-			}
-			else
-			{
-				groupsSame.push(group_answers);
-				reorderGroups(groupsSame);
-			}
+			groupsSame.push(group_answers);
+			reorderGroups(groupsSame);
 			document.getElementById('class_new_index').value = "";
 			refreshScreen();
 		}
