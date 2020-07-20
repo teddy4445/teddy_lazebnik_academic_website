@@ -23,31 +23,23 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
-
-        val bundle = Bundle()
-        bundle.putString("course_name", )
-
         when(position)
         {
-            1 -> {
+            0 -> {
                 val pickedFragment = AcademicCourseActivitySourcesFragment()
-                pickedFragment.arguments = bundle
+                return pickedFragment
+            }
+            1 -> {
+                val pickedFragment = AcademicCourseActivityNotesFragment()
                 return pickedFragment
             }
             2 -> {
-                val pickedFragment = AcademicCourseActivityNotesFragment()
-                pickedFragment.arguments = bundle
-                return pickedFragment
-            }
-            3 -> {
                 val pickedFragment = AcademicCourseActivityAdditionalFragment()
-                pickedFragment.arguments = bundle
                 return pickedFragment
             }
             else ->
             {
                 val pickedFragment = AcademicCourseActivityNotesFragment()
-                pickedFragment.arguments = bundle
                 return pickedFragment
             }
         }

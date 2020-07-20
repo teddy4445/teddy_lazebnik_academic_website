@@ -1,6 +1,7 @@
 package info.teddylazebnik.mobileversion.ui.main
 
 import adapters.AcademicCourseResourcesAdapter
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -40,15 +41,17 @@ class AcademicCourseActivitySourcesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.teaching_course_resources_list, container, false)
-        itemsListView = view!!.findViewById(R.id.teachingCoursesResourcesList) as ListView
+        itemsListView = root.findViewById(R.id.teachingCoursesResourcesList) as ListView
 
         // load data
         var dataObj = AcademicCourse()
-        dataObj.parseFromJson(JSONObject(File(activity?.filesDir, DbManager.TEACHING_JSON_PATH).readText()).get("deep learning") as JSONObject)
+        // get course name
+        val courseName = File(activity?.filesDir, getString(R.string.sharedPref)).readText()
+        dataObj.parseFromJson(JSONObject(File(activity?.filesDir, DbManager.TEACHING_JSON_PATH).readText()).get(courseName) as JSONObject)
 
         listData = dataObj.sources
 
-        val resourcesAdapter = getActivity()?.let { AcademicCourseResourcesAdapter(it, listData) }
+        val resourcesAdapter = activity?.let { AcademicCourseResourcesAdapter(it, R.layout.teaching_couse_source_item, listData) }
         itemsListView!!.adapter = resourcesAdapter
 
         itemsListView!!.setOnItemClickListener { parent, view, position, id ->

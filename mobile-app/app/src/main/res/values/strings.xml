@@ -74,5 +74,6 @@
     <string name="teaching_courses_page_tab_1">Sources</string>
     <string name="teaching_courses_page_tab_2">Notes</string>
     <string name="teaching_courses_page_tab_3">Additional</string>
+    <string name="sharedPref">shared_pref.txt</string>
 
 </resources>
