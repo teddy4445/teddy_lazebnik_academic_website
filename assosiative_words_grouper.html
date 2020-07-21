@@ -848,8 +848,15 @@
 					var value = readyData[wordIndex][parseInt(items[i])];
 					if (value.length > 1)
 					{
-						group_answers.push(value);
-						isChangeDone = true;
+						if(!checkInSet(value, groups))
+						{
+							group_answers.push(value);
+							isChangeDone = true;	
+						}
+						else
+						{
+							alert("While trying to add to new group, the word index " + items[i] + " was already found in the grouped data");
+						}
 					}
 				}
 				catch (error)
@@ -857,7 +864,6 @@
 					alert("While trying to add to new group, the word index " + items[i] + " was not found");
 				}
 			}
-			
 			groups.push(group_answers);
 			reorderGroups(groups);
 			document.getElementById('class_new_index').value = "";
@@ -901,8 +907,15 @@
 					var value = readyData[wordIndex][parseInt(items[i])];
 					if (value.length > 1)
 					{
-						group_answers.push(value);
-						isChangeDone = true;
+						if(!checkInSet(value, groups))
+						{
+							group_answers.push(value);
+							isChangeDone = true;	
+						}
+						else
+						{
+							alert("While trying to add to new group, the word index " + items[i] + " was already found in the grouped data");
+						}
 					}
 				}
 				catch (error)
@@ -931,6 +944,21 @@
 		  if (keyA > keyB) return 1;
 		  return 0;
 		});
+	}
+	
+	function checkInSet(word, setData)
+	{
+		for (var i = 0; i < setData.length; i++)
+		{
+			for (var j = 0; j < setData[i].length; j++)
+			{
+				if (word == setData[i][j])
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	
 	function next()
