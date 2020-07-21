@@ -152,6 +152,18 @@ class MainMenuActivity : AppCompatActivity() {
         academicPublicationsText.setOnClickListener{
             openPapersActivity()
         }
+
+        // add the profile button the event
+        val profileImg: ImageView = findViewById(R.id.mainProfileImg)
+        profileImg.setOnClickListener{
+            openProfileActivity()
+        }
+
+        // add the students button the event
+        val profileText: TextView = findViewById(R.id.mainProfileText)
+        profileText.setOnClickListener{
+            openProfileActivity()
+        }
     }
 
     /*
@@ -214,6 +226,15 @@ class MainMenuActivity : AppCompatActivity() {
     private fun openPapersActivity()
     {
         val intent = Intent(this, AcademicPapersActivity::class.java)
+        startActivity(intent)
+    }
+
+    /*
+        Open the profile window
+    */
+    private fun openProfileActivity()
+    {
+        val intent = Intent(this, ProfileActivity::class.java)
         startActivity(intent)
     }
 

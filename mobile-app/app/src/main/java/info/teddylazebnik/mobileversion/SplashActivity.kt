@@ -26,7 +26,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
+    @RequiresApi(Build.VERSION_CODES.O)
     private val runnable = Runnable {
         if (!isFinishing) {
             // set job to repeat data
@@ -46,13 +46,13 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onResume() {
         super.onResume()
         handler.postDelayed(runnable, 10);
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onPause() {
         super.onPause()
         handler.removeCallbacks(runnable)

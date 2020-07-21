@@ -14,6 +14,7 @@
     <string name="main_menu_btn_5">Academic Publications</string>
     <string name="main_menu_teaching_messages_btn">Courses Messages</string>
     <string name="main_menu_settings_btn">Settings</string>
+    <string name="main_menu_profile_btn">Profile</string>
 
     <!-- teaching messages page -->
     <string name="teaching_messages_header">Teaching Messages</string>
@@ -37,5 +38,42 @@
     <string name="notifications_summary_off">"Denide to get all the notification related to this application. Some operations may be unavailable… "</string>
     <string name="teaching_message_filter_cancel_btn">Cancel</string>
     <string name="filterDialogHeader">Filter Teaching Messages</string>
+    <string name="title_activity_academic_course">MainActivity</string>
+
+    <!-- teaching course -->
+    <string name="teaching_course_menu_resources">Resources</string>
+    <string name="teaching_course_menu_notes">Notes</string>
+    <string name="teaching_course_menu_additional">Additional</string>
+
+    <!-- feedback Preferences -->
+    <string name="title_activity_profile">Profile</string>
+
+    <string name="teddy_lazebnik">Teddy Lazebnik</string>
+    <string name="personal_panel_pnone">+972 545524589</string>
+    <string name="personal_panel_email">lazebnik.teddy \n(at) gmail.com</string>
+    <string name="personal_panel_office">Bar Ilan University \n Building 202, Room 109</string>
+    <string name="personal_profile_social">My LinkedIn</string>
+    <string name="personal_panel_intrests">Medical Nanorobotics, Numerical Analysis, PDE Stabilization, Biomathematics</string>
+    <string name="personal_panel_current_projects_header">Current Projects:</string>
+
+    <!-- activity names -->
+    <string name="activity_academic_papers">activity_academic_papers</string>
+    <string name="activity_open_source">activity_open_source</string>
+    <string name="activity_students">activity_students</string>
+    <string name="activity_teaching_courses">activity_teaching_courses</string>
+    <string name="activity_technical_blog">activity_technical_blog</string>
+
+    <!-- long text activity strings -->
+    <string name="long_text_academic_papers">I am always looking for hard, practical, and math-related problems. Currently, I am looking for research in the field of medical nanorobotics (from CS. point of view) and mathematical models (ODE \ PDE) from originate in a biological setup.</string>
+    <string name="long_text_open_source">I am always willing to find some time to a short (around a week) or a medium (a few month) exciting projects. I am interested in the fields of conversational NLP (chatbots, conversation text), medical related machine learning (especially oncology), SPDE numerical solving, AI for computer games (especially turn-based strategy ones), and numerical simulations (C sharp, Python, JS, not C++). \n\n If you have an interesting project in one of these fields I would like to hear about that. I do not have much free time but I am willing to help with consulting, code, and data. If you want to write a technical blog post together, I would like to, just propose a subject and lets discuss it.</string>
+    <string name="long_text_teaching_philosophy">I believe that there are a few essential elements that are conducive to learning.\n\n First, students are adults and therefore no parenthood or dominancy at all. Students can take responsibly of there actions and results. They can handle the subject and manage there time - I just here to share an advice only when I asked too. \n\n Second, students must know why this subject is good for. Always starting new subject with a motivation from the real world and give examples why this subject is worthy to be learned. \n\n Third, students should be able to have choices and let their curiosity direct their learning. If the students are intresting in some related subject - find a time for this subject even if it is not part of original program. \n\n Forth, honestly, honestly, and honestly again. Honestly from both sides is the only way to get the destination both sides want. \n\n Fifth, give a lot "do it yourself" tasks. Real study done by solving problems by your own. I am here to guide the process but nothing more. The results should come from the students. \n\n Six, extra credit for creativity and curiosity. no extra credit for trying hard without results. \n\n Seven, if there is a chance to use technology to enhance the learning expiriance in class - use it. </string>
+    <string name="long_text_students">I am always looking for great students (both undergraduates and M.Sc.). If you are a good student (from the CS. or Math. department in BIU), and you are curious about research and want to learn, we should talk. Expect hard work, but also lots of fun! Currently, I can only co-advise. \n\n The following topics are projects that I find intresting to do. That said, this list is incomplete; and open to other topics you may have. \n First, micro-expressions recognition using a standard camera. \n Second, numerical solution for two-phase floyd in a cylinder (navier-stokes equations). \n Third, Property-Value extraction from academic papers in English. \n </string>
+    <string name="long_text_blog">If you want to write a technical blog post together, I would like to, just propose a subject and lets discuss it. I suggest to review my last posts to see what are my current interests. \n\n I do not write paid posts or promote any product - just posts that may benefit the community and share meaningful information and insights. </string>
+
+    <!-- Teaching Courses Page -->
+    <string name="teaching_courses_page_tab_1">Sources</string>
+    <string name="teaching_courses_page_tab_2">Notes</string>
+    <string name="teaching_courses_page_tab_3">Additional</string>
+    <string name="sharedPref">shared_pref.txt</string>
 
 </resources>

@@ -5,6 +5,8 @@ import adapters.StudentsAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.ListView
 import data.DbManager
 import data_objects.Course
@@ -25,6 +27,12 @@ class StudentsActivity : AppCompatActivity() {
         this.items = Students.sort(this.items)
         // build UI
         buildList(items)
+
+        // add button event
+        val profileImg: View = findViewById(R.id.studentsFloatBtn)
+        profileImg.setOnClickListener{
+            showTextActivity()
+        }
     }
 
     /*
@@ -45,5 +53,17 @@ class StudentsActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
+    }
+
+    /*
+        Open the text view activity
+     */
+    private fun showTextActivity()
+    {
+        val intent = Intent(this, TextActivity::class.java).apply {
+            putExtra(MainMenuActivity.EXTRA_MESSAGE, getString(R.string.long_text_students))
+            putExtra(TextActivity.EXTRA_ENTITY, getString(R.string.activity_students))
+        }
+        startActivity(intent)
     }
 }

@@ -1,15 +1,13 @@
 package info.teddylazebnik.mobileversion
 
 import adapters.AcademicPaperAdapter
-import adapters.OpenSourceProjectAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ListView
 import data.DbManager
 import data_objects.AcademicPaper
-import data_objects.OpenSourceProject
-import data_objects.Students
 
 class AcademicPapersActivity : AppCompatActivity() {
 
@@ -24,6 +22,12 @@ class AcademicPapersActivity : AppCompatActivity() {
         this.items = AcademicPaper.sort(this.items)
         // build UI
         buildList(items)
+
+        // add button event
+        val profileImg: View = findViewById(R.id.academicPapersFloatBtn)
+        profileImg.setOnClickListener{
+            showTextActivity()
+        }
     }
 
     /*
@@ -44,5 +48,17 @@ class AcademicPapersActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
+    }
+
+    /*
+        Open the text view activity
+     */
+    private fun showTextActivity()
+    {
+        val intent = Intent(this, TextActivity::class.java).apply {
+            putExtra(MainMenuActivity.EXTRA_MESSAGE, getString(R.string.long_text_academic_papers))
+            putExtra(TextActivity.EXTRA_ENTITY, getString(R.string.activity_academic_papers))
+        }
+        startActivity(intent)
     }
 }
