@@ -43,6 +43,15 @@
 			a.appendChild(r);
 		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
+	<script language="JavaScript">
+	// ignore "enter" in the whole page
+	function TriggeredKey(e)
+	{
+		var keycode;
+		if (window.event) keycode = window.event.keyCode;
+		if (window.event.keyCode != 13 ) return false;
+	}
+	</script>
  </head>
  <body onload="init()">
   <div id="progressBar">
