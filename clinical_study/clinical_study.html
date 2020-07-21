@@ -237,7 +237,7 @@
 		if (!is_broken)
 		{
 			var predict_with_conf = sat(values);
-			document.getElementById("answer_" + name).innerHTML = "<h3>The prediction is: <b>" + predict_with_conf[0] + " with (" + predict_with_conf[1] + "% confidence)</b></h3>";
+			document.getElementById("answer_" + name).innerHTML = "<h3>The prediction is: <b>" + predict_with_conf[0] + " with (" + predict_with_conf[1][0] + "% confidence) \n                because: " +  predict_with_conf[2][1] + "</b></h3>";
 		}
 		else
 		{
@@ -441,7 +441,7 @@ function check_path_AKI01(path_conditions)
 		 path_str += path_conditions[i] + ' and ';
 	}
 	path_str = path_str.substring(0, path_str.length-5);
-	return scores[path_str];
+	return [scores[path_str], path_str];
 }
 
 function check_path_postComplication1Y2N(path_conditions)
@@ -463,7 +463,7 @@ function check_path_postComplication1Y2N(path_conditions)
 		 path_str += path_conditions[i] + ' and ';
 	}
 	path_str = path_str.substring(0, path_str.length-5);
-	return scores[path_str];
+	return [scores[path_str], path_str];
 }
 
 </script>
