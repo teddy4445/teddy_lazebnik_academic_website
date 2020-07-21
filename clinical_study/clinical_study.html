@@ -237,7 +237,7 @@
 		if (!is_broken)
 		{
 			var predict_with_conf = sat(values);
-			document.getElementById("answer_" + name).innerHTML = "<h3>The prediction is: <b>" + predict_with_conf[0] + " with (" + predict_with_conf[1][0] + "% confidence) \n                because: " +  predict_with_conf[2][1] + "</b></h3>";
+			document.getElementById("answer_" + name).innerHTML = "<h3>The prediction is: <b>" + predict_with_conf[0] + " with (" + predict_with_conf[1][0] + "% confidence) \n                because: " +  predict_with_conf[1][1] + "</b></h3>";
 		}
 		else
 		{
