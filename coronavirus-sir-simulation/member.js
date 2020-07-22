@@ -11,9 +11,10 @@ let LOC_SCHOOL = 3;
 
 class Member
 {
-	constructor(age_group, state = STATE_S, location = LOC_HOME)
+	constructor(age_group, state = STATE_S, location = LOC_HOME, state_time = 0)
 	{
 		this.state = state;
+		this.state_time = state_time;
 		this.age_group = age_group;
 		this.location = location;
 	}
@@ -21,11 +22,18 @@ class Member
 	infect()
 	{
 		this.status = STATE_I;
+		this.state_time = 0;
 	}
 	
-	infect()
+	recover()
 	{
-		this.status = STATE_I;
+		this.status = STATE_R;
+		this.state_time = 0;
+	}
+	
+	tic()
+	{
+		this.state_time++;
 	}
 	
 	getKey()
@@ -52,5 +60,22 @@ class Member
 			answer += "_r";
 		}
 		return answer;
+	}
+	
+	getFullKey()
+	{
+		var answer = this.getKey();
+		if (this.location == LOC_HOME)
+		{
+			return answer + "_h";
+		}
+		else if (this.location == LOC_WORK)
+		{
+			return answer + "_w";
+		}
+		else // if (this.location == LOC_SCHOOL)
+		{
+			return answer + "_s";
+		}
 	}
 }
