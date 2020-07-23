@@ -21,19 +21,27 @@ class Member
 	
 	infect()
 	{
-		this.status = STATE_I;
+		this.state = STATE_I;
 		this.state_time = 0;
 	}
 	
 	recover()
 	{
-		this.status = STATE_R;
+		this.state = STATE_R;
 		this.state_time = 0;
 	}
 	
 	tic()
 	{
 		this.state_time++;
+	}
+	
+	tryRecover(infected_to_recover_time)
+	{
+		if (this.state_time > infected_to_recover_time && this.state == STATE_I)
+		{
+			this.recover();
+		}
 	}
 	
 	getKey()
@@ -77,5 +85,33 @@ class Member
 		{
 			return answer + "_s";
 		}
+	}
+	
+	toString()
+	{
+		var age = "Adult";
+		if (this.age_group == CHILD)
+		{
+			age = "Child";
+		}
+		var state = "Susceptible";
+		if (this.state == STATE_I)
+		{
+			state = "Infected";
+		}
+		else if (this.state == STATE_R)
+		{
+			state = "Recovered";
+		}
+		var location = "Home";
+		if (this.location == LOC_SCHOOL)
+		{
+			location = "School";
+		}
+		else if (this.location == LOC_WORK)
+		{
+			location = "Work";
+		}
+		return "<Member | age_group: " + age + ", state: " + state + " (" + this.state_time + " hours), location: " + location + ">";
 	}
 }

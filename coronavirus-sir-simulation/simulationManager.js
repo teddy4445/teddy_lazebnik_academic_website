@@ -35,12 +35,20 @@ function startSimulation()
 	var susceptible_children_percent = parseInt(document.getElementById("susceptible_children_percent").value);
 	var infected_children_percent = parseInt(document.getElementById("infected_children_percent").value);
 	infected_to_recover_time = parseInt(document.getElementById("infected_to_recover_time").value);
-	a_a_t_c = parseInt(document.getElementById("a_a_t_c").value);
-	a_c_t_c = parseInt(document.getElementById("a_c_t_c").value);
-	c_c_t_c = parseInt(document.getElementById("c_c_t_c").value);
-	c_a_t_c = parseInt(document.getElementById("c_a_t_c").value);
+	a_a_t_c = parseInt(document.getElementById("a_a_t_c").value) / 100;
+	a_c_t_c = parseInt(document.getElementById("a_c_t_c").value) / 100;
+	c_c_t_c = parseInt(document.getElementById("c_c_t_c").value) / 100;
+	c_a_t_c = parseInt(document.getElementById("c_a_t_c").value) / 100;
+	a_c_meeting_count = parseInt(document.getElementById("a_c_meeting_count").value) / 24;
+	a_a_meeting_count = parseInt(document.getElementById("a_a_meeting_count").value) / 24;
+	c_c_meeting_count = parseInt(document.getElementById("c_c_meeting_count").value) / 24;
 	time_at_home = parseInt(document.getElementById("time_at_home").value);
 	time_not_at_home = parseInt(document.getElementById("time_not_at_home").value);
+	
+	fps = parseInt(document.getElementById("fps").value);
+	graph_sample = parseInt(document.getElementById("graph_samples").value);
+	
+	frameRate(fps);
 	
 	// create population to simulate
 	population = new Population(adult_pop_size,

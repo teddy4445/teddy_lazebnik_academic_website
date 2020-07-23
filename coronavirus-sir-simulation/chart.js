@@ -7,11 +7,11 @@ function drawStateDistrebution()
 
       var data = new google.visualization.DataTable();
       data.addColumn('number', 'X');
-      data.addColumn('number', 'Susceptible Adult');
       data.addColumn('number', 'Infected Adult');
+      data.addColumn('number', 'Susceptible Adult');
       data.addColumn('number', 'Recovered Adult');
-      data.addColumn('number', 'Susceptible Children');
       data.addColumn('number', 'Infected Children');
+      data.addColumn('number', 'Susceptible Children');
       data.addColumn('number', 'Recovered Children');
 
       data.addRows(stateGraphData);
@@ -20,7 +20,7 @@ function drawStateDistrebution()
 		height: 300,
 		pointSize: 6,
 		pointShape: 'circle',
-		colors: ['#0F9D58', '#DB4437', '#4285F4', '#1aba7d', '#eb1d0c', '#73a0eb'],
+		colors: ['#DB4437', '#0F9D58', '#4285F4', '#eb1d0c', '#1aba7d', '#73a0eb'],
         hAxis: {
           title: 'Day'
         },

@@ -91,6 +91,33 @@
 		  </div>
 		  
 		  <div class="row">
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="a_c_meeting_count" title="Adult - Child Average Meeting Events per Hour">
+			  Adult - Child Average Meeting Events per Hour
+			 </label>
+			 <input class="form-control" id="a_c_meeting_count" min="1" placeholder="Adult - Child Average Meeting Events per Hour" required="" type="number" value="2"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="a_a_meeting_count" title="Adult - Adult Average Meeting Events per Hour">
+			  Adult - Adult Average Meeting Events per Hour
+			 </label>
+			 <input class="form-control" id="a_a_meeting_count" min="1" placeholder="Adult - Adult Average Meeting Events per Hour" required="" type="number" value="3"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="c_c_meeting_count">
+			  Child - Child Average Meeting Events per Hour
+			 </label>
+			 <input class="form-control" id="c_c_meeting_count" min="1" placeholder="Child - Child Average Meeting Events per Hour" required="" type="number" value="3" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="a_a_t_c" title="Adult to Adult Transform Chance">
@@ -148,6 +175,25 @@
 		  </div>
 		  
 		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="fps" title="Frames Per Second">
+			  Frames Per Second
+			 </label>
+			 <input class="form-control" id="fps" max="48" min="0" placeholder="Frames Per Second" required="" type="number" value="3"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="graph_samples">
+			  Graph Sample Each Steps
+			 </label>
+			 <input class="form-control" id="graph_samples" max="72" min="1" placeholder="Graph Sample Each Steps" required="" type="number" value="24" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="infected_to_recover_time" title="Infected To Recovered">
@@ -174,11 +220,24 @@
 		<div class="row spacer">
 		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="game-holder">
 		   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		   </div>
+		   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div style="text-align: center;">
+				<img src="https://img.icons8.com/cute-clipart/128/000000/clock.png"/>
+				<h3 id="clock"> 0 days, 0 hours</h3>
+			</div>
+		   </div>
+		   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		   </div>
+		  </div>
+		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="game-holder">
+		   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 			<div class="stat-box bg-grad-green">
 			 <h2>
 			  Susceptible
 			 </h2>
 			 <p id="susceptible_text">
+			 0
 			 </p>
 			</div>
 		   </div>
@@ -188,6 +247,7 @@
 			  Infected
 			 </h2>
 			 <p id="infected_text">
+			 0
 			 </p>
 			</div>
 		   </div>
@@ -197,6 +257,7 @@
 			  Recovered
 			 </h2>
 			 <p id="recover_text">
+			 0
 			 </p>
 			</div>
 		   </div>
@@ -221,7 +282,7 @@
 									0
 								</p>
 								<h4>Recovered</h4>
-								<p id="a_i_r">
+								<p id="a_r_h">
 									0
 								</p>
 							</div>
@@ -237,7 +298,7 @@
 									0
 								</p>
 								<h4>Recovered</h4>
-								<p id="c_i_r">
+								<p id="c_r_h">
 									0
 								</p>
 							</div>
@@ -260,7 +321,7 @@
 									0
 								</p>
 								<h4>Recovered</h4>
-								<p id="a_i_w">
+								<p id="a_r_w">
 									0
 								</p>
 							</div>
@@ -276,7 +337,7 @@
 									0
 								</p>
 								<h4>Recovered</h4>
-								<p id="c_i_w">
+								<p id="c_r_w">
 									0
 								</p>
 							</div>
@@ -299,7 +360,7 @@
 									0
 								</p>
 								<h4>Recovered</h4>
-								<p id="a_i_s">
+								<p id="a_r_s">
 									0
 								</p>
 							</div>
@@ -315,7 +376,7 @@
 									0
 								</p>
 								<h4>Recovered</h4>
-								<p id="c_i_s">
+								<p id="c_r_s">
 									0
 								</p>
 							</div>
