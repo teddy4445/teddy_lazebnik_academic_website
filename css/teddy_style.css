@@ -5,37 +5,13 @@ body {
 	font-family: sans-serif;
     font-size: 14px;
     font-weight: 500;
+    overflow-y: scroll; //vertical
 }
 
 button:focus {outline:0;}
 
 *:focus {
     outline: none;
-}
-
-::-webkit-scrollbar{
-	width: 0px;
-}
-
-#ScrollPath{
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 10px;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.1);
-	z-index: 998;
-}
-
-#progressBar{
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 10px;
-	height: 100%;
-	background: rgb(42,23,177);
-	background: linear-gradient(0deg, rgba(42,23,177,1) 0%, rgba(66,132,211,1) 100%);
-	z-index: 999;
 }
 
 button:focus{
