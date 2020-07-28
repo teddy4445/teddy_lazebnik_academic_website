@@ -5,30 +5,56 @@ class Population
 		this.members = [];
 		this.timeOfDay = 0;
 		
+		// find if percent or size
+		var a_s;
+		var a_i;
+		var a_r;
+		var c_s;
+		var c_i;
+		var c_r;
+		if (adult_s_percent + adult_i_percent + adult_r_percent == 100 && children_s_percent + children_i_percent + children_r_percent == 100)
+		{
+			a_s = adult_population * adult_s_percent / 100;
+			a_i = adult_population * adult_i_percent / 100;
+			a_r = adult_population * adult_r_percent / 100;
+			c_s = adult_population * children_s_percent / 100;
+			c_i = adult_population * children_i_percent / 100;
+			c_r = adult_population * children_r_percent / 100;
+		}
+		else
+		{
+			a_s = adult_s_percent;
+			a_i = adult_i_percent;
+			a_r = adult_r_percent;
+			c_s = children_s_percent;
+			c_i = children_i_percent;
+			c_r = children_r_percent;
+		}
+		
 		// add adult population
-		for (var i = 0; i < Math.round(adult_population * adult_s_percent / 100); i++)
+		for (var i = 0; i < Math.round(a_s); i++)
 		{
 			this.members.push(new Member(ADULT, STATE_S, LOC_HOME));
 		}
-		for (var i = 0; i < Math.round(adult_population * adult_i_percent / 100); i++)
+		for (var i = 0; i < Math.round(a_i); i++)
 		{
 			this.members.push(new Member(ADULT, STATE_I, LOC_HOME));
 		}
-		for (var i = 0; i < Math.round(adult_population * adult_r_percent / 100); i++)
+		for (var i = 0; i < Math.round(a_r); i++)
 		{
 			this.members.push(new Member(ADULT, STATE_R, LOC_HOME));
 		}
 		
 		// add children population
-		for (var i = 0; i < Math.round(children_population * children_s_percent / 100); i++)
+		for (var i = 0; i < Math.round(c_s); i++)
 		{
 			this.members.push(new Member(CHILD, STATE_S, LOC_HOME));
 		}
-		for (var i = 0; i < Math.round(children_population * children_i_percent / 100); i++)
+		for (var i = 0; i < Math.round(c_i); i++)
 		{
 			this.members.push(new Member(CHILD, STATE_I, LOC_HOME));
 		}
-		for (var i = 0; i < Math.round(children_population * children_r_percent / 100); i++)
+		for (var i = 0; i < Math.round(c_r); i++)
 		{
 			this.members.push(new Member(CHILD, STATE_R, LOC_HOME));
 		}

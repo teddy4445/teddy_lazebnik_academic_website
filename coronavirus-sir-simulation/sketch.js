@@ -11,6 +11,7 @@ var playBtn;
 // --- END DOM ACTIONS --- //
 
 runStarted = false;
+var showFinishAlert = true;
 
 // graphs
 stateGraphData = []
@@ -36,14 +37,28 @@ let TIME_IN_DAY = 24;
 let time_at_home = 12;
 let time_not_at_home = TIME_IN_DAY - time_at_home;
 
+// remember for r_0 calc
+let last_stats = null;
+let r_zeros = [];
+
+// vaccine run
+var adult_recover;
+var child_recover;
+var adult_pop_size;
+var adult_step_size;
+var children_pop_size;
+var child_step_size;
+
+var vaccine_data;
+
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
 // setup all the simulation before starting 
 function setup()
 {
 	// setup for user inputs
-	completePercent('susceptible_adults_percent', 'infected_adults_percent', 100);
-	completePercent('susceptible_children_percent', 'infected_children_percent', 100);
+	completePop('susceptible_adults_percent', 'infected_adults_percent', 'recover_adults_percent', 'adult_pop_size');
+	completePop('susceptible_children_percent', 'infected_children_percent', 'recover_children_percent', 'children_pop_size');
 	completePercent('time_at_home', 'time_not_at_home', 24);
 
 	// setup for simulation
@@ -67,6 +82,9 @@ function draw()
 	document.getElementById("infected_text").innerHTML = (stats["a_i"] + stats["c_i"]).toString();
 	document.getElementById("recover_text").innerHTML = (stats["a_r"] + stats["c_r"]).toString();
 	document.getElementById("clock").innerHTML = stepToClock(count);
+	var r_zero = calcRzero(stats);
+	r_zeros.push(r_zero);
+	document.getElementById("r_zero").innerHTML = "R<small>0</small> = " + r_zero.toFixed(2) + ", Avg(R<small>0</small>) = " + (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(2) ;
 	
 	// calc graph needed data and update it 
 	if (count % graph_sample == 0)
@@ -80,20 +98,63 @@ function draw()
 		drawStateDistrebution();
 		
 		// if the simulation is over
-		if ((stats["a_r"] + stats["c_r"]) == population.members.length)
+		if ((stats["a_i"] + stats["c_i"]) == 0)
 		{
-			downloadasTextFile("corona_sir_two_age_stocasic_graph_data.csv", prepareGraphDataToCSV(stateGraphData));
 			population.clear();
-			stateGraphData = [];
 			count = 1;
 			
-			alert("Simulation over");
+			if (showFinishAlert)
+			{
+				downloadasTextFile("corona_sir_two_age_stocasic_graph_data.csv", prepareGraphDataToCSV(stateGraphData));
+				alert("Simulation over");	
 			
-			// reset view
-			document.getElementById("main").style.display = "none"; // close the init form
-			document.getElementById("init_form").style.display = ""; // show the main window
+				// reset view
+				document.getElementById("main").style.display = "none"; // close the init form
+				document.getElementById("init_form").style.display = ""; // show the main window
+				
+				runStarted = false;
+			}
+			else
+			{
+				if (adult_recover < adult_pop_size)
+				{
+					if (child_recover < children_pop_size)
+					{
+						
+						population = new Population(adult_pop_size,
+													adult_pop_size - 1 - adult_recover,
+													1,
+													adult_recover,
+													children_pop_size, 
+													children_pop_size - 1 - child_recover, 
+													1,
+													child_recover);
+											
+						downloadasTextFile("corona_sir_two_age_stocasic_graph_data___vacine_a_" + adult_recover + "_c_" + child_recover + ".csv", prepareGraphDataToCSV(stateGraphData));
+						child_recover += child_step_size;
+					}
+					else
+					{
+						child_recover = 0;
+						adult_recover += adult_step_size; 
+					}
+				}
+				else
+				{
+					// make back as in the start
+					showFinishAlert = true;
+					document.getElementById("playBtn").style.display = "";
+					document.getElementById("pauseBtn").style.display = "";
 			
-			runStarted = false;
+					// reset view
+					document.getElementById("main").style.display = "none"; // close the init form
+					document.getElementById("init_form").style.display = ""; // show the main window
+					
+					runStarted = false;
+				}
+			}
+			
+			stateGraphData = [];
 		}
 	}
 	
@@ -117,6 +178,26 @@ function stepToClock(count)
 	var days = Math.floor(count / TIME_IN_DAY);
 	var hours = count % TIME_IN_DAY;
 	return days + " days, " + hours + " hours";
+}
+
+function calcRzero(new_stat)
+{
+	var answer = 0;
+	if (last_stats != null)
+	{
+		var delta_recover = (new_stat["a_r"] + new_stat["c_r"]) - (last_stats["a_r"] + last_stats["c_r"]);
+		var delta_infected = (new_stat["a_i"] + new_stat["c_i"]) - (last_stats["a_i"] + last_stats["c_i"]);
+		if (delta_recover == 0)
+		{
+			answer = delta_infected;
+		}
+		else
+		{
+			answer = delta_infected / delta_recover;
+		}
+	}
+	last_stats = new_stat;
+	return answer;
 }
 
 function prepareGraphDataToCSV(data)
