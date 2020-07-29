@@ -49,7 +49,7 @@ var adult_step_size;
 var children_pop_size;
 var child_step_size;
 
-var vaccine_data;
+let vaccine_data = [];
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
@@ -132,6 +132,9 @@ function draw()
 											
 						downloadasTextFile("corona_sir_two_age_stocasic_graph_data___vacine_a_" + adult_recover + "_c_" + child_recover + ".csv", prepareGraphDataToCSV(stateGraphData));
 						child_recover += child_step_size;
+						vaccine_data.push([(adult_recover / population.members.length).toFixed(3), 
+											(child_recover / population.members.length).toFixed(3),
+											(r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
 					}
 					else
 					{
@@ -141,6 +144,9 @@ function draw()
 				}
 				else
 				{
+					downloadasTextFile("vaccine_data.csv", prepareGraphDataToCSV(vaccine_data, false));
+					vaccine_data = [];
+					
 					// make back as in the start
 					showFinishAlert = true;
 					document.getElementById("playBtn").style.display = "";
@@ -154,6 +160,7 @@ function draw()
 				}
 			}
 			
+			r_zeros = [];
 			stateGraphData = [];
 		}
 	}
@@ -200,9 +207,13 @@ function calcRzero(new_stat)
 	return answer;
 }
 
-function prepareGraphDataToCSV(data)
+function prepareGraphDataToCSV(data, needHeader = true)
 {
-	var answer = "day, adult infected, adult susceptible, adult recover, child infected, child susceptible, child recover\n";
+	var answer = "";
+	if (needHeader)
+	{
+		answer = "day, adult infected, adult susceptible, adult recover, child infected, child susceptible, child recover\n";
+	}
 	for (var i = 0; i < data.length; i++)
 	{
 		for (j = 0; j < data[i].length; j++)
