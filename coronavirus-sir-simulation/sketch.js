@@ -132,8 +132,8 @@ function draw()
 											
 						downloadasTextFile("corona_sir_two_age_stocasic_graph_data___vacine_a_" + adult_recover + "_c_" + child_recover + ".csv", prepareGraphDataToCSV(stateGraphData));
 						child_recover += child_step_size;
-						vaccine_data.push([(adult_recover / population.members.length).toFixed(3), 
-											(child_recover / population.members.length).toFixed(3),
+						vaccine_data.push([(adult_recover / parseInt(document.getElementById("adult_pop_size").value)).toFixed(3), 
+											(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
 											(r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
 					}
 					else
