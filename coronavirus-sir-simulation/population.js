@@ -60,6 +60,11 @@ class Population
 		}
 	}
 	
+	size()
+	{
+		return this.members.length;
+	}
+	
 	clear()
 	{
 		this.members = [];

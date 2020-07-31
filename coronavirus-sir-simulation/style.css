@@ -27,6 +27,7 @@ html, body
 }
 
 .sim-box{
+	margin-top: 10px;
 	padding: 10px 10px;
 	text-align: center;
 	border: 1px solid black;

@@ -40,6 +40,7 @@ let time_not_at_home = TIME_IN_DAY - time_at_home;
 // remember for r_0 calc
 let last_stats = null;
 let r_zeros = [];
+let infected = [];
 
 // vaccine run
 var adult_recover;
@@ -50,6 +51,7 @@ var children_pop_size;
 var child_step_size;
 
 let vaccine_data = [];
+let vaccine_max_infected_data = [];
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
@@ -80,6 +82,7 @@ function draw()
 	// update stats panel
 	document.getElementById("susceptible_text").innerHTML = (stats["a_s"] + stats["c_s"]).toString();
 	document.getElementById("infected_text").innerHTML = (stats["a_i"] + stats["c_i"]).toString();
+	infected.push(stats["a_i"] + stats["c_i"]);
 	document.getElementById("recover_text").innerHTML = (stats["a_r"] + stats["c_r"]).toString();
 	document.getElementById("clock").innerHTML = stepToClock(count);
 	var r_zero = calcRzero(stats);
@@ -95,7 +98,10 @@ function draw()
 		});
 		// fix the data that is not 	
 		stateGraphData.push(graphValues);
-		drawStateDistrebution();
+		if (showFinishAlert)
+		{
+			drawStateDistrebution();	
+		}
 		
 		// if the simulation is over
 		if ((stats["a_i"] + stats["c_i"]) == 0)
@@ -116,9 +122,9 @@ function draw()
 			}
 			else
 			{
-				if (adult_recover < adult_pop_size)
+				if (adult_recover <= adult_pop_size)
 				{
-					if (child_recover < children_pop_size)
+					if (child_recover <= children_pop_size)
 					{
 						
 						population = new Population(adult_pop_size,
@@ -130,11 +136,15 @@ function draw()
 													1,
 													child_recover);
 											
-						downloadasTextFile("corona_sir_two_age_stocasic_graph_data___vacine_a_" + adult_recover + "_c_" + child_recover + ".csv", prepareGraphDataToCSV(stateGraphData));
+						// downloadasTextFile("corona_sir_two_age_stocasic_graph_data___vacine_a_" + adult_recover + "_c_" + child_recover + ".csv", prepareGraphDataToCSV(stateGraphData));
+						console.log("Vacine: a = " + adult_recover + ", c = " + child_recover);
 						child_recover += child_step_size;
 						vaccine_data.push([(adult_recover / parseInt(document.getElementById("adult_pop_size").value)).toFixed(3), 
 											(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
 											(r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+						vaccine_max_infected_data.push([(adult_recover / parseInt(document.getElementById("adult_pop_size").value)).toFixed(3), 
+											(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
+											(100 * max(infected) / population.size()).toFixed(3)]);
 					}
 					else
 					{
@@ -144,7 +154,12 @@ function draw()
 				}
 				else
 				{
+					// download results
+					downloadasTextFile("vaccine_max_infected_data.csv", prepareGraphDataToCSV(vaccine_max_infected_data, false));
 					downloadasTextFile("vaccine_data.csv", prepareGraphDataToCSV(vaccine_data, false));
+					
+					// reset for next run
+					vaccine_max_infected_data = [];
 					vaccine_data = [];
 					
 					// make back as in the start
@@ -160,6 +175,7 @@ function draw()
 				}
 			}
 			
+			infected = [];
 			r_zeros = [];
 			stateGraphData = [];
 		}
