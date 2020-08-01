@@ -30,7 +30,8 @@ let c_c_meeting_count = 0;
 let fps = 6;
 let graph_sample = 24;
 
-let infected_to_recover_time = 0;
+let infected_to_recover_time_adult = 0;
+let infected_to_recover_time_children = 0;
 
 // location time circle
 let TIME_IN_DAY = 24;
@@ -182,7 +183,7 @@ function draw()
 	}
 	
 	// make a step on all the rockets
-	population.run(a_a_t_c, a_c_t_c, c_a_t_c, c_c_t_c, infected_to_recover_time, time_at_home);
+	population.run(a_a_t_c, a_c_t_c, c_a_t_c, c_c_t_c, infected_to_recover_time_adult, infected_to_recover_time_children, time_at_home);
 	
 	// Displays stats on the screen
 	var age_status_location_dist = population.countStatusLocationDestrebution();

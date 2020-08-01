@@ -36,9 +36,10 @@ class Member
 		this.state_time++;
 	}
 	
-	tryRecover(infected_to_recover_time)
+	tryRecover(infected_to_recover_time_adult, infected_to_recover_time_children)
 	{
-		if (this.state_time > infected_to_recover_time && this.state == STATE_I)
+		if ((this.state_time > infected_to_recover_time_adult && this.state == STATE_I && this.age_group == ADULT) ||
+		(this.state_time > infected_to_recover_time_children && this.state == STATE_I && this.age_group == CHILD))
 		{
 			this.recover();
 		}

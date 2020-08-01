@@ -70,14 +70,14 @@ class Population
 		this.members = [];
 	}
 	
-	run(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time, time_at_home)
+	run(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children, time_at_home)
 	{
 		
 		// 1. stohasticly move them around (with day - night circle)
 		this._move_population_around(time_at_home);
 		
 		// 2. make tranforms regarding to -> location, age, state
-		this._make_trasforms(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time)
+		this._make_trasforms(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children)
 		
 		// 3. update time of day 
 		this.timeOfDay++;
@@ -122,7 +122,7 @@ class Population
 		}
 	}
 	
-	_make_trasforms(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time)
+	_make_trasforms(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children)
 	{
 		// get destrbution
 		var dist = this.countStatusLocationDestrebution();
@@ -142,7 +142,7 @@ class Population
 			member.tic();
 			
 			// first - check if move from I to Radio
-			member.tryRecover(infected_to_recover_time)
+			member.tryRecover(infected_to_recover_time_adult, infected_to_recover_time_children)
 			
 			// recover does not go anywehre, infected handled already, just manage STATE_S
 			if (member.state == STATE_S)

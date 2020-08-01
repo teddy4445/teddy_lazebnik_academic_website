@@ -131,7 +131,8 @@ function startSimulation(dramatic)
 	var susceptible_children_amount = parseInt(document.getElementById("susceptible_children_percent").value);
 	var infected_children_amount = parseInt(document.getElementById("infected_children_percent").value);
 	var recover_children_amount = parseInt(document.getElementById("recover_children_percent").value);
-	infected_to_recover_time = parseInt(document.getElementById("infected_to_recover_time").value);
+	infected_to_recover_time_adult = parseInt(document.getElementById("infected_to_recover_time_adult").value);
+	infected_to_recover_time_children = parseInt(document.getElementById("infected_to_recover_time_children").value);
 	a_a_t_c = parseInt(document.getElementById("a_a_t_c").value) / 100;
 	a_c_t_c = parseInt(document.getElementById("a_c_t_c").value) / 100;
 	c_c_t_c = parseInt(document.getElementById("c_c_t_c").value) / 100;
