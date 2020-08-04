@@ -821,7 +821,22 @@
 	{
 		"title": "Advanced Programming 1",
 		"code": "89211",
-		"description": "roject lead course about advanced methods in programming)",
+		"description": "Project lead course about advanced methods in programming",
+		"sources":
+		[
+		],
+		"teachingNotes":
+		[
+		],
+		"additionalData":
+		[
+		]
+	},
+	"Advanced Programming 2":
+	{
+		"title": "Advanced Programming 2",
+		"code": "89211",
+		"description": "The second project-lead course about advanced methods in programming, continuous of Advanced Programming 1.",
 		"sources":
 		[
 		],
