@@ -816,5 +816,20 @@
 		"additionalData":
 		[
 		]
+	},
+	"Advanced Programming 1":
+	{
+		"title": "Advanced Programming 1",
+		"code": "89211",
+		"description": "roject lead course about advanced methods in programming)",
+		"sources":
+		[
+		],
+		"teachingNotes":
+		[
+		],
+		"additionalData":
+		[
+		]
 	}
 }
