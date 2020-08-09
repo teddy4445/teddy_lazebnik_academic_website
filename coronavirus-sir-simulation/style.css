@@ -189,6 +189,11 @@ html, body
 background: linear-gradient(0deg, rgba(15,10,84,1) 0%, rgba(194,200,255,1) 100%);
 }
 
+.bg-grad-black{
+	background: rgb(5,5,5);
+	background: linear-gradient(0deg, rgba(5,5,5,1) 0%, rgba(240,240,240,1) 100%);
+}
+
 .bg-grad-green{
 	background: rgb(25,84,10);
 background: linear-gradient(0deg, rgba(25,84,10,1) 0%, rgba(199,255,194,1) 100%);

@@ -9,9 +9,12 @@ class Population
 		var a_s;
 		var a_i;
 		var a_r;
+		var a_d = 0;
 		var c_s;
 		var c_i;
 		var c_r;
+		var c_d = 0;
+		
 		if (adult_s_percent + adult_i_percent + adult_r_percent == 100 && children_s_percent + children_i_percent + children_r_percent == 100)
 		{
 			a_s = adult_population * adult_s_percent / 100;
@@ -220,7 +223,7 @@ class Population
 	
 	countStatusDestrebution() 
 	{
-		var answer = {"a_i": 0, "a_s": 0, "a_r": 0, "c_i": 0, "c_s": 0, "c_r": 0};
+		var answer = {"a_i": 0, "a_s": 0, "a_r": 0, "a_d": 0, "c_i": 0, "c_s": 0, "c_r": 0, "c_d": 0};
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 		{
 			var key = this.members[memberIndex].getKey();
@@ -240,7 +243,8 @@ class Population
 	{
 		var answer = {"a_i_h": 0, "a_s_h": 0, "a_r_h": 0, "c_i_h": 0, "c_s_h": 0, "c_r_h": 0,
 		"a_i_w": 0, "a_s_w": 0, "a_r_w": 0, "c_i_w": 0, "c_s_w": 0, "c_r_w": 0,
-		"a_i_s": 0, "a_s_s": 0, "a_r_s": 0, "c_i_s": 0, "c_s_s": 0, "c_r_s": 0};
+		"a_i_s": 0, "a_s_s": 0, "a_r_s": 0, "c_i_s": 0, "c_s_s": 0, "c_r_s": 0,
+		"a_d_h": 0, "a_d_w": 0, "a_d_s": 0, "c_d_h": 0, "c_d_w": 0, "c_d_s": 0};
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 		{
 			var key = this.members[memberIndex].getFullKey();

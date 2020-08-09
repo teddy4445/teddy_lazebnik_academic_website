@@ -10,9 +10,11 @@ function drawStateDistrebution()
       data.addColumn('number', 'Infected Adult');
       data.addColumn('number', 'Susceptible Adult');
       data.addColumn('number', 'Recovered Adult');
+      data.addColumn('number', 'Dead Adult');
       data.addColumn('number', 'Infected Children');
       data.addColumn('number', 'Susceptible Children');
       data.addColumn('number', 'Recovered Children');
+      data.addColumn('number', 'Dead Children');
 
       data.addRows(stateGraphData);
 
@@ -20,7 +22,7 @@ function drawStateDistrebution()
 		height: 300,
 		pointSize: 6,
 		pointShape: 'circle',
-		colors: ['#DB4437', '#0F9D58', '#4285F4', '#eb1d0c', '#1aba7d', '#73a0eb'],
+		colors: ['#DB4437', '#0F9D58', '#4285F4', '#140304', '#eb1d0c', '#1aba7d', '#73a0eb', '#0f0102'],
         hAxis: {
           title: 'Day'
         },

@@ -194,7 +194,7 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="infected_to_recover_time" title="Adult Infected To Recovered">
-			  Adult Infected To Recovered
+			  Adult Infected To Recovered Duration (hours)
 			 </label>
 			 <input class="form-control" id="infected_to_recover_time_adult" max="999" min="0" placeholder="Adult Infected To Recovered in hours" required="" type="number" value="168"/>
 			</div>
@@ -202,9 +202,28 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="infected_to_recover_time" title="Children Infected To Recovered">
-			  Children Infected To Recovered
+			  Children Infected To Recovered Duration (hours)
 			 </label>
 			 <input class="form-control" id="infected_to_recover_time_children" max="999" min="0" placeholder="Children Infected To Recovered in hours" required="" type="number" value="48"/>
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="pra" title="Adult Infected To Recovered Chance">
+			  Adult Infected To Recovered Chance 
+			 </label>
+			 <input class="form-control" id="pra" max="100" min="0" placeholder="Adult Infected To Recovered Cance (in percent)" required="" type="number" value="94"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="prc" title="Children Infected To Recovered Chance">
+			  Children Infected To Recovered chance 
+			 </label>
+			 <input class="form-control" id="prc" max="100" min="0" placeholder="Children Infected To Cance (in percent)" required="" type="number" value="100"/>
 			</div>
 		   </div>
 		  </div>
@@ -282,7 +301,7 @@
 		   </div>
 		  </div>
 		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="game-holder">
-		   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		   <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 			<div class="stat-box bg-grad-green">
 			 <h2>
 			  Susceptible
@@ -292,7 +311,7 @@
 			 </p>
 			</div>
 		   </div>
-		   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		   <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 			<div class="stat-box bg-grad-red">
 			 <h2>
 			  Infected
@@ -302,12 +321,22 @@
 			 </p>
 			</div>
 		   </div>
-		   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		   <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 			<div class="stat-box bg-grad-blue">
 			 <h2>
 			  Recovered
 			 </h2>
 			 <p id="recover_text">
+			 0
+			 </p>
+			</div>
+		   </div>
+		   <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			<div class="stat-box bg-grad-black">
+			 <h2>
+			  Dead
+			 </h2>
+			 <p id="dead_text">
 			 0
 			 </p>
 			</div>
@@ -335,6 +364,10 @@
 								<p id="a_r_h">
 									0
 								</p>
+								<h4>Dead</h4>
+								<p id="a_d_h">
+									0
+								</p>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<img style="width: 50px;  text-align:center;" src="https://img.icons8.com/ios-filled/100/000000/child-safe-zone--v2.png"/>
@@ -349,6 +382,10 @@
 								</p>
 								<h4>Recovered</h4>
 								<p id="c_r_h">
+									0
+								</p>
+								<h4>Dead</h4>
+								<p id="c_d_h">
 									0
 								</p>
 							</div>
@@ -374,6 +411,10 @@
 								<p id="a_r_w">
 									0
 								</p>
+								<h4>Dead</h4>
+								<p id="a_d_w">
+									0
+								</p>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<img style="width: 50px;  text-align:center;" src="https://img.icons8.com/ios-filled/100/000000/child-safe-zone--v2.png"/>
@@ -388,6 +429,10 @@
 								</p>
 								<h4>Recovered</h4>
 								<p id="c_r_w">
+									0
+								</p>
+								<h4>Dead</h4>
+								<p id="c_d_w">
 									0
 								</p>
 							</div>
@@ -413,6 +458,10 @@
 								<p id="a_r_s">
 									0
 								</p>
+								<h4>Dead</h4>
+								<p id="a_d_s">
+									0
+								</p>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<img style="width: 50px;  text-align:center;" src="https://img.icons8.com/ios-filled/100/000000/child-safe-zone--v2.png"/>
@@ -427,6 +476,10 @@
 								</p>
 								<h4>Recovered</h4>
 								<p id="c_r_s">
+									0
+								</p>
+								<h4>Dead</h4>
+								<p id="c_d_s">
 									0
 								</p>
 							</div>

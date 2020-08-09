@@ -137,6 +137,8 @@ function startSimulation(dramatic)
 	a_c_t_c = parseInt(document.getElementById("a_c_t_c").value) / 100;
 	c_c_t_c = parseInt(document.getElementById("c_c_t_c").value) / 100;
 	c_a_t_c = parseInt(document.getElementById("c_a_t_c").value) / 100;
+	prc = parseInt(document.getElementById("prc").value) / 100;
+	pra = parseInt(document.getElementById("pra").value) / 100;
 	a_c_meeting_count = parseInt(document.getElementById("a_c_meeting_count").value) / 24;
 	a_a_meeting_count = parseInt(document.getElementById("a_a_meeting_count").value) / 24;
 	c_c_meeting_count = parseInt(document.getElementById("c_c_meeting_count").value) / 24;

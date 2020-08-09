@@ -22,10 +22,14 @@ let a_c_t_c = 0;
 let c_c_t_c = 0;
 let c_a_t_c = 0;
 
+// meeting in time unit (default - hour)
 let a_c_meeting_count = 0;
 let a_a_meeting_count = 0;
 let c_c_meeting_count = 0;
 
+// recover chaces
+let prc = 0;
+let pra = 0;
 
 let fps = 6;
 let graph_sample = 24;
@@ -85,6 +89,7 @@ function draw()
 	document.getElementById("infected_text").innerHTML = (stats["a_i"] + stats["c_i"]).toString();
 	infected.push(stats["a_i"] + stats["c_i"]);
 	document.getElementById("recover_text").innerHTML = (stats["a_r"] + stats["c_r"]).toString();
+	document.getElementById("dead_text").innerHTML = (stats["a_d"] + stats["c_d"]).toString();
 	document.getElementById("clock").innerHTML = stepToClock(count);
 	var r_zero = calcRzero(stats);
 	r_zeros.push(r_zero);
@@ -229,7 +234,7 @@ function prepareGraphDataToCSV(data, needHeader = true)
 	var answer = "";
 	if (needHeader)
 	{
-		answer = "day, adult infected, adult susceptible, adult recover, child infected, child susceptible, child recover\n";
+		answer = "day, adult infected, adult susceptible, adult recover, adult dead, child infected, child susceptible, child recover, child_dead\n";
 	}
 	for (var i = 0; i < data.length; i++)
 	{
