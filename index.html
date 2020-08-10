@@ -13,7 +13,6 @@
   <!-- css -->
   <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
   <link href="css/teddy_style.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <script type="application/ld+json">
    {
 		  "@context": "http://schema.org",
@@ -93,47 +92,56 @@
        </li>
        <li class="nav-item">
         <a class="nav-link active" href="index.html" title="home page">
-         Short Bio
+         Home
         </a>
        </li>
-       <li class="nav-item">
-        <a class="nav-link" href="publications.html" title="Publications">
-         Publications
+       <li class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Research">
+         Research
         </a>
-       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="opensource.html" title="Open Resources">
-         Open Resources
-        </a>
+        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+         <a class="dropdown-item" href="/publications.html" title="Academic Publications">
+          Academic Publications
+         </a>
+         <a class="dropdown-item" href="/students.html" title="Research Students">
+          Research Students
+         </a>
+        </div>
        </li>
        <li class="nav-item dropdown">
         <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Teaching">
          Teaching
         </a>
         <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <a class="dropdown-item" href="courses/advanced-programming-one.html" title="Advanced Programming 1">
+         <h4 class="dropdown-item">
+          Bar Ilan University
+         </h4>
+         <a class="dropdown-item" href="/courses/advanced-programming-one.html" title="Advanced Programming 1">
           Advanced Programming 1
          </a>
-         <a class="dropdown-item" href="courses/advanced-programming-two.html" title="Advanced Programming 2">
+         <a class="dropdown-item" href="/courses/advanced-programming-two.html" title="Advanced Programming 2">
           Advanced Programming 2
          </a>
          <div class="dropdown-divider">
          </div>
-         <a class="dropdown-item" href="teaching.html" title="teaching">
+         <a class="dropdown-item" href="/teaching.html" title="teaching">
           All classes
          </a>
         </div>
        </li>
-       <li class="nav-item">
-        <a class="nav-link" href="students.html" title="Students">
-         Students
+       <li class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Projects">
+         Projects
         </a>
+        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+         <a class="dropdown-item" href="/opensource.html" title="Open Resources">
+          Open Source 
+         </a>
+         <a class="dropdown-item" href="/technological-blog.html" title="Technological Blog">
+          Technological Blog
+         </a>
+        </div>
        </li>
-       <!--
-					  <li class="nav-item">
-						<a class="nav-link" href="index.html" title="english"><img  alt="english" src="img/english.jpg" alt="English" width="30px" /></a>
-					  </li>
-					  -->
        <li class="nav-item" id="hebrew_flag">
         <a class="nav-link" href="he/index.html" title="hebrew">
          <img alt="Hebrew" src="img/hebrew.png" width="30px"/>
@@ -216,33 +224,33 @@
            </p>
            <p>
             Sometimes I am publishing some useful (or just fun) things like
-            <a href="opensource.html#open_code" title="open code">
+            <a href="/opensource.html" title="open code">
              open code
             </a>
             and
-            <a href="opensource.html#tech_posts" title="technical blog posts">
+            <a href="/technological-blog.html" title="technological blog posts">
              technical blog posts
             </a>
             .
 												I published a few academic papers in
-            <a href="publications.html#journals" title="journals">
+            <a href="/publications.html#journals" title="journals">
              journals
             </a>
             ,
-            <a href="publications.html#conferences" title="conferences">
+            <a href="/publications.html#conferences" title="conferences">
              conferences
             </a>
             , and
-            <a href="publications.html#abstracts" title="abstracts">
+            <a href="/publications.html#abstracts" title="abstracts">
              abstracts
             </a>
             .
 												In between, I am teaching several
-            <a href="teaching.html" title="teaching">
+            <a href="/teaching.html" title="teaching">
              mathematical classes
             </a>
             and working with Bc.S. and Mc.S.
-            <a href="students.html" title="Students">
+            <a href="/students.html" title="Students">
              students
             </a>
             on their final project.
@@ -262,11 +270,91 @@
         <div class="row">
          <div class="col-lg-12 col-md-12 col-sm-12">
           <h3>
+           Featured Publications
+          </h3>
+         </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+           <div class="card">
+            <div class="card-body">
+             <h5 class="card-title">
+               A stable algorithm for numerical matrix exponent
+             </h5>
+             <ol class="nobull card-text">
+              <li>
+               <b>
+                Authors:
+               </b>
+               Teddy Lazebnik and Shlomo Yanetz
+              </li>
+              <li>
+               <b>
+                Journal:
+               </b>
+               Functional Differential Equations
+              </li>
+              <li>
+               <b>
+                Year:
+               </b>
+               2016
+			 <br>
+			 <br>
+              </li>
+             </ol>
+             <button class="cool-btn cool-btn-gray" id="cool_btn_1">
+              Paper
+             </button>
+             <div class="col-btn-href" id="cool_btn_1_href">
+              files/matrix_exponent.pdf
+             </div>
+            </div>
+           </div>
+          </div>
+		  
+          <div class="col-lg-6 col-md-6 col-sm-12">
+           <div class="card">
+            <div class="card-body">
+             <h5 class="card-title">
+               Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling
+             </h5>
+             <ol class="nobull card-text">
+              <li>
+               <b>
+                Authors:
+               </b>
+               Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni
+              </li>
+              <li>
+               <b>
+                Journal:
+               </b>
+               Functional Differential Equations
+              </li>
+              <li>
+               <b>
+                Year:
+               </b>
+               2019
+              </li>
+             </ol>
+             <button class="cool-btn cool-btn-gray" id="cool_btn_2">
+              Paper
+             </button>
+             <div class="col-btn-href" id="cool_btn_2_href">
+              files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf
+             </div>
+            </div>
+           </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <h3>
            Current Projects
           </h3>
          </div>
          <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card text-center" data-aos="fade-up">
+          <div class="card text-center">
            <div class="card-body">
             <h5 class="card-title">
              CS
@@ -284,7 +372,7 @@
           </div>
          </div>
          <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="card text-center">
            <div class="card-body">
             <h5 class="card-title">
              Math
@@ -304,7 +392,7 @@
           </div>
          </div>
          <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="card text-center">
            <div class="card-body">
             <h5 class="card-title">
              CS &amp; Cognitive
@@ -397,11 +485,19 @@
                <img alt="google scholar" src="img/google_scholar.png" width="32px;"/>
               </a>
              </div>
-             <div class="flex-box-full">
-              <p id="VisitCount" style="margin-left: 10px">
-              </p>
-             </div>
             </div>
+           </div>
+          </div>
+         </div>
+		 
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="notification-panel">
+			<div class="notification">
+				<p>Let me think about a notification panel on the main page at lazebnik.teddy@gmail.com<p>
+			</div>
+			<div class="notification">
+				<p>Do you want to join a open-source of lectures sites for students development? ping me!<p>
+			</div>
            </div>
           </div>
          </div>
@@ -434,18 +530,13 @@
   </script>
   <script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
   </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
-  </script>
   <script src="js/main.js">
   </script>
   <script src="js/search.js">
   </script>
-  <!--<script src="js/chatbot.js"></script>-->
+  <!--<script src="js/chatbot.js"></script>
   <script>
-   AOS.init({
-		duration: 1000,
-	  });
 	  // var bot = new ChatBot();
-  </script>
+  </script>-->
  </body>
 </html>

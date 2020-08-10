@@ -91,6 +91,15 @@ button:focus{
 	padding-left: 30px !important;
 }
 
+.navbar h4.dropdown-item{
+	color: #0E53A7;
+	margin-right: 0px;
+	margin-left: 0px;
+	font-size: 14pt;
+	padding-left: 30px !important;
+	font-weight: bold;
+}
+
 .navbar a.dropdown-item:hover{
 	color: rgba(255, 255, 255, 1);
 	background-color: #0E53A7;
@@ -186,10 +195,20 @@ button:focus{
 	margin-bottom: 20px;
 }
 
+.notification-panel{
+	min-height: 100px;
+	border-radius: 10px 10px 10px 10px;
+	text-align: left;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+	margin-bottom: 20px;
+	padding: 10px 10px;
+}
+
 .personal-panel{
 	border-radius: 10px 10px 10px 10px;
 	text-align: center;
 	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+	margin-bottom: 20px;
 }
 
 .personal-panel-header{
@@ -717,6 +736,28 @@ a.cool-btn:hover{
 	
 }
 
+.notification{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.notification:before{
+    content:'';
+    display: block;
+    background: url("../img/notification.png") no-repeat;
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin: 0 6px 0 0;
+}
+
+.notification p{
+	padding-top: 5px;
+    content: "";
+    display: block;
+    clear: both;
+}
+
 @media only screen and (max-width: 600px) {
 	
 	.desktop{
@@ -764,6 +805,12 @@ a.cool-btn:hover{
 	
 	.navbar a.dropdown-item{
 		color: white;
+	}
+	
+
+	.navbar h4.dropdown-item{
+		color: white;
+		display: none;
 	}
 
 	.navbar .dropdown-divider{

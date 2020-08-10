@@ -4,10 +4,6 @@ let FULL_STAR_CODE = '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" wi
 // run the logic
 onPageLoad();
 
-let progress = document.getElementById("progressBar");
-let totalHeight = document.body.scrollHeight - window.innerHeight;
-progress.style.height = "0%";
-
 const buttons = document.querySelectorAll('button');
 let rippleCounter = 0;
 buttons.forEach(btn => {
@@ -35,11 +31,6 @@ buttons.forEach(btn => {
 	}
 });
 
-window.onscroll = function (){
-	let progressHeight = (window.pageYOffset / totalHeight) * 100;
-	progress.style.height = progressHeight + "%";
-};
-
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
@@ -58,40 +49,6 @@ function containsName(name, nameList)
 
 function onPageLoad()
 {
-	let visitCount = getCookie("VisitFlag");
-	if (visitCount == "")
-	{
-		setCookie("VisitFlag", 1, 365);
-		visitCount = "1";
-	}
-	else
-	{
-		setCookie("VisitFlag", parseInt(visitCount) + 1, 365);
-	}
-	visitCount = parseInt(visitCount);
-	// write the answer 
-	let answerString = "";
-	if (visitCount == 1){
-		answerString = "* This is your first time here, nice to meet you";
-	}
-	else if (visitCount == 2){
-		answerString = "* This is your second time here, are you looking for something spesific?";
-	}
-	else if (visitCount == 3){
-		answerString = "* Need something spesific? Just write me and let's descuess that...";
-	}
-	else if (visitCount > 3){
-		answerString = "* You are visiting a lot. Write me and maybe I would be able to help.";
-	}
-	try
-	{
-		document.getElementById("VisitCount").innerHTML = answerString;	
-	}
-	catch (error)
-	{
-		
-	}
-	
 	if (getWidth() < 440)
 	{
 		document.getElementById("logo").innerHTML = "T. Lazebnik";
@@ -103,139 +60,6 @@ function onPageLoad()
 		setCookie("seeCookieMessage", true, 7);
 		opacityAnimation("cookie-box", 250, true);
 	}
-	addStarPages(false);
-}
-
-function addStarPages(need_alert)
-{
-	let starPages = getCookie("starPages");
-	var perant = document.getElementsByClassName("navbar-nav mr-auto")[0];
-	var pageStared = false;
-	var url_parts = location.href.split("/");
-	var thisPageName = "";
-	if (url_parts.slice(-1)[0] == "")
-	{
-		thisPageName = "index"
-	}
-	else
-	{
-		thisPageName = url_parts.slice(-1)[0].replace(".html", "");
-	}
-	
-	
-	
-	if (starPages != "")
-	{
-		var page_links = starPages.split(",");
-		var page_links = starPages.split(",");
-		var innerHtmlLiElement = '<li id="star-list" class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="starMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stared</a><div class="dropdown-menu" aria-labelledby="starMenu">';
-		for (var i = 0; i < page_links.length; i++)
-		{
-			var linkAndName = page_links[i].split("|");
-			innerHtmlLiElement += '<a class="dropdown-item" href="' + linkAndName[0].trim() + '">' + linkAndName[1].trim() + '</a>';
-			
-			if (linkAndName.includes(thisPageName))
-			{
-				pageStared = true;
-			}
-		}
-		innerHtmlLiElement += '</div></li>';
-		
-		perant.innerHTML += innerHtmlLiElement;
-	}
-	
-	var starCode = "";
-	var alertCode = "";
-	if (pageStared)
-	{
-		starCode = '<button class="star-btn" id="star_btn" onclick="return starThisPage(false);"> ' + FULL_STAR_CODE + ' </button>';
-		alertCode = '<div class="alert alert-dark cookie-alert" role="alert" id="star_alert"> <strong>Stared:</strong> you have added page "' + thisPageName + '" to your favorite pages on this computer and can be find in the menu .</div>';
-	}
-	else
-	{
-		starCode = '<button class="star-btn" id="star_btn" onclick="return starThisPage(true);"> ' + EMPTY_STAR_CODE + ' </button>';
-		alertCode = '<div class="alert alert-dark cookie-alert" role="alert" id="star_alert"> <strong>Unstared:</strong> you have removed page "' + thisPageName + '" from your favorite pages on this computer. </div>';
-	}
-	
-	// if mobile or desktop version
-	if (getWidth() < 1000)
-	{
-		document.getElementById("logo").innerHTML += starCode; // mobile 
-	}
-	else
-	{
-		perant.innerHTML += starCode; // desktop
-	}
-	
-	if (need_alert)
-	{	
-		// add alert code as well 
-		document.body.innerHTML += alertCode;
-		// make it remove after 2 seconds
-		setTimeout(() => {
-			closeAlert("star_alert");
-			setTimeout(() => {
-				var star_btn = document.getElementById("star_alert");
-				star_btn.parentNode.removeChild(star_btn);}, 500);
-		}, 2000);
-		
-	}
-}
-
-function starThisPage(addThisPage)
-{
-	var cookie_data = getCookie("starPages");
-	var url_parts = location.href.replace("https", "http").split("/");
-	var thisPageName = "";
-	if (url_parts.slice(-1)[0] == "")
-	{
-		thisPageName = "index"
-	}
-	else
-	{
-		thisPageName = url_parts.slice(-1)[0].replace(".html", "");
-	}
-	var new_page = window.location.href + "|" + thisPageName;
-	new_page = new_page.replace("index.html", "");
-	if (addThisPage)
-	{
-		if (cookie_data == "")
-		{
-			cookie_data = new_page;
-		}
-		else
-		{
-			cookie_data += "," + new_page;
-		}
-	}
-	else
-	{
-		var pages = cookie_data.split(",");
-		cookie_data = "";
-		for (var i = 0; i < pages.length; i++)
-		{
-			if (pages[i] != new_page)
-			{
-				cookie_data += pages[i] + ",";	
-			}
-		}
-		cookie_data = cookie_data.substring(0, cookie_data.length - 1);
-	}
-	setCookie("starPages", cookie_data, 365);
-	
-	// delete to make sure we don't have the same thing twice
-	var star_btn = document.getElementById("star_btn");
-    star_btn.parentNode.removeChild(star_btn);
-	try
-	{		
-		var star_list = document.getElementById("star-list");
-		star_list.parentNode.removeChild(star_list);	
-	}
-	catch (error) {	}
-	
-	// build right data again
-	addStarPages(true);
-	return false;
 }
 
 function closeSearchAlert(){
