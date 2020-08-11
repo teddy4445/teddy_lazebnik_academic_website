@@ -31,6 +31,87 @@ buttons.forEach(btn => {
 	}
 });
 
+function onPageLoad()
+{
+	if (getWidth() < 440)
+	{
+		document.getElementById("logo").innerHTML = "T. Lazebnik";
+	}
+	
+	let see_cookies = getCookie("seeCookieMessage");
+	if (see_cookies == "")
+	{
+		setCookie("seeCookieMessage", true, 7);
+		opacityAnimation("cookie-box", 250, true);
+	}
+	// try to add notification panel
+	loadNotificationBar();
+}
+
+/* notification panel on mian pages */
+function loadNotificationBar()
+{	
+	// check if needed 
+	if (document.getElementById("notification-panel") == null)
+	{
+		return;
+	}
+	
+	// get the data from the file 
+	var client;
+	// code for IE7+, Firefox, Chrome, Opera, Safari
+	if (window.XMLHttpRequest)
+	{
+		client = new XMLHttpRequest();
+	}
+	else // code for IE6, IE5
+	{
+		client = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	client.onreadystatechange  = notificationHandler;
+	client.open("GET", "../notifications.txt", false);
+	client.send();
+}
+
+function notificationHandler() 
+{
+	if (this.readyState == 4)
+	{
+		if(this.status == 200 && this.responseText != null )
+		{
+			buildNotificationUI(this.responseText.split("\n"), true);
+		} 
+		else 
+		{
+			buildNotificationUI(this.status, false);
+		}
+	}
+}
+
+function buildNotificationUI(notifications, is_ok)
+{
+	var notfi_panel = document.getElementById("notification-panel");
+	var notfi_html = '<div class="notification-panel">';
+	// set notifications or error message
+	if (is_ok)
+	{
+		// build the panel
+		for (var i = 0; i < notifications.length; i++)
+		{
+			notfi_html += '<div class="notification"><p>' + notifications[i].trim().replace("script", "") + '</p></div>'; // the replace is to avoid JS injection in the original file
+		}
+	}
+	else
+	{
+		notfi_html += "<p> Error with status " + notifications + " while trying to retrive notifications - please inform the owner of the site regarding this error... </p>";
+	}
+	// set the content into the panel
+	notfi_html += '</div>';
+	notfi_panel.innerHTML = notfi_html;
+}
+/* end - notification panel on mian pages */
+
+
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
@@ -45,21 +126,6 @@ function containsName(name, nameList)
 		}
 	}
 	return false;
-}
-
-function onPageLoad()
-{
-	if (getWidth() < 440)
-	{
-		document.getElementById("logo").innerHTML = "T. Lazebnik";
-	}
-	
-	let see_cookies = getCookie("seeCookieMessage");
-	if (see_cookies == "")
-	{
-		setCookie("seeCookieMessage", true, 7);
-		opacityAnimation("cookie-box", 250, true);
-	}
 }
 
 function closeSearchAlert(){
