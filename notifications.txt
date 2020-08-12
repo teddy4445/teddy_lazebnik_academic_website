@@ -1,1 +1,1 @@
-Do you want to join a open-source of lectures sites for students development? <a href="lecture-open-source.html" title="lectures open source website builder">read more here</a>
+We're building an open-source website template that will vastly improve the communication between lecturers and students, and we're looking for UI/UX designers and iOS developers. Want to join us? <a href="lecture-open-source.html" title="lectures open source website builder">read more here</a>
