@@ -3,24 +3,16 @@
  <head>
   <meta charset="utf-8"/>
   <title>
-   Technological Blog - Teddy Lazebnik
+   Lecture's Website Builder Open Source Project
   </title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="List of open source code projects by Teddy Lazebnik" name="description"/>
+  <meta content="Lecture's Website and Mobile Application Builder Open Source Project allowing lectures from all over the wolrd to easy create, deploy and maintance a website for their students and сolleagues" name="description"/>
+  <meta content="keywords" content="lecture's webstie, website builder, app builder, university lectures websties" />
   <meta content="Teddy Lazebnik" name="author"/>
-  <meta content="keywords" content="lazebnik, לזנבניק, teddy lazebnik, technological blog post" />
   <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
   <!-- css -->
   <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
   <link href="css/teddy_style.css" rel="stylesheet"/>
-  <script type="application/ld+json">
-   {
-			"@context": "http://schema.org",
-			"@type": "WebPage",
-			"name": "Technological Blog",
-			"description": "Both open source code and technical blog posts published by Teddy Lazebnik"
-		}
-  </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1">
   </script>
@@ -51,7 +43,7 @@
   <div class="row">
    <div class="col-lg-12 col-md-12 col-sm-12 mobile-space">
     <nav class="navbar navbar-expand-lg">
-     <a class="navbar-brand" href="index.html" id="logo" title="Theodore (Teddy) Lazebnik">
+     <a class="navbar-brand" href="index.html" id="logo" title="home page">
       Theodore (Teddy) Lazebnik
      </a>
      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
@@ -67,7 +59,7 @@
          </button>
         </div>
        </li>
-        <li class="nav-item">
+       <li class="nav-item">
         <a class="nav-link" href="index.html" title="home page">
          Home
         </a>
@@ -107,7 +99,7 @@
         </div>
        </li>
        <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Projects">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Projects">
          Projects
         </a>
         <div aria-labelledby="navbarDropdown" class="dropdown-menu">
@@ -118,6 +110,16 @@
           Technological Blog
          </a>
         </div>
+       </li>
+       <li class="nav-item" id="hebrew_flag">
+        <a class="nav-link" href="he/index.html" title="hebrew">
+         <img alt="Hebrew" src="img/hebrew.png" width="30px"/>
+        </a>
+       </li>
+       <li class="nav-item" id="russian_flag">
+        <a class="nav-link" href="ru/index.html" title="russian">
+         <img alt="Russian" src="img/russian.png" width="30px"/>
+        </a>
        </li>
       </ul>
       <div class="form-inline my-2 my-lg-0 desktop">
@@ -133,146 +135,108 @@
     <div class="body">
      <div class="fluid-container">
       <div class="row">
-       <div id="main_col" class="col-lg-8 col-md-8 col-sm-12">
-        <div class="info">
-         <div class="alert alert-danger alert-dismissible fade show" id="error-search" role="alert" style="display: none">
-          <strong>
-           Page Not found
-          </strong>
-          , I am still working on our inner website search engine. Try again or use the navigation bar.
-          <button aria-label="Close" class="close" onclick="return closeSearchAlert()" type="button">
-           <span aria-hidden="true">
-            ×
-           </span>
-          </button>
-         </div>
-         
-         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-           <h3 data-aos="fade-up" id="open_code">
-            Let's Cooperate
-           </h3>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
+       <div id="main_col" class="col-lg-8 col-md-8 col-sm-12" style="padding-right: 5px;">
+        <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="info">
+           <div class="alert alert-danger alert-dismissible fade show" id="error-search" role="alert" style="display: none">
+            <strong>
+             Page Not found
+            </strong>
+            , I am still working on our inner website search engine. Try again or use the navigation bar.
+            <button aria-label="Close" class="close" onclick="return closeSearchAlert()" type="button">
+             <span aria-hidden="true">
+              ×
+             </span>
+            </button>
+           </div>
+           <h1>
+            Lecture's Website Builder Open Source Project
+           </h1>
            <p>
-            If you want to write a technical blog post together - I would like to, just propose a subject, and let's discuss it.
+            Lecture's websites are usually poorly written, not updated and the user-experience is late 90's. A system like "Model" for managing class materials makes the online learning experience a bit better but still very uncounterable.
+			We argue that lecturers will happily upload and maintain a personal website for both students and сolleagues if given the right tool and incentive. Currently, in the summer of 2020, the COVID-19 epidemic helps with the incentive as most of the classes are online now. Regarding the tool - this is where our project starts.
            </p>
+		   <p>
+		   In this project, we develop a system which helps lecturers to build and deploy a personal website (add mobile app) with the right balance between the research part in a scholar's work and the teaching part. Using a data-driven approach we aim to develop a generic template that will be easy to customize and will make the life of both lecturers and students much easier.
+		   </p>
+		   <p>
+		    Currently, (12.8.2020) we are a team of 4 people working a few hours each week (each member) on the project and hoping to upload an MVP before the next semester starts. Sounds interesting? Want to join? just give me a call and let's talk...
+		   </p>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-           <h3 data-aos="fade-up" id="tech_posts">
-            Blog Posts
-           </h3>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-           <div class="card" data-aos="fade-up">
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <h3>
+           We are looking for
+          </h3>
+         </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+           <div class="card">
             <div class="card-body">
              <h5 class="card-title">
-              The History of NLP with the Hebrew Language.
+               UI\UX Designer
              </h5>
-             <br/>
-             <button class="cool-btn cool-btn-yellow" id="cool_btn_11">
-              Story
-             </button>
-             <div class="col-btn-href" id="cool_btn_11_href">
-              https://www.linkedin.com/pulse/history-nlp-hebrew-language-teddy-lazebnik/
-             </div>
+             <p>
+				We need to design a generic website, mobile app and a web system for creating these website and app. 
+			 </p>
             </div>
            </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-           <div class="card" data-aos="fade-up">
+		  
+          <div class="col-lg-6 col-md-6 col-sm-12">
+           <div class="card">
             <div class="card-body">
              <h5 class="card-title">
-              Daily Issues and Solutions of a Nano-bioinformatic Research.
+               IOS developer
              </h5>
-             <br/>
-             <button class="cool-btn cool-btn-yellow" id="cool_btn_12">
-              Story
-             </button>
-             <div class="col-btn-href" id="cool_btn_12_href">
-              https://www.linkedin.com/pulse/daily-issues-solutions-nano-bioinformatic-research-teddy-lazebnik/
-             </div>
+             <p>
+				We need to develop an IOS application with is excactly like the Android one (no need to deploy). 
+			 </p>
             </div>
            </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-           <div class="card" data-aos="fade-up">
-            <div class="card-body">
-             <h5 class="card-title">
-              3 techniques for a better quality of tagged data for ML tasks.
-             </h5>
-             <br/>
-             <button class="cool-btn cool-btn-yellow" id="cool_btn_13">
-              Story
-             </button>
-             <div class="col-btn-href" id="cool_btn_13_href">
-              https://www.linkedin.com/pulse/3-technics-better-quality-tagged-data-ml-tasks-teddy-lazebnik/
-             </div>
-            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <h3>
+           Current Tasks
+          </h3>
+         </div>
+         <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card text-center">
+           <div class="card-body">
+            <h5 class="card-title">
+             Design
+            </h5>
+            <p class="card-text">
+             Design the template for the lecture's website based on user's traffic and action on previous versions of this website. 
+            </p>
            </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-           <div class="card" data-aos="fade-up">
-            <div class="card-body">
-             <h5 class="card-title">
-              3 steps to the medicine of the future.
-             </h5>
-             <br/>
-             <button class="cool-btn cool-btn-yellow" id="cool_btn_14">
-              Story
-             </button>
-             <div class="col-btn-href" id="cool_btn_14_href">
-              https://www.linkedin.com/pulse/3-steps-medicine-future-teddy-lazebnik/
-             </div>
-            </div>
+         </div>
+         <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card text-center">
+           <div class="card-body">
+            <h5 class="card-title">
+             Development
+            </h5>
+            <p class="card-text">
+             Developing (currently, in Python) a webstie system that generates a website with a contant provided by the user and the designed template.
+            </p>
            </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-           <div class="card" data-aos="fade-up">
-            <div class="card-body">
-             <h5 class="card-title">
-              Medical Nanorobotics - Science or Science Fiction?
-             </h5>
-             <br/>
-             <button class="cool-btn cool-btn-yellow" id="cool_btn_15">
-              Story
-             </button>
-             <div class="col-btn-href" id="cool_btn_15_href">
-              https://www.linkedin.com/pulse/medical-nanorobotics-science-fiction-teddy-lazebnik/
-             </div>
-            </div>
-           </div>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-           <div class="card" data-aos="fade-up">
-            <div class="card-body">
-             <h5 class="card-title">
-              Why should you use dotnet core for your next AI project production?
-             </h5>
-             <br/>
-             <button class="cool-btn cool-btn-yellow" id="cool_btn_16">
-              Story
-             </button>
-             <div class="col-btn-href" id="cool_btn_16_href">
-              https://www.linkedin.com/pulse/why-should-you-use-dotnet-core-your-next-ai-project-teddy-lazebnik/
-             </div>
-            </div>
-           </div>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-           <div class="card" data-aos="fade-up">
-            <div class="card-body">
-             <h5 class="card-title">
-              4 Things To Consider When You User-Testing Your Service.
-             </h5>
-             <br/>
-             <button class="cool-btn cool-btn-yellow" id="cool_btn_17">
-              Story
-             </button>
-             <div class="col-btn-href" id="cool_btn_17_href">
-              https://www.linkedin.com/pulse/4-things-consider-when-you-user-testing-your-service-teddy-lazebnik/
-             </div>
-            </div>
+         </div>
+         <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card text-center">
+           <div class="card-body">
+            <h5 class="card-title">
+             Community 
+            </h5>
+            <p class="card-text">
+             Convince as much lecturers as possible to try out the system and share traffic information for feature improvments. 
+            </p>
            </div>
           </div>
          </div>
@@ -283,13 +247,13 @@
          <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="personal-panel">
            <div class="personal-panel-header">
-            <img alt="personal-bg" class="header-img" src="img/personal-bg.png" title="Teddy Lazebnik" width="200px;"/>
+            <img alt="teddy's photo" class="header-img" src="img/personal-bg.png" title="Teddy Lazebnik" width="200px;"/>
             <h5>
              <a href="http://www.cs.biu.ac.il" itemprop="url" rel="noopener" target="_blank" title="Computer Science Department, Bar Ilan University">
               Computer Science Department, Bar Ilan University
              </a>
              /
-             <a href="www.dnc-algo.com" target="_blank" title="DnC-Algo Inc.">
+             <a href="http://www.dnc-algo.com" target="_blank" title="DnC-Algo Inc.">
               DnC-Algo Inc.
              </a>
             </h5>
@@ -305,7 +269,7 @@
                 <path d="M0,172v-172h172v172z" fill="none">
                 </path>
                 <g fill="#0e53a7">
-                 <path d="M100.57452,113.36599h-0.62019c-4.75481,13.35997 -13.35997,20.02704 -25.86719,20.02704c-9.38041,0 -16.92608,-3.48858 -22.66286,-10.49159c-5.76262,-6.97716 -8.63101,-16.66767 -8.63101,-29.04567c0,-15.99579 3.97957,-29.01983 11.93871,-39.07212c7.93329,-10.02644 17.52043,-15.03966 28.70973,-15.03966c10.12981,0 16.48678,4.08293 19.07092,12.27463h0.41346l1.00781,-10.38822h22.92127c-3.04928,29.79507 -4.59976,49.2536 -4.59976,58.42728c0,9.79387 2.58413,14.67788 7.7524,14.67788c5.45253,0 9.92308,-3.72115 13.46334,-11.11178c3.51442,-7.41647 5.29747,-17.10697 5.29747,-29.04567c0,-16.35758 -5.0649,-29.76923 -15.19471,-40.23498c-10.12981,-10.4399 -24.23918,-15.68569 -42.37981,-15.68569c-19.43269,0 -35.58353,6.97716 -48.45252,20.93149c-12.86899,13.95433 -19.30349,30.95794 -19.30349,51.03666c0,19.43269 5.6851,34.73077 17.05529,45.92007c11.39603,11.1893 27.08173,16.79688 47.13462,16.79688c15.29808,0 29.27824,-2.9976 41.99219,-9.01863v20.02704c-11.6286,5.09074 -26.5649,7.64904 -44.83474,7.64904c-25.09194,0 -45.48077,-7.39062 -61.19231,-22.17187c-15.73738,-14.8071 -23.59315,-34.67909 -23.59315,-59.64183c0,-25.45373 8.39844,-46.82452 25.16947,-64.16406c16.77103,-17.33954 38.3744,-26.02224 64.8101,-26.02224c24.44591,0 44.24038,6.71875 59.35757,20.18209c15.11719,13.46335 22.66286,31.21635 22.66286,53.23317c0,18.11479 -4.6256,32.63762 -13.85096,43.59435c-9.2512,10.93089 -20.69892,16.40926 -34.34315,16.40926c-6.71875,0 -12.19712,-1.86058 -16.40926,-5.55589c-4.21214,-3.72115 -6.48618,-8.55349 -6.82212,-14.49699zM87.00781,57.98798c-6.09856,0 -11.08594,3.59195 -14.91046,10.75c-3.85037,7.1839 -5.76262,15.47897 -5.76262,24.91106c0,6.71875 1.31791,11.93871 3.92788,15.6857c2.60997,3.74699 5.96935,5.60757 10.12981,5.60757c6.38281,0 11.42187,-3.51442 15.09135,-10.59495c3.64363,-7.05469 5.47837,-16.48678 5.47837,-28.29628c0,-5.60757 -1.26622,-10.0006 -3.82452,-13.23077c-2.53246,-3.20433 -5.91767,-4.83233 -10.12981,-4.83233z">
+                 <path d="M100.57452,113.36599h-0.62019c-4.75481,13.35997 -13.35997,20.02704 -25.86719,20.02704c-9.38041,0 -16.92608,-3.48858 -22.66286,-10.49159c-5.76262,-6.97716 -8.63101,-16.66767 -8.63101,-29.04567c0,-15.99579 3.97957,-29.01983 11.93871,-39.07212c7.93329,-10.02644 17.52043,-15.03966 28.70973,-15.03966c10.12981,0 16.48678,4.08293 19.07092,12.27463h0.41346l1.00781,-10.38822h12.92127c-3.04928,29.79507 -4.59976,49.2536 -4.59976,58.42728c0,9.79387 2.58413,14.67788 7.7524,14.67788c5.45253,0 9.92308,-3.72115 13.46334,-11.11178c3.51442,-7.41647 5.29747,-17.10697 5.29747,-29.04567c0,-16.35758 -5.0649,-29.76923 -15.19471,-40.23498c-10.12981,-10.4399 -24.23918,-15.68569 -42.37981,-15.68569c-19.43269,0 -35.58353,6.97716 -48.45252,20.93149c-12.86899,13.95433 -19.30349,30.95794 -19.30349,51.03666c0,19.43269 5.6851,34.73077 17.05529,45.92007c11.39603,11.1893 27.08173,16.79688 47.13462,16.79688c15.29808,0 29.27824,-2.9976 41.99219,-9.01863v20.02704c-11.6286,5.09074 -26.5649,7.64904 -44.83474,7.64904c-25.09194,0 -45.48077,-7.39062 -61.19231,-22.17187c-15.73738,-14.8071 -23.59315,-34.67909 -23.59315,-59.64183c0,-25.45373 8.39844,-46.82452 25.16947,-64.16406c16.77103,-17.33954 38.3744,-26.02224 64.8101,-26.02224c24.44591,0 44.24038,6.71875 59.35757,20.18209c15.11719,13.46335 22.66286,31.21635 22.66286,53.23317c0,18.11479 -4.6256,32.63762 -13.85096,43.59435c-9.2512,10.93089 -20.69892,16.40926 -34.34315,16.40926c-6.71875,0 -12.19712,-1.86058 -16.40926,-5.55589c-4.21214,-3.72115 -6.48618,-8.55349 -6.82212,-14.49699zM87.00781,57.98798c-6.09856,0 -11.08594,3.59195 -14.91046,10.75c-3.85037,7.1839 -5.76262,15.47897 -5.76262,24.91106c0,6.71875 1.31791,11.93871 3.92788,15.6857c2.60997,3.74699 5.96935,5.60757 10.12981,5.60757c6.38281,0 11.42187,-3.51442 15.09135,-10.59495c3.64363,-7.05469 5.47837,-16.48678 5.47837,-28.29628c0,-5.60757 -1.26622,-10.0006 -3.82452,-13.23077c-2.53246,-3.20433 -5.91767,-4.83233 -10.12981,-4.83233z">
                  </path>
                 </g>
                </g>
@@ -317,7 +281,7 @@
              <div class="flex-box">
               <svg height="48" style=" fill:#000000;" viewbox="0 0 226 226" width="48" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
                <g fill="none" fill-rule="nonzero" font-family="none" font-size="none" font-weight="none" stroke="none" stroke-dasharray="" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-width="1" style="mix-blend-mode: normal" text-anchor="none">
-                <path d="M0,226v-226h226v226z" fill="none">
+                <path d="M0,226v-226h126v226z" fill="none">
                 </path>
                 <g fill="#0e53a7">
                  <path d="M75.33333,22.58529c0.95638,0 0.95638,0 1.87598,0.95638c0.95638,0.95638 3.78874,3.75196 3.78874,5.66472c0,1.87597 0,6.5843 0.91959,10.33626c1.87598,4.70833 3.78874,16.95735 6.58431,23.54167c2.83235,6.58431 3.78873,10.37304 0.95638,14.125c-2.83235,4.70833 -20.70931,22.62207 -20.70931,22.62207c0,0 4.70833,9.41667 10.33627,15.04459c4.70833,6.58431 12.24902,16.00098 21.66569,23.54167c9.41667,8.49707 19.78971,16.00098 30.12598,20.70931c10.37304,-10.33627 18.83333,-18.83333 21.66569,-20.70931c2.83235,-1.87598 2.83235,-2.83235 7.54069,-0.91959c4.70833,1.87597 11.29265,4.70833 18.83333,5.62793c6.58431,0.95638 14.125,1.87598 18.83333,2.83235c4.70833,0.95638 4.70833,0.95638 5.66472,2.83235c1.87597,1.87598 2.79557,4.70833 2.79557,5.62794c0,0.95638 0,3.78873 0,13.2054c0,9.41667 0,22.58529 0,25.41765c0,2.83235 0,2.83235 -0.9196,4.70833c-0.95638,1.87598 -1.87597,6.58431 -1.87597,6.58431c0,0.95638 -4.70833,2.83235 -7.5407,2.83235c-2.83235,0 -13.2054,0 -19.78971,-0.95638c-6.58431,-0.9196 -24.46126,-4.70833 -31.08235,-7.50391c-6.58431,-1.91276 -28.25,-9.41667 -54.58724,-29.20638c-24.49805,-18.83333 -42.375,-44.25098 -52.74805,-64.96028c-10.37304,-20.74609 -16.00098,-43.33138 -16.95735,-54.62403c-1.87598,-11.29264 -1.87598,-16.00097 -1.87598,-18.83333c0.95638,-2.83235 3.75196,-5.66471 5.66472,-6.5843c1.87597,-0.95638 4.70833,-1.91276 7.50391,-1.91276c2.83235,0 10.37304,0 20.74609,0c10.33626,0 22.58528,0 22.58528,0z">
@@ -345,16 +309,12 @@
               </p>
              </div>
              <div class="flex-box-full">
-              <a href="https://www.linkedin.com/in/teddy-lazebnik-b159a88a/" target="_blank" title="">
+              <a href="https://www.linkedin.com/in/teddy-lazebnik-b159a88a/" target="_blank" title="linkedin">
                <img alt="linkedin" src="img/linkedin.png" width="32px;"/>
               </a>
-              <a href="https://scholar.google.com/citations?user=7Kl5lGYAAAAJ" target="_blank" title="">
-               <img alt="google_scholar" src="img/google_scholar.png" width="32px;"/>
+              <a href="https://scholar.google.com/citations?user=7Kl5lGYAAAAJ" target="_blank" title="google scholar">
+               <img alt="google scholar" src="img/google_scholar.png" width="32px;"/>
               </a>
-             </div>
-             <div class="flex-box-full">
-              <p id="VisitCount" style="margin-left: 10px">
-              </p>
              </div>
             </div>
            </div>
@@ -364,6 +324,7 @@
          <div class="col-lg-12 col-md-12 col-sm-12" id="notification-panel">
           </div>
 		  
+         </div>
         </div>
        </div>
       </div>
@@ -371,23 +332,35 @@
     </div>
    </div>
   </div>
+  <!-- cookies message -->
+  <div class="alert alert-dark alert-dismissible cookie-alert" id="cookie-box" role="alert" style="display: none">
+   <strong>
+    Cookies Policy:
+   </strong>
+   this website is using cookies to personalize the expirance for you. By using the website you accept the cooking policy.
+   <button aria-label="Close" class="close" onclick="return closeAlert('cookie-box')" type="button">
+    <span aria-hidden="true">
+     ×
+    </span>
+   </button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+  <script src="js/search.js">
+  </script>
+  <!--<script src="js/chatbot.js"></script> -->
+  <script>
+	  // var bot = new ChatBot();
+  </script>
  </body>
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
-</script>
-<script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
-</script>
-<script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-</script>
-<script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
-</script>
-<!--<script src="js/chatbot.js"></script>-->
-<script src="js/main.js">
-</script>
-<script src="js/search.js">
-</script>
-<script>
- // var bot = new ChatBot("Nice to meet you user! Ask me anything...");
-</script>
