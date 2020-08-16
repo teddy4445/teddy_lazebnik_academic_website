@@ -12,6 +12,7 @@ var playBtn;
 
 runStarted = false;
 var showFinishAlert = true;
+var is_lockdown = true;
 
 // graphs
 stateGraphData = []
@@ -42,6 +43,12 @@ let TIME_IN_DAY = 24;
 let time_at_home = 12;
 let time_not_at_home = TIME_IN_DAY - time_at_home;
 
+// lockdown percent
+let go_to_work_percent = 100;
+let go_to_school_percent = 100;
+let go_to_work_percent_step_size = 0;
+let go_to_school_percent_step_size = 0;
+
 // remember for r_0 calc
 let last_stats = null;
 let r_zeros = [];
@@ -55,8 +62,13 @@ var adult_step_size;
 var children_pop_size;
 var child_step_size;
 
+// multi run vaccine 
 let vaccine_data = [];
 let vaccine_max_infected_data = [];
+
+// multi run lockdown 
+let lockdown_data = [];
+let lockdown_max_infected_data = [];
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
@@ -126,7 +138,7 @@ function draw()
 				
 				runStarted = false;
 			}
-			else
+			else if (!is_lockdown)
 			{
 				if (adult_recover <= adult_pop_size)
 				{
@@ -167,6 +179,55 @@ function draw()
 					// reset for next run
 					vaccine_max_infected_data = [];
 					vaccine_data = [];
+					
+					// make back as in the start
+					showFinishAlert = true;
+					document.getElementById("playBtn").style.display = "";
+					document.getElementById("pauseBtn").style.display = "";
+			
+					// reset view
+					document.getElementById("main").style.display = "none"; // close the init form
+					document.getElementById("init_form").style.display = ""; // show the main window
+					
+					runStarted = false;
+				}
+			}
+			else
+			{
+				if (go_to_work_percent >= 0)
+				{
+					if (go_to_school_percent >= 0)
+					{
+						
+						population = new Population(adult_pop_size,
+													adult_pop_size - 1,
+													1,
+													0,
+													children_pop_size, 
+													children_pop_size, 
+													0,
+													0);
+											
+						console.log("Lockdown: Work (%) = " + go_to_work_percent + ", School (%) = " + go_to_school_percent);
+						go_to_school_percent -= go_to_school_percent_step_size;
+						lockdown_data.push([go_to_work_percent, go_to_school_percent, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+						lockdown_max_infected_data.push([go_to_work_percent, go_to_school_percent, (100 * max(infected) / population.size()).toFixed(3)]);
+					}
+					else
+					{
+						go_to_school_percent = 100;
+						go_to_work_percent -= go_to_work_percent_step_size; 
+					}
+				}
+				else
+				{
+					// download results
+					downloadasTextFile("lockdown_max_infected_data.csv", prepareGraphDataToCSV(lockdown_max_infected_data, false));
+					downloadasTextFile("lockdown_data.csv", prepareGraphDataToCSV(lockdown_data, false));
+					
+					// reset for next run
+					lockdown_max_infected_data = [];
+					lockdown_data = [];
 					
 					// make back as in the start
 					showFinishAlert = true;

@@ -23,16 +23,16 @@
    <div class="row center spacer">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
      <h1 class="center head">
-      Two Age-Group Coronavirus Stochastic Simulator
+		Two Age-Group Coronavirus Stochastic Simulator
      </h1>
      <h2 class="center title">
-      The following simulator shows coronavirus spreading over a population based on stochastic SIR model with two age-groups
+		The following simulator shows coronavirus spreading over a population based on stochastic SIR model with two age-groups
      </h2>
     </div>
    </div>
-	   <div class="row spacer" id="init_form">
-		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		 <form action="return false;" method="get">
+   <div class="row spacer" id="init_form">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<form action="return false;" method="get">
 		  <div class="row">
 		  </div>
 		  
@@ -112,7 +112,7 @@
 			 <label for="a_c_meeting_count" title="Adult - Child Average Meeting Events per Hour">
 			  Adult - Child Average Meeting Events per Hour
 			 </label>
-			 <input class="form-control" id="a_c_meeting_count" min="0" placeholder="Adult - Child Average Meeting Events per Hour" required="" type="number" value="2"/>
+			 <input class="form-control" id="a_c_meeting_count" min="0" placeholder="Adult - Child Average Meeting Events per Hour" required="" type="number" value="1"/>
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -120,7 +120,7 @@
 			 <label for="a_a_meeting_count" title="Adult - Adult Average Meeting Events per Hour">
 			  Adult - Adult Average Meeting Events per Hour
 			 </label>
-			 <input class="form-control" id="a_a_meeting_count" min="0" placeholder="Adult - Adult Average Meeting Events per Hour" required="" type="number" value="2"/>
+			 <input class="form-control" id="a_a_meeting_count" min="0" placeholder="Adult - Adult Average Meeting Events per Hour" required="" type="number" value="1"/>
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -128,7 +128,7 @@
 			 <label for="c_c_meeting_count">
 			  Child - Child Average Meeting Events per Hour
 			 </label>
-			 <input class="form-control" id="c_c_meeting_count" min="0" placeholder="Child - Child Average Meeting Events per Hour" required="" type="number" value="2" />
+			 <input class="form-control" id="c_c_meeting_count" min="0" placeholder="Child - Child Average Meeting Events per Hour" required="" type="number" value="1" />
 			</div>
 		   </div>
 		  </div>
@@ -196,7 +196,7 @@
 			 <label for="infected_to_recover_time" title="Adult Infected To Recovered">
 			  Adult Infected To Recovered Duration (hours)
 			 </label>
-			 <input class="form-control" id="infected_to_recover_time_adult" max="999" min="0" placeholder="Adult Infected To Recovered in hours" required="" type="number" value="168"/>
+			 <input class="form-control" id="infected_to_recover_time_adult" max="999" min="0" placeholder="Adult Infected To Recovered in hours" required="" type="number" value="336"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -259,6 +259,33 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="adult_recover_step">
+			  Percent of adults go to work (step size)
+			 </label>
+			 <input class="form-control" id="go_to_work_percent_step_size" min="1" max="100" placeholder="Percent of adults go to work (step size)" required="" type="number" value="10"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="children_recover_step">
+			  Percent of children go to school (step size)
+			 </label>
+			 <input class="form-control" id="go_to_school_percent_step_size" min="1"  max="100" placeholder="Percent of children go to school (step size)" required="" type="number" value="10" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<button class="btn btn-danger btn-lg" onclick="return startLockDownSimulation(true)" style="width: 100%; margin-top: 10px;">
+			 Run Simulation (Lockdown Analysis)
+			</button>
+		   </div>
+		  </div>
+		  
+		  <div class="row" style="margin-top: 20px;">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="adult_recover_step">
 			  Adult Recover Step Size
 			 </label>
 			 <input class="form-control" id="adult_recover_step" min="1" placeholder="Adult Recover Step Size" required="" type="number" value="72"/>
@@ -277,7 +304,7 @@
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<button class="btn btn-warning btn-lg" onclick="return startVaccineSimulation(true)" style="width: 100%; margin-top: 10px;">
-			 Run Vaccine Analysis Simulation
+			 Run Simulation (Vaccine Analysis)
 			</button>
 		   </div>
 		  </div>

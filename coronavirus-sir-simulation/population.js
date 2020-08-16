@@ -68,6 +68,16 @@ class Population
 		return this.members.length;
 	}
 	
+	size_adults()
+	{
+		return this.a_s + this.a_i + this.a_r + this.a_d;
+	}
+	
+	size_children()
+	{
+		return this.c_s + this.c_i + this.c_r + this.c_d;
+	}
+	
 	clear()
 	{
 		this.members = [];
@@ -92,6 +102,9 @@ class Population
 	
 	_move_population_around(time_at_home)
 	{
+		var adult_pass_percent = go_to_work_percent / 100;
+		var children_pass_percent = go_to_school_percent / 100;
+		
 		// if end of time home, go to work and school
 		if (this.timeOfDay == time_at_home)
 		{
@@ -100,11 +113,17 @@ class Population
 			{
 				if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].age_group == ADULT)
 				{
-					this.members[memberIndex].location = LOC_WORK;
+					if (Math.random() < adult_pass_percent)
+					{
+						this.members[memberIndex].location = LOC_WORK;
+					}
 				}
 				else if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].age_group == CHILD)
 				{
-					this.members[memberIndex].location = LOC_SCHOOL;
+					if (Math.random() < children_pass_percent)
+					{
+						this.members[memberIndex].location = LOC_SCHOOL;
+					}
 				}
 			}
 		}

@@ -85,39 +85,79 @@ function playGame()
 */
 function startVaccineSimulation()
 {
+	is_lockdown = false; 
+	
+	adult_recover = 0;
+	child_recover = 0;
+	
+	return multi_run_perform();
+}
+
+/*
+	This function starts the simulation multiple time such that it change the amount of adults and children change there location
+*/
+function startLockDownSimulation()
+{
+	is_lockdown = true;
+	
+	go_to_work_percent_step_size = parseInt(document.getElementById("go_to_work_percent_step_size").value);
+	go_to_school_percent_step_size = parseInt(document.getElementById("go_to_school_percent_step_size").value);
+	
+	return multi_run_perform();
+}
+
+
+/* multi runs functions helpers */
+
+function multi_run_perform()
+{
+	multi_run_settings();
+	
+	// get the data needed to run
+	load_pop_size();
+	
+	// run overall simulation
+	startSimulation(false);
+	
+	reset_pop_size();
+	
+	return false;
+}
+
+function multi_run_settings()
+{
 	// don't show action buttons
 	document.getElementById("playBtn").style.display = "none";
 	document.getElementById("pauseBtn").style.display = "none";
 	// avoid last alert
 	showFinishAlert = false;
 	
-	// run simulation and change recovered each time
-	adult_recover = 0;
-	child_recover = 0;
-	
-	// get the data needed to run
-	adult_pop_size = parseInt(document.getElementById("adult_pop_size").value);
-	adult_step_size = parseInt(document.getElementById("adult_recover_step").value);
-	children_pop_size = parseInt(document.getElementById("children_pop_size").value);
-	child_step_size = parseInt(document.getElementById("children_recover_step").value);
-	
 	// change the save ratio and and fps
 	document.getElementById("fps").value = 48;
 	document.getElementById("graph_samples").value = 6;
-	
-	// run overall simulation
-	startSimulation(false);
-	
+}
+
+function reset_pop_size()
+{
 	// reset the original sizes
 	document.getElementById("susceptible_adults_percent").value = adult_pop_size - 1;
 	document.getElementById("infected_adults_percent").value = 1;
 	document.getElementById("recover_adults_percent").value = 0;
-	document.getElementById("susceptible_children_percent").value = children_pop_size - 1;
-	document.getElementById("infected_children_percent").value = 1;
+	document.getElementById("susceptible_children_percent").value = children_pop_size;
+	document.getElementById("infected_children_percent").value = 0;
 	document.getElementById("recover_children_percent").value = 0;
-	
-	return false;
 }
+
+function load_pop_size()
+{
+	adult_pop_size = parseInt(document.getElementById("adult_pop_size").value);
+	adult_step_size = parseInt(document.getElementById("adult_recover_step").value);
+	children_pop_size = parseInt(document.getElementById("children_pop_size").value);
+	child_step_size = parseInt(document.getElementById("children_recover_step").value);
+}
+
+/* end - multi runs functions helpers */
+
 
 // start the simulation and show it, hide the form 
 function startSimulation(dramatic)
@@ -144,6 +184,8 @@ function startSimulation(dramatic)
 	c_c_meeting_count = parseInt(document.getElementById("c_c_meeting_count").value) / 24;
 	time_at_home = parseInt(document.getElementById("time_at_home").value);
 	time_not_at_home = parseInt(document.getElementById("time_not_at_home").value);
+	go_to_work_percent = 100;
+	go_to_school_percent = 100;
 	
 	fps = parseInt(document.getElementById("fps").value);
 	graph_sample = parseInt(document.getElementById("graph_samples").value);
