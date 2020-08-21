@@ -83,11 +83,11 @@ class Population
 		this.members = [];
 	}
 	
-	run(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children, time_at_home)
+	run(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children, time_at_home_c, time_at_home_a)
 	{
 		
 		// 1. stohasticly move them around (with day - night circle)
-		this._move_population_around(time_at_home);
+		this._move_population_around(time_at_home_c, time_at_home_a);
 		
 		// 2. make tranforms regarding to -> location, age, state
 		this._make_trasforms(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children)
@@ -100,13 +100,13 @@ class Population
 		}
 	}
 	
-	_move_population_around(time_at_home)
+	_move_population_around(time_at_home_c, time_at_home_a)
 	{
 		var adult_pass_percent = go_to_work_percent / 100;
 		var children_pass_percent = go_to_school_percent / 100;
 		
 		// if end of time home, go to work and school
-		if (this.timeOfDay == time_at_home)
+		if (this.timeOfDay == time_at_home_a)
 		{
 			// stohasticly move them to work \ school (with day - night circle)
 			for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
@@ -118,7 +118,15 @@ class Population
 						this.members[memberIndex].location = LOC_WORK;
 					}
 				}
-				else if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].age_group == CHILD)
+			}
+		}
+		// if end of time home, go to work and school
+		if (this.timeOfDay == time_at_home_c)
+		{
+			// stohasticly move them to work \ school (with day - night circle)
+			for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
+			{
+				if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].age_group == CHILD)
 				{
 					if (Math.random() < children_pass_percent)
 					{

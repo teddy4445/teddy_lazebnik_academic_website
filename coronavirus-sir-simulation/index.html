@@ -175,17 +175,36 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_at_home" title="Time At Home">
-			  Time At Home
+			  Time At Home (adults)
 			 </label>
-			 <input class="form-control" id="time_at_home" max="24" min="0" placeholder="Time At Home in hours" required="" type="number" value="12"/>
+			 <input class="form-control" id="time_at_home_a" max="24" min="0" placeholder="Time At Home in hours" required="" type="number" value="12"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_not_at_home">
-			  Time At Work \ School
+			  Time At Work (adults)
 			 </label>
-			 <input class="form-control" id="time_not_at_home" max="24" min="0" placeholder="Time At Work \ School in hours" required="" type="number" value="12" disabled />
+			 <input class="form-control" id="time_not_at_home_a" max="24" min="0" placeholder="Time At Work \ School in hours" required="" type="number" value="12" disabled />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="time_at_home" title="Time At Home">
+			  Time At Home (children)
+			 </label>
+			 <input class="form-control" id="time_at_home_c" max="24" min="0" placeholder="Time At Home in hours" required="" type="number" value="12"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="time_not_at_home">
+			  Time At School (children)
+			 </label>
+			 <input class="form-control" id="time_not_at_home_c" max="24" min="0" placeholder="Time At Work \ School in hours" required="" type="number" value="12" disabled />
 			</div>
 		   </div>
 		  </div>
@@ -251,6 +270,14 @@
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<button class="btn btn-primary btn-lg" onclick="return startSimulation(true)" style="width: 100%; margin-top: 10px;">
 			 Run Simulation
+			</button>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<button class="btn btn-info btn-lg" onclick="return startWorkSchoolTimeSimulation(true)" style="width: 100%; margin-top: 10px;">
+			 Run Simulation (Work\School Duration Analysis)
 			</button>
 		   </div>
 		  </div>

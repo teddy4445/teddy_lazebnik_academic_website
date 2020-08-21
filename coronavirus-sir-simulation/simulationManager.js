@@ -85,7 +85,9 @@ function playGame()
 */
 function startVaccineSimulation()
 {
+	is_vaccine = true; 
 	is_lockdown = false; 
+	is_time_analysis = false;
 	
 	adult_recover = 0;
 	child_recover = 0;
@@ -98,10 +100,27 @@ function startVaccineSimulation()
 */
 function startLockDownSimulation()
 {
+	is_vaccine = false; 
 	is_lockdown = true;
+	is_time_analysis = false;
 	
 	go_to_work_percent_step_size = parseInt(document.getElementById("go_to_work_percent_step_size").value);
 	go_to_school_percent_step_size = parseInt(document.getElementById("go_to_school_percent_step_size").value);
+	
+	return multi_run_perform();
+}
+
+/*
+	This function starts the simulation multiple time such that it change the time adults and children change there location
+*/
+function startWorkSchoolTimeSimulation()
+{
+	is_vaccine = false;
+	is_lockdown = false;
+	is_time_analysis = true;
+	
+	time_at_home_a = 0;
+	time_at_home_c = 0;
 	
 	return multi_run_perform();
 }
@@ -182,8 +201,13 @@ function startSimulation(dramatic)
 	a_c_meeting_count = parseInt(document.getElementById("a_c_meeting_count").value) / 24;
 	a_a_meeting_count = parseInt(document.getElementById("a_a_meeting_count").value) / 24;
 	c_c_meeting_count = parseInt(document.getElementById("c_c_meeting_count").value) / 24;
-	time_at_home = parseInt(document.getElementById("time_at_home").value);
-	time_not_at_home = parseInt(document.getElementById("time_not_at_home").value);
+	time_not_at_home_a = parseInt(document.getElementById("time_not_at_home_a").value);
+	time_not_at_home_c = parseInt(document.getElementById("time_not_at_home_c").value);
+	if (!(time_at_home_a == 0 && time_at_home_c == 0))
+	{
+		time_at_home_c = parseInt(document.getElementById("time_at_home_c").value);
+		time_at_home_a = parseInt(document.getElementById("time_at_home_a").value);
+	}
 	go_to_work_percent = 100;
 	go_to_school_percent = 100;
 	
