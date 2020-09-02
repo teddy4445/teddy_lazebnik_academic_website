@@ -203,6 +203,8 @@ function startSimulation(dramatic)
 	c_c_meeting_count = parseInt(document.getElementById("c_c_meeting_count").value) / 24;
 	time_not_at_home_a = parseInt(document.getElementById("time_not_at_home_a").value);
 	time_not_at_home_c = parseInt(document.getElementById("time_not_at_home_c").value);
+	go_to_school_k_days = parseInt(document.getElementById("go_to_school_k_days").value);
+	go_to_work_k_days = parseInt(document.getElementById("go_to_work_k_days").value);
 	if (!(time_at_home_a == 0 && time_at_home_c == 0))
 	{
 		time_at_home_c = parseInt(document.getElementById("time_at_home_c").value);

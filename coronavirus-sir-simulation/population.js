@@ -4,6 +4,7 @@ class Population
 	{
 		this.members = [];
 		this.timeOfDay = 0;
+		this.days = 0;
 		
 		// find if percent or size
 		var a_s;
@@ -83,11 +84,11 @@ class Population
 		this.members = [];
 	}
 	
-	run(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children, time_at_home_c, time_at_home_a)
+	run(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children, time_at_home_c, time_at_home_a, go_to_school_k_days, go_to_work_k_days)
 	{
 		
 		// 1. stohasticly move them around (with day - night circle)
-		this._move_population_around(time_at_home_c, time_at_home_a);
+		this._move_population_around(time_at_home_c, time_at_home_a, go_to_school_k_days, go_to_work_k_days);
 		
 		// 2. make tranforms regarding to -> location, age, state
 		this._make_trasforms(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children)
@@ -97,16 +98,17 @@ class Population
 		if (this.timeOfDay == TIME_IN_DAY)
 		{
 			this.timeOfDay = 0;
+			this.days += 1;
 		}
 	}
 	
-	_move_population_around(time_at_home_c, time_at_home_a)
+	_move_population_around(time_at_home_c, time_at_home_a, go_to_school_k_days, go_to_work_k_days)
 	{
 		var adult_pass_percent = go_to_work_percent / 100;
 		var children_pass_percent = go_to_school_percent / 100;
 		
 		// if end of time home, go to work and school
-		if (this.timeOfDay == time_at_home_a)
+		if (this.timeOfDay == time_at_home_a && (this.days % go_to_work_k_days) == 0)
 		{
 			// stohasticly move them to work \ school (with day - night circle)
 			for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
@@ -121,7 +123,7 @@ class Population
 			}
 		}
 		// if end of time home, go to work and school
-		if (this.timeOfDay == time_at_home_c)
+		if (this.timeOfDay == time_at_home_c && (this.days % go_to_school_k_days) == 0)
 		{
 			// stohasticly move them to work \ school (with day - night circle)
 			for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)

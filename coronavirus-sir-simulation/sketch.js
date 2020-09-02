@@ -36,6 +36,10 @@ let c_c_meeting_count = 0;
 let prc = 0;
 let pra = 0;
 
+// each k days go to out of house
+let go_to_school_k_days = 1;
+let go_to_work_k_days = 1;
+
 let fps = 6;
 let graph_sample = 24;
 
@@ -144,6 +148,9 @@ function draw()
 			if (showFinishAlert)
 			{
 				downloadasTextFile("corona_sir_two_age_stocasic_graph_data.csv", prepareGraphDataToCSV(stateGraphData));
+				downloadasTextFile("corona_sir_two_age_summery.csv", 
+									"Average R_0 = " + (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3) +
+									", with max infected = " + (100 * max(infected) / population.size()).toFixed(3) + "%");
 				alert("Simulation over");	
 			
 				// reset view
@@ -325,7 +332,10 @@ function draw()
 	}
 	
 	// make a step on all the rockets
-	population.run(a_a_t_c, a_c_t_c, c_a_t_c, c_c_t_c, infected_to_recover_time_adult, infected_to_recover_time_children, time_at_home_c, time_at_home_a);
+	population.run(a_a_t_c, a_c_t_c, c_a_t_c, c_c_t_c,
+					infected_to_recover_time_adult, infected_to_recover_time_children, 
+					time_at_home_c, time_at_home_a, 
+					go_to_school_k_days, go_to_work_k_days);
 	
 	// Displays stats on the screen
 	var age_status_location_dist = population.countStatusLocationDestrebution();
