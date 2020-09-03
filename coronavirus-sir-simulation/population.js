@@ -88,7 +88,10 @@ class Population
 	{
 		
 		// 1. stohasticly move them around (with day - night circle)
-		this._move_population_around(time_at_home_c, time_at_home_a, go_to_school_k_days, go_to_work_k_days);
+		if (!((this.days % 6 == 0 || this.days % 7 == 0) && rest_in_shabat))
+		{
+			this._move_population_around(time_at_home_c, time_at_home_a, go_to_school_k_days, go_to_work_k_days);	
+		}
 		
 		// 2. make tranforms regarding to -> location, age, state
 		this._make_trasforms(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children)

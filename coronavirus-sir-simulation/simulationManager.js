@@ -213,6 +213,10 @@ function startSimulation(dramatic)
 	go_to_work_percent = 100;
 	go_to_school_percent = 100;
 	
+	
+	var shabat_element = document.getElementById("rest_in_shabat");
+	rest_in_shabat = (shabat_element.options[shabat_element.selectedIndex].value == "1");
+	
 	fps = parseInt(document.getElementById("fps").value);
 	graph_sample = parseInt(document.getElementById("graph_samples").value);
 	
