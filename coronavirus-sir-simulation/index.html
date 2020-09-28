@@ -250,25 +250,6 @@
 		  <div class="row">
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="fps" title="Frames Per Second">
-			  Frames Per Second
-			 </label>
-			 <input class="form-control" id="fps" max="48" min="0" placeholder="Frames Per Second" required="" type="number" value="3"/>
-			</div>
-		   </div>
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="graph_samples">
-			  Graph Sample Each Steps
-			 </label>
-			 <input class="form-control" id="graph_samples" max="72" min="1" placeholder="Graph Sample Each Steps" required="" type="number" value="24" />
-			</div>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
 			 <label for="go_to_school_k_days">
 			  Each K days Children Go to School (K = )
 			 </label>
@@ -286,12 +267,63 @@
 		  </div>
 		  
 		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="fps" title="Frames Per Second">
+			  <b>Frames Per Second</b>
+			 </label>
+			 <input class="form-control" id="fps" max="48" min="0" placeholder="Frames Per Second" required="" type="number" value="3"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="graph_samples">
+			  </b>Graph Sample Each Steps</b>
+			 </label>
+			 <input class="form-control" id="graph_samples" max="72" min="1" placeholder="Graph Sample Each Steps" required="" type="number" value="24" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="fps" title="Frames Per Second">
+			  <b>Rest In Shabat?</b>
+			 </label>
+			 <select id="rest_in_shabat"  class="form-control">
+				<option value="0"> No </option>
+				<option value="1"> Yes </option>
+			 </select>
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<button class="btn btn-primary btn-lg" onclick="return startSimulation(true)" style="width: 100%; margin-top: 10px;">
 			 Run Simulation
 			</button>
 		   </div>
 		  </div>
+		  
+		  <!--
+		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="fps" title="Frames Per Second">
+			  <b>Repeat Times</b>
+			 </label>
+			 <input class="form-control" id="fps" max="100" min="2" placeholder="How many times repeat simulation with these values and return averge results" required="" type="number" value="10"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<button class="btn btn-primary btn-lg" onclick="return startSimulationManyTimes(true)" style="width: 100%; margin-top: 10px;">
+			 Run Simulation (multiple times)
+			</button>
+		   </div>
+		  </div>
+		  -->
 		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

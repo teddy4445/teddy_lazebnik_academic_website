@@ -39,6 +39,7 @@ let pra = 0;
 // each k days go to out of house
 let go_to_school_k_days = 1;
 let go_to_work_k_days = 1;
+let rest_in_shabat = 1;
 
 let fps = 6;
 let graph_sample = 24;
