@@ -70,5 +70,5 @@
       "description":"A  GUI allowing to load lists of source and target words (from associative experiments) and build similarity groups.",
       "pageLink":"https://teddylazebnik.info/assosiative_words_grouper.html",
       "tags":["JS"]
-   },
+   }
 ]
