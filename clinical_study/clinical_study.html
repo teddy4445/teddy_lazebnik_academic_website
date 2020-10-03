@@ -194,18 +194,18 @@
 	function generate_form(name, form_id, coloums)
 	{
 		var panel = document.getElementById("panel");
-		panel.innerHTML += '<h3>' + name + ' prediction</h3><div class="card"><div class="card-body"><div id="' + form_id + '"></div></div></div><br><br>';
+		panel.innerHTML += '<h3>' + name + ' prediction</h3><div class="card"><div class="card-body"><div id="' + form_id + '" class="row"></div></div></div><br><br>';
 		panel_form = document.getElementById(form_id);
 		var form_html = "";
 		for (var i = 0; i < coloums.length; i++)
 		{
-			form_html += '<div class="form-group">';
+			form_html += '<div class="col-lg-4 col-md-4 col-sm-12"><div class="form-group">';
 			form_html += '<label id="label_' + name + '_' + coloums[i] + '" for="' + coloums[i] + '">' + coloums[i] + ' </label>';
 			form_html += '<input type="text" class="form-control" id="' + name + '_' + coloums[i] + '" aria-describedby="' + coloums[i] + '" placeholder="' + coloums[i] + '">';
-			form_html += '</div>';
+			form_html += '</div></div>';
 		}
-		form_html += '<br><button type="submit" class="cool-btn cool-btn-gray" id="predict_btn_' + name + '" onclick="return run_prediction(\'' + name + '\', ' + list_to_str(coloums) + ', predict_' + name + ');"> Predict </button>';
-		form_html += '<br><br><p id="answer_' + name + '"> </p>';
+		form_html += '<br><div class="col-lg-2 col-md-2 col-sm-12"><button type="submit" style="margin: 10px 10px;" class="cool-btn cool-btn-gray" id="predict_btn_' + name + '" onclick="return run_prediction(\'' + name + '\', ' + list_to_str(coloums) + ', predict_' + name + ');"> Predict </button></div>';
+		form_html += '<br><br><div class="col-lg-10 col-md-10 col-sm-12"><p id="answer_' + name + '"> </p></div>';
 		panel_form.innerHTML += form_html;
 	}
 	
@@ -245,7 +245,7 @@
 		if (!is_broken)
 		{
 			var predict_with_conf = sat(values);
-			document.getElementById("answer_" + name).innerHTML = "<h3>The prediction is:<b>" + predict_with_conf[0] + " with (" + predict_with_conf[1][0] + "% confidence)</b>.<br><br>Because: " +  predict_with_conf[1][1] + "</h3>";
+			document.getElementById("answer_" + name).innerHTML = "<h3>The prediction is: <b>" + predict_with_conf[0] + " with (" + predict_with_conf[1][0] + "% confidence)</b>.<br><br>Because: <br>" +  predict_with_conf[1][1].replaceAll("and", "and<br>") + "</h3>";
 		}
 		else
 		{
