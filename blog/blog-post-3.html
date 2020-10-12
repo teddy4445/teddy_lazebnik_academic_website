@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Teddy Lazebnik - 
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="The course page of Numerical Analysis (2020a) by Teddy Lazebnik" name="description"/>
+  <meta content="Teddy Lazebnik" name="author"/>
+  <meta content="keywords" content="lazebnik, לזנבניק, teddy lazebnik" />
+  <link href="../img/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!-- css -->
+  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
+  <link href="../css/teddy_style.css" rel="stylesheet"/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-154895667-1');
+  </script>
+  <!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
+  <script>
+   (function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:1812929,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+ </head>
+ <body>
+  <div id="progressBar">
+  </div>
+  <div id="ScrollPath">
+  </div>
+  <div class="row">
+   <div class="col-lg-12 col-md-12 col-sm-12 mobile-space">
+    <nav class="navbar navbar-expand-lg">
+     <a class="navbar-brand" href="../index.html" id="logo" title="Theodore (Teddy) Lazebnik">
+      Theodore (Teddy) Lazebnik
+     </a>
+     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+      <img alt="menu" class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+       <li class="nav-item form-inline mobile" style="padding-bottom: 10px;">
+        <input aria-label="Search" class="form-control input-search" id="search-data" placeholder="Search" type="search"/>
+        <div class="input-group-append">
+         <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
+          <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
+         </button>
+        </div>
+       </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/index.html" title="home page">
+         Home
+        </a>
+       </li>
+       <li class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Research">
+         Research
+        </a>
+        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+         <a class="dropdown-item" href="/publications.html" title="Academic Publications">
+          Academic Publications
+         </a>
+         <a class="dropdown-item" href="/students.html" title="Research Students">
+          Research Students
+         </a>
+        </div>
+       </li>
+       <li class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Teaching">
+         Teaching
+        </a>
+        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+         <h4 class="dropdown-item">
+          Bar Ilan University
+         </h4>
+         <a class="dropdown-item" href="/courses/advanced-programming-one.html" title="Advanced Programming 1">
+          Advanced Programming 1
+         </a>
+         <a class="dropdown-item" href="/courses/advanced-programming-two.html" title="Advanced Programming 2">
+          Advanced Programming 2
+         </a>
+         <div class="dropdown-divider">
+         </div>
+         <a class="dropdown-item" href="/teaching.html" title="teaching">
+          All classes
+         </a>
+        </div>
+       </li>
+       <li class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Projects">
+         Projects
+        </a>
+        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+         <a class="dropdown-item" href="/opensource.html" title="Open Resources">
+          Open Source 
+         </a>
+         <a class="dropdown-item" href="/technological-blog.html" title="Technological Blog">
+          Technological Blog
+         </a>
+        </div>
+       </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0 desktop">
+       <input aria-label="Search" class="form-control input-search" id="search-data-2" placeholder="Search" type="search"/>
+       <div class="input-group-append">
+        <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
+         <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
+        </button>
+       </div>
+      </div>
+     </div>
+    </nav>
+    <div class="body">
+     <div class="fluid-container">
+      <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="info">
+         <div class="alert alert-danger alert-dismissible fade show" id="error-search" role="alert" style="display: none">
+          <strong>
+           Page Not found
+          </strong>
+          , I am still working on our inner website search engine. Try again or use the navigation bar.
+          <button aria-label="Close" class="close" onclick="return closeSearchAlert()" type="button">
+           <span aria-hidden="true">
+            ×
+           </span>
+          </button>
+         </div>
+		 <img class="w-100" src="https://media-exp1.licdn.com/dms/image/C4E12AQGPF214LjfI2A/article-cover_image-shrink_720_1280/0?e=1608163200&v=beta&t=CaX8Eteb1oNAJ-BFAO94Hjo_03bCxk_lOdxAVJSmz-o"> 
+         
+         <h1 style="margin-top: 20px;">
+          3 techniques for a better quality of tagged data for ML tasks.
+         </h1>
+		 <p>
+			At the age of data-driven algorithms, business, personal life, and much more we are seeing each day how machines "learn" to perform more complex which were out of reach with traditional algorithms. We see businesses optimize their sales, customer loyalty, and employee happiness by investing in analyzing the data we are able to collect in a cheap and fast way nowadays.
+		 </p>
+		 <p>
+			Indeed, Peter Sondergaard said (and I quote): "Information is the oil of the 21st century, and analytics is the combustion engine".
+		 </p>
+		 <p>
+			Other lead figures as Prof' Dan Ariely - expert of social economics or Geoffrey Moore addressing this phenomenon and its importance.
+		 </p>
+		 <p>
+			But, (you anticipate that there is going to be a "but" any time soon) the enormous amount of data we have is, most of the time, unordered, not specific and the worst part - not correct. This is indeed a shameful situation as it makes the developing of new algorithms and business upon data-driven approach much harder. Let me clear things up with some example...
+		 </p>
+		 <p>
+			You are a restaurant (the good type of course) trying to find if its clients are enjoying the new menu better then the old one. You decide to do a test and provide to the clients the food from the old menu and freebies of the new one just to hear their opinion [where did you find this star as a marketing manager? amazing idea!]. But there is a small problem, your clients are polite (who thought politeness is a bad thing...) and therefore score your new dishes always high cause they got them for free and you were nice so they don't want to harm your feelings. The result? a data that does not represent the truth at all; such unfortunate after all the investment in them.
+		 </p>
+		 <p>
+			So, you may ask, what can we do to deal with these problems - we still wish to use data-driven algorithms. Well, there is no easy answer but I will present 3 techniques for improving the quality of your data.
+		 </p>
+		 <h5>
+			Compare other's work to yours
+		 </h5>
+		 <p>
+			If you are handling a Vision or NLP problem it is classic to start by tagging by yourself [and we trust your tagging, after all - you know what you are doing ;)] when receiving tagging from other taggers. You wish to insert in there work, examples you already tagged and allow to tag them as well. This way, you can estimate the quality of there work and if it's done randomly, you can assume the same quality to the other tags. This allows not only to know the quality of your but by repeat the task with the same tagger to find where is the difficulties in the tagging process and then improve it.
+		 </p>
+		 <h5>
+			Cross validate with few taggers
+		 </h5>
+		 <p>
+			This is both similar and different from the first techniques as one can take one of two ways using this technique. The first one is to give a few taggers the same examples and by combining their results (majority vote, average, sum, union, etc.) to ensure the quality it better. The problem is that the technique becomes expansive is one wish to improve the quality by giving the same example to more and more taggers. The second option is to give some percent (10% is a good rule of thumb) to two taggers (let's call them A, B) and another same percent from B's set of examples to another tagger (call them B, C). Do it to a list of taggers and validate only the first one to get a good understanding of the quality of the taggers on one hand and decrease the double-checking on the other hand.
+		 </p>
+		 <h5>
+			Use the tagging process to improve the tagging process
+		 </h5>
+		 <p>
+			Like other systems improve by user's feedback, this process is not different. If you using (and you should) your own tagging software that your taggers us, you can not only receive the tagged data but a meta-data of the tagging process as well. Using this data, it is possible to see why and when your taggers get wrong or what takes them more time and makes the process more expensive. This is a similar idea of how improvement algorithms but finding the edge-cases they misbehave at; but this time with human taggers.
+		 </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+</script>
+<script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+</script>
+<script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+</script>
+<script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+</script>
+<script src="../js/main.js">
+</script>
+<script src="../js/search.js">
+</script>
