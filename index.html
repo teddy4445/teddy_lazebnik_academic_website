@@ -1,521 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Theodore (Teddy) Lazebnik - Computer Science Researcher
-  </title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Theodore (Teddy) Lazebnik - Mathematics and Computer Science researcher focusing on medical nanorobotics, PDE stabalization and numerical solutions" name="description"/>
-  <meta content="keywords" content="lazebnik, לזנבניק, teddy lazebnik, medical nanorobotics" />
-  <meta content="Teddy Lazebnik" name="author"/>
-  <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
-  <!-- css -->
-  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
-  <link href="css/teddy_style.css" rel="stylesheet"/>
-  <script type="application/ld+json">
-   {
-		  "@context": "http://schema.org",
-		  "@type": "Person",
-		  "name": "Theodore (Teddy) Lazebnik",
-		  "jobTitle": "Algorithm Researcher",
-		  "gender": "https://schema.org/Male",
-		  "url": "http://teddylazebnik.info",
-		  "description": "Mathematics and Computer Science researcher focusing on medical nanorobotics, PDE stabilization and numerical solutions.",
-		  "givenName": "Teddy",
-		  "familyName": "Lazebnik",
-		  "honorificPrefix": "Dr.",
-		  "nationality": "Israeli",
-		  "image": "http://teddylazebnik.info/img/teddy.png",
-		  "birthDate": "1997",
-		  "worksFor": {
-			"@type": "Organization",
-			"name": "Bar Ilan University",
-			"url": "https://www1.biu.ac.il/",
-		  },
-		  "spouse": "Elizaveta Lazebnik",
-		  "memberOf": "http://dnc-algo.com/",
-		  "alumniOf": {
-			"@type": "Organization",
-			"name": "Bar Ilan University",
-			"url": "https://www1.biu.ac.il/",
-		  },
-		  "seeks": "Cool math and cs projects",
-		  "telephone": "(972) 545524589",
-		}
-  </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1">
-  </script>
-  <script>
-   window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-154895667-1');
-  </script>
-  <!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
-  <script>
-   (function(h,o,t,j,a,r){
-			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-			h._hjSettings={hjid:1812929,hjsv:6};
-			a=o.getElementsByTagName('head')[0];
-			r=o.createElement('script');r.async=1;
-			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-			a.appendChild(r);
-		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
+<head>
+	<!-- technical meta -->
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<!-- end - technical meta -->
+	
+	<!-- seo -->
+	<title> Theodore (Teddy) Lazebnik Academic Website </title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<meta content="Theodore (Teddy) Lazebnik - Mathematics and Computer Science researcher focusing on medical nanorobotics, PDE stabalization and numerical solutions" name="description"/>
+	<meta content="keywords" content="lazebnik, לזנבניק, teddy lazebnik, medical nanorobotics" />
+	<meta content="Teddy Lazebnik" name="author"/>
+	<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+	<!-- end - seo -->
+	
+	<!-- css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link href="/css/main.css" rel="stylesheet">
+	<!-- end - css -->
+	
+	<!-- stracture page data -->
+	  <script type="application/ld+json">
+	   {
+			  "@context": "http://schema.org",
+			  "@type": "Person",
+			  "name": "Theodore (Teddy) Lazebnik",
+			  "jobTitle": "Algorithm Researcher",
+			  "gender": "https://schema.org/Male",
+			  "url": "http://teddylazebnik.info",
+			  "description": "Mathematics and Computer Science researcher focusing on medical nanorobotics, PDE stabilization and numerical solutions.",
+			  "givenName": "Teddy",
+			  "familyName": "Lazebnik",
+			  "honorificPrefix": "Dr.",
+			  "nationality": "Israeli",
+			  "image": "http://teddylazebnik.info/img/teddy.png",
+			  "birthDate": "1997",
+			  "worksFor": {
+				"@type": "Organization",
+				"name": "Bar Ilan University",
+				"url": "https://www1.biu.ac.il/",
+			  },
+			  "spouse": "Elizaveta Lazebnik",
+			  "memberOf": "http://dnc-algo.com/",
+			  "alumniOf": {
+				"@type": "Organization",
+				"name": "Bar Ilan University",
+				"url": "https://www1.biu.ac.il/",
+			  },
+			  "seeks": "Cool math and cs projects",
+			  "telephone": "(972) 545524589",
+			}
+	  </script>
+	<!-- end - stracture page data -->
+	
+	<!-- Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
+	  <script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-154895667-1');
+	  </script>
+  
+	  <!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
+	  <script>
+	   (function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:1812929,hjsv:6};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	  </script>
+	<!-- end - Analytics -->
  </head>
- <body>
-  <div class="row">
-   <div class="col-lg-12 col-md-12 col-sm-12 mobile-space">
-    <nav class="navbar navbar-expand-lg">
-     <a class="navbar-brand" href="index.html" id="logo" title="home page">
-      Theodore (Teddy) Lazebnik
-     </a>
-     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-      <img alt="menu" class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-       <li class="nav-item form-inline mobile" style="padding-bottom: 10px;">
-        <input aria-label="Search" class="form-control input-search" id="search-data" placeholder="Search" type="search"/>
-        <div class="input-group-append">
-         <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
-          <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
-         </button>
-        </div>
-       </li>
-       <li class="nav-item">
-        <a class="nav-link active" href="index.html" title="home page">
-         Home
-        </a>
-       </li>
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Research">
-         Research
-        </a>
-        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <a class="dropdown-item" href="/publications.html" title="Academic Publications">
-          Academic Publications
-         </a>
-         <a class="dropdown-item" href="/students.html" title="Research Students">
-          Research Students
-         </a>
-        </div>
-       </li>
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Teaching">
-         Teaching
-        </a>
-        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <h4 class="dropdown-item">
-          Bar Ilan University
-         </h4>
-         <a class="dropdown-item" href="/courses/advanced-programming-one.html" title="Advanced Programming 1">
-          Advanced Programming 1
-         </a>
-         <a class="dropdown-item" href="/courses/advanced-programming-two.html" title="Advanced Programming 2">
-          Advanced Programming 2
-         </a>
-         <div class="dropdown-divider">
-         </div>
-         <a class="dropdown-item" href="/teaching.html" title="teaching">
-          All classes
-         </a>
-        </div>
-       </li>
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Projects">
-         Projects
-        </a>
-        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <a class="dropdown-item" href="/opensource.html" title="Open Resources">
-          Open Source 
-         </a>
-         <a class="dropdown-item" href="/technological-blog.html" title="Technological Blog">
-          Technological Blog
-         </a>
-        </div>
-       </li>
-      </ul>
-      <div class="form-inline my-2 my-lg-0 desktop">
-       <input aria-label="Search" class="form-control input-search" id="search-data-2" placeholder="Search" type="search"/>
-       <div class="input-group-append">
-        <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
-         <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
-        </button>
-       </div>
-      </div>
-     </div>
-    </nav>
-    <div class="body">
-     <div class="fluid-container">
-      <div class="row">
-       <div id="main_col" class="col-lg-8 col-md-8 col-sm-12" style="padding-right: 5px;">
-        <div class="row">
-         <div class="col-lg-12 col-md-12 col-sm-12">
-          <div class="info">
-           <div class="alert alert-danger alert-dismissible fade show" id="error-search" role="alert" style="display: none">
-            <strong>
-             Page Not found
-            </strong>
-            , I am still working on our inner website search engine. Try again or use the navigation bar.
-            <button aria-label="Close" class="close" onclick="return closeSearchAlert()" type="button">
-             <span aria-hidden="true">
-              ×
-             </span>
-            </button>
-           </div>
-           <h1>
-            Teddy - short bio
-           </h1>
-           <p>
-            I am a Ph.D. student in the
-            <a href="http://u.cs.biu.ac.il/~galk/research/tolkien/" target="_blank" title="Tolkien Project">
-             <b>
-              Tolkien
-             </b>
-            </a>
-            Project, part of the
-            <a href="http://u.cs.biu.ac.il/~galk/maverick/" target="_blank" title="MAVERICK group">
-             MAVERICK
-            </a>
-            research group at the
-            <a href="https://cs.biu.ac.il/en" target="_blank" title="CS dept.">
-             Computer Science Department
-            </a>
-            ,
-            <a href="https://www1.biu.ac.il/" target="_blank" title="BUI">
-             Bar Ilan University
-            </a>
-            ;
-												Supervised by
-            <a href="http://u.cs.biu.ac.il/~galk/" target="_blank" title="Gal A. Kaminka">
-             Prof. Gal A. Kaminka
-            </a>
-            and
-            <a href="https://physics.biu.ac.il/en/node/1384" target="_blank" title="Hana Weitman">
-             Dr. Chana Weitman
-            </a>
-            . Also, a Co-founder (and Algorithm developer) of
-            <a href="http://dnc-algo.com" target="_blank" title="dnc-algo">
-             DnC-algo
-            </a>
-            an algorithmic  outsource company.
-           </p>
-           <p>
-            My research focuses on medical and biological nanoparticles (focusing on nanorobotics). Specifically, modeling a curing protocol based on biophysical interactions of targeted drug delivery nanoparticles in the blood.
-												I am also interested in numerical solving and stabilization of ordinary and partial differential equations (ODE, PDE) systems (especially, ones that originate in a biological setup).
-           </p>
-           <p>
-            Sometimes I am publishing some useful (or just fun) things like
-            <a href="/opensource.html" title="open code">
-             open code
-            </a>
-            and
-            <a href="/technological-blog.html" title="technological blog posts">
-             technical blog posts
-            </a>
-            .
-												I published a few academic papers in
-            <a href="/publications.html#journals" title="journals">
-             journals
-            </a>
-            ,
-            <a href="/publications.html#conferences" title="conferences">
-             conferences
-            </a>
-            , and
-            <a href="/publications.html#abstracts" title="abstracts">
-             abstracts
-            </a>
-            .
-												In between, I am teaching several
-            <a href="/teaching.html" title="teaching">
-             mathematical classes
-            </a>
-            and working with Bc.S. and Mc.S.
-            <a href="/students.html" title="Students">
-             students
-            </a>
-            on their final project.
-           </p>
-           <p>
-            I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics at Bar-Ilan University.
-            <br/>
-            My
-            <a href="files/cv.pdf" style="font-weight: bold" target="_blank" title="teddy's cv">
-             CV
-            </a>
-            can be found here.
-           </p>
-          </div>
-         </div>
-        </div>
-        <div class="row">
-         <div class="col-lg-12 col-md-12 col-sm-12">
-          <h3>
-           Featured Publications
-          </h3>
-         </div>
-          <div class="col-lg-6 col-md-6 col-sm-12">
-           <div class="card">
-            <div class="card-body">
-             <h5 class="card-title">
-               A stable algorithm for numerical matrix exponent
-             </h5>
-             <ol class="nobull card-text">
-              <li>
-               <b>
-                Authors:
-               </b>
-               Teddy Lazebnik and Shlomo Yanetz
-              </li>
-              <li>
-               <b>
-                Journal:
-               </b>
-               Functional Differential Equations
-              </li>
-              <li>
-               <b>
-                Year:
-               </b>
-               2016
-			 <br>
-			 <br>
-              </li>
-             </ol>
-             <button class="cool-btn cool-btn-gray" id="cool_btn_4">
-              Paper
-             </button>
-             <div class="col-btn-href" id="cool_btn_4_href">
-              files/matrix_exponent.pdf
-             </div>
-            </div>
-           </div>
-          </div>
-		  
-          <div class="col-lg-6 col-md-6 col-sm-12">
-           <div class="card">
-            <div class="card-body">
-             <h5 class="card-title">
-               Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling
-             </h5>
-             <ol class="nobull card-text">
-              <li>
-               <b>
-                Authors:
-               </b>
-               Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni
-              </li>
-              <li>
-               <b>
-                Journal:
-               </b>
-               Functional Differential Equations
-              </li>
-              <li>
-               <b>
-                Year:
-               </b>
-               2019
-              </li>
-             </ol>
-             <button class="cool-btn cool-btn-gray" id="cool_btn_5">
-              Paper
-             </button>
-             <div class="col-btn-href" id="cool_btn_5_href">
-              files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf
-             </div>
-            </div>
-           </div>
-          </div>
-        </div>
-        <div class="row" style="margin-top: 20px;">
-         <div class="col-lg-12 col-md-12 col-sm-12">
-          <h3>
-           Current Projects
-          </h3>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card text-center">
-           <div class="card-body">
-            <h5 class="card-title">
-             CS
-            </h5>
-            <p class="card-text">
-             Mathematical Model for Medical Nanoparticles in the Circulatory System
-            </p>
-            <button class="cool-btn cool-btn-blue" id="cool_btn_3"> <!-- data-content="Content Not available right now" data-placement="bottom" data-toggle="popover" data-trigger="focus" -->
-             read more
-            </button>
-            <div class="col-btn-href" id="cool_btn_3_href">
-             /medical-nanorobots-in-the-blood.html
-            </div>
-           </div>
-          </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card text-center">
-           <div class="card-body">
-            <h5 class="card-title">
-             Math
-            </h5>
-            <p class="card-text">
-             Modeling CoronaVirus (COVID-19) Spread as a Disease of Development
-            </p>
-            <button class="cool-btn cool-btn-blue" id="cool_btn_2" data-content="Content Not available right now" data-placement="bottom" data-toggle="popover" data-trigger="focus">
-             read more
-            </button>
-			<!--
-            <div class="col-btn-href" id="cool_btn_2_href">
-             
-            </div>
-			-->
-           </div>
-          </div>
-         </div>
-         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card text-center">
-           <div class="card-body">
-            <h5 class="card-title">
-             CS &amp; Cognitive
-            </h5>
-            <p class="card-text">
-             Hebrew words associative distance and connection to depression.
-            </p>
-            <button class="cool-btn cool-btn-blue" id="cool_btn_1">  <!-- data-content="Content Not available right now" data-placement="bottom" data-toggle="popover" data-trigger="focus" -->
-             read more
-            </button>
-            <div class="col-btn-href" id="cool_btn_1_href">
-             /summeries/assosiative-distance-hebrew.html
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
-       <div id="personal_card" class="col-lg-4 col-md-4 col-sm-12">
-        <div class="row">
-         <div class="col-lg-12 col-md-12 col-sm-12">
-          <div class="personal-panel">
-           <div class="personal-panel-header">
-            <img alt="teddy's photo" class="header-img" src="img/personal-bg.png" title="Teddy Lazebnik" width="200px;"/>
-            <h5>
-             <a href="http://www.cs.biu.ac.il" itemprop="url" rel="noopener" target="_blank" title="Computer Science Department, Bar Ilan University">
-              Computer Science Department, Bar Ilan University
-             </a>
-             /
-             <a href="http://www.dnc-algo.com" target="_blank" title="DnC-Algo Inc.">
-              DnC-Algo Inc.
-             </a>
-            </h5>
-            <h3>
-             Medical Nanorobotics, Numerical Analysis, PDE Stabilization
-            </h3>
-           </div>
-           <div class="personal-panel-body">
-            <div class="row">
-             <div class="flex-box">
-              <svg height="52" style=" fill:#000000;" viewbox="0 0 172 172" width="52" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
-               <g fill="none" fill-rule="nonzero" font-family="none" font-size="none" font-weight="none" stroke="none" stroke-dasharray="" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-width="1" style="mix-blend-mode: normal" text-anchor="none">
-                <path d="M0,172v-172h172v172z" fill="none">
-                </path>
-                <g fill="#0e53a7">
-                 <path d="M100.57452,113.36599h-0.62019c-4.75481,13.35997 -13.35997,20.02704 -25.86719,20.02704c-9.38041,0 -16.92608,-3.48858 -22.66286,-10.49159c-5.76262,-6.97716 -8.63101,-16.66767 -8.63101,-29.04567c0,-15.99579 3.97957,-29.01983 11.93871,-39.07212c7.93329,-10.02644 17.52043,-15.03966 28.70973,-15.03966c10.12981,0 16.48678,4.08293 19.07092,12.27463h0.41346l1.00781,-10.38822h12.92127c-3.04928,29.79507 -4.59976,49.2536 -4.59976,58.42728c0,9.79387 2.58413,14.67788 7.7524,14.67788c5.45253,0 9.92308,-3.72115 13.46334,-11.11178c3.51442,-7.41647 5.29747,-17.10697 5.29747,-29.04567c0,-16.35758 -5.0649,-29.76923 -15.19471,-40.23498c-10.12981,-10.4399 -24.23918,-15.68569 -42.37981,-15.68569c-19.43269,0 -35.58353,6.97716 -48.45252,20.93149c-12.86899,13.95433 -19.30349,30.95794 -19.30349,51.03666c0,19.43269 5.6851,34.73077 17.05529,45.92007c11.39603,11.1893 27.08173,16.79688 47.13462,16.79688c15.29808,0 29.27824,-2.9976 41.99219,-9.01863v20.02704c-11.6286,5.09074 -26.5649,7.64904 -44.83474,7.64904c-25.09194,0 -45.48077,-7.39062 -61.19231,-22.17187c-15.73738,-14.8071 -23.59315,-34.67909 -23.59315,-59.64183c0,-25.45373 8.39844,-46.82452 25.16947,-64.16406c16.77103,-17.33954 38.3744,-26.02224 64.8101,-26.02224c24.44591,0 44.24038,6.71875 59.35757,20.18209c15.11719,13.46335 22.66286,31.21635 22.66286,53.23317c0,18.11479 -4.6256,32.63762 -13.85096,43.59435c-9.2512,10.93089 -20.69892,16.40926 -34.34315,16.40926c-6.71875,0 -12.19712,-1.86058 -16.40926,-5.55589c-4.21214,-3.72115 -6.48618,-8.55349 -6.82212,-14.49699zM87.00781,57.98798c-6.09856,0 -11.08594,3.59195 -14.91046,10.75c-3.85037,7.1839 -5.76262,15.47897 -5.76262,24.91106c0,6.71875 1.31791,11.93871 3.92788,15.6857c2.60997,3.74699 5.96935,5.60757 10.12981,5.60757c6.38281,0 11.42187,-3.51442 15.09135,-10.59495c3.64363,-7.05469 5.47837,-16.48678 5.47837,-28.29628c0,-5.60757 -1.26622,-10.0006 -3.82452,-13.23077c-2.53246,-3.20433 -5.91767,-4.83233 -10.12981,-4.83233z">
-                 </path>
-                </g>
-               </g>
-              </svg>
-              <p>
-               lazebnik.teddy@gmail.com
-              </p>
-             </div>
-             <div class="flex-box">
-              <svg height="48" style=" fill:#000000;" viewbox="0 0 226 226" width="48" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
-               <g fill="none" fill-rule="nonzero" font-family="none" font-size="none" font-weight="none" stroke="none" stroke-dasharray="" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-width="1" style="mix-blend-mode: normal" text-anchor="none">
-                <path d="M0,226v-226h126v226z" fill="none">
-                </path>
-                <g fill="#0e53a7">
-                 <path d="M75.33333,22.58529c0.95638,0 0.95638,0 1.87598,0.95638c0.95638,0.95638 3.78874,3.75196 3.78874,5.66472c0,1.87597 0,6.5843 0.91959,10.33626c1.87598,4.70833 3.78874,16.95735 6.58431,23.54167c2.83235,6.58431 3.78873,10.37304 0.95638,14.125c-2.83235,4.70833 -20.70931,22.62207 -20.70931,22.62207c0,0 4.70833,9.41667 10.33627,15.04459c4.70833,6.58431 12.24902,16.00098 21.66569,23.54167c9.41667,8.49707 19.78971,16.00098 30.12598,20.70931c10.37304,-10.33627 18.83333,-18.83333 21.66569,-20.70931c2.83235,-1.87598 2.83235,-2.83235 7.54069,-0.91959c4.70833,1.87597 11.29265,4.70833 18.83333,5.62793c6.58431,0.95638 14.125,1.87598 18.83333,2.83235c4.70833,0.95638 4.70833,0.95638 5.66472,2.83235c1.87597,1.87598 2.79557,4.70833 2.79557,5.62794c0,0.95638 0,3.78873 0,13.2054c0,9.41667 0,22.58529 0,25.41765c0,2.83235 0,2.83235 -0.9196,4.70833c-0.95638,1.87598 -1.87597,6.58431 -1.87597,6.58431c0,0.95638 -4.70833,2.83235 -7.5407,2.83235c-2.83235,0 -13.2054,0 -19.78971,-0.95638c-6.58431,-0.9196 -24.46126,-4.70833 -31.08235,-7.50391c-6.58431,-1.91276 -28.25,-9.41667 -54.58724,-29.20638c-24.49805,-18.83333 -42.375,-44.25098 -52.74805,-64.96028c-10.37304,-20.74609 -16.00098,-43.33138 -16.95735,-54.62403c-1.87598,-11.29264 -1.87598,-16.00097 -1.87598,-18.83333c0.95638,-2.83235 3.75196,-5.66471 5.66472,-6.5843c1.87597,-0.95638 4.70833,-1.91276 7.50391,-1.91276c2.83235,0 10.37304,0 20.74609,0c10.33626,0 22.58528,0 22.58528,0z">
-                 </path>
-                </g>
-               </g>
-              </svg>
-              <p>
-               +972 54 5524589
-              </p>
-             </div>
-             <div class="flex-box">
-              <svg height="24" style=" fill:#000000;" viewbox="0 0 172 172" width="24" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
-               <g fill="none" fill-rule="nonzero" font-family="none" font-size="none" font-weight="none" stroke="none" stroke-dasharray="" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-width="1" style="mix-blend-mode: normal" text-anchor="none">
-                <path d="M0,172v-172h172v172z" fill="none">
-                </path>
-                <g fill="#0e53a7">
-                 <path d="M86,7.16667c-23.75033,0 -43,19.24967 -43,43c0,30.71633 43,78.83333 43,78.83333c0,0 43,-48.117 43,-78.83333c0,-23.75033 -19.24967,-43 -43,-43zM86,34.81152c8.48533,0 15.35514,6.86981 15.35514,15.35514c0,8.47817 -6.87698,15.35514 -15.35514,15.35514c-8.47817,0 -15.35514,-6.86981 -15.35514,-15.35514c0,-8.48533 6.86981,-15.35514 15.35514,-15.35514zM34.4056,107.5l-20.07227,50.16667h143.33333l-20.07226,-50.16667h-17.10482c-3.47583,5.23883 -6.96544,10.09067 -10.17611,14.33333h17.59473l8.5944,21.5h-101.00521l8.5944,-21.5h17.59473c-3.21067,-4.24267 -6.70027,-9.0945 -10.17611,-14.33333z">
-                 </path>
-                </g>
-               </g>
-              </svg>
-              <p>
-               Bar Ilan Uni', Building 202, room 109
-              </p>
-             </div>
-             <div class="flex-box-full">
-              <a href="https://www.linkedin.com/in/teddy-lazebnik-b159a88a/" target="_blank" title="linkedin">
-               <img alt="linkedin" src="img/linkedin.png" width="32px;"/>
-              </a>
-              <a href="https://scholar.google.com/citations?user=7Kl5lGYAAAAJ" target="_blank" title="google scholar">
-               <img alt="google scholar" src="img/google_scholar.png" width="32px;"/>
-              </a>
-             </div>
-            </div>
-           </div>
-          </div>
-         </div>
-		 
-         <div class="col-lg-12 col-md-12 col-sm-12" id="notification-panel">
-          </div>
-		  
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
-  <!-- cookies message -->
-  <div class="alert alert-dark alert-dismissible cookie-alert" id="cookie-box" role="alert" style="display: none">
-   <strong>
-    Cookies Policy:
-   </strong>
-   this website is using cookies to personalize the expirance for you. By using the website you accept the cooking policy.
-   <button aria-label="Close" class="close" onclick="return closeAlert('cookie-box')" type="button">
-    <span aria-hidden="true">
-     ×
-    </span>
-   </button>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
-  </script>
-  <script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
-  </script>
-  <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-  </script>
-  <script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
-  </script>
-  <script src="js/main.js">
-  </script>
-  <script src="js/search.js">
-  </script>
-  <!--<script src="js/chatbot.js"></script> -->
-  <script>
-	  // var bot = new ChatBot();
-  </script>
- </body>
+<body>
+	<!-- header -->
+	<header class="header" id="header">
+	</header>
+	<!-- end - header -->
+	
+	<!-- main content -->
+	<main class="content" id="main_section">
+		<div class="updates-container" id="update-container">
+			<div class="updates-section">
+				<h2>General Updates</h2>
+				<div class="updates-section-panels">
+					<div class="carousel js-flickity" data-flickity-options='{"contain": true, "wrapAround": false, "freeScroll": false, "draggable": ">1", "cellAlign": "center"}'  id="updates-panel">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="personal-container"  id="personal_container">
+			<div class="personal-section">
+				<div class="personal-row personal-row-spacer nowrap" id="image-row">
+					<div class="personal-img">
+						<img src="/img/personal_image.png" alt="Teddy Lazebnik" />
+					</div>
+					<div class="personal-titles">
+						<h3 id="lecture_position"> </h3>
+					</div>
+				</div>
+				<div class="personal-row" id="personal-data-row">
+					<div class="w-100">
+						<div class="personal-coloum wrap" id="lecture_address">
+							<div class="personal-coloum">
+							</div>
+						</div>
+					</div>
+					<div  class="w-100">
+						<div class="personal-coloum wrap">
+							<div class="personal-info-item wrap"  id="lecture_phone">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<g clip-path="url(#clip0)">
+		<path d="M19.1869 3.14396C17.1593 1.11641 14.4635 -0.000113402 11.5962 8.63884e-09C11.1264 8.63884e-09 10.7457 0.380832 10.7457 0.850577C10.7457 1.32032 11.1265 1.70115 11.5962 1.70115C14.0091 1.70104 16.2777 2.64065 17.9839 4.3469C19.6903 6.05316 20.6299 8.32182 20.6298 10.7349C20.6298 11.2046 21.0105 11.5854 21.4804 11.5854C21.9501 11.5854 22.331 11.2046 22.331 10.735C22.3311 7.86739 21.2146 5.17151 19.1869 3.14396Z" fill="#5A67D8"/>
+		<path d="M15.688 10.735C15.688 11.2047 16.0688 11.5855 16.5386 11.5854C17.0084 11.5854 17.3891 11.2046 17.3891 10.7348C17.3889 7.54121 14.7902 4.94264 11.5963 4.94219C11.5962 4.94219 11.5963 4.94219 11.5962 4.94219C11.1265 4.94219 10.7458 5.32291 10.7457 5.79265C10.7457 6.2624 11.1264 6.64323 11.5961 6.64334C13.8522 6.64368 15.6877 8.47911 15.688 10.735Z" fill="#5A67D8"/>
+		<path d="M16.8058 15.4613C15.5093 15.3941 14.8488 16.3583 14.5321 16.8215C14.2668 17.2093 14.3661 17.7385 14.7539 18.0038C15.1416 18.2691 15.6709 18.1697 15.9362 17.782C16.3105 17.2348 16.48 17.1487 16.71 17.1596C17.4461 17.2461 20.3455 19.3707 20.6358 20.0351C20.7086 20.2307 20.7059 20.4225 20.6278 20.6558C20.3234 21.5592 19.8195 22.1941 19.1703 22.4917C18.5536 22.7744 17.7975 22.7488 16.9842 22.4178C13.9474 21.1801 11.2943 19.4527 9.09869 17.2836C9.09778 17.2827 9.09688 17.2819 9.09608 17.281C6.93153 15.0876 5.20736 12.4379 3.97164 9.40572C3.64059 8.59177 3.61496 7.83555 3.89769 7.21894C4.19528 6.56978 4.83015 6.0659 5.73279 5.76184C5.96687 5.68336 6.1583 5.68087 6.35212 5.753C7.01886 6.04435 9.14337 8.94357 9.22911 9.67144C9.24136 9.91005 9.1546 10.0795 8.60785 10.4531C8.21999 10.718 8.1203 11.2473 8.38534 11.6351C8.65027 12.023 9.17944 12.1226 9.56742 11.8576C10.0308 11.5412 10.9948 10.8825 10.9279 9.58162C10.8542 8.22273 8.2108 4.62411 6.94775 4.1597C6.38603 3.95034 5.79516 3.94671 5.19091 4.14949C3.83135 4.60733 2.84944 5.42365 2.35135 6.51013C1.86822 7.56416 1.88353 8.78706 2.39614 10.0473C3.71862 13.2922 5.56891 16.1314 7.89552 18.4864C7.90119 18.4921 7.90697 18.4978 7.91287 18.5034C10.2661 20.8257 13.1021 22.6726 16.3427 23.9935C16.9916 24.2574 17.6307 24.3895 18.2418 24.3895C18.8173 24.3895 19.3682 24.2724 19.8792 24.0381C20.9658 23.5402 21.782 22.5584 22.2402 21.1979C22.4425 20.5948 22.4393 20.0041 22.2315 19.445C21.7655 18.1786 18.1669 15.5352 16.8058 15.4613Z" fill="#5A67D8"/>
+		</g>
+		<defs>
+		<clipPath id="clip0">
+		<rect width="24" height="24" fill="white"/>
+		</clipPath>
+		</defs>
+		</svg>
+							</div>
+							<div class="personal-info-item" id="lecture_email">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<g clip-path="url(#clip0)">
+		<path d="M20.0486 7.00921L12.2767 13.8578L4.50307 7.00911C4.19354 6.73642 3.72172 6.76638 3.44913 7.07572C3.17663 7.38515 3.2063 7.85696 3.51583 8.12966L11.7832 15.4134C11.9243 15.5376 12.1006 15.5997 12.2768 15.5997C12.453 15.5997 12.6294 15.5376 12.7705 15.4133L21.0362 8.12956C21.3455 7.85696 21.3753 7.38505 21.1027 7.07562C20.8299 6.76648 20.3582 6.73662 20.0486 7.00921Z" fill="#5A67D8"/>
+		<path d="M22.0358 3.83594H2.51596C1.28082 3.83594 0.275862 4.8408 0.275862 6.07604V17.9239C0.275862 19.1591 1.28082 20.164 2.51596 20.164H22.0358C23.2709 20.164 24.2759 19.1591 24.2759 17.9239V6.07604C24.2759 4.8409 23.2709 3.83594 22.0358 3.83594ZM22.7825 17.9239C22.7825 18.3355 22.4475 18.6706 22.0358 18.6706H2.51596C2.10418 18.6706 1.76926 18.3355 1.76926 17.9239V6.07604C1.76926 5.66436 2.10418 5.32934 2.51596 5.32934H22.0358C22.4475 5.32934 22.7825 5.66436 22.7825 6.07604V17.9239Z" fill="#5A67D8"/>
+		</g>
+		<defs>
+		<clipPath id="clip0">
+		<rect width="24" height="24" fill="white"/>
+		</clipPath>
+		</defs>
+		</svg>
+							</div>
+						</div>
+						<div class="personal-row space-between wrap">
+							<div class="personal-info-item space-between wrap"  id="lecture_phone">
+								<a id="social-linkedin" href="">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16 1.91992C8.22398 1.91992 1.91998 8.22392 1.91998 15.9999C1.91998 23.7759 8.22398 30.0799 16 30.0799C23.776 30.0799 30.08 23.7759 30.08 15.9999C30.08 8.22392 23.776 1.91992 16 1.91992Z" stroke="#5A67D8" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M23.68 11.0573V7.68004C23.68 7.65252 23.6678 7.62884 23.664 7.60196L24.32 7.04004H13.44L7.03998 12.8H11.3805C11.3933 14.6221 12.7795 16.4672 15.2128 16.4672C15.4432 16.4672 15.6992 16.4416 15.9552 16.416C15.84 16.704 15.7184 16.9408 15.7184 17.3312C15.7184 18.0672 16.0896 18.5088 16.416 18.9312C15.3728 19.0016 13.4336 19.1232 12.0064 20.0128C10.6432 20.8384 10.2272 22.0352 10.2272 22.88C10.2272 24.6208 11.84 26.24 15.1872 26.24C19.1552 26.24 21.2608 24.0064 21.2608 21.7984C21.2608 20.1792 20.3392 19.3792 19.3216 18.5088L18.496 17.8496C18.24 17.6448 17.888 17.3568 17.888 16.8448C17.888 16.3264 18.24 15.9936 18.5408 15.6864C19.5072 14.9184 20.48 14.0544 20.48 12.3136C20.48 11.6461 20.3245 11.1028 20.1017 10.656L22.4 8.68548V11.0573C22.0192 11.2788 21.76 11.6871 21.76 12.16V16C21.76 16.7066 22.3334 17.28 23.04 17.28C23.7465 17.28 24.32 16.7066 24.32 16V12.16C24.32 11.6877 24.0608 11.2794 23.68 11.0573ZM19.712 22.7136C19.712 24.1664 18.5408 25.2544 16.32 25.2544C13.8496 25.2544 12.2624 24.0576 12.2624 22.3872C12.2624 20.7168 13.7344 20.16 14.2464 19.968C15.2128 19.6352 16.4608 19.5904 16.6656 19.5904C16.9024 19.5904 17.0176 19.5904 17.2032 19.616C18.9568 20.8832 19.712 21.5168 19.712 22.7136ZM17.8688 15.1488C17.4976 15.5264 16.8768 15.808 16.2944 15.808C14.3168 15.808 13.408 13.1968 13.408 11.6224C13.408 11.0144 13.5296 10.3808 13.92 9.89444C14.2912 9.41444 14.9376 9.11364 15.5328 9.11364C17.4528 9.11364 18.4448 11.744 18.4448 13.44C18.4448 13.856 18.3936 14.6048 17.8688 15.1488Z" fill="#5A67D8"/>
+									</svg>
+								</a>
+								<a id="social-google-scholar" href="">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16 1.91992C12.2657 1.91992 8.68443 3.40335 6.04392 6.04386C3.40341 8.68437 1.91998 12.2657 1.91998 15.9999C1.91998 19.7342 3.40341 23.3155 6.04392 25.956C8.68443 28.5965 12.2657 30.0799 16 30.0799C19.7342 30.0799 23.3155 28.5965 25.956 25.956C28.5966 23.3155 30.08 19.7342 30.08 15.9999C30.08 12.2657 28.5966 8.68437 25.956 6.04386C23.3155 3.40335 19.7342 1.91992 16 1.91992V1.91992Z" stroke="#5A67D8" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+									<path d="M10.24 8.32007C9.90055 8.32007 9.57497 8.45493 9.33493 8.69497C9.09488 8.93502 8.96002 9.26059 8.96002 9.60007C8.96002 9.93955 9.09488 10.2651 9.33493 10.5052C9.57497 10.7452 9.90055 10.8801 10.24 10.8801C10.5795 10.8801 10.9051 10.7452 11.1451 10.5052C11.3852 10.2651 11.52 9.93955 11.52 9.60007C11.52 9.26059 11.3852 8.93502 11.1451 8.69497C10.9051 8.45493 10.5795 8.32007 10.24 8.32007Z" fill="#5A67D8" stroke="#5A67D8" stroke-miterlimit="10"/>
+									<path d="M8.96002 12.8H11.52V22.4H8.96002V12.8ZM19.52 12.8C18.4013 12.8 17.3875 13.2442 16.64 13.9623V12.8H14.08V22.4H16.64V17.6C16.64 16.368 17.648 15.36 18.88 15.36C20.112 15.36 21.12 16.368 21.12 17.6V19.2V22.4H23.68V16.96C23.68 14.6624 21.8176 12.8 19.52 12.8Z" fill="#5A67D8"/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="personal-row">
+					<h2>
+						Biography
+					</h2>
+				</div>
+				<div class="personal-row">
+					<p id="biography">
+					</p>
+				</div>
+				<div class="personal-row" id="research_intrests_header">
+					<h2>
+						Research interests
+					</h2>
+				</div>
+				<div class="personal-coloum"  id="research_intrests">
+				</div>
+			</div>
+		</div>
+		<div class="featured-publications-container" id="featured_publications_header">
+			<div class="featured-publications-section">
+				<div class="personal-row">
+					<h2>
+						Featured Publications
+					</h2>
+				</div>
+				<div id="featured_publications">
+				</div>
+			</div>
+		</div>
+		<div class="featured-publications-container" id="current_projects_header">
+			<div class="featured-publications-section">
+				<div class="personal-row">
+					<h2>
+						 Current Projects 
+					</h2>
+				</div>
+				<div id="current_projects">
+					
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- end - main content -->
+	
+	<!-- footer -->
+	<footer class="footer" id="footer">
+	</footer>
+	<!-- end - footer -->
+	
+	<!-- js -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script src="/js/main.js"> </script>	
+	<script src="js/search.js"></script>
+	<script src="/js/pages/index.js"  type="module"> </script>
+	<script>
+		// fix the design of the dots 
+		setTimeout(function(){ fixDotsColor(); }, 300);
+		setTimeout(function(){ fixDotsColor(); }, 1000);
+		
+		function fixDotsColor()
+		{
+			var dots = document.querySelectorAll(".flickity-page-dots .dot");
+			for (var i = 0; i < dots.length; i++)
+			{
+				dots[i].style.backgroundColor = "#667EEA";
+			}
+		}
+	</script>
+	<!-- end - js -->	
+</body>
 </html>
