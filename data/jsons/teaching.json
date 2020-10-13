@@ -1,0 +1,38 @@
+{
+	"teaching_philosophy": "A very long text - allow HTML edditing",
+	"coureses":
+	[
+		{
+			"name": "courese name",
+			"code": "courese's code",
+			"year": "2019",
+			"semester": "2",
+			"university":"Bar-Ilan University",
+			"description": "sentence or two of text - no HTML needed"
+		},
+		{
+			"name": "courese name",
+			"code": "courese's code",
+			"year": "2020",
+			"semester": "1",
+			"university":"Bar-Ilan University",
+			"description": "sentence or two of text - no HTML needed"
+		},
+		{
+			"name": "courese name",
+			"code": "courese's code",
+			"year": "2018",
+			"semester": "1",
+			"university":"Tel-Aviv University",
+			"description": "sentence or two of text - no HTML needed"
+		},
+		{
+			"name": "courese name",
+			"code": "courese's code",
+			"year": "2020",
+			"semester": "2",
+			"university":"Tel-Aviv University",
+			"description": "sentence or two of text - no HTML needed"
+		}
+	]
+}

@@ -1,0 +1,58 @@
+{
+	"opening_text": "A very long text - allow HTML edditing",
+	"open_positions": 
+	[
+		{
+			"project_name": "cool name",
+			"description": "cool long html description",
+			"fitting_degree": "first"
+		},
+		{
+			"project_name": "cool name",
+			"description": "cool long html description",
+			"fitting_degree": "first"
+		},
+		{
+			"project_name": "cool name",
+			"description": "cool long html description",
+			"fitting_degree": "first"
+		}
+	],
+	"students":
+	[
+		{
+			"name": "name student",
+			"description":"cool long html description",
+			"projects":[{ "project":"courese's code","description_project":"cool long html description on project","status":"Done"},
+				{ "project":"courese's code","description_project":"cool long html description on project","status":"In progress"}],
+			"year": "2020",
+			"degree": "first",
+			"linkedin_link": "url",
+			"publication_link": "url",
+			"is_alumni": "true"
+		},
+		{
+			"name": "name student",
+			"description":"cool long html description",
+			"projects":[{ "project":"courese's code","description_project":"cool long html description on project","status":"Done"},
+				{ "project":"courese's code","description_project":"cool long html description on project","status":"In progress"}],
+			"year": "2020",
+			"degree": "first",
+			"linkedin_link": "url",
+			"publication_link": "url",
+			"is_alumni": "true"
+		},
+		{
+			"name": "name student",
+			"description":"cool long html description",
+			"projects":[{ "project":"courese's code","description_project":"cool long html description on project","status":"Done"},
+				{ "project":"courese's code","description_project":"cool long html description on project","status":"Done"}],
+			"year": "2020",
+			"degree": "first",
+			"linkedin_link": "url",
+			"publication_link": "url",
+			"is_alumni": "false"
+		}
+	
+	]
+}

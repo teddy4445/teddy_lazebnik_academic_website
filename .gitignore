@@ -1,5 +1,4 @@
 # System stracture ignore
-data/*
 results/*
 temp/*
 .idea/workspace.xml

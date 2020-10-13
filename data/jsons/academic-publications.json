@@ -1,0 +1,51 @@
+{
+   "publications":[
+      {
+         "name":"Paper's Paper's title",
+         "description":"Paper's description Paper's description",
+         "fileLinks":[{"info": "download", "type": 1, "link": "aaa"}, 
+					  {"info": "cite", "type": 3, "link": "bbb"}],
+		 "authors": "first name, last name; first name, last name",
+         "year": 2019,
+         "topic":"cool topic",
+         "type":"paper",
+         "publisher":"good publisher good publisher",
+         "publicationStatus":"Published"
+      },
+      {
+         "name":"Paper's Paper's title",
+         "description":"Paper's description Paper's description",
+         "fileLinks":[{"info": "download", "type": 1, "link": "aaa"}, 
+					  {"info": "cite", "type": 3, "link": "bbb"}],
+		 "authors": "first name, last name; first name, last name",
+         "year": 2019,
+         "topic":"cool topic",
+         "type":"presentation",
+         "publisher":"good publisher good publisher",
+         "publicationStatus":"Published"
+      },   
+      {
+         "name":"Paper's Paper's title",
+         "description":"Paper's description Paper's description",
+         "fileLinks":[{"info": "download", "type": 1, "link": "aaa"}, 
+					  {"info": "cite", "type": 3, "link": "bbb"}],
+		 "authors": "first name, last name; first name, last name",
+         "year": 2018,
+         "topic":"cool topic",
+         "type":"presentation",
+         "publisher":"good publisher good publisher",
+         "publicationStatus":"Published"
+      },   
+      {
+         "name":"Paper's Paper's title",
+         "description":"Paper's description Paper's description",
+         "fileLinks":[{"info": "download", "type": 1, "link": "aaa"}, 
+					  {"info": "cite", "type": 3, "link": "bbb"}],
+		 "authors": "first name, last name; first name, last name",
+         "year": 2020,
+         "topic":"cool topic",
+         "type":"paper",
+         "publisher":"good publisher good publisher",
+         "publicationStatus":"Published"
+      }]
+}

@@ -1,0 +1,51 @@
+{
+   "biography":"I am a Ph.D. student in the <a href='http://u.cs.biu.ac.il/~galk/research/tolkien/' title='Tolkien project'>Tolkien</a> Project, part of the <a href='http://u.cs.biu.ac.il/~galk/maverick/' title='MAVERICK research group'>MAVERICK</a> research group at the <a href='https://cs.biu.ac.il/en' title='CS dept.'>Computer Science</a> Department , <a href='https://www1.biu.ac.il/' title='Bar Ilan University'>Bar Ilan University</a> ; Supervised by <a href='http://u.cs.biu.ac.il/~galk/' title='gal a. kaminka'>Prof. Gal A. Kaminka</a> and <a href='https://physics.biu.ac.il/en/node/1384' title='dr. chana wietman'>Dr. Chana Weitman</a>. <br><br> My research focuses on medical and biological nanoparticles (focusing on nanorobotics). Specifically, modeling a curing protocol based on biophysical interactions of targeted drug delivery nanoparticles in the blood. I am also interested in numerical solving and stabilization of ordinary and partial differential equations (ODE, PDE) systems (especially, ones that originate in a biological setup). Sometimes I am publishing some useful (or just fun) things like open code and technical blog posts . I published a few academic papers in journals, conferences, and abstracts. In between, I am teaching several mathematical classes and working with Bc.S. and Mc.S. students on their final project. <br><br>I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics at Bar-Ilan University. <br>My <a href='https://teddylazebnik.info/files/cv.pdf' title='Teddy Lazebnik CV'>CV</a> can be found here. ",
+   "researchInterests":[
+		"Biomathematical Modeling - optimal treatment policy, pharmacokinetics, and disease dyanmics.",
+		"Computer Simualtion - in vivo PKPD, epedimological, and clinical treatment.",
+		"Medical Nanorobotics - nanoscale in vivo interactions, drug discovery, computing, and compalization."
+   ],
+   "featuredPublications":[
+      {
+         "name":"A stable algorithm for numerical matrix exponent",
+         "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof",
+         "fileLinks":[{"info": "download", "type": 1, "link": "https://teddylazebnik.info/files/matrix_exponent.pdf"}, 
+					  {"info": "cite", "type": 3, "link": "https://teddylazebnik.info/files/matrix_exponent.pdf"}],
+		 "authors": "Teddy Lazebnik and Shlomo Yanetz",
+         "year": 2016,
+         "topic":"Numerical Analysis",
+         "type":"paper",
+         "publisher":"Functional Differential Equations",
+         "publicationStatus":"Published"
+      },
+      {
+         "name":"Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling",
+         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "https://teddylazebnik.info/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"}, 
+					  {"info": "cite", "type": 3, "link": "https://teddylazebnik.info/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"}],
+		 "authors": "Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni",
+         "year": 2019,
+         "topic":"Biomathematics (PDE)",
+         "type":"paper",
+         "publisher":"Functional Differential Equations",
+         "publicationStatus":"Published"
+      }
+   ],
+   "currentProjects":[
+      {
+         "name":"Mathematical Model for Medical Nanoparticles in the Circulatory System",
+         "description":"A new mathematical representation for pharmacokinetics dyanmics for large-scale in-vivo systems.",
+         "link":{"info": "view project", "type": 1, "link": "/medical-nanorobots-in-the-blood.html"}
+      },
+      {
+         "name":"Age-based optimal lockdown policy for the COVID-19",
+         "description":"Based on data from Israel, we propuse an optimal lockdown policy, taking into considuration two age-groups.",
+         "link":{"info": "view project", "type": 1, "link": "https://teddylazebnik.info/coronavirus-sir-simulation/index.html"}
+      },
+      {
+         "name":"Hebrew words associative distance and connection to depression.",
+         "description":"Developing a machine learning model for words associative distance (Hebrew). Based on this model, propusing new depression test for clinical professionals",
+         "link":{"info": "view project", "type": 1, "link": ""}
+      }
+   ]
+}
