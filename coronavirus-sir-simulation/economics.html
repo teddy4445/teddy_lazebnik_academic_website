@@ -1,7 +1,7 @@
 <html>
  <head>
   <title>
-   Spatio-Temporal Two Age Group Coronavirus Stochastic Simulator
+   Economical Spatio-Temporal Coronavirus Stochastic Simulator
   </title>
   
   <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js" type="text/javascript"></script>  
@@ -9,11 +9,11 @@
   <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
   <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" rel="stylesheet"/>
   
-  <script language="javascript" src="sketch.js" type="text/javascript"></script>
-  <script language="javascript" src="population.js" type="text/javascript"></script>
-  <script language="javascript" src="member.js" type="text/javascript"></script>
-  <script language="javascript" src="chart.js" type="text/javascript"></script>
-  <script language="javascript" src="simulationManager.js" type="text/javascript"></script>
+  <script language="javascript" src="sketch_economics.js" type="text/javascript"></script>
+  <script language="javascript" src="population_economics.js" type="text/javascript"></script>
+  <script language="javascript" src="member_economics.js" type="text/javascript"></script>
+  <script language="javascript" src="chart_economics.js" type="text/javascript"></script>
+  <script language="javascript" src="simulationManager_economics.js" type="text/javascript"></script>
   
   <link href="style.css" rel="stylesheet" type="text/css"/>
   <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
@@ -22,12 +22,13 @@
   <div class="container">
    <div class="row center spacer">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-     <h1 class="center head">
-		Spatio-Temporal Two Age-Group Coronavirus Stochastic Simulator
-     </h1>
-     <h2 class="center title">
-		The following simulator shows coronavirus spreading over a population based on hybrid model of SIRD model with two age-groups and 3 locations stochastic spatial model. 
+     <h2 class="center head">
+		Economical Spatio-Temporal Coronavirus Stochastic Simulator
      </h2>
+     <h4 class="center">
+		The following simulator shows hybrid coronavirus spreading over a population model based on SIRD model with two age-groups and three locations stochastic spatial model.
+		This model extends the <a href="index.html">original</a> model by introducing economical features into the calculation. 
+     </h4>
     </div>
    </div>
    <div class="row spacer" id="init_form">
@@ -37,36 +38,77 @@
 		  </div>
 		  
 		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Initial population size</h3>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="adult_pop_size" title="Adult Population Size">
-			  Adult Population Size
+			 <label for="adult_pop_size" title="Adult Working Population Size">
+			  Working adult Population Size
 			 </label>
-			 <input class="form-control" id="adult_pop_size" min="1" placeholder="Adult Population Size" required="" type="number" value="720"/>
+			 <input class="form-control" id="working_adult_pop_size" min="1" placeholder="Working Adult Population Size" required="" type="number" value="480"/>
 			</div>
 		   </div>
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="susceptible_adults_percent" title="Initial Susceptible Adult ">
-			  Initial Susceptible Adult 
+			 <label for="susceptible_working_adults_percent" title="Initial Working Susceptible Adult ">
+			  Initial Working Susceptible Adult 
 			 </label>
-			 <input class="form-control" id="susceptible_adults_percent" min="0" placeholder="Initial Susceptible Adult " required="" type="number" value="719"/>
+			 <input class="form-control" id="susceptible_working_adults_percent" min="0" placeholder="Initial Working Susceptible Adult " required="" type="number" value="479"/>
 			</div>
 		   </div>
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="infected_adults_percent">
-			  Initial Infected Adult 
+			 <label for="infected_working_adults_percent">
+			  Initial Working Infected Adult 
 			 </label>
-			 <input class="form-control" id="infected_adults_percent" min="0" placeholder="Initial Infected Adult " required="" type="number" value="1" />
+			 <input class="form-control" id="infected_working_adults_percent" min="0" placeholder="Initial Working Infected Adult " required="" type="number" value="1" />
 			</div>
 		   </div>
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="recover_adults_percent">
-			  Initial Recovered Adult 
+			 <label for="recover_working_adults_percent">
+			  Initial Working Recovered Adult 
 			 </label>
-			 <input class="form-control" id="recover_adults_percent" placeholder="Initial Recovered Adult " required="" type="number" value="0" disabled />
+			 <input class="form-control" id="recover_working_adults_percent" placeholder="Initial Working Recovered Adult " required="" type="number" value="0" disabled />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="adult_pop_size" title="Adult Non-working Population Size">
+			  Non-working adult Population Size
+			 </label>
+			 <input class="form-control" id="nonworking_adult_pop_size" min="1" placeholder="Non-working Adult Population Size" required="" type="number" value="240"/>
+			</div>
+		   </div>
+		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="susceptible_nonworking_adults_percent" title="Initial Non-working Susceptible Adult ">
+			  Initial Non-working Susceptible Adult 
+			 </label>
+			 <input class="form-control" id="susceptible_nonworking_adults_percent" min="0" placeholder="Initial Non-working Susceptible Adult " required="" type="number" value="240"/>
+			</div>
+		   </div>
+		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="infected_nonworking_adults_percent">
+			  Initial Non-working Infected Adult 
+			 </label>
+			 <input class="form-control" id="infected_nonworking_adults_percent" min="0" placeholder="Initial Non-working Infected Adult " required="" type="number" value="0" />
+			</div>
+		   </div>
+		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="recover_nonworking_adults_percent">
+			  Initial Non-working Recovered Adult 
+			 </label>
+			 <input class="form-control" id="recover_nonworking_adults_percent" placeholder="Initial Non-working Recovered Adult " required="" type="number" value="0" disabled />
 			</div>
 		   </div>
 		  </div>
@@ -107,26 +149,56 @@
 		  </div>
 		  
 		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Events per hour</h3>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="a_c_meeting_count" title="Adult - Child Average Meeting Events per Hour">
-			  Adult - Child Average Meeting Events per Hour
+			 <label for="wa_c_meeting_count" title="Working Adult - Child Average Meeting Events per Hour">
+			  Working Adult - Child Average Meeting Events per Hour
 			 </label>
-			 <input class="form-control" id="a_c_meeting_count" min="0" placeholder="Adult - Child Average Meeting Events per Hour" required="" type="number" value="1"/>
+			 <input class="form-control" id="wa_c_meeting_count" min="0" placeholder="Working Adult - Child Average Meeting Events per Hour" required="" type="number" value="1"/>
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="a_a_meeting_count" title="Adult - Adult Average Meeting Events per Hour">
-			  Adult - Adult Average Meeting Events per Hour
+			 <label for="na_c_meeting_count" title="Nonworking Adult - Child Average Meeting Events per Hour">
+			  Nonworking Adult - Child Average Meeting Events per Hour
 			 </label>
-			 <input class="form-control" id="a_a_meeting_count" min="0" placeholder="Adult - Adult Average Meeting Events per Hour" required="" type="number" value="1"/>
+			 <input class="form-control" id="na_c_meeting_count" min="0" placeholder="Nonworking Adult - Child Average Meeting Events per Hour" required="" type="number" value="1"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="wa_wa_meeting_count" title="Working Adult - Working Adult Average Meeting Events per Hour">
+			  Working Adult - Working Adult Average Meeting Events per Hour
+			 </label>
+			 <input class="form-control" id="wa_wa_meeting_count" min="0" placeholder="Working Adult - Working Adult Average Meeting Events per Hour" required="" type="number" value="1"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="na_na_meeting_count" title="Nonworking Adult - Nonworking Adult Average Meeting Events per Hour">
+			  Nonworking Adult - Nonworking Adult Average Meeting Events per Hour
+			 </label>
+			 <input class="form-control" id="wa_wa_meeting_count" min="0" placeholder="Nonworking Adult - Nonworking Adult Average Meeting Events per Hour" required="" type="number" value="1"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="wa_na_meeting_count" title="Working Adult - Nonworking Adult Average Meeting Events per Hour">
+			  Working Adult - Nonworking Adult Average Meeting Events per Hour
+			 </label>
+			 <input class="form-control" id="wa_na_meeting_count" min="0" placeholder="Working Adult - Nonworking Adult Average Meeting Events per Hour" required="" type="number" value="1"/>
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="c_c_meeting_count">
-			  Child - Child Average Meeting Events per Hour
+			  Child - Child Average Meeting Events per Hour<br>
 			 </label>
 			 <input class="form-control" id="c_c_meeting_count" min="0" placeholder="Child - Child Average Meeting Events per Hour" required="" type="number" value="1" />
 			</div>
@@ -134,26 +206,61 @@
 		  </div>
 		  
 		  <div class="row">
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="a_a_t_c" title="Adult to Adult Transform Chance">
-			  Adult to Adult Transform Chance
-			 </label>
-			 <input class="form-control" id="a_a_t_c" max="100" min="0" placeholder="Adult to Adult Transform Chance" required="" type="number" value="31"/>
-			</div>
-		   </div>
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="a_c_t_c">
-			  Adult to Children Transform Chance
-			 </label>
-			 <input class="form-control" id="a_c_t_c" max="100" min="0" placeholder="Adult to Children Transform Chance" required="" type="number" value="0" />
-			</div>
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Infection rates</h3>
 		   </div>
 		  </div>
 		  
 		  <div class="row">
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="wa_wa_t_c" title="Working Adult to Working Adult Transform Chance">
+			  Working Adult to Working Adult Transform Chance
+			 </label>
+			 <input class="form-control" id="wa_wa_t_c" max="100" min="0" placeholder="Working Adult to Working Adult Transform Chance" required="" type="number" value="31"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="wa_na_t_c" title="Working Adult to Nonworking Adult Transform Chance">
+			  Working Adult to Nonworking Adult Transform Chance
+			 </label>
+			 <input class="form-control" id="wa_na_t_c" max="100" min="0" placeholder="Working Adult to Nonworking Adult Transform Chance" required="" type="number" value="31"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="na_wa_t_c" title="Nonworking Adult to Working Adult Transform Chance">
+			  Nonworking Adult to Working Adult Transform Chance
+			 </label>
+			 <input class="form-control" id="na_wa_t_c" max="100" min="0" placeholder="Nonworking Adult to Working Adult Transform Chance" required="" type="number" value="31"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="na_na_t_c" title="Nonworking Adult to Nonworking Adult Transform Chance">
+			  Nonworking Adult to Nonworking Adult Transform Chance
+			 </label>
+			 <input class="form-control" id="na_na_t_c" max="100" min="0" placeholder="Nonworking Adult to Nonworking Adult Transform Chance" required="" type="number" value="31"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="wa_c_t_c">
+			  <br>Working Adult to Children Transform Chance
+			 </label>
+			 <input class="form-control" id="wa_c_t_c" max="100" min="0" placeholder="Working Adult to Children Transform Chance" required="" type="number" value="0" />
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="na_c_t_c">
+			  <br>Nonworking Adult to Children Transform Chance
+			 </label>
+			 <input class="form-control" id="na_c_t_c" max="100" min="0" placeholder="Nonworking Adult to Children Transform Chance" required="" type="number" value="0" />
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="c_c_t_c" title=" Children to Children Transform Chance">
 			  Children to Children Transform Chance
@@ -161,13 +268,27 @@
 			 <input class="form-control" id="c_c_t_c" max="100" min="0" placeholder="Children to Children Transform Chance" required="" type="number" value="31"/>
 			</div>
 		   </div>
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="c_a_t_c">
-			  Children to Adult Transform Chance
+			 <label for="c_wa_t_c">
+			  Children to Working Adult Transform Chance 
 			 </label>
-			 <input class="form-control" id="c_a_t_c" max="100" min="0" placeholder="Children to Adult Transform Chance" required="" type="number" value="27" />
+			 <input class="form-control" id="c_wa_t_c" max="100" min="0" placeholder="Children to Working Adult Transform Chance" required="" type="number" value="27" />
 			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="c_na_t_c">
+			  Children to Nonworking Adult Transform Chance<br>
+			 </label>
+			 <input class="form-control" id="c_na_t_c" max="100" min="0" placeholder="Children to Nonworking Adult Transform Chance" required="" type="number" value="27" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Day-Night dynamics </h3>
 		   </div>
 		  </div>
 		  
@@ -175,7 +296,7 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_at_home" title="Time At Home">
-			  Time At Home (adults)
+			  Time At Home (working adults)
 			 </label>
 			 <input class="form-control" id="time_at_home_a" max="24" min="0" placeholder="Time At Home in hours" required="" type="number" value="12"/>
 			</div>
@@ -183,7 +304,7 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_not_at_home">
-			  Time At Work (adults)
+			  Time At Work (working adults)
 			 </label>
 			 <input class="form-control" id="time_not_at_home_a" max="24" min="0" placeholder="Time At Work \ School in hours" required="" type="number" value="12" disabled />
 			</div>
@@ -206,6 +327,12 @@
 			 </label>
 			 <input class="form-control" id="time_not_at_home_c" max="24" min="0" placeholder="Time At Work \ School in hours" required="" type="number" value="12" disabled />
 			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Recover durations and rates</h3>
 		   </div>
 		  </div>
 		  
@@ -248,6 +375,12 @@
 		  </div>
 		  
 		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Day of the week dynamics </h3>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="go_to_school_k_days">
@@ -267,25 +400,6 @@
 		  </div>
 		  
 		  <div class="row">
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="fps" title="Frames Per Second">
-			  <b>Frames Per Second</b>
-			 </label>
-			 <input class="form-control" id="fps" max="48" min="0" placeholder="Frames Per Second" required="" type="number" value="3"/>
-			</div>
-		   </div>
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="graph_samples">
-			  </b>Graph Sample Each Steps</b>
-			 </label>
-			 <input class="form-control" id="graph_samples" max="72" min="1" placeholder="Graph Sample Each Steps" required="" type="number" value="24" />
-			</div>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="fps" title="Frames Per Second">
@@ -295,6 +409,59 @@
 				<option value="0"> No </option>
 				<option value="1"> Yes </option>
 			 </select>
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Economical facotors</h3>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="graph_samples">
+			  </b>Rate (in percent) working adults loose their jobs as a result of the epedimic (m = )</b>
+			 </label>
+			 <input class="form-control" id="m" max="100" min="0" placeholder="Rate (in percent) working adults loose their jobs as a result of the epedimic (m = )" required="" type="number" value="10" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="graph_samples">
+			  </b>Average worker's contribution to the economics in dollers (e = )</b>
+			 </label>
+			 <input class="form-control" id="e" max="1000000" min="1" placeholder="Average worker's contribution to the economics in dollers (e = )" required="" type="number" value="1500" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Simulation run hyper-parameters</h3>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="fps" title="Frames Per Second">
+			  <b>Frames Per Second</b>
+			 </label>
+			 <input class="form-control" id="fps" max="48" min="0" placeholder="Frames Per Second" required="" type="number" value="12"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="graph_samples">
+			  </b>Graph Sample Each K hours (k = )</b>
+			 </label>
+			 <input class="form-control" id="graph_samples" max="72" min="1" placeholder="Graph Sample Each K hours (k = )" required="" type="number" value="24" />
 			</div>
 		   </div>
 		  </div>
