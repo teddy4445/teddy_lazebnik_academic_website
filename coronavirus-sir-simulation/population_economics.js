@@ -1,52 +1,95 @@
 class Population
 {
-	constructor(adult_population, adult_s_percent, adult_i_percent, adult_r_percent, children_population, children_s_percent, children_i_percent, children_r_percent)
+	constructor(working_adult_population,
+				working_adult_s_percent,
+				working_adult_i_percent,
+				working_adult_r_percent,
+				nonworking_adult_population,
+				nonworking_adult_s_percent,
+				nonworking_adult_i_percent,
+				nonworking_adult_r_percent,
+				children_population, 
+				children_s_percent, 
+				children_i_percent, 
+				children_r_percent,
+				init_econimic)
 	{
+		// main members
 		this.members = [];
+		this.econimic = init_econimic;
+		
+		// technical members
 		this.timeOfDay = 0;
 		this.days = 0;
+		this.last_stats = null;
 		
 		// find if percent or size
-		var a_s;
-		var a_i;
-		var a_r;
-		var a_d = 0;
+		var wa_s;
+		var wa_i;
+		var wa_r;
+		var wa_d = 0;
+		var na_s;
+		var na_i;
+		var na_r;
+		var na_d = 0;
 		var c_s;
 		var c_i;
 		var c_r;
 		var c_d = 0;
 		
-		if (adult_s_percent + adult_i_percent + adult_r_percent == 100 && children_s_percent + children_i_percent + children_r_percent == 100)
+		if (working_adult_s_percent + working_adult_i_percent + working_adult_r_percent == 100
+		&& nonworking_adult_s_percent + children_i_percent + children_r_percent == 100
+		&& children_s_percent + nonworking_adult_i_percent + nonworking_adult_r_percent == 100)
 		{
-			a_s = adult_population * adult_s_percent / 100;
-			a_i = adult_population * adult_i_percent / 100;
-			a_r = adult_population * adult_r_percent / 100;
+			wa_s = adult_population * working_adult_s_percent / 100;
+			wa_i = adult_population * working_adult_i_percent / 100;
+			wa_r = adult_population * working_adult_r_percent / 100;
+			na_s = adult_population * nonworking_adult_s_percent / 100;
+			na_i = adult_population * nonworking_adult_i_percent / 100;
+			na_r = adult_population * working_adult_r_percent / 100;
 			c_s = adult_population * children_s_percent / 100;
 			c_i = adult_population * children_i_percent / 100;
-			c_r = adult_population * children_r_percent / 100;
+			c_r = adult_population * nonworking_adult_r_percent / 100;
 		}
 		else
 		{
-			a_s = adult_s_percent;
-			a_i = adult_i_percent;
-			a_r = adult_r_percent;
+			wa_s = working_adult_s_percent;
+			wa_i = working_adult_i_percent;
+			wa_r = working_adult_r_percent;
+			na_s = nonworking_adult_s_percent;
+			na_i = nonworking_adult_i_percent;
+			na_r = nonworking_adult_r_percent;
 			c_s = children_s_percent;
 			c_i = children_i_percent;
 			c_r = children_r_percent;
 		}
 		
-		// add adult population
-		for (var i = 0; i < Math.round(a_s); i++)
+		// add working adult population
+		for (var i = 0; i < Math.round(wa_s); i++)
 		{
-			this.members.push(new Member(ADULT, STATE_S, LOC_HOME));
+			this.members.push(new Member(WORKING_ADULT, STATE_S, LOC_HOME));
 		}
-		for (var i = 0; i < Math.round(a_i); i++)
+		for (var i = 0; i < Math.round(wa_i); i++)
 		{
-			this.members.push(new Member(ADULT, STATE_I, LOC_HOME));
+			this.members.push(new Member(WORKING_ADULT, STATE_I, LOC_HOME));
 		}
-		for (var i = 0; i < Math.round(a_r); i++)
+		for (var i = 0; i < Math.round(wa_r); i++)
 		{
-			this.members.push(new Member(ADULT, STATE_R, LOC_HOME));
+			this.members.push(new Member(WORKING_ADULT, STATE_R, LOC_HOME));
+		}
+		
+		// add nonworking adult population
+		for (var i = 0; i < Math.round(na_s); i++)
+		{
+			this.members.push(new Member(NONWORKING_ADULT, STATE_S, LOC_HOME));
+		}
+		for (var i = 0; i < Math.round(na_i); i++)
+		{
+			this.members.push(new Member(NONWORKING_ADULT, STATE_I, LOC_HOME));
+		}
+		for (var i = 0; i < Math.round(na_r); i++)
+		{
+			this.members.push(new Member(NONWORKING_ADULT, STATE_R, LOC_HOME));
 		}
 		
 		// add children population
@@ -71,7 +114,17 @@ class Population
 	
 	size_adults()
 	{
-		return this.a_s + this.a_i + this.a_r + this.a_d;
+		return this.size_working_adults() + this.size_nonworking_adults();
+	}
+	
+	size_working_adults()
+	{
+		return this.wa_s + this.wa_i + this.wa_r + this.wa_d;
+	}
+	
+	size_nonworking_adults()
+	{
+		return this.na_s + this.na_i + this.na_r + this.na_d;
 	}
 	
 	size_children()
@@ -84,19 +137,51 @@ class Population
 		this.members = [];
 	}
 	
-	run(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children, time_at_home_c, time_at_home_a, go_to_school_k_days, go_to_work_k_days)
+	run(wa_wa_t_c, 
+		wa_na_t_c, 
+		na_wa_t_c, 
+		na_na_t_c,
+		wa_c_t_c,
+		na_c_t_c,
+		c_c_t_c,
+		c_wa_t_c,
+		c_na_t_c,
+		infected_to_recover_time_adult, 
+		infected_to_recover_time_children, 
+		time_at_home_c,
+		time_at_home_a,
+		go_to_school_k_days,
+		go_to_work_k_days,
+		loss_jobs_rate,
+		avg_contribution_to_economic)
 	{
 		
 		// 1. stohasticly move them around (with day - night circle)
 		if (!((this.days % 6 == 0 || this.days % 7 == 0) && rest_in_shabat))
 		{
-			this._move_population_around(time_at_home_c, time_at_home_a, go_to_school_k_days, go_to_work_k_days);	
+			this._move_population_around(time_at_home_c, 
+										time_at_home_a, 
+										go_to_school_k_days, 
+										go_to_work_k_days);	
 		}
 		
 		// 2. make tranforms regarding to -> location, age, state
-		this._make_trasforms(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children)
+		var r_zero = this._make_trasforms(wa_wa_t_c, 
+											wa_na_t_c, 
+											na_wa_t_c, 
+											na_na_t_c,
+											wa_c_t_c,
+											na_c_t_c,
+											c_c_t_c,
+											c_wa_t_c,
+											c_na_t_c, 
+											infected_to_recover_time_adult, 
+											infected_to_recover_time_children);
 		
-		// 3. update time of day 
+		// 3. update the working status (the new econimic part of the system) and update the economic 
+		this.econimic += this._update_working_status(loss_jobs_rate, avg_contribution_to_economic, r_zero);
+		
+		// 4. update time of day 
 		this.timeOfDay++;
 		if (this.timeOfDay == TIME_IN_DAY)
 		{
@@ -105,7 +190,10 @@ class Population
 		}
 	}
 	
-	_move_population_around(time_at_home_c, time_at_home_a, go_to_school_k_days, go_to_work_k_days)
+	_move_population_around(time_at_home_c,
+							time_at_home_a, 
+							go_to_school_k_days, 
+							go_to_work_k_days)
 	{
 		var adult_pass_percent = go_to_work_percent / 100;
 		var children_pass_percent = go_to_school_percent / 100;
@@ -116,7 +204,7 @@ class Population
 			// stohasticly move them to work \ school (with day - night circle)
 			for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 			{
-				if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].age_group == ADULT)
+				if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].eco_age_group == WORKING_ADULT)
 				{
 					if (Math.random() < adult_pass_percent)
 					{
@@ -131,7 +219,7 @@ class Population
 			// stohasticly move them to work \ school (with day - night circle)
 			for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 			{
-				if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].age_group == CHILD)
+				if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].eco_age_group == CHILD)
 				{
 					if (Math.random() < children_pass_percent)
 					{
@@ -145,11 +233,11 @@ class Population
 			// stohasticly move them to home (with day - night circle)
 			for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 			{		
-				if (this.members[memberIndex].location == LOC_WORK && this.members[memberIndex].age_group == ADULT)
+				if (this.members[memberIndex].location == LOC_WORK && this.members[memberIndex].eco_age_group == WORKING_ADULT)
 				{
 					this.members[memberIndex].location = LOC_HOME;
 				}
-				else if (this.members[memberIndex].location == LOC_SCHOOL && this.members[memberIndex].age_group == CHILD)
+				else if (this.members[memberIndex].location == LOC_SCHOOL && this.members[memberIndex].eco_age_group == CHILD)
 				{
 					this.members[memberIndex].location = LOC_HOME;
 				}	
@@ -157,17 +245,30 @@ class Population
 		}
 	}
 	
-	_make_trasforms(chance_aa, chance_ac, chance_ca, chance_cc, infected_to_recover_time_adult, infected_to_recover_time_children)
+	_make_trasforms(wa_wa_t_c, 
+					wa_na_t_c, 
+					na_wa_t_c, 
+					na_na_t_c,
+					wa_c_t_c,
+					na_c_t_c,
+					c_c_t_c,
+					c_wa_t_c,
+					c_na_t_c, 
+					infected_to_recover_time_adult, 
+					infected_to_recover_time_children)
 	{
 		// get destrbution
 		var dist = this.countStatusLocationDestrebution();
 		
-		var counter_a_a_transform_meethings_home = dist["a_i_h"] * a_a_meeting_count;
-		var counter_a_a_transform_meethings_work = dist["a_i_w"] * a_a_meeting_count;
-		var counter_c_c_transform_meethings_home = dist["c_i_h"] * c_c_meeting_count;
-		var counter_c_c_transform_meethings_school = dist["c_i_s"] * c_c_meeting_count;
-		var counter_c_a_transform_meethings_home = dist["c_i_h"] * a_c_meeting_count;
-		var counter_a_c_transform_meethings_home = dist["a_i_h"] * a_c_meeting_count;
+		/* infection counts per location */
+		// home
+		var counter_c_h = dist["c_i_h"] * c_c_meeting_count * c_c_t_c + dist["wa_i_h"] * wa_c_meeting_count * wa_c_t_c  + dist["na_i_h"] * na_c_meeting_count * na_c_t_c;
+		var counter_wa_h = dist["wa_i_h"] * wa_wa_meeting_count * wa_wa_t_c + dist["na_i_h"] * wa_na_meeting_count * na_wa_t_c + dist["c_i_h"] * wa_c_meeting_count * c_wa_t_c;
+		var counter_na_h = dist["na_i_h"] * na_na_meeting_count * na_na_t_c + dist["wa_i_h"] * wa_na_meeting_count * wa_na_t_c + dist["c_i_h"] * na_c_meeting_count * c_na_t_c;
+		// work
+		var counter_wa_w = dist["wa_i_w"] * wa_wa_meeting_count;
+		// school
+		var counter_c_s = dist["c_i_s"] * c_c_meeting_count;
 		
 		// stohasticly change states
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
@@ -176,86 +277,110 @@ class Population
 			var member = this.members[memberIndex];
 			member.tic();
 			
-			// first - check if move from I to Radio
+			// first - check if move from I to R
 			member.tryRecover(infected_to_recover_time_adult, infected_to_recover_time_children)
 			
 			// recover does not go anywehre, infected handled already, just manage STATE_S
 			if (member.state == STATE_S)
 			{
-				if (member.age_group == ADULT)
+				if (member.eco_age_group == WORKING_ADULT && member.location == LOC_HOME && counter_wa_h > 0)
 				{
-					if (member.location == LOC_HOME)
-					{
-						if (counter_a_a_transform_meethings_home > 0)
-						{
-							if (Math.random() < chance_aa)
-							{
-								this.members[memberIndex].infect();
-							}
-							counter_a_a_transform_meethings_home--;
-						}
-						if (counter_c_a_transform_meethings_home > 0)
-						{
-							if (Math.random() < chance_ca)
-							{
-								this.members[memberIndex].infect();
-							}
-							counter_c_a_transform_meethings_home--;
-						}
-					}
-					else // if (member.location == LOC_WORK)
-					{
-						if (counter_a_a_transform_meethings_work > 0)
-						{
-							if (Math.random() < chance_aa)
-							{
-								this.members[memberIndex].infect();
-							}
-							counter_a_a_transform_meethings_work--;
-						}
-					}
+					this.members[memberIndex].infect();
+					counter_wa_h--;
 				}
-				else // if (member.age_group == CHILD)
+				else if (member.eco_age_group == WORKING_ADULT && member.location == LOC_WORK && counter_wa_w > 0)
 				{
-					if (member.location == LOC_HOME)
-					{
-						if (counter_c_c_transform_meethings_home > 0)
-						{
-							if (Math.random() < chance_cc)
-							{
-								this.members[memberIndex].infect();
-							}
-							counter_c_c_transform_meethings_home--;
-						}
-						if (counter_a_c_transform_meethings_home > 0)
-						{
-							if (Math.random() < chance_ca)
-							{
-								this.members[memberIndex].infect();
-							}
-							counter_a_c_transform_meethings_home--;
-						}
-					}
-					else // if (member.location == LOC_WORK)
-					{
-						if (counter_c_c_transform_meethings_school > 0)
-						{
-							if (Math.random() < chance_cc)
-							{
-								this.members[memberIndex].infect();
-							}
-							counter_c_c_transform_meethings_school--;
-						}
-						
-					}
+					this.members[memberIndex].infect();
+					counter_wa_w--;
+				}
+				else if (member.eco_age_group == NONWORKING_ADULT && member.location == LOC_HOME && counter_na_h > 0)
+				{
+					this.members[memberIndex].infect();
+					counter_na_h--;
+				}
+				else if (member.eco_age_group == CHILD && member.location == LOC_HOME && counter_c_h > 0)
+				{
+					this.members[memberIndex].infect();
+					counter_c_h--;
+				}
+				else if (member.eco_age_group == CHILD && member.location == LOC_SCHOOL && counter_c_s > 0)
+				{
+					this.members[memberIndex].infect();
+					counter_c_s--;
 				}
 			}
 		}
+		
+		// for the economic, calc states and then working R_0
+		return this.calcWorkingRzero(this.countStatusDestrebution());
+	}
+	
+	
+	// updates the working status according
+	_update_working_status(loss_jobs_rate, 
+							avg_contribution_to_economic,
+							r_zero)
+	{
+		var now_stats = this.countStatusDestrebution();
+		
+		// Note: can be negative, this mean individuals get there jobs back
+		var lose_jobs_s_count = loss_jobs_rate * r_zero * now_stats["wa_s"];
+		var lose_jobs_r_count = loss_jobs_rate * r_zero * now_stats["wa_r"];
+			
+		
+		var working_counter = 0;
+		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
+		{
+			var thisMember = this.members[memberIndex];
+			
+			// handle S case
+			if (thisMember.state == STATE_S)
+			{
+				// if we need to loose jobs or get them
+				if (lose_jobs_s_count > 0 && thisMember.eco_age_group == WORKING_ADULT)
+				{
+					thisMember.eco_age_group = NONWORKING_ADULT;
+					thisMember.location = LOC_HOME;
+					lose_jobs_s_count--;
+				}
+				else if (lose_jobs_s_count < 0 && thisMember.eco_age_group == NONWORKING_ADULT)
+				{
+					thisMember.eco_age_group = WORKING_ADULT;
+					lose_jobs_s_count++;
+				}
+			}
+			
+			// handle R case
+			if (thisMember.state == STATE_R)
+			{
+				// if we need to loose jobs or get them
+				if (lose_jobs_r_count > 0 && thisMember.eco_age_group == WORKING_ADULT)
+				{
+					thisMember.eco_age_group = NONWORKING_ADULT;
+					thisMember.location = LOC_HOME;
+					lose_jobs_r_count--;
+				}
+				else if (lose_jobs_r_count < 0 && thisMember.eco_age_group == NONWORKING_ADULT)
+				{
+					thisMember.eco_age_group = WORKING_ADULT;
+					lose_jobs_r_count++;
+				}
+			}
+			
+			// count for the change in the economic post changes
+			if (thisMember.eco_age_group == WORKING_ADULT && (thisMember.state == STATE_S || thisMember.state == STATE_R))
+			{
+				working_counter++;
+			}
+		}
+		return avg_contribution_to_economic * working_counter;
 	}
 	
 	countStatusDestrebution() 
 	{
-		var answer = {"a_i": 0, "a_s": 0, "a_r": 0, "a_d": 0, "c_i": 0, "c_s": 0, "c_r": 0, "c_d": 0};
+		var answer = {"wa_i": 0, "wa_s": 0, "wa_r": 0, "wa_d": 0,
+						"na_i": 0, "na_s": 0, "na_r": 0, "na_d": 0,
+						"c_i": 0, "c_s": 0, "c_r": 0, "c_d": 0};
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 		{
 			var key = this.members[memberIndex].getKey();
@@ -271,12 +396,49 @@ class Population
 		return answer;
 	}
 	
+	calcWorkingRzero(new_stat)
+	{
+		var answer = 0;
+		if (this.new_stat != null)
+		{
+			var delta_recover = Math.abs(new_stat["wa_r"] - this.last_stats["wa_r"]);
+			var delta_infected = Math.abs(new_stat["wa_i"] - this.last_stats["wa_i"]);
+			if (delta_recover == 0)
+			{
+				answer = delta_infected;
+			}
+			else
+			{
+				answer = delta_infected / delta_recover;
+			}
+		}
+		else
+		{
+			answer = 0;
+		}
+		
+		// edge cases
+		if (answer > 0 && answer < 1)
+		{
+			answer = -1 / answer;
+		}
+		else if (answer == 1)
+		{
+			answer = 0;
+		}
+		
+		this.last_stats = new_stat;
+		return answer;
+	}
+	
 	countStatusLocationDestrebution() 
 	{
-		var answer = {"a_i_h": 0, "a_s_h": 0, "a_r_h": 0, "c_i_h": 0, "c_s_h": 0, "c_r_h": 0,
-		"a_i_w": 0, "a_s_w": 0, "a_r_w": 0, "c_i_w": 0, "c_s_w": 0, "c_r_w": 0,
-		"a_i_s": 0, "a_s_s": 0, "a_r_s": 0, "c_i_s": 0, "c_s_s": 0, "c_r_s": 0,
-		"a_d_h": 0, "a_d_w": 0, "a_d_s": 0, "c_d_h": 0, "c_d_w": 0, "c_d_s": 0};
+		var answer = {"wa_i_h": 0, "wa_s_h": 0, "wa_r_h": 0,
+		"na_i_h": 0, "na_s_h": 0, "na_r_h": 0,		
+		"c_i_h": 0, "c_s_h": 0, "c_r_h": 0,
+		"wa_i_w": 0, "wa_s_w": 0, "wa_r_w": 0,
+		"c_i_s": 0, "c_s_s": 0, "c_r_s": 0,
+		"wa_d_h": 0, "na_d_h": 0, "wa_d_w": 0, "c_d_h": 0, "c_d_s": 0};
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 		{
 			var key = this.members[memberIndex].getFullKey();

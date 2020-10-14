@@ -20,19 +20,34 @@ var is_time_analysis = true;
 
 // graphs
 stateGraphData = []
+economicGraphData = []
+rzeroGraphData = []
 
 // transform chances 
-let a_a_t_c = 0;
-let a_c_t_c = 0;
+let wa_wa_t_c = 0;
+let wa_na_t_c = 0;
+let na_wa_t_c = 0;
+let na_na_t_c = 0;
+let wa_c_t_c = 0;
+let na_c_t_c = 0;
 let c_c_t_c = 0;
-let c_a_t_c = 0;
+let c_wa_t_c = 0;
+let c_na_t_c = 0;
 
 // meeting in time unit (default - hour)
-let a_c_meeting_count = 0;
-let a_a_meeting_count = 0;
+let wa_c_meeting_count = 0;
+let na_c_meeting_count = 0;
+let wa_wa_meeting_count = 0;
+let wa_na_meeting_count = 0;
 let c_c_meeting_count = 0;
+let na_na_meeting_count = 0;
 
-// recover chaces
+// economical parameters
+let e_init = 0;
+let loss_jobs_rate = 0;
+let avg_contribution_to_economic = 0;
+
+// recover chances
 let prc = 0;
 let pra = 0;
 
@@ -41,7 +56,7 @@ let go_to_school_k_days = 1;
 let go_to_work_k_days = 1;
 let rest_in_shabat = 1;
 
-let fps = 6;
+let fps = 12;
 let graph_sample = 24;
 
 let infected_to_recover_time_adult = 0;
@@ -66,9 +81,11 @@ let r_zeros = [];
 let infected = [];
 
 // vaccine run
-var adult_recover;
+var recover_working_adults_percent;
+var recover_nonworking_adults_percent;
 var child_recover;
-var adult_pop_size;
+var working_adult_pop_size;
+var nonworking_adult_pop_size;
 var adult_step_size;
 var children_pop_size;
 var child_step_size;
@@ -94,7 +111,8 @@ let work_school_duration_is_outbreak = [];
 function setup()
 {
 	// setup for user inputs
-	completePop('susceptible_adults_percent', 'infected_adults_percent', 'recover_adults_percent', 'adult_pop_size');
+	completePop('susceptible_working_adults_percent', 'infected_working_adults_percent', 'recover_working_adults_percent', 'working_adult_pop_size');
+	completePop('susceptible_nonworking_adults_percent', 'infected_nonworking_adults_percent', 'recover_nonworking_adults_percent', 'nonworking_adult_pop_size');
 	completePop('susceptible_children_percent', 'infected_children_percent', 'recover_children_percent', 'children_pop_size');
 	completePercent('time_at_home_c', 'time_not_at_home_c', TIME_IN_DAY);
 	completePercent('time_at_home_a', 'time_not_at_home_a', TIME_IN_DAY);
@@ -116,11 +134,11 @@ function draw()
 	var stats = population.countStatusDestrebution();
 	
 	// update stats panel
-	document.getElementById("susceptible_text").innerHTML = (stats["a_s"] + stats["c_s"]).toString();
-	document.getElementById("infected_text").innerHTML = (stats["a_i"] + stats["c_i"]).toString();
+	document.getElementById("susceptible_text").innerHTML = (stats["wa_s"] + stats["na_s"] + stats["c_s"]).toString();
+	document.getElementById("infected_text").innerHTML = (stats["wa_i"] + stats["na_i"] + stats["c_i"]).toString();
 	infected.push(stats["a_i"] + stats["c_i"]);
-	document.getElementById("recover_text").innerHTML = (stats["a_r"] + stats["c_r"]).toString();
-	document.getElementById("dead_text").innerHTML = (stats["a_d"] + stats["c_d"]).toString();
+	document.getElementById("recover_text").innerHTML = (stats["wa_r"] + stats["na_r"] + stats["c_r"]).toString();
+	document.getElementById("dead_text").innerHTML = (stats["wa_d"] + stats["na_d"] + stats["c_d"]).toString();
 	document.getElementById("clock").innerHTML = stepToClock(count);
 	var r_zero = calcRzero(stats);
 	r_zeros.push(r_zero);
@@ -130,18 +148,20 @@ function draw()
 	if (count % graph_sample == 0)
 	{
 		var graphValues = [count / TIME_IN_DAY];
-		Object.keys(stats).forEach(function(key,index) {
+		Object.keys(stats).forEach(function(key, index) {
 			 graphValues.push(stats[key]);
 		});
 		// fix the data that is not 	
 		stateGraphData.push(graphValues);
+		rzeroGraphData.push([count / TIME_IN_DAY, r_zero, 1]);
+		economicGraphData.push([count / TIME_IN_DAY, population.econimic]);
 		if (showFinishAlert)
 		{
-			drawStateDistrebution();	
+			drawAll();	
 		}
 		
 		// if the simulation is over
-		if ((stats["a_i"] + stats["c_i"]) == 0)
+		if ((stats["wa_i"] + stats["na_i"] + stats["c_i"]) == 0)
 		{
 			population.clear();
 			count = 1;
@@ -149,6 +169,7 @@ function draw()
 			if (showFinishAlert)
 			{
 				downloadasTextFile("corona_sir_two_age_stocasic_graph_data.csv", prepareGraphDataToCSV(stateGraphData));
+				downloadasTextFile("corona_sir_two_age_economic_graph_data.csv", prepareEconomicGraphDataToCSV(economicGraphData));
 				downloadasTextFile("corona_sir_two_age_summery.csv", 
 									"Average R_0 = " + (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3) +
 									", with max infected = " + (100 * max(infected) / population.size()).toFixed(3) + "%");
@@ -329,14 +350,29 @@ function draw()
 			infected = [];
 			r_zeros = [];
 			stateGraphData = [];
+			economicGraphData = []
+			rzeroGraphData = []
 		}
 	}
 	
-	// make a step on all the rockets
-	population.run(a_a_t_c, a_c_t_c, c_a_t_c, c_c_t_c,
-					infected_to_recover_time_adult, infected_to_recover_time_children, 
-					time_at_home_c, time_at_home_a, 
-					go_to_school_k_days, go_to_work_k_days);
+	// make a step on all the members
+	population.run(wa_wa_t_c, 
+					wa_na_t_c, 
+					na_wa_t_c, 
+					na_na_t_c,
+					wa_c_t_c,
+					na_c_t_c,
+					c_c_t_c,
+					c_wa_t_c,
+					c_na_t_c,
+					infected_to_recover_time_adult, 
+					infected_to_recover_time_children, 
+					time_at_home_c, 
+					time_at_home_a, 
+					go_to_school_k_days, 
+					go_to_work_k_days,
+					loss_jobs_rate,
+					avg_contribution_to_economic);
 	
 	// Displays stats on the screen
 	var age_status_location_dist = population.countStatusLocationDestrebution();
@@ -374,8 +410,8 @@ function calcRzero(new_stat)
 	var answer = 0;
 	if (last_stats != null)
 	{
-		var delta_recover = (new_stat["a_r"] + new_stat["c_r"]) - (last_stats["a_r"] + last_stats["c_r"]);
-		var delta_infected = (new_stat["a_i"] + new_stat["c_i"]) - (last_stats["a_i"] + last_stats["c_i"]);
+		var delta_recover = (new_stat["wa_r"] + new_stat["na_r"] + new_stat["c_r"]) - (last_stats["wa_r"] + last_stats["na_r"] + last_stats["c_r"]);
+		var delta_infected = (new_stat["wa_i"] + new_stat["na_i"] + new_stat["c_i"]) - (last_stats["wa_i"] + last_stats["na_i"] + last_stats["c_i"]);
 		if (delta_recover == 0)
 		{
 			answer = delta_infected;
@@ -394,13 +430,39 @@ function prepareGraphDataToCSV(data, needHeader = true)
 	var answer = "";
 	if (needHeader)
 	{
-		answer = "day, adult infected, adult susceptible, adult recover, adult dead, child infected, child susceptible, child recover, child_dead\n";
+		answer = "day, working adult infected, working adult susceptible, working adult recover, working adult dead, nonworking adult infected, nonworking adult susceptible, nonworking adult recover, nonworking adult dead, child infected, child susceptible, child recover, child_dead\n";
 	}
 	for (var i = 0; i < data.length; i++)
 	{
 		for (j = 0; j < data[i].length; j++)
 		{
 			answer += data[i][j] + ",";
+		}
+		answer = answer.substring(0, answer.length - 1) + "\n";
+	}
+	return answer.substring(0, answer.length - 1);
+}
+
+function prepareEconomicGraphDataToCSV(data, needHeader = true)
+{
+	var answer = "";
+	if (needHeader)
+	{
+		answer = "day, Economic, Economic Delta\n";
+	}
+	for (var i = 0; i < data.length; i++)
+	{
+		for (j = 0; j < data[i].length; j++)
+		{
+			answer += data[i][j] + ",";
+		}
+		if (i > 0)
+		{
+			answer += data[i][data[i].length - 1] - data[i - 1][data[i].length - 1] + ",";
+		}
+		else
+		{
+			answer += "0,";
 		}
 		answer = answer.substring(0, answer.length - 1) + "\n";
 	}

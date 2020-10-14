@@ -1,5 +1,6 @@
-let ADULT = 1;
-let CHILD = 2;
+let WORKING_ADULT = 1;
+let NONWORKING_ADULT = 2;
+let CHILD = 3;
 
 let STATE_S = 1;
 let STATE_I = 2;
@@ -12,11 +13,11 @@ let LOC_SCHOOL = 3;
 
 class Member
 {
-	constructor(age_group, state = STATE_S, location = LOC_HOME, state_time = 0)
+	constructor(eco_age_group, state = STATE_S, location = LOC_HOME, state_time = 0)
 	{
 		this.state = state;
 		this.state_time = state_time;
-		this.age_group = age_group;
+		this.eco_age_group = eco_age_group;
 		this.location = location;
 	}
 	
@@ -38,6 +39,16 @@ class Member
 		this.state_time = 0;
 	}
 	
+	lose_job()
+	{
+		this.eco_age_group = NONWORKING_ADULT;
+	}
+	
+	get_job()
+	{
+		this.eco_age_group = WORKING_ADULT;
+	}
+	
 	tic()
 	{
 		this.state_time++;
@@ -45,11 +56,12 @@ class Member
 	
 	tryRecover(infected_to_recover_time_adult, infected_to_recover_time_children)
 	{
-		if ((this.state_time > infected_to_recover_time_adult && this.state == STATE_I && this.age_group == ADULT) ||
-		(this.state_time > infected_to_recover_time_children && this.state == STATE_I && this.age_group == CHILD))
+		// TODO: replace != CHILD with something spesificly related to adults 
+		if ((this.state_time > infected_to_recover_time_adult && this.state == STATE_I && this.eco_age_group != CHILD) ||
+		(this.state_time > infected_to_recover_time_children && this.state == STATE_I && this.eco_age_group == CHILD))
 		{
 			var chance = Math.random();
-			if ((this.age_group == ADULT && chance <= pra) || (this.age_group == CHILD && chance <= prc))
+			if ((this.eco_age_group != CHILD && chance <= pra) || (this.eco_age_group == CHILD && chance <= prc))
 			{
 				this.recover();	
 			}
@@ -63,9 +75,13 @@ class Member
 	getKey()
 	{
 		var answer = "";
-		if (this.age_group == ADULT)
+		if (this.eco_age_group == WORKING_ADULT)
 		{
-			answer += "a";
+			answer += "wa";
+		}
+		else if (this.eco_age_group == NONWORKING_ADULT)
+		{
+			answer += "na";
 		}
 		else // CHILD
 		{
@@ -110,7 +126,7 @@ class Member
 	toString()
 	{
 		var age = "Adult";
-		if (this.age_group == CHILD)
+		if (this.eco_age_group == CHILD)
 		{
 			age = "Child";
 		}
@@ -132,6 +148,6 @@ class Member
 		{
 			location = "Work";
 		}
-		return "<Member | age_group: " + age + ", state: " + state + " (" + this.state_time + " hours), location: " + location + ">";
+		return "<Member | eco_age_group: " + age + ", state: " + state + " (" + this.state_time + " hours), location: " + location + ">";
 	}
 }
