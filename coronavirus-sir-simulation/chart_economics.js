@@ -53,7 +53,7 @@ function drawEconomicsGraph()
 
       var data = new google.visualization.DataTable();
       data.addColumn('number', 'X');
-      data.addColumn('number', 'Economic');
+      data.addColumn('number', 'Economic Delta');
 
       data.addRows(economicGraphData);
 

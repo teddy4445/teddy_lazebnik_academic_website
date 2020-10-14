@@ -154,7 +154,7 @@ function draw()
 		// fix the data that is not 	
 		stateGraphData.push(graphValues);
 		rzeroGraphData.push([count / TIME_IN_DAY, r_zero, 1]);
-		economicGraphData.push([count / TIME_IN_DAY, population.econimic]);
+		economicGraphData.push([count / TIME_IN_DAY, population.econimic_delta]);
 		if (showFinishAlert)
 		{
 			drawAll();	

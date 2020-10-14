@@ -17,6 +17,7 @@ class Population
 		// main members
 		this.members = [];
 		this.econimic = init_econimic;
+		this.econimic_delta = 0;
 		
 		// technical members
 		this.timeOfDay = 0;
@@ -156,6 +157,9 @@ class Population
 		avg_contribution_to_economic)
 	{
 		
+		// 0. mix population in order to have a real stocastic process of picking the members
+		this._shuffle();
+		
 		// 1. stohasticly move them around (with day - night circle)
 		if (!((this.days % 6 == 0 || this.days % 7 == 0) && rest_in_shabat))
 		{
@@ -179,7 +183,8 @@ class Population
 											infected_to_recover_time_children);
 		
 		// 3. update the working status (the new econimic part of the system) and update the economic 
-		this.econimic += this._update_working_status(loss_jobs_rate, avg_contribution_to_economic, r_zero);
+		this.econimic_delta = this._update_working_status(loss_jobs_rate, avg_contribution_to_economic, r_zero);
+		this.econimic += this.econimic_delta;
 		
 		// 4. update time of day 
 		this.timeOfDay++;
@@ -187,6 +192,27 @@ class Population
 		{
 			this.timeOfDay = 0;
 			this.days += 1;
+		}
+	}
+
+
+	_shuffle(array) 
+	{
+		let counter = this.members.length;
+
+		// While there are elements in the array
+		while (counter > 0)
+		{
+			// Pick a random index
+			let index = Math.floor(Math.random() * counter);
+
+			// Decrease counter by 1
+			counter--;
+
+			// And swap the last element with it
+			let temp = this.members[counter];
+			this.members[counter] = this.members[index];
+			this.members[index] = temp;
 		}
 	}
 	
