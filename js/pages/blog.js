@@ -1,9 +1,9 @@
 // imports 
-import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
-import { BlogCard } from '/lecture_website_template/js/components/blogCard.js';
+import { PageRender, retrivedData } from '/js/pageRender.js';
+import { BlogCard } from '/js/components/blogCard.js';
 
 // Data file paths
-let PUBLICATIONS_JSON = "/lecture_website_template/data/jsons/academic-publications.json";
+let PUBLICATIONS_JSON = "/data/jsons/academic-publications.json";
 
 // consts 
 let default_sorter = "year";

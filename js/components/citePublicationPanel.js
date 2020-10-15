@@ -1,5 +1,5 @@
-import { Element } from '/lecture_website_template/js/components/element.js';
-import { ActionButton } from '/lecture_website_template/js/components/actionButton.js';
+import { Element } from '/js/components/element.js';
+import { ActionButton } from '/js/components/actionButton.js';
 
 class CitePublicationPanel extends Element
 {
