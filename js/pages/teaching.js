@@ -1,9 +1,9 @@
 // imports 
-import { PageRender, retrivedData } from '/js/pageRender.js';
-import {CourseCard} from '/js/components/courseCard.js';
+import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
+import {CourseCard} from '/lecture_website_template/js/components/courseCard.js';
 
 // Data file paths
-let TAECHING_JSON = "/data/jsons/teaching.json";
+let TAECHING_JSON = "/lecture_website_template/data/jsons/teaching.json";
 
 // consts 
 let default_filter = "All Universities";

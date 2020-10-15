@@ -1,12 +1,12 @@
 // imports 
-import { PageRender, retrivedData } from '/js/pageRender.js';
-import { PublicationCard } from '/js/components/publicationCard.js';
-import { ProjectPanel } from '/js/components/projectPanel.js';
+import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
+import { PublicationCard } from '/lecture_website_template/js/components/publicationCard.js';
+import { ProjectPanel } from '/lecture_website_template/js/components/projectPanel.js';
 
 // Data file paths
-let UPDATES_TEXT = "/data/notifications.txt"
-let LECTURE_INFO_JSON = "/data/jsons/lecturer.json";
-let INDEX_JSON = "/data/jsons/index.json";
+let UPDATES_TEXT = "/lecture_website_template/data/notifications.txt"
+let LECTURE_INFO_JSON = "/lecture_website_template/data/jsons/lecturer.json";
+let INDEX_JSON = "/lecture_website_template/data/jsons/index.json";
 
 let INFO_ICON = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0055 8.66707C12.672 8.66707 13.2143 8.12545 13.2143 7.45974C13.2143 6.79162 12.672 6.24805 12.0055 6.24805C11.3389 6.24805 10.7966 6.79162 10.7966 7.45974C10.7966 8.12545 11.3388 8.66707 12.0055 8.66707Z" fill="#5A67D8"/><path d="M14.1509 16.643H12.8655V11.8246C12.8655 11.3496 12.4805 10.9645 12.0054 10.9645H9.86009C9.38509 10.9645 9 11.3496 9 11.8246C9 12.2996 9.38509 12.6847 9.86009 12.6847H11.1454V17.503C11.1454 17.978 11.5305 18.3631 12.0055 18.3631H14.151C14.6261 18.3631 15.0111 17.978 15.0111 17.503C15.011 17.028 14.626 16.643 14.1509 16.643Z" fill="#5A67D8"/><path d="M12.0001 0C5.38312 0 0 5.38312 0 11.9998C0 18.6165 5.38312 23.9998 12.0001 23.9998C18.6169 23.9998 24 18.6167 24 11.9998C24 5.383 18.6168 0 12.0001 0ZM12.0001 22.2796C6.33162 22.2796 1.72018 17.6681 1.72018 11.9998C1.72018 6.33151 6.33162 1.72006 12.0001 1.72006C17.6685 1.72006 22.2798 6.33151 22.2798 11.9998C22.2798 17.6681 17.6684 22.2796 12.0001 22.2796Z" fill="#5A67D8"/></svg>';
 
@@ -47,6 +47,23 @@ class Index  extends PageRender
 					notificationHtml += '<div class="carousel-cell"><div class="update-panel"><div class="update-text">' + notificationLines[notificationIndex] + '</div></div></div>';
 				}
 				document.getElementById("updates-panel").innerHTML = notificationHtml;
+				
+				if (notificationLines.length == 1)
+				{
+					setTimeout(function() 
+					{
+						  var flickity_button = document.getElementsByClassName("flickity-button");
+						  for (var i = 0; i < flickity_button.length; i++) 
+						  {
+							  flickity_button[i].style.display = "none";
+						  }
+						  var flickity_dots = document.getElementsByClassName("flickity-page-dots");
+						  for (var i = 0; i < flickity_dots.length; i++) 
+						  {
+							  flickity_dots[i].style.display = "none";
+						  }
+					}, 10);
+				}
 			}
 			else
 			{
@@ -83,7 +100,10 @@ class Index  extends PageRender
 			document.getElementById("lecture_address").innerHTML += addressesHtml;
 			document.getElementById("lecture_phone").innerHTML += jsonObj["phone"];
 			document.getElementById("lecture_email").innerHTML += jsonObj["email"];
-			// TODO: add links to the academic social buttons
+			
+			
+			document.getElementById("social-linkedin").href = jsonObj["linkedin_link"];
+			document.getElementById("social-google-scholar").href = jsonObj["google_scholar_link"];
 			
 			// TODO: as list not single string
 			// document.getElementById("research_intrests").innerHTML = jsonObj["field"];

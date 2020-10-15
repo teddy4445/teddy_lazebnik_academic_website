@@ -1,5 +1,5 @@
-import { Element } from '/js/components/element.js';
-import { ProjectStudent } from '/js/components/ProjectStudent.js';
+import { Element } from '/lecture_website_template/js/components/element.js';
+import { ProjectStudent } from '/lecture_website_template/js/components/ProjectStudent.js';
 
 class StudentCard extends Element
 {

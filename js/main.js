@@ -10,10 +10,10 @@ if (thisPage == "")
 // end - init all the objects needed //
 
 // run this method on page load 
-onPageLoadMain();
+onPageLoad();
 
 // the function to run on page load to build dynamic components that does not change often or not render in SEO lookups
-function onPageLoadMain()
+function onPageLoad()
 {
 	// code for IE7+, Firefox, Chrome, Opera, Safari
 	if (window.XMLHttpRequest)
@@ -36,7 +36,7 @@ function onPageLoadMain()
 function loadHeader()
 {	
 	client.onreadystatechange  = HeaderHandler;
-	client.open("GET", "/components/header.html", false);
+	client.open("GET", "/lecture_website_template/components/header.html", false);
 	client.send();
 }
 
@@ -52,7 +52,7 @@ function HeaderHandler()
 function loadFooter()
 {		
 	client.onreadystatechange  = FooterHandler;
-	client.open("GET", "/components/footer.html", false);
+	client.open("GET", "/lecture_website_template/components/footer.html", false);
 	client.send();
 }
 
@@ -120,22 +120,16 @@ function manageCollapsible() {
 	}
 }
 
-try
-{
-	// close header mobile menu on click outside the menu
-	document.getElementById("mobile-menu-bg").onclick = function() { 
-		document.getElementById('mobile-menu').style.marginLeft = '-320px';
-		document.getElementById('mobile-menu-bg').style.marginLeft = '100%';
-	};
+// close header mobile menu on click outside the menu
+document.getElementById("mobile-menu-bg").onclick = function() { 
+	document.getElementById('mobile-menu').style.marginLeft = '-320px';
+	document.getElementById('mobile-menu-bg').style.marginLeft = '100%';
+};
 
-	document.getElementById('mobile-menu').onclick = function(e) { 
-		e.stopPropagation();
-	};
-}
-catch (error)
-{
-	console.log(error);
-}
+document.getElementById('mobile-menu').onclick = function(e) { 
+	e.stopPropagation();
+};
+
 
 /* help functions */
 
@@ -188,204 +182,3 @@ function getCookie(cname)
 // end - cookie related functions // 
 
 /* end - help functions */
-
-
-/* OLD WEBSITE LOGIC DOWN HERE - DELETE IT WHEN FINISHING WITH THE TRANSACTION */
-
-
-// run the logic
-onPageLoad();
-
-const buttons = document.querySelectorAll('button');
-let rippleCounter = 0;
-buttons.forEach(btn => {
-	if (btn.classList.contains("cool-btn"))
-	{
-		btn.addEventListener('click', function(e){
-			let x = e.clientX - e.offsetHeight; //- e.target.offsetLeft * 2;
-			let y = e.clientY - e.offsetWidth; //- e.target.offsetTop;
-			
-			let ripples = document.createElement('span');
-			ripples.style.left = x + "px";
-			ripples.style.top = y + "px";
-			ripples.classList.add("ripple");
-			this.appendChild(ripples);
-			
-			setTimeout(() => {
-				ripples.remove();
-				var btn_link = document.getElementById(this.id + "_href").innerHTML;
-				if (btn_link != "#" && btn_link != "")
-				{
-					window.open(btn_link, "_blank");
-				}
-			}, 1000);
-		})
-	}
-});
-
-function onPageLoad()
-{
-	if (getWidth() < 440)
-	{
-		document.getElementById("logo").innerHTML = "T. Lazebnik";
-	}
-	
-	let see_cookies = getCookie("seeCookieMessage");
-	if (see_cookies == "")
-	{
-		setCookie("seeCookieMessage", true, 7);
-		opacityAnimation("cookie-box", 250, true);
-	}
-	// try to add notification panel
-	loadNotificationBar();
-}
-
-/* notification panel on mian pages */
-function loadNotificationBar()
-{	
-	// check if needed 
-	if (document.getElementById("notification-panel") == null)
-	{
-		return;
-	}
-	
-	// get the data from the file 
-	var client;
-	// code for IE7+, Firefox, Chrome, Opera, Safari
-	if (window.XMLHttpRequest)
-	{
-		client = new XMLHttpRequest();
-	}
-	else // code for IE6, IE5
-	{
-		client = new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	client.onreadystatechange  = notificationHandler;
-	client.open("GET", "../notifications.txt", false);
-	client.send();
-}
-
-function notificationHandler() 
-{
-	if (this.readyState == 4)
-	{
-		if(this.status == 200 && this.responseText != null )
-		{
-			buildNotificationUI(this.responseText.split("\n"), true);
-		} 
-		else 
-		{
-			buildNotificationUI(this.status, false);
-		}
-	}
-}
-
-function buildNotificationUI(notifications, is_ok)
-{
-	var notfi_panel = document.getElementById("notification-panel");
-	var notfi_html = '<div class="notification-panel">';
-	// set notifications or error message
-	if (is_ok)
-	{
-		// build the panel
-		for (var i = 0; i < notifications.length; i++)
-		{
-			notfi_html += '<div class="notification"><p>' + notifications[i].trim().replace("script", "") + '</p></div>'; // the replace is to avoid JS injection in the original file
-		}
-	}
-	else
-	{
-		notfi_html += "<p> Error with status " + notifications + " while trying to retrive notifications - please inform the owner of the site regarding this error... </p>";
-	}
-	// set the content into the panel
-	notfi_html += '</div>';
-	notfi_panel.innerHTML = notfi_html;
-}
-/* end - notification panel on mian pages */
-
-
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-
-function containsName(name, nameList)
-{
-	for (var i = 0; i < nameList.length; i++)
-	{
-		if (name.includes(nameList[i]))
-		{
-			return true;
-		}
-	}
-	return false;
-}
-
-function closeSearchAlert(){
-	closeAlert("error-search");
-}
-
-function closeAlert(alertID)
-{
-	opacityAnimation(alertID, 250, false);
-}
-
-function opacityAnimation(element_id, miliseconds, is_show = true) {
-	try
-	{	
-	  var elem = document.getElementById(element_id);
-	  var FPMS = 10;
-	  var frameCount = Math.floor(miliseconds / FPMS);
-	  var frameIndex = 0;
-	  if (is_show)
-	  {
-		document.getElementById(element_id).style.opacity = 0;
-	  }
-	  else
-	  {
-		document.getElementById(element_id).style.opacity = 1;
-	  }
-	  document.getElementById(element_id).style.display = "";
-	  var id = setInterval(frame, FPMS);	
-	}
-	catch (error)
-	{
-		console.log("Error at 'opacityAnimation' saying: " + error);
-	}
-	  function frame() {
-		  try
-		  {
-			if (frameIndex == frameCount) {
-			  clearInterval(id);
-			  if (!is_show)
-			  {
-				document.getElementById(element_id).style.display = "none";  
-			  }
-			} else {
-			  if (is_show)
-			  {
-				elem.style.opacity = frameIndex / frameCount;
-			  }
-			  else
-			  {
-				  elem.style.opacity = 1 - (frameIndex / frameCount);   
-			  }
-			}
-			frameIndex++;  
-		  }
-		  catch (error)
-		  {
-			  console.log("Error at 'opacityAnimation -> frame' saying: " + error);
-		  }
-	  }
-}
-
-function getWidth()
-{
-	return Math.max(
-		document.body.scrollWidth,
-		document.documentElement.scrollWidth,
-		document.body.offsetWidth,
-		document.documentElement.offsetWidth,
-		document.documentElement.clientWidth
-	  );
-}

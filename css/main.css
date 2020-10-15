@@ -148,12 +148,12 @@ footer h1{
   
   .footer-menu{
 	  max-width: 80% !important;
-	 }
+  }
   
   footer h1{
 	  padding-right: 0px;
 	  width: 100%;
-	 }
+  }
   
   .footer-info-item  {
     display: none;
@@ -767,6 +767,18 @@ flickity-prev-next-button[disabled]{
 	margin-right: 20px;
 }
 
+#biography{
+	
+}
+
+#biography-header{
+	
+}
+
+.acadmic-parms-row{
+	
+}
+
 .mobile-row-breaker{
 	
 }
@@ -797,6 +809,14 @@ flickity-prev-next-button[disabled]{
 
 	.nav *{
 		font-size: 15px;
+	}
+
+	#biography{
+		margin-bottom: 20px;
+	}
+
+	#biography-header{
+		margin-top: 20px;
 	}
 }
 
@@ -846,6 +866,7 @@ flickity-prev-next-button[disabled]{
   
   .mobile-row-breaker{
 	  flex-wrap: wrap;
+	  flex-direction: coloumn;
 	}
 	
 	.mobile-row-spacer{
@@ -855,7 +876,19 @@ flickity-prev-next-button[disabled]{
 	.flickity-prev-next-button{
 		display: none;
 	}
+}
 
+@media only screen and (max-width: 400px) {
+
+	.acadmic-parms-row{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.acadmic-parms-row span{
+		margin-top: 10px;
+	}
+	
 }
 
 
