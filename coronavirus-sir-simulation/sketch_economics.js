@@ -112,6 +112,7 @@ var child_step_size;
 
 // multi run vaccine 
 let vaccine_data = [];
+let vaccine_economical_data = [];
 let vaccine_max_infected_data = [];
 let vaccine_is_outbreak = [];
 
@@ -119,14 +120,17 @@ let vaccine_is_outbreak = [];
 let lockdown_data = [];
 let lockdown_max_infected_data = [];
 let lockdown_is_outbreak = [];
+let lockdown_economical_data = [];
 
 // work\school duration run  
 let work_school_duration = [];
+let work_school_duration_economic = [];
 let work_school_duration_max_infected_data = [];
 let work_school_duration_is_outbreak = [];
 
 // economical run  
 let economical_duration = [];
+let economical_duration_economic = [];
 let economical_duration_max_infected_data = [];
 let economical_duration_is_outbreak = [];
 
@@ -161,7 +165,7 @@ function draw()
 	// update stats panel
 	document.getElementById("susceptible_text").innerHTML = (stats["wa_s"] + stats["na_s"] + stats["c_s"]).toString();
 	document.getElementById("infected_text").innerHTML = (stats["wa_i"] + stats["na_i"] + stats["c_i"]).toString();
-	infected.push(stats["a_i"] + stats["c_i"]);
+	infected.push(stats["wa_i"] + stats["na_i"] + stats["c_i"]);
 	document.getElementById("recover_text").innerHTML = (stats["wa_r"] + stats["na_r"] + stats["c_r"]).toString();
 	document.getElementById("dead_text").innerHTML = (stats["wa_d"] + stats["na_d"] + stats["c_d"]).toString();
 	document.getElementById("clock").innerHTML = stepToClock(count);
@@ -254,6 +258,9 @@ function draw()
 						vaccine_is_outbreak.push([(adult_recover / parseInt(working_adult_pop_size + nonworking_adult_pop_size)).toFixed(3), 
 												(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
 												checkOutbreak(r_zeros)]);
+						vaccine_economical_data.push([(adult_recover / parseInt(working_adult_pop_size + nonworking_adult_pop_size)).toFixed(3),
+													(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
+													population.econimic]);
 						child_recover += child_step_size;
 					}
 					else
@@ -266,6 +273,7 @@ function draw()
 				{
 					// download results
 					downloadasTextFile("vaccine_max_infected_data.csv", prepareGraphDataToCSV(vaccine_max_infected_data, false));
+					downloadasTextFile("vaccine_economical_data.csv", prepareGraphDataToCSV(vaccine_economical_data, false));
 					downloadasTextFile("vaccine_data.csv", prepareGraphDataToCSV(vaccine_data, false));
 					downloadasTextFile("vaccine_is_outbreak.csv", prepareGraphDataToCSV(vaccine_is_outbreak, false));
 					
@@ -273,6 +281,7 @@ function draw()
 					vaccine_max_infected_data = [];
 					vaccine_data = [];
 					vaccine_is_outbreak = [];
+					vaccine_economical_data = [];
 					
 					// make back as in the start
 					showFinishAlert = true;
@@ -309,6 +318,7 @@ function draw()
 											
 						console.log("Lockdown: Work (%) = " + go_to_work_percent + ", School (%) = " + go_to_school_percent);
 						lockdown_data.push([go_to_work_percent, go_to_school_percent, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+						lockdown_economical_data.push([go_to_work_percent, go_to_school_percent, population.econimic]);
 						lockdown_max_infected_data.push([go_to_work_percent, go_to_school_percent, (100 * max(infected) / population.size()).toFixed(3)]);
 						lockdown_is_outbreak.push([go_to_work_percent, 
 												go_to_school_percent,
@@ -326,12 +336,14 @@ function draw()
 					// download results
 					downloadasTextFile("lockdown_max_infected_data.csv", prepareGraphDataToCSV(lockdown_max_infected_data, false));
 					downloadasTextFile("lockdown_data.csv", prepareGraphDataToCSV(lockdown_data, false));
+					downloadasTextFile("lockdown_economical_data.csv", prepareGraphDataToCSV(lockdown_economical_data, false));
 					downloadasTextFile("lockdown_is_outbreak.csv", prepareGraphDataToCSV(lockdown_is_outbreak, false));
 					
 					// reset for next run
 					lockdown_max_infected_data = [];
 					lockdown_data = [];
 					lockdown_is_outbreak = [];
+					lockdown_economical_data = [];
 					
 					// make back as in the start
 					showFinishAlert = true;
@@ -368,6 +380,7 @@ function draw()
 											
 						console.log("Time Duraction Analysis: Work hours  = " + time_at_home_a + ", School hours = " + time_at_home_c);
 						work_school_duration.push([time_at_home_a, time_at_home_c, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+						work_school_duration_economic.push([time_at_home_a, time_at_home_c, population.econimic]);
 						work_school_duration_max_infected_data.push([time_at_home_a, time_at_home_c, (100 * max(infected) / population.size()).toFixed(3)]);
 						work_school_duration_is_outbreak.push([time_at_home_a, time_at_home_c, checkOutbreak(r_zeros)]);
 						time_at_home_c += 1;
@@ -383,12 +396,14 @@ function draw()
 					// download results
 					downloadasTextFile("work_school_duration_max_infected_data.csv", prepareGraphDataToCSV(work_school_duration_max_infected_data, false));
 					downloadasTextFile("work_school_duration_data.csv", prepareGraphDataToCSV(work_school_duration, false));
+					downloadasTextFile("work_school_duration_economic.csv", prepareGraphDataToCSV(work_school_duration_economic, false));
 					downloadasTextFile("work_school_duration_is_outbreak.csv", prepareGraphDataToCSV(work_school_duration_is_outbreak, false));
 					
 					// reset for next run
 					work_school_duration_max_infected_data = [];
 					work_school_duration = [];
 					work_school_duration_is_outbreak = [];
+					work_school_duration_economic = [];
 					
 					// make back as in the start
 					showFinishAlert = true;
@@ -423,6 +438,7 @@ function draw()
 					console.log("Econimic job loss rate analysis: m=" + loss_jobs_rate + "%");
 					
 					economical_duration.push([loss_jobs_rate, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+					economical_duration_economic.push([loss_jobs_rate, population.econimic]);
 					economical_duration_max_infected_data.push([loss_jobs_rate, (100 * max(infected) / population.size()).toFixed(3)]);
 					economical_duration_is_outbreak.push([loss_jobs_rate, checkOutbreak(r_zeros)]);
 					
@@ -433,12 +449,14 @@ function draw()
 					// download results
 					downloadasTextFile("economical_duration_max_infected_data.csv", prepareGraphDataToCSV(economical_duration_max_infected_data, false));
 					downloadasTextFile("economical_duration.csv", prepareGraphDataToCSV(economical_duration, false));
+					downloadasTextFile("economical_duration_economic.csv", prepareGraphDataToCSV(economical_duration_economic, false));
 					downloadasTextFile("economical_duration_is_outbreak.csv", prepareGraphDataToCSV(economical_duration_is_outbreak, false));
 					
 					// reset for next run
 					economical_duration = [];
 					economical_duration_max_infected_data = [];
 					economical_duration_is_outbreak = [];
+					economical_duration_economic = [];
 					
 					// make back as in the start
 					showFinishAlert = true;
