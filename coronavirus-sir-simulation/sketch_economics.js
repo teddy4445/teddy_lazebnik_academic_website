@@ -183,34 +183,34 @@ function draw()
 			}
 			else if (is_vaccine)
 			{
-				if (adult_recover <= adult_pop_size)
+				if (adult_recover <= working_adult_pop_size + nonworking_adult_pop_size)
 				{
 					if (child_recover <= children_pop_size)
 					{
 						
 						population = new Population(working_adult_pop_size,
-													working_adult_pop_size - 1 - parseInt(adult_recover / 2),
+													working_adult_pop_size - 1 - parseInt((adult_recover * working_adult_pop_size) / (2 * (working_adult_pop_size + nonworking_adult_pop_size))),
 													1,
-													parseInt(adult_recover / 2),
+													parseInt((adult_recover * working_adult_pop_size) / (2 * working_adult_pop_size + nonworking_adult_pop_size)),
 													nonworking_adult_pop_size,
-													nonworking_adult_pop_size - parseInt(adult_recover / 2),
+													nonworking_adult_pop_size - parseInt((adult_recover * nonworking_adult_pop_size) / (2 * (working_adult_pop_size + nonworking_adult_pop_size))),
 													0,
-													parseInt(adult_recover / 2),
+													parseInt((adult_recover * nonworking_adult_pop_size) / (2 * working_adult_pop_size + nonworking_adult_pop_size)),
 													children_pop_size, 
-													susceptible_children_amount - 1 - child_recover, 
+													children_pop_size - 1 - child_recover, 
 													1,
 													child_recover,
 													e_init);
 											
 						// downloadasTextFile("corona_sir_two_age_stocasic_graph_data___vacine_a_" + adult_recover + "_c_" + child_recover + ".csv", prepareGraphDataToCSV(stateGraphData));
 						console.log("Vacine: a = " + adult_recover + ", c = " + child_recover);
-						vaccine_data.push([(adult_recover / parseInt(document.getElementById("adult_pop_size").value)).toFixed(3), 
+						vaccine_data.push([(adult_recover / parseInt(working_adult_pop_size + nonworking_adult_pop_size)).toFixed(3), 
 											(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
 											(r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
-						vaccine_max_infected_data.push([(adult_recover / parseInt(document.getElementById("adult_pop_size").value)).toFixed(3), 
+						vaccine_max_infected_data.push([(adult_recover / parseInt(working_adult_pop_size + nonworking_adult_pop_size)).toFixed(3), 
 											(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
 											(100 * max(infected) / population.size()).toFixed(3)]);
-						vaccine_is_outbreak.push([(adult_recover / parseInt(document.getElementById("adult_pop_size").value)).toFixed(3), 
+						vaccine_is_outbreak.push([(adult_recover / parseInt(working_adult_pop_size + nonworking_adult_pop_size)).toFixed(3), 
 												(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
 												checkOutbreak(r_zeros)]);
 						child_recover += child_step_size;
