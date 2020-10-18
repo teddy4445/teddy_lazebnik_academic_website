@@ -425,10 +425,10 @@ class Population
 	calcWorkingRzero(new_stat)
 	{
 		var answer = 0;
-		if (this.new_stat != null)
+		if (this.last_stats != null)
 		{
-			var delta_recover = Math.abs(new_stat["wa_r"] - this.last_stats["wa_r"]);
-			var delta_infected = Math.abs(new_stat["wa_i"] - this.last_stats["wa_i"]);
+			var delta_recover = new_stat["wa_r"] + new_stat["na_r"] + new_stat["c_r"] - this.last_stats["wa_r"] - this.last_stats["na_r"] - this.last_stats["c_r"];
+			var delta_infected = new_stat["wa_i"] + new_stat["na_i"] + new_stat["c_i"] - this.last_stats["wa_i"] - this.last_stats["na_i"] - this.last_stats["c_i"];
 			if (delta_recover == 0)
 			{
 				answer = delta_infected;

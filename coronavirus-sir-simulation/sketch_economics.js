@@ -14,14 +14,32 @@ runStarted = false;
 var showFinishAlert = true;
 
 // multi analysis type flags
+var is_economic = true;
 var is_vaccine = true;
 var is_lockdown = true;
 var is_time_analysis = true;
 
 // graphs
-stateGraphData = []
-economicGraphData = []
-rzeroGraphData = []
+stateGraphData = [];
+economicGraphDataAll = [];
+economicGraphData = [];
+rzeroGraphData = [];
+
+// populations sizes
+var working_adult_pop_size = 0;
+var susceptible_working_adults_percent = 0;
+var infected_working_adults_percent = 0;
+var recover_working_adults_percent = 0;
+
+var nonworking_adult_pop_size = 0;
+var susceptible_nonworking_adults_percent = 0;
+var infected_nonworking_adults_percent = 0;
+var recover_nonworking_adults_percent = 0;
+
+var children_pop_size = 0;
+var susceptible_children_amount = 0;
+var infected_children_amount = 0;
+var recover_children_amount = 0;
 
 // transform chances 
 let wa_wa_t_c = 0;
@@ -46,6 +64,8 @@ let na_na_meeting_count = 0;
 let e_init = 0;
 let loss_jobs_rate = 0;
 let avg_contribution_to_economic = 0;
+let loss_jobs_rate_step = 0;
+let loss_jobs_rate_max = 0;
 
 // recover chances
 let prc = 0;
@@ -105,6 +125,11 @@ let work_school_duration = [];
 let work_school_duration_max_infected_data = [];
 let work_school_duration_is_outbreak = [];
 
+// economical run  
+let economical_duration = [];
+let economical_duration_max_infected_data = [];
+let economical_duration_is_outbreak = [];
+
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
 // setup all the simulation before starting 
@@ -144,6 +169,9 @@ function draw()
 	r_zeros.push(r_zero);
 	document.getElementById("r_zero").innerHTML = "R<small>0</small> = " + r_zero.toFixed(2) + ", Avg(R<small>0</small>) = " + (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(2) ;
 	
+	// recall each step to sum it in the graph later
+	economicGraphDataAll.push(population.econimic_delta);
+	
 	// calc graph needed data and update it 
 	if (count % graph_sample == 0)
 	{
@@ -154,7 +182,20 @@ function draw()
 		// fix the data that is not 	
 		stateGraphData.push(graphValues);
 		rzeroGraphData.push([count / TIME_IN_DAY, r_zero, 1]);
-		economicGraphData.push([count / TIME_IN_DAY, population.econimic_delta]);
+		
+		if (count != 0)
+		{
+			var gatherVal = 0;
+			for (var i = economicGraphDataAll.length - graph_sample; i < economicGraphDataAll.length; i++)
+			{
+				gatherVal += economicGraphDataAll[i];
+			}
+			economicGraphData.push([count / TIME_IN_DAY, gatherVal]);
+		}
+		else
+		{
+			economicGraphData.push([count / TIME_IN_DAY, 0]);
+		}
 		if (showFinishAlert)
 		{
 			drawAll();	
@@ -361,12 +402,63 @@ function draw()
 					runStarted = false;
 				}
 			}
+			else if(is_economic)
+			{
+				if (loss_jobs_rate <= loss_jobs_rate_max)
+				{		
+					population = new Population(working_adult_pop_size,
+												susceptible_working_adults_percent,
+												infected_working_adults_percent,
+												recover_working_adults_percent,
+												nonworking_adult_pop_size,
+												susceptible_nonworking_adults_percent,
+												infected_nonworking_adults_percent,
+												recover_nonworking_adults_percent,
+												children_pop_size, 
+												susceptible_children_amount, 
+												infected_children_amount,
+												recover_children_amount,
+												e_init);
+										
+					console.log("Econimic job loss rate analysis: m=" + loss_jobs_rate + "%");
+					
+					economical_duration.push([loss_jobs_rate, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+					economical_duration_max_infected_data.push([loss_jobs_rate, (100 * max(infected) / population.size()).toFixed(3)]);
+					economical_duration_is_outbreak.push([loss_jobs_rate, checkOutbreak(r_zeros)]);
+					
+					loss_jobs_rate += loss_jobs_rate_step;
+				}
+				else
+				{
+					// download results
+					downloadasTextFile("economical_duration_max_infected_data.csv", prepareGraphDataToCSV(economical_duration_max_infected_data, false));
+					downloadasTextFile("economical_duration.csv", prepareGraphDataToCSV(economical_duration, false));
+					downloadasTextFile("economical_duration_is_outbreak.csv", prepareGraphDataToCSV(economical_duration_is_outbreak, false));
+					
+					// reset for next run
+					economical_duration = [];
+					economical_duration_max_infected_data = [];
+					economical_duration_is_outbreak = [];
+					
+					// make back as in the start
+					showFinishAlert = true;
+					document.getElementById("playBtn").style.display = "";
+					document.getElementById("pauseBtn").style.display = "";
+			
+					// reset view
+					document.getElementById("main").style.display = "none"; // close the init form
+					document.getElementById("init_form").style.display = ""; // show the main window
+					
+					runStarted = false;
+				}
+			}
 			
 			infected = [];
 			r_zeros = [];
 			stateGraphData = [];
-			economicGraphData = []
-			rzeroGraphData = []
+			rzeroGraphData = [];
+			economicGraphData = [];
+			economicGraphDataAll = [];
 		}
 	}
 	

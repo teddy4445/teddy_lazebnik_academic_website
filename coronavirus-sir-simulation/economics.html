@@ -432,9 +432,9 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="graph_samples">
-			  </b>Rate (in percent) working adults loose their jobs as a result of the epedimic (m = )</b>
+			  </b>Rate working adults loose their jobs as a result of the epedimic (m = )</b>
 			 </label>
-			 <input class="form-control" id="m" max="100" min="0" placeholder="Rate (in percent) working adults loose their jobs as a result of the epedimic (m = )" required="" type="number" value="10" />
+			 <input class="form-control" id="m" placeholder="Rate (in percent) working adults loose their jobs as a result of the epedimic (m = )" required="" type="text" value="0.001" />
 			</div>
 		   </div>
 		  </div>
@@ -443,9 +443,9 @@
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="graph_samples">
-			  </b>Average worker's contribution to the economics in dollers (e = )</b>
+			  </b>Average worker's contribution to the economics in dollers per month (e = )</b>
 			 </label>
-			 <input class="form-control" id="e" max="1000000" min="1" placeholder="Average worker's contribution to the economics in dollers (e = )" required="" type="number" value="1500" />
+			 <input class="form-control" id="e" max="1000000" min="1" placeholder="Average worker's contribution to the economics in dollers (e = )" required="" type="number" value="2000" />
 			</div>
 		   </div>
 		  </div>
@@ -559,6 +559,33 @@
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<button class="btn btn-warning btn-lg" onclick="return startVaccineSimulation(true)" style="width: 100%; margin-top: 10px;">
 			 Run Simulation (Vaccine Analysis)
+			</button>
+		   </div>
+		  </div>
+		  
+		  <div class="row" style="margin-top: 20px;">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="m_step">
+			  Step in the rate working adults loose their jobs as a result of the epedimic (m = )
+			 </label>
+			 <input class="form-control" id="m_step" min="1" placeholder="Children Recover Step Size" required="" type="text" value="0.001" />
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="m_max">
+			  Max rate working adults loose their jobs as a result of the epedimic (Max(m) = )
+			 </label>
+			 <input class="form-control" id="m_max" min="1" placeholder="Children Recover Step Size" required="" type="text" value="0.01" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<button class="btn btn-success btn-lg" onclick="return startEconomicSimulation(true)" style="width: 100%; margin-top: 10px;">
+			 Run Simulation (Economical Analysis)
 			</button>
 		   </div>
 		  </div>

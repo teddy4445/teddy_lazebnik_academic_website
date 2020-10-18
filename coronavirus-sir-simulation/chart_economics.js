@@ -12,52 +12,49 @@ function drawAll()
 
 function drawStateDistrebution()
 {
+	var data = new google.visualization.DataTable();
+	data.addColumn('number', 'X');
+	data.addColumn('number', 'Infected Working Adult');
+	data.addColumn('number', 'Susceptible Working Adult');
+	data.addColumn('number', 'Recovered Working Adult');
+	data.addColumn('number', 'Dead Working Adult');
+	data.addColumn('number', 'Infected Nonworking Adult');
+	data.addColumn('number', 'Susceptible Nonworking Adult');
+	data.addColumn('number', 'Recovered Nonworking Adult');
+	data.addColumn('number', 'Dead Nonworking Adult');
+	data.addColumn('number', 'Infected Children');
+	data.addColumn('number', 'Susceptible Children');
+	data.addColumn('number', 'Recovered Children');
+	data.addColumn('number', 'Dead Children');
 
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
-      data.addColumn('number', 'Infected Working Adult');
-      data.addColumn('number', 'Susceptible Working Adult');
-      data.addColumn('number', 'Recovered Working Adult');
-      data.addColumn('number', 'Dead Working Adult');
-      data.addColumn('number', 'Infected Nonworking Adult');
-      data.addColumn('number', 'Susceptible Nonworking Adult');
-      data.addColumn('number', 'Recovered Nonworking Adult');
-      data.addColumn('number', 'Dead Nonworking Adult');
-      data.addColumn('number', 'Infected Children');
-      data.addColumn('number', 'Susceptible Children');
-      data.addColumn('number', 'Recovered Children');
-      data.addColumn('number', 'Dead Children');
+	data.addRows(stateGraphData);
 
-      data.addRows(stateGraphData);
-
-      var options = {
+	var options = {
 		height: 500,
 		pointSize: 6,
 		pointShape: 'circle',
 		colors: ['#DB4437', '#0F9D58', '#4285F4', '#140304', '#DB4667', '#0F9E76', '#4492F1', '#140304', '#eb1d0c', '#1aba7d', '#73a0eb', '#0f0102'],
         hAxis: {
-          title: 'Day'
+			title: 'Day'
         },
         vAxis: {
-          title: 'Count'
+			title: 'Count'
         }
       };
 
-      var chart = new google.visualization.LineChart(document.getElementById('stateGraph'));
-
-      chart.draw(data, options);
+    var chart = new google.visualization.LineChart(document.getElementById('stateGraph'));
+	chart.draw(data, options);
 }
 
 function drawEconomicsGraph()
 {
+	var data = new google.visualization.DataTable();
+	data.addColumn('number', 'X');
+	data.addColumn('number', 'Economic Delta');
+	
+	data.addRows(economicGraphData);
 
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
-      data.addColumn('number', 'Economic Delta');
-
-      data.addRows(economicGraphData);
-
-      var options = {
+	var options = {
 		height: 300,
 		pointSize: 6,
 		pointShape: 'circle',
@@ -68,24 +65,22 @@ function drawEconomicsGraph()
         vAxis: {
           title: 'Dollers'
         }
-      };
+	};
 
-      var chart = new google.visualization.LineChart(document.getElementById('economicsGraph'));
-
-      chart.draw(data, options);
+	var chart = new google.visualization.LineChart(document.getElementById('economicsGraph'));
+	chart.draw(data, options);
 }
 
 function drawRzeroGraph()
 {
+	var data = new google.visualization.DataTable();
+	data.addColumn('number', 'X');
+	data.addColumn('number', 'R_0');
+	data.addColumn('number', 'Outbreak trashold');
 
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
-      data.addColumn('number', 'R_0');
-      data.addColumn('number', 'Outbreak trashold');
+	data.addRows(rzeroGraphData);
 
-      data.addRows(rzeroGraphData);
-
-      var options = {
+	var options = {
 		height: 300,
 		pointSize: 6,
 		pointShape: 'circle',
@@ -96,9 +91,8 @@ function drawRzeroGraph()
         vAxis: {
           title: 'Value'
         }
-      };
-
-      var chart = new google.visualization.LineChart(document.getElementById('rzeroGraph'));
-
-      chart.draw(data, options);
+	};
+	  
+	var chart = new google.visualization.LineChart(document.getElementById('rzeroGraph'));
+	chart.draw(data, options);
 }

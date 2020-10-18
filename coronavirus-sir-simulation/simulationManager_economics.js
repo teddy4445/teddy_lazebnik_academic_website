@@ -83,9 +83,27 @@ function playGame()
 /*
 	This function starts the simulation multiple time such that it creates more and more recovered people in the initial and just run the logic
 */
+function startEconomicSimulation()
+{
+	is_economic = true;
+	is_vaccine = false; 
+	is_lockdown = false; 
+	is_time_analysis = false;
+	
+	document.getElementById("m").value = 0;
+	loss_jobs_rate_step = parseFloat(document.getElementById("m_step").value);
+	loss_jobs_rate_max = parseFloat(document.getElementById("m_max").value);
+	
+	return multi_run_perform();
+}
+
+/*
+	This function starts the simulation multiple time such that it creates more and more recovered people in the initial and just run the logic
+*/
 function startVaccineSimulation()
 {
-	is_vaccine = true; 
+	is_economic = false;
+	is_vaccine = true;
 	is_lockdown = false; 
 	is_time_analysis = false;
 	
@@ -100,6 +118,7 @@ function startVaccineSimulation()
 */
 function startLockDownSimulation()
 {
+	is_economic = false;
 	is_vaccine = false; 
 	is_lockdown = true;
 	is_time_analysis = false;
@@ -115,6 +134,7 @@ function startLockDownSimulation()
 */
 function startWorkSchoolTimeSimulation()
 {
+	is_economic = false;
 	is_vaccine = false;
 	is_lockdown = false;
 	is_time_analysis = true;
@@ -190,20 +210,20 @@ function startSimulation(dramatic)
 	// read all the data from the huge form 
 	/* Initial population size */
 	
-	var working_adult_pop_size = parseInt(document.getElementById("working_adult_pop_size").value);
-	var susceptible_working_adults_percent = parseInt(document.getElementById("susceptible_working_adults_percent").value);
-	var infected_working_adults_percent = parseInt(document.getElementById("infected_working_adults_percent").value);
-	var recover_working_adults_percent = parseInt(document.getElementById("recover_working_adults_percent").value);
+	working_adult_pop_size = parseInt(document.getElementById("working_adult_pop_size").value);
+	susceptible_working_adults_percent = parseInt(document.getElementById("susceptible_working_adults_percent").value);
+	infected_working_adults_percent = parseInt(document.getElementById("infected_working_adults_percent").value);
+	recover_working_adults_percent = parseInt(document.getElementById("recover_working_adults_percent").value);
 	
-	var nonworking_adult_pop_size = parseInt(document.getElementById("nonworking_adult_pop_size").value);
-	var susceptible_nonworking_adults_percent = parseInt(document.getElementById("susceptible_nonworking_adults_percent").value);
-	var infected_nonworking_adults_percent = parseInt(document.getElementById("infected_nonworking_adults_percent").value);
-	var recover_nonworking_adults_percent = parseInt(document.getElementById("recover_nonworking_adults_percent").value);
+	nonworking_adult_pop_size = parseInt(document.getElementById("nonworking_adult_pop_size").value);
+	susceptible_nonworking_adults_percent = parseInt(document.getElementById("susceptible_nonworking_adults_percent").value);
+	infected_nonworking_adults_percent = parseInt(document.getElementById("infected_nonworking_adults_percent").value);
+	recover_nonworking_adults_percent = parseInt(document.getElementById("recover_nonworking_adults_percent").value);
 	
-	var children_pop_size = parseInt(document.getElementById("children_pop_size").value);
-	var susceptible_children_amount = parseInt(document.getElementById("susceptible_children_percent").value);
-	var infected_children_amount = parseInt(document.getElementById("infected_children_percent").value);
-	var recover_children_amount = parseInt(document.getElementById("recover_children_percent").value);
+	children_pop_size = parseInt(document.getElementById("children_pop_size").value);
+	susceptible_children_amount = parseInt(document.getElementById("susceptible_children_percent").value);
+	infected_children_amount = parseInt(document.getElementById("infected_children_percent").value);
+	recover_children_amount = parseInt(document.getElementById("recover_children_percent").value);
 	
 	
 	/* Events per hour */
@@ -254,8 +274,8 @@ function startSimulation(dramatic)
 	/* Economical facotors */
 	
 	e_init = parseInt(document.getElementById("e_init").value);
-	loss_jobs_rate = parseInt(document.getElementById("m").value)/100;
-	avg_contribution_to_economic = parseInt(document.getElementById("e").value);
+	loss_jobs_rate = parseFloat(document.getElementById("m").value);
+	avg_contribution_to_economic = parseFloat(document.getElementById("e").value) / 186; // working hours per month
 	
 	
 	/* Simulation run hyper-parameters */
