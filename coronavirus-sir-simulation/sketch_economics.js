@@ -188,14 +188,19 @@ function draw()
 					if (child_recover <= children_pop_size)
 					{
 						
-						population = new Population(adult_pop_size,
-													adult_pop_size - 1 - adult_recover,
+						population = new Population(working_adult_pop_size,
+													working_adult_pop_size - 1 - parseInt(adult_recover / 2),
 													1,
-													adult_recover,
+													parseInt(adult_recover / 2),
+													nonworking_adult_pop_size,
+													nonworking_adult_pop_size - parseInt(adult_recover / 2),
+													0,
+													parseInt(adult_recover / 2),
 													children_pop_size, 
-													children_pop_size - 1 - child_recover, 
+													susceptible_children_amount - 1 - child_recover, 
 													1,
-													child_recover);
+													child_recover,
+													e_init);
 											
 						// downloadasTextFile("corona_sir_two_age_stocasic_graph_data___vacine_a_" + adult_recover + "_c_" + child_recover + ".csv", prepareGraphDataToCSV(stateGraphData));
 						console.log("Vacine: a = " + adult_recover + ", c = " + child_recover);
@@ -247,14 +252,19 @@ function draw()
 					if (go_to_school_percent >= 0)
 					{
 						
-						population = new Population(adult_pop_size,
-													adult_pop_size - 1,
+						population = new Population(working_adult_pop_size,
+													working_adult_pop_size - 1,
 													1,
 													0,
+													nonworking_adult_pop_size,
+													nonworking_adult_pop_size,
+													0,
+													0,
 													children_pop_size, 
 													children_pop_size, 
 													0,
-													0);
+													0,
+													e_init);
 											
 						console.log("Lockdown: Work (%) = " + go_to_work_percent + ", School (%) = " + go_to_school_percent);
 						lockdown_data.push([go_to_work_percent, go_to_school_percent, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
@@ -301,14 +311,19 @@ function draw()
 					if (time_at_home_c <= TIME_IN_DAY)
 					{
 						
-						population = new Population(adult_pop_size,
-													adult_pop_size - 1,
+						population = new Population(working_adult_pop_size,
+													working_adult_pop_size - 1,
 													1,
 													0,
+													nonworking_adult_pop_size,
+													nonworking_adult_pop_size,
+													0,
+													0,
 													children_pop_size, 
 													children_pop_size, 
 													0,
-													0);
+													0,
+													e_init);
 											
 						console.log("Time Duraction Analysis: Work hours  = " + time_at_home_a + ", School hours = " + time_at_home_c);
 						work_school_duration.push([time_at_home_a, time_at_home_c, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
