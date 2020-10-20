@@ -254,7 +254,8 @@ class Population
 				}
 			}
 		}
-		else if (this.timeOfDay == 0)
+		
+		if (this.timeOfDay == 0)
 		{
 			// stohasticly move them to home (with day - night circle)
 			for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
