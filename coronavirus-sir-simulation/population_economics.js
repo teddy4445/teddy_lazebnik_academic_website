@@ -183,7 +183,7 @@ class Population
 											infected_to_recover_time_children);
 		
 		// 3. update the working status (the new econimic part of the system) and update the economic 
-		this.econimic_delta = this._update_working_status(loss_jobs_rate, avg_contribution_to_economic, r_zero);
+		this.econimic_delta = this._update_working_status(loss_jobs_rate, avg_contribution_to_economic, r_zero, time_at_home_a);
 		this.econimic += this.econimic_delta;
 		
 		// 4. update time of day 
@@ -346,7 +346,8 @@ class Population
 	// updates the working status according
 	_update_working_status(loss_jobs_rate, 
 							avg_contribution_to_economic,
-							r_zero)
+							r_zero,
+							time_at_home_a)
 	{
 		var now_stats = this.countStatusDestrebution();
 		
@@ -400,7 +401,7 @@ class Population
 				working_counter++;
 			}
 		}
-		return avg_contribution_to_economic * working_counter;
+		return avg_contribution_to_economic * working_counter * ((TIME_IN_DAY - time_at_home_a) / STANDARD_WORK_DAY);
 	}
 	
 	countStatusDestrebution() 

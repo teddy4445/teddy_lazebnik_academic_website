@@ -2,8 +2,8 @@
 var zIndex = 300;
 var count = 0;
 
+// the global population we will use all over the place 
 var population;
-
 
 // --- DOM ACTIONS --- //
 var pauseBtn;
@@ -67,6 +67,8 @@ let avg_contribution_to_economic = 0;
 let loss_jobs_rate_step = 0;
 let loss_jobs_rate_max = 0;
 
+let STANDARD_WORK_DAY = 8; // important const
+
 // recover chances
 let prc = 0;
 let pra = 0;
@@ -76,9 +78,11 @@ let go_to_school_k_days = 1;
 let go_to_work_k_days = 1;
 let rest_in_shabat = 1;
 
+// technical parameters
 let fps = 12;
 let graph_sample = 24;
 
+// recover duraction
 let infected_to_recover_time_adult = 0;
 let infected_to_recover_time_children = 0;
 
