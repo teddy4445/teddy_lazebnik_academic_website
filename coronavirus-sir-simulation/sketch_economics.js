@@ -655,7 +655,7 @@ function prepareConsumptionGraphDataToCSV(data, needHeader = true)
 	var answer = "";
 	if (needHeader)
 	{
-		answer = "day, Nonworking adults consumption, Working adults consumption\n";
+		answer = "day, Money Nonworking adult gets for taxes\n";
 	}
 	for (var i = 0; i < data.length; i++)
 	{
