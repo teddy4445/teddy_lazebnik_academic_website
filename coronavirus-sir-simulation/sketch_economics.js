@@ -24,6 +24,7 @@ stateGraphData = [];
 economicGraphDataAll = [];
 economicGraphData = [];
 rzeroGraphData = [];
+consumersGraph = [];
 
 // populations sizes
 var working_adult_pop_size = 0;
@@ -211,6 +212,7 @@ function draw()
 			{
 				downloadasTextFile("corona_sir_two_age_stocasic_graph_data.csv", prepareGraphDataToCSV(stateGraphData));
 				downloadasTextFile("corona_sir_two_age_economic_graph_data.csv", prepareEconomicGraphDataToCSV(economicGraphData));
+				downloadasTextFile("corona_sir_two_age_consuming_graph_data.csv", prepareConsumptionGraphDataToCSV(consumersGraph));
 				downloadasTextFile("corona_sir_two_age_summery.csv", 
 									"Average R_0 = " + (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3) +
 									", with max infected = " + (100 * max(infected) / population.size()).toFixed(3) + "%");
@@ -459,6 +461,7 @@ function draw()
 			rzeroGraphData = [];
 			economicGraphData = [];
 			economicGraphDataAll = [];
+			consumersGraph = [];
 		}
 	}
 	
@@ -570,6 +573,24 @@ function prepareEconomicGraphDataToCSV(data, needHeader = true)
 		else
 		{
 			answer += "0,";
+		}
+		answer = answer.substring(0, answer.length - 1) + "\n";
+	}
+	return answer.substring(0, answer.length - 1);
+}
+
+function prepareConsumptionGraphDataToCSV(data, needHeader = true)
+{
+	var answer = "";
+	if (needHeader)
+	{
+		answer = "day, Nonworking adults consumption, Working adults consumption\n";
+	}
+	for (var i = 0; i < data.length; i++)
+	{
+		for (j = 0; j < data[i].length; j++)
+		{
+			answer += data[i][j] + ",";
 		}
 		answer = answer.substring(0, answer.length - 1) + "\n";
 	}

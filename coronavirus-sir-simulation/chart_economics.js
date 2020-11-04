@@ -1,6 +1,7 @@
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawStateDistrebution);
 google.charts.setOnLoadCallback(drawEconomicsGraph);
+google.charts.setOnLoadCallback(drawConsumersGraph);
 google.charts.setOnLoadCallback(drawRzeroGraph);
 
 function drawAll()
@@ -8,6 +9,7 @@ function drawAll()
 	drawStateDistrebution();
 	drawRzeroGraph();
 	drawEconomicsGraph();
+	drawConsumersGraph();
 }
 
 function drawStateDistrebution()
@@ -68,6 +70,32 @@ function drawEconomicsGraph()
 	};
 
 	var chart = new google.visualization.LineChart(document.getElementById('economicsGraph'));
+	chart.draw(data, options);
+}
+
+function drawConsumersGraph()
+{
+	var data = new google.visualization.DataTable();
+	data.addColumn('number', 'X');
+	data.addColumn('number', 'Nonworking adults consuming');
+	data.addColumn('number', 'Working adults consuming');
+	
+	data.addRows(consumingGraphData);
+
+	var options = {
+		height: 300,
+		pointSize: 6,
+		pointShape: 'circle',
+		colors: ['#DE5246', '#0f9d58'],
+        hAxis: {
+          title: 'Day'
+        },
+        vAxis: {
+          title: 'Dollers'
+        }
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('consumersGraph'));
 	chart.draw(data, options);
 }
 
