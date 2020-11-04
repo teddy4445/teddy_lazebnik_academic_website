@@ -199,7 +199,6 @@ function load_pop_size()
 	recover_nonworking_adults_percent = parseInt(document.getElementById("recover_nonworking_adults_percent").value);
 	children_pop_size = parseInt(document.getElementById("children_pop_size").value);
 	child_step_size = parseInt(document.getElementById("children_recover_step").value);
-	adult_step_size = parseInt(document.getElementById("adult_recover_step").value);
 }
 
 /* end - multi runs functions helpers */
@@ -278,6 +277,9 @@ function startSimulation(dramatic)
 	loss_jobs_rate = parseFloat(document.getElementById("m").value);
 	avg_contribution_to_economic = parseFloat(document.getElementById("e").value) / 186; // working hours per month
 	
+	/* goverement facotors */
+	
+	taxes_percent = parseFloat(document.getElementById("taxes").value) / 100;
 	
 	/* Simulation run hyper-parameters */
 	

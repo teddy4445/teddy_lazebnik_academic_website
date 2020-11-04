@@ -2,8 +2,8 @@
 var zIndex = 300;
 var count = 0;
 
-// the global population we will use all over the place 
 var population;
+
 
 // --- DOM ACTIONS --- //
 var pauseBtn;
@@ -14,16 +14,21 @@ runStarted = false;
 var showFinishAlert = true;
 
 // multi analysis type flags
-var is_economic = true;
-var is_vaccine = true;
-var is_lockdown = true;
-var is_time_analysis = true;
+var is_economic = false;
+var is_vaccine = false;
+var is_lockdown = false;
+var is_time_analysis = false;
+var is_taxes = false;
 
 // graphs
 stateGraphData = [];
+
+rzeroGraphData = [];
+
 economicGraphDataAll = [];
 economicGraphData = [];
-rzeroGraphData = [];
+
+consumersGraphDataAll = [];
 consumersGraph = [];
 
 // populations sizes
@@ -79,11 +84,9 @@ let go_to_school_k_days = 1;
 let go_to_work_k_days = 1;
 let rest_in_shabat = 1;
 
-// technical parameters
 let fps = 12;
 let graph_sample = 24;
 
-// recover duraction
 let infected_to_recover_time_adult = 0;
 let infected_to_recover_time_children = 0;
 
@@ -105,6 +108,9 @@ let last_stats = null;
 let r_zeros = [];
 let infected = [];
 
+// goverment factors
+let taxes_percent = 0;
+
 // vaccine run
 var recover_working_adults_percent;
 var recover_nonworking_adults_percent;
@@ -114,7 +120,6 @@ var nonworking_adult_pop_size;
 var adult_step_size;
 var children_pop_size;
 var child_step_size;
-var adult_recover_step;
 
 // multi run vaccine 
 let vaccine_data = [];
@@ -128,17 +133,17 @@ let lockdown_max_infected_data = [];
 let lockdown_is_outbreak = [];
 let lockdown_economical_data = [];
 
-// work\school duration run  
-let work_school_duration = [];
-let work_school_duration_economic = [];
-let work_school_duration_max_infected_data = [];
-let work_school_duration_is_outbreak = [];
-
 // economical run  
 let economical_duration = [];
 let economical_duration_economic = [];
 let economical_duration_max_infected_data = [];
 let economical_duration_is_outbreak = [];
+
+// work\school duration run  
+let work_school_duration = [];
+let work_school_duration_economic = [];
+let work_school_duration_max_infected_data = [];
+let work_school_duration_is_outbreak = [];
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
@@ -171,7 +176,7 @@ function draw()
 	// update stats panel
 	document.getElementById("susceptible_text").innerHTML = (stats["wa_s"] + stats["na_s"] + stats["c_s"]).toString();
 	document.getElementById("infected_text").innerHTML = (stats["wa_i"] + stats["na_i"] + stats["c_i"]).toString();
-	infected.push(stats["wa_i"] + stats["na_i"] + stats["c_i"]);
+	infected.push(stats["a_i"] + stats["c_i"]);
 	document.getElementById("recover_text").innerHTML = (stats["wa_r"] + stats["na_r"] + stats["c_r"]).toString();
 	document.getElementById("dead_text").innerHTML = (stats["wa_d"] + stats["na_d"] + stats["c_d"]).toString();
 	document.getElementById("clock").innerHTML = stepToClock(count);
@@ -181,6 +186,7 @@ function draw()
 	
 	// recall each step to sum it in the graph later
 	economicGraphDataAll.push(population.econimic_delta);
+	consumersGraphDataAll.push(population.taxes);
 	
 	// calc graph needed data and update it 
 	if (count % graph_sample == 0)
@@ -193,6 +199,7 @@ function draw()
 		stateGraphData.push(graphValues);
 		rzeroGraphData.push([count / TIME_IN_DAY, r_zero, 1]);
 		
+		// economical data
 		if (count != 0)
 		{
 			var gatherVal = 0;
@@ -202,10 +209,18 @@ function draw()
 			}
 			economicGraphData.push([count / TIME_IN_DAY, gatherVal]);
 		}
-		else
+		
+		// consumption data
+		if (count != 0)
 		{
-			economicGraphData.push([count / TIME_IN_DAY, 0]);
+			var gatherVal = 0;
+			for (var i = consumersGraphDataAll.length - graph_sample; i < consumersGraphDataAll.length; i++)
+			{
+				gatherVal += consumersGraphDataAll[i];
+			}
+			consumersGraph.push([count / TIME_IN_DAY, gatherVal]);
 		}
+		
 		if (showFinishAlert)
 		{
 			drawAll();	
@@ -250,13 +265,22 @@ function draw()
 				econimic_circle();
 			}
 			
+			// reset meta-run data //
 			infected = [];
 			r_zeros = [];
+			// end - reset meta-run data //
+
+			/* reset graph data */
 			stateGraphData = [];
+			
 			rzeroGraphData = [];
-			economicGraphData = [];
+			
 			economicGraphDataAll = [];
+			economicGraphData = [];
+			
+			consumersGraphDataAll = [];
 			consumersGraph = [];
+			/* end - reset graph data */
 		}
 	}
 	
@@ -277,7 +301,8 @@ function draw()
 					go_to_school_k_days, 
 					go_to_work_k_days,
 					loss_jobs_rate,
-					avg_contribution_to_economic);
+					avg_contribution_to_economic,
+					taxes_percent);
 	
 	// Displays stats on the screen
 	var age_status_location_dist = population.countStatusLocationDestrebution();
@@ -540,6 +565,7 @@ function econimic_circle()
 		runStarted = false;
 	}
 }
+
 
 function checkOutbreak(list_of_r_zero)
 {

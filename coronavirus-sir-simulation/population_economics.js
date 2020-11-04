@@ -18,6 +18,8 @@ class Population
 		this.members = [];
 		this.econimic = init_econimic;
 		this.econimic_delta = 0;
+		this.taxes = 0;
+		this.w_to_n_adults = 0;
 		
 		// technical members
 		this.timeOfDay = 0;
@@ -154,7 +156,8 @@ class Population
 		go_to_school_k_days,
 		go_to_work_k_days,
 		loss_jobs_rate,
-		avg_contribution_to_economic)
+		avg_contribution_to_economic,
+		taxes_percent)
 	{
 		
 		// 0. mix population in order to have a real stocastic process of picking the members
@@ -183,7 +186,11 @@ class Population
 											infected_to_recover_time_children);
 		
 		// 3. update the working status (the new econimic part of the system) and update the economic 
-		this.econimic_delta = this._update_working_status(loss_jobs_rate, avg_contribution_to_economic, r_zero, time_at_home_a);
+		this.econimic_delta = this._update_working_status(loss_jobs_rate,
+															avg_contribution_to_economic, 
+															r_zero, 
+															time_at_home_a,
+															taxes_percent);
 		this.econimic += this.econimic_delta;
 		
 		// 4. update time of day 
@@ -347,7 +354,8 @@ class Population
 	_update_working_status(loss_jobs_rate, 
 							avg_contribution_to_economic,
 							r_zero,
-							time_at_home_a)
+							time_at_home_a,
+							taxes_percent)
 	{
 		var now_stats = this.countStatusDestrebution();
 		
@@ -355,8 +363,10 @@ class Population
 		var lose_jobs_s_count = loss_jobs_rate * r_zero * now_stats["wa_s"];
 		var lose_jobs_r_count = loss_jobs_rate * r_zero * now_stats["wa_r"];
 			
+		this.taxes = 0;
 		
 		var working_counter = 0;
+		var non_working_adults_counter = 0;
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 		{
 			var thisMember = this.members[memberIndex];
@@ -399,8 +409,15 @@ class Population
 			if (thisMember.eco_age_group == WORKING_ADULT && (thisMember.state == STATE_S || thisMember.state == STATE_R))
 			{
 				working_counter++;
+				this.taxes += taxes_percent * avg_contribution_to_economic;
+			}
+			
+			if (thisMember.eco_age_group == NONWORKING_ADULT)
+			{
+				non_working_adults_counter++;
 			}
 		}
+		this.taxes = parseFloat(Math.round(this.taxes * 100 / non_working_adults_counter)) / 100;
 		return avg_contribution_to_economic * working_counter * ((TIME_IN_DAY - time_at_home_a) / STANDARD_WORK_DAY);
 	}
 	

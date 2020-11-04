@@ -77,16 +77,15 @@ function drawConsumersGraph()
 {
 	var data = new google.visualization.DataTable();
 	data.addColumn('number', 'X');
-	data.addColumn('number', 'Nonworking adults consuming');
-	data.addColumn('number', 'Working adults consuming');
+	data.addColumn('number', 'Nonworking adults getting taxes');
 	
-	data.addRows(consumingGraphData);
+	data.addRows(consumersGraph);
 
 	var options = {
 		height: 300,
 		pointSize: 6,
 		pointShape: 'circle',
-		colors: ['#DE5246', '#0f9d58'],
+		colors: ['#DE5246'],
         hAxis: {
           title: 'Day'
         },
