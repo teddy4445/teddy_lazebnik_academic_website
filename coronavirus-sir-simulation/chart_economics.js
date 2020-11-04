@@ -58,7 +58,7 @@ function drawEconomicsGraph()
 
 	var options = {
 		height: 300,
-		pointSize: 6,
+		pointSize: 3,
 		pointShape: 'circle',
 		colors: ['#000000'],
         hAxis: {
@@ -110,7 +110,7 @@ function drawRzeroGraph()
 
 	var options = {
 		height: 300,
-		pointSize: 6,
+		pointSize: 3,
 		pointShape: 'circle',
 		colors: ['#DE5246', '#000000'],
         hAxis: {

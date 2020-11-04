@@ -199,6 +199,7 @@ function load_pop_size()
 	recover_nonworking_adults_percent = parseInt(document.getElementById("recover_nonworking_adults_percent").value);
 	children_pop_size = parseInt(document.getElementById("children_pop_size").value);
 	child_step_size = parseInt(document.getElementById("children_recover_step").value);
+	adult_step_size = parseInt(document.getElementById("adult_recover_step").value);
 }
 
 /* end - multi runs functions helpers */
