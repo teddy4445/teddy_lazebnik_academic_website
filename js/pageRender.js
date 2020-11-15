@@ -75,7 +75,6 @@ class PageRender
 				}
 				else
 				{
-					console.log("Error at loading file " + filePath + " from server");
 					retrivedData = null;
 				}
 			};

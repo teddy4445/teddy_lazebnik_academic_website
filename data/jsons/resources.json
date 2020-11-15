@@ -1,0 +1,30 @@
+{
+  "resources":[
+    {
+      "name":"On the Leviosa spell and its pronunciation",
+      "description":"In this paper, we go thoguhout the history of the Leviosa spell and usage",
+      "recommendation":"Not really academic, but the topic is very intresting",
+      "fileLinks":[
+         {"info": "Download", "type": 1, "link": ""},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Potter, H., Grinder, H.",
+      "year": 2018,
+      "topic":"Cool topic",
+      "type":"paper"
+    },
+    {
+      "name":"How to make the fource be with you",
+      "description":"In this paper, we present the applied methods to change the fource in the universe to improve your academic experiments and get the outcome that you want",
+      "recommendation":"Not really academic, but the topic is very intresting",
+      "fileLinks":[
+		{"info": "Download", "type": 1, "link": ""},
+		{"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Kenobi, O. O.",
+      "year": 2015,
+      "topic":"Cool topic",
+      "type":"paper"
+    }
+  ]
+}

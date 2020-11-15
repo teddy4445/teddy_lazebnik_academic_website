@@ -1,6 +1,7 @@
 // imports 
 import { PageRender, retrivedData } from '/js/pageRender.js';
 import { PublicationCard } from '/js/components/publicationCard.js';
+import { addCollapseFunction } from '/js/descriptionSlicer.js';
 
 // Data file paths
 let PUBLICATIONS_JSON = "/data/jsons/academic-publications.json";
@@ -52,6 +53,8 @@ class AcademicPublications extends PageRender
 		// build the page itself
 		this.buildHeader(this.sorter, filter);
 		this.buildBody(this.sorter, filter);
+		
+		addCollapseFunction();
 	}
 	
 	/* build section functions */
@@ -132,7 +135,7 @@ class AcademicPublications extends PageRender
 				for (var spliterKeyIndex = 0; spliterKeyIndex < keys.length; spliterKeyIndex++)
 				{
 					// add spliter 
-					ansewrHtml += "<h3>" + keys[spliterKeyIndex] + "</h3>";
+					// ansewrHtml += "<h3>" + keys[spliterKeyIndex] + "</h3>";
 					// add elements inside the list
 					for (var elementIndex = 0; elementIndex < publicSets[keys[spliterKeyIndex]].length; elementIndex++)
 					{
@@ -185,6 +188,8 @@ class AcademicPublications extends PageRender
 			// mark this filter as choosen
 			selector.classList.add("active-sort-button");
 			document.getElementById("year-filter").selectedIndex = "" + selectorIndex;
+		} else {
+			filter = default_filter;
 		}
 		
 		this.buildBody(this.sorter, filter, "year");
@@ -205,6 +210,8 @@ class AcademicPublications extends PageRender
 			// mark this filter as choosen
 			selector.classList.add("active-sort-button");
 			document.getElementById("type-filter").selectedIndex = "" + selectorIndex;
+		} else {
+			filter = default_filter;
 		}
 		
 		this.buildBody(this.sorter, filter, "type");
@@ -225,6 +232,8 @@ class AcademicPublications extends PageRender
 			// mark this filter as choosen
 			selector.classList.add("active-sort-button");
 			document.getElementById("topic-filter").selectedIndex = "" + selectorIndex;
+		} else {
+			filter = default_filter;
 		}
 		
 		this.buildBody(this.sorter, filter, "topic");
@@ -246,13 +255,20 @@ class AcademicPublications extends PageRender
 	
 	static fulfilDropdown(id, itemsList)
 	{
-		itemsList = [...new Set(itemsList)];
-		var html = "";
-		for (var itemIndex = 0; itemIndex < itemsList.length; itemIndex++)
+		if (Array.from(new Set(itemsList)).length > 1)
 		{
-			html += '<option value="' + itemsList[itemIndex] + '">' + itemsList[itemIndex] + '</option>';
+			itemsList = [...new Set(itemsList)];
+			var html = "";
+			for (var itemIndex = 0; itemIndex < itemsList.length; itemIndex++)
+			{
+				html += '<option value="' + itemsList[itemIndex] + '">' + itemsList[itemIndex] + '</option>';
+			}
+			document.getElementById(id).innerHTML += html;
 		}
-		document.getElementById(id).innerHTML += html;
+		else
+		{
+			document.getElementById(id).style.display = "none";
+		}
 	}
 	
 	/* end -  help functions  */

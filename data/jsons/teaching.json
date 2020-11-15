@@ -1,37 +1,194 @@
 {
-	"teaching_philosophy": "A very long text - allow HTML edditing",
-	"coureses":
-	[
-		{
-			"name": "courese name",
-			"code": "courese's code",
+	"teaching_philosophy": "Online learning is the future. Students should be able to find quality acadmic resources easly which provided by their lecturers.",
+	"coureses": [{
+			"name": "Demo Course",
+			"code": "101",
 			"year": "2019",
-			"semester": "2",
-			"university":"Bar-Ilan University",
+			"topic":"Demo",
+			"semester": "1",
+			"university": "Sphera Academy",
+			"department": "Computer science",
+			"location_class": "Room 210",
+			"syllabus": "link",
+			"grade_parts": [{
+					"name": "home work",
+					"percent": 30
+				},
+				{
+					"name": "Exam",
+					"percent": 70
+				}
+			],
+			"resources": {
+				"required":[{
+					"name": "home work",
+					"link": "link link link",
+					"description": "cool description cool description cool description",
+					"type": "file"
+				}],
+				"optinal":[{"name": "home work",
+					"link": "link link link",
+					"description": "cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description",
+					"type": "slides"}]
+			},
+			"updates": [{
+					"title": "home work",
+					"date": "Sat Oct 14 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+					"description": "cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description.",
+					"link": "link link link"
+				},
+				{
+					"title": "home work",
+					"date": "Sat Oct 1 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+					"description": "cool description cool description cool description",
+					"link": "link link link"
+				},
+				{
+					"title": "home work",
+					"date": "Sat Oct 30 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+					"description": "cool description cool description cool description",
+					"link": "link link link"
+				}
+			],
+			"modules": [{
+					"title": "Module 1",
+					"explanation": "not too long",
+					"resources": {
+						"required":[{
+							"name": "resource slides",
+							"link": "link link link",
+							"description": "optional - short information about this resource  ptional - short information about this resource optional - short information about this resource optional - short information about this resource optional - short information about this - short information about this - short information about this - short information about this",
+							"type": "slides"
+						},
+						{
+							"name": "link to video",
+							"link": "link link link",
+							"description": "optional - short information about this resource  ptional - short information about this resource optional - short information about this resource optional - short information about this resource optional - short information about this - short information about this - short information about this - short information about this",
+							"type": "video"
+						}],
+						"assignment":[{
+							"name": "assignment 1 Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+							"description": "Submit a physical copy to my office, and email me a digital copy as back up. My email address is teddy@teddy.com.",
+							"link":"link link link",
+							"type": "file"
+						}]
+					}
+				},
+				{
+					"title": "cool module 2",
+					"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+					"explanation": "not too long not too long",
+					"resources": {
+						"required":[{
+							"name": "resource slides",
+							"link": "link link link",
+							"description": "optional - short information about this resource  ptional - short information about this resource optional - short information about this resource optional - short information about this resource optional - short information about this - short information about this - short information about this - short information about this",
+							"type": "slides"
+						},
+						{
+							"name": "link to video",
+							"link": "link link link",
+							"description": "optional - short information about this resource  ptional - short information about this resource optional - short information about this resource optional - short information about this resource optional - short information about this - short information about this - short information about this - short information about this",
+							"type": "video"
+						}]
+					}
+				}
+			],
 			"description": "sentence or two of text - no HTML needed"
 		},
 		{
-			"name": "courese name",
-			"code": "courese's code",
+			"name": "Demo course 2",
+			"code": "102",
 			"year": "2020",
 			"semester": "1",
-			"university":"Bar-Ilan University",
-			"description": "sentence or two of text - no HTML needed"
-		},
-		{
-			"name": "courese name",
-			"code": "courese's code",
-			"year": "2018",
-			"semester": "1",
-			"university":"Tel-Aviv University",
-			"description": "sentence or two of text - no HTML needed"
-		},
-		{
-			"name": "courese name",
-			"code": "courese's code",
-			"year": "2020",
+			"topic":"Other topic",
 			"semester": "2",
-			"university":"Tel-Aviv University",
+			"university": "Not Sphera Academy",
+			"department": "Computer science",
+			"location_class": "Room 211",
+			"syllabus": "link",
+			"grade_parts": [{
+					"name": "home work",
+					"percent": 30
+				},
+				{
+					"name": "Exam",
+					"percent": 70
+				}
+			],
+			"resources": {
+				"optional":[
+					{
+						"name": "home work",
+						"link": "link link link",
+						"description": "cool description cool description cool description"
+					},
+					{
+						"name": "home work",
+						"link": "link link link",
+						"description": "cool description cool description cool description"
+					}
+				],
+				"required":[{
+					"name": "home work",
+					"link": "link link link",
+					"description": "cool description cool description cool description"
+				}]
+			},
+			"updates": [{
+					"title": "home work",
+					"date": "Sat Oct 15 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+					"description": "cool description cool description cool description"
+				},
+				{
+					"title": "home work",
+					"date": "Sat Oct 20 2021 16:08:50 GMT+0300 (Israel Daylight Time)",
+					"description": "cool description cool description cool description"
+				},
+				{
+					"title": "home work",
+					"date": "Sat Oct 30 2021 16:08:50 GMT+0300 (Israel Daylight Time)",
+					"description": "cool description cool description cool description"
+				}
+			],
+			"modules": [{
+					"title": "cool module 1",
+					"explanation": "not too long",
+					"resources": {
+						"required": [{
+								"name": "home work",
+								"link": "link link link",
+								"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+								"description": "cool description cool description cool description"
+							},
+							{
+								"name": "home work",
+								"link": "link link link",
+								"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+								"description": "cool description cool description cool description"
+							}
+						]
+					}
+				},
+				{
+					"title": "cool module 2",
+					"explanation": "not too long not too long",
+					"resources": {
+						"assignment":[{
+							"name": "home work",
+							"link": "link link link",
+							"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+							"description": "cool description cool description cool description"
+						},
+						{
+							"name": "home work",
+							"link": "link link link",
+							"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
+							"description": "cool description cool description cool description"
+						}]
+					}
+				}
+			],
 			"description": "sentence or two of text - no HTML needed"
 		}
 	]

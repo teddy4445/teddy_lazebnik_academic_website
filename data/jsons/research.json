@@ -1,0 +1,154 @@
+{
+	"work_with_me_opening": "I am always looking for great students (both undergraduates and M.Sc.). If you are a good student (from the CS. or Math. department in BIU), and you are curious about research and want to learn, we should talk. Expect hard work, but also lots of fun! Currently, I can only co-advise. <br><br> The following topics are projects that I find intresting to do. That said, this list is incomplete; and open to other topics you may have. First, micro-expressions recognition using a standard camera. Second, numerical solution for two-phase floyd in a cylinder (navier-stokes equations). Third, Property-Value extraction from academic papers in English.",
+	"open_positions": [],
+	"projects": [{
+		"name": "Research Name",
+		"participants": [{
+			"name": "Full Name",
+			"title": "Degree",
+			"role": "Role in this research",
+			"website_link": "link link link",
+			"googleLink": "link link link 2",
+			"linkedinLink": "link link link 3"
+		},
+		{
+			"name": "Full Name",
+			"title": "Degree",
+			"role": "Role in this research",
+			"website_link": "link link link",
+			"googleLink": "link link link 2",
+			"linkedinLink": "link link link 3"
+		},
+		{
+			"name": "Full Name",
+			"title": "Degree",
+			"role": "Role in this research",
+			"website_link": "link link link",
+			"googleLink": "link link link 2",
+			"linkedinLink": "link link link 3"
+		}],
+		"description": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research",
+		"start_month": 1,
+		"start_year": 2020,
+		"end_month": 10,
+		"end_year": 2020,
+		"team_members": 10,
+		"relevant_resources": [
+			{
+				"name": "Project Website",
+				"link": "https://sphera.academy",
+				"description": "The project's website where you can read more about what we already have done."
+			}
+		]
+	},
+	{
+		"name": "Research Name 2",
+		"participants": [{
+			"name": "Full Name",
+			"title": "Degree",
+			"role": "Role in this research",
+			"website_link": "link link link",
+			"googleLink": "link link link 2",
+			"linkedinLink": "link link link 3"
+		},
+		{
+			"name": "Full Name",
+			"title": "Degree",
+			"role": "Role in this research",
+			"website_link": "link link link",
+			"googleLink": "link link link 2",
+			"linkedinLink": "link link link 3"
+		},
+		{
+			"name": "Full Name",
+			"title": "Degree",
+			"role": "Role in this research",
+			"website_link": "link link link",
+			"googleLink": "link link link 2",
+			"linkedinLink": "link link link 3"
+		},
+		{
+			"name": "Full Name",
+			"title": "Degree",
+			"role": "Role in this research",
+			"website_link": "link link link",
+			"googleLink": "link link link 2",
+			"linkedinLink": "link link link 3"
+		},
+		{
+			"name": "Full Name",
+			"title": "Degree",
+			"role": "Role in this research",
+			"website_link": "link link link",
+			"googleLink": "link link link 2",
+			"linkedinLink": "link link link 3"
+		}],
+		"description": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research",
+		"start_month": 2,
+		"start_year": 2020,
+		"end_month": 10,
+		"end_year": 2022,
+		"team_members": 5,
+		"relevant_resources": [
+			{
+				"name": "home work",
+				"link": "link link link",
+				"description": "cool description cool description cool description"
+			},
+			{
+				"name": "home work",
+				"link": "link link link",
+				"description": "cool description cool description cool description"
+			},
+			{
+			"name": "home work",
+			"link": "link link link",
+			"description": "cool description cool description cool description"
+			}
+		]
+	},
+	{
+		"name": "Research Name 3",
+		"participants": [{
+			"name": "Full Name",
+			"title": "Degree",
+			"role": "Role in this research",
+			"website_link": "link link link",
+			"googleLink": "link link link 2",
+			"linkedinLink": "link link link 3"
+		}],
+		"description": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research",
+		"start_month": 5,
+		"start_year": 2020,
+		"end_month": 11,
+		"end_year": 2033,
+		"team_members": 1,
+		"relevant_resources": [
+			{
+				"name": "home work",
+				"link": "link link link",
+				"description": "cool description cool description cool description"
+			},
+			{
+				"name": "home work",
+				"link": "link link link",
+				"description": "cool description cool description cool description"
+			},
+			{
+			"name": "home work",
+			"link": "link link link",
+			"description": "cool description cool description cool description"
+			},
+			{
+			"name": "home work",
+			"link": "link link link",
+			"description": "cool description cool description cool description"
+			},
+			{
+			"name": "home work",
+			"link": "link link link",
+			"description": "cool description cool description cool description"
+			}
+		]
+	}]
+}

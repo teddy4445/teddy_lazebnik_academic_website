@@ -30,6 +30,12 @@ function onPageLoad()
 	loadFooter();
 	activeMenuLink();
 	manageCollapsible();
+	
+	// cite alerts 
+	document.getElementById("alert-close-btn").onclick = function(){
+		var div = this.parentElement;
+		div.style.opacity = "0";
+	} 
 }
 
 // load the HTML of the header from the right file and put in the right location
@@ -130,6 +136,37 @@ document.getElementById('mobile-menu').onclick = function(e) {
 	e.stopPropagation();
 };
 
+function gotoIndex()
+{
+	var width = Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth);
+	
+	if (width > 850) // TODO: fix magic number
+	{
+		window.location.replace("/");
+	}
+}
+
+function copy_cite(input_holder_id)
+{
+	var copyText = document.getElementById(input_holder_id).value;
+	navigator.clipboard.writeText(copyText).then(function() {
+	  console.log('Async: Copying to clipboard was successful!');
+	}, function(err) {
+	  console.error('Async: Could not copy text: ', err);
+	});
+	
+	// show alert
+	var alertDiv = document.getElementById("alert-close-btn").parentElement;
+	document.getElementById("cite-alert").innerHTML = "Copied: " + copyText;
+	alertDiv.style.opacity = "1";
+	setTimeout(function(){ alertDiv.style.opacity = "0"; }, 2500);
+}
+
 
 /* help functions */
 
@@ -177,6 +214,40 @@ function getCookie(cname)
 		}
 	}
 	return "";
+}
+
+function insertGetParamToUrl(key, value) 
+{
+    key = encodeURIComponent(key);
+    value = encodeURIComponent(value);
+
+    // kvp looks like ['key1=value1', 'key2=value2', ...]
+    var kvp = document.location.search.substr(1).split('&');
+    let i=0;
+
+    for(; i<kvp.length; i++){
+        if (kvp[i].startsWith(key + '=')) {
+            let pair = kvp[i].split('=');
+            pair[1] = value;
+            kvp[i] = pair.join('=');
+            break;
+        }
+    }
+
+    if(i >= kvp.length){
+        kvp[kvp.length] = [key,value].join('=');
+    }
+
+    // can return this or...
+    let params = kvp.join('&');
+
+    // reload page with new params
+	history.pushState(null, null, "?" + params);
+}
+
+// close the update section
+function closeUpdates() {
+	document.getElementById("update-container").classList.add('closed-section');
 }
 
 // end - cookie related functions // 

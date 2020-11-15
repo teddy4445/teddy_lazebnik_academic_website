@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- technical meta -->
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<!-- end - technical meta -->
+	
+	<!-- seo -->
+	<title> Lecturer's Name Academic Website </title>
+	<meta name="description" content="Lecuter's Name Academic Website focusing on cool study in the field of something" />
+	<meta name="keywords" content="lecture website, academic website" />
+	<meta id="author" content="First Last name" name="author"/>
+	<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+	<!-- end - seo -->
+
+	<!-- css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link href="/css/main.css" rel="stylesheet">
+	<!-- end - css -->
+	
+	<!-- Analytics -->
+	
+	<!-- Google Analytics-->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=key"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'key');
+	</script>
+	
+	<!-- HotJar -->
+	<script>
+	(function(h,o,t,j,a,r)
+	{
+		h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+		h._hjSettings={hjid:0000000,hjsv:6};
+		a=o.getElementsByTagName('head')[0];
+		r=o.createElement('script');r.async=1;
+		r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+		a.appendChild(r);
+	})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>		
+	<!-- end - Analytics -->
+	
+</head>
+<body>
+	<!-- header -->
+	<header class="header" id="header">
+	</header>
+	<!-- end - header -->
+	
+	<!-- main content -->
+	<main class="content" id="main_section">
+		<div class="featured-publications-container" id="featured_publications_header">
+			<div class="featured-publications-section">
+				<div class="personal-row">
+					<h2>
+						Setup Guide
+					</h2>
+				</div>
+				<div id="">
+					<ul>
+						<li>Download the whole project by using your favorite GIT CLI or GUI (for CLI the command is: git clone https://github.com/teddy4445.git</li>
+						<li>Open the folder with the project (if you are using Windows and CLI enter "cd "</li>
+						<li>Inside the project, create new folder named "" (yes, just as the name of the repo). If you are using Windows and CLI just enter "mkdir "</li>
+						<li>Move all the project's folders (js, img, fonts, data, css) into the "" folder you just created. (no ready CLI commend unfortunately).</li>
+						<li><b>At this point you are ready to run the project.</b> You can use any server you wish. We recommended the "Web Server for Chrome" which can be downloaded <a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en">here</a></li>
+						<li>After opening the webserver, configure it to the root folder of this project. If you are using the "Web Server for Chrome" server just open it and select the root folder as shown <a href="http://prntscr.com/vaua3v">here</a></li>
+						<li>Finally, open the server in the root (Usully http://127.0.0.1:8887) to get into the index page of the project (for example by clicking on the link as shown <a href="http://prntscr.com/vaub2l">here</a>)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="featured-publications-container" id="featured_publications_header">
+			<div class="featured-publications-section">
+				<div class="personal-row">
+					<h2>
+						Code Design Guide
+					</h2>
+				</div>
+				<div id="">
+					<ul>
+						<li>All files and folders are Cabab style (word-word-word)</li>
+						<li>The HTML is HTML5 - try to use tags from HTML5 and not 4 or 3 (you can check in wwwschool)</li>
+						<li>The CSS is CSS3 - try to use the new features of V.3 like animentions and others and not JS.</li>
+						<li>For the grid we use FlexBox - you can learn more about it in: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" alt="flexbox">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></li>
+						<li>All JS files (except main.js) must be classes (OOP)</li>
+						<li>Each importent section in the HTML must start with a one line comment which describes the section</li>
+						<li>Each Js function must has at least one line documentation (if not trivial) and full description if it is a complex function</li>
+						<li>All JS components inherit from the 'Element' class and importent it.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="featured-publications-container" id="featured_publications_header">
+			<div class="featured-publications-section">
+				<div class="personal-row">
+					<h2>
+						Stracture
+					</h2>
+				</div>
+				<div id="">
+					<ul>
+						<li><b>In order that the website will presented currectly in GitHub pages put all the folders inside a folder with the same name as the Repo. For example: ""</b></li>
+						<li>all HTML files in the root folder</li>
+						<li><b>Folder "components"</b> contains all static HTML components we just need to inject on page load which have been generated ahead by the "generator" service.</li>
+						<li><b>Folder "css"</b> - all design (css) files of the project. Try avoiding spliting to multiple files and use the 'main.css'</li>
+						<li><b>Folder "data"</b> - all data files (json & txt) which the website render on page load and generated by the "generator" service. Each page uses one or more data file.</li>
+						<li><b>Folder "fiels"</b> - all the user's files which are not images (any format) uploaded by the user in the "generator" service and used in the website.</li>
+						<li><b>Folder "fonts"</b> - all the fonts files used in the website.</li>
+						<li><b>Folder "img"</b> - all the imges files used in the website.</li>
+						<li><b>Folder "js"</b> - all the JS files in the website. 'main.js' is used in all pages and load the components (components folder) and other general logic. Inside, js/components folder has classes to read and generate each component used in the pages. js/Errors folder use project spesific JS errors for easy debuging. js/pages folder has a Js file per page used to generate this page.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="featured-publications-container" id="featured_publications_header">
+			<div class="featured-publications-section">
+				<div class="personal-row">
+					<h2>
+						Good to Know
+					</h2>
+				</div>
+				<div id="">
+					<ul>
+						<li>The latest comment in master is the one deployed to the GitHub pages of the project - make sure you push to master after code review and testing of all pages</li>
+						<li>The main working branch is 'develop' which pushes to master only with stable versions.</li>
+						<li>In order to push to master, one must open pull request (PR) and get approved from at least one other team member</li>
+						<li>Feel free to ask any question on the whatsapp's group</li>
+						<li>Make sure to update your progress in the Trello task manager</li>
+						<li>* you can learn more about using Git here: <a href="https://rogerdudler.github.io/git-guide/" alt="git guide">https://rogerdudler.github.io/git-guide/</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- end - main content -->
+	
+	<!-- footer -->
+	<footer class="footer" id="footer">
+	</footer>
+	<!-- end - footer -->
+	
+	<!-- js -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script src="/js/main.js"> </script>
+	<script src="/js/search.js"> </script>
+	<!-- end - js -->	
+</body>
+</html>

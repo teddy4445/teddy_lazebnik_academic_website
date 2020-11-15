@@ -3,13 +3,173 @@
 let PARAM_QUERY = "query";
 docs = [];
 var doc1 = {
-    "id": 1,
-    "title": "Home Page",
-    "body": "The home page in English for the website. Current projects and bio review My research focus on medical and biological nanoparticles (focusing on nanorobotics). Spesificly, modeling a curing protocol based on bio-physical interactions of targeted drug delivery nanoparticles in the blood. I am also intrested in numerical solving and stabalization of ODE and PDE systems (especially, ones originated in a biological setup). I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics in Bar-Ilan University. My complete CV can be found here",
-    "shortBody": "Short Bio and current projects review",
-	"url": "/index.html",
+    "id": "1",
+    "body": "Paper's description Paper's description",
+    "shortBody": "first name, last name; first name, last name good publisher good publisher",
+    "title": "Paper's Paper's title",
+    "url": "/publications.html"
 };
 docs.push(doc1);
+
+
+var doc2 = {
+    "id": "2",
+    "body": "Paper's description Paper's description",
+    "shortBody": "first name, last name; first name, last name good publisher good publisher",
+    "title": "Paper's Paper's title",
+    "url": "/publications.html"
+};
+docs.push(doc2);
+
+
+var doc3 = {
+    "id": "3",
+    "body": "Paper's description Paper's description",
+    "shortBody": "first name, last name; first name, last name good publisher good publisher",
+    "title": "Paper's Paper's title",
+    "url": "/publications.html"
+};
+docs.push(doc3);
+
+
+var doc4 = {
+    "id": "4",
+    "body": "Paper's description Paper's description",
+    "shortBody": "first name, last name; first name, last name good publisher good publisher",
+    "title": "Paper's Paper's title",
+    "url": "/publications.html"
+};
+docs.push(doc4);
+
+
+var doc5 = {
+    "id": "5",
+    "body": "A very long text - allow HTML edditing cool long html description. cool long html description. cool long html description",
+    "shortBody": "cool name. cool name. cool name",
+    "title": "research",
+    "url": "/publications.html"
+};
+docs.push(doc5);
+
+
+var doc6 = {
+    "id": "6",
+    "body": "cool long html description",
+    "shortBody": "cool long html description",
+    "title": "name student",
+    "url": "url"
+};
+docs.push(doc6);
+
+
+var doc7 = {
+    "id": "7",
+    "body": "cool long html description",
+    "shortBody": "cool long html description",
+    "title": "name student",
+    "url": "url"
+};
+docs.push(doc7);
+
+
+var doc8 = {
+    "id": "8",
+    "body": "cool long html description",
+    "shortBody": "cool long html description",
+    "title": "name student",
+    "url": "url"
+};
+docs.push(doc8);
+
+
+var doc9 = {
+    "id": "9",
+    "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum A Really good text A Really good text A Really good text from data 111. A Really good text A Really good text A Really good text from data 222. A Really good text A Really good text A Really good text from data 333",
+    "shortBody": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    "title": "home page",
+    "url": "/"
+};
+docs.push(doc9);
+
+
+var doc10 = {
+    "id": "10",
+    "body": "Cool description to a lecture demo website",
+    "shortBody": "Bar Ilan University. Ben Gurion University",
+    "title": " Henrietta Losatter position position position",
+    "url": "/research.html"
+};
+docs.push(doc10);
+
+
+var doc11 = {
+    "id": "11",
+    "body": "position position position. Cool description to a lecture demo website",
+    "shortBody": "position position position. Cool description to a lecture demo website",
+    "title": "research",
+    "url": "/research.html"
+};
+docs.push(doc11);
+
+
+var doc12 = {
+    "id": "12",
+    "body": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research",
+    "shortBody": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information ab",
+    "title": "Research Name",
+    "url": "/research.html"
+};
+docs.push(doc12);
+
+
+var doc13 = {
+    "id": "13",
+    "body": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research",
+    "shortBody": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information ab",
+    "title": "Research Name 2",
+    "url": "/research.html"
+};
+docs.push(doc13);
+
+
+var doc14 = {
+    "id": "14",
+    "body": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research",
+    "shortBody": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information ab",
+    "title": "Research Name 3",
+    "url": "/research.html"
+};
+docs.push(doc14);
+
+
+var doc15 = {
+    "id": "15",
+    "body": "A very long text - allow HTML edditing",
+    "shortBody": "A very long text - allow HTML edditing",
+    "title": "courses",
+    "url": "/teaching.html"
+};
+docs.push(doc15);
+
+
+var doc16 = {
+    "id": "16",
+    "body": "sentence or two of text - no HTML needed",
+    "shortBody": "not too long not too long not too long",
+    "title": "course name 123",
+    "url": "/course-page.html?course_id=123"
+};
+docs.push(doc16);
+
+
+var doc17 = {
+    "id": "17",
+    "body": "sentence or two of text - no HTML needed",
+    "shortBody": "not too long not too long not too long",
+    "title": "course name 2 321",
+    "url": "/course-page.html?course_id=321"
+};
+docs.push(doc17);
 
 var index = elasticlunr(function () {
     this.addField('title');
@@ -24,21 +184,36 @@ for (var i = 0; i < docs.length; i++)
 
 function searchPage()
 {
-	var query = getQuery();
+	// get input from the user
+	var queryInput = document.getElementById("search_input").value;
+	query = queryInput.toLowerCase().trim();
+	var queryInputMobile = document.getElementById("search_input_mobile").value;
+	queryMobile = queryInputMobile.toLowerCase().trim();
+	
+	// search from mobile view, get the text from there and continue
+	if (query == "" && queryMobile != "")
+	{
+		query = queryMobile;
+	}
+	
+	// if empty, show alert and end process
 	if (query == "")
 	{
+		showSearchAlert("Please enter a query in order to search in the website");
 		return false;
 	}
+	
 	var results = index.search(query, {
 			fields: {
 				title: {boost: 2},
 				body: {boost: 1}
 			}
 		});
+		
 	// if 1 answer - go to this link
 	if (results.length == 0)
 	{	
-		alert("No result found");
+		showSearchAlert("We were not able to find any result in the website for your query");
 		return false;
 	}
 	else if (results.length == 1)
@@ -71,7 +246,7 @@ function update_search_results()
 	// TODO: make sure the results are ordered from best score to worst
 	
 	// we can assume results >= 1 and show them
-	document.getElementById("query_place").innerHTML = "Search results For \"" + query + "\"";
+	document.getElementById("query").innerHTML = query;
 	var resultListHtml = "";
 	var scores_norm = 0;
 	for (var i = 0; i < results.length; i++)
@@ -85,8 +260,7 @@ function update_search_results()
 	}
 	
 	// set the data in the page
-	document.getElementById("query_place").innerHTML = "Search results For \"" + query + "\"";
-	document.getElementById("search_list").innerHTML = resultListHtml;
+	document.getElementById("search-results").innerHTML = resultListHtml;
 }
 
 function GetParamsLoad(param_name) 
@@ -96,24 +270,39 @@ function GetParamsLoad(param_name)
 
 function buildSearchResultAnswer(index, title, score, short_body, url)
 {
-	return '<div class="col-lg-12 col-md-12 col-sm-12" ><div class="card text-center"><div class="card-body"><h5 class="card-title">' + title + ' <small>(' + Math.floor(10000 * score) / 100 + '%)</small></h5><p class="card-text">' + short_body + '</p><a class="cool-btn cool-btn-gray" id="cool_btn_' + index + '" href="' + url + '"> Take Me There </a></div></div></div>';
+	var label = url.replace("/", "").split(".")[0].toUpperCase();
+	return '<div class="academic-papers-panel"><div class="personal-row-col col-reverse-mobile w-100 align-space-between"><h3>'	+ title + '</h3></div><h4>' + short_body + '</h4><p class="search-date">Fitting ' + Math.round(score * 100) + '% to query</p><div class="personal-row space-between-search align-items-center mobile-row-breaker"><div class="search-parms-row"><span class="search-label">' + label + '</span></div><a href="' + url + '" class="secondary-btn">See this page</a></div></div>';
 }
 
-function getQuery()
+// show an alert as a result of searching something in the search field
+function showSearchAlert(alertText)
 {
-	var pageName = document.getElementById("search-data").value;
-	var pageName2 = document.getElementById("search-data-2").value;
-	pageName = pageName.toLowerCase().trim();
-	pageName2 = pageName2.toLowerCase().trim();
-	
-	if (pageName == "" && pageName2 == "")
-	{
-		return "";
-	}
-	else if (pageName == "" && pageName2 != "" )
-	{
-		pageName = pageName2;
-	}
-
-	return pageName;
+	// log events
+	console.log("Write search alert with the text: " + alertText);	
+	// show alert
+	var alertDiv = document.getElementById("search-close-btn").parentElement;
+	document.getElementById("search-alert").innerHTML = alertText;
+	alertDiv.style.opacity = "1";
+	setTimeout(function(){ alertDiv.style.opacity = "0"; }, 2500);
 }
+
+/* add event for 'ENTER' hit in field search */
+
+var desktopInput = document.getElementById("search_input");
+desktopInput.onkeyup = function(e)
+{
+    if(e.keyCode == 13)
+	{
+       searchPage();
+    }
+}
+var mobileInput = document.getElementById("search_input_mobile");
+mobileInput.onkeyup = function(e)
+{
+    if(e.keyCode == 13)
+	{
+       searchPage();
+    }
+}
+
+/* end - add event for 'ENTER' hit in field search */

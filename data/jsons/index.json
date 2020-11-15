@@ -1,31 +1,31 @@
 {
-   "biography":"I am a Ph.D. student in the <a href='http://u.cs.biu.ac.il/~galk/research/tolkien/' title='Tolkien project'>Tolkien</a> Project, part of the <a href='http://u.cs.biu.ac.il/~galk/maverick/' title='MAVERICK research group'>MAVERICK</a> research group at the <a href='https://cs.biu.ac.il/en' title='CS dept.'>Computer Science</a> Department , <a href='https://www1.biu.ac.il/' title='Bar Ilan University'>Bar Ilan University</a> ; Supervised by <a href='http://u.cs.biu.ac.il/~galk/' title='gal a. kaminka'>Prof. Gal A. Kaminka</a> and <a href='https://physics.biu.ac.il/en/node/1384' title='dr. chana wietman'>Dr. Chana Weitman</a>. <br><br> My research focuses on medical and biological nanoparticles (focusing on nanorobotics). Specifically, modeling a curing protocol based on biophysical interactions of targeted drug delivery nanoparticles in the blood. I am also interested in numerical solving and stabilization of ordinary and partial differential equations (ODE, PDE) systems (especially, ones that originate in a biological setup). Sometimes I am publishing some useful (or just fun) things like open code and technical blog posts . I published a few academic papers in journals, conferences, and abstracts. In between, I am teaching several mathematical classes and working with Bc.S. and Mc.S. students on their final project. <br><br>I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics at Bar-Ilan University. <br>My <a href='https://teddylazebnik.info/files/cv.pdf' title='Teddy Lazebnik CV'>CV</a> can be found here. ",
+   "biography":"I am a Ph.D. student in the Tolkien Project, part of the MAVERICK research group at the Computer Science Department , Bar Ilan University ; Supervised by Prof. Gal A. Kaminka and Dr. Chana Weitman. My research focuses on medical and biological nanoparticles (focusing on nanorobotics). Specifically, modeling a curing protocol based on biophysical interactions of targeted drug delivery nanoparticles in the blood. I am also interested in numerical solving and stabilization of ordinary and partial differential equations (ODE, PDE) systems (especially, ones that originate in a biological setup). Sometimes I am publishing some useful (or just fun) things like open code and technical blog posts . I published a few academic papers in journals, conferences, and abstracts. In between, I am teaching several mathematical classes and working with Bc.S. and Mc.S. students on their final project. I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics at Bar-Ilan University.",
    "researchInterests":[
+		"Medical Nanorobotics - nanoscale in vivo interactions, drug discovery, computing, and compalization.",
 		"Biomathematical Modeling - optimal treatment policy, pharmacokinetics, and disease dyanmics.",
-		"Computer Simualtion - in vivo PKPD, epedimological, and clinical treatment.",
-		"Medical Nanorobotics - nanoscale in vivo interactions, drug discovery, computing, and compalization."
+		"Computer Simualtion - in vivo PKPD, epedimological, and clinical treatment."
    ],
    "featuredPublications":[
       {
          "name":"A stable algorithm for numerical matrix exponent",
          "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof",
-         "fileLinks":[{"info": "download", "type": 1, "link": "https://teddylazebnik.info/files/matrix_exponent.pdf"}, 
-					  {"info": "cite", "type": 3, "link": "https://teddylazebnik.info/files/matrix_exponent.pdf"}],
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix_exponent.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., A stable algorithm for numerical matrix exponent. Functional Differential Equations. 2020."}],
 		 "authors": "Teddy Lazebnik and Shlomo Yanetz",
          "year": 2016,
-         "topic":"Numerical Analysis",
+         "topic":"numerical analysis",
          "type":"paper",
          "publisher":"Functional Differential Equations",
          "publicationStatus":"Published"
       },
       {
          "name":"Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling",
-         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "https://teddylazebnik.info/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"}, 
-					  {"info": "cite", "type": 3, "link": "https://teddylazebnik.info/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"}],
+         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modelingOptimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., Bunimovich-Mendrazitsky, S., Aaroni, N., Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations. 2019."}],
 		 "authors": "Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni",
          "year": 2019,
-         "topic":"Biomathematics (PDE)",
+         "topic":"Biomathematics",
          "type":"paper",
          "publisher":"Functional Differential Equations",
          "publicationStatus":"Published"
@@ -34,18 +34,27 @@
    "currentProjects":[
       {
          "name":"Mathematical Model for Medical Nanoparticles in the Circulatory System",
+         "topic": "simulations",
          "description":"A new mathematical representation for pharmacokinetics dyanmics for large-scale in-vivo systems.",
-         "link":{"info": "view project", "type": 1, "link": "/medical-nanorobots-in-the-blood.html"}
+         "link":{"info": "View project", "type": 2, "link": "/medical-nanorobots-in-the-blood.html", "example":""}
       },
       {
-         "name":"Age-based optimal lockdown policy for the COVID-19",
-         "description":"Based on data from Israel, we propuse an optimal lockdown policy, taking into considuration two age-groups.",
-         "link":{"info": "view project", "type": 1, "link": "https://teddylazebnik.info/coronavirus-sir-simulation/index.html"}
+         "name":"Economical-Mathematical Model for COVID-19 spread",
+         "topic": "simulations",
+         "description":"Investigation of different NPIs on the pandemic and there infulance on the economic.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {
-         "name":"Hebrew words associative distance and connection to depression.",
+         "name":"Hebrew words associative distance and connection to depression",
+         "topic": "machine learning",
          "description":"Developing a machine learning model for words associative distance (Hebrew). Based on this model, propusing new depression test for clinical professionals",
-         "link":{"info": "view project", "type": 1, "link": ""}
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      },
+      {
+         "name":"Sphera Academy Website Generator",
+         "topic": "open source",
+         "description":"Maintaining an academic online presence is not easy. That's why we created our one-stop-shop solution: Sphera. a free, customizable and easy-to-use template for a personal website, that contains your entire academic life in one place. And yes, it’s mobile friendly too!",
+         "link":{"info": "View project", "type": 2, "link": "https://sphera.academy/", "example":""}
       }
    ]
 }

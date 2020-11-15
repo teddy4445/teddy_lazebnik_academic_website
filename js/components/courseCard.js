@@ -3,27 +3,28 @@ import { ActionButton } from '/js/components/actionButton.js';
 
 class CourseCard extends Element
 {
-	constructor(name, code, year, semester, university, description)
+	constructor(name, code, year, topic, department, semester, university, description)
 	{
 		super();
 		this.name = name;
 		this.code = code;
 		this.year = year;
+		this.topic = topic;
+		this.department = department;
         this.semester = semester;
         this.university = university;
 		this.description = description;
     }
-	
+
 	// convert the object into HTML
 	toHtml()
 	{
-		var answer = '<p> Semster ' 
-		+ this.semester + '</p><div class="academic-papers-panel"><h3>' 
-		+ this.name +' <small>(' 
-		+ this.code + ')</small> </h3><p style=\"color:black;\">'
-		+ this.description + '<br>'
-		+ this.university +'</p> <div class="personal-row space-between"><div class="w-100 flex-end"><a href="/course-page.html?course='
-		+ this.name.trim().replaceAll('\ ', '') + '" class="download-btn">Course Page</a></div></div></div>';
+		var answer = '<p class="semester"> Semster '
+		+ this.semester + '</p><div class="academic-papers-panel-hard"><h3>'
+		+ this.name +'</h3><p>'
+		+ this.department +'<br>'
+		+ this.university +'</p> <div class="personal-row space-between"><div class="flex-start"><a href="/course-page.html?course_id='
+		+ this.code + '" class="secondary-btn">Go to course</a></div></div></div>';
 		return answer;
 	}
 
@@ -37,14 +38,16 @@ class CourseCard extends Element
 		}
 		return listCourse;
 	}
-	
+
     // build a list of this object from Json object
 	static createFromJson(jsonObj)
 	{
 		return new CourseCard(jsonObj["name"],
-		jsonObj["code"], 
-		jsonObj["year"], 
-        jsonObj["semester"], 
+		jsonObj["code"],
+		jsonObj["year"],
+		jsonObj["topic"],
+		jsonObj["department"],
+        jsonObj["semester"],
         jsonObj["university"],
         jsonObj["description"],);
     }
@@ -54,9 +57,9 @@ class CourseCard extends Element
 	{
 		return ObjList.sort(function(a, b)
 		{
-			var x = a[propertyA + ""]; 
+			var x = a[propertyA + ""];
 			var y = b[propertyA + ""];
-		
+
 			if (x === y) {
 				// propertyB is only important when propertyA are the same
 				return b[propertyB + ""] - a[propertyB + ""];
@@ -64,7 +67,7 @@ class CourseCard extends Element
 			 return ((x < y) ? 1 : -1);
 		});
 	}
-	
+
     // filter the list according to some property and value
 	static filterList(objList, property, filterValue)
 	{
@@ -78,7 +81,7 @@ class CourseCard extends Element
 		}
 		return answer;
 	}
-	
+
 	// split list into list of lists according to some property
 	static splitByProperty(ObjList, property)
 	{
@@ -95,14 +98,14 @@ class CourseCard extends Element
 			}
 			else
 			{
-				subGroup.push(ObjList[0]);
+				subGroup.push(ObjList[publicationIndex]);
 			}
 		}
 		answer[spliter] = [...subGroup];
 		return answer;
 	}
-	
-	//create list of the name of the buttons 
+
+	//create list of the name of the buttons
 	static listFilterButtons(objList,property)
 	{
         var answer = [];
@@ -117,4 +120,3 @@ class CourseCard extends Element
     }
 }
 export {CourseCard};
-	

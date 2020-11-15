@@ -1,5 +1,6 @@
 import { Element } from '/js/components/element.js';
 import { ActionButton } from '/js/components/actionButton.js';
+import { descriptionTrim } from '/js/descriptionSlicer.js';
 
 class ProjectPanel extends Element
 {
@@ -10,16 +11,16 @@ class ProjectPanel extends Element
 		this.description = description;
 		this.btn = btn;
 	}
-	
+
 	// convert the object into HTML
 	toHtml()
 	{
 		// TODO: make this more generic with the following things:
-		// 1. dynamic list of action buttons each one with it's design from the class 
-		// 2. 
-		var answer = '<div class="academic-papers-panel"><h3>' 
-		+ this.name + '</h3><p>'
-		+ this.description + '</p>'
+		// 1. dynamic list of action buttons each one with it's design from the class
+		// 2.
+		var answer = '<div class="academic-papers-panel"><h3>'
+		+ this.name + '</h3>'
+		+ descriptionTrim(this.description);
 		if (this.btn["link"] != "")
 		{
 			answer += '<div class="personal-row space-between"><div class="w-100 flex-end"><a href="' + this.btn["link"] + '" class="download-btn">' + this.btn["info"] + '</a></div></div>';
@@ -27,7 +28,7 @@ class ProjectPanel extends Element
 		answer += '</div>';
 		return answer;
 	}
-	
+
 	// build a list of this object from Json object
 	static createListFromJson(jsonObj)
 	{
@@ -38,12 +39,12 @@ class ProjectPanel extends Element
 		}
 		return answer;
 	}
-	
+
 	// build a list of this object from Json object
 	static createFromJson(jsonObj)
 	{
 		return new ProjectPanel(jsonObj["name"],
-		jsonObj["description"], 
+		jsonObj["description"],
 		ActionButton.createFromJson(jsonObj["link"]));
 	}
 }
