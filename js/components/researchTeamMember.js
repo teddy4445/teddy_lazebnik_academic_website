@@ -23,17 +23,17 @@ class ResearchTeamMember extends Element
 
 		html += '<div class="member-link-icons">';
 		
-		if (this.websiteLink != "")
+		if (this.websiteLink != "" && this.websiteLink != undefined)
 		{
 			html += '<a href="' + this.websiteLink + '"><img class="member-link-icon" src="/img/research/website.png" alt="personal website"></a>';
 		}
-		if (this.linkedinLink != "")
+		if (this.googleLink != "" && this.googleLink != undefined)
 		{
-			html += '<a href="' + this.linkedinLink + '"><img class="member-link-icon" src="/img/research/google-scholar.png" alt="googel scholar link"></a>';
+			html += '<a href="' + this.googleLink + '"><img class="member-link-icon" src="/img/research/google-scholar.png" alt="googel scholar link"></a>';
 		}
-		if (this.googleLink != "")
+		if (this.linkedinLink != "" && this.linkedinLink != undefined)
 		{
-			html += '<a href="' + this.googleLink + '"><img class="member-link-icon" src="/img/research/linkedin.png" alt="linkedin link"></a>';
+			html += '<a href="' + this.linkedinLink + '"><img class="member-link-icon" src="/img/research/linkedin.png" alt="linkedin link"></a>';
 		}
 		html += '</div></div>';
 
@@ -58,7 +58,7 @@ class ResearchTeamMember extends Element
 		return new ResearchTeamMember(jsonObj["name"],
 			jsonObj["title"],
 			jsonObj["role"],
-			jsonObj["websiteLink"], 
+			jsonObj["website_link"], 
 			jsonObj["googleLink"], 
 			jsonObj["linkedinLink"]);
 

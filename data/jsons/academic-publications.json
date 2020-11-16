@@ -1,28 +1,76 @@
 {
    "publications":[
-      
       {
-         "name":"Why COVID-19 pandemic is the right time to switch your academic website?",
-         "description":"In this non-existing paper, we show why COVID-19 pandemic is the right time to upgrade your academic website and how to do so easly",
-         "fileLinks":[{"info": "download", "type": 1, "link": "https://sphera.academy.pdf"},
-					  {"info": "cite", "type": 3, "link": "Losatter, H., Why COVID-19 pandemic is the right time to switch your academic website?. The journal of what really matters. 2020."}],
-		 "authors": "Losatter, H.",
-         "year": 2020,
-         "topic":"websites",
+         "name":"A stable algorithm for numerical matrix exponent",
+         "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix_exponent.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., A stable algorithm for numerical matrix exponent. Functional Differential Equations. 2020."}],
+		 "authors": "Teddy Lazebnik and Shlomo Yanetz",
+         "year": 2016,
+         "topic":"numerical analysis",
          "type":"paper",
-         "publisher":"The journal of what really matters",
-         "publicationStatus":"Submited"
+         "publisher":"Functional Differential Equations",
+         "publicationStatus":"Published"
       },
       {
-         "name":"Researchers and their websites",
-         "description":"What researchers do wrong with their websites",
-         "fileLinks":[{"info": "download", "type": 1, "link": "https://sphera.academy.pdf"},
-					  {"info": "cite", "type": 3, "link": "Losatter, H., Researchers and their websites. The journal of what really matters. 2019."}],
-		 "authors": "Losatter, H.",
+         "name":"Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling",
+         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modelingOptimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., Bunimovich-Mendrazitsky, S., Aaroni, N., Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations. 2019."}],
+		 "authors": "Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni",
          "year": 2019,
-         "topic":"covid",
+         "topic":"Biomathematics",
          "type":"paper",
-         "publisher":"The journal of what really matters",
+         "publisher":"Functional Differential Equations",
          "publicationStatus":"Published"
-      }]
+      },
+      {
+         "name":"A highly stable implementation for numerical matrix exponent in Matlab and C",
+         "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof including analysis of the performance in Matlab and C implementation.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix_exponent_stable.pptx"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., A highly stable implementation for numerical matrix exponent in Matlab and C. Functional Differential Equations conference. 2016."}],
+		 "authors": "Teddy Lazebnik and Shlomo Yanetz",
+         "year": 2016,
+         "topic":"numerical analysis",
+         "type":"conference",
+         "publisher":"Functional Differential Equations conference",
+         "publicationStatus":"Published"
+      },
+      {
+         "name":"PDE Modeling of Bladder Cancer Treatment Using BCG Immunotherapy",
+         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modelingOptimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., Bunimovich-Mendrazitsky, S., Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations. 2019."}],
+		 "authors": "Teddy Lazebnik, Shlomo Yanetz, and Svetlana Bunimovich-Mendrazitsky",
+         "year": 2019,
+         "topic":"Biomathematics",
+         "type":"conference",
+         "publisher":"Functional Differential Equations conference",
+         "publicationStatus":"Published"
+      },
+      {
+         "name":"Energy Efficiency in 2d Quadratic Hamiltonian",
+         "description":"Analysis of the most energy efficieny in 2d quadratic hamiltonian motion and general solution for the 1d and 2d cases.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/quadratic-hamiltonianfinal.pptx"},
+					  {"info": "cite", "type": 3, "link": ""}],
+		 "authors": "Teddy Lazebnik and Barry Ginat",
+         "year": 2015,
+         "topic":"physics",
+         "type":"abstract",
+         "publisher":"Technion Press",
+         "publicationStatus":"Published"
+      },
+      {
+         "name":"Rivendell: Project-Based Academic Search Engine",
+         "description":"Meta academic search engine using project-based search with explicit user tagging to improve search results.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/nano_confirance.pptx"},
+					  {"info": "cite", "type": 3, "link": ""}],
+		 "authors": "Teddy Lazebnik, Hana Weitman, and Gal A. Kaminka",
+         "year": 2015,
+         "topic":"information systems",
+         "type":"abstract",
+         "publisher":"Bar-Ilan Nanotechnology and Advanced Materials",
+         "publicationStatus":"Published"
+      }
+	  ]
 }

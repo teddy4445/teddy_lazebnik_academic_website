@@ -228,7 +228,7 @@ footer h2{
 	right: 0;
 	position: fixed;
 	width: 80%;
-	height: 60px;
+	min-height: 60px;
 	padding: 20px;
 	margin: 1% auto;
 	left: 0;
@@ -597,7 +597,7 @@ footer h2{
 
 /* Reset Select */
 select {
-  -webkit-appearance:
+  -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
@@ -614,7 +614,6 @@ select {
 
 .select-wrapper:after {
 	font-family: FontAwesome;
-  	/*content: '\f107';*/
   	font-size: 28px;
   	position: absolute;
   	top: 4px;
@@ -622,6 +621,7 @@ select {
   	color: #434B67;
   	pointer-events: none;
 }
+
 @media (max-width: 600px) {
   /* .select-wrapper:after {
     content: '';
@@ -844,7 +844,7 @@ flickity-prev-next-button[disabled]{
 .updates-container{
 	width: 100%;
 	background-color: #FFEEC3;
-	height: 100px;
+	min-height: 100px;
 	position: relative;
 	transition: all 0.5s ease;
 }
@@ -859,7 +859,7 @@ flickity-prev-next-button[disabled]{
 }
 
 .closed-section {
-	height: 0;
+	min-height: 0;
 }
 
 .closed-section * {
@@ -879,7 +879,6 @@ flickity-prev-next-button[disabled]{
 	padding-left: 3.5rem;
 	padding-right: 3.5rem;
 	width: 100%;
-	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -1111,9 +1110,8 @@ flickity-prev-next-button[disabled]{
 }
 
 .research-seperator {
-	width: 150%;
+	width: 100%;
 	position: relative;
-	left: calc(-25%);
 	height: 1px;
 	color: rgba(90, 103, 216, 0.5);
 	background-color: rgba(90, 103, 216, 0.5);
@@ -1523,6 +1521,21 @@ margin: 0px 0px;
 
 /* publications page  */
 
+#reset-btn{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 180%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #5A67D8;
+  margin: 10px 36px;
+  cursor: pointer;
+}
+
+
 .filter {
 	cursor: pointer;
 }
@@ -1656,7 +1669,7 @@ margin: 0px 0px;
 
 
 @media only screen and (max-width: 850px) {
-	
+
 	.academic-papers-container{
 		margin-top: 1rem;
 	}
@@ -1670,7 +1683,7 @@ margin: 0px 0px;
 		margin-top: 0.5rem;
 	}
 
-  
+
   .academic-papers-header-section select{
 	  width: 100%;
 	  margin-left: auto;
@@ -1688,6 +1701,12 @@ margin: 0px 0px;
 	.teaching-papers-body-section {
 		margin-left: 0px !important;
 	}
+
+  #reset-btn{
+  font-size: 14px;
+  margin: 12px 10px;
+  text-align: left;
+}
 }
 
 

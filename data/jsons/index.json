@@ -51,6 +51,12 @@
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {
+         "name":"Mathematical modeling of pedagogic methods via their cognetive influance",
+         "topic": "mathematical modeling",
+         "description":"Modeling an ODE system descrbing the inner cognetive processes taking place while learning",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      },
+      {
          "name":"Sphera Academy Website Generator",
          "topic": "open source",
          "description":"Maintaining an academic online presence is not easy. That's why we created our one-stop-shop solution: Sphera. a free, customizable and easy-to-use template for a personal website, that contains your entire academic life in one place. And yes, it’s mobile friendly too!",

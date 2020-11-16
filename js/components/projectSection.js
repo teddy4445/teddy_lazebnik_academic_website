@@ -2,6 +2,8 @@ import { Element } from '/js/components/element.js';
 import { ActionButton } from '/js/components/actionButton.js';
 import { descriptionTrim } from '/js/descriptionSlicer.js';
 
+let ALL_TOPIC_KEY = "all";
+
 class ProjectSection extends Element
 {
 	constructor(name, description, btn)
@@ -58,7 +60,7 @@ class ProjectSection extends Element
 		var answer = [];
 		for (var objIndex = 0; objIndex < objList.length; objIndex++)
 		{
-			if (objList[objIndex][property + ""] == filterValue)
+			if (objList[objIndex][property + ""] == filterValue || filterValue == ALL_TOPIC_KEY)
 			{
 				answer.push(objList[objIndex]);
 			}

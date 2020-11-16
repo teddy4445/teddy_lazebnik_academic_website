@@ -78,6 +78,9 @@ class CoursePage extends PageRender
 		{
 			this._redirectBack();
 		}
+		
+		// remove alert as they not in use and can make problems
+		removeAlertsPanels();
     }
 
     build(){

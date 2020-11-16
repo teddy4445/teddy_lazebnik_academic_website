@@ -3,7 +3,7 @@ import { PageRender, retrivedData } from '/js/pageRender.js';
 import { PublicationCard } from '/js/components/publicationCard.js';
 import { ProjectPanel } from '/js/components/projectPanel.js';
 import { Icons } from '/js/components/icons.js';
-import { addCollapseFunction } from '/js/descriptionSlicer.js';
+import { addCollapseFunction, descriptionTrim } from '/js/descriptionSlicer.js';
 
 // Data file paths
 let UPDATES_TEXT = "/data/notifications.txt"
@@ -56,12 +56,11 @@ class Index extends PageRender
 					// join the rest of the line
 					var line = splitNotificationLine.slice(1).join(" ");
 					
-					// notificationHtml += '<div class="carousel-cell"><div class="update-panel"><div class="update-text">' + notificationLines[notificationIndex] + '</div></div></div>';
 					notificationHtml += '<div class="carousel-cell"><div class="update-panel"><div class="update-text"><span class="update-date"> update ' + date + '</span><br> <span class="update-message">' + line + '</span></div></div></div>';
 				}
 				document.getElementById("updates-panel").innerHTML = notificationHtml;
 				// slice according to window size
-				changeNotificationLength();
+				// changeNotificationLength();
 				
 				if (notificationLines.length == 1)
 				{
@@ -190,7 +189,7 @@ class Index extends PageRender
 // run the class build on page load
 Index.build();
 
-// window.addEventListener('resize', Index.buildeNotifications);
+window.addEventListener('resize', Index.buildeNotifications);
 
 function changeNotificationLength() {
 	var notifications = document.getElementsByClassName('update-message');
@@ -219,6 +218,6 @@ function changeNotificationLength() {
 	}
 }
 
-window.addEventListener('resize', changeNotificationLength);
+// window.addEventListener('resize', changeNotificationLength);
 
 export { Index };

@@ -1,30 +1,147 @@
 {
   "resources":[
     {
-      "name":"On the Leviosa spell and its pronunciation",
-      "description":"In this paper, we go thoguhout the history of the Leviosa spell and usage",
-      "recommendation":"Not really academic, but the topic is very intresting",
+      "name":"Lightweight JS pathfinding genetic programming",
+      "description":"The idea is to present light weight (Java Script written) genetic programming. There are graphs (using Google's API) for monitoring the optimization process and game-link controlers to control the parameters of the evaluations.",
+      "recommendation":"",
       "fileLinks":[
-         {"info": "Download", "type": 1, "link": ""},
+         {"info": "Project", "type": 1, "link": "https://bitbucket.org/teddy_lazebnik/js-path-finding-genetic-programming/src/master/"},
          {"info": "cite", "type": 3, "link": ""}
        ],
-      "authors": "Potter, H., Grinder, H.",
+      "authors": "Lazebnik, T.",
       "year": 2018,
-      "topic":"Cool topic",
-      "type":"paper"
+      "topic":"machine learning",
+      "type":"code"
     },
     {
-      "name":"How to make the fource be with you",
-      "description":"In this paper, we present the applied methods to change the fource in the universe to improve your academic experiments and get the outcome that you want",
-      "recommendation":"Not really academic, but the topic is very intresting",
+      "name":"A python class generator",
+      "description":"Allowing to build a class file using code for on-run class generation and meta-class analysis.",
+      "recommendation":"Speed up the development process...",
       "fileLinks":[
-		{"info": "Download", "type": 1, "link": ""},
-		{"info": "cite", "type": 3, "link": ""}
+         {"info": "Project", "type": 1, "link": "https://bitbucket.org/teddy_lazebnik/python-class-generator/src/master/"},
+         {"info": "cite", "type": 3, "link": ""}
        ],
-      "authors": "Kenobi, O. O.",
-      "year": 2015,
-      "topic":"Cool topic",
-      "type":"paper"
+      "authors": "Lazebnik, T.",
+      "year": 2018,
+      "topic":"meta development",
+      "type":"code"
+    },
+    {
+      "name":"Infinite run game in Unity (C#)",
+      "description":"An Indine game made in Unity (C#) of 3d infinity runer taking place in space. A smart memory management by creating and destraction of objects according to the potentional pathes of the user is included.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/ArielA147/Space-temple-run"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Alexi, A., Spitzer, N., Lazebnik, T.",
+      "year": 2019,
+      "topic":"games",
+      "type":"code"
+    },
+    {
+      "name":"Tower collapse game in Unity",
+      "description":"A simple 3d game allowing to build a tower from blocks with enemies trying to hit and destroy your tower. Developed in Unity, C#.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://bitbucket.org/teddy_lazebnik/babylonian-revenge-mobile-game/src/master/"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Alexi, A., Spitzer, N., Lazebnik, T.",
+      "year": 2019,
+      "topic":"games",
+      "type":"code"
+    },
+    {
+      "name":"Home Darts ScoreBoard",
+      "description":"A darts scoreboard for home use (Python, JS).",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://bitbucket.org/teddy_lazebnik/darts_score_board/src"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2020,
+      "topic":"games",
+      "type":"code"
+    },
+    {
+      "name":"Pubmed and arXiv paper downloader",
+      "description":"The project written in Java allowing a user to download full papers from both PubMed and arXiv.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://bitbucket.org/galk-opensource/pubmed-arxiv-paper-downloader/src/master/"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2017,
+      "topic":"information systems",
+      "type":"code"
+    },
+    {
+      "name":"Academic PDF to TXT",
+      "description":"The project written in Java allowing a user to convert academic papers in a PDF format to a TXT extracting the text of the paper using several techniques. Currently, it support the following geometrical format elements popular in academic papers: 1. 2 coloum texts - by spliting the page into 2 pages, one per coloum. 2. Graphs, tables and images - finding the boundery of each one of them in a page and removing it by overriding with white rectangle. 3. Equeations - the OCR providing short and non-words from equeations which is mostly cleared in the post-processing stage.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://bitbucket.org/galk-opensource/paper-pdf-text-extractor/src/master/"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2017,
+      "topic":"information systems",
+      "type":"code"
+    },
+    {
+      "name":"Simple (yet effective) General Semantic Analysis",
+      "description":"General Semantic Analysis demo fully develped in Vanila JS. Checkout the whatsapp chat analysis - a lot of fun.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/gerneral-sentiment-analysis-js"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2020,
+      "topic":"NLP",
+      "type":"code"
+    },
+    {
+      "name":"Game of Life CoronaSpread analysis",
+      "description":"A JS (p5 + Google Charts) implementation of the <b>game of life</b> simulating corona spread in the population.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/game_of_life_corona"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2020,
+      "topic":"machine learning",
+      "type":"code"
+    },
+    {
+      "name":"Assosiative Words Grouper",
+      "description":"A (pure JS written) GUI allowing to load lists of source and target words (from associative experiments) and build similarity groups.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/hebrew-assosiative-words-grouper"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T., Vardi, N.",
+      "year": 2020,
+      "topic":"NLP",
+      "type":"code"
+    },
+    {
+      "name":"CSV to Latex Table Generator",
+      "description":"A one page CSV to Latex convertor online tool (with pure js). The aim is to allow quick convertion of CSV tables into the corosponading LaTex table code.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/excel-to-latex-table-generator"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T., Vardi, N.",
+      "year": 2020,
+      "topic":"NLP",
+      "type":"code"
     }
   ]
 }

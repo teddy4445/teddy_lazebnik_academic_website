@@ -71,26 +71,29 @@ class CourseCard extends Element
     // filter the list according to some property and value
 	static filterList(objList, property, filterValue)
 	{
+
 		var answer = [];
 		for (var objIndex = 0; objIndex < objList.length; objIndex++)
 		{
-			if (objList[objIndex][property + ""] == filterValue)
+			if (objList[objIndex][property + ""].trim().toLowerCase() == filterValue.trim().toLowerCase())
 			{
 				answer.push(objList[objIndex]);
 			}
 		}
+
 		return answer;
 	}
 
 	// split list into list of lists according to some property
 	static splitByProperty(ObjList, property)
 	{
+		try{
 		var answer = {};
 		var spliter = ObjList[0][property + ""];
 		var subGroup = [ObjList[0]];
 		for (var publicationIndex = 1; publicationIndex < ObjList.length; publicationIndex++)
 		{
-			if (ObjList[publicationIndex][property + ""] != spliter)
+			if (ObjList[publicationIndex][property + ""].trim().toLowerCase() != spliter.trim().toLowerCase())
 			{
 				answer[spliter] = [...subGroup];
 				spliter = ObjList[publicationIndex][property + ""];
@@ -101,7 +104,10 @@ class CourseCard extends Element
 				subGroup.push(ObjList[publicationIndex]);
 			}
 		}
-		answer[spliter] = [...subGroup];
+		answer[spliter] = [...subGroup];}
+		catch(e){
+			console.log("cannot split by property because: "+e);
+		}
 		return answer;
 	}
 

@@ -26,8 +26,16 @@ class ResearchProject extends Element
 
 		html += this._createResearchTitleSection();
 		html += '<div class="content-text">' + descriptionTrim(this.description) + '</div>';
-		html += this._createTeamSection();
-		html += this._createLinksSection();
+		
+		if (this.participents.length > 0)
+		{
+			html += this._createTeamSection();
+		}
+		
+		if (this.relevant_resources.length > 0)
+		{
+			html += this._createLinksSection();	
+		}
 
 		html += '</div>';
 

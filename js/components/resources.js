@@ -7,11 +7,12 @@ let CITE_SYMBOL = '<svg width="16" height="14" viewBox="0 0 16 14" fill="none" x
 
 class Resource extends Element
 {
-	constructor(title, recommendation, fileLinks, authors, year, topic, type)
+	constructor(title, description, recommendation, fileLinks, authors, year, topic, type)
 	{
 		super();
 		this.title = title;
-    this.recommendation = recommendation;
+		this.description = description;
+		this.recommendation = recommendation;
 		this.fileLinks = fileLinks;
 		this.authors = authors;
 		this.year = year;
@@ -36,28 +37,36 @@ class Resource extends Element
 			answer += "</div>";
 		}
 
-		answer += '<h4>' + this.authors + '<br></h4>';
-
-    if(this.recommendation != ""){
-      answer += descriptionTrim('<span class="recommend-promo"> Why am I recommending this? </span>' + this.recommendation);
-    }
-
-    answer += '<div class="personal-row space-between align-items-center mobile-row-breaker">';
-
-		if (this.fileLinks[1]["link"] != "")
+		if(this.authors != "")
 		{
-			answer += '<a href="' + this.fileLinks[1]["link"] + '" class="download-btn acadmic-card-margin-fix">Download</a>';
+			answer += '<h4>' + this.authors + '<br></h4>';
 		}
 
-    // if (this.fileLinks[2]["link"] != ""){
-    //   answer += '<a href="' + this.fileLinks[2]["link"] + '" class="secondary-btn acadmic-card-margin-fix space-around" style="width: 100%; max-width: 126px;">Read online</a>';
-    // }
+		if(this.description != "")
+		{
+			answer += '<div class="card-despription-resouce">' + this.description + '</div>';
+		}
 
-    answer += '<div class="w-100 acadmic-parms-row"><span>'
-		+ this.year + '</span><span>'
-		+ this.type + '</span></div>'
-		+'</div></div><input type="text" style="display: none;" id="' + this.title.replaceAll("'", "").replaceAll(" ", "_") + '" value="' + this.fileLinks[1]["link"] + '"></div></div>';
-		return answer;
+		if(this.recommendation != "")
+		{
+			answer += descriptionTrim('<span class="recommend-promo"> Why am I recommending this? </span>' + this.recommendation);
+		}
+
+		answer += '<div class="personal-row space-between align-items-center mobile-row-breaker">';
+		
+		for (var i = 0; i < this.fileLinks; i++)
+		{
+			if (this.fileLinks[1]["link"] != "" && this.fileLinks[1]["type"] + "" == "1")
+			{
+				answer += '<a href="' + this.fileLinks[i]["link"] + '" class="download-btn acadmic-card-margin-fix">' + this.fileLinks[i]["info"] + '</a>';
+			}
+		}
+
+		answer += '<div class="w-100 acadmic-parms-row"><span>'
+			+ this.year + '</span><span>'
+			+ this.type + '</span></div>'
+			+'</div></div><input type="text" style="display: none;" id="' + this.title.replaceAll("'", "").replaceAll(" ", "_") + '" value="' + this.fileLinks[1]["link"] + '"></div></div>';
+			return answer;
 	}
 
 	// build a list of this object from Json object
@@ -75,7 +84,8 @@ class Resource extends Element
 	static createFromJson(jsonObj)
 	{
 		return new Resource(jsonObj["name"],
-    jsonObj["recommendation"],
+		jsonObj["description"],
+		jsonObj["recommendation"],
 		ActionButton.createListFromJson(jsonObj["fileLinks"]),
 		jsonObj["authors"],
 		jsonObj["year"],

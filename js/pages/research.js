@@ -60,6 +60,9 @@ class Research extends PageRender
 		{
 			this.openPositions.push(ResearchPosition.createFromJson(this.jsonData["open_positions"][index]));
 		}
+		
+		// remove alert as they not in use and can make problems
+		removeAlertsPanels();
 	}
 
 	// just gather all the build of all the sections in the page - one per call to the server side

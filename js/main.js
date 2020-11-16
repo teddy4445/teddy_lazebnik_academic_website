@@ -250,6 +250,14 @@ function closeUpdates() {
 	document.getElementById("update-container").classList.add('closed-section');
 }
 
+function removeAlertsPanels()
+{
+    for(var i = 1; i <= 2; i++)
+	{
+		document.getElementById("alert-panel-" + i).style.display = "none";
+    }
+}
+
 // end - cookie related functions // 
 
 /* end - help functions */
