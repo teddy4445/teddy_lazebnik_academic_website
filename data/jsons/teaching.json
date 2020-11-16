@@ -1,195 +1,600 @@
 {
 	"teaching_philosophy": "Online learning is the future. Students should be able to find quality acadmic resources easly which provided by their lecturers.",
 	"coureses": [{
-			"name": "Demo Course",
-			"code": "101",
-			"year": "2019",
-			"topic":"Demo",
+			"name": "Advanced Programming 1",
+			"code": "89210",
+			"year": "2021",
+			"topic":"programming",
 			"semester": "1",
-			"university": "Sphera Academy",
+			"university": "Bar Ilan University",
 			"department": "Computer science",
-			"location_class": "Room 210",
-			"syllabus": "link",
+			"location_class": "Zoom",
+			"syllabus": "",
 			"grade_parts": [{
-					"name": "home work",
-					"percent": 30
+					"name": "Home work",
+					"percent": 40
 				},
 				{
 					"name": "Exam",
-					"percent": 70
+					"percent": 60
 				}
 			],
 			"resources": {
-				"required":[{
-					"name": "home work",
-					"link": "link link link",
-					"description": "cool description cool description cool description",
-					"type": "file"
-				}],
-				"optinal":[{"name": "home work",
-					"link": "link link link",
-					"description": "cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description",
-					"type": "slides"}]
+				"optinal":[{"name": "Moodle page",
+					"link": "https://lemida.biu.ac.il/course/view.php?id=56845",
+					"description": "The webpage with all the slides and presentation of the lecturer.",
+					"type": "file"}]
 			},
 			"updates": [{
-					"title": "home work",
-					"date": "Sat Oct 14 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-					"description": "cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description cool description.",
-					"link": "link link link"
+					"title": "home work 1 submition",
+					"date": "11.8.2020",
+					"description": "This milestone is a very easy task, and is mainly intended for warming up in C ++, working with GIT, and using the testing system below.",
+					"link": ""
 				},
 				{
-					"title": "home work",
-					"date": "Sat Oct 1 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-					"description": "cool description cool description cool description",
-					"link": "link link link"
-				},
-				{
-					"title": "home work",
-					"date": "Sat Oct 30 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-					"description": "cool description cool description cool description",
-					"link": "link link link"
+					"title": "home work 2 Update",
+					"date": "11.15.2020",
+					"description": "Please note that the project document has been updated towards Milestone 2. <b>Tip</b>: To learn how to work with vector, map, iterator, auto or for_each. It is recommended to practice this with a separate toy code before assimilating into the project. Also, pay attention to how the parameters, income or output is transferred from a data structure.",
+					"link": ""
 				}
 			],
 			"modules": [{
-					"title": "Module 1",
-					"explanation": "not too long",
+					"title": "C++ intro",
+					"explanation": "An introduction to programming concepts in C++ and how they are related to what you know from C and Java",
 					"resources": {
-						"required":[{
-							"name": "resource slides",
-							"link": "link link link",
-							"description": "optional - short information about this resource  ptional - short information about this resource optional - short information about this resource optional - short information about this resource optional - short information about this - short information about this - short information about this - short information about this",
-							"type": "slides"
+						"Lectures":[{
+							"name": "Intro video",
+							"link": "https://www.youtube.com/watch?v=UnwtHUy-MX",
+							"description": "",
+							"type": "video"
 						},
 						{
-							"name": "link to video",
-							"link": "link link link",
-							"description": "optional - short information about this resource  ptional - short information about this resource optional - short information about this resource optional - short information about this resource optional - short information about this - short information about this - short information about this - short information about this",
+							"name": "Pointers, assignment and other syntax",
+							"link": "https://www.youtube.com/watch?v=ahiWmXunnG",
+							"description": "",
 							"type": "video"
-						}],
-						"assignment":[{
-							"name": "assignment 1 Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-							"description": "Submit a physical copy to my office, and email me a digital copy as back up. My email address is teddy@teddy.com.",
-							"link":"link link link",
-							"type": "file"
+						},
+						{
+							"name": "Referances and OOP in C++",
+							"link": "https://www.youtube.com/watch?v=kUph_ea4NXc",
+							"description": "",
+							"type": "video"
 						}]
 					}
-				},
-				{
-					"title": "cool module 2",
-					"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-					"explanation": "not too long not too long",
+					},
+					{
+					"title": "C++ Advanced",
+					"explanation": "Advanced topics in C++ programming",
 					"resources": {
-						"required":[{
-							"name": "resource slides",
-							"link": "link link link",
-							"description": "optional - short information about this resource  ptional - short information about this resource optional - short information about this resource optional - short information about this resource optional - short information about this - short information about this - short information about this - short information about this",
-							"type": "slides"
+						"Lectures":[{
+							"name": "Inheritance and polymorphism",
+							"link": "https://www.youtube.com/watch?v=TbsJss75I7k",
+							"description": "",
+							"type": "video"
 						},
 						{
-							"name": "link to video",
-							"link": "link link link",
-							"description": "optional - short information about this resource  ptional - short information about this resource optional - short information about this resource optional - short information about this resource optional - short information about this - short information about this - short information about this - short information about this",
+							"name": "Operator overloading",
+							"link": "https://www.youtube.com/watch?v=hO2DYr3X-pk",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "STL",
+							"link": "https://www.youtube.com/watch?v=-LwVsTX-q-A",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "System API",
+							"link": "https://www.youtube.com/watch?v=4EY2fKptPpo",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "Introduction to TCP-IP",
+							"link": "https://www.youtube.com/watch?v=_zy5vLHBeKs",
+							"description": "",
 							"type": "video"
 						}]
 					}
 				}
 			],
-			"description": "sentence or two of text - no HTML needed"
+			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
 		},
 		{
-			"name": "Demo course 2",
-			"code": "102",
+			"name":"Numerical Analysis",
+			"code": "88376",
 			"year": "2020",
 			"semester": "1",
-			"topic":"Other topic",
-			"semester": "2",
-			"university": "Not Sphera Academy",
-			"department": "Computer science",
-			"location_class": "Room 211",
-			"syllabus": "link",
-			"grade_parts": [{
-					"name": "home work",
-					"percent": 30
-				},
+			"topic":"numerical methods",
+			"university": "Bar Ilan University",
+			"department": "Mathematics",
+			"location_class": "",
+			"syllabus": "",
+			"grade_parts": [
 				{
 					"name": "Exam",
-					"percent": 70
+					"percent": 100
 				}
 			],
 			"resources": {
 				"optional":[
 					{
-						"name": "home work",
-						"link": "link link link",
-						"description": "cool description cool description cool description"
+						"name": "Summery of the course a year ago (2018) by Mordeh (part 1)",
+						"link": "https://math-wiki.com/images/2/28/Aln83214_2019_part1.pdf",
+						"description": ""
 					},
 					{
-						"name": "home work",
-						"link": "link link link",
-						"description": "cool description cool description cool description"
+						"name": "Summery of the course a year ago (2018) by Mordeh (part 2)",
+						"link": "https://math-wiki.com/images/2/28/Aln83214_2019_part2.pdf",
+						"description": ""
+					},
+					{
+						"name": "A wonderfull book with all the subject of the course in the first five chapters",
+						"link": "http://www.math.uni.wroc.pl/~olech/metnum2/Podreczniki/(eBook)%20Introduction%20to%20Numerical%20Analysis%20-%20J.Stoer,R.Bulirsch.pdf",
+						"description": "Introduction to Numerical Analysis by Stoer, J. and Bulirsch, R."
+					},
+					{
+						"name": "BIU 2019 (a) Exam ",
+						"link": "/files/numerical_analysis_sample_exam_2019_a.pdf",
+						"description": "Exam by Dr. Michal Michali, thanks to Ohav Levy for the document"
 					}
-				],
-				"required":[{
-					"name": "home work",
-					"link": "link link link",
-					"description": "cool description cool description cool description"
-				}]
+				]
 			},
 			"updates": [{
-					"title": "home work",
-					"date": "Sat Oct 15 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-					"description": "cool description cool description cool description"
-				},
-				{
-					"title": "home work",
-					"date": "Sat Oct 20 2021 16:08:50 GMT+0300 (Israel Daylight Time)",
-					"description": "cool description cool description cool description"
-				},
-				{
-					"title": "home work",
-					"date": "Sat Oct 30 2021 16:08:50 GMT+0300 (Israel Daylight Time)",
-					"description": "cool description cool description cool description"
+					"title": "home work 1",
+					"date": "11.1.2019",
+					"description": "The file can be found <a href='/files/numerical_analysis_hw_1.pdf'>here</a>",
+					"link": ""
+				},{
+					"title": "home work 2",
+					"date": "12.1.2019",
+					"description": "The file can be found <a href='/files/numerical_analysis_hw_2.pdf'>here</a>",
+					"link": ""
+				},{
+					"title": "home work 3",
+					"date": "1.1.2020",
+					"description": "The file can be found <a href='/files/numerical_analysis_hw_3.pdf'>here</a>",
+					"link": ""
+				},{
+					"title": "home work 4",
+					"date": "2.1.2020",
+					"description": "The file can be found <a href='/files/numerical_analysis_hw_4.pdf'>here</a>",
+					"link": ""
+				},{
+					"title": "Answer for home work 1",
+					"date": "2.8.2020",
+					"description": "The file can be found <a href='/files/home_work_1_answer.pdf'>here</a>",
+					"link": ""
 				}
 			],
 			"modules": [{
-					"title": "cool module 1",
-					"explanation": "not too long",
+					"title": "Interpolation",
+					"explanation": "Numerical methods for Interpolation",
 					"resources": {
-						"required": [{
-								"name": "home work",
-								"link": "link link link",
-								"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-								"description": "cool description cool description cool description"
-							},
-							{
-								"name": "home work",
-								"link": "link link link",
-								"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-								"description": "cool description cool description cool description"
+						"Slides": [{
+								"name": "Legendre and Chebyshev polynomials - file 1",
+								"link": "https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%95%D7%9E%D7%99_%D7%9C%D7%96%27%D7%A0%D7%93%D7%A8",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Legendre and Chebyshev polynomials - file 2",
+								"link": "https://www.hamichlol.org.il/%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%95%D7%9E%D7%99_%D7%A6%27%D7%91%D7%99%D7%A9%D7%91",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Legendre and Chebyshev polynomials - file 3",
+								"link": "/files/numerical_analysis_polynoms.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Legendre and Chebyshev polynomials - file 4",
+								"link": "/files/numerical_analysis_сhvishev.docx",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Interpolation by Lagrange method",
+								"link": "http://u.cs.biu.ac.il/~zarosih/68/NMFiles/tirgul9.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Cubic Spline method",
+								"link": "https://www.math.ntnu.no/emner/TMA4215/2008h/cubicsplines.pdf",
+								"type": "slides",
+								"description": ""
 							}
 						]
 					}
 				},
 				{
-					"title": "cool module 2",
-					"explanation": "not too long not too long",
+					"title": "Numerical Differentiation and Integration",
+					"explanation": "Numerical methods differentiation and integration",
 					"resources": {
-						"assignment":[{
-							"name": "home work",
-							"link": "link link link",
-							"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-							"description": "cool description cool description cool description"
-						},
-						{
-							"name": "home work",
-							"link": "link link link",
-							"date": "Sat Oct 20 2020 16:08:50 GMT+0300 (Israel Daylight Time)",
-							"description": "cool description cool description cool description"
+						"Slides":[{
+							"name": "Numerical Differentiation",
+							"link": "http://math-wiki.com/images/2/2c/%D7%AA%D7%A8%D7%92%D7%95%D7%9C_13.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Numerical Integration",
+							"link": "/files/numerical_analysis_numerical_Integration.pdf",
+							"type": "slides",
+							"description": ""
 						}]
 					}
 				}
 			],
-			"description": "sentence or two of text - no HTML needed"
+			"description": "This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you."
+		},
+		{
+			"name":"Introduction to Linear Mathematical Optimization",
+			"code": "88369",
+			"year": "2020",
+			"semester": "2",
+			"topic":"numerical methods",
+			"university": "Bar Ilan University",
+			"department": "Mathematics",
+			"location_class": "",
+			"syllabus": "",
+			"grade_parts": [
+				{
+					"name": "Exam",
+					"percent": 100
+				}
+			],
+			"resources": {
+				"optional":[
+					{
+						"name": "A nice summery of the main algorithm in the course",
+						"link": "https://www3.nd.edu/~dgalvin1/30210/30210_F07/presentations/simplex_full.pdf",
+						"description": ""
+					},
+					{
+						"name": "Simplex in 10 pages (Hebrew)",
+						"link": "http://highmath.haifa.ac.il/data/alle1-26/alle13/alle13-9.pdf",
+						"description": ""
+					},
+					{
+						"name": "A book about optimization - you need only the first chapter (Hebrew)",
+						"link": "https://www.cse.huji.ac.il/~nogar02/integrali/files/DOptimization-2013.pdf",
+						"description": "Introduction to Numerical Analysis by Stoer, J. and Bulirsch, R."
+					},
+					{
+						"name": "An introduction and technical notes for LP",
+						"link": "https://sites.math.washington.edu/~burke/crs/407/notes/section1.pdf",
+						"description": ""
+					}
+				]
+			},
+			"updates": [{
+					"title": "Cancalation of home work 4",
+					"date": "5.1.2020",
+					"description": "There will not be home work #4 as plained in order to allow you to focus on more prepartions for the exam.",
+					"link": ""
+				}
+			],
+			"modules": [{
+					"title": "Introduction to Simplex",
+					"explanation": "Numerical methods for Interpolation",
+					"resources": {
+						"Slides": [{
+								"name": "Introduction to Simplex method and linear optimization background (file 1)",
+								"link": "https://en.wikipedia.org/wiki/George_Dantzig",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Introduction to Simplex method and linear optimization background (file 2)",
+								"link": "http://www.math.wsu.edu/faculty/genz/364/lessons/l3034.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Simplex Algorithm for LP problems (file 1)",
+								"link": "http://www.phpsimplex.com/en/simplex_method_example.htm",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Simplex Algorithm for LP problems (file 2)",
+								"link": "http://www.ms.uky.edu/~jack/2010-01-MA162/2010-02-25-MA162Lab.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Simplex Algorithm for LP problems (file 3)",
+								"link": "http://math.uww.edu/~mcfarlat/s-prob.htm",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Two Phase Simplex Algorithm (file 1)",
+								"link": "http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Two Phase Simplex Algorithm (file 2)",
+								"link": "http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Two Phase Simplex Algorithm (file 3)",
+								"link": "http://www.universalteacherpublications.com/univ/ebooks/or/Ch3/twophase1.htm",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Two Phase Simplex Algorithm (file 4)",
+								"link": "https://www.math.ubc.ca/~anstee/math340/340simplexalgorithmoverview.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Dual theory for linear optimization problems (file 1)",
+								"link": "/files/linear_optimization_big_m_1.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Dual theory for linear optimization problems (file 2)",
+								"link": "/files/linear_optimization_big_m_2.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Dual theory for linear optimization problems",
+								"link": "/files/dual_simplex_example_1.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Dual Simplex analysis",
+								"link": "/files/dual_simplex_example_2.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Network, tranfer and other LP problems modeling",
+								"link": "http://web.mit.edu/15.053/www/AMP-Chapter-09.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Gradient Decent",
+								"link": "https://people.seas.harvard.edu/~yaron/AM221-S16/lecture_notes/AM221_lecture9.pdf",
+								"type": "slides",
+								"description": ""
+							}
+						]
+					}
+				},
+				{
+					"title": "Home work",
+					"explanation": "",
+					"resources": {
+						"Home Work":[{
+							"name": "Home work 1",
+							"link": "/files/88369-hw-01.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Home work 2",
+							"link": "/files/OR-Exercise 3.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Home work 3",
+							"link": "/files/OR-Exercise 4.pdf",
+							"type": "slides",
+							"description": ""
+						}],
+						"Home Work Answer":[{
+							"name": "Home Work Answer 1",
+							"link": "/files/88369-hw-01-sol.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Home Work Answer 2",
+							"link": "/files/linear_optimization_hw_1_answer_1_3.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Home Work Answer 3",
+							"link": "/files/88369-hw-04-sol.pdf",
+							"type": "slides",
+							"description": ""
+						}]
+					}
+				}
+			],
+			"description": "This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you."
+		},
+		{
+			"name":"Tools for Numerical Analysis ",
+			"code": "83214",
+			"year": "2020",
+			"semester": "2",
+			"topic":"numerical methods",
+			"university": "Bar Ilan University",
+			"department": "Engineering",
+			"location_class": "",
+			"description": "This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you.",
+			"syllabus": "",
+			"grade_parts": [
+				{
+					"name": "Exam",
+					"percent": 100
+				}
+			],
+			"resources": {
+				"optional":[
+					{
+						"name": "A wonderfull book with all the subject of the course in the first five chapters.",
+						"link": "http://www.math.uni.wroc.pl/~olech/metnum2/Podreczniki/(eBook)%20Introduction%20to%20Numerical%20Analysis%20-%20J.Stoer,R.Bulirsch.pdf",
+						"description": ""
+					}
+				]
+			},
+			"updates": [{
+					"title": "Home work 1",
+					"date": "1.3.2020",
+					"description": "The file can be found <a href='/files/hw_tools_for_numerical_analysis_1.pdf'>here</a>",
+					"link": ""
+				},
+				{
+					"title": "Home work 2",
+					"date": "1.4.2020",
+					"description": "The file can be found <a href='/files/hw_tools_for_numerical_analysis_2.pdf'>here</a>",
+					"link": ""
+				},
+				{
+					"title": "Home work 3",
+					"date": "1.5.2020",
+					"description": "The file can be found <a href='/files/hw_tools_for_numerical_analysis_3.pdf'>here</a>",
+					"link": ""
+				}
+			],
+			"modules": [
+				{
+					"title": "Introduction to numerical analysis",
+					"explanation": "Concepts of numerical analysis and ideas from function theory - main slides",
+					"resources": {
+						"Slides": [{
+								"name": "Introduction to numerical analysis and numerical error",
+								"link": "/files/tools_numerical_lession_1_d.pdf",
+								"type": "slides",
+								"description": "Thanks to Oz Pirvandy"
+							},{
+								"name": "Introduction to numerical analysis and numerical error (file 1)",
+								"link": "/files/tools_numerical_lession_1_a.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Introduction to numerical analysis and numerical error (file 2)",
+								"link": "/files/tools_numerical_lession_1_b.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "Introduction to numerical analysis and numerical error (file 3)",
+								"link": "/files/tools_numerical_lession_1_c.pdf",
+								"type": "slides",
+								"description": ""
+							},{
+								"name": "More numerical error and zero points of a function",
+								"link": "/files/tools_numerical_lession_2.pdf",
+								"type": "slides",
+								"description": "Thanks to Oz Pirvandy"
+							},{
+								"name": " Continue zero points of a function, fix points and some Matlab Code",
+								"link": "/files/tools_numerical_lession_3.pdf",
+								"type": "slides",
+								"description": "Thanks to Oz Pirvandy"
+							}]
+						}
+				},
+				{
+					"title": "Matrix methods",
+					"explanation": "Methods to calculate several good propertices of Matrices",
+					"resources": {
+						"Slides":[{
+							"name": "LU and Gauss methods",
+							"link": "/files/linear_numerical_presentation.pptx",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "LU and SVD methods  - LU example",
+							"link": "/files/numerical_tools_lession_5_file_0.pptx",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "LU and SVD methods - LU analysis",
+							"link": "/files/numerical_tools_lession_5_file_1.pptx",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "LU and SVD methods- SVD algorithm",
+							"link": "/files/numerical_tools_lession_5_file_2.pptx",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "LU and SVD methods - SVD example)",
+							"link": "/files/numerical_tools_lession_5_file_3.pptx",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Linear Iterative methods",
+							"link": "/files/numerical_tools_lession_5.pptx",
+							"type": "slides",
+							"description": "Thanks to Oz Pirvandy"
+						},{
+							"name": "Yakobi-Zidal method and interpolation",
+							"link": "/files/tools_numerical_lession_6.pptx",
+							"type": "slides",
+							"description": "Thanks to Oz Pirvandy"
+						},{
+							"name": "Yakobi-Zidal method and interpolation advanced (file 1)",
+							"link": "/files/numerical_tools_lecture_8 (1).pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Yakobi-Zidal method and interpolation advanced (file 2)",
+							"link": "/files/numerical_tools_lecture_8 (2).pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Yakobi-Zidal method and interpolation advanced (file 3)",
+							"link": "/files/numerical_tools_lecture_8 (3).pdf",
+							"type": "slides",
+							"description": ""
+						}]
+					}
+				},
+				{
+					"title": "Advanced Subjects",
+					"explanation": "Methods to extrapolate and interpolate data, FFT, numerical integration and differentiation",
+					"resources": {
+						"Slides":[{
+							"name": "Least Squres",
+							"link": "http://math.mit.edu/~gs/linearalgebra/ila0403.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "(Fast) Fourier Transform (file 1)",
+							"link": "/files/numerical_tools_lession_9_a.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "(Fast) Fourier Transform (file 2)",
+							"link": "/files/numerical_tools_lession_9_b.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Numerical Differentiation",
+							"link": "/files/numerical_tools_lession_10.PDF",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Numerical Integration",
+							"link": "/files/numerical_analysis_numerical_Integration.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Numerical ODE Solvers - Euler Method",
+							"link": "/files/tools_numerical_ode_lecture.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Numerical ODE Solvers - Runga Kutta example",
+							"link": "https://www.intmath.com/differential-equations/12-runge-kutta-rk4-des.php",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Numerical ODE Solvers - Runga Kutta method",
+							"link": "http://tnt.phys.uniroma1.it/twiki/pub/TNTgroup/AngeloVulpiani/runge.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Numerical PDE Solvers - FEM",
+							"link": "https://www2.icp.uni-stuttgart.de/~icp/mediawiki/images/d/d3/Jcerda_notes_FE0.pdf",
+							"type": "slides",
+							"description": ""
+						},{
+							"name": "Numerical PDE Solvers - code example",
+							"link": "https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/moler/pdes.pdf",
+							"type": "slides",
+							"description": "Provided on Matlab (V2012)"
+						}]
+					}
+				}
+			]
 		}
 	]
 }

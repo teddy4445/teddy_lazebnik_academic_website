@@ -3,6 +3,23 @@
 	"open_positions": [
 	],
 	"projects": [{
+		"name": " Sphera – A template for personal academic websites",
+		"participants": [],
+		"description": "Sphera is a free open-source website template that will vastly improve the communication between lecturers and students. It will provide lecturers and professors with the tools to easily create a professional personal website that contains their research, courses and personal projects. We will study the user behaivor in personal acadmic websites and how to improve it using machine learning reccomendation system.",
+		"start_month": 8,
+		"start_year": 2020,
+		"end_month": 8,
+		"end_year": 2021,
+		"team_members": 12,
+		"relevant_resources": [
+			{
+				"name": "Project Website",
+				"link": "http://sphera.academy/",
+				"description": "Read more about the project... "
+			}
+		]
+	},
+	{
 		"name": "International Crisis Simulator",
 		"participants": [],
 		"description": "A tempro-spatial mathematical model with computer simulation based in the cloud for pandemic analysis and polices investigation tool",

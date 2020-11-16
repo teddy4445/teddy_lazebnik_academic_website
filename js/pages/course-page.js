@@ -115,26 +115,39 @@ class CoursePage extends PageRender
 
 	/* helper function */
 
-	createDetailsCourse() {
-		try{
+	createDetailsCourse() 
+	{
+		try
+		{
 			var html='<div class="main-header-page"><h1>'
 			+ this.data.name + '</h1><div class="header-detail"><div class="item-detail"><img class="course-detail-img" src="/img/mdi_school.png"><p>'
 			+ this.data.code + '</p></div><div class="item-detail"><img class="course-detail-img" src="/img/mdi_access_time.png"><p>Semester '
 			+ this.data.semester + '</p></div><div class="item-detail"><img class="course-detail-img" src="/img/mdi_place.png"><div class=".personal-coloum"><p>'
 			+ this.data.university + '</p><p>'
-			+ this.data.location_class + '</p></div></div></div></div><div class="personal-row"><a class="sylabus-link" href='
-			+ this.data.syllabus +' ><img class="course-sylabus-img" src="/img/save_alt.png" alt="">Syllabus</a></div>';
+			+ this.data.location_class + '</p></div></div></div></div><div class="personal-row">';
+			
+			if (this.data.syllabus != "" && this.data.syllabus != undefined)
+			{
+				html += '<a class="sylabus-link" href='+ this.data.syllabus +' ><img class="course-sylabus-img" src="/img/save_alt.png" alt="">Syllabus</a>';
+			}
+			html += '</div>';
 			document.getElementById("icons_section").innerHTML = html;
 
-		}catch(error){
+		}
+		catch(error)
+		{
 			console.log("Error at Course.BuildHeader, saying:" + error);
 		}
 	}
 
-	createTabsSection() {
+	createTabsSection() 
+	{
 		Tabs.createTabsSection();
 		Tabs.addTab('general');
-		Tabs.addTab('updates', false ,this._pick_flag());
+		if (this.data.updates.length > 0)
+		{
+			Tabs.addTab('updates', false ,this._pick_flag());	
+		}
 		Tabs.addTab('modules', true);
 		
 	}
