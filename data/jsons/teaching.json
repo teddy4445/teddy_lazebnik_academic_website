@@ -100,6 +100,274 @@
 				}
 			],
 			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
+		},{
+			"name": "Deep Leanring",
+			"code": "21319",
+			"year": "2021",
+			"topic":"programming",
+			"semester": "1",
+			"university": "HIT",
+			"department": "Computer science",
+			"location_class": "Zoom",
+			"syllabus": "",
+			"grade_parts": [{
+					"name": "Home work",
+					"percent": 30
+				},
+				{
+					"name": "Final Project",
+					"percent": 70
+				}
+			],
+			"resources": {
+				"optinal":[{"name": "Stanford's cs231n course",
+					"link": "http://cs231n.stanford.edu/",
+					"description": "The course will be similar to the Stanford's cs231n course and all slides from there",
+					"type": "file"},
+					{"name": "Google colab",
+					"link": "https://colab.research.google.com/",
+					"description": "Google colab should help you with the trianing speed of your models",
+					"type": "file"},
+					{"name": "Introducing GIT",
+					"link": "https://rogerdudler.github.io/git-guide/",
+					"description": "Use it in your projects!",
+					"type": "file"},
+					{"name": "BitBacket - your GIT host provider",
+					"link": "https://bitbucket.org/",
+					"description": "Checkout GitHub as well...",
+					"type": "file"},
+					{"name": "Youtube CodeTrain DL course",
+					"link": "https://www.youtube.com/watch?v=XJ7HLz9VYz0&amp;list=PLRqwX-V7Uu6Y7MdSCaIfsxc561QI0U0Tb",
+					"description": "If you want fun youtube video about NN - this is the one I reccomend",
+					"type": "file"},
+					{"name": "Practical DL book",
+					"link": "https://www.d2l.ai/",
+					"description": "A very practical course by Amazon",
+					"type": "file"}]
+			},
+			"updates": [{
+					"title": "Final Project Proposal",
+					"date": "4.29.2020",
+					"description": "The final project proposal must be submited until the 29.4.2020 (11:59 pm). <a href='/files/dl_project_proposal.pdf' title='Project Proposal Instractions File'>Project Proposal Instractions File</a>",
+					"link": ""
+				},
+				{
+					"title": "The final project paper style and stracture instractions guide",
+					"date": "5.15.2020",
+					"description": "Project Paper Instractions File can be found <a  href='/files/deeplearning-project-paper.pdf' title='Project Paper Instractions File'>here</a>",
+					"link": ""
+				},
+				{
+					"title": "The final project paper style and stracture instractions guide",
+					"date": "5.15.2020",
+					"description": "Project Paper Instractions File can be found <a  href='/files/deeplearning-project-paper.pdf' title='Project Paper Instractions File'>here</a>",
+					"link": ""
+				}
+			],
+			"modules": [{
+					"title": "Comupter Vision Introduction",
+					"explanation": "An introduction to computer vision concepts, review of ML methods and first steps in DL",
+					"resources": {
+						"Lectures":[{
+							"name": "Introduction + Knn + Linear Regression",
+							"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/iml2018_lecture1.pdf",
+							"description": "Thanks to Yossi Keshet",
+							"type": "slides"
+						},
+						{
+							"name": "Linear Calssifcation and NN stracture",
+							"link": "https://www.cs.cmu.edu/~avrim/ML10/lect0125.pdf",
+							"description": "Lecture (CMU)",
+							"type": "slides"
+						},
+						{
+							"name": "Python Perceptron",
+							"link": "https://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/",
+							"description": "",
+							"type": "slides"
+						},
+						{
+							"name": "Python Perceptron",
+							"link": "https://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/",
+							"description": "",
+							"type": "slides"
+						},
+						{
+							"name": "Cool NN visual demo",
+							"link": "http://playground.tensorflow.org/",
+							"description": "It will help to understand how your DL looks like",
+							"type": "slides"
+						},
+						{
+							"name": "Backpropagation and FcNN",
+							"link": "http://cs231n.stanford.edu/slides/2019/cs231n_2019_lecture04.pdf",
+							"description": "Lecture by Stanford",
+							"type": "slides"
+						},
+						{
+							"name": "Lession 3",
+							"link": "https://www.youtube.com/embed/ciUGihyYYSw",
+							"description": "",
+							"type": "video"
+						}]
+					}},
+					{
+					"title": "Deep Learning models",
+					"explanation": "CNN, code, model development pipeline",
+					"resources": {
+						"Lectures":[{
+							"name": "Lecture 4",
+							"link": "https://www.youtube.com/embed/Cwy0GuD6XGM",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "Lecture 5",
+							"link": "https://www.youtube.com/embed/SXV9Usof-o8",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "Lecture 6",
+							"link": "https://www.youtube.com/embed/puZrVE96MXg",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "Lecture 8",
+							"link": "https://www.youtube.com/embed/iHjBP7aGCiw",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "Lecture 9",
+							"link": "https://www.youtube.com/embed/iHjBP7aGCiw",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "Lecture 10",
+							"link": "https://www.youtube.com/embed/K24tiI2hZB0",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "Lecture 10",
+							"link": "https://www.youtube.com/embed/s3jYwycCFmk",
+							"description": "",
+							"type": "video"
+						}],
+						"Slids and Sources":[{
+							"name": "Convolutional Neural Networks (CNN)",
+							"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/iml2018_lecture7.pdf",
+							"description": "",
+							"type": "slides"
+						},
+						{
+							"name": "CNN - keras",
+							"link": "https://towardsdatascience.com/building-a-convolutional-neural-network-cnn-in-keras-329fbbadc5f5/",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"name": "MNIST - dataset",
+							"link": "http://yann.lecun.com/exdb/mnist/",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"name": "Training NN (I) | Hardware and Software",
+							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture08.pdf",
+							"description": "Lecture by Stanford",
+							"type": "slides"
+						},
+						{
+							"name": "Training NN (II) | FNN and CNN Architectures",
+							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture09.pdf",
+							"description": "Lecture by Stanford",
+							"type": "slides"
+						},
+						{
+							"name": "RNNs",
+							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture10.pdf",
+							"description": "",
+							"type": "slides"
+						},
+						{
+							"name": "TensorFlow.js (Tutorials)",
+							"link": "https://www.tensorflow.org/js/tutorials",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"name": "ML5.js",
+							"link": "https://ml5js.org/",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"name": "Toy Neural Network (JS)",
+							"link": "https://github.com/CodingTrain/Toy-Neural-Network-JS/blob/master/examples/neuroevolution-flappybird/ga.js",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"name": "Detection and Segmentation",
+							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture11.pdf",
+							"description": "",
+							"type": "slides"
+						},
+						{
+							"name": "Generative Models",
+							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture12.pdf",
+							"description": "",
+							"type": "slides"
+						},
+						{
+							"name": "Visualizing and Understanding NN",
+							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture13.pdf",
+							"description": "",
+							"type": "slides"
+						}]
+					}},
+					{
+					"title": "Deep Learning Projects",
+					"explanation": "Students projects",
+					"resources": {
+						"Projects":[{
+							"name": "Figure Skating Jump Video Classification",
+							"link": "https://bitbucket.org/teddy_lazebnik/figure-skating-jumps-with-video-classification/src/master/",
+							"description": "By: Elena Golubeva and Vladislav Goteiner. Presentation can be found <a href='/files/students/dl_course/Figure Skating Jump Video Classification-poster-presentation.pdf'>here</a>",
+							"type": "file"
+						},
+						{
+							"name": "Seasonal Color Classification' project",
+							"link": "https://bitbucket.org/teddy_lazebnik/seasonal-color-classification/src/master/",
+							"description": "By: Alona Kalenkovich. Presentation can be found <a href='/files/students/dl_course/Seasonal Color Classification presentation.pdf'>here</a>",
+							"type": "file"
+						},
+						{
+							"name": "The MURA challenge",
+							"link": "https://towardsdatascience.com/building-a-convolutional-neural-network-cnn-in-keras-329fbbadc5f5/",
+							"description": "By: Alon Avrahami, David Chernin, and Yair Hanina.  Presentation can be found <a href='/files/students/dl_course/The MURA challenge-presentation.pdf'>here</a>",
+							"type": "file"
+						},
+						{
+							"name": "Colorization of grayscale images",
+							"link": "https://bitbucket.org/teddy_lazebnik/colorization-of-grayscale-images/src/master/",
+							"description": "By: Tal Ladijinsky and Lior Danon.  Presentation can be found <a href='/files/students/dl_course/colorization-of-grayscale-images-presentation.pdf'>here</a>",
+							"type": "file"
+						},
+						{
+							"name": "Image Completion with DCGAN",
+							"link": "https://bitbucket.org/teddy_lazebnik/face-inpainting-using-a-dcgan/src/master/",
+							"description": "By: Dan Levy and Shay Malkin. resentation can be found <a href='/files/students/dl_course/DCGAN Image Completion_presentation-converted.pdf'>here</a>",
+							"type": "file"
+						}]
+					}
+				}
+			],
+			"description": "In recent years there has been a major breakthrough in the field of artificial neural networks, especially in deep neural networks (namely, networks with many layers). Deep learning is the term coined for the training of such networks, which have shown superiority over other machine learning algorithms in many applications. Nowadays, deep neural networks provide the best performance in tasks such as, voice recognition, object detection, image classification and content suggestion. These networks gradually take over standard machine learning algorithms and we are at the heart of a new generation, where voice recognition and image recognition are based on them fully. In this course we will explain the mathematics at the core of neural networks models, and provide practical tools for using them. The course focuses mainly on image processing and, consequently, on convolutional neural networks."
 		},
 		{
 			"name":"Numerical Analysis",
