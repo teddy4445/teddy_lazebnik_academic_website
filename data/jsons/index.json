@@ -2,12 +2,12 @@
    "biography":"I am a Ph.D. student in the Tolkien Project, part of the MAVERICK research group at the Computer Science Department , Bar Ilan University ; Supervised by Prof. Gal A. Kaminka and Dr. Chana Weitman. My research focuses on medical and biological nanoparticles (focusing on nanorobotics). Specifically, modeling a curing protocol based on biophysical interactions of targeted drug delivery nanoparticles in the blood. I am also interested in numerical solving and stabilization of ordinary and partial differential equations (ODE, PDE) systems (especially, ones that originate in a biological setup). Sometimes I am publishing some useful (or just fun) things like open code and technical blog posts . I published a few academic papers in journals, conferences, and abstracts. In between, I am teaching several mathematical classes and working with Bc.S. and Mc.S. students on their final project. I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics at Bar-Ilan University.",
    "researchInterests":[
 		"Medical Nanorobotics - nanoscale in vivo interactions, drug discovery, computing, and compalization.",
-		"Biomathematical Modeling - optimal treatment policy, pharmacokinetics, and disease dyanmics.",
-		"Computer Simualtion - in vivo PKPD, epedimological, and clinical treatment."
+		"Biomathematical Modeling - optimal treatment policy, ODE/PDE-based models, and disease dyanmics.",
+		"Computer Simualtion - pharmacokinetics-pharmacodynamic models, epedimological, and clinical treatment."
    ],
    "featuredPublications":[
       {
-         "name":"A stable algorithm for numerical matrix exponent",
+         "name":"A Stable Algorithm for Numerical Matrix Exponent",
          "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix_exponent.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., A stable algorithm for numerical matrix exponent. Functional Differential Equations. 2020."}],

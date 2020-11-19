@@ -138,9 +138,9 @@
          {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/excel-to-latex-table-generator"},
          {"info": "cite", "type": 3, "link": ""}
        ],
-      "authors": "Lazebnik, T., Vardi, N.",
+      "authors": "Lazebnik, T.",
       "year": 2020,
-      "topic":"NLP",
+      "topic":"Latex",
       "type":"code"
     }
   ]
