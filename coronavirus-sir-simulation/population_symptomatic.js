@@ -1,25 +1,16 @@
 class Population
 {
-	constructor(working_adult_population,
-				working_adult_s_percent,
-				working_adult_i_percent,
-				working_adult_r_percent,
-				nonworking_adult_population,
-				nonworking_adult_s_percent,
-				nonworking_adult_i_percent,
-				nonworking_adult_r_percent,
+	constructor(adult_population,
+				adult_s_percent,
+				adult_i_percent,
+				adult_r_percent,
 				children_population, 
 				children_s_percent, 
 				children_i_percent, 
-				children_r_percent,
-				init_econimic)
+				children_r_percent)
 	{
 		// main members
 		this.members = [];
-		this.econimic = init_econimic;
-		this.econimic_delta = 0;
-		this.taxes = 0;
-		this.w_to_n_adults = 0;
 		
 		// technical members
 		this.timeOfDay = 0;
@@ -27,72 +18,57 @@ class Population
 		this.last_stats = null;
 		
 		// find if percent or size
-		var wa_s;
-		var wa_i;
-		var wa_r;
-		var wa_d = 0;
-		var na_s;
-		var na_i;
-		var na_r;
-		var na_d = 0;
+		var a_s;
+		var a_si;
+		var a_ai;
+		var a_r;
+		var a_d = 0;
 		var c_s;
-		var c_i;
+		var c_si;
+		var c_ai;
 		var c_r;
 		var c_d = 0;
 		
-		if (working_adult_s_percent + working_adult_i_percent + working_adult_r_percent == 100
-		&& nonworking_adult_s_percent + children_i_percent + children_r_percent == 100
-		&& children_s_percent + nonworking_adult_i_percent + nonworking_adult_r_percent == 100)
+		if (adult_s_percent + adult_i_percent + adult_r_percent == 100
+		&& children_s_percent + adult_i_percent + adult_r_percent == 100)
 		{
-			wa_s = adult_population * working_adult_s_percent / 100;
-			wa_i = adult_population * working_adult_i_percent / 100;
-			wa_r = adult_population * working_adult_r_percent / 100;
-			na_s = adult_population * nonworking_adult_s_percent / 100;
-			na_i = adult_population * nonworking_adult_i_percent / 100;
-			na_r = adult_population * working_adult_r_percent / 100;
+			a_s = adult_population * adult_s_percent / 100;
+			a_si = symptomatic_adults_chance * adult_population * adult_i_percent / 100;
+			a_ai = (1 - symptomatic_adults_chance) * adult_population * adult_i_percent / 100;
+			a_r = adult_population * adult_r_percent / 100;
 			c_s = adult_population * children_s_percent / 100;
-			c_i = adult_population * children_i_percent / 100;
-			c_r = adult_population * nonworking_adult_r_percent / 100;
+			c_si = symptomatic_children_chance * adult_population * children_i_percent / 100;
+			c_ai = (1 - symptomatic_children_chance) * adult_population * children_i_percent / 100;
+			c_r = adult_population * children_r_percent / 100;
 		}
 		else
 		{
-			wa_s = working_adult_s_percent;
-			wa_i = working_adult_i_percent;
-			wa_r = working_adult_r_percent;
-			na_s = nonworking_adult_s_percent;
-			na_i = nonworking_adult_i_percent;
-			na_r = nonworking_adult_r_percent;
+			a_s = adult_s_percent;
+			a_si = Math.round(symptomatic_adults_chance * adult_i_percent);
+			a_ai = Math.round((1 - symptomatic_adults_chance) * adult_i_percent);
+			a_r = adult_r_percent;
 			c_s = children_s_percent;
-			c_i = children_i_percent;
+			c_si = Math.round((1 - symptomatic_children_chance) *children_i_percent);
+			c_ai = Math.round(symptomatic_children_chance * children_i_percent);
 			c_r = children_r_percent;
 		}
 		
-		// add working adult population
-		for (var i = 0; i < Math.round(wa_s); i++)
+		// add adult population
+		for (var i = 0; i < Math.round(a_s); i++)
 		{
-			this.members.push(new Member(WORKING_ADULT, STATE_S, LOC_HOME));
+			this.members.push(new Member(ADULT, STATE_S, LOC_HOME));
 		}
-		for (var i = 0; i < Math.round(wa_i); i++)
+		for (var i = 0; i < Math.round(a_si); i++)
 		{
-			this.members.push(new Member(WORKING_ADULT, STATE_I, LOC_HOME));
+			this.members.push(new Member(ADULT, STATE_SI, LOC_HOME));
 		}
-		for (var i = 0; i < Math.round(wa_r); i++)
+		for (var i = 0; i < Math.round(a_ai); i++)
 		{
-			this.members.push(new Member(WORKING_ADULT, STATE_R, LOC_HOME));
+			this.members.push(new Member(ADULT, STATE_AI, LOC_HOME));
 		}
-		
-		// add nonworking adult population
-		for (var i = 0; i < Math.round(na_s); i++)
+		for (var i = 0; i < Math.round(a_r); i++)
 		{
-			this.members.push(new Member(NONWORKING_ADULT, STATE_S, LOC_HOME));
-		}
-		for (var i = 0; i < Math.round(na_i); i++)
-		{
-			this.members.push(new Member(NONWORKING_ADULT, STATE_I, LOC_HOME));
-		}
-		for (var i = 0; i < Math.round(na_r); i++)
-		{
-			this.members.push(new Member(NONWORKING_ADULT, STATE_R, LOC_HOME));
+			this.members.push(new Member(ADULT, STATE_R, LOC_HOME));
 		}
 		
 		// add children population
@@ -100,13 +76,36 @@ class Population
 		{
 			this.members.push(new Member(CHILD, STATE_S, LOC_HOME));
 		}
-		for (var i = 0; i < Math.round(c_i); i++)
+		for (var i = 0; i < Math.round(c_si); i++)
 		{
-			this.members.push(new Member(CHILD, STATE_I, LOC_HOME));
+			this.members.push(new Member(CHILD, STATE_SI, LOC_HOME));
+		}
+		for (var i = 0; i < Math.round(c_ai); i++)
+		{
+			this.members.push(new Member(CHILD, STATE_AI, LOC_HOME));
 		}
 		for (var i = 0; i < Math.round(c_r); i++)
 		{
 			this.members.push(new Member(CHILD, STATE_R, LOC_HOME));
+		}
+		
+		// add masks 
+		let good_mask_people = init_percent_good_masks * adult_population;
+		let bad_mask_people = init_percent_bad_masks * adult_population;
+		
+		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
+		{
+			if (this.members[memberIndex].eco_age_group == ADULT)
+			{
+				if (Math.random() < init_percent_good_masks)
+				{
+					this.members[memberIndex].eco_age_group = ADULT_GOOD_MASK;
+				}
+				else if (Math.random() < init_percent_bad_masks)
+				{
+					this.members[memberIndex].eco_age_group = ADULT_BAD_MASK;
+				}
+			}
 		}
 	}
 	
@@ -117,17 +116,7 @@ class Population
 	
 	size_adults()
 	{
-		return this.size_working_adults() + this.size_nonworking_adults();
-	}
-	
-	size_working_adults()
-	{
-		return this.wa_s + this.wa_i + this.wa_r + this.wa_d;
-	}
-	
-	size_nonworking_adults()
-	{
-		return this.na_s + this.na_i + this.na_r + this.na_d;
+		return this.a_s + this.a_i + this.a_r + this.a_d;
 	}
 	
 	size_children()
@@ -140,24 +129,16 @@ class Population
 		this.members = [];
 	}
 	
-	run(wa_wa_t_c, 
-		wa_na_t_c, 
-		na_wa_t_c, 
-		na_na_t_c,
-		wa_c_t_c,
-		na_c_t_c,
+	run(a_a_t_c,
+		a_c_t_c,
+		c_a_t_c,
 		c_c_t_c,
-		c_wa_t_c,
-		c_na_t_c,
 		infected_to_recover_time_adult, 
 		infected_to_recover_time_children, 
 		time_at_home_c,
 		time_at_home_a,
 		go_to_school_k_days,
-		go_to_work_k_days,
-		loss_jobs_rate,
-		avg_contribution_to_economic,
-		taxes_percent)
+		go_to_work_k_days)
 	{
 		
 		// 0. mix population in order to have a real stocastic process of picking the members
@@ -172,28 +153,15 @@ class Population
 										go_to_work_k_days);	
 		}
 		
-		// 2. make tranforms regarding to -> location, age, state
-		var r_zero = this._make_trasforms(wa_wa_t_c, 
-											wa_na_t_c, 
-											na_wa_t_c, 
-											na_na_t_c,
-											wa_c_t_c,
-											na_c_t_c,
+		// 2. make tranforms regarding to -> location, age
+		var r_zero = this._make_trasforms(a_a_t_c,
+											a_c_t_c,
+											c_a_t_c,
 											c_c_t_c,
-											c_wa_t_c,
-											c_na_t_c, 
 											infected_to_recover_time_adult, 
 											infected_to_recover_time_children);
 		
-		// 3. update the working status (the new econimic part of the system) and update the economic 
-		this.econimic_delta = this._update_working_status(loss_jobs_rate,
-															avg_contribution_to_economic, 
-															r_zero, 
-															time_at_home_a,
-															taxes_percent);
-		this.econimic += this.econimic_delta;
-		
-		// 4. update time of day 
+		// 3. update time of day 
 		this.timeOfDay++;
 		if (this.timeOfDay == TIME_IN_DAY)
 		{
@@ -201,7 +169,6 @@ class Population
 			this.days += 1;
 		}
 	}
-
 
 	_shuffle(array) 
 	{
@@ -279,15 +246,10 @@ class Population
 		}
 	}
 	
-	_make_trasforms(wa_wa_t_c, 
-					wa_na_t_c, 
-					na_wa_t_c, 
-					na_na_t_c,
-					wa_c_t_c,
-					na_c_t_c,
+	_make_trasforms(a_a_t_c,
+					a_c_t_c,
+					c_a_t_c,
 					c_c_t_c,
-					c_wa_t_c,
-					c_na_t_c, 
 					infected_to_recover_time_adult, 
 					infected_to_recover_time_children)
 	{
@@ -349,83 +311,10 @@ class Population
 		return this.calcWorkingRzero(this.countStatusDestrebution());
 	}
 	
-	
-	// updates the working status according
-	_update_working_status(loss_jobs_rate, 
-							avg_contribution_to_economic,
-							r_zero,
-							time_at_home_a,
-							taxes_percent)
-	{
-		var now_stats = this.countStatusDestrebution();
-		
-		// Note: can be negative, this mean individuals get there jobs back
-		var lose_jobs_s_count = loss_jobs_rate * r_zero * now_stats["wa_s"];
-		var lose_jobs_r_count = loss_jobs_rate * r_zero * now_stats["wa_r"];
-			
-		this.taxes = 0;
-		
-		var working_counter = 0;
-		var non_working_adults_counter = 0;
-		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
-		{
-			var thisMember = this.members[memberIndex];
-			
-			// handle S case
-			if (thisMember.state == STATE_S)
-			{
-				// if we need to loose jobs or get them
-				if (lose_jobs_s_count > 0 && thisMember.eco_age_group == WORKING_ADULT)
-				{
-					thisMember.eco_age_group = NONWORKING_ADULT;
-					thisMember.location = LOC_HOME;
-					lose_jobs_s_count--;
-				}
-				else if (lose_jobs_s_count < 0 && thisMember.eco_age_group == NONWORKING_ADULT)
-				{
-					thisMember.eco_age_group = WORKING_ADULT;
-					lose_jobs_s_count++;
-				}
-			}
-			
-			// handle R case
-			if (thisMember.state == STATE_R)
-			{
-				// if we need to loose jobs or get them
-				if (lose_jobs_r_count > 0 && thisMember.eco_age_group == WORKING_ADULT)
-				{
-					thisMember.eco_age_group = NONWORKING_ADULT;
-					thisMember.location = LOC_HOME;
-					lose_jobs_r_count--;
-				}
-				else if (lose_jobs_r_count < 0 && thisMember.eco_age_group == NONWORKING_ADULT)
-				{
-					thisMember.eco_age_group = WORKING_ADULT;
-					lose_jobs_r_count++;
-				}
-			}
-			
-			// count for the change in the economic post changes
-			if (thisMember.eco_age_group == WORKING_ADULT && (thisMember.state == STATE_S || thisMember.state == STATE_R))
-			{
-				working_counter++;
-				this.taxes += taxes_percent * avg_contribution_to_economic;
-			}
-			
-			if (thisMember.eco_age_group == NONWORKING_ADULT)
-			{
-				non_working_adults_counter++;
-			}
-		}
-		this.taxes = parseFloat(Math.round(this.taxes * 100 / non_working_adults_counter)) / 100;
-		return avg_contribution_to_economic * working_counter * ((TIME_IN_DAY - time_at_home_a) / STANDARD_WORK_DAY);
-	}
-	
 	countStatusDestrebution() 
 	{
-		var answer = {"wa_i": 0, "wa_s": 0, "wa_r": 0, "wa_d": 0,
-						"na_i": 0, "na_s": 0, "na_r": 0, "na_d": 0,
-						"c_i": 0, "c_s": 0, "c_r": 0, "c_d": 0};
+		var answer = {"a_si": 0, "a_ai": 0, "a_s": 0, "a_r": 0, "a_d": 0,
+						"c_si": 0, "c_ai": 0, "c_s": 0, "c_r": 0, "c_d": 0};
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 		{
 			var key = this.members[memberIndex].getKey();
@@ -441,49 +330,13 @@ class Population
 		return answer;
 	}
 	
-	calcWorkingRzero(new_stat)
-	{
-		var answer = 0;
-		if (this.last_stats != null)
-		{
-			var delta_recover = new_stat["wa_r"] + new_stat["na_r"] + new_stat["c_r"] - this.last_stats["wa_r"] - this.last_stats["na_r"] - this.last_stats["c_r"];
-			var delta_infected = new_stat["wa_i"] + new_stat["na_i"] + new_stat["c_i"] - this.last_stats["wa_i"] - this.last_stats["na_i"] - this.last_stats["c_i"];
-			if (delta_recover == 0)
-			{
-				answer = delta_infected;
-			}
-			else
-			{
-				answer = delta_infected / delta_recover;
-			}
-		}
-		else
-		{
-			answer = 0;
-		}
-		
-		// edge cases
-		if (answer > 0 && answer < 1)
-		{
-			answer = -1 / answer;
-		}
-		else if (answer == 1)
-		{
-			answer = 0;
-		}
-		
-		this.last_stats = new_stat;
-		return answer;
-	}
-	
 	countStatusLocationDestrebution() 
 	{
-		var answer = {"wa_i_h": 0, "wa_s_h": 0, "wa_r_h": 0,
-		"na_i_h": 0, "na_s_h": 0, "na_r_h": 0,		
-		"c_i_h": 0, "c_s_h": 0, "c_r_h": 0,
-		"wa_i_w": 0, "wa_s_w": 0, "wa_r_w": 0,
-		"c_i_s": 0, "c_s_s": 0, "c_r_s": 0,
-		"wa_d_h": 0, "na_d_h": 0, "wa_d_w": 0, "c_d_h": 0, "c_d_s": 0};
+		var answer = {"a_si_h": 0, "a_ai_h": 0, "a_s_h": 0, "a_r_h": 0,
+		"c_si_h": 0, "c_ai_h": 0, "c_s_h": 0, "c_r_h": 0,
+		"a_si_w": 0, "a_ai_w": 0, "a_s_w": 0, "a_r_w": 0,
+		"c_si_s": 0, "c_ai_s": 0, "c_s_s": 0, "c_r_s": 0,
+		"a_d_w": 0, "a_d_h": 0, "c_d_h": 0, "c_d_s": 0};
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 		{
 			var key = this.members[memberIndex].getFullKey();

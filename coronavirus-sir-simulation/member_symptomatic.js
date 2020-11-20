@@ -1,11 +1,13 @@
-let WORKING_ADULT = 1;
-let NONWORKING_ADULT = 2;
-let CHILD = 3;
+let ADULT = 1;
+let ADULT_GOOD_MASK = 2;
+let ADULT_BAD_MASK = 3;
+let CHILD = 4;
 
 let STATE_S = 1;
-let STATE_I = 2;
-let STATE_R = 3;
-let STATE_D = 4;
+let STATE_SI = 2;
+let STATE_AI = 3;
+let STATE_R = 4;
+let STATE_D = 5;
 
 let LOC_HOME = 1;
 let LOC_WORK = 2;
@@ -39,16 +41,6 @@ class Member
 		this.state_time = 0;
 	}
 	
-	lose_job()
-	{
-		this.eco_age_group = NONWORKING_ADULT;
-	}
-	
-	get_job()
-	{
-		this.eco_age_group = WORKING_ADULT;
-	}
-	
 	tic()
 	{
 		this.state_time++;
@@ -57,8 +49,7 @@ class Member
 	tryRecover(infected_to_recover_time_adult, infected_to_recover_time_children)
 	{
 		// TODO: replace != CHILD with something spesificly related to adults 
-		if ((this.state_time > infected_to_recover_time_adult && this.state == STATE_I && this.eco_age_group != CHILD) ||
-		(this.state_time > infected_to_recover_time_children && this.state == STATE_I && this.eco_age_group == CHILD))
+		if ((this.state_time > infected_to_recover_time_adult && this.state == STATE_SI && this.eco_age_group != CHILD) || (this.state_time > infected_to_recover_time_children && this.state == STATE_SI && this.eco_age_group == CHILD))
 		{
 			var chance = Math.random();
 			if ((this.eco_age_group != CHILD && chance <= pra) || (this.eco_age_group == CHILD && chance <= prc))
@@ -70,18 +61,18 @@ class Member
 				this.kill();
 			}
 		}
+		else if ((this.state_time > infected_to_recover_time_adult && this.state == STATE_AI && this.eco_age_group != CHILD) || (this.state_time > infected_to_recover_time_children && this.state == STATE_AI && this.eco_age_group == CHILD))
+		{
+			this.recover();
+		}
 	}
 	
 	getKey()
 	{
 		var answer = "";
-		if (this.eco_age_group == WORKING_ADULT)
+		if (this.eco_age_group == ADULT)
 		{
-			answer += "wa";
-		}
-		else if (this.eco_age_group == NONWORKING_ADULT)
-		{
-			answer += "na";
+			answer += "a";
 		}
 		else // CHILD
 		{
@@ -91,9 +82,13 @@ class Member
 		{
 			answer += "_s";
 		}
-		else if (this.state == STATE_I)
+		else if (this.state == STATE_SI)
 		{
-			answer += "_i";
+			answer += "_si";
+		}
+		else if (this.state == STATE_AI)
+		{
+			answer += "_ai";
 		}
 		else if (this.state == STATE_R)
 		{
@@ -131,9 +126,13 @@ class Member
 			age = "Child";
 		}
 		var state = "Susceptible";
-		if (this.state == STATE_I)
+		if (this.state == STATE_SI)
 		{
-			state = "Infected";
+			state = "Symptomatic Infected";
+		}
+		if (this.state == STATE_AI)
+		{
+			state = "Asymptomatic Infected";
 		}
 		else if (this.state == STATE_R)
 		{
@@ -148,6 +147,6 @@ class Member
 		{
 			location = "Work";
 		}
-		return "<Member | eco_age_group: " + age + ", state: " + state + " (" + this.state_time + " hours), location: " + location + ">";
+		return "<Member | age_group: " + age + ", state: " + state + " (" + this.state_time + " hours), location: " + location + ">";
 	}
 }

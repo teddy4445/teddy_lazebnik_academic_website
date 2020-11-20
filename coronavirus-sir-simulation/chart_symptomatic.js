@@ -1,31 +1,25 @@
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawStateDistrebution);
-google.charts.setOnLoadCallback(drawEconomicsGraph);
-google.charts.setOnLoadCallback(drawConsumersGraph);
 google.charts.setOnLoadCallback(drawRzeroGraph);
 
 function drawAll()
 {
 	drawStateDistrebution();
 	drawRzeroGraph();
-	drawEconomicsGraph();
-	drawConsumersGraph();
 }
 
 function drawStateDistrebution()
 {
 	var data = new google.visualization.DataTable();
 	data.addColumn('number', 'X');
-	data.addColumn('number', 'Infected Working Adult');
-	data.addColumn('number', 'Susceptible Working Adult');
-	data.addColumn('number', 'Recovered Working Adult');
-	data.addColumn('number', 'Dead Working Adult');
-	data.addColumn('number', 'Infected Nonworking Adult');
-	data.addColumn('number', 'Susceptible Nonworking Adult');
-	data.addColumn('number', 'Recovered Nonworking Adult');
-	data.addColumn('number', 'Dead Nonworking Adult');
-	data.addColumn('number', 'Infected Children');
+	data.addColumn('number', 'Asymptomatic Infected Adult');
+	data.addColumn('number', 'Susceptible Adult');
+	data.addColumn('number', 'Symptomatic Infected Adult');
+	data.addColumn('number', 'Recovered Adult');
+	data.addColumn('number', 'Dead Adult');
+	data.addColumn('number', 'Asymptomatic Infected Children');
 	data.addColumn('number', 'Susceptible Children');
+	data.addColumn('number', 'Symptomatic Infected Children');
 	data.addColumn('number', 'Recovered Children');
 	data.addColumn('number', 'Dead Children');
 
@@ -35,7 +29,7 @@ function drawStateDistrebution()
 		height: 500,
 		pointSize: 6,
 		pointShape: 'circle',
-		colors: ['#DB4437', '#0F9D58', '#4285F4', '#140304', '#DB4667', '#0F9E76', '#4492F1', '#140304', '#eb1d0c', '#1aba7d', '#73a0eb', '#0f0102'],
+		colors: ['#DB4437', '#0F9D58', '#FF4437', '#4285F4', '#140304', '#DB4667', '#0F9E76', '#FF4667','#4492F1', '#140304'],
         hAxis: {
 			title: 'Day'
         },
@@ -45,56 +39,6 @@ function drawStateDistrebution()
       };
 
     var chart = new google.visualization.LineChart(document.getElementById('stateGraph'));
-	chart.draw(data, options);
-}
-
-function drawEconomicsGraph()
-{
-	var data = new google.visualization.DataTable();
-	data.addColumn('number', 'X');
-	data.addColumn('number', 'Economic Delta');
-	
-	data.addRows(economicGraphData);
-
-	var options = {
-		height: 300,
-		pointSize: 3,
-		pointShape: 'circle',
-		colors: ['#000000'],
-        hAxis: {
-          title: 'Day'
-        },
-        vAxis: {
-          title: 'Dollers'
-        }
-	};
-
-	var chart = new google.visualization.LineChart(document.getElementById('economicsGraph'));
-	chart.draw(data, options);
-}
-
-function drawConsumersGraph()
-{
-	var data = new google.visualization.DataTable();
-	data.addColumn('number', 'X');
-	data.addColumn('number', 'Nonworking adults getting taxes');
-	
-	data.addRows(consumersGraph);
-
-	var options = {
-		height: 300,
-		pointSize: 6,
-		pointShape: 'circle',
-		colors: ['#DE5246'],
-        hAxis: {
-          title: 'Day'
-        },
-        vAxis: {
-          title: 'Dollers'
-        }
-	};
-
-	var chart = new google.visualization.LineChart(document.getElementById('consumersGraph'));
 	chart.draw(data, options);
 }
 

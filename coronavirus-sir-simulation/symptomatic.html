@@ -1,7 +1,7 @@
 <html>
  <head>
   <title>
-   Economical Spatio-Temporal Coronavirus Stochastic Simulator
+   Symptomatic and Asymptomatic Spatio-Temporal Coronavirus Stochastic Simulator
   </title>
   
   <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js" type="text/javascript"></script>  
@@ -9,11 +9,11 @@
   <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
   <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" rel="stylesheet"/>
   
-  <script language="javascript" src="sketch_economics.js" type="text/javascript"></script>
-  <script language="javascript" src="population_economics.js" type="text/javascript"></script>
-  <script language="javascript" src="member_economics.js" type="text/javascript"></script>
-  <script language="javascript" src="chart_economics.js" type="text/javascript"></script>
-  <script language="javascript" src="simulationManager_economics.js" type="text/javascript"></script>
+  <script language="javascript" src="sketch_symptomatic.js" type="text/javascript"></script>
+  <script language="javascript" src="population_symptomatic.js" type="text/javascript"></script>
+  <script language="javascript" src="member_symptomatic.js" type="text/javascript"></script>
+  <script language="javascript" src="chart_symptomatic.js" type="text/javascript"></script>
+  <script language="javascript" src="simulationManager_symptomatic.js" type="text/javascript"></script>
   
   <link href="style.css" rel="stylesheet" type="text/css"/>
   <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
@@ -43,72 +43,38 @@
 		   </div>
 		  </div>
 		  
-		  <div class="row">
-		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="adult_pop_size" title="Adult Working Population Size">
-			  Working adult Population Size
-			 </label>
-			 <input class="form-control" id="working_adult_pop_size" min="1" placeholder="Working Adult Population Size" required="" type="number" value="4800"/>
-			</div>
-		   </div>
-		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="susceptible_working_adults_percent" title="Initial Working Susceptible Adult ">
-			  Initial Working Susceptible Adult 
-			 </label>
-			 <input class="form-control" id="susceptible_working_adults_percent" min="0" placeholder="Initial Working Susceptible Adult " required="" type="number" value="4183"/>
-			</div>
-		   </div>
-		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="infected_working_adults_percent">
-			  Initial Working Infected Adult 
-			 </label>
-			 <input class="form-control" id="infected_working_adults_percent" min="0" placeholder="Initial Working Infected Adult " required="" type="number" value="159" />
-			</div>
-		   </div>
-		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="recover_working_adults_percent">
-			  Initial Working Recovered Adult 
-			 </label>
-			 <input class="form-control" id="recover_working_adults_percent" placeholder="Initial Working Recovered Adult " required="" type="number" value="458" disabled />
-			</div>
-		   </div>
-		  </div>
 		  
 		  <div class="row">
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="adult_pop_size" title="Adult Non-working Population Size">
-			  Non-working adult Population Size
+			 <label for="adult_pop_size" title="AdultPopulation Size">
+			  adult Population Size
 			 </label>
-			 <input class="form-control" id="nonworking_adult_pop_size" min="1" placeholder="Non-working Adult Population Size" required="" type="number" value="2400"/>
+			 <input class="form-control" id="adult_pop_size" min="1" placeholder="Adult Population Size" required="" type="number" value="7200"/>
 			</div>
 		   </div>
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="susceptible_nonworking_adults_percent" title="Initial Non-working Susceptible Adult ">
-			  Initial Non-working Susceptible Adult 
+			 <label for="susceptible_adults_percent" title="Initial Susceptible Adult ">
+			  Initial Susceptible Adult 
 			 </label>
-			 <input class="form-control" id="susceptible_nonworking_adults_percent" min="0" placeholder="Initial Non-working Susceptible Adult " required="" type="number" value="2095"/>
+			 <input class="form-control" id="susceptible_adults_percent" min="0" placeholder="Initial Susceptible Adult " required="" type="number" value="7199"/>
 			</div>
 		   </div>
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="infected_nonworking_adults_percent">
-			  Initial Non-working Infected Adult 
+			 <label for="infected_adults_percent">
+			  Initial Infected Adult 
 			 </label>
-			 <input class="form-control" id="infected_nonworking_adults_percent" min="0" placeholder="Initial Non-working Infected Adult " required="" type="number" value="76" />
+			 <input class="form-control" id="infected_adults_percent" min="0" placeholder="Initial Infected Adult " required="" type="number" value="1" />
 			</div>
 		   </div>
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="recover_nonworking_adults_percent">
-			  Initial Non-working Recovered Adult 
+			 <label for="recover_adults_percent">
+			  Initial Recovered Adult 
 			 </label>
-			 <input class="form-control" id="recover_nonworking_adults_percent" placeholder="Initial Non-working Recovered Adult " required="" type="number" value="229" disabled />
+			 <input class="form-control" id="recover_adults_percent" placeholder="Initial Recovered Adult " required="" type="number" value="0" disabled />
 			</div>
 		   </div>
 		  </div>
@@ -150,138 +116,44 @@
 		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3>Events per hour</h3>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="wa_c_meeting_count" title="Working Adult - Child Average Meeting Events per Hour">
-			  Working Adult - Child Average Meeting Events per Hour
-			 </label>
-			 <input class="form-control" id="wa_c_meeting_count" min="0" placeholder="Working Adult - Child Average Meeting Events per Hour" required="" type="number" value="1"/>
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="na_c_meeting_count" title="Nonworking Adult - Child Average Meeting Events per Hour">
-			  Nonworking Adult - Child Average Meeting Events per Hour
-			 </label>
-			 <input class="form-control" id="na_c_meeting_count" min="0" placeholder="Nonworking Adult - Child Average Meeting Events per Hour" required="" type="number" value="1"/>
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="wa_wa_meeting_count" title="Working Adult - Working Adult Average Meeting Events per Hour">
-			  Working Adult - Working Adult Average Meeting Events per Hour
-			 </label>
-			 <input class="form-control" id="wa_wa_meeting_count" min="0" placeholder="Working Adult - Working Adult Average Meeting Events per Hour" required="" type="number" value="1"/>
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="na_na_meeting_count" title="Nonworking Adult - Nonworking Adult Average Meeting Events per Hour">
-			  Nonworking Adult - Nonworking Adult Average Meeting Events per Hour
-			 </label>
-			 <input class="form-control" id="na_na_meeting_count" min="0" placeholder="Nonworking Adult - Nonworking Adult Average Meeting Events per Hour" required="" type="number" value="1"/>
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="wa_na_meeting_count" title="Working Adult - Nonworking Adult Average Meeting Events per Hour">
-			  Working Adult - Nonworking Adult Average Meeting Events per Hour
-			 </label>
-			 <input class="form-control" id="wa_na_meeting_count" min="0" placeholder="Working Adult - Nonworking Adult Average Meeting Events per Hour" required="" type="number" value="1"/>
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="c_c_meeting_count">
-			  Child - Child Average Meeting Events per Hour<br>
-			 </label>
-			 <input class="form-control" id="c_c_meeting_count" min="0" placeholder="Child - Child Average Meeting Events per Hour" required="" type="number" value="1" />
-			</div>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
-		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<h3>Infection rates</h3>
 		   </div>
 		  </div>
+
+		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="a_a_t_c" title="Adult to Adult Transform Chance">
+			  Adult to Adult Transform Chance (percent)
+			 </label>
+			 <input class="form-control" id="a_a_t_c" max="100" min="0" placeholder="Adult to Adult Transform Chance (percent)" required="" type="number" value="31"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="a_c_t_c">
+			  Adult to Children Transform Chance (percent)
+			 </label>
+			 <input class="form-control" id="a_c_t_c" max="100" min="0" placeholder="Adult to Children Transform Chance (percent)" required="" type="number" value="0" />
+			</div>
+		   </div>
+		  </div>
 		  
 		  <div class="row">
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="wa_wa_t_c" title="Working Adult to Working Adult Transform Chance">
-			  Working Adult to Working Adult Transform Chance
-			 </label>
-			 <input class="form-control" id="wa_wa_t_c" max="100" min="0" placeholder="Working Adult to Working Adult Transform Chance" required="" type="number" value="1"/>
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="wa_na_t_c" title="Working Adult to Nonworking Adult Transform Chance">
-			  Working Adult to Nonworking Adult Transform Chance
-			 </label>
-			 <input class="form-control" id="wa_na_t_c" max="100" min="0" placeholder="Working Adult to Nonworking Adult Transform Chance" required="" type="number" value="7"/>
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="na_wa_t_c" title="Nonworking Adult to Working Adult Transform Chance">
-			  Nonworking Adult to Working Adult Transform Chance
-			 </label>
-			 <input class="form-control" id="na_wa_t_c" max="100" min="0" placeholder="Nonworking Adult to Working Adult Transform Chance" required="" type="number" value="1"/>
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="na_na_t_c" title="Nonworking Adult to Nonworking Adult Transform Chance">
-			  Nonworking Adult to Nonworking Adult Transform Chance
-			 </label>
-			 <input class="form-control" id="na_na_t_c" max="100" min="0" placeholder="Nonworking Adult to Nonworking Adult Transform Chance" required="" type="number" value="7"/>
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="wa_c_t_c">
-			  <br>Working Adult to Children Transform Chance
-			 </label>
-			 <input class="form-control" id="wa_c_t_c" max="100" min="0" placeholder="Working Adult to Children Transform Chance" required="" type="number" value="1" />
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="na_c_t_c">
-			  <br>Nonworking Adult to Children Transform Chance
-			 </label>
-			 <input class="form-control" id="na_c_t_c" max="100" min="0" placeholder="Nonworking Adult to Children Transform Chance" required="" type="number" value="1" />
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="c_c_t_c" title=" Children to Children Transform Chance">
-			  Children to Children Transform Chance
+			  Children to Children Transform Chance (percent)
 			 </label>
-			 <input class="form-control" id="c_c_t_c" max="100" min="0" placeholder="Children to Children Transform Chance" required="" type="number" value="2"/>
+			 <input class="form-control" id="c_c_t_c" max="100" min="0" placeholder="Children to Children Transform Chance (percent)" required="" type="number" value="31"/>
 			</div>
 		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="c_wa_t_c">
-			  Children to Working Adult Transform Chance 
+			 <label for="c_a_t_c">
+			  Children to Adult Transform Chance (percent)
 			 </label>
-			 <input class="form-control" id="c_wa_t_c" max="100" min="0" placeholder="Children to Working Adult Transform Chance" required="" type="number" value="1" />
-			</div>
-		   </div>
-		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="c_na_t_c">
-			  Children to Nonworking Adult Transform Chance<br>
-			 </label>
-			 <input class="form-control" id="c_na_t_c" max="100" min="0" placeholder="Children to Nonworking Adult Transform Chance" required="" type="number" value="6" />
+			 <input class="form-control" id="c_a_t_c" max="100" min="0" placeholder="Children to Adult Transform Chance (percent)" required="" type="number" value="27" />
 			</div>
 		   </div>
 		  </div>
@@ -332,6 +204,56 @@
 		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Symptomatic Vs. Asymptomatic</h3>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="symptomatic_adults" >
+			  Probebility (percent) that an adult will be symptomatic
+			 </label>
+			 <input class="form-control" id="symptomatic_adults" max="100" min="0" placeholder="Probebility (percent) that an adult will be symptomatic" required="" type="number" value="92"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="symptomatic_child">
+			  Probebility (percent) that a child will be symptomatic
+			 </label>
+			 <input class="form-control" id="symptomatic_child" max="100" min="0"  placeholder="Probebility (percent) that a child will be symptomatic" required="" type="number" value="1"/>
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Symptomatic infected individuals goes to work \ school</h3>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="percent_symptomatic_goto_work" >
+			  Percent (%) of symptomatic infected adults which will go to work
+			 </label>
+			 <input class="form-control" id="percent_symptomatic_goto_work" max="100" min="0" placeholder="Percent (%) of symptomatic infected adults which will go to work" required="" type="number" value="10"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="percent_symptomatic_goto_school">
+			  Percent (%) of symptomatic infected children which will go to school
+			 </label>
+			 <input class="form-control" id="percent_symptomatic_goto_school" max="100" min="0"  placeholder="Percent (%) of symptomatic infected children which will go to school" required="" type="number" value="5"/>
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<h3>Recover durations and rates</h3>
 		   </div>
 		  </div>
@@ -359,17 +281,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="pra" title="Adult Infected To Recovered Chance">
-			  Adult Infected To Recovered Chance 
+			  Adult Symptomatic Infected To Recovered Chance (percent)
 			 </label>
-			 <input class="form-control" id="pra" max="100" min="0" placeholder="Adult Infected To Recovered Cance (in percent)" required="" type="number" value="99"/>
+			 <input class="form-control" id="pra" max="100" min="0" placeholder="Adult Symptomatic Infected To Recovered Chance (percent)" required="" type="number" value="99"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="prc" title="Children Infected To Recovered Chance">
-			  Children Infected To Recovered chance 
+			  Children Symptomatic Infected To Recovered chance  (percent)
 			 </label>
-			 <input class="form-control" id="prc" max="100" min="0" placeholder="Children Infected To Cance (in percent)" required="" type="number" value="100"/>
+			 <input class="form-control" id="prc" max="100" min="0" placeholder="Children Symptomatic Infected To Recovered chance  (percent)" required="" type="number" value="100"/>
 			</div>
 		   </div>
 		  </div>
@@ -413,59 +335,6 @@
 		   </div>
 		  </div>
 		  
-		  <div class="row">
-		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3>Economical facotors</h3>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="graph_samples">
-			  </b>Initial Economical Size ($)</b>
-			 </label>
-			 <input class="form-control" id="e_init" max="1000000000000" min="1" placeholder="Initial Economical Size ($)" required="" type="number" value="1000000000" />
-			</div>
-		   </div>
-		   
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="graph_samples">
-			  </b>Rate working adults loose their jobs as a result of the epedimic (m = )</b>
-			 </label>
-			 <input class="form-control" id="m" placeholder="Rate (in percent) working adults loose their jobs as a result of the epedimic (m = )" required="" type="text" value="0.00143" />
-			</div>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
-		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="graph_samples">
-			  </b>Average worker's contribution to the economics in dollers per month (e = )</b>
-			 </label>
-			 <input class="form-control" id="e" max="1000000" min="1" placeholder="Average worker's contribution to the economics in dollers (e = )" required="" type="number" value="2000" />
-			</div>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
-		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3>Goverment facotors</h3>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
-		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="taxes">
-			  </b>Taxes (Percent)</b>
-			 </label> 
-			 <input class="form-control" id="taxes" max="100" min="0" placeholder="Taxes (Percent)" required="" type="number" value="20" />
-			</div>
-		   </div>
-		  </div>
 		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -492,6 +361,86 @@
 		   </div>
 		  </div>
 		  
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Masks</h3>
+		   </div>
+		  </div>
+		  
+		  <div class="row" style="margin-top: 20px;">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="init_percent_good_masks">
+			  Percent (%) of adults with mask N95 
+			 </label>
+			 <input class="form-control" id="init_percent_good_masks" min="0" max="100" placeholder="Percent (%) of adults with mask N95" required="" type="number" value="0"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="init_percent_bad_masks">
+			  Percent (%) of adults with mask simple
+			 </label>
+			 <input class="form-control" id="init_percent_bad_masks" min="0"  max="100" placeholder="Percent (%) of adults with mask simple" required="" type="number" value="0" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row" style="margin-top: 20px;">
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="good_mask_two_side">
+			  Good Mask (N95 like) 2 side protection probebility
+			 </label>
+			 <input class="form-control" id="good_mask_two_side" min="1" max="100" placeholder="Good Mask (N95 like) 2 side protection probebility" required="" type="number" value="95"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="good_mask_infected_side">
+			  Good Mask (N95 like) infected has mask, susceptible does not, protection probebility
+			 </label>
+			 <input class="form-control" id="good_mask_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) infected has mask, susceptible does not, protection probebility" required="" type="number" value="65" />
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="good_mask_not_infected_side">
+			  Good Mask (N95 like) susceptible has mask, infected does not, protection probebility
+			 </label>
+			 <input class="form-control" id="good_mask_not_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) susceptible has mask, infected does not, protection probebility" required="" type="number" value="35" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row" style="margin-top: 20px;">
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="bad_mask_two_side">
+			  Bad Mask (one time like) 2 side protection probebility
+			 </label>
+			 <input class="form-control" id="bad_mask_two_side" min="1" max="100" placeholder="Bad Mask (one time like)  2 side protection probebility" required="" type="number" value="65"/>
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="bad_mask_infected_side">
+			  Bad Mask (one time like) infected has mask, susceptible does not, protection probebility
+			 </label>
+			 <input class="form-control" id="bad_mask_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  infected has mask, susceptible does not, protection probebility" required="" type="number" value="40" />
+			</div>
+		   </div>
+		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="bad_mask_not_infected_side">
+			  Bad Mask (one time like) susceptible has mask, infected does not, protection probebility
+			 </label>
+			 <input class="form-control" id="bad_mask_not_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  susceptible has mask, infected does not, protection probebility" required="" type="number" value="10" />
+			</div>
+		   </div>
+		  </div>
+		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<button class="btn btn-primary btn-lg" onclick="return startSimulation(true)" style="width: 100%; margin-top: 10px;">
@@ -500,91 +449,29 @@
 		   </div>
 		  </div>
 		  
-		  <div class="row">
-		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<button class="btn btn-info btn-lg" onclick="return startWorkSchoolTimeSimulation(true)" style="width: 100%; margin-top: 10px;">
-			 Run Simulation (Work\School Duration Analysis)
-			</button>
-		   </div>
-		  </div>
-		  
 		  <div class="row" style="margin-top: 20px;">
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="adult_recover_step">
-			  Percent of adults go to work (step size)
+			  Percent (%) of adults with mask N95 step size 
 			 </label>
-			 <input class="form-control" id="go_to_work_percent_step_size" min="1" max="100" placeholder="Percent of adults go to work (step size)" required="" type="number" value="10"/>
+			 <input class="form-control" id="mask_good_step_size" min="1" max="100" placeholder="Percent (%) of adults with mask N95" required="" type="number" value="5"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="children_recover_step">
-			  Percent of children go to school (step size)
+			  Percent (%) of adults with mask simple step size 
 			 </label>
-			 <input class="form-control" id="go_to_school_percent_step_size" min="1"  max="100" placeholder="Percent of children go to school (step size)" required="" type="number" value="10" />
+			 <input class="form-control" id="mask_bad_step_size" min="1"  max="100" placeholder="Percent (%) of adults with mask simple" required="" type="number" value="5" />
 			</div>
 		   </div>
 		  </div>
 		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<button class="btn btn-danger btn-lg" onclick="return startLockDownSimulation(true)" style="width: 100%; margin-top: 10px;">
-			 Run Simulation (Lockdown Analysis)
-			</button>
-		   </div>
-		  </div>
-		  
-		  <div class="row" style="margin-top: 20px;">
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="adult_recover_step">
-			  Adult Recover Step Size
-			 </label>
-			 <input class="form-control" id="adult_recover_step" min="1" placeholder="Adult Recover Step Size" required="" type="number" value="720"/>
-			</div>
-		   </div>
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="children_recover_step">
-			  Children Recover Step Size
-			 </label>
-			 <input class="form-control" id="children_recover_step" min="1" placeholder="Children Recover Step Size" required="" type="number" value="280" />
-			</div>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
-		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<button class="btn btn-warning btn-lg" onclick="return startVaccineSimulation(true)" style="width: 100%; margin-top: 10px;">
-			 Run Simulation (Vaccine Analysis)
-			</button>
-		   </div>
-		  </div>
-		  
-		  <div class="row" style="margin-top: 20px;">
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="m_step">
-			  Step in the rate working adults loose their jobs as a result of the epedimic (m = )
-			 </label>
-			 <input class="form-control" id="m_step" min="1" placeholder="Children Recover Step Size" required="" type="text" value="0.001" />
-			</div>
-		   </div>
-		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-			<div class="form-group">
-			 <label for="m_max">
-			  Max rate working adults loose their jobs as a result of the epedimic (Max(m) = )
-			 </label>
-			 <input class="form-control" id="m_max" min="1" placeholder="Children Recover Step Size" required="" type="text" value="0.01" />
-			</div>
-		   </div>
-		  </div>
-		  
-		  <div class="row">
-		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<button class="btn btn-success btn-lg" onclick="return startEconomicSimulation(true)" style="width: 100%; margin-top: 10px;">
-			 Run Simulation (Economical Analysis)
+			<button class="btn btn-danger btn-lg" onclick="return startMaskAnalysis(true)" style="width: 100%; margin-top: 10px;">
+			 Run Simulation (Mask Analysis)
 			</button>
 		   </div>
 		  </div>
@@ -608,7 +495,9 @@
 		   </div>
 		  </div>
 		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="game-holder">
-		   <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		   <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+		   </div>
+		   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 			<div class="stat-box bg-grad-green">
 			 <h2>
 			  Susceptible
@@ -618,17 +507,27 @@
 			 </p>
 			</div>
 		   </div>
-		   <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 			<div class="stat-box bg-grad-red">
 			 <h2>
-			  Infected
+			  Symptomatic Infected
 			 </h2>
-			 <p id="infected_text">
+			 <p id="symptomatic_infected_text">
 			 0
 			 </p>
 			</div>
 		   </div>
-		   <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+			<div class="stat-box bg-grad-red">
+			 <h2>
+			  Asymptomatic Infected
+			 </h2>
+			 <p id="asymptomatic_infected_text">
+			 0
+			 </p>
+			</div>
+		   </div>
+		   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 			<div class="stat-box bg-grad-blue">
 			 <h2>
 			  Recovered
@@ -638,7 +537,7 @@
 			 </p>
 			</div>
 		   </div>
-		   <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 			<div class="stat-box bg-grad-black">
 			 <h2>
 			  Dead
@@ -652,59 +551,47 @@
 		  <!-- The game-->
 		  <div id="simulator_panel">	  
 			<div class="row">
-				   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					<div class="sim-box">
 						<img style="width: 80px;  text-align:center;" src="https://img.icons8.com/fluent/144/000000/home.png"/>
 						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<img src="https://img.icons8.com/cotton/64/000000/relaxed-working-with-a-laptop--v1.png"/>
 								
 								<h4>Susceptible</h4>
-								<p id="wa_s_h">
+								<p id="a_s_h">
 								0	
 								</p>
-								<h4>Infected</h4>
-								<p id="wa_i_h">
+								<h4>Symptomatic Infected</h4>
+								<p id="a_si_h">
+									0
+								</p>
+								<h4>Asymptomatic Infected</h4>
+								<p id="a_ai_h">
 									0
 								</p>
 								<h4>Recovered</h4>
-								<p id="wa_r_h">
+								<p id="a_r_h">
 									0
 								</p>
 								<h4>Dead</h4>
-								<p id="wa_d_h">
+								<p id="a_d_h">
 									0
 								</p>
 							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<img style="width: 50px; text-align:center;" src="https://img.icons8.com/pastel-glyph/128/000000/user-male--v2.png"/>
-								
-								<h4>Susceptible</h4>
-								<p id="na_s_h">
-								0	
-								</p>
-								<h4>Infected</h4>
-								<p id="na_i_h">
-									0
-								</p>
-								<h4>Recovered</h4>
-								<p id="na_r_h">
-									0
-								</p>
-								<h4>Dead</h4>
-								<p id="na_d_h">
-									0
-								</p>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<img style="width: 50px;  text-align:center;" src="https://img.icons8.com/ios-filled/100/000000/child-safe-zone--v2.png"/>
 								
 								<h4>Susceptible</h4>
 								<p id="c_s_h">
 								0	
 								</p>
-								<h4>Infected</h4>
-								<p id="c_i_h">
+								<h4>Symptomatic Infected</h4>
+								<p id="c_si_h">
+									0
+								</p>
+								<h4>Asymptomatic Infected</h4>
+								<p id="c_ai_h">
 									0
 								</p>
 								<h4>Recovered</h4>
@@ -719,7 +606,7 @@
 						</div>
 					</div>
 					</div>
-				   <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+				   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 					<div class="sim-box">
 						<img style="width: 80px;  text-align:center;" src="https://img.icons8.com/bubbles/100/000000/work.png"/>
 						<div class="row">
@@ -727,113 +614,33 @@
 								<img src="https://img.icons8.com/cotton/64/000000/relaxed-working-with-a-laptop--v1.png"/>
 								
 								<h4>Susceptible</h4>
-								<p id="wa_s_w">
+								<p id="a_s_w">
 								0	
 								</p>
-								<h4>Infected</h4>
-								<p id="wa_i_w">
+								<h4>Symptomatic Infected</h4>
+								<p id="a_si_w">
+									0
+								</p>
+								<h4>Asymptomatic Infected</h4>
+								<p id="a_ai_w">
 									0
 								</p>
 								<h4>Recovered</h4>
-								<p id="wa_r_w">
+								<p id="a_r_w">
 									0
 								</p>
 								<h4>Dead</h4>
-								<p id="wa_d_w">
+								<p id="a_d_w">
 									0
 								</p>
 							</div>
-							<!--
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<img style="width: 50px; text-align:center;" src="https://img.icons8.com/pastel-glyph/128/000000/user-male--v2.png"/>
-								
-								<h4>Susceptible</h4>
-								<p id="na_s_w">
-								0	
-								</p>
-								<h4>Infected</h4>
-								<p id="na_i_w">
-									0
-								</p>
-								<h4>Recovered</h4>
-								<p id="na_r_w">
-									0
-								</p>
-								<h4>Dead</h4>
-								<p id="na_d_w">
-									0
-								</p>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<img style="width: 50px;  text-align:center;" src="https://img.icons8.com/ios-filled/100/000000/child-safe-zone--v2.png"/>
-								
-								<h4>Susceptible</h4>
-								<p id="c_s_w">
-								0	
-								</p>
-								<h4>Infected</h4>
-								<p id="c_i_w">
-									0
-								</p>
-								<h4>Recovered</h4>
-								<p id="c_r_w">
-									0
-								</p>
-								<h4>Dead</h4>
-								<p id="c_d_w">
-									0
-								</p>
-							</div>
-							-->
 						</div>
 					</div>
 				   </div>
-				   <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+				   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 					<div class="sim-box">
 						<img style="width: 80px;  text-align:center;" src="https://img.icons8.com/plasticine/100/000000/school.png"/>
 						<div class="row">
-							<!--
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<img src="https://img.icons8.com/cotton/64/000000/relaxed-working-with-a-laptop--v1.png"/>
-								
-								<h4>Susceptible</h4>
-								<p id="wa_s_s">
-								0	
-								</p>
-								<h4>Infected</h4>
-								<p id="wa_i_s">
-									0
-								</p>
-								<h4>Recovered</h4>
-								<p id="wa_r_s">
-									0
-								</p>
-								<h4>Dead</h4>
-								<p id="wa_d_s">
-									0
-								</p>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<img style="width: 50px; text-align:center;" src="https://img.icons8.com/pastel-glyph/128/000000/user-male--v2.png"/>
-								
-								<h4>Susceptible</h4>
-								<p id="na_s_s">
-								0	
-								</p>
-								<h4>Infected</h4>
-								<p id="na_i_s">
-									0
-								</p>
-								<h4>Recovered</h4>
-								<p id="na_r_s">
-									0
-								</p>
-								<h4>Dead</h4>
-								<p id="na_d_s">
-									0
-								</p>
-							</div>
-							-->
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<img style="width: 50px;  text-align:center;" src="https://img.icons8.com/ios-filled/100/000000/child-safe-zone--v2.png"/>
 								
@@ -841,8 +648,12 @@
 								<p id="c_s_s">
 								0	
 								</p>
-								<h4>Infected</h4>
-								<p id="c_i_s">
+								<h4>Symptomatic Infected</h4>
+								<p id="c_si_s">
+									0
+								</p>
+								<h4>Asymptomatic Infected</h4>
+								<p id="c_ai_s">
 									0
 								</p>
 								<h4>Recovered</h4>
@@ -882,30 +693,6 @@
 		<div class="row spacer">
 		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
 		  <h2 class="title">
-		   Output over time
-		  </h2>
-		 </div>
-		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
-		  <div id="economicsGraph">
-		  </div>
-		 </div>
-		</div>
-		
-		<div class="row spacer">
-		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
-		  <h2 class="title">
-		   Consumers over time
-		  </h2>
-		 </div>
-		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
-		  <div id="consumersGraph">
-		  </div>
-		 </div>
-		</div>
-		
-		<div class="row spacer">
-		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
-		  <h2 class="title">
 		   Basic reproduction number (R0) over time
 		  </h2>
 		 </div>
@@ -933,7 +720,6 @@
 		  </div>
 		 </div>
 		</div>
-	
        </div>
       </p>
      </div>

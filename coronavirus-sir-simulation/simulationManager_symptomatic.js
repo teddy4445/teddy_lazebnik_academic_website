@@ -81,66 +81,14 @@ function playGame()
 }
 
 /*
-	This function starts the simulation multiple time such that it creates more and more recovered people in the initial and just run the logic
-*/
-function startEconomicSimulation()
-{
-	is_economic = true;
-	is_vaccine = false; 
-	is_lockdown = false; 
-	is_time_analysis = false;
-	
-	document.getElementById("m").value = 0;
-	loss_jobs_rate_step = parseFloat(document.getElementById("m_step").value);
-	loss_jobs_rate_max = parseFloat(document.getElementById("m_max").value);
-	
-	return multi_run_perform();
-}
-
-/*
-	This function starts the simulation multiple time such that it creates more and more recovered people in the initial and just run the logic
-*/
-function startVaccineSimulation()
-{
-	is_economic = false;
-	is_vaccine = true;
-	is_lockdown = false; 
-	is_time_analysis = false;
-	
-	adult_recover = 0;
-	child_recover = 0;
-	
-	return multi_run_perform();
-}
-
-/*
 	This function starts the simulation multiple time such that it change the amount of adults and children change there location
 */
 function startLockDownSimulation()
 {
-	is_economic = false;
-	is_vaccine = false; 
-	is_lockdown = true;
-	is_time_analysis = false;
+	is_mask = true;
 	
-	go_to_work_percent_step_size = parseInt(document.getElementById("go_to_work_percent_step_size").value);
-	go_to_school_percent_step_size = parseInt(document.getElementById("go_to_school_percent_step_size").value);
-	
-	return multi_run_perform();
-}
-
-/*
-	This function starts the simulation multiple time such that it change the time adults and children change there location
-*/
-function startWorkSchoolTimeSimulation()
-{
-	is_economic = false;
-	is_vaccine = false;
-	is_lockdown = false;
-	is_time_analysis = true;
-	
-	time_at_home_a = 0;
-	time_at_home_c = 0;
+	mask_good_step_size = parseInt(document.getElementById("mask_good_step_size").value);
+	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
 	
 	return multi_run_perform();
 }
@@ -179,26 +127,26 @@ function multi_run_settings()
 function reset_pop_size()
 {
 	// reset the original sizes
-	document.getElementById("susceptible_working_adults_percent").value = working_adult_pop_size - 1;
-	document.getElementById("infected_working_adults_percent").value = 1;
-	document.getElementById("recover_working_adults_percent").value = 0;
-	document.getElementById("nonworking_adult_pop_size").value = nonworking_adult_pop_size ;
-	document.getElementById("infected_nonworking_adults_percent").value = 0;
-	document.getElementById("recover_nonworking_adults_percent").value = 0;
-	document.getElementById("susceptible_children_percent").value = children_pop_size;
-	document.getElementById("infected_children_percent").value = 0;
-	document.getElementById("recover_children_percent").value = 0;
+	document.getElementById("adult_pop_size").value = adult_pop_size;
+	document.getElementById("susceptible_adults_percent").value = susceptible_adults_amount;
+	document.getElementById("infected_adults_percent").value = infected_adults_amount;
+	document.getElementById("recover_adults_percent").value = recover_adults_amount;
+	document.getElementById("children_pop_size").value = children_pop_size;
+	document.getElementById("susceptible_children_percent").value = susceptible_children_percent;
+	document.getElementById("infected_children_percent").value = infected_children_percent;
+	document.getElementById("recover_children_percent").value = recover_children_percent;
 }
 
 function load_pop_size()
-{
-	working_adult_pop_size = parseInt(document.getElementById("working_adult_pop_size").value);
-	recover_working_adults_percent = parseInt(document.getElementById("recover_working_adults_percent").value);
-	nonworking_adult_pop_size = parseInt(document.getElementById("nonworking_adult_pop_size").value);
-	recover_nonworking_adults_percent = parseInt(document.getElementById("recover_nonworking_adults_percent").value);
-	recover_nonworking_adults_percent = parseInt(document.getElementById("recover_nonworking_adults_percent").value);
+{	
+	adult_pop_size = parseInt(document.getElementById("adult_pop_size").value);
+	susceptible_adults_amount = parseInt(document.getElementById("susceptible_adults_percent").value);
+	infected_adults_amount = parseInt(document.getElementById("infected_adults_percent").value);
+	recover_adults_amount = parseInt(document.getElementById("recover_adults_percent").value);
 	children_pop_size = parseInt(document.getElementById("children_pop_size").value);
-	child_step_size = parseInt(document.getElementById("children_recover_step").value);
+	susceptible_children_amount = parseInt(document.getElementById("susceptible_children_percent").value);
+	infected_children_amount = parseInt(document.getElementById("infected_children_percent").value);
+	recover_children_amount = parseInt(document.getElementById("recover_children_percent").value);
 }
 
 /* end - multi runs functions helpers */
@@ -210,44 +158,22 @@ function startSimulation(dramatic)
 	// read all the data from the huge form 
 	/* Initial population size */
 	
-	working_adult_pop_size = parseInt(document.getElementById("working_adult_pop_size").value);
-	susceptible_working_adults_percent = parseInt(document.getElementById("susceptible_working_adults_percent").value);
-	infected_working_adults_percent = parseInt(document.getElementById("infected_working_adults_percent").value);
-	recover_working_adults_percent = parseInt(document.getElementById("recover_working_adults_percent").value);
-	
-	nonworking_adult_pop_size = parseInt(document.getElementById("nonworking_adult_pop_size").value);
-	susceptible_nonworking_adults_percent = parseInt(document.getElementById("susceptible_nonworking_adults_percent").value);
-	infected_nonworking_adults_percent = parseInt(document.getElementById("infected_nonworking_adults_percent").value);
-	recover_nonworking_adults_percent = parseInt(document.getElementById("recover_nonworking_adults_percent").value);
-	
+	adult_pop_size = parseInt(document.getElementById("adult_pop_size").value);
+	susceptible_adults_percent = parseInt(document.getElementById("susceptible_adults_percent").value);
+	infected_adults_percent = parseInt(document.getElementById("infected_adults_percent").value);
+	recover_adults_percent = parseInt(document.getElementById("recover_adults_percent").value);
 	children_pop_size = parseInt(document.getElementById("children_pop_size").value);
 	susceptible_children_amount = parseInt(document.getElementById("susceptible_children_percent").value);
 	infected_children_amount = parseInt(document.getElementById("infected_children_percent").value);
 	recover_children_amount = parseInt(document.getElementById("recover_children_percent").value);
 	
-	
-	/* Events per hour */
-	wa_c_meeting_count = parseInt(document.getElementById("wa_c_meeting_count").value) / 24;
-	na_c_meeting_count = parseInt(document.getElementById("na_c_meeting_count").value) / 24;
-	wa_wa_meeting_count = parseInt(document.getElementById("wa_wa_meeting_count").value) / 24;
-	wa_na_meeting_count = parseInt(document.getElementById("wa_na_meeting_count").value) / 24;
-	c_c_meeting_count = parseInt(document.getElementById("c_c_meeting_count").value) / 24;
-	na_na_meeting_count = parseInt(document.getElementById("na_na_meeting_count").value) / 24;
-	
 	/* Infection rates */
-	wa_wa_t_c = parseInt(document.getElementById("wa_wa_t_c").value) / 100;
-	wa_na_t_c = parseInt(document.getElementById("wa_na_t_c").value) / 100;
-	na_wa_t_c = parseInt(document.getElementById("na_wa_t_c").value) / 100;
-	na_na_t_c = parseInt(document.getElementById("na_na_t_c").value) / 100;
-	wa_c_t_c = parseInt(document.getElementById("wa_c_t_c").value) / 100;
-	na_c_t_c = parseInt(document.getElementById("na_c_t_c").value) / 100;
+	a_a_t_c = parseInt(document.getElementById("a_a_t_c").value) / 100;
+	a_c_t_c = parseInt(document.getElementById("a_c_t_c").value) / 100;
+	c_a_t_c = parseInt(document.getElementById("c_a_t_c").value) / 100;
 	c_c_t_c = parseInt(document.getElementById("c_c_t_c").value) / 100;
-	c_wa_t_c = parseInt(document.getElementById("c_wa_t_c").value) / 100;
-	c_na_t_c = parseInt(document.getElementById("c_na_t_c").value) / 100;
-	
 	
 	/* Day-Night dynamics */
-	
 	time_not_at_home_a = parseInt(document.getElementById("time_not_at_home_a").value);
 	time_not_at_home_c = parseInt(document.getElementById("time_not_at_home_c").value);
 	
@@ -256,6 +182,14 @@ function startSimulation(dramatic)
 		time_at_home_c = parseInt(document.getElementById("time_at_home_c").value);
 		time_at_home_a = parseInt(document.getElementById("time_at_home_a").value);
 	}
+	
+	// symptomatic chance
+	symptomatic_adults_chance = parseFloat(document.getElementById("symptomatic_adults").value) / 100;
+	symptomatic_children_chance = parseFloat(document.getElementById("symptomatic_child").value) / 100;
+	
+	// symptomatic chance
+	percent_symptomatic_goto_work = parseFloat(document.getElementById("percent_symptomatic_goto_work").value) / 100;
+	percent_symptomatic_goto_school = parseFloat(document.getElementById("percent_symptomatic_goto_school").value) / 100;
 	
 	/* Recover durations and rates */
 	
@@ -271,15 +205,18 @@ function startSimulation(dramatic)
 	go_to_school_k_days = parseInt(document.getElementById("go_to_school_k_days").value);
 	go_to_work_k_days = parseInt(document.getElementById("go_to_work_k_days").value);
 	
-	/* Economical facotors */
+	/* masks */
 	
-	e_init = parseInt(document.getElementById("e_init").value);
-	loss_jobs_rate = parseFloat(document.getElementById("m").value);
-	avg_contribution_to_economic = parseFloat(document.getElementById("e").value) / 186; // working hours per month
+	init_percent_good_masks = parseFloat(document.getElementById("init_percent_good_masks").value) / 100;
+	init_percent_bad_masks = parseFloat(document.getElementById("init_percent_bad_masks").value) / 100;
 	
-	/* goverement facotors */
+	good_mask_two_side = parseFloat(document.getElementById("good_mask_two_side").value) / 100;
+	good_mask_infected_side = parseFloat(document.getElementById("good_mask_infected_side").value) / 100;
+	good_mask_not_infected_side = parseFloat(document.getElementById("good_mask_not_infected_side").value) / 100;
 	
-	taxes_percent = parseFloat(document.getElementById("taxes").value) / 100;
+	bad_mask_two_side = parseFloat(document.getElementById("bad_mask_two_side").value) / 100;
+	bad_mask_infected_side = parseFloat(document.getElementById("bad_mask_infected_side").value) / 100;
+	bad_mask_not_infected_side = parseFloat(document.getElementById("bad_mask_not_infected_side").value) / 100;
 	
 	/* Simulation run hyper-parameters */
 	
@@ -291,19 +228,14 @@ function startSimulation(dramatic)
 	go_to_school_percent = 100;
 	
 	// create population to simulate
-	population = new Population(working_adult_pop_size,
-								susceptible_working_adults_percent,
-								infected_working_adults_percent,
-								recover_working_adults_percent,
-								nonworking_adult_pop_size,
-								susceptible_nonworking_adults_percent,
-								infected_nonworking_adults_percent,
-								recover_nonworking_adults_percent,
+	population = new Population(adult_pop_size,
+								susceptible_adults_percent,
+								infected_adults_percent,
+								recover_adults_percent,
 								children_pop_size, 
 								susceptible_children_amount, 
 								infected_children_amount,
-								recover_children_amount,
-								e_init);
+								recover_children_amount);
 								
 	// GUI changes			
 	document.getElementById("init_form").style.display = "none"; // close the init form
