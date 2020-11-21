@@ -199,9 +199,24 @@ background: linear-gradient(0deg, rgba(15,10,84,1) 0%, rgba(194,200,255,1) 100%)
 background: linear-gradient(0deg, rgba(25,84,10,1) 0%, rgba(199,255,194,1) 100%);
 }
 
-.bg-grad-black{
+.bg-red{
+	background: #DB4437;
+}
+
+.bg-red-hard{
+	background: #661912;
+}
+
+.bg-blue{
+	background: rgb(15,10,84);
+}
+
+.bg-green{
+	background: rgb(25,84,10);
+}
+
+.bg-black{
 	background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 .stat-box h2{

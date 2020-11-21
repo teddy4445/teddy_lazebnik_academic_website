@@ -25,7 +25,28 @@ class Member
 	
 	infect()
 	{
-		this.state = STATE_I;
+		if (this.eco_age_group != CHILD) 
+		{
+			if (Math.random() < symptomatic_adults_chance)
+			{
+				this.state = STATE_SI;
+			}
+			else
+			{
+				this.state = STATE_AI;
+			}	
+		}
+		else
+		{
+			if (Math.random() < symptomatic_children_chance)
+			{
+				this.state = STATE_SI;
+			}
+			else
+			{
+				this.state = STATE_AI;
+			}	
+		}
 		this.state_time = 0;
 	}
 	
@@ -48,7 +69,6 @@ class Member
 	
 	tryRecover(infected_to_recover_time_adult, infected_to_recover_time_children)
 	{
-		// TODO: replace != CHILD with something spesificly related to adults 
 		if ((this.state_time > infected_to_recover_time_adult && this.state == STATE_SI && this.eco_age_group != CHILD) || (this.state_time > infected_to_recover_time_children && this.state == STATE_SI && this.eco_age_group == CHILD))
 		{
 			var chance = Math.random();
@@ -70,7 +90,7 @@ class Member
 	getKey()
 	{
 		var answer = "";
-		if (this.eco_age_group == ADULT)
+		if (this.eco_age_group != CHILD)
 		{
 			answer += "a";
 		}

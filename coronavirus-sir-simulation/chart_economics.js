@@ -41,7 +41,21 @@ function drawStateDistrebution()
         },
         vAxis: {
 			title: 'Count'
-        }
+        },
+		series: {
+			0: { lineDashStyle: [4, 4] },
+			1: { lineDashStyle: [4, 4] },
+			2: { lineDashStyle: [4, 4] },
+			3: { lineDashStyle: [4, 4] },
+			4: { lineDashStyle: [8, 8] },
+			5: { lineDashStyle: [8, 8] },
+			6: { lineDashStyle: [8, 8] },
+			7: { lineDashStyle: [8, 8] },
+			8: { lineDashStyle: [1, 1] },
+			9: { lineDashStyle: [1, 1] },
+			10: { lineDashStyle: [1, 1] },
+			11: { lineDashStyle: [1, 1] }
+		}
       };
 
     var chart = new google.visualization.LineChart(document.getElementById('stateGraph'));

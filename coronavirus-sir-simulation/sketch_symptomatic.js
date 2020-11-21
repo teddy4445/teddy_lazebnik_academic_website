@@ -2,6 +2,9 @@
 var zIndex = 300;
 var count = 0;
 
+// const in the stocastic process of meeting infection between individuals //
+var MAX_TRYS = 1;
+ 
 var population;
 
 // --- DOM ACTIONS --- //
@@ -17,7 +20,6 @@ var is_mask = false;
 
 // graphs
 stateGraphData = [];
-
 rzeroGraphData = [];
 
 // populations sizes
@@ -75,6 +77,9 @@ let bad_mask_two_side = 0;
 let bad_mask_infected_side = 0;
 let bad_mask_not_infected_side = 0;
 
+let bad_infected_good_susceptible = 0;
+let good_infected_bad_susceptible = 0;
+
 
 // technical vars
 
@@ -94,7 +99,7 @@ let mask_bad_step_size = 0;
 
 let mask_data = [];
 let mask_max_infected_data = [];
-let mask_is_outbreak = [];
+let masks_is_outbreak = [];
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
@@ -199,24 +204,20 @@ function draw()
 		}
 	}
 	
-	// make a step on all the members
-	// TODO: finish here
-	population.run(a_a_t_c,
-					a_c_t_c,
-					c_a_t_c,
-					c_c_t_c,
-					infected_to_recover_time_adult, 
-					infected_to_recover_time_children, 
-					time_at_home_c, 
-					time_at_home_a, 
-					go_to_school_k_days, 
-					go_to_work_k_days);
+	population.run();
 	
 	// Displays stats on the screen
 	var age_status_location_dist = population.countStatusLocationDestrebution();
 	// run over all the locations
 	Object.keys(age_status_location_dist).forEach(function(key,index) {
-		document.getElementById(key).innerHTML = age_status_location_dist[key];	
+		try
+		{
+			document.getElementById(key).innerHTML = age_status_location_dist[key];	
+		}
+		catch (error)
+		{
+			
+		}	
 	});
 
 	// set the next frame count 
@@ -226,60 +227,52 @@ function draw()
 
 function mask_circle()
 {
-	if (adult_recover <= working_adult_pop_size + nonworking_adult_pop_size)
+	if (init_percent_good_masks <= 100)
 	{
-		if (child_recover <= children_pop_size)
-		{
-			
-			vaccine_economical_data.push([(adult_recover / parseInt(working_adult_pop_size + nonworking_adult_pop_size)).toFixed(3),
-										(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
-										population.econimic]);
-										
-			population = new Population(working_adult_pop_size,
-										working_adult_pop_size - 1 - parseInt((adult_recover * working_adult_pop_size) / (2 * (working_adult_pop_size + nonworking_adult_pop_size))),
-										1,
-										parseInt((adult_recover * working_adult_pop_size) / (2 * working_adult_pop_size + nonworking_adult_pop_size)),
-										nonworking_adult_pop_size,
-										nonworking_adult_pop_size - parseInt((adult_recover * nonworking_adult_pop_size) / (2 * (working_adult_pop_size + nonworking_adult_pop_size))),
-										0,
-										parseInt((adult_recover * nonworking_adult_pop_size) / (2 * working_adult_pop_size + nonworking_adult_pop_size)),
+		if (init_percent_bad_masks <= 100 - init_percent_good_masks)
+		{								
+			// create population to simulate
+			population = new Population(adult_pop_size,
+										susceptible_adults_percent,
+										infected_adults_percent,
+										recover_adults_percent,
 										children_pop_size, 
-										children_pop_size - 1 - child_recover, 
-										1,
-										child_recover,
-										e_init);
+										susceptible_children_amount, 
+										infected_children_amount,
+										recover_children_amount);
 								
-			// downloadasTextFile("corona_sir_two_age_stocasic_graph_data___vacine_a_" + adult_recover + "_c_" + child_recover + ".csv", prepareGraphDataToCSV(stateGraphData));
-			console.log("Vacine: a = " + adult_recover + ", c = " + child_recover);
-			vaccine_data.push([(adult_recover / parseInt(working_adult_pop_size + nonworking_adult_pop_size)).toFixed(3), 
-								(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
-								(r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
-			vaccine_max_infected_data.push([(adult_recover / parseInt(working_adult_pop_size + nonworking_adult_pop_size)).toFixed(3), 
-								(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
-								(100 * max(infected) / population.size()).toFixed(3)]);
-			vaccine_is_outbreak.push([(adult_recover / parseInt(working_adult_pop_size + nonworking_adult_pop_size)).toFixed(3), 
-									(child_recover / parseInt(document.getElementById("children_pop_size").value)).toFixed(3),
-									checkOutbreak(r_zeros)]);
-			child_recover += child_step_size;
+			console.log("masks: good_mask = " + init_percent_good_masks + ", bad mask = " + init_percent_bad_masks);
+			
+			mask_data.push([init_percent_good_masks,
+							init_percent_bad_masks, 
+							(r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+								
+			mask_max_infected_data.push([init_percent_good_masks, 
+										init_percent_bad_masks, 
+										(100 * max(infected) / population.size()).toFixed(3)]);
+			masks_is_outbreak.push([init_percent_good_masks, 
+										init_percent_bad_masks,
+										checkOutbreak(r_zeros)]);
+			
+			init_percent_bad_masks += mask_bad_step_size;
 		}
 		else
 		{
-			child_recover = 0;
-			adult_recover += adult_step_size; 
+			init_percent_bad_masks = 0;
+			mask_good_step_size += mask_good_step_size; 
 		}
 	}
 	else
 	{
 		// download results
-		downloadasTextFile("vaccine_max_infected_data.csv", prepareGraphDataToCSV(vaccine_max_infected_data, false));
-		downloadasTextFile("vaccine_data.csv", prepareGraphDataToCSV(vaccine_data, false));
-		downloadasTextFile("vaccine_is_outbreak.csv", prepareGraphDataToCSV(vaccine_is_outbreak, false));
+		downloadasTextFile("masks_max_infected_data.csv", prepareGraphDataToCSV(mask_max_infected_data, false));
+		downloadasTextFile("mask_data.csv", prepareGraphDataToCSV(mask_data, false));
+		downloadasTextFile("masks_is_outbreak.csv", prepareGraphDataToCSV(masks_is_outbreak, false));
 		
 		// reset for next run
-		vaccine_max_infected_data = [];
-		vaccine_data = [];
-		vaccine_is_outbreak = [];
-		vaccine_economical_data = [];
+		mask_max_infected_data = [];
+		mask_data = [];
+		masks_is_outbreak = [];
 		
 		// make back as in the start
 		showFinishAlert = true;
@@ -339,7 +332,7 @@ function prepareGraphDataToCSV(data, needHeader = true)
 	if (needHeader)
 	{
 		// TODO: finish here
-		answer = "day, working adult infected, working adult susceptible, working adult recover, working adult dead, nonworking adult infected, nonworking adult susceptible, nonworking adult recover, nonworking adult dead, child infected, child susceptible, child recover, child_dead\n";
+		answer = "day, asymptotic infected adult, susceptible adult, symptotic infected adult, recover adult, dead adult, asymptotic infected children, susceptible children, symptotic infected children, recover children, dead children \n";
 	}
 	for (var i = 0; i < data.length; i++)
 	{

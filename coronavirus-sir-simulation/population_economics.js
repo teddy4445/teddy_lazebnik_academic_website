@@ -239,7 +239,7 @@ class Population
 			{
 				if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].eco_age_group == WORKING_ADULT)
 				{
-					if (Math.random() < adult_pass_percent)
+					if (Math.random() < adult_pass_percent && this.members[memberIndex].state != STATE_D)
 					{
 						this.members[memberIndex].location = LOC_WORK;
 					}
@@ -254,7 +254,7 @@ class Population
 			{
 				if (this.members[memberIndex].location == LOC_HOME && this.members[memberIndex].eco_age_group == CHILD)
 				{
-					if (Math.random() < children_pass_percent)
+					if (Math.random() < children_pass_percent && this.members[memberIndex].state != STATE_D)
 					{
 						this.members[memberIndex].location = LOC_SCHOOL;
 					}
@@ -267,11 +267,11 @@ class Population
 			// stohasticly move them to home (with day - night circle)
 			for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 			{		
-				if (this.members[memberIndex].location == LOC_WORK && this.members[memberIndex].eco_age_group == WORKING_ADULT)
+				if (this.members[memberIndex].location == LOC_WORK && this.members[memberIndex].eco_age_group == WORKING_ADULT && this.members[memberIndex].state != STATE_D)
 				{
 					this.members[memberIndex].location = LOC_HOME;
 				}
-				else if (this.members[memberIndex].location == LOC_SCHOOL && this.members[memberIndex].eco_age_group == CHILD)
+				else if (this.members[memberIndex].location == LOC_SCHOOL && this.members[memberIndex].eco_age_group == CHILD && this.members[memberIndex].state != STATE_D)
 				{
 					this.members[memberIndex].location = LOC_HOME;
 				}	

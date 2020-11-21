@@ -83,7 +83,7 @@ function playGame()
 /*
 	This function starts the simulation multiple time such that it change the amount of adults and children change there location
 */
-function startLockDownSimulation()
+function startMaskAnalysis()
 {
 	is_mask = true;
 	
@@ -217,6 +217,9 @@ function startSimulation(dramatic)
 	bad_mask_two_side = parseFloat(document.getElementById("bad_mask_two_side").value) / 100;
 	bad_mask_infected_side = parseFloat(document.getElementById("bad_mask_infected_side").value) / 100;
 	bad_mask_not_infected_side = parseFloat(document.getElementById("bad_mask_not_infected_side").value) / 100;
+	
+	bad_infected_good_susceptible = parseFloat(document.getElementById("bad_infected_good_susceptible").value) / 100;
+	good_infected_bad_susceptible = parseFloat(document.getElementById("good_infected_bad_susceptible").value) / 100;
 	
 	/* Simulation run hyper-parameters */
 	
