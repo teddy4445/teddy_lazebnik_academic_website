@@ -332,7 +332,7 @@ function prepareGraphDataToCSV(data, needHeader = true)
 	if (needHeader)
 	{
 		// TODO: finish here
-		answer = "day, asymptotic infected adult, susceptible adult, symptotic infected adult, recover adult, dead adult, asymptotic infected children, susceptible children, symptotic infected children, recover children, dead children \n";
+		answer = "day,ias,iaa,sa,ra,da,ics,ica,sc,rc,dc\n";
 	}
 	for (var i = 0; i < data.length; i++)
 	{
