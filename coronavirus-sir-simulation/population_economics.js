@@ -135,6 +135,19 @@ class Population
 		return this.c_s + this.c_i + this.c_r + this.c_d;
 	}
 	
+	count_working_hours()
+	{
+		let answer = 0;
+		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
+		{
+			if (this.members[memberIndex].location == LOC_WORK)
+			{
+				answer++;
+			}
+		}
+		return answer;
+	}
+	
 	clear()
 	{
 		this.members = [];

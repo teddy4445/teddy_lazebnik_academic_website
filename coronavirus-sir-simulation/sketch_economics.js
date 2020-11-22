@@ -73,6 +73,8 @@ let avg_contribution_to_economic = 0;
 let loss_jobs_rate_step = 0;
 let loss_jobs_rate_max = 0;
 
+let total_working_hours = 0;
+
 let STANDARD_WORK_DAY = 8; // important const
 
 // recover chances
@@ -138,6 +140,7 @@ let economical_duration = [];
 let economical_duration_economic = [];
 let economical_duration_max_infected_data = [];
 let economical_duration_is_outbreak = [];
+let economical_working_hours = [];
 
 // work\school duration run  
 let work_school_duration = [];
@@ -187,6 +190,9 @@ function draw()
 	// recall each step to sum it in the graph later
 	economicGraphDataAll.push(population.econimic_delta);
 	consumersGraphDataAll.push(population.taxes);
+	
+	// count working hours 
+	total_working_hours += population.count_working_hours();
 	
 	// calc graph needed data and update it 
 	if (count % graph_sample == 0)
@@ -536,8 +542,10 @@ function econimic_circle()
 		economical_duration.push([loss_jobs_rate, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
 		economical_duration_max_infected_data.push([loss_jobs_rate, (100 * max(infected) / population.size()).toFixed(3)]);
 		economical_duration_is_outbreak.push([loss_jobs_rate, checkOutbreak(r_zeros)]);
+		economical_working_hours.push([loss_jobs_rate, total_working_hours]);
 		
 		loss_jobs_rate += loss_jobs_rate_step;
+		total_working_hours = 0;
 	}
 	else
 	{
@@ -546,12 +554,15 @@ function econimic_circle()
 		downloadasTextFile("economical_duration.csv", prepareGraphDataToCSV(economical_duration, false));
 		downloadasTextFile("economical_duration_economic.csv", prepareGraphDataToCSV(economical_duration_economic, false));
 		downloadasTextFile("economical_duration_is_outbreak.csv", prepareGraphDataToCSV(economical_duration_is_outbreak, false));
+		downloadasTextFile("economical_working_hours.csv", prepareGraphDataToCSV(economical_working_hours, false));
 		
 		// reset for next run
 		economical_duration = [];
 		economical_duration_max_infected_data = [];
 		economical_duration_is_outbreak = [];
 		economical_duration_economic = [];
+		economical_working_hours = [];
+		total_working_hours = 0;
 		
 		// make back as in the start
 		showFinishAlert = true;
