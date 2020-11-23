@@ -374,7 +374,7 @@
 			 <label for="good_mask_infected_side">
 			  Good Mask (N95 like) infected has mask, susceptible does not, protection probebility
 			 </label>
-			 <input class="form-control" id="good_mask_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) infected has mask, susceptible does not, protection probebility" required="" type="number" value="65" />
+			 <input class="form-control" id="good_mask_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) infected has mask, susceptible does not, protection probebility" required="" type="number" value="85" />
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -382,7 +382,7 @@
 			 <label for="good_mask_not_infected_side">
 			  Good Mask (N95 like) susceptible has mask, infected does not, protection probebility
 			 </label>
-			 <input class="form-control" id="good_mask_not_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) susceptible has mask, infected does not, protection probebility" required="" type="number" value="35" />
+			 <input class="form-control" id="good_mask_not_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) susceptible has mask, infected does not, protection probebility" required="" type="number" value="70" />
 			</div>
 		   </div>
 		  </div>
@@ -393,7 +393,7 @@
 			 <label for="bad_mask_two_side">
 			  Bad Mask (one time like) 2 side protection probebility
 			 </label>
-			 <input class="form-control" id="bad_mask_two_side" min="1" max="100" placeholder="Bad Mask (one time like)  2 side protection probebility" required="" type="number" value="65"/>
+			 <input class="form-control" id="bad_mask_two_side" min="1" max="100" placeholder="Bad Mask (one time like)  2 side protection probebility" required="" type="number" value="80"/>
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -401,7 +401,7 @@
 			 <label for="bad_mask_infected_side">
 			  Bad Mask (one time like) infected has mask, susceptible does not, protection probebility
 			 </label>
-			 <input class="form-control" id="bad_mask_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  infected has mask, susceptible does not, protection probebility" required="" type="number" value="40" />
+			 <input class="form-control" id="bad_mask_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  infected has mask, susceptible does not, protection probebility" required="" type="number" value="50" />
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -409,7 +409,7 @@
 			 <label for="bad_mask_not_infected_side">
 			  Bad Mask (one time like) susceptible has mask, infected does not, protection probebility
 			 </label>
-			 <input class="form-control" id="bad_mask_not_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  susceptible has mask, infected does not, protection probebility" required="" type="number" value="10" />
+			 <input class="form-control" id="bad_mask_not_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  susceptible has mask, infected does not, protection probebility" required="" type="number" value="20" />
 			</div>
 		   </div>
 		  </div>
@@ -489,8 +489,16 @@
 		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<button class="btn btn-danger btn-lg" onclick="return startMaskAnalysis()" style="width: 100%; margin-top: 10px;">
+			<button class="btn btn-warning btn-lg" onclick="return startMaskAnalysis()" style="width: 100%; margin-top: 10px;">
 			 Run Simulation (Mask Analysis)
+			</button>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<button class="btn btn-danger btn-lg" onclick="return startMaskAndHoursAnalysis()" style="width: 100%; margin-top: 10px;">
+			 Run Simulation (Mask and Hours Analysis)
 			</button>
 		   </div>
 		  </div>

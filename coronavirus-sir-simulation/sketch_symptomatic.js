@@ -17,6 +17,7 @@ var showFinishAlert = true;
 
 // multi analysis type flags
 var is_mask = false;
+var is_mask_and_hours = false;
 
 // graphs
 stateGraphData = [];
@@ -101,6 +102,11 @@ let mask_data = [];
 let mask_max_infected_data = [];
 let masks_is_outbreak = [];
 
+// work\school duration with masks run  
+let work_school_duration = [];
+let work_school_duration_max_infected_data = [];
+let work_school_duration_is_outbreak = [];
+
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
 // setup all the simulation before starting 
@@ -184,6 +190,10 @@ function draw()
 			{
 				mask_circle();
 			}
+			else if(is_mask_and_hours)
+			{
+				mask_hours_circle();
+			}
 			
 			// reset meta-run data //
 			infected = [];
@@ -247,8 +257,7 @@ function mask_circle()
 							init_percent_bad_masks, 
 							(r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
 								
-			mask_max_infected_data.push([init_percent_good_masks, 
-										init_percent_bad_masks, 
+			mask_max_infected_data.push([init_percent_good_masks, init_percent_bad_masks, 
 										(100 * max(infected) / population.size()).toFixed(3)]);
 			masks_is_outbreak.push([init_percent_good_masks, 
 										init_percent_bad_masks,
@@ -259,7 +268,7 @@ function mask_circle()
 		else
 		{
 			init_percent_bad_masks = 0;
-			mask_good_step_size += mask_good_step_size; 
+			init_percent_good_masks += mask_good_step_size; 
 		}
 	}
 	else
@@ -273,6 +282,91 @@ function mask_circle()
 		mask_max_infected_data = [];
 		mask_data = [];
 		masks_is_outbreak = [];
+		
+		// make back as in the start
+		showFinishAlert = true;
+		document.getElementById("playBtn").style.display = "";
+		document.getElementById("pauseBtn").style.display = "";
+
+		// reset view
+		document.getElementById("main").style.display = "none"; // close the init form
+		document.getElementById("init_form").style.display = ""; // show the main window
+		
+		runStarted = false;
+	}
+}
+
+
+function mask_hours_circle()
+{
+	if (time_at_home_a < TIME_IN_DAY)
+	{
+		if (time_at_home_c <= TIME_IN_DAY)
+		{
+			if (init_percent_good_masks <= 100)
+			{
+				if (init_percent_bad_masks <= 100 - init_percent_good_masks)
+				{				
+					// create population to simulate
+					population = new Population(adult_pop_size,
+												susceptible_adults_percent,
+												infected_adults_percent,
+												recover_adults_percent,
+												children_pop_size, 
+												susceptible_children_amount, 
+												infected_children_amount,
+												recover_children_amount);
+												
+					console.log("Time Duraction + Masks Analysis: Work hours  = " + time_at_home_a + ", School hours = " + time_at_home_c + ", good_mask = " + init_percent_good_masks + ", bad mask = " + init_percent_bad_masks);
+	
+					work_school_duration.push([time_at_home_a, time_at_home_c, init_percent_good_masks, init_percent_bad_masks, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+					work_school_duration_max_infected_data.push([time_at_home_a, time_at_home_c, init_percent_good_masks, init_percent_bad_masks, (100 * max(infected) / population.size()).toFixed(3)]);
+					work_school_duration_is_outbreak.push([time_at_home_a, time_at_home_c, init_percent_good_masks, init_percent_bad_masks, checkOutbreak(r_zeros)]);
+					time_at_home_c += 1;				
+										
+					
+					work_school_duration.push([init_percent_good_masks,
+									init_percent_bad_masks, 
+									(r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+										
+					work_school_duration_max_infected_data.push([init_percent_good_masks, 
+												init_percent_bad_masks, 
+												(100 * max(infected) / population.size()).toFixed(3)]);
+					work_school_duration_is_outbreak.push([init_percent_good_masks, 
+												init_percent_bad_masks,
+												checkOutbreak(r_zeros)]);
+					
+					init_percent_bad_masks += mask_bad_step_size;
+				}
+				else
+				{
+					init_percent_bad_masks = 0;
+					init_percent_good_masks += mask_good_step_size; 
+				}
+			}
+			else
+			{
+				init_percent_good_masks = 0;
+				time_at_home_c += 1; 
+			}
+		}
+		else
+		{
+			time_at_home_c = 0;
+			time_at_home_a += 1; 
+		}
+	}
+	else
+	{
+		// download results
+		downloadasTextFile("work_school_duration_with_masks_max_infected_data.csv", prepareGraphDataToCSV(work_school_duration_max_infected_data, false));
+		downloadasTextFile("work_school_duration_with_masks_data.csv", prepareGraphDataToCSV(work_school_duration, false));
+		downloadasTextFile("work_school_duration_with_masks_is_outbreak.csv", prepareGraphDataToCSV(work_school_duration_is_outbreak, false));
+		
+		// reset for next run
+		work_school_duration_max_infected_data = [];
+		work_school_duration = [];
+		work_school_duration_is_outbreak = [];
 		
 		// make back as in the start
 		showFinishAlert = true;
