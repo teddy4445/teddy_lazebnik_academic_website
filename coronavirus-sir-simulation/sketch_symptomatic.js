@@ -106,6 +106,8 @@ let masks_is_outbreak = [];
 let work_school_duration = [];
 let work_school_duration_max_infected_data = [];
 let work_school_duration_is_outbreak = [];
+let pandemic_time = [];
+let s_left = [];
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
@@ -263,6 +265,14 @@ function mask_circle()
 										init_percent_bad_masks,
 										checkOutbreak(r_zeros)]);
 			
+			s_left.push([init_percent_good_masks, 
+							init_percent_bad_masks,
+							document.getElementById("susceptible_text").innerHTML]);
+			
+			pandemic_time.push([init_percent_good_masks, 
+							init_percent_bad_masks,
+							count]);
+			
 			init_percent_bad_masks += mask_bad_step_size;
 		}
 		else
@@ -277,11 +287,15 @@ function mask_circle()
 		downloadasTextFile("masks_max_infected_data.csv", prepareGraphDataToCSV(mask_max_infected_data, false));
 		downloadasTextFile("mask_data.csv", prepareGraphDataToCSV(mask_data, false));
 		downloadasTextFile("masks_is_outbreak.csv", prepareGraphDataToCSV(masks_is_outbreak, false));
+		downloadasTextFile("masks_s_left.csv", prepareGraphDataToCSV(s_left, false));
+		downloadasTextFile("masks_pandemic_time.csv", prepareGraphDataToCSV(pandemic_time, false));
 		
 		// reset for next run
 		mask_max_infected_data = [];
 		mask_data = [];
 		masks_is_outbreak = [];
+		s_left = [];
+		pandemic_time = [];
 		
 		// make back as in the start
 		showFinishAlert = true;
@@ -335,8 +349,24 @@ function mask_hours_circle()
 					work_school_duration_is_outbreak.push([init_percent_good_masks, 
 												init_percent_bad_masks,
 												checkOutbreak(r_zeros)]);
+			
+					s_left.push([init_percent_good_masks, 
+									init_percent_bad_masks,
+									document.getElementById("susceptible_text").innerHTML]);
+					
+					pandemic_time.push([init_percent_good_masks, 
+									init_percent_bad_masks,
+									count]);
 					
 					init_percent_bad_masks += mask_bad_step_size;
+					
+					// download results
+					downloadasTextFile("process_download_max_infected.csv", prepareGraphDataToCSV(work_school_duration_max_infected_data, false));
+					downloadasTextFile("process_download_r_zero.csv", prepareGraphDataToCSV(work_school_duration, false));
+					downloadasTextFile("process_download_is_outbreak.csv", prepareGraphDataToCSV(work_school_duration_is_outbreak, false));
+					downloadasTextFile("process_download_s_left.csv", prepareGraphDataToCSV(s_left, false));
+					downloadasTextFile("process_download_pandemic_time.csv", prepareGraphDataToCSV(pandemic_time, false));
+		
 				}
 				else
 				{
@@ -347,13 +377,13 @@ function mask_hours_circle()
 			else
 			{
 				init_percent_good_masks = 0;
-				time_at_home_c += 1; 
+				time_at_home_c += 2; 
 			}
 		}
 		else
 		{
 			time_at_home_c = 0;
-			time_at_home_a += 1; 
+			time_at_home_a += 2; 
 		}
 	}
 	else
@@ -362,11 +392,15 @@ function mask_hours_circle()
 		downloadasTextFile("work_school_duration_with_masks_max_infected_data.csv", prepareGraphDataToCSV(work_school_duration_max_infected_data, false));
 		downloadasTextFile("work_school_duration_with_masks_data.csv", prepareGraphDataToCSV(work_school_duration, false));
 		downloadasTextFile("work_school_duration_with_masks_is_outbreak.csv", prepareGraphDataToCSV(work_school_duration_is_outbreak, false));
+		downloadasTextFile("work_school_duration_with_masks_s_left.csv", prepareGraphDataToCSV(s_left, false));
+		downloadasTextFile("work_school_duration_with_masks_pandemic_time.csv", prepareGraphDataToCSV(pandemic_time, false));
 		
 		// reset for next run
 		work_school_duration_max_infected_data = [];
 		work_school_duration = [];
 		work_school_duration_is_outbreak = [];
+		s_left = [];
+		pandemic_time = [];
 		
 		// make back as in the start
 		showFinishAlert = true;
