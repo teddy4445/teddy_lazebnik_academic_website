@@ -436,7 +436,8 @@ function mask_hours_circle_random()
 									susceptible_children_amount, 
 									infected_children_amount,
 									recover_children_amount);
-									
+		
+		console.log("Run number " + random_counter);
 		console.log("Time Duraction + Masks Analysis: Work hours  = " + time_at_home_a + ", School hours = " + time_at_home_c + ", good_mask = " + init_percent_good_masks + ", bad mask = " + init_percent_bad_masks);
 		work_school_duration.push([time_at_home_a,
 									time_at_home_c,
