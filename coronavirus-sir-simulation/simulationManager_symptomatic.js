@@ -87,6 +87,7 @@ function startMaskAnalysis()
 {
 	is_mask = true;
 	is_mask_and_hours = false;
+	is_mask_and_hours_random = false;
 	
 	mask_good_step_size = parseInt(document.getElementById("mask_good_step_size").value);
 	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
@@ -98,8 +99,24 @@ function startMaskAndHoursAnalysis()
 {
 	is_mask = false;
 	is_mask_and_hours = true;
+	is_mask_and_hours_random = false;
 	
 	mask_good_step_size = parseInt(document.getElementById("mask_good_step_size").value);
+	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
+	document.getElementById("time_at_home_a").value = 0;
+	document.getElementById("time_at_home_c").value = 0;
+	
+	return multi_run_perform();
+}
+
+function startMaskAndHoursAnalysisRandom()
+{
+	is_mask = false;
+	is_mask_and_hours = false;
+	is_mask_and_hours_random = true;
+	
+	max_tries_analysis = parseInt(document.getElementById("max_tries_analysis").value);
+	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
 	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
 	document.getElementById("time_at_home_a").value = 0;
 	document.getElementById("time_at_home_c").value = 0;
