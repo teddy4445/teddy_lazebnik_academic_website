@@ -143,7 +143,7 @@ function draw()
 	document.getElementById("susceptible_text").innerHTML = (stats["a_s"] + stats["c_s"]).toString();
 	document.getElementById("symptomatic_infected_text").innerHTML = (stats["a_si"] + stats["c_si"]).toString();
 	document.getElementById("asymptomatic_infected_text").innerHTML = (stats["a_ai"] + stats["c_ai"]).toString();
-	infected.push(stats["a_i"] + stats["c_i"]);
+	infected.push(stats["a_si"] + stats["a_ai"] + stats["c_si"] + stats["c_ai"]);
 	document.getElementById("recover_text").innerHTML = (stats["a_r"] + stats["c_r"]).toString();
 	document.getElementById("dead_text").innerHTML = (stats["a_d"] + stats["c_d"]).toString();
 	document.getElementById("clock").innerHTML = stepToClock(count);
@@ -178,7 +178,6 @@ function draw()
 		if ((stats["a_si"] + stats["a_ai"] + stats["c_si"] + stats["c_ai"]) == 0)
 		{
 			population.clear();
-			count = 1;
 			
 			if (showFinishAlert)
 			{
@@ -203,6 +202,8 @@ function draw()
 			{
 				mask_hours_circle_random();
 			}
+			
+			count = 1;
 			
 			// reset meta-run data //
 			infected = [];
@@ -439,6 +440,7 @@ function mask_hours_circle_random()
 		
 		console.log("Run number " + random_counter);
 		console.log("Time Duraction + Masks Analysis: Work hours  = " + time_at_home_a + ", School hours = " + time_at_home_c + ", good_mask = " + init_percent_good_masks + ", bad mask = " + init_percent_bad_masks);
+		
 		work_school_duration.push([time_at_home_a,
 									time_at_home_c,
 									init_percent_good_masks,
@@ -471,6 +473,12 @@ function mask_hours_circle_random()
 		time_at_home_c = Math.floor(Math.random() * 25);
 		init_percent_good_masks = 5 * Math.floor(Math.random() * 21);
 		init_percent_bad_masks = 5 * Math.floor(Math.random() * 21);
+		
+		while (init_percent_good_masks + init_percent_bad_masks > 100)
+		{
+			init_percent_good_masks = 5 * Math.floor(Math.random() * 21);
+			init_percent_bad_masks = 5 * Math.floor(Math.random() * 21);
+		}
 		
 		if (((1 + random_counter) % 100) == 0)
 		{
