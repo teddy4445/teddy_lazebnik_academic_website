@@ -82,6 +82,11 @@ let bad_mask_not_infected_side = 0;
 let bad_infected_good_susceptible = 0;
 let good_infected_bad_susceptible = 0;
 
+// infection distrebution
+let home_infections = 0;
+let work_infections = 0; 
+let school_infections = 0;
+
 
 // technical vars
 
@@ -181,7 +186,9 @@ function draw()
 			
 			if (showFinishAlert)
 			{
+				let total_infections = home_infections + work_infections + school_infections;
 				downloadasTextFile("corona_sir_two_age_stocasic_graph_data.csv", prepareGraphDataToCSV(stateGraphData));
+				downloadasTextFile("work_school_infection_distrebution.csv", prepareGraphDataToCSV([[home_infections/total_infections, work_infections/total_infections, school_infections/total_infections]], false));
 				alert("Simulation over");	
 			
 				// reset view
@@ -220,6 +227,9 @@ function draw()
 			
 			consumersGraphDataAll = [];
 			consumersGraph = [];
+			home_infections = 0;
+			work_infections = 0;
+			school_infections = 0;
 			/* end - reset graph data */
 		}
 	}
@@ -297,6 +307,7 @@ function mask_circle()
 		downloadasTextFile("masks_is_outbreak.csv", prepareGraphDataToCSV(masks_is_outbreak, false));
 		downloadasTextFile("masks_s_left.csv", prepareGraphDataToCSV(s_left, false));
 		downloadasTextFile("masks_pandemic_time.csv", prepareGraphDataToCSV(pandemic_time, false));
+		downloadasTextFile("infection_distrebution.csv", prepareGraphDataToCSV([[home_infections/total_infections, work_infections/total_infections, school_infections/total_infections]], false));
 		
 		// reset for next run
 		mask_max_infected_data = [];
@@ -374,7 +385,6 @@ function mask_hours_circle()
 					downloadasTextFile("process_download_is_outbreak.csv", prepareGraphDataToCSV(work_school_duration_is_outbreak, false));
 					downloadasTextFile("process_download_s_left.csv", prepareGraphDataToCSV(s_left, false));
 					downloadasTextFile("process_download_pandemic_time.csv", prepareGraphDataToCSV(pandemic_time, false));
-		
 				}
 				else
 				{

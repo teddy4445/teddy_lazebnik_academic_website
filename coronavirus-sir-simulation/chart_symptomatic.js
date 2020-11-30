@@ -1,11 +1,41 @@
 google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawStateDistrebution);
 google.charts.setOnLoadCallback(drawRzeroGraph);
+google.charts.setOnLoadCallback(drawInfectionGraph);
 
 function drawAll()
 {
 	drawStateDistrebution();
 	drawRzeroGraph();
+	drawInfectionGraph();
+}
+
+
+function drawInfectionGraph() 
+{
+	let total_infections = home_infections + work_infections + school_infections;
+	var data = google.visualization.arrayToDataTable([
+		['Element', 'Density'],
+		['Home', home_infections/total_infections],
+		['Work', work_infections/total_infections],
+		['School', school_infections/total_infections]
+	]);
+	
+	var options = {
+		title: 'Distrebution Of Infection Over Locations',
+        hAxis: {
+			title: 'Location'
+        },
+        vAxis: {
+			'minValue': 0, 
+			'maxValue': 1	,
+			title: 'Infection Percent'
+        }
+	};
+	
+	var chart = new google.visualization.ColumnChart(document.getElementById('infectionGraph'));
+	chart.draw(data, options);
 }
 
 function drawStateDistrebution()

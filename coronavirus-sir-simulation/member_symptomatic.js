@@ -48,6 +48,19 @@ class Member
 			}	
 		}
 		this.state_time = 0;
+		
+		switch (this.location)
+		{
+			case LOC_HOME:
+				home_infections++;
+				break;
+			case LOC_WORK:
+				work_infections++;
+				break;
+			case LOC_SCHOOL:
+				school_infections++;
+				break;
+		}
 	}
 	
 	recover()
