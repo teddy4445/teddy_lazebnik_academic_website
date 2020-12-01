@@ -86,6 +86,7 @@ function playGame()
 function startMaskAnalysis()
 {
 	is_mask = true;
+	is_working_hours = false;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
 	
@@ -95,9 +96,22 @@ function startMaskAnalysis()
 	return multi_run_perform();
 }
 
+function startWorkingHoursAnalysis()
+{
+	is_mask = false;
+	is_working_hours = true;
+	is_mask_and_hours = false;
+	is_mask_and_hours_random = false;
+	
+	document.getElementById("time_at_home_a").value = 0;
+	
+	return multi_run_perform();
+}
+
 function startMaskAndHoursAnalysis()
 {
 	is_mask = false;
+	is_working_hours = false;
 	is_mask_and_hours = true;
 	is_mask_and_hours_random = false;
 	
