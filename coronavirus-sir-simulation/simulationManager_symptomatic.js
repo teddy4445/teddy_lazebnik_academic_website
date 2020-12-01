@@ -90,6 +90,7 @@ function startMaskAnalysis()
 	is_schooling_hours = false;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
+	is_schooling_working_hours = false;
 	
 	mask_good_step_size = parseInt(document.getElementById("mask_good_step_size").value);
 	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
@@ -104,6 +105,7 @@ function startWorkingHoursAnalysis()
 	is_schooling_hours = false;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
+	is_schooling_working_hours = false;
 	
 	document.getElementById("time_at_home_a").value = 0;
 	
@@ -117,7 +119,23 @@ function startSchoolingHoursAnalysis()
 	is_schooling_hours = true;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
+	is_schooling_working_hours = false;
 	
+	document.getElementById("time_at_home_c").value = 0;
+	
+	return multi_run_perform();
+}
+
+function startSchoolingWorkingHoursAnalysis()
+{
+	is_mask = false;
+	is_working_hours = false;
+	is_schooling_hours = false;
+	is_mask_and_hours = false;
+	is_mask_and_hours_random = false;
+	is_schooling_working_hours = true;
+	
+	document.getElementById("time_at_home_a").value = 0;
 	document.getElementById("time_at_home_c").value = 0;
 	
 	return multi_run_perform();
@@ -130,6 +148,7 @@ function startMaskAndHoursAnalysis()
 	is_schooling_hours = false;
 	is_mask_and_hours = true;
 	is_mask_and_hours_random = false;
+	is_schooling_working_hours = false;
 	
 	mask_good_step_size = parseInt(document.getElementById("mask_good_step_size").value);
 	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
@@ -146,6 +165,7 @@ function startMaskAndHoursAnalysisRandom()
 	is_schooling_hours = false;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = true;
+	is_schooling_working_hours = false;
 	
 	max_tries_analysis = parseInt(document.getElementById("max_tries_analysis").value);
 	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
