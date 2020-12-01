@@ -100,8 +100,8 @@ function startMaskAnalysis()
 function startWorkingHoursAnalysis()
 {
 	is_mask = false;
-	is_working_hours = false;
-	is_schooling_hours = true;
+	is_working_hours = true;
+	is_schooling_hours = false;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
 	
@@ -113,7 +113,8 @@ function startWorkingHoursAnalysis()
 function startSchoolingHoursAnalysis()
 {
 	is_mask = false;
-	is_working_hours = true;
+	is_working_hours = false;
+	is_schooling_hours = true;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
 	
