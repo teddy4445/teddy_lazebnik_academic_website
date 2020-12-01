@@ -87,6 +87,7 @@ function startMaskAnalysis()
 {
 	is_mask = true;
 	is_working_hours = false;
+	is_schooling_hours = false;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
 	
@@ -99,7 +100,8 @@ function startMaskAnalysis()
 function startWorkingHoursAnalysis()
 {
 	is_mask = false;
-	is_working_hours = true;
+	is_working_hours = false;
+	is_schooling_hours = true;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
 	
@@ -108,10 +110,23 @@ function startWorkingHoursAnalysis()
 	return multi_run_perform();
 }
 
+function startSchoolingHoursAnalysis()
+{
+	is_mask = false;
+	is_working_hours = true;
+	is_mask_and_hours = false;
+	is_mask_and_hours_random = false;
+	
+	document.getElementById("time_at_home_c").value = 0;
+	
+	return multi_run_perform();
+}
+
 function startMaskAndHoursAnalysis()
 {
 	is_mask = false;
 	is_working_hours = false;
+	is_schooling_hours = false;
 	is_mask_and_hours = true;
 	is_mask_and_hours_random = false;
 	
@@ -126,6 +141,8 @@ function startMaskAndHoursAnalysis()
 function startMaskAndHoursAnalysisRandom()
 {
 	is_mask = false;
+	is_working_hours = false;
+	is_schooling_hours = false;
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = true;
 	

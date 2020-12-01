@@ -20,6 +20,7 @@ var is_mask = false;
 var is_working_hours = false;
 var is_mask_and_hours = false;
 var is_mask_and_hours_random = false;
+var is_schooling_hours = false;
 
 // graphs
 stateGraphData = [];
@@ -124,6 +125,14 @@ let work_hourspandemic_time = [];
 let work_hourss_left = [];
 let work_hourss_infection_distrebution = [];
 
+// work\school duration with masks run  
+let school_hours_r_zero = [];
+let school_hours_max_infected_data = [];
+let school_hours_is_outbreak = [];
+let school_hourspandemic_time = [];
+let school_hourss_left = [];
+let school_hourss_infection_distrebution = [];
+
 let random_counter = 0;
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
@@ -222,6 +231,10 @@ function draw()
 			{
 				working_hours_circle();
 			}
+			else if (is_schooling_hours)
+			{
+				schol_hours_circle();
+			}
 			
 			count = 1;
 			
@@ -317,6 +330,68 @@ function working_hours_circle()
 		work_hourss_left = [];
 		work_hourspandemic_time = [];
 		work_hourss_infection_distrebution = [];
+		
+		// make back as in the start
+		showFinishAlert = true;
+		document.getElementById("playBtn").style.display = "";
+		document.getElementById("pauseBtn").style.display = "";
+
+		// reset view
+		document.getElementById("main").style.display = "none"; // close the init form
+		document.getElementById("init_form").style.display = ""; // show the main window
+		
+		runStarted = false;
+	}
+}
+function schol_hours_circle()
+{
+	if (time_at_home_c < TIME_IN_DAY)
+	{
+		// create population to simulate
+		population = new Population(adult_pop_size,
+									susceptible_adults_percent,
+									infected_adults_percent,
+									recover_adults_percent,
+									children_pop_size, 
+									susceptible_children_amount, 
+									infected_children_amount,
+									recover_children_amount);
+							
+		let schooling_hours = TIME_IN_DAY - time_at_home_c;
+		console.log("schooling hours: " + schooling_hours);
+		
+		school_hours_r_zero.push([schooling_hours, (r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+							
+		school_hours_max_infected_data.push([schooling_hours, (100 * max(infected) / population.size()).toFixed(3)]);
+		
+		school_hours_is_outbreak.push([schooling_hours, checkOutbreak(r_zeros)]);
+		
+		school_hourss_left.push([schooling_hours, document.getElementById("susceptible_text").innerHTML]);
+		
+		school_hourspandemic_time.push([schooling_hours, count]);
+		
+		let total_infections = home_infections + work_infections + school_infections;
+		school_hourss_infection_distrebution.push([schooling_hours, home_infections/total_infections, work_infections/total_infections, school_infections/total_infections]);
+		
+		time_at_home_c++;
+	}
+	else
+	{
+		// download results
+		downloadasTextFile("school_hours_r_zero.csv", prepareGraphDataToCSV(school_hours_r_zero, false));
+		downloadasTextFile("school_hours_max_infected_data.csv", prepareGraphDataToCSV(school_hours_max_infected_data, false));
+		downloadasTextFile("school_hours_is_outbreak.csv", prepareGraphDataToCSV(school_hours_is_outbreak, false));
+		downloadasTextFile("school_hourss_left.csv", prepareGraphDataToCSV(school_hourss_left, false));
+		downloadasTextFile("school_hourspandemic_time.csv", prepareGraphDataToCSV(school_hourspandemic_time, false));
+		downloadasTextFile("school_hourss_infection_distrebution.csv", prepareGraphDataToCSV(school_hourss_infection_distrebution, false));
+		
+		// reset for next run
+		school_hours_r_zero = [];
+		school_hours_max_infected_data = [];
+		school_hours_is_outbreak = [];
+		school_hourss_left = [];
+		school_hourspandemic_time = [];
+		school_hourss_infection_distrebution = [];
 		
 		// make back as in the start
 		showFinishAlert = true;
