@@ -22,6 +22,7 @@ var is_mask_and_hours = false;
 var is_mask_and_hours_random = false;
 var is_schooling_hours = false;
 var is_schooling_working_hours = false;
+var is_event_analysis = false;
 
 // graphs
 stateGraphData = [];
@@ -85,6 +86,16 @@ let bad_mask_not_infected_side = 0;
 let bad_infected_good_susceptible = 0;
 let good_infected_bad_susceptible = 0;
 
+// events size 
+let event_size = 0;
+let event_rate_days = 1000;
+
+// --- meta run evetns 
+let max_pop_event = 0; 
+let step_pop_event = 0; 
+let event_rate_max = 0; 
+let event_rate_step = 0;
+
 // infection distrebution
 let home_infections = 0;
 let work_infections = 0; 
@@ -110,6 +121,7 @@ let mask_bad_step_size = 0;
 let mask_data = [];
 let mask_max_infected_data = [];
 let masks_is_outbreak = [];
+let masks_infection_distrebution = [];
 
 // work\school duration with masks run  
 let work_school_duration = [];
@@ -239,6 +251,10 @@ function draw()
 			else if (is_schooling_working_hours)
 			{
 				school_work_hours_circle();
+			}
+			else if (is_event_analysis)
+			{
+				events_circle();
 			}
 			
 			count = 1;
@@ -485,11 +501,89 @@ function school_work_hours_circle()
 	}
 }
 
+function events_circle()
+{
+	if (event_rate_days <= event_rate_max)
+	{
+		if (event_size <= max_pop_event)
+		{								
+			// create population to simulate
+			population = new Population(adult_pop_size,
+										susceptible_adults_percent,
+										infected_adults_percent,
+										recover_adults_percent,
+										children_pop_size, 
+										susceptible_children_amount, 
+										infected_children_amount,
+										recover_children_amount);
+								
+			console.log("Events: event rate days = " + event_rate_days + ", event size = " + event_size);
+			
+			mask_data.push([event_rate_days,
+							event_size, 
+							(r_zeros.reduce((a, b) => a + b, 0) / r_zeros.length).toFixed(3)]);
+								
+			mask_max_infected_data.push([event_rate_days, event_size, 
+										(100 * max(infected) / population.size()).toFixed(3)]);
+			masks_is_outbreak.push([event_rate_days, 
+										event_size,
+										checkOutbreak(r_zeros)]);
+			
+			s_left.push([event_rate_days, 
+							event_size,
+							document.getElementById("susceptible_text").innerHTML]);
+			
+			pandemic_time.push([event_rate_days, 
+							event_size,
+							count]);
+							
+			let total_infections = home_infections + work_infections + school_infections;
+			masks_infection_distrebution.push([event_rate_days, event_size, home_infections/total_infections, work_infections/total_infections, school_infections/total_infections]);
+			
+			event_size += step_pop_event;
+		}
+		else
+		{
+			event_size = step_pop_event;
+			event_rate_days += event_rate_step; 
+		}
+	}
+	else
+	{
+		// download results
+		downloadasTextFile("events_max_infected_data.csv", prepareGraphDataToCSV(mask_max_infected_data, false));
+		downloadasTextFile("events_data.csv", prepareGraphDataToCSV(mask_data, false));
+		downloadasTextFile("events_is_outbreak.csv", prepareGraphDataToCSV(masks_is_outbreak, false));
+		downloadasTextFile("events_s_left.csv", prepareGraphDataToCSV(s_left, false));
+		downloadasTextFile("events_pandemic_time.csv", prepareGraphDataToCSV(pandemic_time, false));
+		downloadasTextFile("events_infection_distrebution.csv", prepareGraphDataToCSV(masks_infection_distrebution, false));
+		
+		// reset for next run
+		mask_max_infected_data = [];
+		mask_data = [];
+		masks_is_outbreak = [];
+		s_left = [];
+		pandemic_time = [];
+		masks_infection_distrebution = [];
+		
+		// make back as in the start
+		showFinishAlert = true;
+		document.getElementById("playBtn").style.display = "";
+		document.getElementById("pauseBtn").style.display = "";
+
+		// reset view
+		document.getElementById("main").style.display = "none"; // close the init form
+		document.getElementById("init_form").style.display = ""; // show the main window
+		
+		runStarted = false;
+	}
+}
+
 function mask_circle()
 {
-	if (init_percent_good_masks <= 100)
+	if (init_percent_good_masks <= 1)
 	{
-		if (init_percent_bad_masks <= 100 - init_percent_good_masks)
+		if (init_percent_bad_masks <= 1 - init_percent_good_masks)
 		{								
 			// create population to simulate
 			population = new Population(adult_pop_size,
@@ -520,13 +614,16 @@ function mask_circle()
 			pandemic_time.push([init_percent_good_masks, 
 							init_percent_bad_masks,
 							count]);
+							
+			let total_infections = home_infections + work_infections + school_infections;
+			masks_infection_distrebution.push([init_percent_good_masks, init_percent_bad_masks, home_infections/total_infections, work_infections/total_infections, school_infections/total_infections]);
 			
-			init_percent_bad_masks += mask_bad_step_size;
+			init_percent_bad_masks += mask_bad_step_size/100;
 		}
 		else
 		{
 			init_percent_bad_masks = 0;
-			init_percent_good_masks += mask_good_step_size; 
+			init_percent_good_masks += mask_good_step_size/100; 
 		}
 	}
 	else
@@ -537,7 +634,7 @@ function mask_circle()
 		downloadasTextFile("masks_is_outbreak.csv", prepareGraphDataToCSV(masks_is_outbreak, false));
 		downloadasTextFile("masks_s_left.csv", prepareGraphDataToCSV(s_left, false));
 		downloadasTextFile("masks_pandemic_time.csv", prepareGraphDataToCSV(pandemic_time, false));
-		downloadasTextFile("infection_distrebution.csv", prepareGraphDataToCSV([[home_infections/total_infections, work_infections/total_infections, school_infections/total_infections]], false));
+		downloadasTextFile("masks_infection_distrebution.csv", prepareGraphDataToCSV(masks_infection_distrebution, false));
 		
 		// reset for next run
 		mask_max_infected_data = [];
@@ -545,6 +642,7 @@ function mask_circle()
 		masks_is_outbreak = [];
 		s_left = [];
 		pandemic_time = [];
+		masks_infection_distrebution = [];
 		
 		// make back as in the start
 		showFinishAlert = true;

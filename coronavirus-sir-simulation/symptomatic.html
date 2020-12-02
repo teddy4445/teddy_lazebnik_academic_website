@@ -436,6 +436,32 @@
 		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3>Events Stress Parameters</h3>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="fps" title="Frames Per Second">
+			  <b>Average number of individuals in an event</b>
+			 </label>
+			 <input class="form-control" id="event_size" min="0" placeholder="Average number of individuals in an event" required="" type="number" value="0"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="graph_samples">
+			  </b>Event each (k) days</b>
+			 </label>
+			 <input class="form-control" id="event_rate_days" max="9999" min="1" placeholder="Event each (k) days | k = " required="" type="number" value="9999" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<h3>Simulation run hyper-parameters</h3>
 		   </div>
 		  </div>
@@ -491,6 +517,52 @@
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<button class="btn btn-warning btn-lg" onclick="return startMaskAnalysis()" style="width: 100%; margin-top: 10px;">
 			 Run Simulation (Mask Analysis)
+			</button>
+		   </div>
+		  </div>
+		  
+		  <div class="row" style="margin-top: 20px;">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="adult_recover_step">
+			  Max population size in event
+			 </label>
+			 <input class="form-control" id="max_pop_event" min="1" placeholder="Max population size in event" required="" type="number" value="1000"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="children_recover_step">
+			  Population size in event step
+			 </label>
+			 <input class="form-control" id="step_pop_event" min="1"  max="1000" placeholder="Population size in event step" required="" type="number" value="100" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row" style="margin-top: 20px;">
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="adult_recover_step">
+			  Max K event rate
+			 </label>
+			 <input class="form-control" id="event_rate_max" min="1" max="31" placeholder="Max K event rate" required="" type="number" value="14"/>
+			</div>
+		   </div>
+		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="form-group">
+			 <label for="children_recover_step">
+			  K event rate step size
+			 </label>
+			 <input class="form-control" id="event_rate_step" min="1" max="31" placeholder="K event rate step size" required="" type="number" value="1" />
+			</div>
+		   </div>
+		  </div>
+		  
+		  <div class="row">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<button class="btn btn-warning btn-lg" onclick="return startEventsAnalysis()" style="width: 100%; margin-top: 10px;">
+			 Run Simulation (Events Analysis)
 			</button>
 		   </div>
 		  </div>

@@ -167,7 +167,13 @@ class Population
 		// 2. make tranforms regarding to -> location, age
 		var r_zero = this._make_trasforms();
 		
-		// 3. update time of day 
+		// 3. check if event needed 
+		if ((this.days % event_rate_days) == 0 && this.timeOfDay == 12)
+		{
+			this._make_event();
+		}
+		
+		// 4. update time of day 
 		this.timeOfDay++;
 		if (this.timeOfDay == TIME_IN_DAY)
 		{
@@ -329,6 +335,31 @@ class Population
 				{
 					this.members[memberIndex].infect();	
 				}
+			}
+		}
+	}
+	
+	_make_event()
+	{
+		let pop_size = this.members.length;
+	
+		// stohasticly change states
+		for (var memberIndex = 0; memberIndex < event_size; memberIndex++)
+		{
+			let tryCount = 0;
+			var meetMemeber = this.members[Math.floor(Math.random() * pop_size)];
+			while (meetMemeber.state != STATE_D && tryCount < MAX_TRYS)
+			{
+				meetMemeber = this.members[Math.floor(Math.random() * pop_size)];
+				if (meetMemeber.state != STATE_D)
+				{
+					tryCount++;	
+				}
+			}
+			
+			if (meetMemeber.state == STATE_S)
+			{
+				meetMemeber.infect();	
 			}
 		}
 	}

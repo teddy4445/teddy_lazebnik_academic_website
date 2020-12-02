@@ -91,6 +91,7 @@ function startMaskAnalysis()
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
 	is_schooling_working_hours = false;
+	is_event_analysis = false;
 	
 	mask_good_step_size = parseInt(document.getElementById("mask_good_step_size").value);
 	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
@@ -106,6 +107,7 @@ function startWorkingHoursAnalysis()
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
 	is_schooling_working_hours = false;
+	is_event_analysis = false;
 	
 	document.getElementById("time_at_home_a").value = 0;
 	
@@ -120,6 +122,7 @@ function startSchoolingHoursAnalysis()
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
 	is_schooling_working_hours = false;
+	is_event_analysis = false;
 	
 	document.getElementById("time_at_home_c").value = 0;
 	
@@ -134,6 +137,7 @@ function startSchoolingWorkingHoursAnalysis()
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = false;
 	is_schooling_working_hours = true;
+	is_event_analysis = false;
 	
 	document.getElementById("time_at_home_a").value = 0;
 	document.getElementById("time_at_home_c").value = 0;
@@ -149,6 +153,7 @@ function startMaskAndHoursAnalysis()
 	is_mask_and_hours = true;
 	is_mask_and_hours_random = false;
 	is_schooling_working_hours = false;
+	is_event_analysis = false;
 	
 	mask_good_step_size = parseInt(document.getElementById("mask_good_step_size").value);
 	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
@@ -166,12 +171,34 @@ function startMaskAndHoursAnalysisRandom()
 	is_mask_and_hours = false;
 	is_mask_and_hours_random = true;
 	is_schooling_working_hours = false;
+	is_event_analysis = false;
 	
 	max_tries_analysis = parseInt(document.getElementById("max_tries_analysis").value);
 	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
 	mask_bad_step_size = parseInt(document.getElementById("mask_bad_step_size").value);
 	document.getElementById("time_at_home_a").value = 0;
 	document.getElementById("time_at_home_c").value = 0;
+	
+	return multi_run_perform();
+}
+
+function startEventsAnalysis()
+{
+	is_mask = false;
+	is_working_hours = false;
+	is_schooling_hours = false;
+	is_mask_and_hours = false;
+	is_mask_and_hours_random = false;
+	is_schooling_working_hours = false;
+	is_event_analysis = true;
+	
+	max_pop_event = parseInt(document.getElementById("max_pop_event").value);
+	step_pop_event = parseInt(document.getElementById("step_pop_event").value);
+	event_rate_max = parseInt(document.getElementById("event_rate_max").value);
+	event_rate_step = parseInt(document.getElementById("event_rate_step").value);
+	
+	document.getElementById("event_size").value = step_pop_event;
+	document.getElementById("event_rate_days").value = 1;
 	
 	return multi_run_perform();
 }
@@ -303,6 +330,11 @@ function startSimulation(dramatic)
 	
 	bad_infected_good_susceptible = parseFloat(document.getElementById("bad_infected_good_susceptible").value) / 100;
 	good_infected_bad_susceptible = parseFloat(document.getElementById("good_infected_bad_susceptible").value) / 100;
+	
+	// events parameters //
+	
+	event_size = parseInt(document.getElementById("event_size").value);
+	event_rate_days = parseInt(document.getElementById("event_rate_days").value);
 	
 	/* Simulation run hyper-parameters */
 	
