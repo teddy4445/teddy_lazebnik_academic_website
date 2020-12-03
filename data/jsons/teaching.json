@@ -95,6 +95,24 @@
 							"link": "https://www.youtube.com/watch?v=_zy5vLHBeKs",
 							"description": "",
 							"type": "video"
+						},
+						{
+							"name": "Templates",
+							"link": "https://www.youtube.com/watch?v=HJNuiDycnjs&ab_channel=TeddyLazebnik",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "Encoding",
+							"link": "https://www.youtube.com/watch?v=2QFNQipBRPs&ab_channel=TeddyLazebnik",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "Strategy design pattern and callables",
+							"link": "https://www.youtube.com/watch?v=G_y1A9b6z0s&ab_channel=TeddyLazebnik",
+							"description": "Usefull for your second and third assignments",
+							"type": "video"
 						}]
 					}
 				}
