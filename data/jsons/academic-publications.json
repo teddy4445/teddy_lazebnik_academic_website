@@ -1,6 +1,18 @@
 {
    "publications":[
       {
+         "name":"PDE based geometry model for BCG immunotherapy of bladder cancer",
+         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/pde_biosystem_paper.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Aaroni, N., Bunimovich-Mendrazitsky, S., PDE based geometry model for BCG immunotherapy of bladder cancer. BioSystems. 2020."}],
+		 "authors": "Teddy Lazebnik, Niva Aaroni, and Svetlana Bunimovich-Mendrazitsky",
+         "year": 2020,
+         "topic":"Biomathematics",
+         "type":"paper",
+         "publisher":"biosystems",
+         "publicationStatus":"Published"
+      },
+      {
          "name":"A stable algorithm for numerical matrix exponent",
          "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix_exponent.pdf"},

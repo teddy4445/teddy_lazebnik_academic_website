@@ -19,15 +19,15 @@
          "publicationStatus":"Published"
       },
       {
-         "name":"Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling",
-         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modelingOptimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., Bunimovich-Mendrazitsky, S., Aaroni, N., Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations. 2019."}],
-		 "authors": "Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni",
-         "year": 2019,
+         "name":"PDE based geometry model for BCG immunotherapy of bladder cancer",
+         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/pde_biosystem_paper.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Aaroni, N., Bunimovich-Mendrazitsky, S., PDE based geometry model for BCG immunotherapy of bladder cancer. BioSystems. 2020."}],
+		 "authors": "Teddy Lazebnik, Niva Aaroni, and Svetlana Bunimovich-Mendrazitsky",
+         "year": 2020,
          "topic":"Biomathematics",
          "type":"paper",
-         "publisher":"Functional Differential Equations",
+         "publisher":"biosystems",
          "publicationStatus":"Published"
       }
    ],
@@ -42,6 +42,12 @@
          "name":"Economical-Mathematical Model for COVID-19 spread",
          "topic": "simulations",
          "description":"Investigation of different NPIs on the pandemic and there infulance on the economic.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      },
+      {
+         "name":"Decision Tree Puring without Loss of Accuracy using Greedy Algorithm",
+         "topic": "machine learning",
+         "description":"Developing an algorithm for decision tree puring, without loss of accuracy.",
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {
