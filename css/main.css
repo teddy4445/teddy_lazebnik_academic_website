@@ -2014,6 +2014,61 @@ margin: 0px 0px;
 
 /* end 404 not found */
 
+/* blog page */
+
+.blog-data{
+	
+}
+
+.blog-title{
+}
+
+.blog-post{
+	margin-bottom: 30px;
+}
+	
+.blog-post hr{
+	width: 100% !important;
+	margin-bottom: 1.5rem !important;
+}
+	
+.blog-post p{
+	line-height: 1.5 !important;
+	margin-bottom: 1.7rem;
+	font-size: 1.1rem !important;
+}
+
+@media only screen and (max-width: 450px) {
+
+	.blog-data{
+		display: none;
+	}
+	
+	.blog-title{
+		font-size: 16pt !important;
+	}
+
+	.blog-post{
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	
+	.blog-post p{
+	}
+
+	.blog-post h1{
+		font-size: 20pt;
+		text-align: center;
+	}
+
+	.blog-post h3{
+		font-size: 16pt;
+	}
+}
+
+
+/* end - blog page */
+
 /* help settings */
 
 .w-100{

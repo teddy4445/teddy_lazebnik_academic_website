@@ -46,7 +46,7 @@ class Index extends PageRender
 			notificationsArray.push(...notificationLines);
 
 			var notificationHtml = "";
-			if (notificationLines.length > 0)
+			if (notificationLines.length > 0 && notificationLines[0] != "")
 			{
 				for (var notificationIndex = 0; notificationIndex < notificationLines.length; notificationIndex++)
 				{

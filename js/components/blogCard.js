@@ -20,9 +20,9 @@ class BlogCard extends Element
 	{
 		//TODO: change it to the relevant HTML
 		
-		var answer = '<div class="academic-papers-panel"><h3>' 
+		var answer = '<div class="academic-papers-panel"><h3 class="blog-title">' 
 		+ this.title + '</h3><p>'
-		+ this.description + '</p><div class="personal-row space-between align-items-center mobile-row-breaker"><div class="w-100"><span>'
+		+ this.description + '</p><div class="personal-row space-between align-items-center mobile-row-breaker"><div class="w-100"><span class="blog-data">'
 		+ this.year + '</span></div><div class="w-100 flex-end align-items-center mobile-row-spacer"><a href="/blog-post.html?post='
 		+ this.fileLinks[0]["link"] + '" class="download-btn">Read More</a></div></div></div>';
 		return answer;
