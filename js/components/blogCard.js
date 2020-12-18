@@ -5,15 +5,13 @@ let CITE_SYMBOL = '<svg width="16" height="14" viewBox="0 0 16 14" fill="none" x
 
 class BlogCard extends Element
 {
-	constructor(title, description, authors, year, month, topic)
+	constructor(title, description, year, fileLinks)
 	{
 		super();
 		this.title = title;
 		this.description = description;
-		this.authors = authors;
 		this.year = year;
-		this.month = month;
-		this.topic = topic;
+		this.fileLinks = fileLinks;
 	}
 	
 	// convert the object into HTML
@@ -22,14 +20,10 @@ class BlogCard extends Element
 		//TODO: change it to the relevant HTML
 		
 		var answer = '<div class="academic-papers-panel"><h3>' 
-		+ this.title + '</h3><h4>'
-		+ this.authors + "<br>" + this.publisher + '</h4><p>'
+		+ this.title + '</h3><p>'
 		+ this.description + '</p><div class="personal-row space-between align-items-center mobile-row-breaker"><div class="w-100"><span>'
-		+ this.publicationStatus + '</span><span>'
-		+ this.year + '</span><span>'
-		+ this.type + '</span></div><div class="w-100 flex-end align-items-center mobile-row-spacer"><a class="cite-btn" href="'
-		+ this.fileLinks[0]["link"] + '">' + CITE_SYMBOL + ' Cite this publication</a><a href="'
-		+ this.fileLinks[1]["link"] + '" class="download-btn">Download</a></div></div></div>';
+		+ this.year + '</span></div><div class="w-100 flex-end align-items-center mobile-row-spacer"><a href="/blog-post.html?post='
+		+ this.fileLinks[0]["link"] + '" class="download-btn">Read More</a></div></div></div>';
 		return answer;
 	}
 	
@@ -39,7 +33,7 @@ class BlogCard extends Element
 		var answer = [];
 		for (var publicationIndex = 0; publicationIndex < jsonObj.length; publicationIndex++)
 		{
-			answer.push(PublicationCard.createFromJson(jsonObj[publicationIndex]));
+			answer.push(BlogCard.createFromJson(jsonObj[publicationIndex]));
 		}
 		return answer;
 	}
@@ -47,12 +41,10 @@ class BlogCard extends Element
 	// build a list of this object from Json object
 	static createFromJson(jsonObj)
 	{
-		return new PublicationCard(jsonObj["name"],
+		return new BlogCard(jsonObj["title"],
 		jsonObj["description"], 
-		jsonObj["authors"], 
 		jsonObj["year"], 
-		jsonObj["topic"], 
-		jsonObj["month"],);
+		jsonObj["fileLinks"]);
 	}
 	
 	// sort according to some property list of this object
@@ -62,7 +54,7 @@ class BlogCard extends Element
 		{
 			var x = a[property + ""]; 
 			var y = b[property + ""];
-			return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+			return ((x < y) ? 1 : ((x > y) ? -1 : 0));
 		});
 	}
 	

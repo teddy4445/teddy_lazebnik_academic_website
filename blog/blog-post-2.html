@@ -1,231 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Teddy Lazebnik - 
-  </title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="The course page of Numerical Analysis (2020a) by Teddy Lazebnik" name="description"/>
-  <meta content="Teddy Lazebnik" name="author"/>
-  <meta content="keywords" content="lazebnik, לזנבניק, teddy lazebnik" />
-  <link href="../img/favicon.ico" rel="icon" type="image/x-icon"/>
-  <!-- css -->
-  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
-  <link href="../css/teddy_style.css" rel="stylesheet"/>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1">
-  </script>
-  <script>
-   window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+<h1>
+Daily Issues and Solutions of a Nano-bioinformatic Research
+</h1>
+<hr class="publications-hr">
+<p>
+The American cancer society has stated in 2019 that there are 1,762,450 new cancer cases and 606,880 cancer deaths during the first 2 quarters of the year 2019 alone. In a quick calculation, one can find it's 1660 new deaths per day on average. Therefore, cancer research in particular and new biological oriented problems globally are of first importance to humanity. This is a personal issue as well; statistics show that almost every person knows someone who knows someone with cancer. Do you?
+</p>
+<p>
+Biological research of cancer uses techniques such as "deep sequencing" of a patient's genome which suffers from cancer; or "medical nanorobots" to find and treat cancer. One may ask how does computer science integrate with biological research. The answer lays in the field of nano-bioinformatics. As data collecting becomes more available and cheaper using new hardware solutions, and as the human population grows - the amount of data is overwhelming. A person is not yet able to grasp such amounts of data and therefore biological researchers put their fate in computers to handle this task and that is why programming is a new major tool in the toolbox of nowadays researchers. Furthermore, as the field of medical nanorobotics grows it is clearer than ever that researchers are able to design new solutions based on personalized medicine and computational theory to construct better treatments and diagnostics.
+</p>
+<p>
+In short, the field of medical nanorobotics takes advantage of human-made swarms of particles that range in size from 1 nm to 100 nm that can cooperate together. Such swarm can be injected into a patient's bloodstream and uses targeted drug delivery to treat many kinds of illnesses. Not only, but newer research shows that such swarm of medical nanorobotics is programmable which opens new and exciting opportunities for treatments in the future. Nanorobotics and Bioinformatics are similar in the sense that both integrate computer science and biology in order to solve a few of the most important health problems of the 21st century. This is the reason for the increasing demand for specialized scientists in these fields.
+</p>
+<p>
+Not only the academy sees interest in these subjects but also the market. Big companies such as DNAnexus which provides a cloud-based platform for analysis and management of large volumes of DNA sequence data; Seven Bridges Genomics which provides end-to-end bioinformatics solutions including access to datasets, analytic workflows, algorithms, cloud-computing infrastructure, and scientific support. Not only big and well-funded companies are repeating the <a href="https://en.wikipedia.org/wiki/Gold_rush" title="gold rush wikipedia">gold rush</a> but also startups. For example Israel, a country famous for its startups, is beginning to show first glances of nano-bioinformatics startups. One can mention Datos for its remote sensing wearables which analyzes important indices for patients with heart illnesses, or Dario which is trying to stabilize diabetes using dedicated hardware connected to a mobile phone that performs real-time analysis.
+</p>
+<p>
+whether in an academy or the free market, as a nano-bioinformatics researcher you will handle the following issues in the journey achieving the desired solution:
+</p>
+<h3>
+Collecting data
+</h3>
+<p>
+Data in general and medical data, in particular, is precious and quite expensive. Such a phenomenon occurs because of hospitals, government offices, etc. that use not up to date systems and methods while collecting data. While there is indeed a lot of data available, it is often kept unpublished because of legal status.
+</p>
 
-	  gtag('config', 'UA-154895667-1');
-  </script>
-  <!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
-  <script>
-   (function(h,o,t,j,a,r){
-			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-			h._hjSettings={hjid:1812929,hjsv:6};
-			a=o.getElementsByTagName('head')[0];
-			r=o.createElement('script');r.async=1;
-			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-			a.appendChild(r);
-		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
- </head>
- <body>
-  <div id="progressBar">
-  </div>
-  <div id="ScrollPath">
-  </div>
-  <div class="row">
-   <div class="col-lg-12 col-md-12 col-sm-12 mobile-space">
-    <nav class="navbar navbar-expand-lg">
-     <a class="navbar-brand" href="../index.html" id="logo" title="Theodore (Teddy) Lazebnik">
-      Theodore (Teddy) Lazebnik
-     </a>
-     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-      <img alt="menu" class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-       <li class="nav-item form-inline mobile" style="padding-bottom: 10px;">
-        <input aria-label="Search" class="form-control input-search" id="search-data" placeholder="Search" type="search"/>
-        <div class="input-group-append">
-         <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
-          <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
-         </button>
-        </div>
-       </li>
-        <li class="nav-item">
-        <a class="nav-link" href="/index.html" title="home page">
-         Home
-        </a>
-       </li>
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Research">
-         Research
-        </a>
-        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <a class="dropdown-item" href="/publications.html" title="Academic Publications">
-          Academic Publications
-         </a>
-         <a class="dropdown-item" href="/students.html" title="Research Students">
-          Research Students
-         </a>
-        </div>
-       </li>
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Teaching">
-         Teaching
-        </a>
-        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <h4 class="dropdown-item">
-          Bar Ilan University
-         </h4>
-         <a class="dropdown-item" href="/courses/advanced-programming-one.html" title="Advanced Programming 1">
-          Advanced Programming 1
-         </a>
-         <a class="dropdown-item" href="/courses/advanced-programming-two.html" title="Advanced Programming 2">
-          Advanced Programming 2
-         </a>
-         <div class="dropdown-divider">
-         </div>
-         <a class="dropdown-item" href="/teaching.html" title="teaching">
-          All classes
-         </a>
-        </div>
-       </li>
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Projects">
-         Projects
-        </a>
-        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <a class="dropdown-item" href="/opensource.html" title="Open Resources">
-          Open Source 
-         </a>
-         <a class="dropdown-item" href="/technological-blog.html" title="Technological Blog">
-          Technological Blog
-         </a>
-        </div>
-       </li>
-      </ul>
-      <div class="form-inline my-2 my-lg-0 desktop">
-       <input aria-label="Search" class="form-control input-search" id="search-data-2" placeholder="Search" type="search"/>
-       <div class="input-group-append">
-        <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
-         <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
-        </button>
-       </div>
-      </div>
-     </div>
-    </nav>
-    <div class="body">
-     <div class="fluid-container">
-      <div class="row">
-       <div class="col-lg-12 col-md-12 col-sm-12">
-        <div class="info">
-         <div class="alert alert-danger alert-dismissible fade show" id="error-search" role="alert" style="display: none">
-          <strong>
-           Page Not found
-          </strong>
-          , I am still working on our inner website search engine. Try again or use the navigation bar.
-          <button aria-label="Close" class="close" onclick="return closeSearchAlert()" type="button">
-           <span aria-hidden="true">
-            ×
-           </span>
-          </button>
-         </div>
-		 <!-- <img class="w-100" src="https://media-exp1.licdn.com/dms/image/C4D12AQEJRlsaX3oGUw/article-cover_image-shrink_600_2000/0?e=1606953600&v=beta&t=-Dv4u1BYSE_uHHgNpZt8Av2XHjJHqJTzywnZ7F_a0h0"> -->
-         
-         <h1 style="margin-top: 20px;">
-          Daily Issues and Solutions of a Nano-bioinformatic Research
-         </h1>
-		 <p>
-			The American cancer society has stated in 2019 that there are 1,762,450 new cancer cases and 606,880 cancer deaths during the first 2 quarters of the year 2019 alone. In a quick calculation, one can find it's 1660 new deaths per day on average. Therefore, cancer research in particular and new biological oriented problems globally are of first importance to humanity. This is a personal issue as well; statistics show that almost every person knows someone who knows someone with cancer. Do you?
-		 </p>
-		 <p>
-			Biological research of cancer uses techniques such as "deep sequencing" of a patient's genome which suffers from cancer; or "medical nanorobots" to find and treat cancer. One may ask how does computer science integrate with biological research. The answer lays in the field of nano-bioinformatics. As data collecting becomes more available and cheaper using new hardware solutions, and as the human population grows - the amount of data is overwhelming. A person is not yet able to grasp such amounts of data and therefore biological researchers put their fate in computers to handle this task and that is why programming is a new major tool in the toolbox of nowadays researchers. Furthermore, as the field of medical nanorobotics grows it is clearer than ever that researchers are able to design new solutions based on personalized medicine and computational theory to construct better treatments and diagnostics.
-		 </p>
-		 <p>
-			In short, the field of medical nanorobotics takes advantage of human-made swarms of particles that range in size from 1 nm to 100 nm that can cooperate together. Such swarm can be injected into a patient's bloodstream and uses targeted drug delivery to treat many kinds of illnesses. Not only, but newer research shows that such swarm of medical nanorobotics is programmable which opens new and exciting opportunities for treatments in the future. Nanorobotics and Bioinformatics are similar in the sense that both integrate computer science and biology in order to solve a few of the most important health problems of the 21st century. This is the reason for the increasing demand for specialized scientists in these fields.
-		 </p>
-		 <p>
-			Not only the academy sees interest in these subjects but also the market. Big companies such as DNAnexus which provides a cloud-based platform for analysis and management of large volumes of DNA sequence data; Seven Bridges Genomics which provides end-to-end bioinformatics solutions including access to datasets, analytic workflows, algorithms, cloud-computing infrastructure, and scientific support. Not only big and well-funded companies are repeating the <a href="https://en.wikipedia.org/wiki/Gold_rush" title="gold rush wikipedia">gold rush</a> but also startups. For example Israel, a country famous for its startups, is beginning to show first glances of nano-bioinformatics startups. One can mention Datos for its remote sensing wearables which analyzes important indices for patients with heart illnesses, or Dario which is trying to stabilize diabetes using dedicated hardware connected to a mobile phone that performs real-time analysis.
-		 </p>
-		 <p>
-			whether in an academy or the free market, as a nano-bioinformatics researcher you will handle the following issues in the journey achieving the desired solution:
-		 </p>
-		 <h5>
-			Collecting data
-		 </h5>
-		 <p>
-			Data in general and medical data, in particular, is precious and quite expensive. Such a phenomenon occurs because of hospitals, government offices, etc. that use not up to date systems and methods while collecting data. While there is indeed a lot of data available, it is often kept unpublished because of legal status.
-		 </p>
-		 <img src="https://media-exp1.licdn.com/dms/image/C4D12AQFlX8c9tkwy4g/article-inline_image-shrink_1000_1488/0?e=1606953600&v=beta&t=oaz6_E8anPbWamr1iJyFq4zOIHKzFR2QJczTsOo5Tm0">
-		 
-		 <h5>
-			Cleaning and organizing data
-		 </h5>
-		 <p>
-			Well, congratulations, you have data! Now, when you look at the data, try not burst into tears. Usually, it takes much effort and time to clean up and organize the data in such a way to analyze it.description
-		 </p>
-		 <img src="https://media-exp1.licdn.com/dms/image/C4D12AQEVbo4nQQk8UQ/article-inline_image-shrink_1000_1488/0?e=1606953600&v=beta&t=_jGC-lyVVrNILiUWuZ2bAaf8oFFjQYYQ0heFt6JNx-I">
-		 <h5>
-			Analyzing the data
-		 </h5>
-		 <p>
-			The main problem that one encounters with big data is when trying to intuitively guess which part may be useful and how. Analyzing data is constructed from 2 smaller tasks. The first part is to find “interesting” relationships in the data. Such relationships between different parts of the data are the first building block for the second and harder task of finding patterns and generalizing them from just data to a hypothesis.
-		 </p>
-		 <img src="https://media-exp1.licdn.com/dms/image/C4D12AQEwB-nRJzXIyg/article-inline_image-shrink_1000_1488/0?e=1606953600&v=beta&t=DvOZ8pMb1_q3LvBVOmBlvTirC0PWnjq70azN2GE7Udo">
-		 		 <h5>
-		From findings to a product
-		 </h5>
-		 <p>
-			A hypothesis is an important finding for itself. But, when we started this journey, we had an objective in mind. Now, using the hypothesis, we should develop a solution for our problem. When the data is the major part of the product but the human factor (UX\UI), the technical factor (computing power, costs) and others also come into play, can make this step very challenging.
-		 </p>
-		 <img src="https://media-exp1.licdn.com/dms/image/C4D12AQFGW_iWbhmTHA/article-inline_image-shrink_1000_1488/0?e=1606953600&v=beta&t=_s1093ZNgcUOjPpbcAPTFAXOIeJDpwN0Ri9WfPGI9N8">
-		 <p>
-			As one can see, the process from achieving data and up to constructing a solution or a product is difficult and time-consuming. But no worry! We won’t leave you alone… here are a few global ideas for handling some of the many issues described.
-		 </p>
-		 <p>
-			A useful approach to find and collect data is by taking advantage of crowdsourcing platforms. Using a network of people around the world that contribute or generate data, is usually a fast and not too expensive option. Now, to be able to clean and organize the data there is no one correct way, but start by displaying the data in tables or graphs in order to externalize some of the data’s properties. Removing outliers and transfer range values to a more standard range (for example [0,1]).
-		 </p>
-		 <p>
-			Having cleaned the data, try and find a correlation between different parts of the data. A trick is to notice how a variable may affect the results, or maybe a combination of variables. Finally, reaching a product or a solution involves craftsmanship, innovation, creativity, and persistence.
-		 </p>
-		 <h4>
-			"Success is not final; failure is not fatal: It is the courage to continue that counts." Winston S. Churchill
-		 </h4>
-		 <p>
-			In conclusion, nano-bioinformatics is a promising area for research and development both in the academy and the market. This field uses a state of the art (SOTA) techniques from many disciplines like Mathematics, Computer Science, Biology, Chemistry, Information systems\theory, and others according to the problem one is trying to solve.
-		 </p>
-		 <p>
-			If you found interest in nano\bio-informatics and have some questions, feel free to contact us here at Linkedin: Teddy Lazebik - a Ph.D. student for Computer Science at the Bar Ilan University researching programmable medical nanorobotics. <a href="https://www.linkedin.com/in/adi-shuchami-1a93aa7a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BPhiSparcS7CRh5MKg0kXSQ%3D%3D" title="Adi Scuchami - bioinformatics">Adi Shuchami</a> - an Mc.S student for Bioinformatics at Bar Ilan University researching immunology, focusing on B-cells and cancer applications.
-		 </p>
-		 <!--<img src="https://media-exp1.licdn.com/dms/image/C4D12AQFm_j_OjfQtig/article-inline_image-shrink_1000_1488/0?e=1606953600&v=beta&t=jVIlSYILZdnAwmsXOz6Tn4mvbcilRtGq7OSfC2Br8wc"> -->
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
- </body>
-</html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
-</script>
-<script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
-</script>
-<script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-</script>
-<script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
-</script>
-<script src="../js/main.js">
-</script>
-<script src="../js/search.js">
-</script>
+<h3>
+Cleaning and organizing data
+</h3>
+<p>
+Well, congratulations, you have data! Now, when you look at the data, try not burst into tears. Usually, it takes much effort and time to clean up and organize the data in such a way to analyze it.description
+</p>
+<h3>
+Analyzing the data
+</h3>
+<p>
+The main problem that one encounters with big data is when trying to intuitively guess which part may be useful and how. Analyzing data is constructed from 2 smaller tasks. The first part is to find “interesting” relationships in the data. Such relationships between different parts of the data are the first building block for the second and harder task of finding patterns and generalizing them from just data to a hypothesis.
+</p>
+
+	 <h3>
+From findings to a product
+</h3>
+<p>
+A hypothesis is an important finding for itself. But, when we started this journey, we had an objective in mind. Now, using the hypothesis, we should develop a solution for our problem. When the data is the major part of the product but the human factor (UX\UI), the technical factor (computing power, costs) and others also come into play, can make this step very challenging.
+</p>
+<p>
+As one can see, the process from achieving data and up to constructing a solution or a product is difficult and time-consuming. But no worry! We won’t leave you alone… here are a few global ideas for handling some of the many issues described.
+</p>
+<p>
+A useful approach to find and collect data is by taking advantage of crowdsourcing platforms. Using a network of people around the world that contribute or generate data, is usually a fast and not too expensive option. Now, to be able to clean and organize the data there is no one correct way, but start by displaying the data in tables or graphs in order to externalize some of the data’s properties. Removing outliers and transfer range values to a more standard range (for example [0,1]).
+</p>
+<p>
+Having cleaned the data, try and find a correlation between different parts of the data. A trick is to notice how a variable may affect the results, or maybe a combination of variables. Finally, reaching a product or a solution involves craftsmanship, innovation, creativity, and persistence.
+</p>
+<h4>
+<br>"Success is not final; failure is not fatal: It is the courage to continue that counts." <small>Winston S. Churchill</small><br><br>
+</h4>
+<p>
+In conclusion, nano-bioinformatics is a promising area for research and development both in the academy and the market. This field uses a state of the art (SOTA) techniques from many disciplines like Mathematics, Computer Science, Biology, Chemistry, Information systems\theory, and others according to the problem one is trying to solve.
+</p>
+<p>
+If you found interest in nano\bio-informatics and have some questions, feel free to contact us here at Linkedin: Teddy Lazebik - a Ph.D. student for Computer Science at the Bar Ilan University researching programmable medical nanorobotics. <a href="https://www.linkedin.com/in/adi-shuchami-1a93aa7a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BPhiSparcS7CRh3MKg0kXSQ%3D%3D" title="Adi Scuchami - bioinformatics">Adi Shuchami</a> - an Mc.S student for Bioinformatics at Bar Ilan University researching immunology, focusing on B-cells and cancer applications. <br><br>
+</p>

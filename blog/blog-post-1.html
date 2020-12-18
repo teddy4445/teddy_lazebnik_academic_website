@@ -1,208 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Teddy Lazebnik - 
-  </title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="The course page of Numerical Analysis (2020a) by Teddy Lazebnik" name="description"/>
-  <meta content="Teddy Lazebnik" name="author"/>
-  <meta content="keywords" content="lazebnik, לזנבניק, teddy lazebnik" />
-  <link href="../img/favicon.ico" rel="icon" type="image/x-icon"/>
-  <!-- css -->
-  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
-  <link href="../css/teddy_style.css" rel="stylesheet"/>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1">
-  </script>
-  <script>
-   window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-154895667-1');
-  </script>
-  <!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
-  <script>
-   (function(h,o,t,j,a,r){
-			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-			h._hjSettings={hjid:1812929,hjsv:6};
-			a=o.getElementsByTagName('head')[0];
-			r=o.createElement('script');r.async=1;
-			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-			a.appendChild(r);
-		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
- </head>
- <body>
-  <div id="progressBar">
-  </div>
-  <div id="ScrollPath">
-  </div>
-  <div class="row">
-   <div class="col-lg-12 col-md-12 col-sm-12 mobile-space">
-    <nav class="navbar navbar-expand-lg">
-     <a class="navbar-brand" href="../index.html" id="logo" title="Theodore (Teddy) Lazebnik">
-      Theodore (Teddy) Lazebnik
-     </a>
-     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-      <img alt="menu" class="navbar-toggler-icon" src="https://img.icons8.com/ios-filled/50/000000/menu.png"/>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-       <li class="nav-item form-inline mobile" style="padding-bottom: 10px;">
-        <input aria-label="Search" class="form-control input-search" id="search-data" placeholder="Search" type="search"/>
-        <div class="input-group-append">
-         <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
-          <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
-         </button>
-        </div>
-       </li>
-        <li class="nav-item">
-        <a class="nav-link" href="/index.html" title="home page">
-         Home
-        </a>
-       </li>
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Research">
-         Research
-        </a>
-        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <a class="dropdown-item" href="/publications.html" title="Academic Publications">
-          Academic Publications
-         </a>
-         <a class="dropdown-item" href="/students.html" title="Research Students">
-          Research Students
-         </a>
-        </div>
-       </li>
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Teaching">
-         Teaching
-        </a>
-        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <h4 class="dropdown-item">
-          Bar Ilan University
-         </h4>
-         <a class="dropdown-item" href="/courses/advanced-programming-one.html" title="Advanced Programming 1">
-          Advanced Programming 1
-         </a>
-         <a class="dropdown-item" href="/courses/advanced-programming-two.html" title="Advanced Programming 2">
-          Advanced Programming 2
-         </a>
-         <div class="dropdown-divider">
-         </div>
-         <a class="dropdown-item" href="/teaching.html" title="teaching">
-          All classes
-         </a>
-        </div>
-       </li>
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button" title="Projects">
-         Projects
-        </a>
-        <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-         <a class="dropdown-item" href="/opensource.html" title="Open Resources">
-          Open Source 
-         </a>
-         <a class="dropdown-item" href="/technological-blog.html" title="Technological Blog">
-          Technological Blog
-         </a>
-        </div>
-       </li>
-      </ul>
-      <div class="form-inline my-2 my-lg-0 desktop">
-       <input aria-label="Search" class="form-control input-search" id="search-data-2" placeholder="Search" type="search"/>
-       <div class="input-group-append">
-        <button class="btn btn-outline-white btn-search" onclick="return searchPage();">
-         <img alt="search" src="https://img.icons8.com/android/24/000000/search.png"/>
-        </button>
-       </div>
-      </div>
-     </div>
-    </nav>
-    <div class="body">
-     <div class="fluid-container">
-      <div class="row">
-       <div class="col-lg-12 col-md-12 col-sm-12">
-        <div class="info">
-         <div class="alert alert-danger alert-dismissible fade show" id="error-search" role="alert" style="display: none">
-          <strong>
-           Page Not found
-          </strong>
-          , I am still working on our inner website search engine. Try again or use the navigation bar.
-          <button aria-label="Close" class="close" onclick="return closeSearchAlert()" type="button">
-           <span aria-hidden="true">
-            ×
-           </span>
-          </button>
-         </div>
-		 <img class="w-100" src="https://media-exp1.licdn.com/dms/image/C4E12AQFv7vRNWIEJIw/article-cover_image-shrink_423_752/0?e=1606953600&v=beta&t=CwycI3dhjjq_PKfWaihxlBwd3hH0X10tIyt7qSCjJLw">
-         
-         <h1 style="margin-top: 20px;">
-          The History of NLP with the Hebrew Language
-         </h1>
-		 <p>
-			The story of the Natural language processing (NLP) begins in the 1950s, although previous work can be found. In 1950, Alan Turing published a famous article entitled "Computing Machinery and Intelligence" [1] which proposes what is now called the Turing test as an intelligence criterion. This criterion depends on the ability of a computer program to impersonate a human in a real-time written conversation, convincingly enough that the human interlocutor cannot surely distinguish - based on the sole content of the conversation - whether interacts with a program or another real human. Georgetown's experience in 1954 included the fully automatic translation of more than sixty Russian sentences into English. The authors claimed that within three or five years, machine translation would no longer be a problem [2].
-		 </p>
-		 <p>
-			During the 1960s, SHRDLU, a natural language system called "blocks world" based on relatively small vocabularies, worked extremely well, prompting researchers to be optimistic. However, the real progress was much slower, and after the 1966 ALPAC report, which found that in ten years of research the goals had not been achieved, the ambition was considerably reduced.
-		 </p>
-		 <p>
-			ELIZA was a simulation in the style of the Rogerian psychotherapy, written by Joseph Weizenbaum between 1964 to 1966. Using almost no information on human thought or emotion, ELIZA sometimes managed to offer an astonishing semblance of human interaction. When the "patient" exceeded the knowledge base (otherwise very small), ELIZA could provide a generic answer, for example, in response to "I have a headache" saying "How does this manifest itself? ".
-		 </p>
-		 <p>
-			During the 1970s many programmers began to write "conceptual ontologies", the purpose of which was to structure information into data understandable by the computer. This is the case of MARGIE (Schank, 1975), SAM (Cullingford, 1978), PAM (Wilensky, 1978), TaleSpin (Meehan, 1976), SCRUPULE (Lehnert, 1977), Politics (Carbonell, 1979), Plot Units (Lehnert 1981).
-		 </p>
-		 <p>
-			Meanwhile, many ELIZA-style chatterbots have been written as PARADE, Racter, and Jabberwacky. By the 1980s, as computer power grew and became cheaper, statistical models for machine translation became more and more interesting.
-		 </p>
-		 <p>
-			Statistical uses of natural language processing rely on stochastic, probabilistic, or simply statistical methods to solve some of the difficulties discussed above, especially those that arise from the fact that very long sentences are highly ambiguous when treated with realistic grammars, allowing thousands or millions of possible analyzes. Disambiguation methods often involve the use of corpora and formalization tools such as Markov models. Statistical TAL includes all quantitative approaches to automated language processing, including modeling, information theory, and linear algebra [3]. The technology for statistical NLP comes mainly from machine learning and data mining, both as they involve learning from data coming from artificial intelligence.
-		 </p>
-		 <p>
-			Hebrew took many names: the language of Canaan (a name in the Torah), the Jewish language (the majority of its speakers are Jewish with few Palestinians), and the sacred language (where the Bible is considered sacred because of the descent of the Torah), but the most famous names are Hebrew (named after the Hebrews who dreamed of the language after the Canaanites).
-		 </p>
-		 <p>
-			It recorded in Hebrew most of the books of Tanakh, and it was discovered that the Hebrew Tanakh or the so-called Hebrew Old Testament is very similar to ancient languages discovered in excavations, including, the Ammonite language. Ancient Hebrew is the same as the dialect of the Kingdom of Judah, which remained after the demise of the Northern Kingdom of Israel.
-		 </p>
-		 <p>
-			Hebrew (עברית) is a Semitic language belonging to the Afro-Asian language group. Currently, modern Hebrew is spoken as the language of speech, literature and official dealings, spoken by more than 7 million people distributed within the borders of Israel and the Palestinian Territories. The Hebrew language represents a multitude of constraints to developers of natural language processing systems because of its particular spelling and rich morphology. A highly advanced software infrastructure, based on linguistic knowledge, is required for natural language applications such as machine translation, speech-to-text conversion, automatic document synthesis, spelling and stylistic verification...
-		 </p>
-		 <p>
-			Advanced Natural Language Processing (NLP) technology gives Virtual Assistant the power to naturally interact in Hebrew to provide personalized service to clients. This is the case for MILA, GitHub and many open sources available online like bold360. Customers expect a simpler, faster, and smarter banking experience, and now prefer to type free text instead of searching through the app's options. To meet these expectations, Discount Bank decided to look for an online technology that would add value to the customer and provide valuable information to the bank. But the real challenge was to provide an AI solution that would unrestrictedly include the natural language of customers and translate it into queries or actions on their account, so they can get the information they need in a simple and easy way.
-		 </p>
-		 <p>
-			If the language of Israelis today is not that of the Hebrew of yesterday, it must be remembered, however, that the Israeli who remains convinced that he speaks the language of the Bible, if it does is not quite the case, understands it in any case better than a contemporary Greek does not understand Homer. Moreover, Hebrew has finally become a few things, a language like any other, today experiencing a similar evolution to other languages: constant and so-called natural evolution, the discrepancy between certain official rules and certain popular practices, even socialization of the language according to the social categories and creation of a Hebrew slang. In this case, the presence of multiple open sources offering high-performance solutions for the NLP is an urgent necessity in order to put in the market several choices for the customers.
-		 </p>
-		 <p>
-			[1] Alan Turing, Computing Machinery and Intelligence, 1950 <br><br>
+<h1>
+The History of NLP with the Hebrew Language
+</h1>
+<hr class="publications-hr">
+<p>
+The story of the Natural language processing (NLP) begins in the 1950s, although previous work can be found. In 1950, Alan Turing published a famous article entitled "Computing Machinery and Intelligence" [1] which proposes what is now called the Turing test as an intelligence criterion. This criterion depends on the ability of a computer program to impersonate a human in a real-time written conversation, convincingly enough that the human interlocutor cannot surely distinguish - based on the sole content of the conversation - whether interacts with a program or another real human. Georgetown's experience in 1954 included the fully automatic translation of more than sixty Russian sentences into English. The authors claimed that within three or five years, machine translation would no longer be a problem [2].
+</p>
+<p>
+During the 1960s, SHRDLU, a natural language system called "blocks world" based on relatively small vocabularies, worked extremely well, prompting researchers to be optimistic. However, the real progress was much slower, and after the 1966 ALPAC report, which found that in ten years of research the goals had not been achieved, the ambition was considerably reduced.
+</p>
+<p>
+ELIZA was a simulation in the style of the Rogerian psychotherapy, written by Joseph Weizenbaum between 1964 to 1966. Using almost no information on human thought or emotion, ELIZA sometimes managed to offer an astonishing semblance of human interaction. When the "patient" exceeded the knowledge base (otherwise very small), ELIZA could provide a generic answer, for example, in response to "I have a headache" saying "How does this manifest itself? ".
+</p>
+<p>
+During the 1970s many programmers began to write "conceptual ontologies", the purpose of which was to structure information into data understandable by the computer. This is the case of MARGIE (Schank, 1975), SAM (Cullingford, 1978), PAM (Wilensky, 1978), TaleSpin (Meehan, 1976), SCRUPULE (Lehnert, 1977), Politics (Carbonell, 1979), Plot Units (Lehnert 1981).
+</p>
+<p>
+Meanwhile, many ELIZA-style chatterbots have been written as PARADE, Racter, and Jabberwacky. By the 1980s, as computer power grew and became cheaper, statistical models for machine translation became more and more interesting.
+</p>
+<p>
+Statistical uses of natural language processing rely on stochastic, probabilistic, or simply statistical methods to solve some of the difficulties discussed above, especially those that arise from the fact that very long sentences are highly ambiguous when treated with realistic grammars, allowing thousands or millions of possible analyzes. Disambiguation methods often involve the use of corpora and formalization tools such as Markov models. Statistical TAL includes all quantitative approaches to automated language processing, including modeling, information theory, and linear algebra [3]. The technology for statistical NLP comes mainly from machine learning and data mining, both as they involve learning from data coming from artificial intelligence.
+</p>
+<p>
+Hebrew took many names: the language of Canaan (a name in the Torah), the Jewish language (the majority of its speakers are Jewish with few Palestinians), and the sacred language (where the Bible is considered sacred because of the descent of the Torah), but the most famous names are Hebrew (named after the Hebrews who dreamed of the language after the Canaanites).
+</p>
+<p>
+It recorded in Hebrew most of the books of Tanakh, and it was discovered that the Hebrew Tanakh or the so-called Hebrew Old Testament is very similar to ancient languages discovered in excavations, including, the Ammonite language. Ancient Hebrew is the same as the dialect of the Kingdom of Judah, which remained after the demise of the Northern Kingdom of Israel.
+</p>
+<p>
+Hebrew (עברית) is a Semitic language belonging to the Afro-Asian language group. Currently, modern Hebrew is spoken as the language of speech, literature and official dealings, spoken by more than 7 million people distributed within the borders of Israel and the Palestinian Territories. The Hebrew language represents a multitude of constraints to developers of natural language processing systems because of its particular spelling and rich morphology. A highly advanced software infrastructure, based on linguistic knowledge, is required for natural language applications such as machine translation, speech-to-text conversion, automatic document synthesis, spelling and stylistic verification...
+</p>
+<p>
+Advanced Natural Language Processing (NLP) technology gives Virtual Assistant the power to naturally interact in Hebrew to provide personalized service to clients. This is the case for MILA, GitHub and many open sources available online like bold360. Customers expect a simpler, faster, and smarter banking experience, and now prefer to type free text instead of searching through the app's options. To meet these expectations, Discount Bank decided to look for an online technology that would add value to the customer and provide valuable information to the bank. But the real challenge was to provide an AI solution that would unrestrictedly include the natural language of customers and translate it into queries or actions on their account, so they can get the information they need in a simple and easy way.
+</p>
+<p>
+If the language of Israelis today is not that of the Hebrew of yesterday, it must be remembered, however, that the Israeli who remains convinced that he speaks the language of the Bible, if it does is not quite the case, understands it in any case better than a contemporary Greek does not understand Homer. Moreover, Hebrew has finally become a few things, a language like any other, today experiencing a similar evolution to other languages: constant and so-called natural evolution, the discrepancy between certain official rules and certain popular practices, even socialization of the language according to the social categories and creation of a Hebrew slang. In this case, the presence of multiple open sources offering high-performance solutions for the NLP is an urgent necessity in order to put in the market several choices for the customers.
+</p>
+<p>
+[1] Alan Turing, Computing Machinery and Intelligence, 1950 <br><br>
 
 [2] Hutchins, J., Example based machine translation – a review and commentary, 2005 <br><br>
 
 [3] Christopher D. Manning, Foundations of Statistical Natural Language Processing, 1999 <br><br>
-		 </p>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
- </body>
-</html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
-</script>
-<script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
-</script>
-<script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-</script>
-<script crossorigin="anonymous" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
-</script>
-<script src="../js/main.js">
-</script>
-<script src="../js/search.js">
-</script>
+</p>
