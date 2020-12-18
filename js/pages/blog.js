@@ -34,7 +34,7 @@ class Blog extends PageRender
 
 	/* build section functions */
 
-	buildBody()
+	buildBody(search_term = "")
 	{
 		// perpare ds //
 		// sort the list
@@ -48,7 +48,10 @@ class Blog extends PageRender
 				var ansewrHtml = "";
 				for (var elementIndex = 0; elementIndex < buildPublicationList.length; elementIndex++)
 				{
-					ansewrHtml += buildPublicationList[elementIndex].toHtml();
+					if (buildPublicationList[elementIndex].title.includes(search_term) || search_term == "")
+					{
+						ansewrHtml += buildPublicationList[elementIndex].toHtml();	
+					}
 				}
 				document.getElementById("publications-body").innerHTML = ansewrHtml;
 			}
@@ -65,121 +68,15 @@ class Blog extends PageRender
 
 	/* end -  build sections functions */
 
-	/* filtering and reorder of publication list functions */
-
-	/* end - filtering and reorder of publication list functions */
-
 	/* GUI functions */
-
-	changeSort(sort_value)
+	
+	search()
 	{
-		document.getElementById("sort-btn-topic").classList.remove("active-sort-button");
-		document.getElementById("sort-btn-year").classList.remove("active-sort-button");
-		document.getElementById("sort-btn-type").classList.remove("active-sort-button");
-		document.getElementById("sort-btn-" + sort_value).classList.add("active-sort-button");
-
-		this.buildBody(sort_value, default_filter);
+		this.buildBody(document.getElementById("").value.trim().toLowerCase());
 	}
-
-	changeFilterYear()
-	{
-		// get value
-		var selector = document.getElementById("year-filter");
-		var selectorIndex = selector.selectedIndex;
-		var filter = selector.options[selectorIndex].value;
-
-		// clear from the other for any case
-		this.clearFilterViewSelect();
-
-		if (filter.toLowerCase() != "year")
-		{
-			// mark this filter as choosen
-			selector.classList.add("active-sort-button");
-			document.getElementById("year-filter").selectedIndex = "" + selectorIndex;
-		} else {
-			filter = default_filter;
-		}
-
-		this.buildBody(this.sorter, filter, "year");
-	}
-
-	changeFilterType()
-	{
-		// get value
-		var selector = document.getElementById("type-filter");
-		var selectorIndex = selector.selectedIndex;
-		var filter = selector.options[selectorIndex].value;
-
-		// clear from the other for any case
-		this.clearFilterViewSelect();
-
-		if (filter.toLowerCase() != "type")
-		{
-			// mark this filter as choosen
-			selector.classList.add("active-sort-button");
-			document.getElementById("type-filter").selectedIndex = "" + selectorIndex;
-		} else {
-			filter = default_filter;
-		}
-
-		this.buildBody(this.sorter, filter, "type");
-	}
-
-	changeFilterTopic()
-	{
-		// get value
-		var selector = document.getElementById("topic-filter");
-		var selectorIndex = selector.selectedIndex;
-		var filter = selector.options[selectorIndex].value;
-
-		// clear from the other for any case
-		this.clearFilterViewSelect();
-
-		if (filter.toLowerCase() != "topic")
-		{
-			// mark this filter as choosen
-			selector.classList.add("active-sort-button");
-			document.getElementById("topic-filter").selectedIndex = "" + selectorIndex;
-		} else {
-			filter = default_filter;
-		}
-
-		this.buildBody(this.sorter, filter, "topic");
-	}
-
-	clearFilterViewSelect()
-	{
-		document.getElementById("type-filter").classList.remove("active-sort-button");
-		document.getElementById("type-filter").selectedIndex = "0";
-		document.getElementById("year-filter").classList.remove("active-sort-button");
-		document.getElementById("year-filter").selectedIndex = "0";
-		document.getElementById("topic-filter").classList.remove("active-sort-button");
-		document.getElementById("topic-filter").selectedIndex = "0";
-	}
-
+	
 	/* end - GUI functions */
 
-	/* help functions */
-
-	static fulfilDropdown(id, itemsList)
-	{
-		if (Array.from(new Set(itemsList)).length > 1)
-		{
-			itemsList = [...new Set(itemsList)];
-			var html = "";
-			for (var itemIndex = 0; itemIndex < itemsList.length; itemIndex++)
-			{
-				html += '<option value="' + itemsList[itemIndex] + '">' + itemsList[itemIndex] + '</option>';
-			}
-			document.getElementById(id).innerHTML += html;
-		}
-		else
-		{
-			document.getElementById(id).style.display = "none";
-		}
-	}
-
-	/* end -  help functions  */
 }
 
 // run the class build on page load

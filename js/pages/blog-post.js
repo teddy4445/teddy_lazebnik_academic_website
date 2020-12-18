@@ -5,8 +5,7 @@ import { PageRender, retrivedData } from '/js/pageRender.js';
 let BLOG_JSON = "/data/jsons/blog.json";
 
 // consts
-const default_sorter = "year";
-const default_filter = null;
+const default_sorter = "order";
 
 /*
 	Single instance class to build academic-publications.html page with dynamic content from JSONS from the server

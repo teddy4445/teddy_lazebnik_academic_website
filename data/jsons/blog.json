@@ -4,61 +4,71 @@
          "title":"The History of NLP with the Hebrew Language",
          "description":"In the post, I provide a quick review of the development of NLP technologies alongside the Hebrew language and the problems we have while using NLP in Hebrew.",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "1"}],
-		 "year": 2018
+		 "year": 2018,
+		 "order": 5
       },
       {
          "title":"Daily Issues and Solutions of a Nano-bioinformatic Research",
          "description":"Nano-bioinformatic research is hard. But did you know what are the real daily issues such researchers have? and more importantly, how they solve them and how this effects you?",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "2"}],
-		 "year": 2019
+		 "year": 2019,
+		 "order": 6
       },
       {
          "title":"3 techniques for a better quality of tagged data for ML tasks.",
          "description":"Current machine learning models require huge amount of data. How can you make assure the quality of your tagged data? Here are three techniques to do so...",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "3"}],
-		 "year": 2020
+		 "year": 2020,
+		 "order": 7
       },
       {
          "title":"3 steps to the medicine of the future.",
          "description":"What are the next three steps that should happen when we are talking about nanomedicine in general and medical nanorobotics in particular",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "4"}],
-		 "year": 2018
+		 "year": 2018,
+		 "order": 4
       },
       {
          "title":"4 Things To Consider When You User-Testing Your Service",
          "description":"Large or small - few use cases from Facebook user-fitting in 3rd wolrd users from start-up prospective",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "5"}],
-		 "year": 2020
+		 "year": 2020,
+		 "order": 10
       },
       {
          "title":"The math behind the Coronavirus spread",
          "description":"Covid-19 pandemic hit the wolrd at the beginning of 2020 and lead to hundrieds of mathematical models predicting the spread of the pandemic wolrdwide. Here I offer a basic review of some of these methods",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "6"}],
-		 "year": 2020
+		 "year": 2020,
+		 "order": 9
       },
       {
          "title":"Why should you use dotnet core for your next AI project production?",
          "description":"Python, maybe JavaScript are considrued as the leading ML and AI language to go. But, in production you should considr dotnet core... In this post, we explain why",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "7"}],
-		 "year": 2020
+		 "year": 2020,
+		 "order": 8
       },
       {
          "title":"Most interesting people in history knew this fact",
          "description":"Can you pin point the propertise of what making a person interesting? well, we can",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "8"}],
-		 "year": 2016
+		 "year": 2016,
+		 "order": 1
       },
       {
          "title":"Medical Nanorobotics - Science or Science Fiction?",
          "description":"I won't tell you... you will have to read the post to find out",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "9"}],
-		 "year": 2017
+		 "year": 2017,
+		 "order": 3
       },
       {
          "title":"The Connection Between Archery And Programming",
          "description":"This may sound strange but there is actully really intresting connection, you should check it out",
-         "fileLinks":[{"info": "Read More", "type": 2, "link": "9"}],
-		 "year": 2017
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "10"}],
+		 "year": 2017,
+		 "order": 2
       }
 	  ]
 }

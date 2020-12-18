@@ -5,13 +5,14 @@ let CITE_SYMBOL = '<svg width="16" height="14" viewBox="0 0 16 14" fill="none" x
 
 class BlogCard extends Element
 {
-	constructor(title, description, year, fileLinks)
+	constructor(title, description, year, fileLinks, order)
 	{
 		super();
 		this.title = title;
 		this.description = description;
 		this.year = year;
 		this.fileLinks = fileLinks;
+		this.order = order;
 	}
 	
 	// convert the object into HTML
@@ -44,7 +45,8 @@ class BlogCard extends Element
 		return new BlogCard(jsonObj["title"],
 		jsonObj["description"], 
 		jsonObj["year"], 
-		jsonObj["fileLinks"]);
+		jsonObj["fileLinks"],
+		jsonObj["order"]);
 	}
 	
 	// sort according to some property list of this object
