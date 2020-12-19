@@ -69,6 +69,13 @@
          "fileLinks":[{"info": "Read More", "type": 2, "link": "10"}],
 		 "year": 2017,
 		 "order": 2
+      },
+      {
+         "title":"Distributed Computing Based Drugs",
+         "description":"How a lot of small and without any computational power particles can make our drugs better? check out and find out",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "11"}],
+		 "year": 2021,
+		 "order": 11
       }
 	  ]
 }

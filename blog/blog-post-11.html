@@ -1,33 +1,68 @@
 <h1>
-The Connection Between Archery And Programming
+Distributed Computing Based Drugs 
 </h1>
 <hr class="publications-hr">
 <p>
-Programming is an art that exists only since 1840 (The first algorithm in history wrote by Luigi Menabre) and becomes common in our lives only in the last 30 - 40 years. On the opposite, Archery is a much older art; already in 10000Bc used in Europe. It seems that there is some connection between these two very different arts.
+The idea of many small individual parts making one big process is probably so native to you that you do not stop and looking at such systems in wonder.
+You are using one of them on a daily basis - the internet! The internet is built on a big number of computers which each one by itself cannot provide the whole complexity of the internet. 
+You probably work in a company which other professionals - another distributed system. If you think about it, even the cells in your body cooperate to form you - a very cool system if I may.  
 </p>
 <p>
-If we wish to understand the connection, first we should have a basic idea about archery and programming separately. Archery, as well known, has two major tools: bow and arrow. After people mastered the bow and arrow, additional tools invented were "nice to have" but not necessary to the shooting itself, just making the shooting faster, easier, and more accurate. Then, the bow became more sophisticated and the arrows followed too... the new bow and arrow were much better and allow a new set of skills, but make the use for beginners much harder and the whole process was more complex than ever. If we would like to check the evaluation of programming we will be able to see the same phenomena when hardware and assembly are analog to bow and arrow with has been improved over time and now we talking about the cloud as the leading hardware platform and very high-level programming languages like Python and Java with is much more powerful compared to the IBM Model 5150 computer with programming based Assembler language. Some "nice to have" tools have been developed here as well - automated build, source and version control, debugger, and some more.
+A common property of all three mentioned examples is that there are several types of <i>"agents"</i> in each system. Indeed, on the internet, there are user devices and servers along with other less-popular types of internet-connected devices. 
+There are different roles in a company and different types of cells in your body. This property allows the development of much reacher system comparing to systems based on a single type of agent.
+</p>
+<p>
+Nevertheless, several types of agents add a complexity that will make our lives harder in the following few minutes so let's elegantly ignore them and focus on single-type distributed systems.
+Furthermore, the examples of agents we just reviewed are really complex by themself. Computers, people, and even cells are capable to do calculations, remember things, and communicate (transfer signals to be accurate).
+This kind of agent is really cool but let's go even one step further and require our agents to be really "basic". How basic? let's remove their ability to communicate, remember, or perform any computation.
+</p>
+<p>
+In this setting where all our agents are the same and very basic, we need to make them operate together somehow - after all, we want a distributed system and not a population of static (and properly confused if you ask me) agents.  
+Therefore, like in many biological systems, we can assume somethings is happening (which the agents are passive in this process) which makes our agents interact with each other.
+These interactions changing the <b>state</b> of the agents. Formally, we can define this kind of system using the population protocol model.
 </p>
 <h3>
-Aim a little bit higher
+The population protocol 
 </h3>
 <p>
-Archers were familiar with gravity long before Newton sat under the apple tree. When an archer shooting a target at a fair distance s/he would aim a little bit higher... how much higher? it more a question of experience than knowledge. The programmer should do the same, try to solve a little bit bigger question you asked to solve, most of the time you will gain a "lower" result which will satisfy the original request.
-</p>
-<h3>
- Breathe, Think, Make your move
-</h3>
-<p>
-Archer has only a single place to control the arrow which s/he wishes to hit the target, this place is when the arrow is still on the bow - the beginning of each shoot. The angle of the bow, the assessment of the distance to the target, and the tensile strength set in the beginning and will determine the whole path of the arrow up to the inside/outside of the target. As programmers, it is important to stop in the beginning and set all the properties of the development; from picking technologies we will work with, to write down a rough scheme of the final result.
-</p>
-<h3>
-One-shot, but many times
-</h3>
-<p>
-Indeed, each arrow is an individual shot and has two options: hit the target or not. But, the archer is the same person and therefore is able to fix his mistake from time to time. Let's say I shoot three arrows to the same point but all three hit the target a bit to the left, next time I will aim a bit to the right and see how my arrows hit the original point. The same concept work in software development. We can try some developing schemes and see that the results don't work out with our expectations. Checking our last work from time to time and changing our attitude accordingly can make the whole difference.
+A population protocol is a distributed computing model formed by resource-limited mobile agents that meet in a random way. 
+The state of agents updates whenever they meet based on their and the agents they met in previous states [1].  
+As a result, functions are computed by checking the states of the agents once the computation is over.
 </p>
 <p>
-It is easy to see that Archery can teach us a lot about the right way to develop software. The target of archery both as a sport and as hunting (for surviving) is parallel to the target of programming to ease our life and to develop ourselves in highly changing and new environment.
+This system may sound simple and very limited but there is nothing farther from the truth. 
+First, from a theoretical point of view, there are multiple hard problems elegantly solved by population protocol based models. To name a few [2]:
 </p>
-
-<br><br>
+<ol>
+<li> Majority (consensus) voting. </li>
+<li> Picking a leader. </li>
+<li> Counting the number of agents. </li>
+<ol>
+<p>
+Inspired by biological processes, Paun defined a family of systems [3] to model a
+collection of mobile finite-state agents that interact with one another and
+also with membranes. The membranes divide space into regions and groups
+of agents within a single region have interactions. The system specifies a set
+of interaction rules for each region. These interactions can create new agents,
+destroy existing agents, change agents’ states, and cause agents to cross a membrane into an adjacent region.
+</p>
+<p>
+Another biological case where population protocol is useful is in the development of a targeted drug delivery nanorobots' swarm-based treatment.
+By developing the nanorobots with the needed design to execute a given treatment protocol which is based on population protocol, one can be assured the treatment will be executed correctly even without intervention during the process itself. 
+</p>
+<p>
+While the computer becomes better (hardware and software alike) as individual devices, we see increasing interest in networks of computers (for example, the cloud technology). 
+Implementing these ideas and technologies in a biological settings, allow us to perform complex tasks with relatively simple agents. 
+This is a step in the way of more personalized and with fewer side effects treatments.
+</p>
+<hr class="publications-hr">
+<h3>Referances</h3>
+<p>
+[1] Alistarh et al., Time-space trade-offs in population protocols. Society for Industrial and Applied Mathematics. 2017; 2560–2579.
+</p>
+<p>
+[2] Aspnes et al., An Introduction to Population Protocols. Yale Press. 2008; 1-27.
+</p>
+<p>
+[3] Paun, G., Computing with membranes. Journal of Computer and System Sciences. 2020; 61(1), 108–143.
+</p>
