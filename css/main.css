@@ -2026,7 +2026,11 @@ margin: 0px 0px;
 .blog-post{
 	margin-bottom: 30px;
 }
-	
+
+.blog-header{
+	margin-bottom: 20px;
+}
+
 .blog-post hr{
 	width: 100% !important;
 	margin-bottom: 1.5rem !important;
