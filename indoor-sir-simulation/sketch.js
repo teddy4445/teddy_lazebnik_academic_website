@@ -25,7 +25,7 @@ function setup()
     simCanvas.parent("simCanvas");
 	
 	// crease the simulator instance (without data yet)
-	sim = new Simulator(canvasHeight, canvasWidth);
+	sim = new Simulator();
 	
 	// do not run as we need the data from the user
 	noLoop();
@@ -86,8 +86,8 @@ function draw()
 		
 		// update the graphs view
 		drawStateDistrebution();
-	}	
-		
+	}
+	
 	// if the simulation is over
 	if (sim.is_over())
 	{

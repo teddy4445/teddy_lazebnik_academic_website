@@ -1,11 +1,11 @@
 /* Manages the overall simulator performance in one place */
 class Simulator
 {
-	constructor(mapHeight, mapWidth)
+	constructor()
 	{
 		// working members //
 		this.population = new Population();
-		this.indoor = new Graph([], [], mapHeight, mapWidth);
+		this.indoor = new Graph();
 		this.time = 0;
 		
 		// graph related members //
@@ -93,7 +93,21 @@ class Simulator
 	// print to a canvas the indoor stracture and the 
 	print()
 	{
+		// draw the in door
+		this.indoor.print();
 		
+		// update the table with the states in each step
+		var popDist = this.population.countStatusDestrebution();
+		document.getElementById("now_c_s").innerHTML = popDist["a_s"];
+		document.getElementById("now_c_is").innerHTML = popDist["a_si"];
+		document.getElementById("now_c_ia").innerHTML = popDist["a_ai"];
+		document.getElementById("now_c_r").innerHTML = popDist["a_r"];
+		document.getElementById("now_c_d").innerHTML = popDist["a_d"];
+		document.getElementById("now_a_s").innerHTML = popDist["c_s"];
+		document.getElementById("now_a_is").innerHTML = popDist["c_si"];
+		document.getElementById("now_a_ia").innerHTML = popDist["c_ai"];
+		document.getElementById("now_a_r").innerHTML = popDist["c_r"];
+		document.getElementById("now_a_d").innerHTML = popDist["c_d"];
 	}
 	
 	// check if the pandemic is over

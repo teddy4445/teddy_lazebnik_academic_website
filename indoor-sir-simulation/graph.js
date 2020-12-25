@@ -1,6 +1,6 @@
 class Graph
 {
-	constructor(nodes = [], edges = [], mapHeight, mapWidth)
+	constructor(nodes = [], edges = [])
 	{
 		// data
 		this.nodes = nodes;
@@ -8,15 +8,20 @@ class Graph
 		
 		// technical
 		this.running_id = nodes.length;
-		
-		// vizualization
-		this.mapHeight = mapHeight;
-		this.mapWidth = mapWidth;
 	}
 	
 	buildGraphFromFile(dataJsonObj)
 	{
-		//TODO: finish here
+		// print all nodes as polygons
+		for (var i = 0; i < dataJsonObj["nodes"].length; i++)
+		{
+			this.add_node_from_json(dataJsonObj["nodes"][i]);
+		}
+		// print the edges  between the locations
+		for (var i = 0; i < dataJsonObj["edges"].length; i++)
+		{
+			this.add_edge_from_json(dataJsonObj["edges"][i]);
+		}
 	}
 	
 	add_node(new_node)
@@ -25,54 +30,119 @@ class Graph
 		this.nodes.push(new_node);
 	}
 	
-	add_node_by_value(population_size_dict)
+	add_node_by_value(name, printPoly = [], population_size_dict = [])
 	{
-		this.nodes.push(Node(++this.running_id, population_size_dict));
+		this.nodes.push(new Node(++this.running_id, name, printPoly, population_size_dict));
+	}
+	
+	add_node_from_json(jsonObj)
+	{
+		var printPoly = [];
+		for (var i = 0; i < jsonObj["points"].length; i++)
+		{
+			printPoly.push(createVector(jsonObj["points"][i]["x"], jsonObj["points"][i]["y"]));
+		}
+		this.add_node_by_value(jsonObj["name"], printPoly);
 	}
 	
 	add_edge(node_id_1, node_id_2)
 	{
-		this.edges.push(Edge(node_id_1, node_id_2));
+		this.edges.push(new Edge(node_id_1, node_id_2));
+	}
+	
+	add_edge_from_json(jsonTwoIds)
+	{
+		this.add_edge(jsonTwoIds[0], jsonTwoIds[1]);
 	}
 	
 	print()
 	{
 		// print all nodes as polygons
-		for (var i = 0; i < this.nodes; i++)
+		for (var i = 0; i < this.nodes.length; i++)
 		{
 			this.nodes[i].print();
 		}
 		// print the edges  between the locations
-		for (var i = 0; i < this.edges; i++)
+		for (var i = 0; i < this.edges.length; i++)
 		{
-			this.nodes[i].print();
+			if (!this.edges[i].is_center_set())
+			{
+				this.edges[i].set_center(this.find_node_center(this.edges[i].node_id_1), this.find_node_center(this.edges[i].node_id_2));
+				
+			}
+			this.edges[i].print();
 		}
 	}
+	
+	// help function //
+	
+	find_node_center(nodeIndex)
+	{
+		var centerX = 0;
+		var centerY = 0;
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			if (this.nodes[i].id == nodeIndex)
+			{
+				var points = this.nodes[i].polyPoints;
+				for (var pointIndex = 0; pointIndex < points.length; pointIndex++)
+				{
+					centerX += points[pointIndex].x;
+					centerY += points[pointIndex].y;
+				}
+				centerX /= points.length;
+				centerY /= points.length;
+			}
+		}
+		return [centerX, centerY];
+	}
+	
+	// end - help function //
 }
 
 /* Graph's edge */
 class Edge
 {
-	constructor(node_id_1, node_id_2)
+	constructor(node_id_1, node_id_2, center_1 = [], center_2 = [])
 	{
 		this.node_id_1 = node_id_1;
 		this.node_id_2 = node_id_2;
+		
+		this.center_1 = center_1;
+		this.center_2 = center_2;
 	}
 	
-	print(poly_center_1, poly_center_2)
+	print()
 	{
-		strike(0);
-		line(poly_center_1.x, poly_center_1.y, poly_center_2.x, poly_center_2.y);
+		stroke(0);
+		strokeWeight(4);
+		line(this.center_1[0], this.center_1[1], this.center_2[0], this.center_2[1]);
 	}
+	
+	// help function //
+	
+	set_center(center_1, center_2)
+	{
+		this.center_1 = center_1;
+		this.center_2 = center_2;
+	}
+	
+	is_center_set()
+	{
+		return (this.center_1 == [] || this.center_2 == []);
+	}
+	
+	// end - help function //
 }
 
 /* Graph's node */
 class Node
 {
-	constructor(id, population, polyPoints = [])
+	constructor(id, name, polyPoints = [], population = [])
 	{
 		// logical members
 		this.id = id;
+		this.name = name;
 		this.population = population;
 		
 		// visualization members
@@ -81,7 +151,8 @@ class Node
 	
 	print()
 	{    
-		strike(50);
+		stroke(50);
+		strokeWeight(1);
 		beginShape()
 		this.polyPoints.forEach(pt => vertex(pt.x, pt.y))
 		endShape(CLOSE)

@@ -14,7 +14,7 @@ let LOBBY = 0;
 /* An agent (individual) in the population */
 class Member
 {
-	constructor(age_group, state, location, state_time = 0, day_plan)
+	constructor(age_group, state, location, day_plan, state_time = 0)
 	{
 		// time at each state
 		this.state_time = state_time;
@@ -28,6 +28,46 @@ class Member
 		
 		this.day_plan = day_plan;
 		// where the individual located during the day
+	}
+	
+	static buildFromJson(jsonObj)
+	{
+		var age;
+		switch (jsonObj["age"])
+		{
+			case "a":
+				age = ADULT;
+				break;
+			case "c":
+				age = CHILD;
+				break;
+			default:
+				throw "No proper age value in member json object";
+		}
+		
+		var state;
+		switch (jsonObj["state"])
+		{
+			case "s":
+				state = STATE_S;
+				break;
+			case "is":
+				state = STATE_SI;
+				break;
+			case "ia":
+				state = STATE_AI;
+				break;
+			case "r":
+				state = STATE_R;
+				break;
+			case "d":
+				state = STATE_D;
+				break;
+			default:
+				throw "No proper state value in member json object";
+		}
+		
+		return new Member(age, state, jsonObj["location"], jsonObj["day_plan"]);
 	}
 	
 	// STATE CHANGE FUNCTIONS //

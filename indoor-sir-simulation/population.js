@@ -9,7 +9,10 @@ class Population
 	
 	buildPopulationFromFile(dataJsonObj)
 	{
-		// TODO: finish here
+		for (var i = 0; i < dataJsonObj.length; i++)
+		{
+			this.members.push(Member.buildFromJson(dataJsonObj[i]));
+		}
 	}
 	
 	size()
