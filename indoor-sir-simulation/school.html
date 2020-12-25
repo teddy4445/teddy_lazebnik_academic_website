@@ -1,0 +1,482 @@
+<html>
+    <head>
+        <title>
+            In Door (School) SEIIR Population Protocol Simulator
+        </title>
+
+        <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js" type="text/javascript"></script>
+        <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+        <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
+        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" rel="stylesheet" />
+
+        <script language="javascript" src="sketch.js" type="text/javascript"></script>
+        <script language="javascript" src="population.js" type="text/javascript"></script>
+        <script language="javascript" src="member.js" type="text/javascript"></script>
+        <script language="javascript" src="chart.js" type="text/javascript"></script>
+        <script language="javascript" src="simulationManager.js" type="text/javascript"></script>
+        <script language="javascript" src="school_room.js" type="text/javascript"></script>
+
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row center spacer">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1 class="center head">
+                        In Door (School) SEIIRD P-System Based Simulator
+                    </h1>
+                </div>
+            </div>
+            <div class="row spacer" id="init_form">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <form action="return false;" method="get">
+                        <div class="row"></div>
+						
+						<!--
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h3>Initial population size</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="children_pop_size" title="adults_count">
+                                        Susceptible adults Count
+                                    </label>
+                                    <input class="form-control" id="s_adults_count" min="1" placeholder="Susceptible adults Count" required="" type="number" value="30" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="susceptible_children_percent" title="children Count">
+                                        Susceptible children Count
+                                    </label>
+                                    <input class="form-control" id="s_children_count" min="1" placeholder="Susceptible children Count" required="" type="number" value="600" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="children_pop_size" title="adults_count">
+                                        Infected Symptomatic adults Count
+                                    </label>
+                                    <input class="form-control" id="is_adults_count" min="1" placeholder="Infected Symptomatic adults Count" required="" type="number" value="30" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="susceptible_children_percent" title="children Count">
+                                        Infected Symptomatic children Count
+                                    </label>
+                                    <input class="form-control" id="ia_children_count" min="1" placeholder="Infected Symptomatic children Count" required="" type="number" value="600" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="children_pop_size" title="adults_count">
+                                        Infected Asymptomatic adults Count
+                                    </label>
+                                    <input class="form-control" id="is_adults_count" min="1" placeholder="Infected Asymptomatic adults Count" required="" type="number" value="30" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="susceptible_children_percent" title="children Count">
+                                        Infected Asymptomatic children Count
+                                    </label>
+                                    <input class="form-control" id="ia_children_count" min="1" placeholder="Infected Asymptomatic children Count" required="" type="number" value="600" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="children_pop_size" title="adults_count">
+                                        Recovered adults Count
+                                    </label>
+                                    <input class="form-control" id="r_adults_count" min="1" placeholder="Recovered adults Count" required="" type="number" value="30" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="susceptible_children_percent" title="children Count">
+                                        Recovered Asymptomatic children Count
+                                    </label>
+                                    <input class="form-control" id="r_children_count" min="1" placeholder="Recovered children Count" required="" type="number" value="600" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="children_pop_size" title="adults_count">
+                                        Dead adults Count
+                                    </label>
+                                    <input readonly class="form-control" id="d_adults_count" min="1" placeholder="Dead adults Count" required="" type="number" value="0" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="susceptible_children_percent" title="children Count">
+                                        Dead children Count
+                                    </label>
+                                    <input readonly class="form-control" id="d_children_count" min="1" placeholder="Dead children Count" required="" type="number" value="0" />
+                                </div>
+                            </div>
+                        </div>
+						-->
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h3>Infection rates</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="a_a_t_c" title="Adult to Adult Transform Chance">
+                                        Adult to Adult Transform Chance
+                                    </label>
+                                    <input class="form-control" id="a_a_t_c" max="100" min="0" placeholder="Adult to Adult Transform Chance" required="" type="number" value="31" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="a_c_t_c">
+                                        Adult to Children Transform Chance
+                                    </label>
+                                    <input class="form-control" id="a_c_t_c" max="100" min="0" placeholder="Adult to Children Transform Chance" required="" type="number" value="0" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="c_c_t_c" title=" Children to Children Transform Chance">
+                                        Children to Children Transform Chance
+                                    </label>
+                                    <input class="form-control" id="c_c_t_c" max="100" min="0" placeholder="Children to Children Transform Chance" required="" type="number" value="31" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="children_adult_infection_chance">
+                                        Children to Adult Transform Chance
+                                    </label>
+                                    <input class="form-control" id="children_adult_infection_chance" max="100" min="0" placeholder="Children to Adult Transform Chance" required="" type="number" value="27" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h3>Time Dyanmics</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="class_time" title="Time At Home">
+                                        Class duration (hours)
+                                    </label>
+                                    <input class="form-control" id="class_time" placeholder="Class duration (hours)" required="" type="text" value="1.5" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="break_time">
+                                        Break duration (hours)
+                                    </label>
+                                    <input class="form-control" id="break_time" placeholder="Break duration (hours)" required="" type="text" value="0.25" />
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="break_time">
+                                        Time At school(Class-Break repeations)
+                                    </label>
+                                    <input class="form-control" id="repeart_class_break_count" placeholder="Time At school(Class-Break repeations)" required="" type="number" min="1" max="24" value="3" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h3>Symptomatic Dyanmics</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="adult_asymptomatic" title="adult_asymptomatic">
+                                        Rate of adults that become asymptomatic
+                                    </label>
+                                    <input class="form-control" id="adult_asymptomatic" placeholder="Rate of adults that become asymptomatic" required="" type="text" value="0.08" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="children_asymptomatic">
+                                        Rate of children that become asymptomatic
+                                    </label>
+                                    <input class="form-control" id="children_asymptomatic" placeholder="Rate of children that become asymptomatic" required="" type="text" value="0.99" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h3>Recover durations and rates</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="infected_to_recover_time" title="Adult Infected To Recovered">
+                                        Adult Infected To Recovered Duration (hours)
+                                    </label>
+                                    <input class="form-control" id="infected_to_recover_time_adult" max="999" min="0" placeholder="Adult Infected To Recovered in hours" required="" type="number" value="336" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="infected_to_recover_time" title="Children Infected To Recovered">
+                                        Children Infected To Recovered Duration (hours)
+                                    </label>
+                                    <input class="form-control" id="infected_to_recover_time_children" max="999" min="0" placeholder="Children Infected To Recovered in hours" required="" type="number" value="48" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="pra" title="Adult Infected To Recovered Chance">
+                                        Adult Infected To Recovered Chance
+                                    </label>
+                                    <input class="form-control" id="pra" max="100" min="0" placeholder="Adult Infected To Recovered Cance (in percent)" required="" type="number" value="94" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="prc" title="Children Infected To Recovered Chance">
+                                        Children Infected To Recovered chance
+                                    </label>
+                                    <input class="form-control" id="prc" max="100" min="0" placeholder="Children Infected To Cance (in percent)" required="" type="number" value="100" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h3>Location and Popultion Description File</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="fps" title="Simulation Data File">
+                                        <b>Simulation Data File</b>
+                                    </label>
+                                    <input class="form-control" type="file" required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h3>Simulation Parameters</h3>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="fps" title="Frames Per Second">
+                                        <b>Frames Per Second (FPS)</b>
+                                    </label>
+                                    <input class="form-control" id="fps" max="48" min="0" placeholder="Frames Per Second" required="" type="number" value="3" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="graph_samples">
+                                        <b>Once in how many algoritmic steps, the graph should be updated?</b>
+                                    </label>
+                                    <input class="form-control" id="graph_samples" max="96" min="1" placeholder="Once in how many algoritmic steps, the graph should be updated?" required="" type="number" value="24" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button class="btn btn-primary btn-lg" onclick="return startSimulation(true)" style="width: 100%; margin-top: 10px;">
+                                    Run Simulation
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+			
+			<!-- the place where analysis of the performace is shown -->
+            <div id="main" style="display: none;">
+                <div class="row spacer">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="clock-holder">
+						<div>
+							<!-- clock and meta data view -->
+							<!-- table with the values getten from the user -->
+							<div class="table-responsive">
+							  <table class="table table-hover">
+								  <thead>
+									<tr>
+									  <th scope="col">Parameter</th>
+									  <th scope="col">Value</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <th scope="row">Initial susceptible adults</th>
+									  <td id="param_s_a">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Initial infected symptomatic adults</th>
+									  <td id="param_is_a">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Initial infected asymptomatic adults</th>
+									  <td id="param_ia_a">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Initial recovered adults</th>
+									  <td id="param_r_a">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Initial susceptible children</th>
+									  <td id="param_s_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Initial infected symptomatic children</th>
+									  <td id="param_is_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Initial infected asymptomatic children</th>
+									  <td id="param_ia_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Adult to adult transform chance</th>
+									  <td id="param_a_a_t_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Adult to children transform chance</th>
+									  <td id="param_a_c_t_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Children to Adult transform chance</th>
+									  <td id="param_c_a_t_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Children to children transform chance</th>
+									  <td id="param_c_c_t_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Class duration (hours)</th>
+									  <td id="param_class_time">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Break duration (hours)</th>
+									  <td id="param_break_time">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Rate of adults that become asymptomatic</th>
+									  <td id="param_a_asyptomatic_rate">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Rate of children that become asymptomatic</th>
+									  <td id="param_c_asyptomatic_rate">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Adults recovery duration (hours)</th>
+									  <td id="param_recovery_duration_a">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Adults recovery chance (percent)</th>
+									  <td id="param_recovery_chance_a">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Children recovery duration (hours)</th>
+									  <td id="param_recovery_duration_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Children recovery chance (percent)</th>
+									  <td id="param_recovery_chance_c">0</td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							<!-- current clock time from the beginning of the simulation -->
+						</div>
+					</div>
+                </div>
+                <div class="row spacer">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="game-holder">
+							<!-- simulation view -->
+					</div>
+                </div>
+                <div class="row spacer">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="graphs-holder">
+							<!-- analysis and graphs view  -->
+							<!-- table with the values getten from the user -->
+							<div class="table-responsive">
+							  <table class="table table-hover">
+								  <thead>
+									<tr>
+									  <th scope="col">Susceptible</th>
+									  <th scope="col">Infected asymptomatic</th>
+									  <th scope="col">Infected symptomatic</th>
+									  <th scope="col">Recovered</th>
+									  <th scope="col">Dead</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <th scope="row">Children</th>
+									  <td id="now_c_s">0</td>
+									  <td id="now_c_is">0</td>
+									  <td id="now_c_ia">0</td>
+									  <td id="now_c_r">0</td>
+									  <td id="now_c_d">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Adult</th>
+									  <td id="now_a_s">0</td>
+									  <td id="now_a_is">0</td>
+									  <td id="now_a_ia">0</td>
+									  <td id="now_a_r">0</td>
+									  <td id="now_a_d">0</td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
