@@ -1,9 +1,16 @@
 // canvas Z-Index
 var zIndex = 300;
+var canvasHeight = 400;
+var canvasWidth = 400;
+
+/* TIME CONSTS */
+var HOUR = 60;
+var DAY = HOUR * 24;
 
 // simulation view logic
 let runStarted = false;
 let graph_sample;
+let uploadJsonContent;
 
 // global instance of the simultor 
 let sim; 
@@ -13,10 +20,12 @@ let sim;
 // setup all the simulation before starting 
 function setup()
 {
-	// TODO: create the simulation
-	sim = Simulator();
+	// create canvas
+	var simCanvas = createCanvas(canvasHeight, canvasWidth);
+    simCanvas.parent("simCanvas");
 	
-	// TODO: create the canvas
+	// crease the simulator instance (without data yet)
+	sim = new Simulator(canvasHeight, canvasWidth);
 	
 	// do not run as we need the data from the user
 	noLoop();
@@ -26,11 +35,19 @@ function setup()
 function startSimulation()
 {
 	// set new instace of the simulation
-	sim.startSimulation();
+	try
+	{
+		sim.startSimulation();	
+	}
+	catch (error)
+	{
+		alert(error);
+		return false;
+	}
 	
 	// set the simulation paramters in the right place
-	graph_sample = parseInt(document.getElementById("graph_samples").value);
-	frameRate(fps);
+	graph_sample = sim.limitFix(parseInt(document.getElementById("graph_samples").value), 0, 96);
+	frameRate(sim.limitFix(parseInt(document.getElementById("fps").value), 0, 48));
 	
 	// hide and show the views for the user					
 	document.getElementById("init_form").style.display = "none"; // close the init form
@@ -39,6 +56,9 @@ function startSimulation()
 	// allow to run and start running
 	runStarted = true;
 	loop();
+	
+	// prevent the form to send something and by that break the page
+	return false;
 }
 
 // loop run on the simulation
@@ -54,10 +74,18 @@ function draw()
 	// perform a simulation step
 	sim.step();
 	
+	// print the indoor with the population distrebution inside
+	background("#cccccc");
+	sim.print();
+	
 	// calc graph needed data and update it 
-	if (count % graph_sample == 0)
+	if (sim.time % (graph_sample * HOUR) == 0)
 	{
-		// add the data needed and update the graphs view
+		// add the data needed
+		sim.updateStatesGraphData();
+		
+		// update the graphs view
+		drawStateDistrebution();
 	}	
 		
 	// if the simulation is over
@@ -97,5 +125,29 @@ function downloadasTextFile(filename, text)
 	element.click();	
 	document.body.removeChild(element);
 }
+
+/* an event listener for the upload file input */
+window.addEventListener('load', function() {
+  var upload = document.getElementById('data_json_file_input');
+  
+  // Make sure the DOM element exists
+  if (upload) 
+  {
+    upload.addEventListener('change', function() {
+      // Make sure a file was selected
+      if (upload.files.length > 0) 
+      {
+        var reader = new FileReader(); // File reader to read the file 
+        
+        // This event listener will happen when the reader has read the file
+        reader.addEventListener('load', function() {
+          uploadJsonContent = JSON.parse(reader.result); // Parse the result into an object 
+        });
+        
+        reader.readAsText(upload.files[0]); // Read the uploaded file
+      }
+    });
+  }
+});
 
 /* END - HELP FUNCTIONS */

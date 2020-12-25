@@ -7,7 +7,7 @@ class Population
 		this.days = 0;
 	}
 	
-	static buildPopulationFromFile(data_json_obj)
+	buildPopulationFromFile(dataJsonObj)
 	{
 		// TODO: finish here
 	}
