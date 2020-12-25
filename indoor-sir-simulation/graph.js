@@ -115,7 +115,7 @@ class Edge
 	print()
 	{
 		stroke(0);
-		strokeWeight(4);
+		strokeWeight(2);
 		line(this.center_1[0], this.center_1[1], this.center_2[0], this.center_2[1]);
 	}
 	
@@ -147,15 +147,30 @@ class Node
 		
 		// visualization members
 		this.polyPoints = polyPoints;
+		
+		var centerX = 0;
+		var centerY = 0;		
+		for (var pointIndex = 0; pointIndex < this.polyPoints.length; pointIndex++)
+		{
+			centerX += this.polyPoints[pointIndex].x;
+			centerY += this.polyPoints[pointIndex].y;
+		}
+		centerX /= this.polyPoints.length;
+		centerY /= this.polyPoints.length;
+		this.center = createVector(centerX, centerY); 
 	}
 	
 	print()
 	{    
-		stroke(50);
+		stroke(25);
+		fill(250);
 		strokeWeight(1);
-		beginShape()
-		this.polyPoints.forEach(pt => vertex(pt.x, pt.y))
-		endShape(CLOSE)
+		beginShape();
+		this.polyPoints.forEach(pt => vertex(pt.x, pt.y));
+		endShape(CLOSE);
+		fill(25);
+		textSize(16);
+		text(this.name, this.center.x, this.center.y);
 	}
 	
 	// help functions //

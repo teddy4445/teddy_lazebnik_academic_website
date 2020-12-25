@@ -29,6 +29,9 @@ function setup()
 	
 	// do not run as we need the data from the user
 	noLoop();
+	
+	// global viszuale settings
+	textAlign(CENTER);
 }
 
 // start the simulations by open the right views and build simulation instance
@@ -75,7 +78,7 @@ function draw()
 	sim.step();
 	
 	// print the indoor with the population distrebution inside
-	background("#cccccc");
+	background("#eeeeee");
 	sim.print();
 	
 	// calc graph needed data and update it 
