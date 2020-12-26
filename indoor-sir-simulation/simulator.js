@@ -20,16 +20,16 @@ class Simulator
 		this.c_a_t_c;
 		this.a_c_t_c;
 		this.c_c_t_c;
-		this.class_time;
-		this.break_time;
 		this.adult_asymptomatic;
 		this.children_asymptomatic;
 		this.infected_to_recover_time_adult;
 		this.infected_to_recover_time_children;
 		this.infected_to_recover_chance_adult;
 		this.infected_to_recover_chance_children;
+		this.exposed_to_infected_time_adult;
+		this.exposed_to_infected_time_children;
 		
-		// fix hyper jump 
+		// meta propertise from the json data
 		this.hyperJumpTime;
 	}
 		
@@ -42,9 +42,6 @@ class Simulator
 		this.a_c_t_c = this.limitFix(parseFloat(document.getElementById("a_c_t_c").value));
 		this.c_c_t_c = this.limitFix(parseFloat(document.getElementById("c_c_t_c").value));
 		
-		this.class_time = this.limitFix(parseFloat(document.getElementById("class_time").value), 0, 120);
-		this.break_time = this.limitFix(parseFloat(document.getElementById("break_time").value), 0, 60);
-		
 		this.adult_asymptomatic = this.limitFix(parseFloat(document.getElementById("adult_asymptomatic").value));
 		this.children_asymptomatic = this.limitFix(parseFloat(document.getElementById("children_asymptomatic").value));
 		
@@ -52,6 +49,9 @@ class Simulator
 		this.infected_to_recover_time_children = HOUR * this.limitFix(parseFloat(document.getElementById("infected_to_recover_time_children").value), 1, 24*365);
 		this.infected_to_recover_chance_adult = this.limitFix(parseFloat(document.getElementById("infected_to_recover_chance_adult").value));
 		this.infected_to_recover_chance_children = this.limitFix(parseFloat(document.getElementById("infected_to_recover_chance_children").value));
+		
+		this.exposed_to_infected_time_adult = HOUR * this.limitFix(parseFloat(document.getElementById("exposed_to_infected_time_adult").value), 1,  24*365);
+		this.exposed_to_infected_time_children = HOUR * this.limitFix(parseFloat(document.getElementById("exposed_to_infected_time_children").value), 1, 24*365);
 		
 		try
 		{
@@ -63,8 +63,20 @@ class Simulator
 			throw "Cannot build simulator from the data provided in the file - please make sure format is right and all the data provided with the inner error: " + error;
 		}
 		
-		// find meta-paramters from the population and indoor // 
-		this.hyperJumpTime = 120;
+		// find meta propertise
+		var maxOutValue = 0;
+		for (var memberIndex = 0; memberIndex < this.population.members.length; memberIndex++)
+		{
+			var memberDayPlan = this.population.members[memberIndex].dayPlan;
+			for (var i = 0; i < memberDayPlan.length; i++)
+			{
+				if (memberDayPlan[i][0] == 0 && maxOutValue < memberDayPlan[i][1])
+				{
+					maxOutValue = memberDayPlan[i][1];
+				}
+			}
+		}
+		this.hyperJumpTime = maxOutValue;
 		
 		// set all the needed data into the table
 		var popDist = this.population.countStatusDestrebution();
@@ -82,9 +94,6 @@ class Simulator
 		document.getElementById("param_a_c_t_c").innerHTML = this.a_c_t_c;
 		document.getElementById("param_c_c_t_c").innerHTML = this.c_c_t_c;
 		
-		document.getElementById("param_class_time").innerHTML = this.class_time;
-		document.getElementById("param_break_time").innerHTML = this.break_time;
-		
 		document.getElementById("param_a_asyptomatic_rate").innerHTML = this.adult_asymptomatic;
 		document.getElementById("param_c_asyptomatic_rate").innerHTML = this.children_asymptomatic;
 		
@@ -92,6 +101,9 @@ class Simulator
 		document.getElementById("param_recovery_chance_a").innerHTML = this.infected_to_recover_chance_adult;
 		document.getElementById("param_recovery_duration_c").innerHTML = this.infected_to_recover_time_children;
 		document.getElementById("param_recovery_chance_c").innerHTML = this.infected_to_recover_chance_children;
+		
+		document.getElementById("param_exposed_to_infected_time_adult").innerHTML = this.exposed_to_infected_time_adult;
+		document.getElementById("param_exposed_to_infected_time_children").innerHTML = this.exposed_to_infected_time_children;
 	}
 	
 	// make sure the simulator is empty for next run
@@ -138,6 +150,8 @@ class Simulator
 									this.infected_to_recover_time_children,
 									this.infected_to_recover_chance_adult,
 									this.infected_to_recover_chance_children,
+									this.exposed_to_infected_time_adult,
+									this.exposed_to_infected_time_children,
 									this.time % DAY);
 		
 		// update the time to the next day
@@ -163,7 +177,9 @@ class Simulator
 								this.infected_to_recover_time_adult,
 								this.infected_to_recover_time_children,
 								this.infected_to_recover_chance_adult,
-								this.infected_to_recover_chance_children);
+								this.infected_to_recover_chance_children,
+								this.exposed_to_infected_time_adult,
+								this.exposed_to_infected_time_children);
 			
 			// try to infected if needed... recover and dead does not change, infected handled already in the last step, just manage STATE_S
 			if (member.state == STATE_S)
@@ -260,11 +276,13 @@ class Simulator
 		// update the table with the states in each step
 		var popDist = this.population.countStatusDestrebution();
 		document.getElementById("now_a_s").innerHTML = popDist["a_s"];
+		document.getElementById("now_a_e").innerHTML = popDist["a_e"];
 		document.getElementById("now_a_is").innerHTML = popDist["a_si"];
 		document.getElementById("now_a_ia").innerHTML = popDist["a_ai"];
 		document.getElementById("now_a_r").innerHTML = popDist["a_r"];
 		document.getElementById("now_a_d").innerHTML = popDist["a_d"];
 		document.getElementById("now_c_s").innerHTML = popDist["c_s"];
+		document.getElementById("now_c_e").innerHTML = popDist["c_e"];
 		document.getElementById("now_c_is").innerHTML = popDist["c_si"];
 		document.getElementById("now_c_ia").innerHTML = popDist["c_ai"];
 		document.getElementById("now_c_r").innerHTML = popDist["c_r"];
@@ -274,11 +292,13 @@ class Simulator
 		var popDist = this.population.countStatusDestrebutionInLocation(locationInfoToShow);
 		document.getElementById("this_node_name").innerHTML = "Distrebution in " + this.indoor.getNodeName(locationInfoToShow);
 		document.getElementById("this_a_s").innerHTML = popDist["a_s"];
+		document.getElementById("this_a_e").innerHTML = popDist["a_e"];
 		document.getElementById("this_a_is").innerHTML = popDist["a_si"];
 		document.getElementById("this_a_ia").innerHTML = popDist["a_ai"];
 		document.getElementById("this_a_r").innerHTML = popDist["a_r"];
 		document.getElementById("this_a_d").innerHTML = popDist["a_d"];
 		document.getElementById("this_c_s").innerHTML = popDist["c_s"];
+		document.getElementById("this_c_e").innerHTML = popDist["c_e"];
 		document.getElementById("this_c_is").innerHTML = popDist["c_si"];
 		document.getElementById("this_c_ia").innerHTML = popDist["c_ai"];
 		document.getElementById("this_c_r").innerHTML = popDist["c_r"];
@@ -295,7 +315,7 @@ class Simulator
 	is_over()
 	{
 		var stats = this.population.countStatusDestrebution();
-		return (stats["a_si"] + stats["a_ai"] + stats["c_si"] + stats["c_ai"] == 0);
+		return (stats["a_si"] + stats["a_ai"] + stats["c_si"] + stats["c_ai"] + stats["c_e"] + stats["a_e"]) == 0;
 	}
 	
 	toJson()
@@ -306,14 +326,14 @@ class Simulator
 			"c_a_t_c": this.c_a_t_c,
 			"a_c_t_c": this.a_c_t_c,
 			"c_c_t_c": this.c_c_t_c,
-			"class_time": this.class_time,
-			"break_time": this.break_time,
 			"adult_asymptomatic": this.adult_asymptomatic,
 			"children_asymptomatic": this.children_asymptomatic,
 			"infected_to_recover_time_adult": this.infected_to_recover_time_adult,
 			"infected_to_recover_time_children": this.infected_to_recover_time_children,
 			"infected_to_recover_chance_adult": this.infected_to_recover_chance_adult,
-			"infected_to_recover_chance_children": this.infected_to_recover_chance_children
+			"infected_to_recover_chance_children": this.infected_to_recover_chance_children,
+			"exposed_to_infected_time_adult": this.exposed_to_infected_time_adult,
+			"exposed_to_infected_time_children": this.exposed_to_infected_time_children
 			}
 		return JSON.stringify(answer);
 	}

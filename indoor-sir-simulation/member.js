@@ -3,10 +3,12 @@ let ADULT = 1;
 let CHILD = 2;
 
 let STATE_S = 1;
-let STATE_SI = 2;
-let STATE_AI = 3;
-let STATE_R = 4;
-let STATE_D = 5;
+let STATE_SE = 2;
+let STATE_AE = 3;
+let STATE_SI = 4;
+let STATE_AI = 5;
+let STATE_R = 6;
+let STATE_D = 7;
 // end - consts //
 
 /* An agent (individual) in the population */
@@ -55,6 +57,12 @@ class Member
 			case "s":
 				state = STATE_S;
 				break;
+			case "se":
+				state = STATE_SE;
+				break;
+			case "ae":
+				state = STATE_AE;
+				break;
 			case "is":
 				state = STATE_SI;
 				break;
@@ -101,25 +109,40 @@ class Member
 		{
 			if (Math.random() < adult_asymptomatic)
 			{
-				this.state = STATE_SI;
+				this.state = STATE_SE;
 			}
 			else
 			{
-				this.state = STATE_AI;
+				this.state = STATE_AE;
 			}	
 		}
 		else
 		{
 			if (Math.random() < children_asymptomatic)
 			{
-				this.state = STATE_SI;
+				this.state = STATE_SE;
 			}
 			else
 			{
-				this.state = STATE_AI;
+				this.state = STATE_AE;
 			}	
 		}
 		this.stateTime = 0;
+	}
+	
+	// infect individual
+	releaseInfection()
+	{
+		if (this.state == STATE_SE) 
+		{
+			this.state = STATE_SI;
+			this.stateTime = 0;
+		}
+		else if (this.state == STATE_AE)
+		{
+			this.state = STATE_AI;
+			this.stateTime = 0;	
+		}
 	}
 	
 	recover()
@@ -139,7 +162,12 @@ class Member
 		this.stateTime++;
 	}
 	
-	tryRecover(infected_to_recover_time_adult, infected_to_recover_time_children, pra, prc)
+	tryRecover(infected_to_recover_time_adult,
+				infected_to_recover_time_children, 
+				pra, 
+				prc, 
+				exposed_to_infected_time_adult,
+				exposed_to_infected_time_children)
 	{
 		if ((this.stateTime > infected_to_recover_time_adult && this.state == STATE_SI && this.age != CHILD) || (this.stateTime > infected_to_recover_time_children && this.state == STATE_SI && this.age == CHILD))
 		{
@@ -156,6 +184,16 @@ class Member
 		else if ((this.stateTime > infected_to_recover_time_adult && this.state == STATE_AI && this.age != CHILD) || (this.stateTime > infected_to_recover_time_children && this.state == STATE_AI && this.age == CHILD))
 		{
 			this.recover();
+		}
+		
+		// for the exposed to infected step 
+		if ((this.stateTime > exposed_to_infected_time_adult && this.state == STATE_SE && this.age != CHILD) || (this.stateTime > exposed_to_infected_time_children && this.state == STATE_SE && this.age == CHILD))
+		{
+			this.releaseInfection();
+		}
+		else if ((this.stateTime > exposed_to_infected_time_adult && this.state == STATE_AE && this.age != CHILD) || (this.stateTime > exposed_to_infected_time_children && this.state == STATE_AE && this.age == CHILD))
+		{
+			this.releaseInfection();
 		}
 	}
 	
@@ -180,6 +218,10 @@ class Member
 		if (this.state == STATE_S)
 		{
 			answer += "_s";
+		}
+		else if (this.state == STATE_AE || this.state == STATE_SE)
+		{
+			answer += "_e";
 		}
 		else if (this.state == STATE_SI)
 		{
@@ -233,7 +275,7 @@ class Member
 		{
 			state = "Dead";
 		}
-		return "<Member | age: " + age + ", state: " + state + " (" + this.stateTime + " hours)>";
+		return "<Member | age: " + age + ", state: " + state + " (" + this.stateTime / HOUR + " hours)>";
 	}
 	
 	// END - FOR VISUALAZATION //

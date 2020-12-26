@@ -33,7 +33,9 @@ class Population
 				infected_to_recover_time_children,
 				infected_to_recover_chance_adult,
 				infected_to_recover_chance_children,
-				timeOfTheDay)
+				timeOfTheDay, 
+				exposed_to_infected_time_adult,
+				exposed_to_infected_time_children)
 	{
 		// stohasticly change states
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
@@ -45,7 +47,9 @@ class Population
 			this.members[memberIndex].tryRecover(infected_to_recover_time_adult,
 												infected_to_recover_time_children,
 												infected_to_recover_chance_adult,
-												infected_to_recover_chance_children);
+												infected_to_recover_chance_children, 
+												exposed_to_infected_time_adult,
+												exposed_to_infected_time_children);
 			
 			// move person around
 			this.members[memberIndex].moveAround(timeOfTheDay);
@@ -54,7 +58,7 @@ class Population
 	
 	countStatusDestrebution() 
 	{
-		var answer = {"a_si": 0, "a_ai": 0, "a_s": 0, "a_r": 0, "a_d": 0, "c_si": 0, "c_ai": 0, "c_s": 0, "c_r": 0, "c_d": 0};
+		var answer = {"a_si": 0, "a_ai": 0, "a_e": 0, "a_s": 0, "a_r": 0, "a_d": 0, "c_si": 0, "c_ai": 0, "c_e": 0, "c_s": 0, "c_r": 0, "c_d": 0};
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 		{
 			var key = this.members[memberIndex].getKey();
@@ -72,7 +76,7 @@ class Population
 	
 	countStatusDestrebutionInLocation(locationId) 
 	{
-		var answer = {"a_si": 0, "a_ai": 0, "a_s": 0, "a_r": 0, "a_d": 0, "c_si": 0, "c_ai": 0, "c_s": 0, "c_r": 0, "c_d": 0};
+		var answer = {"a_si": 0, "a_ai": 0, "a_e": 0, "a_s": 0, "a_r": 0, "a_d": 0, "c_si": 0, "c_ai": 0, "c_e": 0, "c_s": 0, "c_r": 0, "c_d": 0};
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
 		{
 			if (this.members[memberIndex].location == locationId)

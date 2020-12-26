@@ -6,11 +6,13 @@ function drawStateDistrebution()
 	var data = new google.visualization.DataTable();
 	data.addColumn('number', 'X');
 	data.addColumn('number', 'Asymptomatic Infected Adult');
+	data.addColumn('number', 'Exposed Adult');
 	data.addColumn('number', 'Symptomatic Infected Adult');
 	data.addColumn('number', 'Susceptible Adult');
 	data.addColumn('number', 'Recovered Adult');
 	data.addColumn('number', 'Dead Adult');
 	data.addColumn('number', 'Asymptomatic Infected Children');
+	data.addColumn('number', 'Exposed Children');
 	data.addColumn('number', 'Symptomatic Infected Children');
 	data.addColumn('number', 'Susceptible Children');
 	data.addColumn('number', 'Recovered Children');
@@ -28,7 +30,7 @@ function drawStateDistrebution()
         vAxis: {
 			title: 'Count'
         },
-		colors: ['#DB4437', '#FF4437', '#0F9D58', '#4285F4', '#140304', '#DB4667', '#FF4667', '#0F9E76', '#4492F1', '#140304'],
+		colors: ['#DB4437', '#aa77cc', '#FF4437', '#0F9D58', '#4285F4', '#140304', '#DB4667', '#aa77cc', '#FF4667', '#0F9E76', '#4492F1', '#140304'],
 		series: {
 			0: { lineDashStyle: [4, 4] },
 			1: { lineDashStyle: [4, 4] },

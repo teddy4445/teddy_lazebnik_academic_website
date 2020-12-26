@@ -183,31 +183,6 @@
 
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <h3>Time Dyanmics</h3>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label for="class_time" title="Time At Home">
-                                        Class duration (hours)
-                                    </label>
-                                    <input class="form-control" id="class_time" placeholder="Class duration (hours)" required="" type="text" value="1.5" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <label for="break_time">
-                                        Break duration (hours)
-                                    </label>
-                                    <input class="form-control" id="break_time" placeholder="Break duration (hours)" required="" type="text" value="0.25" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <h3>Symptomatic Dyanmics</h3>
                             </div>
                         </div>
@@ -233,7 +208,7 @@
 
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <h3>Recover durations and rates</h3>
+                                <h3>Recover and infection durations and rates</h3>
                             </div>
                         </div>
 
@@ -271,6 +246,25 @@
                                         Children Infected To Recovered chance
                                     </label>
                                     <input class="form-control" id="infected_to_recover_chance_children" placeholder="Children Infected To Cance (in percent)" required="" type="text" value="1" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="infected_to_recover_time" title="Adult Infected To Recovered">
+                                        Exposed to infected time adults (hours)
+                                    </label>
+                                    <input class="form-control" id="exposed_to_infected_time_adult" max="999" min="0" placeholder="Adult Infected To Recovered in hours" required="" type="number" value="48" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="infected_to_recover_time" title="Children Infected To Recovered">
+                                        Exposed to infected time children (hours)
+                                    </label>
+                                    <input class="form-control" id="exposed_to_infected_time_children" max="999" min="0" placeholder="Children Infected To Recovered in hours" required="" type="number" value="24" />
                                 </div>
                             </div>
                         </div>
@@ -352,6 +346,7 @@
 										<tr>
 										  <th scope="col">X</th>
 										  <th scope="col">Susceptible</th>
+										  <th scope="col">Exposed</th>
 										  <th scope="col">Infected asymptomatic</th>
 										  <th scope="col">Infected symptomatic</th>
 										  <th scope="col">Recovered</th>
@@ -362,6 +357,7 @@
 										<tr>
 										  <th scope="row">Children</th>
 										  <td id="this_c_s">0</td>
+										  <td id="this_c_e">0</td>
 										  <td id="this_c_is">0</td>
 										  <td id="this_c_ia">0</td>
 										  <td id="this_c_r">0</td>
@@ -370,6 +366,7 @@
 										<tr>
 										  <th scope="row">Adult</th>
 										  <td id="this_a_s">0</td>
+										  <td id="this_a_e">0</td>
 										  <td id="this_a_is">0</td>
 										  <td id="this_a_ia">0</td>
 										  <td id="this_a_r">0</td>
@@ -391,6 +388,7 @@
 								<tr>
 								  <th scope="col">X</th>
 								  <th scope="col">Susceptible</th>
+								  <th scope="col">Exposed</th>
 								  <th scope="col">Infected asymptomatic</th>
 								  <th scope="col">Infected symptomatic</th>
 								  <th scope="col">Recovered</th>
@@ -401,6 +399,7 @@
 								<tr>
 								  <th scope="row">Children</th>
 								  <td id="now_c_s">0</td>
+								  <td id="now_c_e">0</td>
 								  <td id="now_c_is">0</td>
 								  <td id="now_c_ia">0</td>
 								  <td id="now_c_r">0</td>
@@ -409,6 +408,7 @@
 								<tr>
 								  <th scope="row">Adult</th>
 								  <td id="now_a_s">0</td>
+								  <td id="now_a_e">0</td>
 								  <td id="now_a_is">0</td>
 								  <td id="now_a_ia">0</td>
 								  <td id="now_a_r">0</td>
@@ -445,6 +445,10 @@
 									  <td id="param_s_a">0</td>
 									</tr>
 									<tr>
+									  <th scope="row">Initial exposed adults</th>
+									  <td id="param_e_a">0</td>
+									</tr>
+									<tr>
 									  <th scope="row">Initial infected symptomatic adults</th>
 									  <td id="param_is_a">0</td>
 									</tr>
@@ -459,6 +463,10 @@
 									<tr>
 									  <th scope="row">Initial susceptible children</th>
 									  <td id="param_s_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Initial exposed children</th>
+									  <td id="param_e_c">0</td>
 									</tr>
 									<tr>
 									  <th scope="row">Initial infected symptomatic children</th>
@@ -489,14 +497,6 @@
 									  <td id="param_c_c_t_c">0</td>
 									</tr>
 									<tr>
-									  <th scope="row">Class duration (hours)</th>
-									  <td id="param_class_time">0</td>
-									</tr>
-									<tr>
-									  <th scope="row">Break duration (hours)</th>
-									  <td id="param_break_time">0</td>
-									</tr>
-									<tr>
 									  <th scope="row">Rate of adults that become asymptomatic</th>
 									  <td id="param_a_asyptomatic_rate">0</td>
 									</tr>
@@ -519,6 +519,14 @@
 									<tr>
 									  <th scope="row">Children recovery chance (percent)</th>
 									  <td id="param_recovery_chance_c">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Exposed to infected adult (hours)</th>
+									  <td id="param_exposed_to_infected_time_adult">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Exposed to infected adult (hours)</th>
+									  <td id="param_exposed_to_infected_time_children">0</td>
 									</tr>
 								  </tbody>
 								</table>
