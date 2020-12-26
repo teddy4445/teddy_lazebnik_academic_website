@@ -67,7 +67,7 @@ class Graph
 		{
 			if (!this.edges[i].is_center_set())
 			{
-				this.edges[i].set_center(this.find_node_center(this.edges[i].node_id_1), this.find_node_center(this.edges[i].node_id_2));
+				this.edges[i].set_center(this.findNodeCenter(this.edges[i].node_id_1), this.findNodeCenter(this.edges[i].node_id_2));
 				
 			}
 			this.edges[i].print();
@@ -76,25 +76,28 @@ class Graph
 	
 	// help function //
 	
-	find_node_center(nodeIndex)
+	getNodeName(nodeIndex)
 	{
-		var centerX = 0;
-		var centerY = 0;
 		for (var i = 0; i < this.nodes.length; i++)
 		{
 			if (this.nodes[i].id == nodeIndex)
 			{
-				var points = this.nodes[i].polyPoints;
-				for (var pointIndex = 0; pointIndex < points.length; pointIndex++)
-				{
-					centerX += points[pointIndex].x;
-					centerY += points[pointIndex].y;
-				}
-				centerX /= points.length;
-				centerY /= points.length;
+				return this.nodes[i].name;
 			}
 		}
-		return [centerX, centerY];
+		throw "Cannot find the node";
+	}
+	
+	findNodeCenter(nodeIndex)
+	{
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			if (this.nodes[i].id == nodeIndex)
+			{
+				return [this.nodes[i].center.x, this.nodes[i].center.y];
+			}
+		}
+		throw "Cannot find the node";
 	}
 	
 	// end - help function //

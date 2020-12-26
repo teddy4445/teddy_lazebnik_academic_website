@@ -1,7 +1,8 @@
 // canvas Z-Index
 var zIndex = 300;
-var canvasHeight = 400;
-var canvasWidth = 400;
+var canvasHeight = 600;
+var canvasWidth = 1200;
+var NOT_CHOSEN = -1;
 
 /* TIME CONSTS */
 var HOUR = 60;
@@ -14,6 +15,7 @@ let uploadJsonContent;
 
 // global instance of the simultor 
 let sim; 
+let locationInfoToShow;
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
@@ -21,7 +23,7 @@ let sim;
 function setup()
 {
 	// create canvas
-	var simCanvas = createCanvas(canvasHeight, canvasWidth);
+	var simCanvas = createCanvas(canvasWidth, canvasHeight);
     simCanvas.parent("simCanvas");
 	
 	// crease the simulator instance (without data yet)
@@ -30,8 +32,11 @@ function setup()
 	// do not run as we need the data from the user
 	noLoop();
 	
-	// global viszuale settings
+	// global viszuale settings //
+	// text location in the center - easier to use later
 	textAlign(CENTER);
+	// do not show cursor - will be replace by the putMouse function
+	noCursor();
 }
 
 // start the simulations by open the right views and build simulation instance
@@ -41,6 +46,8 @@ function startSimulation()
 	try
 	{
 		sim.startSimulation();	
+		// pick the first node to show the data
+		locationInfoToShow = sim.indoor.nodes[0].id;
 	}
 	catch (error)
 	{
@@ -66,7 +73,7 @@ function startSimulation()
 
 // loop run on the simulation
 function draw() 
-{
+{	
 	// do not allow to run the method if the run not started
 	if (!runStarted)
 	{
@@ -79,7 +86,10 @@ function draw()
 	
 	// print the indoor with the population distrebution inside
 	background("#eeeeee");
-	sim.print();
+	sim.print(locationInfoToShow);
+	
+	// put the curser according to the status and locaiton on the screen
+	putMouse();
 	
 	// calc graph needed data and update it 
 	if (sim.time % (graph_sample * HOUR) == 0)
@@ -103,8 +113,11 @@ function draw()
 // technical view operations to close the simulation view, clean memory and download results
 function endSimulation()
 {	
-	// TODO: reset the simultor instance and download the results
+	// download results
+	downloadasTextFile("pandemic_indoor_simulation.json", sim.toJson());
 	
+	// clear large members 
+	sim.clear();
 	
 	// hide and show the views for the user					
 	document.getElementById("main").style.display = "none"; // close the main window
@@ -114,6 +127,61 @@ function endSimulation()
 	runStarted = false;
 	noLoop();
 }
+
+/* VIZUAL FUNCTIONS */
+
+/* put some draw over the mouse's location as curser which change according to the status and location */
+function putMouse()
+{
+	stroke(255, 255, 255);
+	strokeWeight(3);
+	
+	fill(255, 0, 0);
+	stroke(255, 0, 0);
+	line(mouseX - 5, mouseY, mouseX + 5, mouseY);
+	line(mouseX, mouseY - 5, mouseX, mouseY + 5);
+}
+
+/* on click of mouse change the view  */
+function mouseClicked() 
+{
+	var nowMouseX = mouseX;
+	var nowMouseY = mouseY;
+	
+	// if click outside the panel, ignore it
+	if (nowMouseX > canvasWidth || nowMouseX < 0 || nowMouseY > canvasHeight || nowMouseY < 0)
+	{
+		return NOT_CHOSEN;
+	}
+	
+	let newLocation = clickOnNextPossibleLocation(nowMouseX, nowMouseY);
+	if (newLocation != NOT_CHOSEN)
+	{
+		locationInfoToShow = newLocation;
+	}
+}
+
+/* checkc if the mouse on\clicked in next to some node's center */
+function clickOnNextPossibleLocation(checkX, checkY)
+{
+	// NOTE: can be improved by checking if the click is inside each polygon but this will require more computations
+	
+	var winNode = NOT_CHOSEN;
+	var minDist = 100; // operates as trashold for the first one
+	// find the closest node to the click
+	for (var i = 0; i < sim.indoor.nodes.length; i++)
+	{
+		var newDist = dist(checkX, checkY, sim.indoor.nodes[i].center.x, sim.indoor.nodes[i].center.y);
+		if (newDist < minDist)
+		{
+			winNode = sim.indoor.nodes[i].id;
+			minDist = newDist;
+		}
+	}
+	return winNode;
+}
+
+/* END - VIZUAL FUNCTIONS */
 
 /* HELP FUNCTIONS */
 

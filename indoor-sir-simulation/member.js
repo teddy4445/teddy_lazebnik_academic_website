@@ -7,27 +7,30 @@ let STATE_SI = 2;
 let STATE_AI = 3;
 let STATE_R = 4;
 let STATE_D = 5;
-
-let LOBBY = 0;
 // end - consts //
 
 /* An agent (individual) in the population */
 class Member
 {
-	constructor(age_group, state, location, day_plan, state_time = 0)
+	constructor(age, state, location, dayPlan, stateTime = 0)
 	{
 		// time at each state
-		this.state_time = state_time;
+		this.stateTime = stateTime;
 		
 		// child or adult and epidemic state
 		this.state = state;
-		this.age_group = age_group;
+		this.age = age;
 		
 		// the current location
 		this.location = location;
 		
-		this.day_plan = day_plan;
-		// where the individual located during the day
+		// where the individual located during the day - modify to something more easy to use 
+		this.dayPlan = {};
+		var timeSpent = 0;
+		for (const [key, value] of Object.entries(dayPlan)) {
+			this.dayPlan[parseInt(key)] = [timeSpent, timeSpent + value];
+			timeSpent += value;
+		};
 	}
 	
 	static buildFromJson(jsonObj)
@@ -70,12 +73,30 @@ class Member
 		return new Member(age, state, jsonObj["location"], jsonObj["day_plan"]);
 	}
 	
+	// move the member to right location
+	moveAround(timeOfDay)
+	{
+		for (const [timeLocation, startEndTime] of Object.entries(this.dayPlan)) 
+		{
+			if (startEndTime[0] <= timeOfDay && timeOfDay < startEndTime[1])
+			{
+				this.location = timeLocation;
+				break;
+			}
+		};
+	}
+	
 	// STATE CHANGE FUNCTIONS //
 	
-	// infect individual
-	infect()
+	addTime(time)
 	{
-		if (this.age_group == ADULT) 
+		this.stateTime += time;
+	}
+	
+	// infect individual
+	infect(adult_asymptomatic, children_asymptomatic)
+	{
+		if (this.age == ADULT) 
 		{
 			if (Math.random() < adult_asymptomatic)
 			{
@@ -97,32 +118,32 @@ class Member
 				this.state = STATE_AI;
 			}	
 		}
-		this.state_time = 0;
+		this.stateTime = 0;
 	}
 	
 	recover()
 	{
 		this.state = STATE_R;
-		this.state_time = 0;
+		this.stateTime = 0;
 	}
 	
 	kill()
 	{
 		this.state = STATE_D;
-		this.state_time = 0;
+		this.stateTime = 0;
 	}
 	
 	tic()
 	{
-		this.state_time++;
+		this.stateTime++;
 	}
 	
-	tryRecover(infected_to_recover_time_adult, infected_to_recover_time_children)
+	tryRecover(infected_to_recover_time_adult, infected_to_recover_time_children, pra, prc)
 	{
-		if ((this.state_time > infected_to_recover_time_adult && this.state == STATE_SI && this.age_group != CHILD) || (this.state_time > infected_to_recover_time_children && this.state == STATE_SI && this.age_group == CHILD))
+		if ((this.stateTime > infected_to_recover_time_adult && this.state == STATE_SI && this.age != CHILD) || (this.stateTime > infected_to_recover_time_children && this.state == STATE_SI && this.age == CHILD))
 		{
 			var chance = Math.random();
-			if ((this.age_group != CHILD && chance <= pra) || (this.age_group == CHILD && chance <= prc))
+			if ((this.age != CHILD && chance <= pra) || (this.age == CHILD && chance <= prc))
 			{
 				this.recover();	
 			}
@@ -131,7 +152,7 @@ class Member
 				this.kill();
 			}
 		}
-		else if ((this.state_time > infected_to_recover_time_adult && this.state == STATE_AI && this.age_group != CHILD) || (this.state_time > infected_to_recover_time_children && this.state == STATE_AI && this.age_group == CHILD))
+		else if ((this.stateTime > infected_to_recover_time_adult && this.state == STATE_AI && this.age != CHILD) || (this.stateTime > infected_to_recover_time_children && this.state == STATE_AI && this.age == CHILD))
 		{
 			this.recover();
 		}
@@ -147,7 +168,7 @@ class Member
 	getKey()
 	{
 		var answer = "";
-		if (this.age_group == ADULT)
+		if (this.age == ADULT)
 		{
 			answer += "a";
 		}
@@ -190,7 +211,7 @@ class Member
 	toString()
 	{
 		var age = "Adult";
-		if (this.age_group == CHILD)
+		if (this.age == CHILD)
 		{
 			age = "Child";
 		}
@@ -211,7 +232,7 @@ class Member
 		{
 			state = "Dead";
 		}
-		return "<Member | age_group: " + age + ", state: " + state + " (" + this.state_time + " hours)>";
+		return "<Member | age: " + age + ", state: " + state + " (" + this.stateTime + " hours)>";
 	}
 	
 	// END - FOR VISUALAZATION //

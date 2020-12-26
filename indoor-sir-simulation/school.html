@@ -331,16 +331,60 @@
 			<!-- the place where analysis of the performace is shown -->
             <div id="main" style="display: none;">
                 <div class="row spacer">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="clock-holder" style="text-align: center";>
+							<!-- simulation view -->
+							<div>
+								<h3 id="clock"></h3>
+							</div>
+					</div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="game-holder" style="text-align: center";>
 							<!-- simulation view -->
 							<div id="simCanvas">
+							</div>
+					</div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="game-info-holder" style="text-align: center";>
+							<!-- simulation view -->
+							<div id="game-info">
+								<h4 id="this_node_name"></h4>
+								<div class="table-responsive">
+								  <table class="table table-hover">
+									  <thead>
+										<tr>
+										  <th scope="col">X</th>
+										  <th scope="col">Susceptible</th>
+										  <th scope="col">Infected asymptomatic</th>
+										  <th scope="col">Infected symptomatic</th>
+										  <th scope="col">Recovered</th>
+										  <th scope="col">Dead</th>
+										</tr>
+									  </thead>
+									  <tbody>
+										<tr>
+										  <th scope="row">Children</th>
+										  <td id="this_c_s">0</td>
+										  <td id="this_c_is">0</td>
+										  <td id="this_c_ia">0</td>
+										  <td id="this_c_r">0</td>
+										  <td id="this_c_d">0</td>
+										</tr>
+										<tr>
+										  <th scope="row">Adult</th>
+										  <td id="this_a_s">0</td>
+										  <td id="this_a_is">0</td>
+										  <td id="this_a_ia">0</td>
+										  <td id="this_a_r">0</td>
+										  <td id="this_a_d">0</td>
+										</tr>
+									  </tbody>
+									</table>
+								</div>
 							</div>
 					</div>
                 </div>
                 <div class="row spacer">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="stat-table-holder">
 						<!-- table with the values getten from the user -->
-						<h4>Current State's Distrebution</h4>
+						<h4>Current State's Distrebution (Global)</h4>
 						<div class="table-responsive">
 						  <table class="table table-hover">
 							  <thead>
@@ -385,7 +429,6 @@
                 <div class="row spacer">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="clock-holder">
 						<div>
-							<!-- clock and meta data view -->
 							<!-- table with the values getten from the user -->
 							<h4>Parameter's Table for this simulation</h4>
 							<div class="table-responsive">
