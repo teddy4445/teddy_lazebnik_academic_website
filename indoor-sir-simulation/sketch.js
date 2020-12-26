@@ -10,6 +10,7 @@ var DAY = HOUR * 24;
 
 // simulation view logic
 let runStarted = false;
+let showDraw = true;
 let graph_sample;
 let uploadJsonContent;
 
@@ -35,8 +36,6 @@ function setup()
 	// global viszuale settings //
 	// text location in the center - easier to use later
 	textAlign(CENTER);
-	// do not show cursor - will be replace by the putMouse function
-	noCursor();
 }
 
 // start the simulations by open the right views and build simulation instance
@@ -85,11 +84,13 @@ function draw()
 	sim.step();
 	
 	// print the indoor with the population distrebution inside
-	background("#eeeeee");
+	if (showDraw)
+	{
+		background("#eeeeee");
+		sim.printIndoor();
+		showDraw = false;
+	}
 	sim.print(locationInfoToShow);
-	
-	// put the curser according to the status and locaiton on the screen
-	putMouse();
 	
 	// calc graph needed data and update it 
 	if (sim.time % (graph_sample * HOUR) == 0)
@@ -125,22 +126,11 @@ function endSimulation()
 	
 	// allow to run and start running
 	runStarted = false;
+	showDraw = true;
 	noLoop();
 }
 
 /* VIZUAL FUNCTIONS */
-
-/* put some draw over the mouse's location as curser which change according to the status and location */
-function putMouse()
-{
-	stroke(255, 255, 255);
-	strokeWeight(3);
-	
-	fill(255, 0, 0);
-	stroke(255, 0, 0);
-	line(mouseX - 5, mouseY, mouseX + 5, mouseY);
-	line(mouseX, mouseY - 5, mouseX, mouseY + 5);
-}
 
 /* on click of mouse change the view  */
 function mouseClicked() 

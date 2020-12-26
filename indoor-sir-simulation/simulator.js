@@ -137,7 +137,8 @@ class Simulator
 									this.infected_to_recover_time_adult,
 									this.infected_to_recover_time_children,
 									this.infected_to_recover_chance_adult,
-									this.infected_to_recover_chance_children);
+									this.infected_to_recover_chance_children,
+									this.time % DAY);
 		
 		// update the time to the next day
 		this.time += deltaTime;
@@ -169,7 +170,7 @@ class Simulator
 			{
 				// TODO: do better, find inside a population
 				// pick in random a person to meet within the population
-				var meetMemeber = this.population.members[Math.floor(Math.random() * pop_size)];
+				var meetMemeber = this.population.members[Math.floor(Math.random() * this.population.size())];
 				
 				// we tried hard, but did not find anyone we want 
 				if (meetMemeber.location != member.location || !([STATE_AI, STATE_SI].includes(meetMemeber.state)))
@@ -230,7 +231,7 @@ class Simulator
 					(infectChance < this.c_a_t_c && member.age == CHILD && meetMemeber.age != CHILD) || 
 					(infectChance < this.c_c_t_c && member.age == CHILD && meetMemeber.age == CHILD))
 				{
-					this.members[memberIndex].infect(this.adult_asymptomatic, this.children_asymptomatic);	
+					this.population.members[memberIndex].infect(this.adult_asymptomatic, this.children_asymptomatic);	
 				}
 			}
 		}
@@ -239,11 +240,16 @@ class Simulator
 		this.time += STEP_TIME_INTERVAL;
 	}
 	
-	// print to a canvas the indoor stracture and the 
-	print(locationInfoToShow = 1)
+	// print to a canvas the indoor stracture
+	printIndoor()
 	{
 		// draw the in door
 		this.indoor.print();
+	}
+	
+	// print the population data
+	print(locationInfoToShow = 1)
+	{
 		
 		// update the simulation time view
 		var day = Math.floor(this.time / DAY);

@@ -25,12 +25,13 @@ class Member
 		this.location = location;
 		
 		// where the individual located during the day - modify to something more easy to use 
-		this.dayPlan = {};
+		this.dayPlan = [];
 		var timeSpent = 0;
-		for (const [key, value] of Object.entries(dayPlan)) {
-			this.dayPlan[parseInt(key)] = [timeSpent, timeSpent + value];
-			timeSpent += value;
-		};
+		for (var i = 0; i < dayPlan.length; i++)
+		{
+			this.dayPlan.push([dayPlan[i][0], timeSpent, timeSpent + dayPlan[i][1]]);
+			timeSpent += dayPlan[i][1];
+		}
 	}
 	
 	static buildFromJson(jsonObj)
@@ -76,14 +77,14 @@ class Member
 	// move the member to right location
 	moveAround(timeOfDay)
 	{
-		for (const [timeLocation, startEndTime] of Object.entries(this.dayPlan)) 
+		for (var i = 0; i < this.dayPlan.length; i++)
 		{
-			if (startEndTime[0] <= timeOfDay && timeOfDay < startEndTime[1])
+			if (this.dayPlan[i][1] <= timeOfDay && timeOfDay < this.dayPlan[i][2])
 			{
-				this.location = timeLocation;
+				this.location = this.dayPlan[i][0];
 				break;
 			}
-		};
+		}
 	}
 	
 	// STATE CHANGE FUNCTIONS //

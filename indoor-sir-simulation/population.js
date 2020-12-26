@@ -32,7 +32,8 @@ class Population
 				infected_to_recover_time_adult, 
 				infected_to_recover_time_children,
 				infected_to_recover_chance_adult,
-				infected_to_recover_chance_children)
+				infected_to_recover_chance_children,
+				timeOfTheDay)
 	{
 		// stohasticly change states
 		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
