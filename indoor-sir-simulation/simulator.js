@@ -85,10 +85,12 @@ class Simulator
 		// set all the needed data into the table
 		var popDist = this.population.countStatusDestrebution();
 		document.getElementById("param_s_a").innerHTML = popDist["a_s"];
+		document.getElementById("param_e_a").innerHTML = popDist["a_e"];
 		document.getElementById("param_is_a").innerHTML = popDist["a_si"];
 		document.getElementById("param_is_a").innerHTML = popDist["a_ai"];
 		document.getElementById("param_r_a").innerHTML = popDist["a_r"];
 		document.getElementById("param_s_c").innerHTML = popDist["c_s"];
+		document.getElementById("param_e_c").innerHTML = popDist["c_e"];
 		document.getElementById("param_is_c").innerHTML = popDist["c_si"];
 		document.getElementById("param_ia_c").innerHTML = popDist["c_ai"];
 		document.getElementById("param_r_c").innerHTML = popDist["c_r"];
@@ -177,8 +179,7 @@ class Simulator
 			member.moveAround(timeOfTheDay);
 		
 			// check if move from I^s or I^a to R or D
-			member.tryRecover(STEP_TIME_INTERVAL,
-								this.infected_to_recover_time_adult,
+			member.tryRecover(this.infected_to_recover_time_adult,
 								this.infected_to_recover_time_children,
 								this.infected_to_recover_chance_adult,
 								this.infected_to_recover_chance_children,

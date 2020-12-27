@@ -109,22 +109,22 @@ class Member
 		{
 			if (Math.random() < adult_asymptomatic)
 			{
-				this.state = STATE_SE;
+				this.state = STATE_AE;
 			}
 			else
 			{
-				this.state = STATE_AE;
+				this.state = STATE_SE;
 			}	
 		}
 		else
 		{
 			if (Math.random() < children_asymptomatic)
 			{
-				this.state = STATE_SE;
+				this.state = STATE_AE;
 			}
 			else
 			{
-				this.state = STATE_AE;
+				this.state = STATE_SE;
 			}	
 		}
 		this.stateTime = 0;
