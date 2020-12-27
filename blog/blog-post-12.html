@@ -3,74 +3,44 @@ Birds Flocking And Targeted Drug Delivery Medicine Are Basically The Same
 </h1>
 <hr class="publications-hr">
 <p>
-Imagine you are an world-class zoologist studying the flight of a new species of excotic birds your recently descovered... 
-You know that this species flies great distances, in the winter they even travel all the way across the mediterranean sea. 
-To finish your study there is only one question left to answer: "if this species flies 100 meters high or not?".
+Imagine you are a world-class zoologist studying the flight of a new species of an exotic bird you recently discovered... You know that this species flies great distances, in the winter they even travel all the way across the mediterranean sea. To finish your study there is only one question left to answer: "if this species flies 100 meters high or not?".
 </p>
 <p>
-If you can just show that five birds flight over 100 meters high, 
-it will be sufficient to say that this species flies 100 meters high and otherwise will prove they are not.
-This question keeps you awake at night. It sounds so easy to measure - so many possible ways to do it. 
-You can fly next to them in some small airplane and measure your height during the flight. You can use some advanced telescopes and sail below them at sea.
-Nevertheless, unfortunately, you can do all of this as you do not have the budget (and if to be honest, the all idea of spending days out of the office not really suits you after all).
+If you can just show that five birds fly over 100 meters high, it will be sufficient to say that this species fly 100 meters high and otherwise will prove they are not. This question keeps you awake at night. It sounds so easy to measure - so many possible ways to do it. You can fly next to them in some small airplane and measure your height during the flight. You can use some advanced telescopes and sail below them at sea. Unfortunately, you cannot do all of this as you do not have the budget (and if to be honest, the idea of spending days out of the office not really suits you after all).
 </p>
 <p>
-You need a simple, cheap, but reliable methods to perform this measurement. From your study, you have a flock of these birds in the lab that you need to set free tomorrow.
-They will fly away and during their journey reach a place not too far from your colleague's lab. 
+You need a simple, cheap, but reliable method to perform this measurement. From your study, you have a flock of these birds in the lab that you need to set free tomorrow. They will fly away and during their journey reach a place not too far from your colleague's lab.
 </p>
 <p>
-You think for yourself, I can put a sensor on each bird that measures if it flies 100 meters or not (using air pressure for example). 
-If a bird even once crosses the 100 meters the sensor will show 1 while otherwise, it will show 0. 
-If the sensor shows 1 for the first time, it stops measuring from this point on (to save battery). 
+You think for yourself, I can put a sensor on each bird that measures if it flies 100 meters or not (using air pressure for example). If a bird even once crosses the 100 meters the sensor will show 1 while otherwise, it will show 0. If the sensor shows 1 for the first time, it stops measuring from this point on (to save battery).
 </p>
 <p>
-This is great! just do this, ask your colleague to catch the flock on its way, measure all the sensors, and give you the desired answer.
-But in life, things do not always go as planned and your colleague does not have time to catch a full flock of birds but just one. 
-This makes the task harder, as the colleague can catch a random bird from the flock for us. Currently, its sensor will show either 0 or 1 which actually does not help our cause how could we know
-if five birds pass the 100-meter threshold or not if each sensor measures the flight of a single bird?
+This is great! just do this, ask your colleague to catch the flock on its way, measure all the sensors to provide you the desired answer. But in life, things do not always go as planned and your colleague does not have time to catch a full flock of birds but just one. This makes the task harder, as the colleague can catch a random bird from the flock for us. Currently, its sensor will show either 0 or 1 which actually does not help our cause. How could we know if five birds pass the 100-meter threshold or not if each sensor measures the flight of a single bird?
 </p>
 <p>
-Well, there is this local Bluetooth thing on the sensors. Yes, this is not 200MB wifi but at least it will allow two sensors to communicate if the birds will be close enough to each other.
-Now, you think for yourself, I can work with this... Yes, this is a cheap sensor and therefore can store just a few numbers and basic mathematical operations. 
-You can not afford to buy each bird a brand new laptop for the flight. (I just checked the bank account balance, you definitely can not disregard how cool it sounds you strange zoologist).
+Well, there is this local Bluetooth thing on the sensors. Yes, this is not 200MB wifi but at least it will allow two sensors to communicate if the birds will be close enough to each other. Now, you think for yourself, I can work with this... Yes, this is a cheap sensor and therefore can store just a few numbers and basic mathematical operations. You can not afford to buy each bird a brand new laptop for the flight. (I just checked the bank account balance, you definitely can not disregard how cool it sounds you strange zoologist).
 </p>
 <p>
-The time is passing and evening has become observed from the lab's window. You need to solve this mystery. 
-If you just can mark in each sensor either five birds pass the threshold or not - you will not care which bird your colleague will catch.
-You don't really know how the sensors will interact. After all, birds flock flying over the sea is a messy situation and who knows how things turn.
-But you recall that eventually, every two birds will meet during the flight and probably more than just once. 
+The time is passing and the evening can be observed from the lab's window. You need to solve this mystery. If you just can mark in each sensor either five birds pass the threshold or not - you will not care which bird your colleague will catch. You don't really know how the sensors will interact. After all, birds flock flying over the sea is a messy situation and who knows how things could turn out. But, you recall that eventually, every two birds will meet during the flight and probably more than just once.
 </p>
 <p>
-If each sensor can show just six numbers this should do the trick. Well, if the sensors communicate, there will be one sensor sending a message, and one sensor receiving it.
-We can program the sending sensor to send its current value and then set it back to 0; while the receiving sensor will sum its current value with the one obtained by the sending sensor. 
-When the sum is bigger than five, it just set the sum to be five as five or more are irrelevant for you. This rule changes a bit in the case the sending sensor has a value of five. In this case, it does send its value but does not set its own to zero.
+If each sensor can show just six numbers this should do the trick. Well, if the sensors communicate, there will be one sensor sending a message, and one sensor receiving it. We can program the sending sensor to send its current value and then set it back to 0; while the receiving sensor will sum its current value with the one obtained by the sending sensor. When the sum is bigger than five, it just sets the sum to be five as five or more are irrelevant for you. This rule changes a bit in the case the sending sensor has a value of five. In this case, it does send its value but does not set its own to zero.
 </p>
 <p>
-This idea sounds lovely! But you still worry... Does this method work? does it work all the time no matter the order the sensors communicated at? 
-You can not effort yourself mistakes here - you need to be sure. You take a paper and pen and start writing some math. 
-You wake up an hour later on your desk, a bit confused. Looking at the paper in front of you with the full proof that this method will always work.
-You do not recall how it got there but to be honest, you just happy it is there.
+This idea sounds lovely! But you still worry... Does this method work? does it work all the time no matter the order the sensors communicated at? You cannot afford to do mistakes here - you need to be sure. You take a paper and a pen and start writing some math. You wake up an hour later on your desk, a bit confused. Looking at the paper in front of you with the full proof that this method will always work. You do not recall how it got there but to be honest, you just happy it is there.
 </p>
 <p>
-The next morning you set the birds free and wait... Almost a week after, you got a phone call from your colleague: he says that the sensors show five!
-You have done it! You just finished your research, you handsome (with surprisingly above average mathematical training) zoologist. 
+The next morning you set the birds free and wait... Almost a week after, you got a phone call from your colleague: he says that the sensors show five! You have done it! You just finished your research, you handsome (with surprisingly above average mathematical training) zoologist.
 </p>
 <p>
-The readers who pay attention so far should notice that there is no comparison to drugs anywhere in sight. 
-Well, this is because this comparison is problematic for a generic kind of drug. 
-We can compare the birds flock to a drug if somehow, the drug was carried out in our body.  
-Luckily for our great team of scientist invented nanoparticles. Which are extremely small, biological structures that operate as vehicles for drugs in the body. 
+The readers who pay attention so far should notice that there is no comparison to drugs anywhere in sight. Well, this is because this comparison is problematic for a generic kind of drug. We can compare the birds flock to a drug if somehow, the drug was carried out in our body. Luckily for us, a great team of scientists invented nanoparticles. Which are extremely small, biological structures that operate as vehicles for drugs in the body.
 </p>
 <p>
-We can think about a nanoparticle like the bird from the story and a targeted drug delivery as the sensor. 
-Well, the nanoparticle will perform the communication and not the drug. 
-When <i>comunocation</i> is not the traditional transformation of data using some signal but a chemical reaction between two nanoparticles.
+We can think about a nanoparticle like the bird from the story and a  targeted drug delivery nanoparticle as the sensor. Well, the nanoparticle will perform the communication and not the drug. When the <i>communication</i> is not the traditional transformation of data using some signal but a chemical reaction between two nanoparticles.
 </p>
 <p>
-The technology and technical implementation between the sensors on the birds and nanoparticles are largely different. 
-Nevertheless, the mathematics are inherently the same between the two scenarios. 
-This similarity allows us to program the nanoparticle's based drugs to perform different tasks inside the body. 
+The technology and technical implementation between the sensors on the birds and nanoparticles are largely different. Nevertheless, the mathematics are inherently the same between the two scenarios. This similarity allows us to program the nanoparticle's based drugs to perform different tasks inside the body.
 </p>
 <p>
-My research in medical nanoparticles (to be honest, nanorobots) is focusing in programming medicine to perform varied range of tasks.
+My research in medical nanoparticles (to be honest, nanorobots) is to focus on programming medicine to perform a variety of medical tasks.
 </p>
