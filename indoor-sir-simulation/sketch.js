@@ -16,7 +16,7 @@ let uploadJsonContent;
 
 // global instance of the simultor 
 let sim; 
-let locationInfoToShow;
+let locationInfoToShow = 0; 
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
@@ -98,8 +98,8 @@ function draw()
 		// add the data needed
 		sim.updateStatesGraphData();
 		
-		// update the graphs view
-		drawStateDistrebution();
+		// update the distrebution graph view
+		drawAll();
 	}
 	
 	// if the simulation is over

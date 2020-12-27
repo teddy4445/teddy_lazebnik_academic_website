@@ -14,6 +14,7 @@ class Simulator
 		
 		// graph related members //
 		this.statesGraphData = [];
+		this.statesNormalizedBarGraphData = [];
 		
 		// simulator paramaters members //
 		this.a_a_t_c;
@@ -77,6 +78,9 @@ class Simulator
 			}
 		}
 		this.hyperJumpTime = maxOutValue;
+		
+		// update the graph data
+		this.updateStatesGraphData();
 		
 		// set all the needed data into the table
 		var popDist = this.population.countStatusDestrebution();
@@ -265,8 +269,7 @@ class Simulator
 	
 	// print the population data
 	print(locationInfoToShow = 1)
-	{
-		
+	{	
 		// update the simulation time view
 		var day = Math.floor(this.time / DAY);
 		var hours = Math.floor((this.time - day * DAY) / HOUR);
@@ -311,6 +314,7 @@ class Simulator
 		return this.population.countStatusDestrebutionInLocation(locationId);
 	}
 	
+	
 	// check if the pandemic is over
 	is_over()
 	{
@@ -343,14 +347,28 @@ class Simulator
 	/* update the graph's data from the model */
 	updateStatesGraphData()
 	{
-		var stats = this.population.countStatusDestrebution();
+		var popDist = this.population.countStatusDestrebution();
 		
+		// get the data for the non-normalized distrebution over time
+		var counts = [popDist["a_s"], popDist["a_e"], popDist["a_si"], popDist["a_ai"], popDist["a_r"], popDist["a_d"], popDist["c_s"], popDist["c_e"], popDist["c_si"], popDist["c_ai"], popDist["c_r"], popDist["c_d"]];
 		var graphValues = [this.time / DAY];
-		Object.keys(stats).forEach(function(key, index) {
-			 graphValues.push(stats[key]);
-		});
-		
+		graphValues.push(...counts);
 		this.statesGraphData.push(graphValues);
+		
+		// get the data about the pop normalized distrebution in some location as vector 
+		var sum = 0;
+		for (var i = 0; i < counts.length; i++)
+		{
+			sum += counts[i];
+		}
+		if (sum > 0)
+		{
+			for (var i = 0; i < counts.length; i++)
+			{
+				counts[i] = counts[i] * 100 / sum;
+			}	
+		}
+		this.statesNormalizedBarGraphData = counts;
 	}	
 	
 	/* help function to limit some value in comfterbale way */
