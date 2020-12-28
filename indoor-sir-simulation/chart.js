@@ -6,6 +6,7 @@ function drawAll()
 {
 	drawStateDistrebution();
 	drawLocationStateDistrebution();
+	drawDistrebutionPerLocationGraph();
 }
 
 
@@ -47,6 +48,29 @@ function drawLocationStateDistrebution()
 	};
 	
 	var chart = new google.visualization.ColumnChart(document.getElementById('locationStateBarGraph'));
+	chart.draw(data, options);
+}
+
+
+function drawDistrebutionPerLocationGraph(data) 
+{	  
+	var options = 
+	{
+		height: 500,
+		hAxis: 
+		{
+			title: 'Epidemiological State'
+		},
+		vAxis: 
+		{
+			title: 'Portion Of The Population',
+			ticks: [0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95, 1]
+		},
+		legend: {position: 'none'},
+        bar: {groupWidth: "80%"}
+	};
+	
+	var chart = new google.visualization.ColumnChart(document.getElementById('distrebutionPerLocationGraph'));
 	chart.draw(data, options);
 }
 

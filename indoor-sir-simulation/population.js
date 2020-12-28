@@ -28,34 +28,6 @@ class Population
 		this.members = [];
 	}
 	
-	hyperJump(deltaTime, 
-				infected_to_recover_time_adult, 
-				infected_to_recover_time_children,
-				infected_to_recover_chance_adult,
-				infected_to_recover_chance_children,
-				timeOfTheDay, 
-				exposed_to_infected_time_adult,
-				exposed_to_infected_time_children)
-	{
-		// stohasticly change states
-		for (var memberIndex = 0; memberIndex < this.members.length; memberIndex++)
-		{
-			// update member's time
-			this.members[memberIndex].addTime(deltaTime);
-			
-			// check if move from I^s or I^a to R or D
-			this.members[memberIndex].tryRecover(infected_to_recover_time_adult,
-												infected_to_recover_time_children,
-												infected_to_recover_chance_adult,
-												infected_to_recover_chance_children, 
-												exposed_to_infected_time_adult,
-												exposed_to_infected_time_children);
-			
-			// move person around
-			this.members[memberIndex].moveAround(timeOfTheDay);
-		}
-	}
-	
 	countStatusDestrebution() 
 	{
 		var answer = {"a_si": 0, "a_ai": 0, "a_e": 0, "a_s": 0, "a_r": 0, "a_d": 0, "c_si": 0, "c_ai": 0, "c_e": 0, "c_s": 0, "c_r": 0, "c_d": 0};

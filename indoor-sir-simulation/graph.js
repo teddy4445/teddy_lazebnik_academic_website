@@ -42,7 +42,7 @@ class Graph
 		{
 			printPoly.push(createVector(jsonObj["points"][i]["x"], jsonObj["points"][i]["y"]));
 		}
-		this.add_node_by_value(jsonObj["name"], printPoly);
+		this.add_node_by_value(jsonObj["name"], jsonObj["volume"], printPoly);
 	}
 	
 	add_edge(node_id_1, node_id_2)
@@ -74,6 +74,27 @@ class Graph
 		}
 	}
 	
+	// logical functions //
+	
+	updateMemberLocation(fromToMember)
+	{
+		if (fromToMember[0] != 0)
+		{
+			this.nodes[fromToMember[0]-1].populationCount--;	
+		}
+		if (fromToMember[1] != 0)
+		{
+			this.nodes[fromToMember[1]-1].populationCount++;	
+		}
+	}
+	
+	getNodeDensity(nodeIndex)
+	{
+		return this.nodes[nodeIndex].density();
+	}
+	
+	// end - logical functions //
+	
 	// help function //
 	
 	getNodeName(nodeIndex)
@@ -98,6 +119,20 @@ class Graph
 			}
 		}
 		throw "Cannot find the node";
+	}
+	
+	getPopulationDistrebution(popCount = 0)
+	{	
+		if (popCount <= 0)
+		{
+			popCount = 1;
+		}	
+		var data = [['Location', 'Individuals']];
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			data.push([this.nodes[i].name, this.nodes[i].populationCount / popCount]);
+		}
+		return google.visualization.arrayToDataTable(data);
 	}
 	
 	// end - help function //
@@ -141,12 +176,13 @@ class Edge
 /* Graph's node */
 class Node
 {
-	constructor(id, name, polyPoints = [], population = [])
+	constructor(id, name, volume, polyPoints = [], populationCount = 0)
 	{
 		// logical members
 		this.id = id;
 		this.name = name;
-		this.population = population;
+		this.populationCount = populationCount;
+		this.volume = volume;
 		
 		// visualization members
 		this.polyPoints = polyPoints;
@@ -174,6 +210,15 @@ class Node
 		}
 		f = twicearea * 3;
 		this.center = createVector(x/f, y/f); 
+	}
+	
+	density()
+	{
+		if (this.volume > 0)
+		{
+			return this.populationCount / this.volume;
+		}
+		throw "node with name '" + this.name + "' has negative or zero volume";
 	}
 	
 	print()

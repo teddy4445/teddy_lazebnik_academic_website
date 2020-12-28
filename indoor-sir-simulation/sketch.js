@@ -62,6 +62,9 @@ function startSimulation()
 	document.getElementById("init_form").style.display = "none"; // close the init form
 	document.getElementById("main").style.display = ""; // show the main window
 	
+	// scroll to top
+	window.scrollTo({ top: 0, behavior: `smooth` });
+	
 	// allow to run and start running
 	runStarted = true;
 	loop();

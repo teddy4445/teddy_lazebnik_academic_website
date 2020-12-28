@@ -85,6 +85,7 @@ class Member
 	// move the member to right location
 	moveAround(timeOfDay)
 	{
+		var fromToMove = [this.location];
 		for (var i = 0; i < this.dayPlan.length; i++)
 		{
 			if (this.dayPlan[i][1] <= timeOfDay && timeOfDay < this.dayPlan[i][2])
@@ -93,6 +94,8 @@ class Member
 				break;
 			}
 		}
+		fromToMove.push(this.location);
+		return fromToMove;
 	}
 	
 	// STATE CHANGE FUNCTIONS //
@@ -275,7 +278,7 @@ class Member
 		{
 			state = "Dead";
 		}
-		return "<Member | age: " + age + ", state: " + state + " (" + this.stateTime / HOUR + " hours)>";
+		return "<Member | age: " + age + ", state: " + state + " (" + this.stateTime / HOUR + " hours), location: " + this.location + ">";
 	}
 	
 	// END - FOR VISUALAZATION //

@@ -76,6 +76,20 @@ class Simulator
 					maxOutValue = memberDayPlan[i][1];
 				}
 			}
+			
+			// not right place but optimize the number of times we run on the population //
+			// allocate population to the graph
+			try
+			{
+				if (this.population.members[memberIndex].location != 0)
+				{
+					this.indoor.nodes[this.population.members[memberIndex].location - 1].populationCount++;		
+				}
+			}
+			catch (error)
+			{
+				console.log("Error allocating individual: " + this.population.members[memberIndex].toString());
+			}
 		}
 		this.hyperJumpTime = maxOutValue;
 		
@@ -150,15 +164,25 @@ class Simulator
 		var day = Math.floor(this.time / DAY);
 		var deltaTime = (day + 1) * DAY - this.time;
 		
-		// update the inner clock of all the members 
-		this.population.hyperJump(deltaTime,
-									this.infected_to_recover_time_adult,
-									this.infected_to_recover_time_children,
-									this.infected_to_recover_chance_adult,
-									this.infected_to_recover_chance_children,
-									this.exposed_to_infected_time_adult,
-									this.exposed_to_infected_time_children,
-									this.time % DAY);
+		// stohasticly change states
+		for (var memberIndex = 0; memberIndex < this.population.members.length; memberIndex++)
+		{
+			var member = this.population.members[memberIndex];
+			// update member's time
+			member.addTime(deltaTime);
+			
+			// check if move from I^s or I^a to R or D
+			member.tryRecover(this.infected_to_recover_time_adult,
+							this.infected_to_recover_time_children,
+							this.infected_to_recover_chance_adult,
+							this.infected_to_recover_chance_children,
+							this.exposed_to_infected_time_adult,
+							this.exposed_to_infected_time_children);
+			
+			// move person around
+			var memberFromToLocation = this.population.members[memberIndex].moveAround(this.time % DAY);
+			this.indoor.updateMemberLocation(memberFromToLocation); // let the graph know that
+		}
 		
 		// update the time to the next day
 		this.time += deltaTime;
@@ -174,9 +198,6 @@ class Simulator
 			// find member and count event
 			var member = this.population.members[memberIndex];
 			member.addTime(STEP_TIME_INTERVAL);
-			
-			// move person around
-			member.moveAround(timeOfTheDay);
 		
 			// check if move from I^s or I^a to R or D
 			member.tryRecover(this.infected_to_recover_time_adult,
@@ -185,6 +206,10 @@ class Simulator
 								this.infected_to_recover_chance_children,
 								this.exposed_to_infected_time_adult,
 								this.exposed_to_infected_time_children);
+			
+			// move person around
+			var memberFromToLocation = member.moveAround(timeOfTheDay);
+			this.indoor.updateMemberLocation(memberFromToLocation); // let the graph know that
 			
 			// try to infected if needed... recover and dead does not change, infected handled already in the last step, just manage STATE_S
 			if (member.state == STATE_S)
@@ -201,6 +226,9 @@ class Simulator
 				
 				// get the infection chance for this meeting
 				let infectChance = Math.random();
+				
+				// check the location the members are at, if it change something
+				var roomDensity = this.indoor.getNodeDensity(member.location - 1);
 				
 				// TODO: add later the masks logic
 				/*
@@ -307,6 +335,10 @@ class Simulator
 		document.getElementById("this_c_ia").innerHTML = popDist["c_ai"];
 		document.getElementById("this_c_r").innerHTML = popDist["c_r"];
 		document.getElementById("this_c_d").innerHTML = popDist["c_d"];
+		
+		
+		// print distrebution of the population in rooms graph
+		drawDistrebutionPerLocationGraph(this.indoor.getPopulationDistrebution(this.population.size()));
 	}
 	
 	// get the data about the pop distrebution in some location

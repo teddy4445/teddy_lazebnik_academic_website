@@ -340,45 +340,45 @@
 							</div>
 					</div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="game-info-holder" style="text-align: center";>
-							<!-- simulation view -->
-							<div id="game-info">
-								<h4 id="this_node_name"></h4>
-								<div class="table-responsive">
-								  <table class="table table-hover">
-									  <thead>
-										<tr>
-										  <th scope="col">X</th>
-										  <th scope="col">Susceptible</th>
-										  <th scope="col">Exposed</th>
-										  <th scope="col">Infected asymptomatic</th>
-										  <th scope="col">Infected symptomatic</th>
-										  <th scope="col">Recovered</th>
-										  <th scope="col">Dead</th>
-										</tr>
-									  </thead>
-									  <tbody>
-										<tr>
-										  <th scope="row">Children</th>
-										  <td id="this_c_s">0</td>
-										  <td id="this_c_e">0</td>
-										  <td id="this_c_is">0</td>
-										  <td id="this_c_ia">0</td>
-										  <td id="this_c_r">0</td>
-										  <td id="this_c_d">0</td>
-										</tr>
-										<tr>
-										  <th scope="row">Adult</th>
-										  <td id="this_a_s">0</td>
-										  <td id="this_a_e">0</td>
-										  <td id="this_a_is">0</td>
-										  <td id="this_a_ia">0</td>
-										  <td id="this_a_r">0</td>
-										  <td id="this_a_d">0</td>
-										</tr>
-									  </tbody>
-									</table>
-								</div>
+						<!-- simulation view -->
+						<div id="game-info">
+							<h4 id="this_node_name"></h4>
+							<div class="table-responsive">
+							  <table class="table table-hover">
+								  <thead>
+									<tr>
+									  <th scope="col">X</th>
+									  <th scope="col">Susceptible</th>
+									  <th scope="col">Exposed</th>
+									  <th scope="col">Infected asymptomatic</th>
+									  <th scope="col">Infected symptomatic</th>
+									  <th scope="col">Recovered</th>
+									  <th scope="col">Dead</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <th scope="row">Children</th>
+									  <td id="this_c_s">0</td>
+									  <td id="this_c_e">0</td>
+									  <td id="this_c_is">0</td>
+									  <td id="this_c_ia">0</td>
+									  <td id="this_c_r">0</td>
+									  <td id="this_c_d">0</td>
+									</tr>
+									<tr>
+									  <th scope="row">Adult</th>
+									  <td id="this_a_s">0</td>
+									  <td id="this_a_e">0</td>
+									  <td id="this_a_is">0</td>
+									  <td id="this_a_ia">0</td>
+									  <td id="this_a_r">0</td>
+									  <td id="this_a_d">0</td>
+									</tr>
+								  </tbody>
+								</table>
 							</div>
+						</div>
 					</div>
                 </div>
                 <div class="row spacer">
@@ -423,14 +423,20 @@
 					</div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="graphs-holder">
 						<!-- analysis and graphs view  -->
-						<h4>State's distrebution over time</h4>
 								
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h4>Population distrebution in the location</h4>
+							<div id="distrebutionPerLocationGraph">
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h4>Normalized state's distrebution</h4>
 							<div id="locationStateBarGraph">
 							  
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h4>State's distrebution over time</h4>
 							<div id="stateGraph">
 							  
 							</div>

@@ -60,7 +60,7 @@
 							"description": "",
 							"type": "video"
 						}]
-					}
+						}
 					},
 					{
 					"title": "C++ Advanced",
@@ -127,7 +127,19 @@
 							"type": "video"
 						}]
 					}
-				}
+				},
+				{
+					"title": "Advanced Programming Topics",
+					"explanation": "An introduction to advanced programming concepts which are not just about coding",
+					"resources": {
+						"Lectures":[{
+							"name": "Software development methodologies and patterns",
+							"link": "https://www.youtube.com/watch?v=6QYRZr3v6bo",
+							"description": "Very improtant from students that want to find job after first degree in CS",
+							"type": "video"
+						}]
+						}
+					}
 			],
 			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
 		},{
