@@ -233,4 +233,9 @@ background: linear-gradient(0deg, rgba(25,84,10,1) 0%, rgba(199,255,194,1) 100%)
 	color: white;
 }
 
+.demo-link{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
 /* end - game button */
