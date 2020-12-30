@@ -1,3 +1,5 @@
+OUT_OF_GRAPH_LOCATION = 0;
+
 class Graph
 {
 	constructor(nodes = [], edges = [])
@@ -78,11 +80,11 @@ class Graph
 	
 	updateMemberLocation(fromToMember)
 	{
-		if (fromToMember[0] != 0)
+		if (fromToMember[0] != OUT_OF_GRAPH_LOCATION)
 		{
 			this.nodes[fromToMember[0]-1].populationCount--;	
 		}
-		if (fromToMember[1] != 0)
+		if (fromToMember[1] != OUT_OF_GRAPH_LOCATION)
 		{
 			this.nodes[fromToMember[1]-1].populationCount++;	
 		}
@@ -136,6 +138,39 @@ class Graph
 	}
 	
 	// end - help function //
+	
+	// visualization help functions //
+	
+	getPlotWidth()
+	{
+		var answer = 0;
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			var width = this.nodes[i].getPlotWidth();
+			if (width > answer)
+			{
+				answer = width;
+			}
+		}
+		return answer;
+	}
+	
+	getPlotHeight()
+	{
+		var answer = 0;
+		for (var i = 0; i < this.nodes.length; i++)
+		{
+			var height = this.nodes[i].getPlotHeight();
+			if (height > answer)
+			{
+				answer = height;
+			}
+		}
+		return answer;
+	}
+	
+	// end - visualization help functions //
+	
 }
 
 /* Graph's edge */
@@ -230,9 +265,41 @@ class Node
 		this.polyPoints.forEach(pt => vertex(pt.x, pt.y));
 		endShape(CLOSE);
 		fill(25);
-		textSize(16);
+		textSize(12);
 		text(this.name, this.center.x, this.center.y);
 	}
+	
+	// visualization help functions //
+	
+	getPlotWidth()
+	{
+		var answer = 0;
+		for (var i = 0; i < this.polyPoints.length; i++) 
+		{
+			var width = this.polyPoints[i].x;
+			if (width > answer)
+			{
+				answer = width;
+			}
+		}
+		return answer;
+	}
+	
+	getPlotHeight()
+	{
+		var answer = 0;
+		for (var i = 0; i < this.polyPoints.length; i++) 
+		{
+			var height = this.polyPoints[i].y;
+			if (height > answer)
+			{
+				answer = height;
+			}
+		}
+		return answer;
+	}
+	
+	// end - visualization help functions //
 	
 	// help functions //
 	

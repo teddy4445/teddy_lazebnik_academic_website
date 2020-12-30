@@ -64,24 +64,24 @@ class Simulator
 			throw "Cannot build simulator from the data provided in the file - please make sure format is right and all the data provided with the inner error: " + error;
 		}
 		
+		// just for good view, update the canvas size to fit the print
+		resizeCanvas(this.indoor.getPlotWidth(), this.indoor.getPlotHeight());
+		
 		// find meta propertise
 		var maxOutValue = 0;
 		for (var memberIndex = 0; memberIndex < this.population.members.length; memberIndex++)
 		{
 			var memberDayPlan = this.population.members[memberIndex].dayPlan;
-			for (var i = 0; i < memberDayPlan.length; i++)
+			if (memberDayPlan[memberDayPlan.length-1][0] == OUT_OF_GRAPH_LOCATION && maxOutValue < memberDayPlan[memberDayPlan.length-1][1])
 			{
-				if (memberDayPlan[i][0] == 0 && maxOutValue < memberDayPlan[i][1])
-				{
-					maxOutValue = memberDayPlan[i][1];
-				}
+				maxOutValue = memberDayPlan[memberDayPlan.length-1][1];
 			}
 			
 			// not right place but optimize the number of times we run on the population //
 			// allocate population to the graph
 			try
 			{
-				if (this.population.members[memberIndex].location != 0)
+				if (this.population.members[memberIndex].location != OUT_OF_GRAPH_LOCATION)
 				{
 					this.indoor.nodes[this.population.members[memberIndex].location - 1].populationCount++;		
 				}
@@ -90,6 +90,11 @@ class Simulator
 			{
 				console.log("Error allocating individual: " + this.population.members[memberIndex].toString());
 			}
+		}
+		// if not max out value found, this is all day long so there is no hyper jump
+		if (maxOutValue == 0)
+		{
+			maxOutValue = DAY;
 		}
 		this.hyperJumpTime = maxOutValue;
 		
@@ -212,7 +217,7 @@ class Simulator
 			this.indoor.updateMemberLocation(memberFromToLocation); // let the graph know that
 			
 			// try to infected if needed... recover and dead does not change, infected handled already in the last step, just manage STATE_S
-			if (member.state == STATE_S)
+			if (member.state == STATE_S && member.location != OUT_OF_GRAPH_LOCATION)
 			{
 				// TODO: do better, find inside a population
 				// pick in random a person to meet within the population
