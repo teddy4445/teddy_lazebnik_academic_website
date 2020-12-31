@@ -212,6 +212,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="fps" title="Frames Per Second">
+                                        <b>Show Heat Map? (1-yes, 0-no)</b>
+                                    </label>
+                                    <input class="form-control" id="graph_show_heatmap" max="1" min="0" placeholder="Show Heat Map? (1-yes, 0-no)" required="" type="number" value="1" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="graph_samples">
+                                        <b>In map population's states breakdown? (1-yes, 0-no)</b>
+                                    </label>
+                                    <input class="form-control" id="graph_show_breakdown" max="1" min="0" placeholder="In map population's states breakdown? (1-yes, 0-no)?" required="" type="number" value="1" />
+                                </div>
+                            </div>
+                        </div>
 						
 						<!--
                         <div class="row">
@@ -253,47 +272,6 @@
 							<!-- simulation view -->
 							<div id="simCanvas">
 							</div>
-					</div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 spacer-1" id="game-info-holder" style="text-align: center";>
-						<!-- simulation view -->
-						<div id="game-info">
-							<h4 id="this_node_name"></h4>
-							<div class="table-responsive">
-							  <table class="table table-hover">
-								  <thead>
-									<tr>
-									  <th scope="col">X</th>
-									  <th scope="col">Susceptible</th>
-									  <th scope="col">Exposed</th>
-									  <th scope="col">Infected asymptomatic</th>
-									  <th scope="col">Infected symptomatic</th>
-									  <th scope="col">Recovered</th>
-									  <th scope="col">Dead</th>
-									</tr>
-								  </thead>
-								  <tbody>
-									<tr>
-									  <th scope="row">Children</th>
-									  <td id="this_c_s">0</td>
-									  <td id="this_c_e">0</td>
-									  <td id="this_c_is">0</td>
-									  <td id="this_c_ia">0</td>
-									  <td id="this_c_r">0</td>
-									  <td id="this_c_d">0</td>
-									</tr>
-									<tr>
-									  <th scope="row">Adult</th>
-									  <td id="this_a_s">0</td>
-									  <td id="this_a_e">0</td>
-									  <td id="this_a_is">0</td>
-									  <td id="this_a_ia">0</td>
-									  <td id="this_a_r">0</td>
-									  <td id="this_a_d">0</td>
-									</tr>
-								  </tbody>
-								</table>
-							</div>
-						</div>
 					</div>
                 </div>
                 <div class="row spacer">

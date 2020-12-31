@@ -16,10 +16,9 @@ let uploadJsonContent;
 
 // global instance of the simultor 
 let sim; 
-let locationInfoToShow = 0; 
 
 // view style parameters
-let showDistrebutionStyle = "graph"; // can be heat_map
+let BG_COLOR = [238, 238, 238];
 
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
@@ -48,8 +47,6 @@ function startSimulation()
 	try
 	{
 		sim.startSimulation();	
-		// pick the first node to show the data
-		locationInfoToShow = sim.indoor.nodes[0].id;
 	}
 	catch (error)
 	{
@@ -92,11 +89,11 @@ function draw()
 	// print the indoor with the population distrebution inside
 	if (showDraw)
 	{
-		background("#eeeeee");
+		background(BG_COLOR);
 		sim.printIndoor();
 		showDraw = false;
 	}
-	sim.print(locationInfoToShow);
+	sim.print();
 	
 	// calc graph needed data and update it 
 	if (sim.time % (graph_sample * HOUR) == 0)
@@ -150,10 +147,22 @@ function mouseClicked()
 		return NOT_CHOSEN;
 	}
 	
-	let newLocation = clickOnNextPossibleLocation(nowMouseX, nowMouseY);
-	if (newLocation != NOT_CHOSEN)
+	if (runStarted)
 	{
-		locationInfoToShow = newLocation;
+		runStarted = false;
+		background(BG_COLOR);
+		fill(0);
+		strokeWeight(0);
+		textSize(22);
+		text("PAUSE SIMULATION", canvasWidth/2, canvasHeight/2);
+		noLoop();
+	}
+	else
+	{
+		runStarted = true;
+		background(BG_COLOR);
+		sim.printIndoor();
+		loop();
 	}
 }
 
@@ -190,13 +199,17 @@ function mixedColor(colors, weights)
 	Object.entries(weights).forEach(([key, count]) => {
 	   total += count;
 	});
-	Object.entries(colors).forEach(([key, color]) => {
-		for (var channel = 0; channel < 3; channel++)
-		{
-			answerColor[channel] += color[channel] * weights[key] / total;	
-		}
-	});
-	return answerColor;
+	if (total != 0)
+	{	
+		Object.entries(colors).forEach(([key, color]) => {
+			for (var channel = 0; channel < 3; channel++)
+			{
+				answerColor[channel] += color[channel] * weights[key] / total;	
+			}
+		});	
+		return answerColor;
+	}
+	return BG_COLOR;
 }
 
 // color on background

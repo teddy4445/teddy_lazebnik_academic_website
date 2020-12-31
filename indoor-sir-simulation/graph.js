@@ -62,7 +62,7 @@ class Graph
 		// print all nodes as polygons
 		for (var i = 0; i < this.nodes.length; i++)
 		{
-			this.nodes[i].print();
+			this.nodes[i].print({"none": 0});
 		}
 		// print the edges  between the locations
 		for (var i = 0; i < this.edges.length; i++)
@@ -192,7 +192,7 @@ class Edge
 	
 	print()
 	{
-		stroke(0);
+		stroke(25);
 		strokeWeight(2);
 		line(this.center_1[0], this.center_1[1], this.center_2[0], this.center_2[1]);
 	}
@@ -229,6 +229,7 @@ class Node
 		
 		var first = polyPoints[0];
 		var last = polyPoints[polyPoints.length-1];
+		var minY = first.y;
 		if (first.x != last.x || first.y != last.y) 
 		{
 			polyPoints.push(first);
@@ -247,9 +248,19 @@ class Node
 			twicearea += f;
 			x += ( p1.x + p2.x ) * f;
 			y += ( p1.y + p2.y ) * f;
+			
+			if (p1.y < minY)
+			{
+				minY = p1.y;
+			}
+			if (p2.y < minY)
+			{
+				minY = p2.y;
+			}
 		}
 		f = twicearea * 3;
 		this.center = createVector(x/f, y/f); 
+		this.upperY = minY;
 	}
 	
 	density()
@@ -261,17 +272,40 @@ class Node
 		throw "node with name '" + this.name + "' has negative or zero volume";
 	}
 	
-	print(color = [250, 250, 250])
-	{    
+	print(popDist, is_detailed = false)
+	{
+		var color = mixedColor(COLORS, popDist);
 		stroke(25);
+		strokeWeight(2);
 		fill(color[0], color[1], color[2]);
-		strokeWeight(1);
 		beginShape();
 		this.polyPoints.forEach(pt => vertex(pt.x, pt.y));
 		endShape(CLOSE);
-		fill(colorOnBackground(color));
+		var textColor = colorOnBackground(color);
+		fill(textColor);
+		stroke(textColor);
 		textSize(12);
-		text(this.name, this.center.x, this.center.y);
+		strokeWeight(0);
+		if (is_detailed)
+		{
+			text(this.name, this.center.x, this.upperY + 14);
+		}
+		else
+		{
+			text(this.name, this.center.x, this.center.y);
+		}
+	}
+	
+	printDetailed(popDist)
+	{
+		this.print(popDist, true);
+		textSize(8);
+		var yDelta = 10;
+		var textCount = 1;
+		Object.entries(popDist).forEach(([key, count]) => {
+		   text(key + ": " + count, this.center.x, this.upperY + 14 + textCount * yDelta);
+		   textCount++;
+		});
 	}
 	
 	// visualization help functions //

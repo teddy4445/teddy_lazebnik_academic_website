@@ -16,6 +16,10 @@ class Simulator
 		this.statesGraphData = [];
 		this.statesNormalizedBarGraphData = [];
 		
+		// show process members
+		this.showHeatmap = false;
+		this.showBreakDownGraph = false;
+		
 		// simulator paramaters members //
 		this.a_a_t_c;
 		this.c_a_t_c;
@@ -54,6 +58,9 @@ class Simulator
 		this.exposed_to_infected_time_adult = HOUR * this.limitFix(parseFloat(document.getElementById("exposed_to_infected_time_adult").value), 1,  24*365);
 		this.exposed_to_infected_time_children = HOUR * this.limitFix(parseFloat(document.getElementById("exposed_to_infected_time_children").value), 1, 24*365);
 		
+		this.showHeatmap = parseInt(document.getElementById("graph_show_heatmap").value) == 1;
+		this.showBreakDownGraph = parseInt(document.getElementById("graph_show_breakdown").value) == 1;
+		
 		try
 		{
 			this.population.buildPopulationFromFile(uploadJsonContent["population"]);
@@ -65,7 +72,9 @@ class Simulator
 		}
 		
 		// just for good view, update the canvas size to fit the print
-		resizeCanvas(this.indoor.getPlotWidth(), this.indoor.getPlotHeight());
+		canvasHeight = this.indoor.getPlotHeight();
+		canvasWidth = this.indoor.getPlotWidth();
+		resizeCanvas(canvasWidth, canvasHeight);
 		
 		// find meta propertise
 		var maxOutValue = 0;
@@ -302,7 +311,7 @@ class Simulator
 	}
 	
 	// print the population data
-	print(locationInfoToShow = 1)
+	print()
 	{	
 		// update the simulation time view
 		var day = Math.floor(this.time / DAY);
@@ -325,31 +334,30 @@ class Simulator
 		document.getElementById("now_c_r").innerHTML = popDist["c_r"];
 		document.getElementById("now_c_d").innerHTML = popDist["c_d"];
 		
-		// update the card for a spesific node
-		var popDist = this.population.countStatusDestrebutionInLocation(locationInfoToShow);
-		document.getElementById("this_node_name").innerHTML = "Distrebution in " + this.indoor.getNodeName(locationInfoToShow);
-		document.getElementById("this_a_s").innerHTML = popDist["a_s"];
-		document.getElementById("this_a_e").innerHTML = popDist["a_e"];
-		document.getElementById("this_a_is").innerHTML = popDist["a_si"];
-		document.getElementById("this_a_ia").innerHTML = popDist["a_ai"];
-		document.getElementById("this_a_r").innerHTML = popDist["a_r"];
-		document.getElementById("this_a_d").innerHTML = popDist["a_d"];
-		document.getElementById("this_c_s").innerHTML = popDist["c_s"];
-		document.getElementById("this_c_e").innerHTML = popDist["c_e"];
-		document.getElementById("this_c_is").innerHTML = popDist["c_si"];
-		document.getElementById("this_c_ia").innerHTML = popDist["c_ai"];
-		document.getElementById("this_c_r").innerHTML = popDist["c_r"];
-		document.getElementById("this_c_d").innerHTML = popDist["c_d"];
 		
 		// print distrebution of the population in rooms graph
 		drawDistrebutionPerLocationGraph(this.indoor.getPopulationDistrebution(this.population.size()));
 		
 		// draw distrebution thing
-		var nodesCount = this.indoor.getNodesCount();
-		for (var nodeIndex = 0; nodeIndex < nodesCount; nodeIndex++)
+		if (this.showHeatmap)
 		{
-			var popDist = this.population.countStatusDestrebutionInLocation(this.indoor.nodes[nodeIndex].id);
-			this.indoor.nodes[nodeIndex].print(mixedColor(COLORS, popDist));
+			var nodesCount = this.indoor.getNodesCount();
+			for (var nodeIndex = 0; nodeIndex < nodesCount; nodeIndex++)
+			{
+				var popDist = this.population.countStatusDestrebutionInLocation(this.indoor.nodes[nodeIndex].id);
+				if (this.showBreakDownGraph)
+				{
+					this.indoor.nodes[nodeIndex].printDetailed(popDist);	
+				}
+				else
+				{
+					this.indoor.nodes[nodeIndex].print(popDist);	
+				}
+			}
+			for (var edgeIndex = 0; edgeIndex < this.indoor.edges.length; edgeIndex++)
+			{
+				this.indoor.edges[edgeIndex].print();
+			}
 		}
 	}
 	
