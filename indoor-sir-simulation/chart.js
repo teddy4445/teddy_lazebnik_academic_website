@@ -2,6 +2,19 @@ google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.load("current", {packages:['corechart']});
 
+let COLORS = {"a_s": [15,157,88],
+				"a_e": [244,180,0],
+				"a_si": [219,68,55],
+				"a_ai": [255,51,55],
+				"a_r": [66,133,244],
+				"a_d": [17,34,17],
+				"c_s": [15,255,68],
+				"c_e": [246,195,50],
+				"c_si": [238,68,55],
+				"c_ai": [221,51,68],
+				"c_r": [84,102,255],
+				"c_d": [17,8,17]}
+
 function drawAll()
 {
 	drawStateDistrebution();
@@ -15,17 +28,17 @@ function drawLocationStateDistrebution()
 	var data = google.visualization.arrayToDataTable([
          ['Population', 'Percent Of the Population', { role: 'style' }],
          ['Susceptible Adult', sim.statesNormalizedBarGraphData[0], '#0F9D58'],         
-         ['Exposed Adult', sim.statesNormalizedBarGraphData[1], '#F4B400'],            
+         ['Exposed Adult', sim.statesNormalizedBarGraphData[1], '#ac8823'],            
          ['Symptomatic Infected Adult', sim.statesNormalizedBarGraphData[2], '#DB4437'],  
          ['Aymptomatic Infected Adult', sim.statesNormalizedBarGraphData[3], '#FF3337'],
          ['Recovered Adult', sim.statesNormalizedBarGraphData[4], '#4285F4'],
          ['Dead Adult', sim.statesNormalizedBarGraphData[5], '#112211'],
          ['Susceptible Children', sim.statesNormalizedBarGraphData[6], '#0FFF44'],         
-         ['Exposed Children', sim.statesNormalizedBarGraphData[7], '#0FBD68'],            
+         ['Exposed Children', sim.statesNormalizedBarGraphData[7], '#F6C332'],            
          ['Symptomatic Infected Children', sim.statesNormalizedBarGraphData[8], '#EE4437'],  
          ['Aymptomatic Infected Children', sim.statesNormalizedBarGraphData[9], '#DD3344'],
-         ['Recovered Children', sim.statesNormalizedBarGraphData[10], '#4255FF'],
-         ['Dead Children', sim.statesNormalizedBarGraphData[11], '#221122']
+         ['Recovered Children', sim.statesNormalizedBarGraphData[10], '#5466FF'],
+         ['Dead Children', sim.statesNormalizedBarGraphData[11], '#110811']
 	]);
 
 	var view = new google.visualization.DataView(data);
@@ -103,7 +116,7 @@ function drawStateDistrebution()
         vAxis: {
 			title: 'Count'
         },
-		colors: ['#0F9D58', '#F4B400', '#DB4437', '#FF3337', '#4285F4', '#112211', '#0FFF44', '#0FBD68', '#EE4437', '#DD3344', '#4255FF', '#221122'],
+		colors: ['#0F9D58', '#ac8823', '#DB4437', '#FF3337', '#4285F4', '#112211', '#0FFF44', '#F6C332', '#EE4437', '#DD3344', '#5466FF', '#110811'],
 		series: {
 			0: { lineDashStyle: [4, 4] },
 			1: { lineDashStyle: [4, 4] },

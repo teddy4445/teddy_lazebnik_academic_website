@@ -341,9 +341,16 @@ class Simulator
 		document.getElementById("this_c_r").innerHTML = popDist["c_r"];
 		document.getElementById("this_c_d").innerHTML = popDist["c_d"];
 		
-		
 		// print distrebution of the population in rooms graph
 		drawDistrebutionPerLocationGraph(this.indoor.getPopulationDistrebution(this.population.size()));
+		
+		// draw distrebution thing
+		var nodesCount = this.indoor.getNodesCount();
+		for (var nodeIndex = 0; nodeIndex < nodesCount; nodeIndex++)
+		{
+			var popDist = this.population.countStatusDestrebutionInLocation(this.indoor.nodes[nodeIndex].id);
+			this.indoor.nodes[nodeIndex].print(mixedColor(COLORS, popDist));
+		}
 	}
 	
 	// get the data about the pop distrebution in some location

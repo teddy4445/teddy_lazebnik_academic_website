@@ -18,6 +18,9 @@ let uploadJsonContent;
 let sim; 
 let locationInfoToShow = 0; 
 
+// view style parameters
+let showDistrebutionStyle = "graph"; // can be heat_map
+
 // ------------------- END OF GLOBAL VARS ------------------------ // 
 
 // setup all the simulation before starting 
@@ -177,6 +180,35 @@ function clickOnNextPossibleLocation(checkX, checkY)
 /* END - VIZUAL FUNCTIONS */
 
 /* HELP FUNCTIONS */
+
+// mixed color found
+function mixedColor(colors, weights)
+{
+	let keys = Object.keys(colors);
+	var answerColor = [0, 0, 0];
+	var total = 0;
+	Object.entries(weights).forEach(([key, count]) => {
+	   total += count;
+	});
+	Object.entries(colors).forEach(([key, color]) => {
+		for (var channel = 0; channel < 3; channel++)
+		{
+			answerColor[channel] += color[channel] * weights[key] / total;	
+		}
+	});
+	return answerColor;
+}
+
+// color on background
+function colorOnBackground(backgroundColor)
+{
+	var grayScale = Math.sqrt(backgroundColor[0] * backgroundColor[0] + backgroundColor[1] * backgroundColor[1] + backgroundColor[2] * backgroundColor[2]);
+	if (grayScale > 122)
+	{
+		return [25, 25, 25];
+	}
+	return [220, 220, 220];	
+}
 
 // download a .txt file into your computer
 function downloadasTextFile(filename, text) 

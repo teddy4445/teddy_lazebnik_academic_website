@@ -95,6 +95,11 @@ class Graph
 		return this.nodes[nodeIndex].density();
 	}
 	
+	getNodesCount()
+	{
+		return this.nodes.length;
+	}
+	
 	// end - logical functions //
 	
 	// help function //
@@ -256,15 +261,15 @@ class Node
 		throw "node with name '" + this.name + "' has negative or zero volume";
 	}
 	
-	print()
+	print(color = [250, 250, 250])
 	{    
 		stroke(25);
-		fill(250);
+		fill(color[0], color[1], color[2]);
 		strokeWeight(1);
 		beginShape();
 		this.polyPoints.forEach(pt => vertex(pt.x, pt.y));
 		endShape(CLOSE);
-		fill(25);
+		fill(colorOnBackground(color));
 		textSize(12);
 		text(this.name, this.center.x, this.center.y);
 	}
@@ -298,6 +303,8 @@ class Node
 		}
 		return answer;
 	}
+	
+	
 	
 	// end - visualization help functions //
 	
