@@ -14,7 +14,11 @@ let STATE_D = 7;
 /* An agent (individual) in the population */
 class Member
 {
-	constructor(age, state, location, dayPlan, stateTime = 0)
+	constructor(age, 
+				state, 
+				location, 
+				dayPlan, 
+				stateTime = 0)
 	{
 		// time at each state
 		this.stateTime = stateTime;
@@ -86,13 +90,21 @@ class Member
 	moveAround(timeOfDay)
 	{
 		var fromToMove = [this.location];
-		for (var i = 0; i < this.dayPlan.length; i++)
+		// if the people are dead so they move out of the geometry
+		if (this.state == STATE_D)
 		{
-			if (this.dayPlan[i][1] <= timeOfDay && timeOfDay < this.dayPlan[i][2])
+			for (var i = 0; i < this.dayPlan.length; i++)
 			{
-				this.location = this.dayPlan[i][0];
-				break;
+				if (this.dayPlan[i][1] <= timeOfDay && timeOfDay < this.dayPlan[i][2])
+				{
+					this.location = this.dayPlan[i][0];
+					break;
+				}
 			}
+		}
+		else
+		{
+			this.location = OUT_OF_GRAPH_LOCATION;
 		}
 		fromToMove.push(this.location);
 		return fromToMove;
