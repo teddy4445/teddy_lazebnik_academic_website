@@ -117,7 +117,7 @@ function drawRzeroGraph()
 	var data = new google.visualization.DataTable();
 	data.addColumn('number', 'X');
 	data.addColumn('number', 'R_0');
-	data.addColumn('number', 'Outbreak trashold');
+	data.addColumn('number', 'Outbreak threshold');
 
 	data.addRows(rzeroGraphData);
 

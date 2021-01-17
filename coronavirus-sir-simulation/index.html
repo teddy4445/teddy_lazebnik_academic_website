@@ -64,7 +64,7 @@
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="susceptible_adults_percent" title="Initial Susceptible Adult ">
-			  Initial Susceptible Adult 
+			  Initial Susceptible Adult  Population Size
 			 </label>
 			 <input class="form-control" id="susceptible_adults_percent" min="0" placeholder="Initial Susceptible Adult " required="" type="number" value="719"/>
 			</div>
@@ -72,7 +72,7 @@
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="infected_adults_percent">
-			  Initial Infected Adult 
+			  Initial Infected Adult  Population Size
 			 </label>
 			 <input class="form-control" id="infected_adults_percent" min="0" placeholder="Initial Infected Adult " required="" type="number" value="1" />
 			</div>
@@ -80,7 +80,7 @@
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="recover_adults_percent">
-			  Initial Recovered Adult 
+			  Initial Recovered Adult  Population Size
 			 </label>
 			 <input class="form-control" id="recover_adults_percent" placeholder="Initial Recovered Adult " required="" type="number" value="0" disabled />
 			</div>
@@ -91,7 +91,7 @@
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="children_pop_size" title="Children Population Size">
-			  Children Population Size
+			  Children Population Size Population Size
 			 </label>
 			 <input class="form-control" id="children_pop_size" min="1" placeholder="Children Population Size" required="" type="number" value="280"/>
 			</div>
@@ -99,7 +99,7 @@
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="susceptible_children_percent" title="Initial Susceptible Children ">
-			  Initial Susceptible Children 
+			  Initial Susceptible Children  Population Size
 			 </label>
 			 <input class="form-control" id="susceptible_children_percent" min="0" placeholder="Initial Susceptible Children " required="" type="number" value="280"/>
 			</div>
@@ -107,7 +107,7 @@
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="infected_children_percent">
-			  Initial Infected Children 
+			  Initial Infected Children  Population Size
 			 </label>
 			 <input class="form-control" id="infected_children_percent" min="0" placeholder="Initial Infected Children " required="" type="number" value="0" />
 			</div>
@@ -115,7 +115,7 @@
 		   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="recover_children_percent">
-			  Initial Recovered Children 
+			  Initial Recovered Children  Population Size
 			 </label>
 			 <input class="form-control" id="recover_children_percent" min="0" placeholder="Initial Recovered Children " required="" type="number" value="0" disabled />
 			</div>
@@ -153,17 +153,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="a_a_t_c" title="Adult to Adult Transform Chance">
-			  Adult to Adult Transform Chance
+			  Adult to Adult Transform Likelihood (in percentage)
 			 </label>
-			 <input class="form-control" id="a_a_t_c" max="100" min="0" placeholder="Adult to Adult Transform Chance" required="" type="number" value="31"/>
+			 <input class="form-control" id="a_a_t_c" max="100" min="0" placeholder="Adult to Adult Transform Likelihood" required="" type="number" value="31"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="a_c_t_c">
-			  Adult to Children Transform Chance
+			  Adult to Children Transform Likelihood (in percentage)
 			 </label>
-			 <input class="form-control" id="a_c_t_c" max="100" min="0" placeholder="Adult to Children Transform Chance" required="" type="number" value="0" />
+			 <input class="form-control" id="a_c_t_c" max="100" min="0" placeholder="Adult to Children Transform Likelihood" required="" type="number" value="0" />
 			</div>
 		   </div>
 		  </div>
@@ -171,18 +171,18 @@
 		  <div class="row">
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="c_c_t_c" title=" Children to Children Transform Chance">
-			  Children to Children Transform Chance
+			 <label for="c_c_t_c" title=" Children to Children Transmission Chance">
+			  Children to Children Transmission Likelihood (in percentage)
 			 </label>
-			 <input class="form-control" id="c_c_t_c" max="100" min="0" placeholder="Children to Children Transform Chance" required="" type="number" value="31"/>
+			 <input class="form-control" id="c_c_t_c" max="100" min="0" placeholder="Children to Children Transmission Likelihood" required="" type="number" value="31"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="c_a_t_c">
-			  Children to Adult Transform Chance
+			  Children to Adult Transmission Likelihood (in percentage)
 			 </label>
-			 <input class="form-control" id="c_a_t_c" max="100" min="0" placeholder="Children to Adult Transform Chance" required="" type="number" value="27" />
+			 <input class="form-control" id="c_a_t_c" max="100" min="0" placeholder="Children to Adult Transmission Likelihood" required="" type="number" value="27" />
 			</div>
 		   </div>
 		  </div>
@@ -191,17 +191,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_at_home" title="Time At Home">
-			  Time At Home (adults)
+			  Time At Home In Hours (adults)
 			 </label>
-			 <input class="form-control" id="time_at_home_a" max="24" min="0" placeholder="Time At Home in hours" required="" type="number" value="12"/>
+			 <input class="form-control" id="time_at_home_a" max="24" min="0" placeholder="Time At Home In Hours" required="" type="number" value="12"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_not_at_home">
-			  Time At Work (adults)
+			  Time At Work In Hours (adults)
 			 </label>
-			 <input class="form-control" id="time_not_at_home_a" max="24" min="0" placeholder="Time At Work \ School in hours" required="" type="number" value="12" disabled />
+			 <input class="form-control" id="time_not_at_home_a" max="24" min="0" placeholder="Time At Work \ School In Hours" required="" type="number" value="12" disabled />
 			</div>
 		   </div>
 		  </div>
@@ -210,17 +210,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_at_home" title="Time At Home">
-			  Time At Home (children)
+			  Time At Home In Hours (children)
 			 </label>
-			 <input class="form-control" id="time_at_home_c" max="24" min="0" placeholder="Time At Home in hours" required="" type="number" value="12"/>
+			 <input class="form-control" id="time_at_home_c" max="24" min="0" placeholder="Time At Home In Hours" required="" type="number" value="12"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_not_at_home">
-			  Time At School (children)
+			  Time At School In Hours (children)
 			 </label>
-			 <input class="form-control" id="time_not_at_home_c" max="24" min="0" placeholder="Time At Work \ School in hours" required="" type="number" value="12" disabled />
+			 <input class="form-control" id="time_not_at_home_c" max="24" min="0" placeholder="Time At Work \ School In Hours" required="" type="number" value="12" disabled />
 			</div>
 		   </div>
 		  </div>
@@ -247,18 +247,18 @@
 		  <div class="row">
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="pra" title="Adult Infected To Recovered Chance">
-			  Adult Infected To Recovered Chance 
+			 <label for="pra" title="Adult Infected To Recovered Likelihood">
+			  Adult Infected To Recovered Likelihood 
 			 </label>
-			 <input class="form-control" id="pra" max="100" min="0" placeholder="Adult Infected To Recovered Cance (in percent)" required="" type="number" value="94"/>
+			 <input class="form-control" id="pra" max="100" min="0" placeholder="Adult Infected To Recovered Likelihood (in percent)" required="" type="number" value="94"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
-			 <label for="prc" title="Children Infected To Recovered Chance">
-			  Children Infected To Recovered chance 
+			 <label for="prc" title="Children Infected To Recovered Likelihood">
+			  Children Infected To Recovered Likelihood 
 			 </label>
-			 <input class="form-control" id="prc" max="100" min="0" placeholder="Children Infected To Cance (in percent)" required="" type="number" value="100"/>
+			 <input class="form-control" id="prc" max="100" min="0" placeholder="Children Infected To Likelihood (in percent)" required="" type="number" value="100"/>
 			</div>
 		   </div>
 		  </div>
@@ -267,17 +267,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="go_to_school_k_days">
-			  Each K days Children Go to School (K = )
+			  Every K'th days that children go to school (K = )
 			 </label>
-			 <input class="form-control" id="go_to_school_k_days" max="7" min="1" placeholder="Each K days Children Go to School (K=)" required="" type="number" value="1"/>
+			 <input class="form-control" id="go_to_school_k_days" max="7" min="1" placeholder="Every K'th days that children go to school (K = )" required="" type="number" value="1"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="go_to_work_k_days">
-			  Each K days Adults Go to Work (K = )
+			  Every K'th days that adults go to work (K = )
 			 </label>
-			 <input class="form-control" id="go_to_work_k_days" max="7" min="1" placeholder="Each K days Adults Go to Work (K = )" required="" type="number" value="1" />
+			 <input class="form-control" id="go_to_work_k_days" max="7" min="1" placeholder="Every K'th days that adults go to work (K = )" required="" type="number" value="1" />
 			</div>
 		   </div>
 		  </div>
@@ -294,9 +294,9 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="graph_samples">
-			  </b>Graph Sample Each Steps</b>
+			  </b>Add Sample To The Graph Each K algorithmic Steps (K=)</b>
 			 </label>
-			 <input class="form-control" id="graph_samples" max="72" min="1" placeholder="Graph Sample Each Steps" required="" type="number" value="24" />
+			 <input class="form-control" id="graph_samples" max="72" min="1" placeholder="Add Sample To The Graph Each K algorithmic Steps (K=)" required="" type="number" value="24" />
 			</div>
 		   </div>
 		  </div>
@@ -305,7 +305,7 @@
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="fps" title="Frames Per Second">
-			  <b>Rest In Shabat?</b>
+			  <b>Rest during the non-working day (Shabat)?</b>
 			 </label>
 			 <select id="rest_in_shabat"  class="form-control">
 				<option value="0"> No </option>

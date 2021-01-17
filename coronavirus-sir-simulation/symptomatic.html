@@ -26,8 +26,8 @@
 		Symptomatic and Asymptomatic Spatio-Temporal Coronavirus Stochastic Simulator
      </h2>
      <h4 class="center">
-		The following simulator shows hybrid coronavirus spreading over a population model based on SIRD model with two age-groups, two-infection sevirity levels and three locations stochastic spatial model.
-		This model extends the <a href="index.html">original</a> model by introducing two-infection sevirity levels features into the calculation. 
+		The following simulator shows hybrid coronavirus spreading over a population model based on SIRD model with two age-groups, two-infection severity levels and three locations stochastic spatial model.
+		This model extends the <a href="index.html">original</a> model by introducing two-infection severity levels features into the calculation. 
      </h4>
     </div>
    </div>
@@ -124,17 +124,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="a_a_t_c" title="Adult to Adult Transform Chance">
-			  Adult to Adult Transform Chance (percent)
+			  Adult to Adult Transform Likelihood (in percentage)
 			 </label>
-			 <input class="form-control" id="a_a_t_c" max="100" min="0" placeholder="Adult to Adult Transform Chance (percent)" required="" type="number" value="8"/>
+			 <input class="form-control" id="a_a_t_c" max="100" min="0" placeholder="Adult to Adult Transform Likelihood (in percentage)" required="" type="number" value="8"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="a_c_t_c">
-			  Adult to Children Transform Chance (percent)
+			  Adult to Children Transform Likelihood (in percentage)
 			 </label>
-			 <input class="form-control" id="a_c_t_c" max="100" min="0" placeholder="Adult to Children Transform Chance (percent)" required="" type="number" value="2" />
+			 <input class="form-control" id="a_c_t_c" max="100" min="0" placeholder="Adult to Children Transform Likelihood (in percentage)" required="" type="number" value="2" />
 			</div>
 		   </div>
 		  </div>
@@ -143,17 +143,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="c_c_t_c" title=" Children to Children Transform Chance">
-			  Children to Children Transform Chance (percent)
+			  Children to Children Transform Likelihood (in percentage)
 			 </label>
-			 <input class="form-control" id="c_c_t_c" max="100" min="0" placeholder="Children to Children Transform Chance (percent)" required="" type="number" value="6"/>
+			 <input class="form-control" id="c_c_t_c" max="100" min="0" placeholder="Children to Children Transform Likelihood (in percentage)" required="" type="number" value="6"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="c_a_t_c">
-			  Children to Adult Transform Chance (percent)
+			  Children to Adult Transform Likelihood (in percentage)
 			 </label>
-			 <input class="form-control" id="c_a_t_c" max="100" min="0" placeholder="Children to Adult Transform Chance (percent)" required="" type="number" value="2" />
+			 <input class="form-control" id="c_a_t_c" max="100" min="0" placeholder="Children to Adult Transform Likelihood (in percentage)" required="" type="number" value="2" />
 			</div>
 		   </div>
 		  </div>
@@ -168,7 +168,7 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_at_home" title="Time At Home">
-			  Time At Home (working adults)
+			  Time At Home In Hours (working adults)
 			 </label>
 			 <input class="form-control" id="time_at_home_a" max="24" min="0" placeholder="Time At Home in hours" required="" type="number" value="16"/>
 			</div>
@@ -176,7 +176,7 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_not_at_home">
-			  Time At Work (working adults)
+			  Time At Work In Hours (working adults)
 			 </label>
 			 <input class="form-control" id="time_not_at_home_a" max="24" min="0" placeholder="Time At Work \ School in hours" required="" type="number" value="8" disabled />
 			</div>
@@ -187,7 +187,7 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_at_home" title="Time At Home">
-			  Time At Home (children)
+			  Time At Home In Hours (children)
 			 </label>
 			 <input class="form-control" id="time_at_home_c" max="24" min="0" placeholder="Time At Home in hours" required="" type="number" value="19"/>
 			</div>
@@ -195,7 +195,7 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="time_not_at_home">
-			  Time At School (children)
+			  Time At School In Hours (children)
 			 </label>
 			 <input class="form-control" id="time_not_at_home_c" max="24" min="0" placeholder="Time At Work \ School in hours" required="" type="number" value="5" disabled />
 			</div>
@@ -212,17 +212,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="symptomatic_adults" >
-			  Probebility (percent) that an adult will be asymptomatic
+			  Likelihood (in percentage) that an adult will be asymptomatic
 			 </label>
-			 <input class="form-control" id="symptomatic_adults" max="100" min="0" placeholder="Probebility (percent) that an adult will be asymptomatic" required="" type="number" value="92"/>
+			 <input class="form-control" id="symptomatic_adults" max="100" min="0" placeholder="Likelihood (in percentage) that an adult will be asymptomatic" required="" type="number" value="92"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="symptomatic_child">
-			  Probebility (percent) that a child will be asymptomatic
+			  Likelihood (in percentage) that a child will be asymptomatic
 			 </label>
-			 <input class="form-control" id="symptomatic_child" max="100" min="0"  placeholder="Probebility (percent) that a child will be asymptomatic" required="" type="number" value="1"/>
+			 <input class="form-control" id="symptomatic_child" max="100" min="0"  placeholder="Likelihood (in percentage) that a child will be asymptomatic" required="" type="number" value="1"/>
 			</div>
 		   </div>
 		  </div>
@@ -237,24 +237,24 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="percent_symptomatic_goto_work" >
-			  Percent (%) of symptomatic infected adults which will go to work
+			  Percent (%) of symptomatic infected adults which goes to work
 			 </label>
-			 <input class="form-control" id="percent_symptomatic_goto_work" max="100" min="0" placeholder="Percent (%) of symptomatic infected adults which will go to work" required="" type="number" value="10"/>
+			 <input class="form-control" id="percent_symptomatic_goto_work" max="100" min="0" placeholder="Percent (%) of symptomatic infected adults which goes to work" required="" type="number" value="10"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="percent_symptomatic_goto_school">
-			  Percent (%) of symptomatic infected children which will go to school
+			  Percent (%) of symptomatic infected children which attend school
 			 </label>
-			 <input class="form-control" id="percent_symptomatic_goto_school" max="100" min="0"  placeholder="Percent (%) of symptomatic infected children which will go to school" required="" type="number" value="5"/>
+			 <input class="form-control" id="percent_symptomatic_goto_school" max="100" min="0"  placeholder="Percent (%) of symptomatic infected children which attend school" required="" type="number" value="5"/>
 			</div>
 		   </div>
 		  </div>
 		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3>Recover durations and rates</h3>
+			<h3>Recovery durations and rates</h3>
 		   </div>
 		  </div>
 		  
@@ -306,17 +306,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="go_to_school_k_days">
-			  Each K days Children Go to School (K = )
+			 Every K'th days that children go to school (K = )
 			 </label>
-			 <input class="form-control" id="go_to_school_k_days" max="7" min="1" placeholder="Each K days Children Go to School (K=)" required="" type="number" value="1"/>
+			 <input class="form-control" id="go_to_school_k_days" max="7" min="1" placeholder="Every K'th days that children go to school (K = )" required="" type="number" value="1"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="go_to_work_k_days">
-			  Each K days Adults Go to Work (K = )
+			  Every K'th days that adults go to work (K = )
 			 </label>
-			 <input class="form-control" id="go_to_work_k_days" max="7" min="1" placeholder="Each K days Adults Go to Work (K = )" required="" type="number" value="1" />
+			 <input class="form-control" id="go_to_work_k_days" max="7" min="1" placeholder="Every K'th days that adults go to work (K = )" required="" type="number" value="1" />
 			</div>
 		   </div>
 		  </div>
@@ -325,7 +325,7 @@
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="fps" title="Frames Per Second">
-			  <b>Rest In Weekend (Shabat)?</b>
+			  <b>Rest during the non-working day (Shabat)?</b>
 			 </label>
 			 <select id="rest_in_shabat"  class="form-control">
 				<option value="1"> Yes </option>
@@ -345,17 +345,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="init_percent_good_masks">
-			  Percent (%) of adults with mask N95 
+			  Percent (%) of adults that wear N95 mask 
 			 </label>
-			 <input class="form-control" id="init_percent_good_masks" min="0" max="100" placeholder="Percent (%) of adults with mask N95" required="" type="number" value="10"/>
+			 <input class="form-control" id="init_percent_good_masks" min="0" max="100" placeholder="Percent (%) of adults that wear N95 mask " required="" type="number" value="10"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="init_percent_bad_masks">
-			  Percent (%) of adults with mask simple
+			  Percent (%) of adults that wear disposable mask
 			 </label>
-			 <input class="form-control" id="init_percent_bad_masks" min="0"  max="100" placeholder="Percent (%) of adults with mask simple" required="" type="number" value="5" />
+			 <input class="form-control" id="init_percent_bad_masks" min="0"  max="100" placeholder="Percent (%) of adults that wear disposable mask" required="" type="number" value="5" />
 			</div>
 		   </div>
 		  </div>
@@ -364,25 +364,25 @@
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="good_mask_two_side">
-			  Good Mask (N95 like) 2 side protection probebility
+			  Good Mask (N95 like) 2 side protection Probability
 			 </label>
-			 <input class="form-control" id="good_mask_two_side" min="1" max="100" placeholder="Good Mask (N95 like) 2 side protection probebility" required="" type="number" value="95"/>
+			 <input class="form-control" id="good_mask_two_side" min="1" max="100" placeholder="Good Mask (N95 like) 2 side protection Probability" required="" type="number" value="95"/>
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="good_mask_infected_side">
-			  Good Mask (N95 like) infected has mask, susceptible does not, protection probebility
+			  Good Mask (N95 like) infected has mask, susceptible does not, protection Probability
 			 </label>
-			 <input class="form-control" id="good_mask_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) infected has mask, susceptible does not, protection probebility" required="" type="number" value="85" />
+			 <input class="form-control" id="good_mask_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) infected has mask, susceptible does not, protection Probability" required="" type="number" value="85" />
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="good_mask_not_infected_side">
-			  Good Mask (N95 like) susceptible has mask, infected does not, protection probebility
+			  Good Mask (N95 like) susceptible has mask, infected does not, protection Probability
 			 </label>
-			 <input class="form-control" id="good_mask_not_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) susceptible has mask, infected does not, protection probebility" required="" type="number" value="70" />
+			 <input class="form-control" id="good_mask_not_infected_side" min="1"  max="100" placeholder="Good Mask (N95 like) susceptible has mask, infected does not, protection Probability" required="" type="number" value="70" />
 			</div>
 		   </div>
 		  </div>
@@ -391,25 +391,25 @@
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="bad_mask_two_side">
-			  Bad Mask (one time like) 2 side protection probebility
+			  Bad Mask (one time like) 2 side protection Probability
 			 </label>
-			 <input class="form-control" id="bad_mask_two_side" min="1" max="100" placeholder="Bad Mask (one time like)  2 side protection probebility" required="" type="number" value="80"/>
+			 <input class="form-control" id="bad_mask_two_side" min="1" max="100" placeholder="Bad Mask (one time like)  2 side protection Probability" required="" type="number" value="80"/>
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="bad_mask_infected_side">
-			  Bad Mask (one time like) infected has mask, susceptible does not, protection probebility
+			  Bad Mask (one time like) infected has mask, susceptible does not, protection Probability
 			 </label>
-			 <input class="form-control" id="bad_mask_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  infected has mask, susceptible does not, protection probebility" required="" type="number" value="50" />
+			 <input class="form-control" id="bad_mask_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  infected has mask, susceptible does not, protection Probability" required="" type="number" value="50" />
 			</div>
 		   </div>
 		   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="bad_mask_not_infected_side">
-			  Bad Mask (one time like) susceptible has mask, infected does not, protection probebility
+			  Bad Mask (one time like) susceptible has mask, infected does not, protection Probability
 			 </label>
-			 <input class="form-control" id="bad_mask_not_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  susceptible has mask, infected does not, protection probebility" required="" type="number" value="20" />
+			 <input class="form-control" id="bad_mask_not_infected_side" min="1"  max="100" placeholder="Bad Mask (one time like)  susceptible has mask, infected does not, protection Probability" required="" type="number" value="20" />
 			</div>
 		   </div>
 		  </div>
@@ -418,17 +418,17 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="bad_infected_good_susceptible">
-			  Bad Mask on infected and Good mask on susceptible protection probebility
+			  Bad Mask on infected and Good mask on susceptible protection Probability
 			 </label>
-			 <input class="form-control" id="bad_infected_good_susceptible" min="1" max="100" placeholder="Bad Mask on infected and Good mask on susceptible protection probebility" required="" type="number" value="65"/>
+			 <input class="form-control" id="bad_infected_good_susceptible" min="1" max="100" placeholder="Bad Mask on infected and Good mask on susceptible protection Probability" required="" type="number" value="65"/>
 			</div>
 		   </div>
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="good_infected_bad_susceptible">
-			  Good Mask on infected and Bad mask on susceptible protection probebility
+			  Good Mask on infected and Bad mask on susceptible protection Probability
 			 </label>
-			 <input class="form-control" id="good_infected_bad_susceptible" min="1" max="100" placeholder="Good Mask on infected and Bad mask on susceptible protection probebility" required="" type="number" value="65"/>
+			 <input class="form-control" id="good_infected_bad_susceptible" min="1" max="100" placeholder="Good Mask on infected and Bad mask on susceptible protection Probability" required="" type="number" value="65"/>
 			</div>
 		   </div>
 		  </div>
@@ -452,9 +452,9 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="graph_samples">
-			  </b>Event each (k) days</b>
+			  </b>Event accure every K'th days (K=)</b>
 			 </label>
-			 <input class="form-control" id="event_rate_days" max="9999" min="1" placeholder="Event each (k) days | k = " required="" type="number" value="9999" />
+			 <input class="form-control" id="event_rate_days" max="9999" min="1" placeholder="Event accure every K'th days (K=)" required="" type="number" value="9999" />
 			</div>
 		   </div>
 		  </div>
@@ -478,13 +478,12 @@
 		   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div class="form-group">
 			 <label for="graph_samples">
-			  </b>Graph Sample Each K hours (k = )</b>
+			  </b>Add Sample To The Graph Each K algorithmic Steps (K=)</b>
 			 </label>
-			 <input class="form-control" id="graph_samples" max="72" min="1" placeholder="Graph Sample Each K hours (k = )" required="" type="number" value="24" />
+			 <input class="form-control" id="graph_samples" max="72" min="1" placeholder="Add Sample To The Graph Each K algorithmic Steps (K=)" required="" type="number" value="24" />
 			</div>
 		   </div>
 		  </div>
-		  
 		  
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -605,7 +604,7 @@
 		  <div class="row">
 		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<button class="btn btn-danger btn-lg" onclick="return startMaskAndHoursAnalysisRandom()" style="width: 100%; margin-top: 10px;">
-			 Run Simulation (Mask and Hours Analysis) - RANDOM SAMPELING
+			 Run Simulation (Mask and Hours Analysis) - RANDOM SAMPLING
 			</button>
 		   </div>
 		  </div>
@@ -847,7 +846,7 @@
 		<div class="row spacer">
 		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
 		  <h2 class="title">
-		   Infection Distrebution
+		   Infection distribution
 		  </h2>
 		 </div>
 		 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">

@@ -23,7 +23,7 @@ function drawInfectionGraph()
 	]);
 	
 	var options = {
-		title: 'Distrebution Of Infection Over Locations',
+		title: 'Distribution Of Infection Over Locations',
         hAxis: {
 			title: 'Location'
         },
@@ -89,7 +89,7 @@ function drawRzeroGraph()
 	var data = new google.visualization.DataTable();
 	data.addColumn('number', 'X');
 	data.addColumn('number', 'R_0');
-	data.addColumn('number', 'Outbreak trashold');
+	data.addColumn('number', 'Outbreak threshold');
 
 	data.addRows(rzeroGraphData);
 
