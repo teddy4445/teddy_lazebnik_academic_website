@@ -83,6 +83,30 @@
          "type":"abstract",
          "publisher":"Bar-Ilan Nanotechnology and Advanced Materials",
          "publicationStatus":"Published"
+      },
+      {
+         "name":"Rivendell: Project-Based Academic Search Engine",
+         "description":"Meta academic search engine using project-based search with explicit user tagging to improve search results.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/nano_confirance.pptx"},
+					  {"info": "cite", "type": 3, "link": ""}],
+		 "authors": "Teddy Lazebnik, Hana Weitman, and Gal A. Kaminka",
+         "year": 2015,
+         "topic":"information systems",
+         "type":"abstract",
+         "publisher":"Bar-Ilan Nanotechnology and Advanced Materials",
+         "publicationStatus":"Published"
+      },
+      {
+         "name":"Epidemiological-Economical Pandemic Management By A Spatio-Temporal Mathematical Model",
+         "description":"We present a model that considers the severity of the disease and the heterogeneity of contacts between the population in complex space-time dynamics.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/abstract_for_DSABNS_2021_conference.pdf"},
+					  {"info": "cite", "type": 3, "link": ""}],
+		 "authors": "Teddy Lazebnik, Labib Shami, and Svetlana Bunimovich-Mendrazitsky",
+         "year": 2021,
+         "topic":"Biomathematics",
+         "type":"abstract",
+         "publisher":"Dynamical Systems Applied To Biology And Natural Sceine",
+         "publicationStatus":"Published"
       }
 	  ]
 }
