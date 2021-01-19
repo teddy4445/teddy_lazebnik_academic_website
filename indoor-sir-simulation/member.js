@@ -91,7 +91,7 @@ class Member
 	{
 		var fromToMove = [this.location];
 		// if the people are dead so they move out of the geometry
-		if (this.state == STATE_D)
+		if (this.state != STATE_D)
 		{
 			for (var i = 0; i < this.dayPlan.length; i++)
 			{

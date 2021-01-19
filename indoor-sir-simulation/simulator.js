@@ -349,10 +349,7 @@ class Simulator
 				{
 					this.indoor.nodes[nodeIndex].printDetailed(popDist);	
 				}
-				else
-				{
-					this.indoor.nodes[nodeIndex].print(popDist);	
-				}
+				this.indoor.nodes[nodeIndex].print(popDist);
 			}
 			for (var edgeIndex = 0; edgeIndex < this.indoor.edges.length; edgeIndex++)
 			{
