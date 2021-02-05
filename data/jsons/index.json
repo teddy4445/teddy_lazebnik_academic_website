@@ -7,16 +7,16 @@
    ],
    "featuredPublications":[
       {
-         "name":"A Stable Algorithm for Numerical Matrix Exponent",
-         "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix_exponent.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., A stable algorithm for numerical matrix exponent. Functional Differential Equations. 2020."}],
+         "name":"The signature features of COVID-19 pandemic in a hybrid mathematical model - implications for optimal work-school lockdown policy",
+         "description":"The new COVID-19 pandemic has challenged policymakers on key issues. Most countries have adopted “lockdown” policies to reduce the spatial spread of COVID-19, but they have damaged the economic and moral fabric of society. Mathematical modeling in non-pharmaceutical intervention policy management has proven to be a major weapon in this fight due to the lack of an effective COVID-19 vaccine. We present a new \textit{hybrid} model for COVID-19 dynamics using both an age-structured mathematical model based on the SIRD model and spatio-temporal model in silico, analyzing the data of COVID-19 in Israel. Using the \textit{hybrid} model, we have introduced a method for estimating the reproduction number of an epidemic in real-time from the data of daily notification of cases. The results of the proposed model are confirmed by the Israeli Lockdown experience with a mean square error of 0.205 over two weeks. The use of mathematical models promises to reduce the uncertainty in the choice of “Lockdown” policies. Our unique use of contact details from 2 classes (children and adults), the interaction of populations depending on the time of day, and several physical locations, allowed a new look at the differential dynamics of the spread and control of infection",
+         "fileLinks":[{"info": "download", "type": 1, "link": ""},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., The signature features of COVID-19 pandemic in a hybrid mathematical model - implications for optimal work-school lockdown policy. Advanced Theory and Simulations. 2021."}],
 		 "authors": "Teddy Lazebnik and Shlomo Yanetz",
-         "year": 2016,
-         "topic":"numerical analysis",
+         "year": 2021,
+         "topic":"Biomathematics",
          "type":"paper",
-         "publisher":"Functional Differential Equations",
-         "publicationStatus":"Published"
+         "publisher":"Advanced Theory and Simulations",
+         "publicationStatus":"Accapted"
       },
       {
          "name":"PDE based geometry model for BCG immunotherapy of bladder cancer",
@@ -27,11 +27,17 @@
          "year": 2020,
          "topic":"Biomathematics",
          "type":"paper",
-         "publisher":"biosystems",
+         "publisher":"Biosystems",
          "publicationStatus":"Published"
       }
    ],
    "currentProjects":[
+      {
+         "name":"Extended Pharmacokinetics-Pharmadynamics Mathematical Model For Nanomedicine Targeted Drug Delivery",
+         "topic": "simulations",
+         "description":"An improved simulation of medical nanoparticles-based targeted drug delivery using ODE and ML methods.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      },
       {
          "name":"Mathematical Model for Medical Nanoparticles in the Circulatory System",
          "topic": "simulations",
@@ -39,27 +45,15 @@
          "link":{"info": "View project", "type": 2, "link": "/medical-nanorobots-in-the-blood.html", "example":""}
       },
       {
-         "name":"Economical-Mathematical Model for COVID-19 spread",
+         "name":"Non-observable Economy Size Estimation with Stabalized Model",
          "topic": "simulations",
-         "description":"Investigation of different NPIs on the pandemic and there infulance on the economic.",
-         "link":{"info": "View project", "type": 2, "link": "", "example":""}
-      },
-      {
-         "name":"Decision Tree Puring without Loss of Accuracy using Greedy Algorithm",
-         "topic": "machine learning",
-         "description":"Developing an algorithm for decision tree puring, without loss of accuracy.",
+         "description":"A new (more stable) mathematical model for estimating the non-observable economy.",
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {
          "name":"Hebrew words associative distance and connection to depression",
          "topic": "machine learning",
          "description":"Developing a machine learning model for words associative distance (Hebrew). Based on this model, propusing new depression test for clinical professionals",
-         "link":{"info": "View project", "type": 2, "link": "", "example":""}
-      },
-      {
-         "name":"Mathematical modeling of pedagogic methods via their cognetive influance",
-         "topic": "mathematical modeling",
-         "description":"Modeling an ODE system descrbing the inner cognetive processes taking place while learning",
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {

@@ -137,6 +137,18 @@
 							"link": "https://www.youtube.com/watch?v=6QYRZr3v6bo",
 							"description": "Very improtant from students that want to find job after first degree in CS",
 							"type": "video"
+						},
+						{
+							"name": "Design Patterns and the COMMAND design pattern",
+							"link": "https://www.youtube.com/watch?v=xaGahrVu5Wk",
+							"description": "",
+							"type": "video"
+						},
+						{
+							"name": "The SINGLETON design pattern",
+							"link": "https://www.youtube.com/watch?v=gWr__kKk9uc",
+							"description": "",
+							"type": "video"
 						}]
 						}
 					}
@@ -430,12 +442,12 @@
 			"resources": {
 				"optional":[
 					{
-						"name": "Summery of the course a year ago (2018) by Mordeh (part 1)",
+						"name": "Summery of the course (2018) by Mordeh (part 1)",
 						"link": "https://math-wiki.com/images/2/28/Aln83214_2019_part1.pdf",
 						"description": ""
 					},
 					{
-						"name": "Summery of the course a year ago (2018) by Mordeh (part 2)",
+						"name": "Summery of the course (2018) by Mordeh (part 2)",
 						"link": "https://math-wiki.com/images/2/28/Aln83214_2019_part2.pdf",
 						"description": ""
 					},

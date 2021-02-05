@@ -45,7 +45,7 @@ class Research extends PageRender
 		for (var index = 0; index < this.jsonData["projects"].length; index++)
 		{
 			var newProject = ResearchProject.createFromJson(this.jsonData["projects"][index]);
-			if (newProject.end_year <= nowDate.getFullYear() && newProject.end_month <= nowDate.getMonth() + 1)
+			if (newProject.end_year <= nowDate.getFullYear() || (newProject.end_year == nowDate.getFullYear() && newProject.end_month <= nowDate.getMonth() + 1))
 			{
 				this.previousProjects.push(newProject);
 			}

@@ -1,5 +1,31 @@
 {
   "resources":[
+	{
+      "name":"Medical Flow Graph Creator",
+      "description":"Medical flow graph creator for the PKPD graph-based simulation, allowing to create with simple GUI an in-vivo flow graph using the P5.js library.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/medical_flow_graph_creator"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2020,
+      "topic":"meta development",
+      "type":"code"
+    },
+	{
+      "name":"The OCTI board game with AI player",
+      "description":"The OCTI board game with nice UI\UX and several levels of AI players.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/octi_board_game"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2018,
+      "topic":"machine learning",
+      "type":"code"
+    },
     {
       "name":"Lightweight JS pathfinding genetic programming",
       "description":"The idea is to present light weight (Java Script written) genetic programming. There are graphs (using Google's API) for monitoring the optimization process and game-link controlers to control the parameters of the evaluations.",
@@ -9,7 +35,7 @@
          {"info": "cite", "type": 3, "link": ""}
        ],
       "authors": "Lazebnik, T.",
-      "year": 2018,
+      "year": 2021,
       "topic":"machine learning",
       "type":"code"
     },
@@ -37,6 +63,19 @@
       "authors": "Alexi, A., Spitzer, N., Lazebnik, T.",
       "year": 2019,
       "topic":"games",
+      "type":"code"
+    },
+    {
+      "name":"CSV to Latex Table Generator",
+      "description":"A one page CSV to Latex convertor online tool (with pure js). The aim is to allow quick convertion of CSV tables into the corosponading LaTex table code.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/excel-to-latex-table-generator"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2020,
+      "topic":"Latex",
       "type":"code"
     },
     {
@@ -128,19 +167,6 @@
       "authors": "Lazebnik, T., Vardi, N.",
       "year": 2020,
       "topic":"NLP",
-      "type":"code"
-    },
-    {
-      "name":"CSV to Latex Table Generator",
-      "description":"A one page CSV to Latex convertor online tool (with pure js). The aim is to allow quick convertion of CSV tables into the corosponading LaTex table code.",
-      "recommendation":"",
-      "fileLinks":[
-         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/excel-to-latex-table-generator"},
-         {"info": "cite", "type": 3, "link": ""}
-       ],
-      "authors": "Lazebnik, T.",
-      "year": 2020,
-      "topic":"Latex",
       "type":"code"
     }
   ]
