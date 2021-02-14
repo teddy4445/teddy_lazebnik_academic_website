@@ -1452,6 +1452,10 @@ flickity-prev-next-button[disabled]{
 
 @media screen and (max-width: 430px) {
 	
+	.personal-img{
+		margin-right: 0px;
+	}
+	
 	.personal-section{
 		padding-top: 0px;
 	}
