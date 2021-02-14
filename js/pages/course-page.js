@@ -1,11 +1,11 @@
-import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
-import { Course } from '/lecture_website_template/js/components/course.js';
-import { Tabs } from '/lecture_website_template/js/components/tabs.js';
-import { addCollapseFunction } from '/lecture_website_template/js/descriptionSlicer.js';
-import { Icons } from '/lecture_website_template/js/components/icons.js';
+import { PageRender, retrivedData } from '/js/pageRender.js';
+import { Course } from '/js/components/course.js';
+import { Tabs } from '/js/components/tabs.js';
+import { addCollapseFunction } from '/js/descriptionSlicer.js';
+import { Icons } from '/js/components/icons.js';
 
 // Data file paths
-let TEACHING_JSON = "/lecture_website_template/data/jsons/teaching.json";
+let TEACHING_JSON = "/data/jsons/teaching.json";
 // consts //
 let PRE_COOKIE_KEY = "course_";
 let SECTIONS = ["General", "Updates", "Modules"];
@@ -92,7 +92,7 @@ class CoursePage extends PageRender {
 	//create html of Breadcrumb
 	buildBreadcrumb() {
 		try {
-			var html = '<ul><li><a href="/lecture_website_template/">Home</a></li><li><a href="/lecture_website_template/teaching.html">Courses</a></li><li>' + this.data.name + '</li></ul>';
+			var html = '<ul><li><a href="/">Home</a></li><li><a href="/teaching.html">Courses</a></li><li>' + this.data.name + '</li></ul>';
 			document.getElementById("breadcrumb_section").innerHTML = html;
 		}
 		catch (error) {
@@ -106,14 +106,14 @@ class CoursePage extends PageRender {
 
 		try {
 			var html = '<div class="main-header-page"><h1>'
-				+ this.data.name + '</h1><div class="header-detail"><div class="item-detail"><img class="course-detail-img" src="/lecture_website_template/img/mdi_school.png"><p>'
-				+ this.data.code + '</p></div><div class="item-detail"><img class="course-detail-img" src="/lecture_website_template/img/mdi_access_time.png"><p>Semester '
-				+ this.data.semester + '</p></div><div class="item-detail"><img class="course-detail-img" src="/lecture_website_template/img/mdi_place.png"><div class=".personal-coloum"><p>'
+				+ this.data.name + '</h1><div class="header-detail"><div class="item-detail"><img class="course-detail-img" src="/img/mdi_school.png"><p>'
+				+ this.data.code + '</p></div><div class="item-detail"><img class="course-detail-img" src="/img/mdi_access_time.png"><p>Semester '
+				+ this.data.semester + '</p></div><div class="item-detail"><img class="course-detail-img" src="/img/mdi_place.png"><div class=".personal-coloum"><p>'
 				+ this.data.university + '</p><p>'
 				+ this.data.location_class + '</p></div></div></div><div class="personal-row">';
 
 			if (this.data.syllabus != "" && this.data.syllabus != undefined) {
-				html += '<a class="sylabus-link" href=' + this.data.syllabus + ' ><img class="course-sylabus-img" src="/lecture_website_template/img/save_alt.png" alt="">Syllabus</a>';
+				html += '<a class="sylabus-link" href=' + this.data.syllabus + ' ><img class="course-sylabus-img" src="/img/save_alt.png" alt="">Syllabus</a>';
 			}
 			html += '</div></div>';
 
@@ -173,7 +173,7 @@ class CoursePage extends PageRender {
 		//add educatio panel
 		let html = '<div id="education-data" class="icon-detail-panel">Course number: ' + this.data.code;
 		if (this.data.syllabus != "" && this.data.syllabus != undefined) {
-			html += '<br><a class="sylabus-link" href=' + this.data.syllabus + ' ><img class="course-sylabus-img" src="/lecture_website_template/img//mdi_insert_drive_file.png" alt="">Download course syllabus</a>';
+			html += '<br><a class="sylabus-link" href=' + this.data.syllabus + ' ><img class="course-sylabus-img" src="/img//mdi_insert_drive_file.png" alt="">Download course syllabus</a>';
 		}
 		//add class place panel
 		html += '</div><div id="place-data" class="icon-detail-panel">'
@@ -216,10 +216,10 @@ class CoursePage extends PageRender {
 
 		}
 		else if (this.data.newCounter < 10) {
-			return "/lecture_website_template/img/flags/flag" + this.data.newCounter + ".png";
+			return "/img/flags/flag" + this.data.newCounter + ".png";
 		}
 		else {
-			return "/lecture_website_template/img/flags/flag+.png";
+			return "/img/flags/flag+.png";
 		}
 	}
 

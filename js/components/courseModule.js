@@ -1,5 +1,5 @@
-import { Element } from '/lecture_website_template/js/components/element.js';
-import { CourseResource } from '/lecture_website_template/js/components/courseResource.js';
+import { Element } from '/js/components/element.js';
+import { CourseResource } from '/js/components/courseResource.js';
 
 class CourseModule extends Element
 {

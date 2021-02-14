@@ -1,5 +1,5 @@
-import { Element } from '/lecture_website_template/js/components/element.js';
-import { ActionButton } from '/lecture_website_template/js/components/actionButton.js';
+import { Element } from '/js/components/element.js';
+import { ActionButton } from '/js/components/actionButton.js';
 
 class CourseCard extends Element
 {
@@ -31,7 +31,7 @@ class CourseCard extends Element
 		+'</div>'
 		+'<p>'+this.department+'<br />'+this.university+'</p>'
 		+'<div class="panel-btn personal-row space-between">'
-		+'<div class="flex-start"><a href="/lecture_website_template/course-page.html?course_id='
+		+'<div class="flex-start"><a href="/course-page.html?course_id='
 		+ this.code + '" class="secondary-btn">Go to course</a></div>'
 		+'</div>'
 		+'</div>';

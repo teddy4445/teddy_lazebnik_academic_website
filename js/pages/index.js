@@ -1,14 +1,14 @@
 // imports 
-import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
-import { PublicationCard } from '/lecture_website_template/js/components/publicationCard.js';
-import { ProjectPanel } from '/lecture_website_template/js/components/projectPanel.js';
-import { Icons } from '/lecture_website_template/js/components/icons.js';
-import { addCollapseFunction, descriptionTrim } from '/lecture_website_template/js/descriptionSlicer.js';
+import { PageRender, retrivedData } from '/js/pageRender.js';
+import { PublicationCard } from '/js/components/publicationCard.js';
+import { ProjectPanel } from '/js/components/projectPanel.js';
+import { Icons } from '/js/components/icons.js';
+import { addCollapseFunction, descriptionTrim } from '/js/descriptionSlicer.js';
 
 // Data file paths
-let UPDATES_TEXT = "/lecture_website_template/data/notifications.txt"
-let LECTURE_INFO_JSON = "/lecture_website_template/data/jsons/lecturer.json";
-let INDEX_JSON = "/lecture_website_template/data/jsons/index.json";
+let UPDATES_TEXT = "/data/notifications.txt"
+let LECTURE_INFO_JSON = "/data/jsons/lecturer.json";
+let INDEX_JSON = "/data/jsons/index.json";
 
 const notificationsArray = [];
 

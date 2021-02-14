@@ -1,5 +1,5 @@
-import { Icons } from '/lecture_website_template/js/components/icons.js';
-import { Element } from '/lecture_website_template/js/components/element.js';
+import { Icons } from '/js/components/icons.js';
+import { Element } from '/js/components/element.js';
 class ResearchTeamMember extends Element
 {
 	constructor(name, title, role, websiteLink, googleLink, linkedinLink)
@@ -18,23 +18,23 @@ class ResearchTeamMember extends Element
 	{
 		let html = '<div class="member-card">';
 
-		html += '<div class="member-properties"><img class="member-pesonal-img member-link-icon" src="/lecture_website_template/img/research/person-image.png" alt="personal-image"><h5 class="member-details">' + this.name + ", " + this.title + '</h5></div>';
+		html += '<div class="member-properties"><img class="member-pesonal-img member-link-icon" src="/img/research/person-image.png" alt="personal-image"><h5 class="member-details">' + this.name + ", " + this.title + '</h5></div>';
 
-		html += '<div class="member-properties role-properties"><img class="role-pesonal-img role-link-icon" src="/lecture_website_template/img/research/suitcase-image.png" alt="personal-image"><p class="member-role">' + this.role + '</p></div>';
+		html += '<div class="member-properties role-properties"><img class="role-pesonal-img role-link-icon" src="/img/research/suitcase-image.png" alt="personal-image"><p class="member-role">' + this.role + '</p></div>';
 
 		html += '<div class="member-link-icons">';
 		
 		if (this.websiteLink != "" && this.websiteLink != undefined)
 		{
-			html += '<a href="' + this.websiteLink + '"><img class="member-link-icon" src="/lecture_website_template/img/research/website.png" alt="personal website"></a>';
+			html += '<a href="' + this.websiteLink + '"><img class="member-link-icon" src="/img/research/website.png" alt="personal website"></a>';
 		}
 		if (this.googleLink != "" && this.googleLink != undefined)
 		{
-			html += '<a href="' + this.googleLink + '"><img class="member-link-icon" src="/lecture_website_template/img/research/google-scholar.png" alt="googel scholar link"></a>';
+			html += '<a href="' + this.googleLink + '"><img class="member-link-icon" src="/img/research/google-scholar.png" alt="googel scholar link"></a>';
 		}
 		if (this.linkedinLink != "" && this.linkedinLink != undefined)
 		{
-			html += '<a href="' + this.linkedinLink + '"><img class="member-link-icon" src="/lecture_website_template/img/research/linkedin.png" alt="linkedin link"></a>';
+			html += '<a href="' + this.linkedinLink + '"><img class="member-link-icon" src="/img/research/linkedin.png" alt="linkedin link"></a>';
 		}
 		html += '</div></div>';
 

@@ -1,7 +1,7 @@
-import { Element } from '/lecture_website_template/js/components/element.js';
-import { ResearchTeamMember } from '/lecture_website_template/js/components/researchTeamMember.js';
-import { CourseResource } from '/lecture_website_template/js/components/courseResource.js';
-import { descriptionTrim } from '/lecture_website_template/js/descriptionSlicer.js';
+import { Element } from '/js/components/element.js';
+import { ResearchTeamMember } from '/js/components/researchTeamMember.js';
+import { CourseResource } from '/js/components/courseResource.js';
+import { descriptionTrim } from '/js/descriptionSlicer.js';
 
 class ResearchProject extends Element
 {

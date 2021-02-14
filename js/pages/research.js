@@ -1,13 +1,13 @@
 // imports
-import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
-import { ResearchProject } from '/lecture_website_template/js/components/researchProject.js';
-import { ResearchPosition } from '/lecture_website_template/js/components/researchPosition.js';
-import { Icons } from '/lecture_website_template/js/components/icons.js';
-import { Tabs } from '/lecture_website_template/js/components/tabs.js';
-import { addCollapseFunction } from '/lecture_website_template/js/descriptionSlicer.js';
+import { PageRender, retrivedData } from '/js/pageRender.js';
+import { ResearchProject } from '/js/components/researchProject.js';
+import { ResearchPosition } from '/js/components/researchPosition.js';
+import { Icons } from '/js/components/icons.js';
+import { Tabs } from '/js/components/tabs.js';
+import { addCollapseFunction } from '/js/descriptionSlicer.js';
 
 // Data file paths
-let RESEARCH_JSON = "/lecture_website_template/data/jsons/research.json";
+let RESEARCH_JSON = "/data/jsons/research.json";
 let SECTIONS = ["Ongoing-Projects", "Previous-Projects", "Work-with-me"];
 
 /*

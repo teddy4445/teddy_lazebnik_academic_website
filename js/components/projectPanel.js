@@ -1,6 +1,6 @@
-import { Element } from '/lecture_website_template/js/components/element.js';
-import { ActionButton } from '/lecture_website_template/js/components/actionButton.js';
-import { descriptionTrim } from '/lecture_website_template/js/descriptionSlicer.js';
+import { Element } from '/js/components/element.js';
+import { ActionButton } from '/js/components/actionButton.js';
+import { descriptionTrim } from '/js/descriptionSlicer.js';
 
 class ProjectPanel extends Element
 {

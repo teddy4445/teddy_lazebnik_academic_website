@@ -2,10 +2,10 @@
 import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
 import { PublicationCard } from '/lecture_website_template/js/components/publicationCard.js';
 import { addCollapseFunction } from '/lecture_website_template/js/descriptionSlicer.js';
-import {Icons} from '/lecture_website_template/js/components/icons.js';
+import {Icons} from '/js/components/icons.js';
 
 // Data file paths
-let PUBLICATIONS_JSON = "/lecture_website_template/data/jsons/academic-publications.json";
+let PUBLICATIONS_JSON = "/data/jsons/academic-publications.json";
 
 // consts
 const default_sorter = "year";

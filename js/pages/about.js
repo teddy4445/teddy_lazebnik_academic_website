@@ -1,15 +1,15 @@
 // imports
-import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
-import { Icons } from '/lecture_website_template/js/components/icons.js';
-import { Tabs } from '/lecture_website_template/js/components/tabs.js';
-import { ProjectSection } from '/lecture_website_template/js/components/projectSection.js'
-import { Resource } from '/lecture_website_template/js/components/resources.js';
-import { addCollapseFunction } from '/lecture_website_template/js/descriptionSlicer.js';
+import { PageRender, retrivedData } from '/js/pageRender.js';
+import { Icons } from '/js/components/icons.js';
+import { Tabs } from '/js/components/tabs.js';
+import { ProjectSection } from '/js/components/projectSection.js'
+import { Resource } from '/js/components/resources.js';
+import { addCollapseFunction } from '/js/descriptionSlicer.js';
 
 // Data file paths
-let LECTURER_INFO_JSON = "/lecture_website_template/data/jsons/lecturer.json";
-let INDEX_JSON = "/lecture_website_template/data/jsons/index.json";
-let RESOURCES_JSON = "/lecture_website_template/data/jsons/resources.json";
+let LECTURER_INFO_JSON = "/data/jsons/lecturer.json";
+let INDEX_JSON = "/data/jsons/index.json";
+let RESOURCES_JSON = "/data/jsons/resources.json";
 let SECTIONS = ["Biography", "Personal-projects", "Recommended-resources"];
 
 let ALL_TOPIC_KEY = "all";

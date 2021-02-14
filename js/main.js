@@ -58,7 +58,7 @@ function HeaderHandler()
 function loadFooter()
 {		
 	client.onreadystatechange  = FooterHandler;
-	client.open("GET", "/lecture_website_template/components/footer.html", false);
+	client.open("GET", "/components/footer.html", false);
 	client.send();
 }
 
@@ -147,7 +147,7 @@ function gotoIndex()
 	
 	if (width > 850) // TODO: fix magic number
 	{
-		window.location.replace("/lecture_website_template/");
+		window.location.replace("/");
 	}
 }
 

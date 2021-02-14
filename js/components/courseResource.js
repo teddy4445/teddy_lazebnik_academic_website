@@ -1,5 +1,5 @@
 import { Element } from '/lecture_website_template/js/components/element.js';
-import { descriptionTrim } from '/lecture_website_template/js/descriptionSlicer.js';
+import { descriptionTrim } from '/js/descriptionSlicer.js';
 
 class CourseResource extends Element
 {
@@ -19,13 +19,13 @@ class CourseResource extends Element
 		let img = '<img src="';
 		switch (this.type) {
 			case "slides":
-				img += '/lecture_website_template/img/mdi_slideshow.png';
+				img += '/img/mdi_slideshow.png';
 				break;
 			case "video":
-				img += '/lecture_website_template/img/mdi_video_library.png';
+				img += '/img/mdi_video_library.png';
 				break;
 			default:
-				img += '/lecture_website_template/img/mdi_insert_drive_file.png';
+				img += '/img/mdi_insert_drive_file.png';
 				break;
 		}
 
