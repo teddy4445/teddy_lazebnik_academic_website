@@ -1,5 +1,5 @@
-import { Element } from '/js/components/element.js';
-import { ActionButton } from '/js/components/actionButton.js';
+import { Element } from '/lecture_website_template/js/components/element.js';
+import { ActionButton } from '/lecture_website_template/js/components/actionButton.js';
 
 class CourseCard extends Element
 {
@@ -19,12 +19,23 @@ class CourseCard extends Element
 	// convert the object into HTML
 	toHtml()
 	{
-		var answer = '<p class="semester"> Semster '
-		+ this.semester + '</p><div class="academic-papers-panel-hard"><h3>'
-		+ this.name +'</h3><p>'
-		+ this.department +'<br>'
-		+ this.university +'</p> <div class="personal-row space-between"><div class="flex-start"><a href="/course-page.html?course_id='
-		+ this.code + '" class="secondary-btn">Go to course</a></div></div></div>';
+		var answer = '<div class="course-card-panel">'
+		+'<div id="course-card-header" class="course-card-header-hard">'
+		+'<h3 id="course-title">'+this.name+'</h3>'
+		+'<div id="semester-info"class="personal-row"">'
+		+'<p id="card-semeter" class="semester">Semster '+this.semester+'  </p>'
+		+'<p class="card-year semester">'
+		+'<svg width="1" height="24" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499999" y2="24" stroke="#E2E8F0"/></svg>  '
+		+this.year+'</p>'
+		+'</div>'
+		+'</div>'
+		+'<p>'+this.department+'<br />'+this.university+'</p>'
+		+'<div class="panel-btn personal-row space-between">'
+		+'<div class="flex-start"><a href="/lecture_website_template/course-page.html?course_id='
+		+ this.code + '" class="secondary-btn">Go to course</a></div>'
+		+'</div>'
+		+'</div>';
+		console.log(answer);
 		return answer;
 	}
 

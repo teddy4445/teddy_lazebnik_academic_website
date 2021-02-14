@@ -1,5 +1,7 @@
-import { Element } from '/js/components/element.js';
-import { descriptionTrim } from '/js/descriptionSlicer.js';
+import { Element } from '/lecture_website_template/js/components/element.js';
+import { descriptionTrim } from '/lecture_website_template/js/descriptionSlicer.js';
+import { Icons } from '/lecture_website_template/js/components/icons.js';
+
 
 class CourseUpdate extends Element
 {
@@ -23,14 +25,13 @@ class CourseUpdate extends Element
 		let visitTag = "";
 		if (lastVisit.getTime() < this.date)
 		{
-			visitTag = '<img src="/img/flags/label_tag.png" style="float: right;" alt="new resource"/>';
+			visitTag = '<img src="/lecture_website_template/img/flags/label_tag.png" style="float: right;" alt="new resource"/>';
 			this.last_html_flag_show = true;
 		}
 
 		html += '<h3 class="content-title">' + this.title + visitTag + '</h3><hr>';
 		html += '<h2 class="content-subtitle">' + this.date + '</h2>';
 		html += descriptionTrim(this.description, "content-text");
-
 		html += '</div>';
 
 		return html;

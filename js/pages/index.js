@@ -1,14 +1,14 @@
 // imports 
-import { PageRender, retrivedData } from '/js/pageRender.js';
-import { PublicationCard } from '/js/components/publicationCard.js';
-import { ProjectPanel } from '/js/components/projectPanel.js';
-import { Icons } from '/js/components/icons.js';
-import { addCollapseFunction, descriptionTrim } from '/js/descriptionSlicer.js';
+import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
+import { PublicationCard } from '/lecture_website_template/js/components/publicationCard.js';
+import { ProjectPanel } from '/lecture_website_template/js/components/projectPanel.js';
+import { Icons } from '/lecture_website_template/js/components/icons.js';
+import { addCollapseFunction, descriptionTrim } from '/lecture_website_template/js/descriptionSlicer.js';
 
 // Data file paths
-let UPDATES_TEXT = "/data/notifications.txt"
-let LECTURE_INFO_JSON = "/data/jsons/lecturer.json";
-let INDEX_JSON = "/data/jsons/index.json";
+let UPDATES_TEXT = "/lecture_website_template/data/notifications.txt"
+let LECTURE_INFO_JSON = "/lecture_website_template/data/jsons/lecturer.json";
+let INDEX_JSON = "/lecture_website_template/data/jsons/index.json";
 
 const notificationsArray = [];
 
@@ -101,14 +101,17 @@ class Index extends PageRender
 			document.getElementById("lecturer-name").innerHTML = jsonObj["name"];
 			document.getElementById("lecture_position").innerHTML = jsonObj["position"];
 			var addressesHtml = "<div class='lecturer-info'> ";
-			addressesHtml += "<span>" + Icons.info() + "</span> ";
+			var addressesMobileHtml = "";
+			addressesHtml += "<span>" + Icons.indexDesktopInfo() + "</span> ";
 			addressesHtml += "<div class='addresses-info'> ";
 			for (var locIndex = 0; locIndex < jsonObj["addresses"].length; locIndex++)
 			{
-				addressesHtml += "<div><p><B>"+jsonObj["addresses"][locIndex]["university"] + "</B> " + jsonObj["addresses"][locIndex]["location"] + " (" + jsonObj["addresses"][locIndex]["hours"] + ")</p></div>";					
+				addressesHtml += "<div><p><b>"+jsonObj["addresses"][locIndex]["university"] + "</b> " + jsonObj["addresses"][locIndex]["location"] + " (" + jsonObj["addresses"][locIndex]["hours"] + ")</p></div>";					
+				addressesMobileHtml += "<p><b>"+jsonObj["addresses"][locIndex]["university"] + "</b> <br>" + jsonObj["addresses"][locIndex]["location"] + " <br>Office hours:" + jsonObj["addresses"][locIndex]["hours"] + "</p>";
 			}
 			addressesHtml+="</div></div>"
 			document.getElementById("lecture_address").innerHTML += addressesHtml;
+			document.getElementById("mobile-place-data").innerHTML += addressesMobileHtml;
 			document.getElementById("lecture_phone").innerHTML += jsonObj["phone"];
 			document.getElementById("lecture_email").innerHTML += jsonObj["email"];
 			
@@ -120,6 +123,22 @@ class Index extends PageRender
 			
 			// TODO: as list not single string
 			// document.getElementById("research_intrests").innerHTML = jsonObj["field"];
+			
+			// mobile version click icon event 
+			var infoItemBtn = document.getElementById("mobile-icon");
+			infoItemBtn.addEventListener('click', function (event) 
+			{
+				if (document.getElementById("mobile-place-data").style.display == "block")
+				{
+					document.getElementById("mobile-icon").innerHTML = '<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3.5C11.34 3.5 3.5 11.34 3.5 21C3.5 30.66 11.34 38.5 21 38.5C30.66 38.5 38.5 30.66 38.5 21C38.5 11.34 30.66 3.5 21 3.5ZM22.75 29.75H19.25V19.25H22.75V29.75ZM22.75 15.75H19.25V12.25H22.75V15.75Z" fill="#000000"></path></svg>';	
+					document.getElementById("mobile-place-data").style.display = "none";
+				}
+				else
+				{
+					document.getElementById("mobile-icon").innerHTML = '<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3.5C11.34 3.5 3.5 11.34 3.5 21C3.5 30.66 11.34 38.5 21 38.5C30.66 38.5 38.5 30.66 38.5 21C38.5 11.34 30.66 3.5 21 3.5ZM22.75 29.75H19.25V19.25H22.75V29.75ZM22.75 15.75H19.25V12.25H22.75V15.75Z" fill="#5A67D8"></path></svg>';	
+					document.getElementById("mobile-place-data").style.display = "block";
+				}
+			});
 		}
 		catch (error)
 		{

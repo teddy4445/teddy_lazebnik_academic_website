@@ -1,11 +1,11 @@
 // imports
-import { PageRender, retrivedData } from '/js/pageRender.js';
-import { PublicationCard } from '/js/components/publicationCard.js';
-import { addCollapseFunction } from '/js/descriptionSlicer.js';
-import {Icons} from '/js/components/icons.js';
+import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
+import { PublicationCard } from '/lecture_website_template/js/components/publicationCard.js';
+import { addCollapseFunction } from '/lecture_website_template/js/descriptionSlicer.js';
+import {Icons} from '/lecture_website_template/js/components/icons.js';
 
 // Data file paths
-let PUBLICATIONS_JSON = "/data/jsons/academic-publications.json";
+let PUBLICATIONS_JSON = "/lecture_website_template/data/jsons/academic-publications.json";
 
 // consts
 const default_sorter = "year";
@@ -174,6 +174,26 @@ class AcademicPublications extends PageRender
 	/* end - filtering and reorder of publication list functions */
 
 	/* GUI functions */
+
+	// this function controls the Order By section appearance in mobile view
+	showOrderOptions(element) {
+		let x =  document.getElementById("orderOptions");
+		if (x.style.display === "none") {
+			x.style.display = "initial";
+		} else {
+			x.style.display = "none";
+		}
+	}
+
+	// this function controls the Filter section appearance in mobile view
+	showFilterOptions(element) {
+		let x =  document.getElementById("FilterOptions")
+		if (x.style.display === "none") {
+			x.style.display = "initial";
+		} else {
+			x.style.display = "none";
+		}
+	}
 
 	changeSort(sort_value)
 	{

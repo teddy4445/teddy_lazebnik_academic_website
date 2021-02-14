@@ -29,7 +29,7 @@ class Tabs
         is_last: a boolean value if it is the last or not
         img_path: in case we want an icon in front of the title (like updates).
     */
-    static addTab(title, is_last=false, img_path=null)
+    static addTab(title,short_title, is_last=false, img_path=null)
 	{
         var img = '';
         if(img_path != null)
@@ -38,6 +38,7 @@ class Tabs
         }
 
         let label = title.charAt(0).toUpperCase() + title.slice(1);
+        let short_label = short_title.charAt(0).toUpperCase() + short_title.slice(1);
         let className = title.replaceAll(" ", "-") + "-bar";
 
 
@@ -46,7 +47,8 @@ class Tabs
         section.classList.add(className);
 		section.title = label.replaceAll(" ", "-");
 
-        let html = img + '<label class="tab-title" title="' + label.replaceAll(" ", "-") + '">'+ label + '</label>';
+        let html = img + '<label class="lrg-screen tab-title" title="' + label.replaceAll(" ", "-") + '">'+ label + '</label>';
+        html += '<label class="sml-screen tab-title" title="' + short_label.replaceAll(" ", "-") + '">'+ short_label + '</label>';
         if(!is_last)
 		{
             html += '<div class="tab-seperator"></div>';
@@ -108,6 +110,7 @@ class Tabs
         target.classList.toggle('active-tab');
         // get the label element of the current active and toggle active-tab-title
         target.getElementsByTagName('label')[0].classList.toggle('active-tab-title');
+        target.getElementsByTagName('label')[1].classList.toggle('active-tab-title');
     }
 
     // toggle the current content display

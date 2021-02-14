@@ -1,8 +1,8 @@
 // imports
-import { PageRender, retrivedData } from '/js/pageRender.js';
+import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
 
 // Data file paths
-let BLOG_JSON = "/data/jsons/blog.json";
+let BLOG_JSON = "/lecture_website_template/data/jsons/blog.json";
 
 // consts
 const default_sorter = "order";
@@ -50,7 +50,7 @@ class BlogPost extends PageRender
 				client = new ActiveXObject("Microsoft.XMLHTTP");
 			}
 			client.onreadystatechange = contentHandler;
-			client.open("GET", "/blog/blog-post-" + this.postName + ".html", false);
+			client.open("GET", "/lecture_website_template/blog/blog-post-" + this.postName + ".html", false);
 			client.send();
 		}
 		catch (error)

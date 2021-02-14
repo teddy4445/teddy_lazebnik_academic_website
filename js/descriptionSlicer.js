@@ -1,11 +1,12 @@
 
-function descriptionTrim(desc, className) {
+function descriptionTrim(desc, className, otherClass = "") {
+    var extandedClass = (otherClass=="")? "": " "+otherClass;
     if(desc.length > 150) {
-        return '<p class="' + className + '">' + desc.slice(0, 150) + '<span class="dots">... </span><span class="more-section">'
+        return '<p class="' + className + extandedClass +'">' + desc.slice(0, 150) + '<span class="dots">... </span><span class="more-section">'
                  + desc.slice(150, desc.length) + ' </span><span class="collapse-button">Read more</span></p>';
     }
 
-    return '<p class="' + className + '">' + desc + '</p>';
+    return '<p class="' + className + extandedClass +'">' + desc + '</p>';
 }
 
 function addCollapseFunction() {

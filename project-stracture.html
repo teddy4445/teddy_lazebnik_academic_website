@@ -7,42 +7,43 @@
 	<!-- end - technical meta -->
 	
 	<!-- seo -->
-	<title> Teddy Lazebnik Academic Website </title>
-	<meta content="Theodore (Teddy) Lazebnik - Mathematics and Computer Science researcher focusing on medical nanorobotics, PDE stabalization and numerical solutions" name="description"/>
-	<meta content="keywords" content="lazebnik, לזנבניק, teddy lazebnik, medical nanorobotics" />
-	<meta content="Teddy Lazebnik" name="author"/>
-	<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+	<title> Lecturer's Name Academic Website </title>
+	<meta name="description" content="Lecuter's Name Academic Website focusing on cool study in the field of something" />
+	<meta name="keywords" content="lecture website, academic website" />
+	<meta id="author" content="First Last name" name="author"/>
+	<link href="/lecture_website_template/img/favicon.ico" rel="icon" type="image/x-icon"/>
 	<!-- end - seo -->
 
 	<!-- css -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-	<link href="/css/main.css" rel="stylesheet">
+	<link href="/lecture_website_template/css/main.css" rel="stylesheet">
 	<!-- end - css -->
 	
 	<!-- Analytics -->
 	
 	<!-- Google Analytics-->
-	  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
-	  <script>
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=key"></script>
+	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-		gtag('config', 'UA-154895667-1');
-	  </script>
-  
-	  <!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
-	  <script>
-	   (function(h,o,t,j,a,r){
-				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-				h._hjSettings={hjid:1812929,hjsv:6};
-				a=o.getElementsByTagName('head')[0];
-				r=o.createElement('script');r.async=1;
-				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-				a.appendChild(r);
-			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-	  </script>		
+		gtag('config', 'key');
+	</script>
+	
+	<!-- HotJar -->
+	<script>
+	(function(h,o,t,j,a,r)
+	{
+		h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+		h._hjSettings={hjid:0000000,hjsv:6};
+		a=o.getElementsByTagName('head')[0];
+		r=o.createElement('script');r.async=1;
+		r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+		a.appendChild(r);
+	})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>		
 	<!-- end - Analytics -->
 	
 </head>
@@ -63,10 +64,10 @@
 				</div>
 				<div id="">
 					<ul>
-						<li>Download the whole project by using your favorite GIT CLI or GUI (for CLI the command is: git clone https://github.com/teddy4445.git</li>
-						<li>Open the folder with the project (if you are using Windows and CLI enter "cd "</li>
-						<li>Inside the project, create new folder named "" (yes, just as the name of the repo). If you are using Windows and CLI just enter "mkdir "</li>
-						<li>Move all the project's folders (js, img, fonts, data, css) into the "" folder you just created. (no ready CLI commend unfortunately).</li>
+						<li>Download the whole project by using your favorite GIT CLI or GUI (for CLI the command is: git clone https://github.com/teddy4445/lecture_website_template.git</li>
+						<li>Open the folder with the project (if you are using Windows and CLI enter "cd lecture_website_template"</li>
+						<li>Inside the project, create new folder named "lecture_website_template" (yes, just as the name of the repo). If you are using Windows and CLI just enter "mkdir lecture_website_template"</li>
+						<li>Move all the project's folders (js, img, fonts, data, css) into the "lecture_website_template" folder you just created. (no ready CLI commend unfortunately).</li>
 						<li><b>At this point you are ready to run the project.</b> You can use any server you wish. We recommended the "Web Server for Chrome" which can be downloaded <a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en">here</a></li>
 						<li>After opening the webserver, configure it to the root folder of this project. If you are using the "Web Server for Chrome" server just open it and select the root folder as shown <a href="http://prntscr.com/vaua3v">here</a></li>
 						<li>Finally, open the server in the root (Usully http://127.0.0.1:8887) to get into the index page of the project (for example by clicking on the link as shown <a href="http://prntscr.com/vaub2l">here</a>)</li>
@@ -104,7 +105,7 @@
 				</div>
 				<div id="">
 					<ul>
-						<li><b>In order that the website will presented currectly in GitHub pages put all the folders inside a folder with the same name as the Repo. For example: ""</b></li>
+						<li><b>In order that the website will presented currectly in GitHub pages put all the folders inside a folder with the same name as the Repo. For example: "lecture_website_template"</b></li>
 						<li>all HTML files in the root folder</li>
 						<li><b>Folder "components"</b> contains all static HTML components we just need to inject on page load which have been generated ahead by the "generator" service.</li>
 						<li><b>Folder "css"</b> - all design (css) files of the project. Try avoiding spliting to multiple files and use the 'main.css'</li>
@@ -149,8 +150,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-	<script src="/js/main.js"> </script>
-	<script src="/js/search.js"> </script>
+	<script src="/lecture_website_template/js/main.js"> </script>
+	<script src="/lecture_website_template/js/search.js"> </script>
 	<!-- end - js -->	
 </body>
 </html>

@@ -1,11 +1,11 @@
 // imports
-import { PageRender, retrivedData } from '/js/pageRender.js';
-import { BlogCard } from '/js/components/blogCard.js';
-import { addCollapseFunction } from '/js/descriptionSlicer.js';
-import {Icons} from '/js/components/icons.js';
+import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
+import { BlogCard } from '/lecture_website_template/js/components/blogCard.js';
+import { addCollapseFunction } from '/lecture_website_template/js/descriptionSlicer.js';
+import {Icons} from '/lecture_website_template/js/components/icons.js';
 
 // Data file paths
-let BLOG_JSON = "/data/jsons/blog.json";
+let BLOG_JSON = "/lecture_website_template/data/jsons/blog.json";
 
 // consts
 const default_sorter = "year";

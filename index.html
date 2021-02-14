@@ -7,19 +7,23 @@
 		<!-- end - technical meta -->
 		
 		<!-- seo -->
-		<title> Teddy Lazebnik Academic Website </title>
+		<title> Lecturer's Name Website </title>
 		<meta content="Theodore (Teddy) Lazebnik - Mathematics and Computer Science researcher focusing on medical nanorobotics, PDE stabalization and numerical solutions" name="description"/>
+		<meta name="keywords" content="lecture website, academic website" />
 		<meta content="keywords" content="lazebnik, לזנבניק, teddy lazebnik, medical nanorobotics" />
-		<meta content="Teddy Lazebnik" name="author"/>
+		<meta id="author" content="First Last name" name="author"/>
 		<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
 		<!-- end - seo -->
 
 		<!-- css -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
 		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-		<link href="/css/main.css" rel="stylesheet">
-		<link href="/css/descriptionTrim.css" rel="stylesheet">
+		<link href="/lecture_website_template/css/main.css" rel="stylesheet">
+		<link href="/lecture_website_template/css/descriptionTrim.css" rel="stylesheet">
+
 		<!-- end - css -->
 		
 		<!-- stracture page data -->
@@ -27,31 +31,26 @@
 	   {
 			  "@context": "http://schema.org",
 			  "@type": "Person",
-			  "name": "Theodore (Teddy) Lazebnik",
-			  "jobTitle": "Algorithm Researcher",
+			  "name": "",
+			  "jobTitle": "",
 			  "gender": "https://schema.org/Male",
-			  "url": "http://teddylazebnik.info",
-			  "description": "Mathematics and Computer Science researcher focusing on medical nanorobotics, PDE stabilization and numerical solutions.",
-			  "givenName": "Teddy",
-			  "familyName": "Lazebnik",
-			  "honorificPrefix": "Dr.",
-			  "nationality": "Israeli",
-			  "image": "http://teddylazebnik.info/img/teddy.png",
-			  "birthDate": "1997",
+			  "url": "",
+			  "description": "",
+			  "givenName": "",
+			  "familyName": "",
+			  "honorificPrefix": "",
+			  "nationality": "",
+			  "image": "",
+			  "birthDate": "",
 			  "worksFor": {
 				"@type": "Organization",
-				"name": "Bar Ilan University",
-				"url": "https://www1.biu.ac.il/",
+				"name": "",
+				"url": "",
 			  },
-			  "spouse": "Elizaveta Lazebnik",
-			  "memberOf": "http://dnc-algo.com/",
-			  "alumniOf": {
-				"@type": "Organization",
-				"name": "Bar Ilan University",
-				"url": "https://www1.biu.ac.il/",
-			  },
-			  "seeks": "Cool math and cs projects",
-			  "telephone": "(972) 545524589",
+			  "spouse": "",
+			  "memberOf": "",
+			  "seeks": "",
+			  "telephone": "",
 			}
 	  </script>
 		<!-- end - stracture page data -->
@@ -59,25 +58,26 @@
 		<!-- Analytics -->
 		
 		<!-- Google Analytics-->
-		  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154895667-1"></script>
-		  <script>
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=key"></script>
+		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-			gtag('config', 'UA-154895667-1');
-		  </script>
-	  
-		  <!-- Hotjar Tracking Code for http://teddylazebnik.info/ -->
-		  <script>
-		   (function(h,o,t,j,a,r){
-					h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-					h._hjSettings={hjid:1812929,hjsv:6};
-					a=o.getElementsByTagName('head')[0];
-					r=o.createElement('script');r.async=1;
-					r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-					a.appendChild(r);
-				})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-		  </script>		
+			gtag('config', 'key');
+		</script>
+		
+		<!-- HotJar -->
+		<script>
+		(function(h,o,t,j,a,r)
+		{
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:4F4F4F0,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>		
 		<!-- end - Analytics -->
 		
 	</head>
@@ -111,18 +111,28 @@
 				<div class="personal-section">
 					<div class="personal-row personal-row-spacer nowrap" id="image-row">
 						<div class="personal-img">
-							<img src="/img/personal_image.png" alt="Lecture name" />
+							<img src="/lecture_website_template/img/personal_image.png" alt="Lecture name" />
 						</div>
 						<div class="personal-titles">
 							<h1 id="lecturer-name"> </h1>
 							<h2 id="lecture_position"> </h2>
+							
+							<div class="index-mobile-header no-show-desktop">
+								<div id="mobile-icon">
+									<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 3.5C11.34 3.5 3.5 11.34 3.5 21C3.5 30.66 11.34 38.5 21 38.5C30.66 38.5 38.5 30.66 38.5 21C38.5 11.34 30.66 3.5 21 3.5ZM22.75 29.75H19.25V19.25H22.75V29.75ZM22.75 15.75H19.25V12.25H22.75V15.75Z" fill="#000000"/></svg>
+								</div>
+								<div id="mobile-place-data" class="icon-detail-panel" style="display: none;">
+								
+								</div>
+							</div>
+							
 						</div>
 					</div>
 					<!-- contacts - start -->
 					<div class="personal-row" id="personal-data-row">
 						
 						<div  class="w-100">
-							<div class="personal-coloum wrap">
+							<div class="personal-coloum wrap no-show-mobile">
 								<!-- email section -->
 								<div class="personal-info-item" id="lecture_email">
 								<svg width="23" height="27" viewBox="0 0 23 27" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.81889 10.646C4.32859 9.0547 1.39649 7.18113 1.04782 6.96529C0.821704 6.82932 0.441175 6.58975 0.358451 6.30486C0.215064 5.81924 0.369481 5.625 0.981636 5.625H11.5261H22.0707C22.6828 5.625 22.8372 5.81277 22.6938 6.30486C22.6111 6.58327 22.2306 6.82932 22.0045 6.96529C21.6558 7.18113 18.7237 9.05468 16.2334 10.6459C14.391 11.8232 12.7904 12.846 12.6567 12.9286C12.3424 13.1228 12.0225 13.2135 11.5261 13.2135C11.0298 13.2135 10.7099 13.1228 10.3956 12.9286C10.2619 12.846 8.66132 11.8232 6.81889 10.646ZM20.0768 9.1602C21.3161 8.1582 22.2775 7.38098 22.4843 7.2566C22.9461 6.98246 22.9441 7.26432 22.9423 7.52511C22.9421 7.54149 22.942 7.55779 22.942 7.57387V20.8472C22.942 21.4429 22.2968 22.2005 21.7563 22.2005H11.5262H1.296C0.755543 22.2005 0 21.4494 0 20.8472V7.57387C0 7.3084 0.0275745 6.96523 0.512887 7.2566C0.725865 7.38468 1.74862 8.20497 3.05172 9.25011C4.51552 10.4241 6.33309 11.8819 7.75397 12.9609L3.22622 18.9501C3.11592 19.0796 3.06629 19.2415 3.13247 19.3127C3.19865 19.3904 3.34755 19.3516 3.45785 19.2221L8.89555 13.835C9.71727 14.4566 10.2908 14.8839 10.3956 14.9487C10.8203 15.2012 11.1181 15.2336 11.5262 15.2336C11.9343 15.2336 12.2321 15.2012 12.6567 14.9487C12.756 14.8839 13.3351 14.4566 14.1568 13.835L19.5945 19.2221C19.7103 19.3451 19.8537 19.3839 19.9199 19.3127C19.9805 19.235 19.9309 19.0796 19.8206 18.9501L15.2873 12.9609C16.7447 11.8542 18.6064 10.349 20.0768 9.1602Z" fill="#1A202C"/> <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="5" width="23" height="18"> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.81889 10.646C4.32859 9.0547 1.39649 7.18113 1.04782 6.96529C0.821704 6.82932 0.441175 6.58975 0.358451 6.30486C0.215064 5.81924 0.369481 5.625 0.981636 5.625H11.5261H22.0707C22.6828 5.625 22.8372 5.81277 22.6938 6.30486C22.6111 6.58327 22.2306 6.82932 22.0045 6.96529C21.6558 7.18113 18.7237 9.05468 16.2334 10.6459C14.391 11.8232 12.7904 12.846 12.6567 12.9286C12.3424 13.1228 12.0225 13.2135 11.5261 13.2135C11.0298 13.2135 10.7099 13.1228 10.3956 12.9286C10.2619 12.846 8.66132 11.8232 6.81889 10.646ZM20.0768 9.1602C21.3161 8.1582 22.2775 7.38098 22.4843 7.2566C22.9461 6.98246 22.9441 7.26432 22.9423 7.52511C22.9421 7.54149 22.942 7.55779 22.942 7.57387V20.8472C22.942 21.4429 22.2968 22.2005 21.7563 22.2005H11.5262H1.296C0.755543 22.2005 0 21.4494 0 20.8472V7.57387C0 7.3084 0.0275745 6.96523 0.512887 7.2566C0.725865 7.38468 1.74862 8.20497 3.05172 9.25011C4.51552 10.4241 6.33309 11.8819 7.75397 12.9609L3.22622 18.9501C3.11592 19.0796 3.06629 19.2415 3.13247 19.3127C3.19865 19.3904 3.34755 19.3516 3.45785 19.2221L8.89555 13.835C9.71727 14.4566 10.2908 14.8839 10.3956 14.9487C10.8203 15.2012 11.1181 15.2336 11.5262 15.2336C11.9343 15.2336 12.2321 15.2012 12.6567 14.9487C12.756 14.8839 13.3351 14.4566 14.1568 13.835L19.5945 19.2221C19.7103 19.3451 19.8537 19.3839 19.9199 19.3127C19.9805 19.235 19.9309 19.0796 19.8206 18.9501L15.2873 12.9609C16.7447 11.8542 18.6064 10.349 20.0768 9.1602Z" fill="white"/> </mask> <g mask="url(#mask0)"> <rect width="23" height="27" fill="#1A202C"/> </g> </svg>								</div>
@@ -135,8 +145,8 @@
 										
 										
 								</div>
-							<div class="personal-row space-between wrap" style="justify-content: flex-start;" >
-								<div class="personal-info-item space-between wrap" id="lecture_phone">
+							<div class="personal-row space-between wrap" id="lecture_icons">
+								<div class="personal-info-item space-between wrap">
 									<!-- google-scholar icon -->
 									<a id="social-google-scholar" href="">
 										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -153,6 +163,17 @@
 											<path d="M9.77581 12.7998H12.3358V22.3998H9.77581V12.7998ZM20.3358 12.7998C19.2171 12.7998 18.2033 13.244 17.4558 13.962V12.7998H14.8958V22.3998H17.4558V17.5998C17.4558 16.3678 18.4638 15.3598 19.6958 15.3598C20.9278 15.3598 21.9358 16.3678 21.9358 17.5998V19.1998V22.3998H24.4958V16.9598C24.4958 14.6622 22.6334 12.7998 20.3358 12.7998Z" fill="#FCFCFC"/>
 										</svg>											
 									</a>
+									
+									<a id="social-linkedin" href="" class="no-show-desktop">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="#1A202C"/>
+										</svg>									
+									</a>
+										
+									<a id="social-linkedin" href="" class="no-show-desktop">
+										<svg width="23" height="27" viewBox="0 0 23 27" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.81889 10.646C4.32859 9.0547 1.39649 7.18113 1.04782 6.96529C0.821704 6.82932 0.441175 6.58975 0.358451 6.30486C0.215064 5.81924 0.369481 5.625 0.981636 5.625H11.5261H22.0707C22.6828 5.625 22.8372 5.81277 22.6938 6.30486C22.6111 6.58327 22.2306 6.82932 22.0045 6.96529C21.6558 7.18113 18.7237 9.05468 16.2334 10.6459C14.391 11.8232 12.7904 12.846 12.6567 12.9286C12.3424 13.1228 12.0225 13.2135 11.5261 13.2135C11.0298 13.2135 10.7099 13.1228 10.3956 12.9286C10.2619 12.846 8.66132 11.8232 6.81889 10.646ZM20.0768 9.1602C21.3161 8.1582 22.2775 7.38098 22.4843 7.2566C22.9461 6.98246 22.9441 7.26432 22.9423 7.52511C22.9421 7.54149 22.942 7.55779 22.942 7.57387V20.8472C22.942 21.4429 22.2968 22.2005 21.7563 22.2005H11.5262H1.296C0.755543 22.2005 0 21.4494 0 20.8472V7.57387C0 7.3084 0.0275745 6.96523 0.512887 7.2566C0.725865 7.38468 1.74862 8.20497 3.05172 9.25011C4.51552 10.4241 6.33309 11.8819 7.75397 12.9609L3.22622 18.9501C3.11592 19.0796 3.06629 19.2415 3.13247 19.3127C3.19865 19.3904 3.34755 19.3516 3.45785 19.2221L8.89555 13.835C9.71727 14.4566 10.2908 14.8839 10.3956 14.9487C10.8203 15.2012 11.1181 15.2336 11.5262 15.2336C11.9343 15.2336 12.2321 15.2012 12.6567 14.9487C12.756 14.8839 13.3351 14.4566 14.1568 13.835L19.5945 19.2221C19.7103 19.3451 19.8537 19.3839 19.9199 19.3127C19.9805 19.235 19.9309 19.0796 19.8206 18.9501L15.2873 12.9609C16.7447 11.8542 18.6064 10.349 20.0768 9.1602Z" fill="#1A202C"/> <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="5" width="23" height="18"> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.81889 10.646C4.32859 9.0547 1.39649 7.18113 1.04782 6.96529C0.821704 6.82932 0.441175 6.58975 0.358451 6.30486C0.215064 5.81924 0.369481 5.625 0.981636 5.625H11.5261H22.0707C22.6828 5.625 22.8372 5.81277 22.6938 6.30486C22.6111 6.58327 22.2306 6.82932 22.0045 6.96529C21.6558 7.18113 18.7237 9.05468 16.2334 10.6459C14.391 11.8232 12.7904 12.846 12.6567 12.9286C12.3424 13.1228 12.0225 13.2135 11.5261 13.2135C11.0298 13.2135 10.7099 13.1228 10.3956 12.9286C10.2619 12.846 8.66132 11.8232 6.81889 10.646ZM20.0768 9.1602C21.3161 8.1582 22.2775 7.38098 22.4843 7.2566C22.9461 6.98246 22.9441 7.26432 22.9423 7.52511C22.9421 7.54149 22.942 7.55779 22.942 7.57387V20.8472C22.942 21.4429 22.2968 22.2005 21.7563 22.2005H11.5262H1.296C0.755543 22.2005 0 21.4494 0 20.8472V7.57387C0 7.3084 0.0275745 6.96523 0.512887 7.2566C0.725865 7.38468 1.74862 8.20497 3.05172 9.25011C4.51552 10.4241 6.33309 11.8819 7.75397 12.9609L3.22622 18.9501C3.11592 19.0796 3.06629 19.2415 3.13247 19.3127C3.19865 19.3904 3.34755 19.3516 3.45785 19.2221L8.89555 13.835C9.71727 14.4566 10.2908 14.8839 10.3956 14.9487C10.8203 15.2012 11.1181 15.2336 11.5262 15.2336C11.9343 15.2336 12.2321 15.2012 12.6567 14.9487C12.756 14.8839 13.3351 14.4566 14.1568 13.835L19.5945 19.2221C19.7103 19.3451 19.8537 19.3839 19.9199 19.3127C19.9805 19.235 19.9309 19.0796 19.8206 18.9501L15.2873 12.9609C16.7447 11.8542 18.6064 10.349 20.0768 9.1602Z" fill="white"/> </mask> <g mask="url(#mask0)"> <rect width="23" height="27" fill="#1A202C"/> </g> </svg>						
+									</a>
+									
 								</div>
 							</div>
 						</div>
@@ -197,7 +218,7 @@
 						</div>
 						<div id="featured_publications">
 						</div>
-						<a class="see-more" href="/publications.html">See more publications</a>
+						<a class="see-more" href="/lecture_website_template/publications.html">See more publications</a>
 					</div>
 				</div>
 				<div class="featured-publications-container" id="current_projects_header">
@@ -210,7 +231,7 @@
 						<div id="current_projects">
 							
 						</div>
-						<a class="see-more" href="/research.html">See more projects</a>
+						<a class="see-more" href="/lecture_website_template/research.html">See more projects</a>
 					</div>
 				</div>
 			</div>
@@ -228,9 +249,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-		<script src="/js/main.js"> </script>
-		<script src="/js/search.js"> </script>
-		<script src="/js/pages/index.js"  type="module"> </script>
+		<script src="/lecture_website_template/js/main.js"> </script>
+		<script src="/lecture_website_template/js/search.js"> </script>
+		<script src="/lecture_website_template/js/pages/index.js"  type="module"> </script>
 		<!-- end - js -->	
 	</body>
 </html>

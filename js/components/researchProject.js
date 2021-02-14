@@ -1,7 +1,7 @@
-import { Element } from '/js/components/element.js';
-import { ResearchTeamMember } from '/js/components/researchTeamMember.js';
-import { CourseResource } from '/js/components/courseResource.js';
-import { descriptionTrim } from '/js/descriptionSlicer.js';
+import { Element } from '/lecture_website_template/js/components/element.js';
+import { ResearchTeamMember } from '/lecture_website_template/js/components/researchTeamMember.js';
+import { CourseResource } from '/lecture_website_template/js/components/courseResource.js';
+import { descriptionTrim } from '/lecture_website_template/js/descriptionSlicer.js';
 
 class ResearchProject extends Element
 {
@@ -69,13 +69,15 @@ class ResearchProject extends Element
 
 	}
 
-	_createResearchTitleSection() {
+	_createResearchTitleSection() 
+	{
 		return '<div class="research-title space-between"><h3 class="content-title">' + this.name +
 		'</h3><p class="research-duration">[' + this.start_month + '/' + this.start_year + 
 		' - ' + this.end_month + '/' + this.end_year + ']</p></div><hr class="blue-hr">';
 	}
 
-	_createTeamSection() {
+	_createTeamSection()
+	{
 		let html = '<div class="team-section">';
 
 		html += '<div class="collapsing-section-title"><div class="team-title space-between"><p class="content-subtitle">Team</p><svg class="moreLessButton" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 13 8" width="13" height="8">'+

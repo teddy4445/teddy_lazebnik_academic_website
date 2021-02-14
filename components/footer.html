@@ -3,27 +3,35 @@
 	<div class="footer-section">
 		<div class="personal-row-col-footer">
 			<div class="footer-menu w-100" style="align-content: space-evenly;">
-				<h1>
+				<h1 id="lecturer-name-id">
 					Teddy Lazebnik
 				</h1>
-				<h2>
+				<h2 id="position">
 					PhD. Student at Bar-Ilan University, department of CS.
 				</h2>
 				<p class="footer-description">
 					I am a Ph.D. student in the Tolkien Project, part of the MAVERICK research group at the Computer Science Department, Bar Ilan University; Supervised by Prof. Gal A. Kaminka and Dr. Chana Weitman.  
 				</p>
 				<div class="personal-row footer-details-icons">
-						<img title="linkedin profile" src="/img/footer/email.png" />
-					<p>lazebnik.teddy (at) gmail.com</p>
+						<img title="email" src="/img/footer/email.png" />
+					<p id="email-address">lazebnik.teddy (at) gmail.com</p>
 				</div>
 				<div class="personal-row footer-details-icons">
-						<img title="linkedin profile" src="/img/footer/phone.png" />
-					<p>+972-545524589</p>
+						<img title="phone" src="/img/footer/phone.png" />
+					<p id="phone-number">+972-545524589</p>
 				</div>
 				<div class="personal-row">
 					<p>Find me on:</p><br>
 				</div>
 				<div class="personal-row footer-social">
+					<a href="mailto:lazebnik.teddy@gmail.com" class="footer-social-icons footer-find-me-mail-and-phone" title="email" id="footer-email">
+						<img title="email" src="/img/footer/email.png" />
+					</a>
+
+					<a href="tel:+972545524589" class="footer-social-icons footer-find-me-mail-and-phone" title="phone" id="footer-phone">
+						<img title="phone" src="/img/footer/phone.png" />
+					</a>
+					
 					<a href="https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en" class="footer-social-icons" title="google profile" id="footer-google">
 						<img title="google profile" src="/img/footer/google.png" />
 					</a>
@@ -33,7 +41,7 @@
 					</a>
 					
 					<a href="https://bitbucket.org/teddy_lazebnik/" class="footer-social-icons" title="bitbucket profile" id="footer-bitbucket">
-						<img title="linkedin profile" src="/img/footer/bitbucket.png" />
+						<img title="bitbucket profile" src="/img/footer/bitbucket.png" />
 					</a>
 					
 					<a href="https://github.com/teddy4445" class="footer-social-icons" title="github profile" id="footer-bitbucket">
@@ -42,7 +50,7 @@
 				</div>
 			</div>
 			<div class="personal-coloum w-100" style="align-content: space-evenly;" id="footer-menu-row"> 
-				<div class="personal-row w-100" style="align-content: space-evenly;"> 
+				<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
 					<div class="footer-menu w-100">
 						<a class="footer-menu-title" href="/about.html">
 							About
@@ -72,7 +80,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="personal-row w-100" style="align-content: space-evenly;"> 
+				<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
 					<div class="footer-menu w-100">
 						<a class="footer-menu-title" href="/publications.html">
 							Publication
@@ -102,11 +110,15 @@
 </div> 
 <div class="footer-section">
 	<div class="personal-row center brand-footer" >
-		<a href="https://sphera.academy" title="An academic website generator">Powered by <img title="An academic website generator" src="/img/logo.png" /></a>
+		<a href="https://sphera.academy" title="An academic website generator">Powered by <img title="An academic website generator" src="/lecture_website_template/img/logo.png" /></a>
+	</div>
+	<div class="year-logo">
+		<span>© 2021 </span>
+		<a href="#">Privacy - Terms</a>
 	</div>
 </div> 
 
-
+		
 <div class="alert" id="alert-panel-1">
   <span id="alert-close-btn" class="closebtn" onclick="this.parentElement.style.opacity=0;"></span>
   <div id="cite-alert">

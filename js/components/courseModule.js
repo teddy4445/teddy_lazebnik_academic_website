@@ -1,5 +1,5 @@
-import { Element } from '/js/components/element.js';
-import { CourseResource } from '/js/components/courseResource.js';
+import { Element } from '/lecture_website_template/js/components/element.js';
+import { CourseResource } from '/lecture_website_template/js/components/courseResource.js';
 
 class CourseModule extends Element
 {
@@ -12,20 +12,19 @@ class CourseModule extends Element
 	}
 	
 	// convert the object into HTML
-	toHtml()
+	toHtml(lastVisit)
 	{
 		let html = '<div class="module"><h3 class="content-title">' + this.title + '</h3><hr><h2 class="content-text">' + this.explanation + "</h2>";
-		
 		this.resources.forEach(resourceEntry => {
+			//resourceEntry.sort();
 			for(const resourceType in resourceEntry) {
-				html += '<div class="resource"><ul class="resource-list"><li class="content-subtitle"><h5 class="resource-list-item-title">' + resourceType + '</h5>';
+				html += '<div class="resource"><ul class="resource-list"><li class="content-subtitle"><h5 class="resource-list-item-title">' + resourceType + '</h5></li>';
 				resourceEntry[resourceType].forEach(resourceProperties => {
 					let resource = CourseResource.createFromJson(resourceProperties);
-				
-					html += resource.toHtml();
+					html += resource.toHtml(lastVisit, "resource-description-module");
 				});
 	
-				html += '</li></ul></div>';
+				html += '</ul></div>';
 			}
 		});
 

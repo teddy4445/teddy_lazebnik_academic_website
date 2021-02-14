@@ -1,10 +1,10 @@
 // imports
-import { PageRender, retrivedData } from '/js/pageRender.js';
-import {CourseCard} from '/js/components/courseCard.js';
-import {Icons} from '/js/components/icons.js';
+import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
+import {CourseCard} from '/lecture_website_template/js/components/courseCard.js';
+import {Icons} from '/lecture_website_template/js/components/icons.js';
 
 // Data file paths
-let TAECHING_JSON = "/data/jsons/teaching.json";
+let TAECHING_JSON = "/lecture_website_template/data/jsons/teaching.json";
 
 // consts
 let default_filter = "All Universities";
@@ -18,7 +18,7 @@ class Teaching extends PageRender
 	{
 		super();
         Teaching.loadFileFromServer(TAECHING_JSON, true);
-        this.cardList = CourseCard.createListFromJson(retrivedData["coureses"]);
+        this.cardList = CourseCard.createListFromJson(retrivedData["courses"]);
         this.filter = default_filter;
 		this.listFilterName = CourseCard.listFilterButtons(this.cardList, this.property_university);
 		
@@ -48,6 +48,9 @@ class Teaching extends PageRender
 			let reset = document.getElementById("reset-btn");
 			reset.innerHTML = Icons.reset() + " Reset";
 			reset.addEventListener("click", this.buildBody());
+
+			let filter_btn = document.getElementById("filter-btn");
+			filter_btn.innerHTML = Icons.filter() + " Filter"
 		}
         catch (error)
 		{
@@ -89,7 +92,7 @@ class Teaching extends PageRender
 		}
 
 		// split into the right sets
-		var coursesSets = CourseCard.splitByProperty(buildTeachingList, 'year');
+		var coursesSets = CourseCard.splitByProperty(buildTeachingList, 'university');
 		// build the UI //
 		try
 		{
@@ -101,17 +104,18 @@ class Teaching extends PageRender
 				{
 					keys.push(spliterKey);
 				}
-				keys = keys.sort().reverse();
+				keys = keys.sort();
 
 				for (var spliterKeyIndex = 0; spliterKeyIndex < keys.length; spliterKeyIndex++)
 				{
 					// add spliter
-					ansewrHtml += "<h3>" + keys[spliterKeyIndex] + "</h3>";
+					ansewrHtml +='<div class="institution-card"><h2 class="institution-title">' + keys[spliterKeyIndex] + "</h2>";
 					// add elements inside the list
 					for (var elementIndex = 0; elementIndex < coursesSets[keys[spliterKeyIndex]].length; elementIndex++)
 					{
 						ansewrHtml += coursesSets[keys[spliterKeyIndex]][elementIndex].toHtml();
 					}
+					ansewrHtml+="</div>";
 				}
 				document.getElementById("teaching-body").innerHTML = ansewrHtml;
             }
@@ -171,6 +175,8 @@ class Teaching extends PageRender
 		this.filter = filter_value;
 		//build the new body after the filter change.
 		this.buildBody(filter_value);
+		//close filter display
+		this.filtersDisplay();
 	}
 
 	clearFiltersDesign()
@@ -180,6 +186,31 @@ class Teaching extends PageRender
 		f[0].selectedIndex = 0;
 		f[0].classList.remove("active-sort-button");
 	}
+
+	/*
+	Show/hide filters menu
+	*/
+	filtersDisplay(){
+		//relevent for mobile only
+		if (window.innerWidth > 430) return;
+		let filters = document.getElementsByClassName("select-wrapper")[0];
+		if( filters.style.display =="none"){
+			filters.style.display = "block";
+		}else {
+			filters.style.display = "none";
+		}
+	}
+
+	//reset view after resize page manualy(if the user like to change the browser size)
+	resetView(){
+		let filters = document.getElementsByClassName("select-wrapper")[0];
+		if (window.innerWidth > 430)
+			filters.style.display = "block";
+		else{
+			filters.style.display = "none";
+		}
+	}
+	
 
 }
 
@@ -192,6 +223,11 @@ document.getElementById("year-filter").addEventListener("change", () => {documen
 document.getElementById("topic-filter").addEventListener("change", () => {document.teaching.ChangeFilter("topic");});
 document.getElementById("university-filter").addEventListener("change", () => {document.teaching.ChangeFilter("university");});
 document.getElementById("reset-btn").addEventListener("click", () => {document.teaching.buildBody(default_filter);});
+document.getElementById("filter-btn").addEventListener("click", () => {document.teaching.filtersDisplay();});
+
+//event for resize page
+window.onresize = document.teaching.resetView;
+
 
 
 export { Teaching }

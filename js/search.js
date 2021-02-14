@@ -4,9 +4,9 @@ let PARAM_QUERY = "query";
 docs = [];
 var doc1 = {
     "id": "1",
-    "body": "A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof",
-    "shortBody": "Teddy Lazebnik and Shlomo Yanetz Functional Differential Equations",
-    "title": "A stable algorithm for numerical matrix exponent",
+    "body": "Paper's description Paper's description",
+    "shortBody": "first name, last name; first name, last name good publisher good publisher",
+    "title": "Paper's Paper's title",
     "url": "/publications.html"
 };
 docs.push(doc1);
@@ -14,9 +14,9 @@ docs.push(doc1);
 
 var doc2 = {
     "id": "2",
-    "body": "Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modelingOptimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
-    "shortBody": "Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni Functional Differential Equations",
-    "title": "Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling",
+    "body": "Paper's description Paper's description",
+    "shortBody": "first name, last name; first name, last name good publisher good publisher",
+    "title": "Paper's Paper's title",
     "url": "/publications.html"
 };
 docs.push(doc2);
@@ -24,9 +24,9 @@ docs.push(doc2);
 
 var doc3 = {
     "id": "3",
-    "body": "A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof including analysis of the performance in Matlab and C implementation.",
-    "shortBody": "Teddy Lazebnik and Shlomo Yanetz Functional Differential Equations conference",
-    "title": "A highly stable implementation for numerical matrix exponent in Matlab and C",
+    "body": "Paper's description Paper's description",
+    "shortBody": "first name, last name; first name, last name good publisher good publisher",
+    "title": "Paper's Paper's title",
     "url": "/publications.html"
 };
 docs.push(doc3);
@@ -34,9 +34,9 @@ docs.push(doc3);
 
 var doc4 = {
     "id": "4",
-    "body": "Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modelingOptimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
-    "shortBody": "Teddy Lazebnik, Shlomo Yanetz, and Svetlana Bunimovich-Mendrazitsky Functional Differential Equations conference",
-    "title": "PDE Modeling of Bladder Cancer Treatment Using BCG Immunotherapy",
+    "body": "Paper's description Paper's description",
+    "shortBody": "first name, last name; first name, last name good publisher good publisher",
+    "title": "Paper's Paper's title",
     "url": "/publications.html"
 };
 docs.push(doc4);
@@ -44,9 +44,9 @@ docs.push(doc4);
 
 var doc5 = {
     "id": "5",
-    "body": "Analysis of the most energy efficieny in 2d quadratic hamiltonian motion and general solution for the 1d and 2d cases.",
-    "shortBody": "Teddy Lazebnik and Barry Ginat Technion Press",
-    "title": "Energy Efficiency in 2d Quadratic Hamiltonian",
+    "body": "A very long text - allow HTML edditing cool long html description. cool long html description. cool long html description",
+    "shortBody": "cool name. cool name. cool name",
+    "title": "research",
     "url": "/publications.html"
 };
 docs.push(doc5);
@@ -54,39 +54,49 @@ docs.push(doc5);
 
 var doc6 = {
     "id": "6",
-    "body": "Meta academic search engine using project-based search with explicit user tagging to improve search results.",
-    "shortBody": "Teddy Lazebnik, Hana Weitman, and Gal A. Kaminka Bar-Ilan Nanotechnology and Advanced Materials",
-    "title": "Rivendell: Project-Based Academic Search Engine",
-    "url": "/publications.html"
+    "body": "cool long html description",
+    "shortBody": "cool long html description",
+    "title": "name student",
+    "url": "url"
 };
 docs.push(doc6);
 
 
 var doc7 = {
     "id": "7",
-    "body": "I am a Ph.D. student in the Tolkien Project, part of the MAVERICK research group at the Computer Science Department , Bar Ilan University ; Supervised by Prof. Gal A. Kaminka and Dr. Chana Weitman. My research focuses on medical and biological nanoparticles (focusing on nanorobotics). Specifically, modeling a curing protocol based on biophysical interactions of targeted drug delivery nanoparticles in the blood. I am also interested in numerical solving and stabilization of ordinary and partial differential equations (ODE, PDE) systems (especially, ones that originate in a biological setup). Sometimes I am publishing some useful (or just fun) things like open code and technical blog posts . I published a few academic papers in journals, conferences, and abstracts. In between, I am teaching several mathematical classes and working with Bc.S. and Mc.S. students on their final project. I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics at Bar-Ilan University. Medical Nanorobotics - nanoscale in vivo interactions, drug discovery, computing, and compalization.. Biomathematical Modeling - optimal treatment policy, pharmacokinetics, and disease dyanmics.. Computer Simualtion - in vivo PKPD, epedimological, and clinical treatment.",
-    "shortBody": "I am a Ph.D. student in the Tolkien Project, part of the MAVERICK research group at the Computer Science Department , Bar Ilan University ; Supervised by Prof. Gal A. Kaminka and Dr. Chana Weitman. My research focuses on medical and biological nanoparticles (focusing on nanorobotics). Specifically, modeling a curing protocol based on biophysical interactions of targeted drug delivery nanoparticles in the blood. I am also interested in numerical solving and stabilization of ordinary and partial differential equations (ODE, PDE) systems (especially, ones that originate in a biological setup). Sometimes I am publishing some useful (or just fun) things like open code and technical blog posts . I published a few academic papers in journals, conferences, and abstracts. In between, I am teaching several mathematical classes and working with Bc.S. and Mc.S. students on their final project. I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics at Bar-Ilan University.",
-    "title": "home page",
-    "url": "/"
+    "body": "cool long html description",
+    "shortBody": "cool long html description",
+    "title": "name student",
+    "url": "url"
 };
 docs.push(doc7);
 
 
 var doc8 = {
     "id": "8",
-    "body": "Biomathematics and Nanorobotics",
-    "shortBody": "Bar-Ilan University",
-    "title": "Teddy Lazebnik PhD. Student at Bar-Ilan University, department of CS.",
-    "url": "/research.html"
+    "body": "cool long html description",
+    "shortBody": "cool long html description",
+    "title": "name student",
+    "url": "url"
 };
 docs.push(doc8);
 
 
+var doc9 = {
+    "id": "9",
+    "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum A Really good text A Really good text A Really good text from data 111. A Really good text A Really good text A Really good text from data 222. A Really good text A Really good text A Really good text from data 333",
+    "shortBody": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    "title": "home page",
+    "url": "/"
+};
+docs.push(doc9);
+
+
 var doc10 = {
     "id": "10",
-    "body": "Sphera is a free open-source website template that will vastly improve the communication between lecturers and students. It will provide lecturers and professors with the tools to easily create a professional personal website that contains their research, courses and personal projects. We will study the user behaivor in personal acadmic websites and how to improve it using machine learning reccomendation system.",
-    "shortBody": "Sphera is a free open-source website template that will vastly improve the communication between lecturers and students. It will provide lecturers and professors with the tools to easily create a professional personal website that contains their research, courses and personal projects. We will study",
-    "title": " Sphera – A template for personal academic websites",
+    "body": "Cool description to a lecture demo website",
+    "shortBody": "Bar Ilan University. Ben Gurion University",
+    "title": " Henrietta Losatter position position position",
     "url": "/research.html"
 };
 docs.push(doc10);
@@ -94,9 +104,9 @@ docs.push(doc10);
 
 var doc11 = {
     "id": "11",
-    "body": "A tempro-spatial mathematical model with computer simulation based in the cloud for pandemic analysis and polices investigation tool",
-    "shortBody": "A tempro-spatial mathematical model with computer simulation based in the cloud for pandemic analysis and polices investigation tool",
-    "title": "International Crisis Simulator",
+    "body": "position position position. Cool description to a lecture demo website",
+    "shortBody": "position position position. Cool description to a lecture demo website",
+    "title": "research",
     "url": "/research.html"
 };
 docs.push(doc11);
@@ -104,9 +114,9 @@ docs.push(doc11);
 
 var doc12 = {
     "id": "12",
-    "body": "Improvments to the Rivendell search engine. Including collaborative learning. The development done on C# based dot net core 2 ",
-    "shortBody": "Improvments to the Rivendell search engine. Including collaborative learning. The development done on C# based dot net core 2 ",
-    "title": "Rivendell v.3 with explicit collaborative learning",
+    "body": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research",
+    "shortBody": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information ab",
+    "title": "Research Name",
     "url": "/research.html"
 };
 docs.push(doc12);
@@ -114,9 +124,9 @@ docs.push(doc12);
 
 var doc13 = {
     "id": "13",
-    "body": "Prodcution-ready (C# on dot net core 2) search engine.",
-    "shortBody": "Prodcution-ready (C# on dot net core 2) search engine.",
-    "title": "Property-Value tagging tool as website",
+    "body": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research",
+    "shortBody": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information ab",
+    "title": "Research Name 2",
     "url": "/research.html"
 };
 docs.push(doc13);
@@ -124,9 +134,9 @@ docs.push(doc13);
 
 var doc14 = {
     "id": "14",
-    "body": "Prodcution-ready (C# on dot net core 2 with Angular 8) SaaS providing for taggers an easy to use Property-Value tagging GUI.",
-    "shortBody": "Prodcution-ready (C# on dot net core 2 with Angular 8) SaaS providing for taggers an easy to use Property-Value tagging GUI.",
-    "title": "Rivendell v.2 with online learning search engine",
+    "body": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research",
+    "shortBody": "short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information about this research - short information ab",
+    "title": "Research Name 3",
     "url": "/research.html"
 };
 docs.push(doc14);
@@ -134,8 +144,8 @@ docs.push(doc14);
 
 var doc15 = {
     "id": "15",
-    "body": "Online learning is the future. Students should be able to find quality acadmic resources easly which provided by their lecturers.",
-    "shortBody": "Online learning is the future. Students should be able to find quality acadmic resources easly which provided by their lecturers.",
+    "body": "A very long text - allow HTML edditing",
+    "shortBody": "A very long text - allow HTML edditing",
     "title": "courses",
     "url": "/teaching.html"
 };
@@ -144,52 +154,22 @@ docs.push(doc15);
 
 var doc16 = {
     "id": "16",
-    "body": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities.",
-    "shortBody": "An introduction to programming concepts in C++ and how they are related to what you know from C and Java Advanced topics in C++ programming",
-    "title": "Advanced Programming 1 89210",
-    "url": "/course-page.html?course_id=89210"
+    "body": "sentence or two of text - no HTML needed",
+    "shortBody": "not too long not too long not too long",
+    "title": "course name 123",
+    "url": "/course-page.html?course_id=123"
 };
 docs.push(doc16);
 
 
 var doc17 = {
     "id": "17",
-    "body": "In recent years there has been a major breakthrough in the field of artificial neural networks, especially in deep neural networks (namely, networks with many layers). Deep learning is the term coined for the training of such networks, which have shown superiority over other machine learning algorithms in many applications. Nowadays, deep neural networks provide the best performance in tasks such as, voice recognition, object detection, image classification and content suggestion. These networks gradually take over standard machine learning algorithms and we are at the heart of a new generation, where voice recognition and image recognition are based on them fully. In this course we will explain the mathematics at the core of neural networks models, and provide practical tools for using them. The course focuses mainly on image processing and, consequently, on convolutional neural networks.",
-    "shortBody": "An introduction to computer vision concepts, review of ML methods and first steps in DL CNN, code, model development pipeline Students projects",
-    "title": "Deep Leanring 21319",
-    "url": "/course-page.html?course_id=21319"
+    "body": "sentence or two of text - no HTML needed",
+    "shortBody": "not too long not too long not too long",
+    "title": "course name 2 321",
+    "url": "/course-page.html?course_id=321"
 };
 docs.push(doc17);
-
-
-var doc18 = {
-    "id": "18",
-    "body": "This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you.",
-    "shortBody": "Numerical methods for Interpolation Numerical methods differentiation and integration",
-    "title": "Numerical Analysis 88376",
-    "url": "/course-page.html?course_id=88376"
-};
-docs.push(doc18);
-
-
-var doc19 = {
-    "id": "19",
-    "body": "This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you.",
-    "shortBody": "Numerical methods for Interpolation ",
-    "title": "Introduction to Linear Mathematical Optimization 88369",
-    "url": "/course-page.html?course_id=88369"
-};
-docs.push(doc19);
-
-
-var doc20 = {
-    "id": "20",
-    "body": "This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you.",
-    "shortBody": "Concepts of numerical analysis and ideas from function theory - main slides Methods to calculate several good propertices of Matrices Methods to extrapolate and interpolate data, FFT, numerical integration and differentiation",
-    "title": "Tools for Numerical Analysis  83214",
-    "url": "/course-page.html?course_id=83214"
-};
-docs.push(doc20);
 
 var index = elasticlunr(function () {
     this.addField('title');
@@ -243,7 +223,7 @@ function searchPage()
 	}
 	else // if more then 1 answer - go to the search page and load there again the answers
 	{
-		window.open("/search.html?" + PARAM_QUERY + "=" + encodeURIComponent(query));
+		window.open("/lecture_website_template/search.html?" + PARAM_QUERY + "=" + encodeURIComponent(query));
 	}
 }
 

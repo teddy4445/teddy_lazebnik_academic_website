@@ -1,13 +1,13 @@
 // imports
-import { PageRender, retrivedData } from '/js/pageRender.js';
-import { ResearchProject } from '/js/components/researchProject.js';
-import { ResearchPosition } from '/js/components/researchPosition.js';
-import { Icons } from '/js/components/icons.js';
-import { Tabs } from '/js/components/tabs.js';
-import { addCollapseFunction } from '/js/descriptionSlicer.js';
+import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
+import { ResearchProject } from '/lecture_website_template/js/components/researchProject.js';
+import { ResearchPosition } from '/lecture_website_template/js/components/researchPosition.js';
+import { Icons } from '/lecture_website_template/js/components/icons.js';
+import { Tabs } from '/lecture_website_template/js/components/tabs.js';
+import { addCollapseFunction } from '/lecture_website_template/js/descriptionSlicer.js';
 
 // Data file paths
-let RESEARCH_JSON = "/data/jsons/research.json";
+let RESEARCH_JSON = "/lecture_website_template/data/jsons/research.json";
 let SECTIONS = ["Ongoing-Projects", "Previous-Projects", "Work-with-me"];
 
 /*
@@ -45,7 +45,9 @@ class Research extends PageRender
 		for (var index = 0; index < this.jsonData["projects"].length; index++)
 		{
 			var newProject = ResearchProject.createFromJson(this.jsonData["projects"][index]);
-			if (newProject.end_year <= nowDate.getFullYear() || (newProject.end_year == nowDate.getFullYear() && newProject.end_month <= nowDate.getMonth() + 1))
+			//create lists of current and prev researches using date calculation.
+			if ((newProject.end_year <= nowDate.getFullYear() )||(
+				(newProject.end_year == nowDate.getFullYear()) && newProject.end_month <= nowDate.getMonth() + 1))
 			{
 				this.previousProjects.push(newProject);
 			}
@@ -86,9 +88,9 @@ class Research extends PageRender
 
 	createTabsSection() {
 		Tabs.createTabsSection();
-		Tabs.addTab('Ongoing Projects');
-		Tabs.addTab('Previous Projects');
-		Tabs.addTab('Work with me', true);
+		Tabs.addTab('Ongoing Projects', 'Ongoing');
+		Tabs.addTab('Previous Projects', 'Previous');
+		Tabs.addTab('Work with me','Join me', true);
 	}
 
 	buildOngoing()
@@ -99,7 +101,7 @@ class Research extends PageRender
 			answerHTML += research.toHtml();
 
 			if(i < this.ongoingProjects.length - 1) {
-				answerHTML += '<div class="section-seperator"><div class="main-dot"></div><div class="main-dot"></div><div class="main-dot"></div></div>';
+				answerHTML += '<div class="section-seperator">'+Icons.dots_seperator()+'</div>';
 			}
 		});
 
@@ -115,7 +117,7 @@ class Research extends PageRender
 			answerHTML += research.toHtml();
 
 			if(i < this.previousProjects.length - 1) {
-				answerHTML += '<div class="section-seperator"><div class="main-dot"></div><div class="main-dot"></div><div class="main-dot"></div></div>';
+				answerHTML += '<div class="section-seperator">'+Icons.dots_seperator()+'</div>';
 			}
 		});
 		
@@ -136,7 +138,7 @@ class Research extends PageRender
 			answerHTML += position.toHtml();
 
 			if(i < this.openPositions.length - 1) {
-				answerHTML += '<div class="section-seperator"><div class="main-dot"></div><div class="main-dot"></div><div class="main-dot"></div></div>';
+				answerHTML += '<div class="section-seperator">'+Icons.dots_seperator()+'</div>';
 			}
 		});
 		

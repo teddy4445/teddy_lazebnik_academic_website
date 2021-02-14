@@ -1,4 +1,4 @@
-import { Element } from '/js/components/element.js';
+import { Element } from '/lecture_website_template/js/components/element.js';
 
 class ResearchPosition extends Element
 {
@@ -19,15 +19,15 @@ class ResearchPosition extends Element
 		let html = '<div class="research">';
 		
 		// header
-		html += '<div class="research-title space-between"><h3 class="content-title">' + this.name + '</h3><p class="research-duration">' + this.position_type + '</p></div><hr class="blue-hr">';
+		html += '<div class="research-title space-between"><h3 class="content-title">' + this.name + '</h3><p class="position-type research-duration">' + this.position_type + '</p></div><hr class="blue-hr">';
 		// about this position
 		html += '<div class="team-section"><div class="collapsing-section-title"><div class="team-title space-between"><p class="content-subtitle">About this position</p><svg class="moreLessButton" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 13 8" width="13" height="8">'+
 		'</div><hr></div><div class="about-position-section collapsing-section open-section">' + this.description + '</div></div>';
 		// requierments
 		if (this.requierments.length > 0)
 		{
-			html += '<div class="team-section"><div class="collapsing-section-title"><div class="team-title space-between"><p class="content-subtitle">Requirements</p><svg class="moreLessButton" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 13 8" width="13" height="8">'+
-			'</div><hr></div><div class="req-content-section collapsing-section open-section"><ul class="research-requierment-list">';
+			html += '<div class="team-section"><div class="collapsing-section-title"><div class="team-title space-between"><p class="content-subtitle content-subtitle-position">Requirements</p><svg class="moreLessButton" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 13 8" width="13" height="8">'+
+			'</div><hr class="position-hr-mobile"></div><div class="position-info req-content-section collapsing-section open-section"><ul class="research-requierment-list">';
 
 			this.requierments.forEach(requierment => {
 				html += '<li>' + requierment + '</li>';
@@ -40,12 +40,12 @@ class ResearchPosition extends Element
 		// how to applay
 		if (!(this.applay_text == "" || this.connect_email == ""))
 		{
-			html += '<div class="team-section"><div class="collapsing-section-title"><div class="team-title space-between"><p class="content-subtitle">How to applay</p><svg class="moreLessButton" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 13 8" width="13" height="8">'+
-			'</div><hr></div><div class="apply-position-section collapsing-section open-section  col-important">';
+			html += '<div class="team-section"><div class="collapsing-section-title"><div class="team-title space-between"><p class="content-subtitle content-subtitle-position">How to applay</p><svg class="moreLessButton" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 13 8" width="13" height="8">'+
+			'</div><hr class="position-hr-mobile"></div><div class="apply-position-section collapsing-section open-section  col-important">';
 			
 			if (this.applay_text != "")
 			{
-				html += '<p class="applay-position-text">' + this.applay_text + '<p><div class=""><svg style="margin-right: 5px;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4.5H4.00002C2.90002 4.5 2.01002 5.4 2.01002 6.5L2.00002 18.5C2.00002 19.6 2.90002 20.5 4.00002 20.5H20C21.1 20.5 22 19.6 22 18.5V6.5C22 5.4 21.1 4.5 20 4.5ZM20 8.5L12 13.5L4.00002 8.5V6.5L12 11.5L20 6.5V8.5Z" fill="#5A67D8"/></svg> Reach out to <a href="mailto:' + this.connect_email + '" title="Contact email">' + this.connect_email + '</a></div>'; 
+				html += '<p class="applay-position-text">' + this.applay_text + '<p><div class="reachout"><svg style="margin-right: 5px;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4.5H4.00002C2.90002 4.5 2.01002 5.4 2.01002 6.5L2.00002 18.5C2.00002 19.6 2.90002 20.5 4.00002 20.5H20C21.1 20.5 22 19.6 22 18.5V6.5C22 5.4 21.1 4.5 20 4.5ZM20 8.5L12 13.5L4.00002 8.5V6.5L12 11.5L20 6.5V8.5Z" fill="#5A67D8"/></svg> Reach out to <a href="mailto:' + this.connect_email + '" title="Contact email">' + this.connect_email + '</a></div>'; 
 			}
 			
 			// end of applay section + end of whole applay section

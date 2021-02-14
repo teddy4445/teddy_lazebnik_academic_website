@@ -5,7 +5,7 @@
 
 .tab {
     position: relative;
-    width: 10.75rem;
+    width: 33.3%;
     height: 0.5rem;
     float: left;
     border: none;
@@ -58,7 +58,15 @@
     flex-direction: column;
 }
 
-@media screen and (max-width: 3000px) {
+.lrg-screen{
+    display: inline;
+}
+
+.sml-screen{
+    display:none;
+}
+
+/* @media screen and (max-width: 3000px) {
     .tab {
         width: 20rem !important;
     }
@@ -66,12 +74,12 @@
 	.tab-title {
 		top: -1.5rem !important;;
 	}
-}
+} */
 
 @media screen and (max-width: 1800px) {
-    .tab {
+    /* .tab {
         width: 14rem !important;
-    }
+    } */
 	
 	.tab-title {
 		top: -2rem !important;;
@@ -79,12 +87,12 @@
 }
 
 @media screen and (max-width: 850px) {
-    .tab {
+    /* .tab {
         width: 7rem !important;
-    }
+    } */
 	
 	.tab-title {
-		top: -3rem !important;;
+		top: -3rem ;;
 	}
 }
 
@@ -96,23 +104,32 @@
 }
 
 @media screen and (max-width: 450px) {
-    .tab {
+    /* .tab {
         width: 5rem !important;
-    }
+    } */
 
     .tab-title {
-        font-size: 14px;
+        font-size: 16px;
     }
+
+    .sml-screen{
+        display:inline;
+    }
+
+    .lrg-screen{
+        display:none;
+    }
+    
 }
 
-@media screen and (max-width: 400px) {
-    .tab {
-        width: 5rem !important;
+@media screen and (max-width: 450px) {
+     .tabs {
+         margin-bottom: 1.875rem;
     }
-	
-	.tab-title {
+
+	/*.tab-title {
 		top: -3rem !important;;
-	}
+	}*/
 }
 
 /****** tabs sections - end ******/

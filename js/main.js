@@ -42,7 +42,7 @@ function onPageLoad()
 function loadHeader()
 {	
 	client.onreadystatechange  = HeaderHandler;
-	client.open("GET", "/components/header.html", false);
+	client.open("GET", "/lecture_website_template/components/header.html", false);
 	client.send();
 }
 
@@ -58,7 +58,7 @@ function HeaderHandler()
 function loadFooter()
 {		
 	client.onreadystatechange  = FooterHandler;
-	client.open("GET", "/components/footer.html", false);
+	client.open("GET", "/lecture_website_template/components/footer.html", false);
 	client.send();
 }
 
@@ -147,7 +147,7 @@ function gotoIndex()
 	
 	if (width > 850) // TODO: fix magic number
 	{
-		window.location.replace("/");
+		window.location.replace("/lecture_website_template/");
 	}
 }
 
@@ -164,7 +164,12 @@ function copy_cite(input_holder_id)
 	var alertDiv = document.getElementById("alert-close-btn").parentElement;
 	document.getElementById("cite-alert").innerHTML = "Copied: " + copyText;
 	alertDiv.style.opacity = "1";
-	setTimeout(function(){ alertDiv.style.opacity = "0"; }, 2500);
+	alertDiv.style.zIndex = "999999";
+	setTimeout(function()
+	{ 
+		alertDiv.style.opacity = "0"; 
+		alertDiv.style.zIndex = "-999999";
+	}, 2500);
 }
 
 
