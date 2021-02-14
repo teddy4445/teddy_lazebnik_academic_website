@@ -46,8 +46,8 @@ class Research extends PageRender
 		{
 			var newProject = ResearchProject.createFromJson(this.jsonData["projects"][index]);
 			//create lists of current and prev researches using date calculation.
-			if ((newProject.end_year <= nowDate.getFullYear() )||(
-				(newProject.end_year == nowDate.getFullYear()) && newProject.end_month <= nowDate.getMonth() + 1))
+			if ((newProject.end_year < nowDate.getFullYear()) || 
+				(newProject.end_year == nowDate.getFullYear() && newProject.end_month <= nowDate.getMonth() + 1))
 			{
 				this.previousProjects.push(newProject);
 			}

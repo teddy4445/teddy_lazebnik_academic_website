@@ -7,7 +7,7 @@
   display: none;
 }
 #personal-data{
-  display: block;
+  display: flex;
 }
 .page-container {
   margin-left: auto;

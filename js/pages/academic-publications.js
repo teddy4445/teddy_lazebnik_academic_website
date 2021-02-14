@@ -1,7 +1,7 @@
 // imports
-import { PageRender, retrivedData } from '/lecture_website_template/js/pageRender.js';
-import { PublicationCard } from '/lecture_website_template/js/components/publicationCard.js';
-import { addCollapseFunction } from '/lecture_website_template/js/descriptionSlicer.js';
+import { PageRender, retrivedData } from '/js/pageRender.js';
+import { PublicationCard } from '/js/components/publicationCard.js';
+import { addCollapseFunction } from '/js/descriptionSlicer.js';
 import {Icons} from '/js/components/icons.js';
 
 // Data file paths

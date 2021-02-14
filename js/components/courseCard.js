@@ -35,7 +35,6 @@ class CourseCard extends Element
 		+ this.code + '" class="secondary-btn">Go to course</a></div>'
 		+'</div>'
 		+'</div>';
-		console.log(answer);
 		return answer;
 	}
 
@@ -98,25 +97,29 @@ class CourseCard extends Element
 	// split list into list of lists according to some property
 	static splitByProperty(ObjList, property)
 	{
-		try{
-		var answer = {};
-		var spliter = ObjList[0][property + ""];
-		var subGroup = [ObjList[0]];
-		for (var publicationIndex = 1; publicationIndex < ObjList.length; publicationIndex++)
+		try
 		{
-			if (ObjList[publicationIndex][property + ""].trim().toLowerCase() != spliter.trim().toLowerCase())
+			ObjList = CourseCard.sortByProperty(ObjList, property, property);
+			var answer = {};
+			var spliter = ObjList[0][property + ""];
+			var subGroup = [ObjList[0]];
+			for (var publicationIndex = 1; publicationIndex < ObjList.length; publicationIndex++)
 			{
-				answer[spliter] = [...subGroup];
-				spliter = ObjList[publicationIndex][property + ""];
-				subGroup = [ObjList[publicationIndex]];
+				if (ObjList[publicationIndex][property + ""].trim().toLowerCase() != spliter.trim().toLowerCase())
+				{
+					answer[spliter] = [...subGroup];
+					spliter = ObjList[publicationIndex][property + ""];
+					subGroup = [ObjList[publicationIndex]];
+				}
+				else
+				{
+					subGroup.push(ObjList[publicationIndex]);
+				}
 			}
-			else
-			{
-				subGroup.push(ObjList[publicationIndex]);
-			}
+			answer[spliter] = [...subGroup];
 		}
-		answer[spliter] = [...subGroup];}
-		catch(e){
+		catch(e)
+		{
 			console.log("cannot split by property because: "+e);
 		}
 		return answer;

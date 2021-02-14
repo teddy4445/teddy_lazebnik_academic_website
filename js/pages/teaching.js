@@ -67,7 +67,7 @@ class Teaching extends PageRender
 			this.clearFiltersDesign();
 			document.getElementById("reset-btn").style.display = "none";
 			let fils = document.getElementsByClassName("minimal");
-			for(let i = 0; i<fils.length; i++)
+			for(let i = 0; i < fils.length; i++)
 			{
 				fils[i].selectedIndex = 0;
 			}
@@ -78,7 +78,6 @@ class Teaching extends PageRender
 		}
         // sort the list
 		var buildTeachingList = CourseCard.sortByProperty(this.cardList, "year", "semester");
-		console.log("teachinglist"+buildTeachingList);
 		// if filter needed
 		if (filterValue != default_filter)
 		{

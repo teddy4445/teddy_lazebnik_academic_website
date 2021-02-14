@@ -15,7 +15,7 @@
     },
 	{
       "name":"The OCTI board game with AI player",
-      "description":"The OCTI board game with nice UI\UX and several levels of AI players.",
+      "description":"The OCTI board game with nice UI-UX and several levels of AI players.",
       "recommendation":"",
       "fileLinks":[
          {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/octi_board_game"},
