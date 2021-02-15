@@ -46,7 +46,7 @@ class Blog extends PageRender
 			if (buildPublicationList.length > 0)
 			{
 				var ansewrHtml = "";
-				for (var elementIndex = 0; elementIndex < buildPublicationList.length; elementIndex++)
+				for (var elementIndex = buildPublicationList.length - 1; elementIndex >= 0; elementIndex--)
 				{
 					if (buildPublicationList[elementIndex].title.includes(search_term) || search_term == "")
 					{
