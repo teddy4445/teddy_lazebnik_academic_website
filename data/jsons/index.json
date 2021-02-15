@@ -11,7 +11,7 @@
          "description":"The new COVID-19 pandemic has challenged policymakers on key issues. Most countries have adopted “lockdown” policies to reduce the spatial spread of COVID-19, but they have damaged the economic and moral fabric of society. Mathematical modeling in non-pharmaceutical intervention policy management has proven to be a major weapon in this fight due to the lack of an effective COVID-19 vaccine. We present a new \textit{hybrid} model for COVID-19 dynamics using both an age-structured mathematical model based on the SIRD model and spatio-temporal model in silico, analyzing the data of COVID-19 in Israel. Using the \textit{hybrid} model, we have introduced a method for estimating the reproduction number of an epidemic in real-time from the data of daily notification of cases. The results of the proposed model are confirmed by the Israeli Lockdown experience with a mean square error of 0.205 over two weeks. The use of mathematical models promises to reduce the uncertainty in the choice of “Lockdown” policies. Our unique use of contact details from 2 classes (children and adults), the interaction of populations depending on the time of day, and several physical locations, allowed a new look at the differential dynamics of the spread and control of infection",
          "fileLinks":[{"info": "download", "type": 1, "link": ""},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., The signature features of COVID-19 pandemic in a hybrid mathematical model - implications for optimal work-school lockdown policy. Advanced Theory and Simulations. 2021."}],
-		 "authors": "Teddy Lazebnik and Shlomo Yanetz",
+		 "authors": "Teddy Lazebnik and Svetlana Bunimovich-Mendrazitsky",
          "year": 2021,
          "topic":"Biomathematics",
          "type":"paper",
@@ -45,16 +45,10 @@
          "link":{"info": "View project", "type": 2, "link": "/medical-nanorobots-in-the-blood.html", "example":""}
       },
       {
-         "name":"Non-observable Economy Size Estimation with Stabalized Model",
-         "topic": "simulations",
-         "description":"A new (more stable) mathematical model for estimating the non-observable economy.",
-         "link":{"info": "View project", "type": 2, "link": "", "example":""}
-      },
-      {
          "name":"Hebrew words associative distance and connection to depression",
          "topic": "machine learning",
          "description":"Developing a machine learning model for words associative distance (Hebrew). Based on this model, propusing new depression test for clinical professionals",
-         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+         "link":{"info": "View project", "type": 2, "link": "https://pure-talent-302909.oa.r.appspot.com/", "example":""}
       },
       {
          "name":"Sphera Academy Website Generator",

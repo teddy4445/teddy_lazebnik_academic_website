@@ -3,6 +3,60 @@
 	"open_positions": [
 	],
 	"projects": [{
+		"name": "Extended Pharmacokinetics-Pharmadynamics Mathematical Model For Nanomedicine Targeted Drug Delivery",
+		"participants": [{
+			"name": "Gal A. Kaminka",
+			"title": "Ph.D.",
+			"role": "Main Advisor",
+			"websiteLink": "https://u.cs.biu.ac.il/~galk/",
+			"googleLink": "https://scholar.google.co.il/citations?user=AyzlRJwAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Hanna Wietman",
+			"title": "Ph.D.",
+			"role": "Nanoparticles Advisor",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "An extantion of the privious project, improving flow dynamics and NPs-body interactions. Providing a large scale comparision experiment.",
+		"start_month": 10,
+		"start_year": 2020,
+		"end_month": 7,
+		"end_year": 2021,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Mathematical Model for Medical Nanoparticles in the Circulatory System",
+		"participants": [{
+			"name": "Gal A. Kaminka",
+			"title": "Ph.D.",
+			"role": "Main Advisor",
+			"websiteLink": "https://u.cs.biu.ac.il/~galk/",
+			"googleLink": "https://scholar.google.co.il/citations?user=AyzlRJwAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Hanna Wietman",
+			"title": "Ph.D.",
+			"role": "Nanoparticles Advisor",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "Providing a graph-base model for large scale in vivo pharmacokinetics-pharmadynamics nanoparticles for the drug delivery case.",
+		"start_month": 11,
+		"start_year": 2019,
+		"end_month": 10,
+		"end_year": 2020,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
 		"name": "Sphera – A template for personal academic websites",
 		"participants": [],
 		"description": "Sphera is a free open-source website template that will vastly improve the communication between lecturers and students. It will provide lecturers and professors with the tools to easily create a professional personal website that contains their research, courses and personal projects. We will study the user behaivor in personal acadmic websites and how to improve it using machine learning reccomendation system.",
@@ -20,13 +74,228 @@
 		]
 	},
 	{
-		"name": "International Crisis Simulator",
-		"participants": [],
-		"description": "A spatio-temporal mathematical model with computer simulation based in the cloud for pandemic analysis and polices investigation tool",
-		"start_month": 10,
+		"name": "Non-observable Economy Size Estimation with Stabalized Model",
+		"participants": [{
+			"name": "Labib Shami",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
+			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
+			"linkedinLink": ""
+		}],
+		"description": "A new (more stable) mathematical model for estimating the non-observable economy. An empirical analysis for Israel is conducted.",
+		"start_month": 2,
+		"start_year": 2021,
+		"end_month": 5,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Lung Metastases Growth Patterns From Colorectal Cancer",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "A PDE location-based model of the growth of lung metastases from colorectal cancer and fitting on clinical data.",
+		"start_month": 2,
+		"start_year": 2021,
+		"end_month": 8,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Balanced Explainability-Performance Feature Selection Algorithm",
+		"participants": [
+		{
+			"name": "Roni Reznik",
+			"title": "Mr.",
+			"role": "Main researcher",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": "https://www.linkedin.com/in/roni-reznik-ba3a58160/?originalSubdomain=il"
+		},
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Avi Rosenfeld",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "http://homedir.jct.ac.il/~rosenfa/",
+			"googleLink": "https://scholar.google.co.il/citations?user=-cHvrVgAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "A feature selection algorithms that uses iterative ensemble intersections given preformance and explainability metrics to obtain a balanced feature set.",
+		"start_month": 9,
 		"start_year": 2020,
-		"end_month": 10,
+		"end_month": 5,
+		"end_year": 2021,
+		"team_members": 4,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Hebrew words associative distance and connection to depression",
+		"participants": [{
+			"name": "Noa Vardi",
+			"title": "MA.",
+			"role": "psychology and brain researcher",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "Developing a machine learning model for words associative distance (Hebrew). Based on this model, propusing new depression test for clinical professionals.",
+		"start_month": 7,
+		"start_year": 2019,
+		"end_month": 1,
 		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Predicting Acute Kidney Injury Due To Partial Nephrectomy Treatment",
+		"participants": [{
+			"name": "Zaher Bahouth",
+			"title": "Ph.D.",
+			"role": "MD",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Mathematical Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Sarel Halachmi",
+			"title": "Ph.D.",
+			"role": "MD",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "Developing an explanable AI to predict acute kidney injury (AKI) complications due to Partial Nephrectomy (PN) treatment.",
+		"start_month": 6,
+		"start_year": 2020,
+		"end_month": 1,
+		"end_year": 2021,
+		"team_members": 4,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Decision Tree Post-Pruning Without Loss Of Accuracy",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Mathematical Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "Developing an post pruning algorithm that does not harm the model's performance. Evaluation on oncology data is provided.",
+		"start_month": 11,
+		"start_year": 2020,
+		"end_month": 2,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Stochastic Process Representation Of The Extended SIRD Group Of Models",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Mathematical Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "Representation of the SIRD model as a stochastic process and obtaining analytical points of interest.",
+		"start_month": 1,
+		"start_year": 2020,
+		"end_month": 3,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Pandemic Management by a Spatio-temporal Mathematical Model",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Mathematical Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Labib Shami",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
+			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
+			"linkedinLink": ""
+		}
+		],
+		"description": "A spatio-temporal mathematical model based on the SIR model and graph-based spatial dynamics solved using distrebuted system methods, allowing to investigate several non-pharmaceutical intervention (NPI) policies to control the epidemic.",
+		"start_month": 9,
+		"start_year": 2020,
+		"end_month": 1,
+		"end_year": 2021,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Spatio-Temporal Influence of Non-Pharmaceutical Interventions Policies on Pandemic Dynamics and the Economy: The Case of COVID-19",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Mathematical Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Labib Shami",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
+			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
+			"linkedinLink": ""
+		}
+		],
+		"description": "A spatio-temporal mathematical model with economic dynamics. We investigate the influance and find optimal non-pharmaceutical intervention (NPI) policies on the pandemic and the economy.",
+		"start_month": 8,
+		"start_year": 2020,
+		"end_month": 1,
+		"end_year": 2021,
 		"team_members": 3,
 		"relevant_resources": [
 		]

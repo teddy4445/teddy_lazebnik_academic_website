@@ -155,6 +155,36 @@
 			],
 			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
 		},{
+			"name": "Advanced Programming 2",
+			"code": "89211",
+			"year": "2021",
+			"topic":"programming",
+			"semester": "2",
+			"university": "Bar Ilan University",
+			"department": "Computer science",
+			"location_class": "Zoom",
+			"syllabus": "",
+			"grade_parts": [{
+					"name": "Home work",
+					"percent": 40
+				},
+				{
+					"name": "Exam",
+					"percent": 60
+				}
+			],
+			"resources": {
+				"optinal":[{"name": "Moodle page",
+					"link": "https://lemida.biu.ac.il/",
+					"description": "The webpage with all the slides and presentation of the lecturer.",
+					"type": "file"}]
+			},
+			"updates": [
+			],
+			"modules": [
+			],
+			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
+		},{
 			"name": "Deep Leanring",
 			"code": "21319",
 			"year": "2020",
