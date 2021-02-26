@@ -115,14 +115,8 @@ class Index extends PageRender
 			document.getElementById("lecture_phone").innerHTML += jsonObj["phone"];
 			document.getElementById("lecture_email").innerHTML += jsonObj["email"];
 			
-			
-			document.getElementById("social-linkedin").href = jsonObj["linkedin_link"];
-			// TODO: fix it ---> document.getElementById("social-linkedin").innerHTML = Icons.linkedin();
-			document.getElementById("social-google-scholar").href = jsonObj["google_scholar_link"];
-			// TODO: fix it --->  document.getElementById("social-google-scholar").innerHTML = Icons.google();
-			
-			// TODO: as list not single string
-			// document.getElementById("research_intrests").innerHTML = jsonObj["field"];
+			// create contact icons (mail, facebook etc)
+			Index.buildIconsContact(jsonObj);
 			
 			// mobile version click icon event 
 			var infoItemBtn = document.getElementById("mobile-icon");
@@ -145,6 +139,68 @@ class Index extends PageRender
 			console.log("Error at Index.buildePersonalPanel saying: " + error);
 			document.getElementById(container_id).style.display = "none";
 		}
+	}
+
+	static buildIconsContact(jsonObj) {
+		let cv = jsonObj.cvfile;
+		let email = jsonObj.email;
+		let phone = jsonObj.phone;
+		let linkedin = jsonObj.linkedin_link;
+		let google = jsonObj.google_scholar_link;
+		let facebook = jsonObj.facebook_link;
+		let mobileContacts = document.getElementById("lecture_icons");
+		if(cv != ""){
+		  let elem_mob = document.createElement("A");
+		  elem_mob.href = cv;
+		  elem_mob.innerHTML = Icons.cv();
+		  elem_mob.classList.add("social-icon");
+		  elem_mob.classList.add("no-show-desktop");
+		  mobileContacts.appendChild(elem_mob);
+		}
+
+		if(email != ""){
+		   let elem_mob = document.createElement("A");
+		   elem_mob.innerHTML = Icons.mail_mobile();
+		   elem_mob.href = "mailto:" + email;
+		   elem_mob.classList.add("social-icon");
+		   elem_mob.classList.add("no-show-desktop")
+		   mobileContacts.appendChild(elem_mob);
+		}
+
+		if(phone != ""){
+		  let elem_mob = document.createElement("A");
+		  elem_mob.innerHTML = Icons.phone();
+		  elem_mob.href = "tel:" + phone;
+		  elem_mob.classList.add("social-icon");
+		  elem_mob.classList.add("no-show-desktop")
+		  mobileContacts.appendChild(elem_mob);
+		  
+		}
+
+		if(linkedin != ""){
+		  let linkedinIcon = document.createElement("A");
+		  linkedinIcon.innerHTML = Icons.linkedin();
+		  linkedinIcon.classList.add("social-icon");
+		  linkedinIcon.href = linkedin;
+		  mobileContacts.appendChild(linkedinIcon);
+		}
+
+		if(google != ""){
+		  let googleIcon = document.createElement("A");
+		  googleIcon.innerHTML = Icons.google();
+		  googleIcon.classList.add("social-icon");
+		  googleIcon.href = google;
+		  mobileContacts.appendChild(googleIcon);
+		}
+
+		if(facebook != ""){
+			let fbIcon = document.createElement("A");
+			fbIcon.innerHTML = Icons.about_facebook();
+			fbIcon.classList.add("social-icon");
+			fbIcon.href = facebook;
+			mobileContacts.appendChild(fbIcon);
+		}
+
 	}
 	
 	static buildePageContent()

@@ -490,6 +490,10 @@ ul .active-topic {
 
 }
 
+#topic-filter{
+  margin-left: 0;
+}
+
 @media only screen and (max-width: 450px){
 	.resources-filters select {
 		width: 100%;
@@ -526,6 +530,10 @@ ul .active-topic {
     padding-bottom: 20px;
   }
 
+  #topic-filter{
+    margin-left: 20px;
+  }
+
   
 }
 
@@ -537,9 +545,7 @@ ul .active-topic {
 	}
 }
 
-#topic-filter{
-  margin-left: 0;
-}
+
 
 p .recommend-promo{
   font-family: Roboto;

@@ -1452,12 +1452,12 @@ flickity-prev-next-button[disabled]{
 
 @media screen and (max-width: 430px) {
 	
-	.personal-img{
-		margin-right: 0px;
-	}
-	
 	.personal-section{
 		padding-top: 0px;
+	}
+	
+	.personal-img{
+		margin-right: 0px;
 	}
 
 	#lecture_icons{
@@ -1470,6 +1470,17 @@ flickity-prev-next-button[disabled]{
 	
 	.lecturer-info{
 		display: none;
+	}
+
+	.personal-info-item svg {
+		margin-left: 6px;
+		margin-right: 6px;
+	}
+
+	
+	#contacts-mobile{
+		padding-top: 26px;
+		padding-bottom: 20px;
 	}
 
 	#research_intrests_header {

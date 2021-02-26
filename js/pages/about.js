@@ -457,6 +457,7 @@ document.getElementById("filter-btn").addEventListener("click", () => {document.
 
 function filterFilters(fName){
 	if(document.getElementById(fName+"-filter").selectedIndex != 0){
+		document.aboutPage.clearFiltersDesign();
 		document.getElementById("reset-btn").style.display = "";
 		document.aboutPage.buildResources(true, fName);
 	}
