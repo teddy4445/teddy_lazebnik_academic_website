@@ -1,23 +1,74 @@
 <h1>
-A Few Lessions From Advarserial, Multi-agent Reinforsment Learning Project
+A Few Lessons From Advarserial, Multi-agent Reinforcement Learning Project
 </h1>
 <hr class="publications-hr">
 <p>
-
+Reinforcement Learning (RL) is one of the sub-fields of machine learning (ML) that unfortunately did not get such broad attention as supervised and unsupervised ML. The basic idea of RL is that we have an agent (computer) that needs to solve a problem (so far, similar to the other ML). Our agent is not provided with data related to the way to solve the problem but a world and a way to interact with it. The agent needs to find a plan (policy) to solve the problem in front of it using trial and error - similarly to the way, we as humans solve problems. 
 </p>
 <p>
-
+Over the last few years, RL has shown to be a powerful tool to solve complex problems such as winning in chess [REF] and the Chinese game Go [REF]. Nevertheless, recently, RL-powered AI was able to win the long-term, multi-player strategic game of DOTA [REF] which establish a new milestone in the progress of RL-powered AI. 
 </p>
 <p>
-
+A professional may consider trying RL for one's next project. This sounds easy. Define environment, the possible actions the agent can make, a reward function, and just let the RL mathematics do its magic! This is not far from the truth when we focus on a single agent, non-adversarial task. In this scenario, the reward function is usually in the action-level available which makes the learning process easier for any state of the agent and the environment to handle. for example, if we train a drown - flaying to some direction has a short-term, predictable with some probability result.
 </p>
 <p>
-
-</p>
-<pre><code class="language-js"> Test </code></pre>
-<p>
-
+Nevertheless, this is not the case when we consider a scenario involving multi-agent and adversarial settings. The somewhat assumption that a good action of a single agent is good in a given state becomes just wrong as one needs to take into consideration the action's outcome on the other agents from the same team. Besides, "good" actions by themself (in non-adversarial settings) may be exploited by the attacker in adversarial settings and become "not so good" actions. Furthermore, in adversarial settings, the action-level reward function becomes usually hard to define as it usually depends on the attacker's behavior which is not available for us. It is possible to make some worst-case assumptions on the attacker. For example, the attacker is a perfect agent which takes maximum advantage of any action we take.  Thence, this assumption mathematically makes sure we can handle each attacker on the one hand. On the other hand, as having such a perfect agent is unrealistic, we make the (already not so easy) task not necessarily harder on the other hand.  
 </p>
 <p>
-
+In this case where one has an adversarial, multi-agent RL task, here are a few tips on how to approach this riddle. It is only fair to mention that these are only general suggestions and may not fit any case. Hover, since these suggestions are somewhat generic, by minor modifications they might fit very well even very specific cases. 
 </p>
+
+<h3>
+Define simple, long-term, target-specific reward functions
+</h3>
+<p>
+As reward functions are the way we define the problem at hand, it is important to define it according to the long-term task at hand and not try to find optimal single action for each possible state.  Keep the task for defining the best action for each state to the RL to find; your task is to define easy to understand reward function (if it is hard to understand that means you probably do not define it right). In addition, the reward function should be target-specific in the manner, we reward or punish for actions according to their influence on the final target and not intermediate goals. By defining the reward function according to intermediate goals, one forces the agent to learn a specific policy that unnecessarily is the best one to solve the long-term goal. 
+</p>
+
+<h3>
+Have two ways to encode state \ action: explainable and minimal-dimensional 
+</h3>
+<p>
+In complex RL tasks where the state of the world usually depends on the inner state of each agent in your team, the world's state, and the attacker's visible state the representation of all this data may become hard to encode efficiently. Similarly for the actions, the team of agents can take in each step in time may become complex due to a large number of inner and cross interactions between them and between the agents and the world \ attacker. From a developer's perspective, it would be easy just to encode these states \ actions in the most naive way, considering as many parameters as possible to have a good representation. This approach is of course have issues when the training stage taking place due to the large number of dimensions the problem has (as a result of the encoding). Therefore, the suggestion is to have two encodings. The first one is the naive one that is easy to debug, understand and modify if needed. The second encoding should hold the same information (or close to the same information) but with the minimal number of dimensions possible. One way that does not require deep understanding and usually provides wonderful results to obtain such encoding is to use auto-encoder DL models. Another method is to manually search for reduction functions. For example, an array of Boolean parameters can be replaced with a single integer (with the corresponding binary representation). Another example, a 2d or 3d discrete location in a finite space that can be reduced into a single number representing the index of this location in the corresponding tensor.   
+</p>
+
+<h3>
+Simulate, simulate, and simulate again 
+</h3>
+<p>
+It is common to see RL-powered AI used in the real (not-digital) world in robotics, factories, autonomic cars, and others. As RL models require a lot of trial and error before they become any good, the initial progress may be long and require a large number of repetitions. One way to avoid this process and make it much cheaper and faster is to train agents in a simulated environment. This idea is not new and yet worth mentioning again for the adversarial settings where the developer may experiment in a controlled environment with multiple types of attackers and therefore allow the RL model to learn how to handle diverse kinds of issues that may pop up during reaching the desired goal. Besides, simulations (also known as in-silico) are known to be cheaper and faster relative to real experiments which by itself makes them a good suggestion. 
+</p>
+
+<h3>
+Take advantage of genetic programming approaches
+</h3>
+<p>
+RL tries to mimic the way we as individuals solving new problems (taking aside our ability to transfer knowledge via teaching). Similarly, genetic programming taking inspiration from evolution - the way we as a group of individuals become better at solving problems. It is only natural to try and combine these methods. A simple example of such a combination is to have a population of RL-powered agents, each one with a slightly different score function. Each generation, we modify the score function, given more chance for better-performing individuals in our populations. This way, we are able to obtain better RL-powered agents which the need to find the optimal reward function ourselves as the genetic programming method handling this for us. Another more advanced example is neuroevolution where the neural network used is a deep q-learning one. In the context of this post, we would not further dig into this idea as it will get a post for itself later on.
+</p>
+
+
+<p>
+To conclude, currently, RL is as an art as a science. For the naked eye, it may seem that after defining the right actions and states the work of the RL developer is over. But the challenges of correctly define a problem in a dynamics world, handle a fast, cheap, and accurate training of the model, and other problems require mastery and hard work. So, next time you have a ML-related task and no data, try RL - you may even like it in the end. 
+</p>
+<p>
+I would like to thank David Krongauz for taking an active part in editing this post and helping to simplify the ideas presented in it.
+</p>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
