@@ -85,8 +85,8 @@
 		 "order": 12
       },
       {
-         "title":"A Few Lessons From Advarserial, Multi-agent Reinforcement Learning Project",
-         "description":"Do you have a RL project? does it in an advarserial settings and with multi-agents? you should do the following...",
+         "title":"A Few Lessons From Adversarial, Multi-agent Reinforcement Learning Project",
+         "description":"Do you have a RL project? does it in an Adversarial settings and with multi-agents? you should do the following...",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "13"}],
 		 "year": 2021,
 		 "order": 13
