@@ -5,6 +5,8 @@
          "description":"In the post, I provide a quick review of the development of NLP technologies alongside the Hebrew language and the problems we have while using NLP in Hebrew.",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "1"}],
 		 "year": 2018,
+		 "month": 3,
+		 "day": 1,
 		 "order": 5
       },
       {
@@ -12,6 +14,8 @@
          "description":"Nano-bioinformatic research is hard. But did you know what are the real daily issues such researchers have? and more importantly, how they solve them and how this effects you?",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "2"}],
 		 "year": 2019,
+		 "month": 3,
+		 "day": 1,
 		 "order": 6
       },
       {
@@ -19,6 +23,8 @@
          "description":"Current machine learning models require huge amount of data. How can you make assure the quality of your tagged data? Here are three techniques to do so...",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "3"}],
 		 "year": 2020,
+		 "month": 4,
+		 "day": 1,
 		 "order": 7
       },
       {
@@ -26,6 +32,8 @@
          "description":"What are the next three steps that should happen when we are talking about nanomedicine in general and medical nanorobotics in particular",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "4"}],
 		 "year": 2018,
+		 "month": 2,
+		 "day": 1,
 		 "order": 4
       },
       {
@@ -33,6 +41,8 @@
          "description":"Large or small - few use cases from Facebook user-fitting in 3rd wolrd users from start-up prospective",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "5"}],
 		 "year": 2020,
+		 "month": 8,
+		 "day": 1,
 		 "order": 10
       },
       {
@@ -40,6 +50,8 @@
          "description":"Covid-19 pandemic hit the wolrd at the beginning of 2020 and lead to hundrieds of mathematical models predicting the spread of the pandemic wolrdwide. Here I offer a basic review of some of these methods",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "6"}],
 		 "year": 2020,
+		 "month": 5,
+		 "day": 1,
 		 "order": 9
       },
       {
@@ -47,6 +59,8 @@
          "description":"Python, maybe JavaScript are considrued as the leading ML and AI language to go. But, in production you should considr dotnet core... In this post, we explain why",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "7"}],
 		 "year": 2020,
+		 "month": 5,
+		 "day": 1,
 		 "order": 8
       },
       {
@@ -54,6 +68,8 @@
          "description":"Can you pin point the propertise of what making a person interesting? well, we can",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "8"}],
 		 "year": 2016,
+		 "month": 7,
+		 "day": 1,
 		 "order": 1
       },
       {
@@ -61,6 +77,8 @@
          "description":"I won't tell you... you will have to read the post to find out",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "9"}],
 		 "year": 2017,
+		 "month": 4,
+		 "day": 1,
 		 "order": 3
       },
       {
@@ -68,6 +86,8 @@
          "description":"This may sound strange but there is actully really intresting connection, you should check it out",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "10"}],
 		 "year": 2017,
+		 "month": 2,
+		 "day": 1,
 		 "order": 2
       },
       {
@@ -75,6 +95,8 @@
          "description":"How a lot of small and without any computational power particles can make our drugs better? check out and find out",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "11"}],
 		 "year": 2021,
+		 "month": 1,
+		 "day": 1,
 		 "order": 11
       },
       {
@@ -82,6 +104,8 @@
          "description":"Imagine you are an world-class zoologist studying the flight of a new species of excotic birds your recently descovered...",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "12"}],
 		 "year": 2021,
+		 "month": 2,
+		 "day": 1,
 		 "order": 12
       },
       {
@@ -89,6 +113,8 @@
          "description":"Do you have a RL project? does it in an Adversarial settings and with multi-agents? you should do the following...",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "13"}],
 		 "year": 2021,
+		 "month": 2,
+		 "day": 15,
 		 "order": 13
       },
       {
@@ -96,7 +122,18 @@
          "description":"Are you a jounier developer? If so, you probabliy need a protfolio projects to show off your skills. You do not need to look further, pick a lovable game. This is way...",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "14"}],
 		 "year": 2021,
+		 "month": 3,
+		 "day": 1,
 		 "order": 14
+      },
+      {
+         "title":"[Coding Post] The graphs every AI developer must know and their python implementation",
+         "description":"If you an AI / Machine Learning / Data Science and doing a project, you probabliy should print one or more of these graphs to really understand what is going on...",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "15"}],
+		 "year": 2021,
+		 "month": 3,
+		 "day": 15,
+		 "order": 15
       }
-	  ]
+	]
 }

@@ -3,12 +3,14 @@ import { ActionButton } from '/js/components/actionButton.js';
 
 class BlogCard extends Element
 {
-	constructor(title, description, year, fileLinks, order)
+	constructor(title, description, year, month, day, fileLinks, order)
 	{
 		super();
 		this.title = title;
 		this.description = description;
 		this.year = year;
+		this.month = month;
+		this.day = day;
 		this.fileLinks = fileLinks;
 		this.order = order;
 	}
@@ -21,7 +23,7 @@ class BlogCard extends Element
 		var answer = '<div class="academic-papers-panel"><h3 class="blog-title">' 
 		+ this.title + '</h3><p>'
 		+ this.description + '</p><div class="personal-row space-between align-items-center mobile-row-breaker"><div class="w-100"><span class="blog-data">'
-		+ this.year + '</span></div><div class="w-100 flex-end align-items-center mobile-row-spacer"><a href="/blog-post.html?post='
+		+ this.day + "/" + this.month + "/" + this.year +  '</span></div><div class="w-100 flex-end align-items-center mobile-row-spacer"><a href="/blog-post.html?post='
 		+ this.fileLinks[0]["link"] + '" class="download-btn">Read More</a></div></div></div>';
 		return answer;
 	}
@@ -43,6 +45,8 @@ class BlogCard extends Element
 		return new BlogCard(jsonObj["title"],
 		jsonObj["description"], 
 		jsonObj["year"], 
+		jsonObj["month"], 
+		jsonObj["day"], 
 		jsonObj["fileLinks"],
 		jsonObj["order"]);
 	}
