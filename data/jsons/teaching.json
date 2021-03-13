@@ -165,23 +165,43 @@
 			"location_class": "Zoom",
 			"syllabus": "",
 			"grade_parts": [{
-					"name": "Home work",
-					"percent": 40
+					"name": "Project",
+					"percent": 30
 				},
 				{
 					"name": "Exam",
-					"percent": 60
+					"percent": 70
 				}
 			],
 			"resources": {
 				"optinal":[{"name": "Moodle page",
-					"link": "https://lemida.biu.ac.il/",
+					"link": "https://lemida.biu.ac.il/course/view.php?id=59135",
 					"description": "The webpage with all the slides and presentation of the lecturer.",
 					"type": "file"}]
 			},
-			"updates": [
+			"updates": [{
+					"title": "First home work project description",
+					"date": "3.14.2021",
+					"link": "",
+					"description": "The first home work project description and deadline will be published this week - stay tuned."
+				}
 			],
-			"modules": [
+			"modules": [{
+					"title": "C# Introduction",
+					"explanation": "An introduction to C#. Covering WPF, .Net (framework + core) and other useful concepts.",
+					"resources": {
+						"Lectures":[{
+							"name": "Intro",
+							"link": "https://www.youtube.com/watch?v=ilYr7MU4NIs&ab_channel=TeddyLazebnik",
+							"description": "Presentation by Paul Roit",
+							"type": "video"
+						},{
+							"name": "C# concepts",
+							"link": "https://www.youtube.com/watch?v=yFRmCZEVswQ&ab_channel=TeddyLazebnik",
+							"description": "Presentation by Paul Roit",
+							"type": "video"
+						}]
+					}}
 			],
 			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
 		},{
