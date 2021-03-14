@@ -4,9 +4,7 @@ The graphs every AI developer must know and their python implementation
 <hr class="publications-hr">
 <p>
 The <a href="https://www.sciencedirect.com/science/article/pii/S0016328717300046">Artificial Intelligence (AI) revolution</a> is around the corner where in 2018 alone there are around <a href="https://www.statista.com/statistics/941054/number-of-ai-companies-worldwide-by-country/#:~:text=The%20statistic%20shows%20the%20number,the%20United%20States%20was%202%2C028.">4000 middle-large companies</a> focusing on AI and who knows how many more startups and academic projects.
-
 </p>
-
 
 <p>
 First, we need to import a few libraries so it will be easy to work. One can avoid the <b>numpy</b> and <b>pandas</b> libraries but this will require to re-write a lot of ready, easy to use code so you probably do not need to do so without a really good reason.
@@ -23,15 +21,15 @@ import seaborn as sns # an extension of the matplotlib library that will save us
 
 <h3>Know your data</h3>
 <p>
-Classification, if we ignore the fancy terms, methods, and mathematics is the idea to draw a line (usully not a stright one) between two or more groups in a given space (again, usully R^n). 
-A real wolrd classification task will usully have more then three input parameters (the highest number we can plot) so "seeing" the whole data is not something we can usully do.
+Classification, if we ignore the fancy terms, methods, and mathematics is the idea to draw a line (usually not a straight one) between two or more groups in a given space (again, usually R^n). 
+A real-world classification task will usually have more than three input parameters (the highest number we can plot) so "seeing" the whole data is not something we can usually do.
 Hover, we can sample sub-spaces of the problem and start working from there. The following graph will help you understand the classification path you need.
 </p>
 
 <h4>Density Curves with Histogram</h4>
 <p>
-This graph gives a two in one solution for parameter density. From the empirical, cold, accurate prespective - you have the classical histogram graph. 
-On the other hand, from the numerical, easy to work with prespective you have the density curve fit. This is not too complex or advance graph and this is excatlly why it opens our list.
+This graph gives a two in one solution for parameter density. From the empirical, cold, accurate perspective - you have the classical histogram graph. 
+On the other hand, from the numerical, easy to work with a perspective you have the density curve fit. This is not too complex or advance graph and this is exactly why it opens our list.
 </p>
 <p>
 <pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
@@ -63,7 +61,7 @@ plt.close()
 
 <h4>Time Series Decomposition Plot</h4>
 <p>
-Time series decomposition plot shows the break down of the time series into trend, seasonal and residual components. It uses <a href="https://en.wikipedia.org/wiki/Fourier_transform">Fourier transform</a> under the hood which can be fine-tuned later to obtain other signals.
+The time series decomposition plot shows the breakdown of the time series into trend, seasonal and residual components. It uses <a href="https://en.wikipedia.org/wiki/Fourier_transform">Fourier transform</a> under the hood which can be fine-tuned later to obtain other signals.
 The pleasure of this plot is the small amount of code needed to obtain a decent decomposition. 
 </p>
 <p>
@@ -95,14 +93,14 @@ plt.close()
 
 <h3>Time series</h3>
 <p>
-Time goes by and generating a very important dimention to your data while doing so. People just love seeing how things change over time. 
-If you have a time series data, the following graphs just give your audience excatlly what they are looking for...
+Time goes by and generating a very important dimension to your data while doing so. People just love seeing how things change over time. 
+If you have time-series data, the following graphs just give your audience exactly what they are looking for...
 </p>
 
 <h4>Slope Chart</h4>
 <p>
-The slope chart plot is usefull to see how multiple processes change over two or more points in time. Usully, the sign gradient of these processes is usully usefull information as well which added to the graph via the color indexing.
-This plot is best used for relativly small amount of prcoess (up to 10) with up to 4 or 5 coloums as too much information will shadow each other and make the plot unreadable.  
+The slope chart plot is useful to see how multiple processes change over two or more points in time. Usually, the sign gradient of these processes is useful information as well which is added to the graph via color indexing.
+This plot is best used for a relatively small amount of processes (up to 10) with up to 4 or 5 columns as too much information will shadow each other and make the plot unreadable.  
 </p>
 <p>
 <pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
@@ -177,7 +175,7 @@ The Autocorrelation plot shows the correlation of the time series with its own l
 Each vertical line represents the correlation between the series and its lag starting from lag 0. 
 The blue shaded region in the plot is the significance level. 
 Those lags that lie above the blue line are the significant lags.
-This plot is really useful in regression tasks over time to see how different lags influance the model.
+This plot is really useful in regression tasks over time to see how different lags influence the model.
 </p>
 <p>
 <pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
@@ -207,16 +205,16 @@ plt.close()
 
 <h3>Model performance with noisy data</h3>
 <p>
-The wolrd is messy, and your data is messy is well. But, there is no need to be ashamed of this - on the opposite, give it the place it deserve and plot it!
-A lot reports, papers and etc. show only the average (mean) result of a research. Do not get me wrong, the average result holds meaningful information but as my Ph.D. advioser once said as a paraphrase on the common phrase <i>"god is in the standard deviation"</i>.
+The world is messy, and your data is messy as well. But, there is no need to be ashamed of this - on the opposite, give it the place it deserves and plot it!
+A lot of reports, papers and etc. show only the average (mean) result of research. Do not get me wrong, the average result holds meaningful information but as my Ph.D. advisor once said as a paraphrase on the common phrase <i>"god is in the standard deviation"</i>.
 Therefore, here are a few graphs showing both the average result and the error around it.
 </p>
 
 <h4>Scatter plot with linear regression line of best fit</h4>
 <p>
-Scatter plot is a standard nowadays as it provides raw view of the data, allowing the viewer to get a clear picture of what is going on. 
+A scatter plot is a standard nowadays as it provides a raw view of the data, allowing the viewer to get a clear picture of what is going on. 
 When you add a linear regression you provide the first attempt a person needs to run on data (who do not like linear stuff). 
-Then, you blow the viewers mind with your confidance interval, clearly showing the model's performance over the intersting values and how one can trust it. 
+Then, you blow the viewers' minds with your confidence interval, clearly showing the model's performance over the interesting values and how one can trust it. 
 This graph is a must in every regression presentation - either in the baseline slide or in the results section. 
 </p>
 <p>
@@ -247,9 +245,9 @@ plt.close()
 </p>
 
 <p>
-This discussion haviliy based on the <b>Mathplotlib</b> library as it really common and operates as the base of other more advanced libraries. 
-Understanding Mathplotlib and beening able to manipulate the graphs in this level easly transform to same skill on "higher" level libraries. 
-Hover, we could not end this dicussion without several honorable mentions one needs to check to reduce development time:
+This discussion is heavily based on the <b>Mathplotlib</b> library as it really common and operates as the base of other more advanced libraries. 
+Understanding Mathplotlib and being able to manipulate the graphs in this level easily transform to the same skill on "higher" level libraries. 
+Hover, we could not end this discussion without several honorable mentions one needs to check to reduce development time:
 </p>
 <ul style="margin-left: 20px; line-height: 1.5 !important; margin-bottom: 1.7rem; font-size: 1.1rem !important; font-weight: 400; color: #212529;">
 	<li><a href="https://seaborn.pydata.org/">Seaborn</a> - a Python data visualization library based on Matplotlib. It provides a higher-level wrapper on the library which makes it easier to use.</li>
@@ -260,7 +258,7 @@ Hover, we could not end this dicussion without several honorable mentions one ne
 </ul>
 
 <p>
-Congracolations! you are now the master of AI plots. You just need to do all the other parts of a secsessful AI project and plot your way to the victory. 
-Comunincating your results (even if they not as good as you hoped) in the right way is a crutial part of developing new technology and products. 
-By the way, if you would like some help with the ploting for your AI, or any other part in this manner, feel free to <a href="/about.html">contact me</a>.
+Congratulations! you are now the master of AI plots. You just need to do all the other parts of a successful AI project and plot your way to victory. 
+Communicating your results (even if they not as good as you hoped) in the right way is a critical part of developing new technology and products. 
+By the way, if you would like some help with the plotting for your AI, or any other part in this manner, feel free to <a href="/about.html">contact me</a>.
 </p>

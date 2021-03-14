@@ -200,6 +200,16 @@
 							"link": "https://www.youtube.com/watch?v=yFRmCZEVswQ&ab_channel=TeddyLazebnik",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
+						},{
+							"name": "WPF introduction",
+							"link": "https://www.youtube.com/watch?v=9EWMLugBkBw&feature=youtu.be&ab_channel=TeddyLazebnik",
+							"description": "Presentation by Paul Roit",
+							"type": "video"
+						},{
+							"name": "WPF introduction - data binding and mvvm architecture",
+							"link": "https://www.youtube.com/playlist?list=PLKeS5iBQNDOTgc3RSspcp8Lld2M_mQWen",
+							"description": "Presentation by Paul Roit",
+							"type": "video"
 						}]
 					}}
 			],
