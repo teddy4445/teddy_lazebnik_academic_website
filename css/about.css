@@ -315,6 +315,8 @@ line-height: 200%;
   float: right;
   margin-right: 60px;
   margin-left: 64px;
+  max-height: 300px;
+  max-width: 60%;
 }
 
 .bio-text {

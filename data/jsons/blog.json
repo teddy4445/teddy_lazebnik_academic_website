@@ -134,6 +134,15 @@
 		 "month": 3,
 		 "day": 15,
 		 "order": 15
+      },
+      {
+         "title":"[Technical Post] Novel Method For Using Unsupervised Deep Learning for PDE-based Problems",
+         "description":"A summery of an academic paper propoing a neural network-based algorithm for solving forward and inverse problems for partial differential equations (PDE) in unsupervised fashion with mash free and for arbitrary regular domain...",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "16"}],
+		 "year": 2021,
+		 "month": 4,
+		 "day": 1,
+		 "order": 16
       }
 	]
 }
