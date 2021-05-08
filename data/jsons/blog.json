@@ -143,6 +143,15 @@
 		 "month": 4,
 		 "day": 1,
 		 "order": 16
+      },
+      {
+         "title":"[Technical Post] Running Python as fast as C code",
+         "description":"Introduction to the just-in-time compilation PyPy compiler for Python...",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "17"}],
+		 "year": 2021,
+		 "month": 5,
+		 "day": 8,
+		 "order": 17
       }
 	]
 }

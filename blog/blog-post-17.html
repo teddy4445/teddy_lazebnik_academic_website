@@ -1,0 +1,40 @@
+<h1>
+[Technical Post] Running Python as fast as C code
+</h1>
+<hr class="publications-hr">
+<p>
+As a researcher, it is crucial for my job to quickly code up an idea to see if it works or not. Python is an excellent tool enabling just that. It allows for focusing on the idea itself and not be bothered with boilerplate code and other tedious things. 
+</p>
+<p>
+In these papers, the authors use <a href="https://www.sciencedirect.com/science/article/pii/B9780128028063000075" title="unsupervised DL summery">unsupervised deep learning</a> in order to find the solution for a given 2-dimensional spatial and time-dimension PDE problem. The solution of this process is mathematically defined by a mapping function from the spatial space (e.g. (x1,y1) points) to their corresponding location (x2,y2) given some point in time (t). From a technical perspective, avoiding as much mathematics as possible, we would focus on the main ideas proposed in this work. 
+</p>
+<h4>Arcitecture</h4>
+<p>
+The arcitecture of the nural network is quite simple relative to the state-of-the-art arcitectures in <a href="https://towardsdatascience.com/review-resnext-1st-runner-up-of-ilsvrc-2016-image-classification-15d7f17b42ac" title="CV DL models size compare">computer vision</a>, <a href="https://venturebeat.com/2020/05/29/openai-debuts-gigantic-gpt-3-language-model-with-175-billion-parameters/" title="gdp 3 size">NLP</a>, etc. It consists of a few <b>fully connected</b> layers with <b>tanh</b> activation and <b>linear sum</b> in the last layer.  A schematical view of the arcitecture are shown below.
+</p>
+<div style="text-align: center;">
+<img src="/img/blog/dl_pde_architecture.png" style="text-align: center; max-width: 600px; max-height: 300px; " alt="Network architecture: the point (x, y) in R^2 serves as an input and U as the out"/>
+</div>
+<h4>Training</h4>
+<p>
+In order to train the DL model to satisfy the PDE with the boundary conditions, the authors defined a new cost function to minimize. The cost function uses two types of distances to handle the complexity of well fit the inner space of the domain and the boundary of the domain. In the first term, the authors used <a href="https://en.wikipedia.org/wiki/Lp_space" title="Lp space">L2</a> (euclidean distance) with the L_{inf}. The second term is important since the L2 term only forces the equation up to a set of zero measures, while the L_{inf} term takes care of possible outliers. In addition to these, another term is used to minimize the error associated with the boundary condition and as a result, imposes boundary conditions in the model.
+</p>
+<p>
+This cost function holds a few promises. First, the solutions are smooth analytic functions that are extremely useable in later analysis. Second, the training procedure is mesh-free which means it is easy to adapt for multiple numerical methods such as finite distances, finite elements, finite volume, and others.  
+</p>
+<p>
+This method considered unsupervised learning as the results are untagged, nevertheless is obtained by first calculating the PDE's results either numerically or analytically.
+</p>
+<h4>Summary</h4>
+<p>
+In the papers, the authors show usage of this method in both forward and inverse problem settings, presenting its robustness and obtain promising results. 
+</p>
+<p>
+A very old idea in mathematics is the approximation of complex functions using simple functions. One can mention famous names as Taylor and Fourier. Another example comes from linear algebra with the idea of eigenvalues and the list is going on. The authors take advantage of this idea as deep networks by their nature use compositions of simple functions such as matrix multiplication and non-linear activations like sigmoid or tanh. This structure enables the approximation of an arbitrary function. Specifically, deep networks can use a relatively large number of degrees of freedom which in turn enables the expressibility of complex functions (such as PDEs). 
+</p>
+<p>
+On a personal note, I hope to see more paper combining state-of-the-art methods from computer science and mathematics combined to provide new ways to solve classical questions in both areas and as so operating as a bridge in these similar but yet so different areas. Both papers presented in this post require a deep understanding of both DL and PDEs and may be hard for audience not familiar with these subjects. Nevertheless, further reading is very recommended.  
+</p>
+<p>
+<small>* All images in this blog post have been taken from the papers themself </small>
+<p>
