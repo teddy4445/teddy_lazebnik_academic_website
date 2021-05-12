@@ -1,0 +1,118 @@
+<h1>
+[Technical Post] Fast Start Your ML Project Using Auto-ML Libraries in Python
+</h1>
+<hr class="publications-hr">
+<p>
+Automated Machine Learning (Auto-ML) is a promising field of study aiming to perform the technical ML pipeline automatically.
+Specifically, Auto-ML is aiming to automate some critical components such as data engineering, feature engineering, model training, hyperparameter tuning, model monitoring, etc.
+</p>
+<p>
+In an average ML project, most of the time is spent on the preparation and modeling. 
+To automate the ML pipeline Auto-ML frameworks come into the picture using classifical search methods such as <a href="https://en.wikipedia.org/wiki/Brute-force_search">Brute-force</a> or <a href="https://en.wikipedia.org/wiki/Greedy_algorithm">Greedy</a> search.
+</p>
+<p>
+A summary of the current (13.5.2021) leading Auto-ML open source libraries in Python is shown in the table below:
+</p>
+
+<div class="no-show-mobile">
+	<table class="table table-striped">
+		<thead>
+		  <tr>
+			<th>Library Name</th>
+			<th>Library Description</th>
+			<th>Underline Models</th>
+			<th>Perform hyperparameters tunning?</th>
+			<th>Link</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>Auto-Sklearn</td>
+			<td>Auto-Sklearn includes some feature engineering techniques such as One-Hot encoding, feature normalization, dimensionality reduction, etc. This library uses Sklearn estimators to process classification and regression problems.</td>
+			<td>All <a href="https://scikit-learn.org/">Sklearn</a> ML models</td>
+			<td>Yes</td>
+			<td>
+				<a class="btn btn-primary" href="https://proceedings.neurips.cc/paper/2015/file/11d0e6287202fced83f79975ec59a3a6-Paper.pdf" style="margin-bottom: 10px;"><i class="fa fa-sticky-note"></i> Paper</a> 
+				<a class="btn btn-primary" href="https://github.com/automl/auto-sklearn?spm=a2c65.11461447.0.0.68b37903mDUGY6"><i class="fa fa-code"></i> Code</a>
+			</td>
+		  </tr>
+		  <tr>
+			<td>TPOT</td>
+			<td>TPOT is an open-source python AutoML tool that optimizes machine learning pipelines using genetic programming. TPOT expects a cleaned dataset, it does feature processing, model selection, and hyperparameter optimization to return the best performing model.</td>
+			<td>All Sklearn ML models</td>
+			<td>Only Numerical</td>
+			<td>
+				<a class="btn btn-primary" href="https://dl.acm.org/doi/10.1145/2908812.2908918" style="margin-bottom: 10px;"><i class="fa fa-sticky-note"></i> Paper</a> 
+				<a class="btn btn-primary" href="https://github.com/EpistasisLab/tpot"><i class="fa fa-code"></i> Code</a>
+			</td>
+		  </tr>
+		  <tr>
+			<td>Auto-Keras</td>
+			<td>Auto-ML for deep learning (based on the <a href="https://keras.io/">Keras</a> library). The architecture of the NN is obtained by solving a Bayesian optimization problem on some evaluation metric function (such as F1 or accuracy score).</td>
+			<td>Theoreticly, all varients of NN.</td>
+			<td>Implicitly - Yes</td>
+			<td>
+				<a class="btn btn-primary" href="https://arxiv.org/abs/1806.10282" style="margin-bottom: 10px;"><i class="fa fa-sticky-note"></i> Paper</a> 
+				<a class="btn btn-primary" href="https://github.com/keras-team/autokeras?spm=a2c65.11461447.0.0.68b37903FriPcD"><i class="fa fa-code"></i> Code</a>
+			</td>
+		  </tr>
+		  <tr>
+			<td>AutoGluon</td>
+			<td>Auto-ML for deep learning. Unlike other Auto-ML libraries, that only support tabular data, it also supports image classification, object detection, nlp, and real-world applications spanning image. Its architecture search is based on methods such as ASHA, Hyperband, Bayesian Optimization and BOHB - making it the current (2021) state-of-the-art.</td>
+			<td>Theoreticly, all varients of NN.</td>
+			<td>Yes</td>
+			<td>
+				<a class="btn btn-primary" href="https://arxiv.org/abs/2003.06505" style="margin-bottom: 10px;"><i class="fa fa-sticky-note"></i> Paper</a> 
+				<a class="btn btn-primary" href="https://github.com/awslabs/autogluon"><i class="fa fa-code"></i> Code</a>
+			</td>
+		  </tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="no-show-desktop">
+	<h4>Auto-Sklearn</h4>
+	<p>
+	Auto-Sklearn includes some feature engineering techniques such as One-Hot encoding, feature normalization, dimensionality reduction, etc. This library uses Sklearn estimators to process classification and regression problems.
+	<br><br><b>Underline models:</b> All <a href="https://scikit-learn.org/">Sklearn</a> ML models.
+	</p>
+	<p>
+	<a class="btn btn-primary" href="https://proceedings.neurips.cc/paper/2015/file/11d0e6287202fced83f79975ec59a3a6-Paper.pdf"><i class="fa fa-sticky-note"></i> Paper</a> 
+	<a class="btn btn-primary" href="https://github.com/automl/auto-sklearn?spm=a2c65.11461447.0.0.68b37903mDUGY6"><i class="fa fa-code"></i> Code</a>
+	</p>
+	
+	<h4>TPOT</h4>
+	<p>
+	TPOT is an open-source python AutoML tool that optimizes machine learning pipelines using genetic programming. TPOT expects a cleaned dataset, it does feature processing, model selection, and hyperparameter optimization to return the best performing model.
+	<br><br><b>Underline models:</b> All <a href="https://scikit-learn.org/">Sklearn</a> ML models.
+	</p>
+	<p>
+		<a class="btn btn-primary" href="https://dl.acm.org/doi/10.1145/2908812.2908918"><i class="fa fa-sticky-note"></i> Paper</a> 
+		<a class="btn btn-primary" href="https://github.com/EpistasisLab/tpot"><i class="fa fa-code"></i> Code</a>
+	</p>
+	
+	<h4>Auto-Keras</h4>
+	<p>
+	Auto-ML for deep learning (based on the <a href="https://keras.io/">Keras</a> library). The architecture of the NN is obtained by solving a Bayesian optimization problem on some evaluation metric function (such as F1 or accuracy score).
+	<br><br><b>Underline models:</b> Theoreticly, all varients of NN.
+	</p>
+	<p>
+		<a class="btn btn-primary" href="https://arxiv.org/abs/1806.10282"><i class="fa fa-sticky-note"></i> Paper</a> 
+		<a class="btn btn-primary" href="https://github.com/keras-team/autokeras?spm=a2c65.11461447.0.0.68b37903FriPcD"><i class="fa fa-code"></i> Code</a>
+	</p>
+	
+	<h4>AutoGluon</h4>
+	<p>
+	Auto-ML for deep learning. Unlike other Auto-ML libraries, that only support tabular data, it also supports image classification, object detection, nlp, and real-world applications spanning image. Its architecture search is based on methods such as ASHA, Hyperband, Bayesian Optimization and BOHB - making it the current (2021) state-of-the-art.
+	<br><br><b>Underline models:</b> Theoreticly, all varients of NN.
+	</p>
+	<p>
+		<a class="btn btn-primary" href="https://arxiv.org/abs/2003.06505"><i class="fa fa-sticky-note"></i> Paper</a> 
+		<a class="btn btn-primary" href="https://github.com/awslabs/autogluon"><i class="fa fa-code"></i> Code</a>
+	</p>
+</div>
+
+<p>
+While Auto-ML is a powerful tool, the current state-of-the-art is far behind the solutions a human-AI developer can obtain due to the lack of creativity, domain knowledge, and other explanations.
+As a result, using Auto-ML can be a tool to quickly get a good overview of how different models handle a given data, substitute expensive developer's time with machine's time.
+</p>
