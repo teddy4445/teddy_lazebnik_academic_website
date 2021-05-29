@@ -11,7 +11,7 @@
          "description":"We have developed an extended mathematical graph-based spatial-temporal SIR model, allowing a multidimensional analysis of the impact of non-pharmaceutical interventions on the pandemic spread, while assessing the economic losses caused by it. By incorporating into the model dynamics that are a consequence of the interrelationship between the pandemic and the economic crisis, such as job separation not as a result of workers’ morbidity, analysis were enriched. Controlling the spread of the pandemic and preventing outbreaks have been investigated using two NPIs: the duration of working and school days and lockdown to varying degrees among the adult and children populations. Based on the proposed model and data from the Israeli economy, allowing 7.5 working hours alongside 4.5 school hours would maximise output and prevent an outbreak, while minimising the death toll (0.48% of the population). Alternatively, an 89% lockdown among children and a 63% lockdown among adults will minimise the death toll (0.21%) while maximising output and preventing outbreaks.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/covid_second_paper.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Shami, L., Bunimovich-Mendrazitsky, S., Spatio-Temporal influence of Non-Pharmaceutical interventions policies on pandemic dynamics and the economy: the case of COVID-19. Economic Research. 2021."}],
-		 "authors": "Teddy Lazebnik and Svetlana Bunimovich-Mendrazitsky",
+		 "authors": "Teddy Lazebnik, Labib Shami, and Svetlana Bunimovich-Mendrazitsky",
          "year": 2021,
          "topic":"Epidemiology",
          "type":"paper",
