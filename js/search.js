@@ -194,7 +194,7 @@ docs.push(doc20);
 var index = elasticlunr(function () {
     this.addField('title');
     this.addField('body');
-    this.addField('fixed_query');
+    // this.addField('fixed_query');
     this.setRef('id');
 });
 
