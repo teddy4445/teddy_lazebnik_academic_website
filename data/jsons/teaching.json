@@ -184,6 +184,18 @@
 					"date": "3.14.2021",
 					"link": "",
 					"description": "The first home work project description and deadline will be published this week - stay tuned."
+				},
+				{
+					"title": "Second home work project description",
+					"date": "4.11.2021",
+					"link": "",
+					"description": "The second home work project description and deadline is published in the module."
+				},
+				{
+					"title": "Third (and final) home work project description",
+					"date": "5.28.2021",
+					"link": "",
+					"description": "The third home work project description and deadline (29.5.2021) is published in the module."
 				}
 			],
 			"modules": [{
@@ -210,12 +222,49 @@
 							"link": "https://youtu.be/67VEikyaoO8",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
+						},{
+							"name": "WPF introduction - threads in C#",
+							"link": "https://youtu.be/CIMlZxgIcuc",
+							"description": "Presentation by Paul Roit",
+							"type": "video"
+						}]
+					}},
+					{
+					"title": "Introduction to Web Development",
+					"explanation": "An introduction to web development using C# and the dot Net framework.",
+					"resources": {
+						"Lectures":[{
+							"name": "Server Side - overview",
+							"link": "https://youtu.be/lTV86vpYEGA?list=PLKeS5iBQNDOQEWUf3ZVn-Q2VCOUaRdPPg",
+							"description": "Presentation by Paul Roit",
+							"type": "video"
+						},{
+							"name": "Client Side - overview",
+							"link": "https://youtu.be/hjcj2Q-iYFk?list=PLKeS5iBQNDOQEWUf3ZVn-Q2VCOUaRdPPg",
+							"description": "Presentation by Paul Roit",
+							"type": "video"
+						},{
+							"name": "Async functions and promises in JavaScript",
+							"link": "https://youtu.be/ha3wprAwsa4?list=PLKeS5iBQNDOQEWUf3ZVn-Q2VCOUaRdPPg",
+							"description": "Presentation by Paul Roit",
+							"type": "video"
+						}]
+					}},
+					{
+					"title": "Introduction to Android Application Development (Kotlin)",
+					"explanation": "An introduction to Android applications development using Kotlin.",
+					"resources": {
+						"Lectures":[{
+							"name": "Introdution",
+							"link": "https://youtu.be/uF5SpZRjJI8?list=PLKeS5iBQNDOQEWUf3ZVn-Q2VCOUaRdPPg",
+							"description": "Presentation by Paul Roit",
+							"type": "video"
 						}]
 					}}
 			],
 			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
 		},{
-			"name": "Deep Leanring",
+			"name": "Deep Leanring for Computer Vision",
 			"code": "21319",
 			"year": "2020",
 			"topic":"programming",

@@ -1,21 +1,21 @@
 {
-   "biography":"I am a Ph.D. student in the Tolkien Project, part of the MAVERICK research group at the Computer Science Department , Bar Ilan University ; Supervised by Prof. Gal A. Kaminka and Dr. Chana Weitman. My research focuses on medical and biological nanoparticles (focusing on nanorobotics). Specifically, modeling a curing protocol based on biophysical interactions of targeted drug delivery nanoparticles in the blood. I am also interested in numerical solving and stabilization of ordinary and partial differential equations (ODE, PDE) systems (especially, ones that originate in a biological setup). Sometimes I am publishing some useful (or just fun) things like open code and technical blog posts . I published a few academic papers in journals, conferences, and abstracts. In between, I am teaching several mathematical classes and working with Bc.S. and Mc.S. students on their final project. I completed my B.Sc. (2016) and M.Sc. (2018) in Applied Mathematics at Bar-Ilan University.",
+   "biography":"I am Applied Mathematics and Computer Science researcher focusing on epidemiology, medical, economics, and information systems along with other secondary fields. I have ten years of experience in software development - five years developing desktop, web, and server applications and another five years developing algorithms. In between, seven years of experience leading development teams of up to ten professionals. A proven record in system architecture, production-ready algorithms, and working with clients. Specialization in bio-physical simulations (stable and accurate numerical calculation), big data analysis (in particular, social and economic data), NLP for information systems, and computer vision. I am interested in biomathematics, medical data-driven projects, biological and clinical processes modeling and simulation, eXplainable AI (XAI), and AI for video games.",
    "researchInterests":[
-		"Medical Nanorobotics - nanoscale in vivo interactions, drug discovery, computing, and compalization.",
-		"Biomathematical Modeling - optimal treatment policy, ODE/PDE-based models, and disease dyanmics.",
-		"Computer Simualtion - pharmacokinetics-pharmacodynamic models, epedimological, and clinical treatment."
+		"Computer Simualtion - pharmacokinetics-pharmacodynamic models, epedimological dynamics, and medical treatments.",
+		"Biomathematical Modeling - bio-clinical personalized ML-based treatments, ODE/PDE-based biological models, and disease dyanmics.",
+		"Medical Nanorobotics - nanoscale in vivo interactions, targeted drug delivery, drug discovery, computing, and compalization."
    ],
    "featuredPublications":[
       {
-         "name":"The signature features of COVID-19 pandemic in a hybrid mathematical model - implications for optimal work-school lockdown policy",
-         "description":"The new COVID-19 pandemic has challenged policymakers on key issues. Most countries have adopted “lockdown” policies to reduce the spatial spread of COVID-19, but they have damaged the economic and moral fabric of society. Mathematical modeling in non-pharmaceutical intervention policy management has proven to be a major weapon in this fight due to the lack of an effective COVID-19 vaccine. We present a new \textit{hybrid} model for COVID-19 dynamics using both an age-structured mathematical model based on the SIRD model and spatio-temporal model in silico, analyzing the data of COVID-19 in Israel. Using the \textit{hybrid} model, we have introduced a method for estimating the reproduction number of an epidemic in real-time from the data of daily notification of cases. The results of the proposed model are confirmed by the Israeli Lockdown experience with a mean square error of 0.205 over two weeks. The use of mathematical models promises to reduce the uncertainty in the choice of “Lockdown” policies. Our unique use of contact details from 2 classes (children and adults), the interaction of populations depending on the time of day, and several physical locations, allowed a new look at the differential dynamics of the spread and control of infection",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/covid_first.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., The signature features of COVID-19 pandemic in a hybrid mathematical model - implications for optimal work-school lockdown policy. Advanced Theory and Simulations. 2021."}],
+         "name":"Spatio-Temporal influence of Non-Pharmaceutical interventions policies on pandemic dynamics and the economy: the case of COVID-19",
+         "description":"We have developed an extended mathematical graph-based spatial-temporal SIR model, allowing a multidimensional analysis of the impact of non-pharmaceutical interventions on the pandemic spread, while assessing the economic losses caused by it. By incorporating into the model dynamics that are a consequence of the interrelationship between the pandemic and the economic crisis, such as job separation not as a result of workers’ morbidity, analysis were enriched. Controlling the spread of the pandemic and preventing outbreaks have been investigated using two NPIs: the duration of working and school days and lockdown to varying degrees among the adult and children populations. Based on the proposed model and data from the Israeli economy, allowing 7.5 working hours alongside 4.5 school hours would maximise output and prevent an outbreak, while minimising the death toll (0.48% of the population). Alternatively, an 89% lockdown among children and a 63% lockdown among adults will minimise the death toll (0.21%) while maximising output and preventing outbreaks.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/covid_second_paper.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Shami, L., Bunimovich-Mendrazitsky, S., Spatio-Temporal influence of Non-Pharmaceutical interventions policies on pandemic dynamics and the economy: the case of COVID-19. Economic Research. 2021."}],
 		 "authors": "Teddy Lazebnik and Svetlana Bunimovich-Mendrazitsky",
          "year": 2021,
-         "topic":"Biomathematics",
+         "topic":"Epidemiology",
          "type":"paper",
-         "publisher":"Advanced Theory and Simulations",
+         "publisher":"Economic Research-Ekonomska Istraživanja",
          "publicationStatus":"Published"
       },
       {
@@ -33,28 +33,28 @@
    ],
    "currentProjects":[
       {
-         "name":"Extended Pharmacokinetics-Pharmadynamics Mathematical Model For Nanomedicine Targeted Drug Delivery",
+         "name":"Extended Pharmacokinetics Model For Targeted Drug Delivery Nanoparticles",
          "topic": "simulations",
-         "description":"An improved simulation of medical nanoparticles-based targeted drug delivery using ODE and ML methods.",
-         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+         "description":"An improved simulation of medical nanoparticles-based targeted drug delivery using more accurate flow dynamics and Pharmacokinetics in different organs in a mouse.",
+         "link":{"info": "View project", "type": 2, "link": "/medical-nanorobots-in-the-blood.html", "example":""}
       },
       {
-         "name":"Mathematical Model for Medical Nanoparticles in the Circulatory System",
+         "name":"Indoor Pandemic Spread",
          "topic": "simulations",
-         "description":"A new mathematical representation for pharmacokinetics dyanmics for large-scale in-vivo systems.",
+         "description":"We are studing the pandemic spread indoor for several types of buildings based on extended SIR model.",
          "link":{"info": "View project", "type": 2, "link": "/medical-nanorobots-in-the-blood.html", "example":""}
+      },
+      {
+         "name":"A better Prediction of the Non-Observed Economy in Israel",
+         "topic": "economy",
+         "description":"Using multiple economic and social processes, we are estimating in the size of non-observed economy in Israel.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {
          "name":"Hebrew words associative distance and connection to depression",
          "topic": "machine learning",
          "description":"Developing a machine learning model for words associative distance (Hebrew). Based on this model, propusing new depression test for clinical professionals",
          "link":{"info": "View project", "type": 2, "link": "https://pure-talent-302909.oa.r.appspot.com/", "example":""}
-      },
-      {
-         "name":"Sphera Academy Website Generator",
-         "topic": "open source",
-         "description":"Maintaining an academic online presence is not easy. That's why we created our one-stop-shop solution: Sphera. a free, customizable and easy-to-use template for a personal website, that contains your entire academic life in one place. And yes, it’s mobile friendly too!",
-         "link":{"info": "View project", "type": 2, "link": "https://sphera.academy/", "example":""}
       }
    ]
 }

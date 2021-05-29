@@ -14,14 +14,14 @@
       "type":"code"
     },
 	{
-      "name":"The OCTI board game with AI player",
+      "name":"The OCTI board game with several levels of AI players",
       "description":"The OCTI board game with nice UI-UX and several levels of AI players.",
       "recommendation":"",
       "fileLinks":[
          {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/octi_board_game"},
          {"info": "cite", "type": 3, "link": ""}
        ],
-      "authors": "Lazebnik, T.",
+      "authors": "Lazebnik, T., Krongauz. D.",
       "year": 2018,
       "topic":"machine learning",
       "type":"code"
@@ -144,8 +144,8 @@
       "type":"code"
     },
     {
-      "name":"Game of Life CoronaSpread analysis",
-      "description":"A JS (p5 + Google Charts) implementation of the <b>game of life</b> simulating corona spread in the population.",
+      "name":"Game of Life COVID-19 Spread analysis",
+      "description":"A JS (p5 + Google Charts) implementation of the <b>game of life</b> simulating COVID-19 spread in the population.",
       "recommendation":"",
       "fileLinks":[
          {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/game_of_life_corona"},
