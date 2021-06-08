@@ -160,7 +160,16 @@
 		 "year": 2021,
 		 "month": 5,
 		 "day": 13,
-		 "order": 17
+		 "order": 18
+      },
+      {
+         "title":"A Step Towards Explainable AI - The Explainable Boosting Machine",
+         "description":"Machine learning models are concering new hilltops everyday now and sprading into more fields of life such as medicine, miletary, life-supporting systems and other which require individuals to put their faite in these models. How one can do so without understanding the model? Explainable Boosting Machine (EBM) is one step torwards a more interpretabe machine learning models...",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "19"}],
+		 "year": 2021,
+		 "month": 6,
+		 "day": 8,
+		 "order": 19
       }
 	]
 }

@@ -1,0 +1,45 @@
+<h1>
+[Short] A Step Towards Explainable AI - The Explainable Boosting Machine
+</h1>
+<hr class="publications-hr">
+<p>
+Machine learning models are concerning new hilltops every day now and spreading into more fields of life such as medicine, military, life-supporting systems, and others which require individuals to put their faith in these models. 
+How one can do so without understanding the model? more often than not, the answer is that people won't. 
+This raises the problem of making an interpretable (not exactly as explainable) artificial intelligence (AI) that on the one hand have the same accuracy and performance and on the other hand, a human is able to understand <b>why</b> it make each decision.
+</p>
+<p>
+Into this gap comes a lot of models and libraries that play on the trade-off between performance and interpretability.
+This is quite trivial to understand - Linear regression (LR) and decision trees (DT) are quite simple and mostly explainable models which are not that accurate in general. 
+Neural networks (NN) are black-box models which means they are hard to interpret but perform decently in general. 
+In the middle, one can find ensemble models like random forests (RF) and gradient boosting (GB) that usually outperform LR and DT, but harder to interpret.
+For some time, this trade-off is assumed to be a global truth. Recently, several works challenging this assumption and aiming at the holy grail of the eXplanable AI (XAI) - both accurate and interpretable model.
+</p> 
+
+<p>
+In this blog post I would claim that <b>there is no inherent trade-off between interpretability and accuracy</b> and would try to convice you that is true using Explainable Boosting Machine.
+</p>
+<h4>Explainable Boosting Machine</h4>
+<small><b>Warrenty note:</b> the following few sentenses would assume a strong background in the field.</small><br>
+
+EBM is a type of <a href="https://multithreaded.stitchfix.com/blog/2015/07/30/gam/" title="GAM">Generalized Additive Model (GAM)</a>,
+formalized by <a href="https://web.stanford.edu/~hastie/">Trevor Hastie</a> and <a href="https://statweb.stanford.edu/~tibs/">Robert Tibshirani</a>. In short, A GAM is any model that is a linear combination of <a href="https://www.sciencedirect.com/science/article/pii/B9780126157604500067"><i>shape</i> functions</a>.
+Therefore, one can treat GAM as an extension of the linear regression method (by assuming the shape functions are linear by themselves).
+This mathematical definition of GAMs directly defines why GAM are explainable - plot the shape functions constructing the model and you will see how the model uses each feature. 
+</p>
+<p>
+The classical GAM definition is elegant but suffers from a major shortage: it does not take into consideration the relationship between the features as it uses each feature individually.
+While classical GAM gives a decent performance on a wide range of datasets, it is still limited considering that even DT is combining features to make its predictions.
+</p>
+<p>
+A natural extension of the GAM is GA2M which adds all possible shape functions that take any two (Xi, Xj) features in addition to the linear terms.
+The idea is that shape functions that use two features are still explainable as they can be represented as heatmaps of 3d plots rather than lines or curves.
+It goes without saying that they are harder to interpret but by definition they are and we get a boost in performance so it is a fair deal.
+</p>
+<p>
+
+</p>
+<h4>Conclusion</h4>
+<p>
+The times when one had to choose between accuracy and explainability are (probably) over. 
+Any data scientist working on tabular data should try it at least once - especially if you work in a domain where explainability is mandatory, or runtime performance is key, you should give it a try.
+</p>
