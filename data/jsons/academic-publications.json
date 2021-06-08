@@ -8,19 +8,19 @@
 		 "authors": "Teddy Lazebnik, Niva Aaroni, and Svetlana Bunimovich-Mendrazitsky",
          "year": 2020,
          "topic":"Biomathematics",
-         "type":"paper",
+         "type":"Paper",
          "publisher":"biosystems",
          "publicationStatus":"Published"
       },
       {
-         "name":"A stable algorithm for numerical matrix exponent",
-         "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof",
+         "name":"A Stable Algorithm For Numerical Matrix Exponent",
+         "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof for bounded error.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix_exponent.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., A stable algorithm for numerical matrix exponent. Functional Differential Equations. 2020."}],
 		 "authors": "Teddy Lazebnik and Shlomo Yanetz",
          "year": 2016,
-         "topic":"numerical analysis",
-         "type":"paper",
+         "topic":"Numerical Analysis",
+         "type":"Paper",
          "publisher":"Functional Differential Equations",
          "publicationStatus":"Published"
       },
@@ -32,20 +32,8 @@
 		 "authors": "Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni",
          "year": 2019,
          "topic":"Biomathematics",
-         "type":"paper",
+         "type":"Paper",
          "publisher":"Functional Differential Equations",
-         "publicationStatus":"Published"
-      },
-      {
-         "name":"A highly stable implementation for numerical matrix exponent in Matlab and C",
-         "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof including analysis of the performance in Matlab and C implementation.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix_exponent_stable.pptx"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., A highly stable implementation for numerical matrix exponent in Matlab and C. Functional Differential Equations conference. 2016."}],
-		 "authors": "Teddy Lazebnik and Shlomo Yanetz",
-         "year": 2016,
-         "topic":"numerical analysis",
-         "type":"conference",
-         "publisher":"Functional Differential Equations conference",
          "publicationStatus":"Published"
       },
       {
@@ -56,32 +44,8 @@
 		 "authors": "Teddy Lazebnik, Shlomo Yanetz, and Svetlana Bunimovich-Mendrazitsky",
          "year": 2019,
          "topic":"Biomathematics",
-         "type":"conference",
+         "type":"Conference",
          "publisher":"Functional Differential Equations conference",
-         "publicationStatus":"Published"
-      },
-      {
-         "name":"Energy Efficiency in 2d Quadratic Hamiltonian",
-         "description":"Analysis of the most energy efficieny in 2d quadratic hamiltonian motion and general solution for the 1d and 2d cases.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/quadratic-hamiltonianfinal.pptx"},
-					  {"info": "cite", "type": 3, "link": ""}],
-		 "authors": "Teddy Lazebnik and Barry Ginat",
-         "year": 2015,
-         "topic":"physics",
-         "type":"abstract",
-         "publisher":"Technion Press",
-         "publicationStatus":"Published"
-      },
-      {
-         "name":"Rivendell: Project-Based Academic Search Engine",
-         "description":"Meta academic search engine using project-based search with explicit user tagging to improve search results.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/nano_confirance.pptx"},
-					  {"info": "cite", "type": 3, "link": ""}],
-		 "authors": "Teddy Lazebnik, Hana Weitman, and Gal A. Kaminka",
-         "year": 2015,
-         "topic":"information systems",
-         "type":"abstract",
-         "publisher":"Bar-Ilan Nanotechnology and Advanced Materials",
          "publicationStatus":"Published"
       },
       {
@@ -91,9 +55,33 @@
 					  {"info": "cite", "type": 3, "link": ""}],
 		 "authors": "Teddy Lazebnik, Labib Shami, and Svetlana Bunimovich-Mendrazitsky",
          "year": 2021,
-         "topic":"Biomathematics",
-         "type":"abstract",
+         "topic":"Epidemiology",
+         "type":"Abstract",
          "publisher":"Dynamical Systems Applied To Biology And Natural Sceine",
+         "publicationStatus":"Published"
+      },
+      {
+         "name":"Spatio-Temporal influence of Non-Pharmaceutical interventions policies on pandemic dynamics and the economy: the case of COVID-19",
+         "description":"We have developed an extended mathematical graph-based spatial-temporal SIR model, allowing a multidimensional analysis of the impact of non-pharmaceutical interventions on the pandemic spread, while assessing the economic losses caused by it. By incorporating into the model dynamics that are a consequence of the interrelationship between the pandemic and the economic crisis, such as job separation not as a result of workers’ morbidity, analysis were enriched. Controlling the spread of the pandemic and preventing outbreaks have been investigated using two NPIs: the duration of working and school days and lockdown to varying degrees among the adult and children populations. Based on the proposed model and data from the Israeli economy, allowing 7.5 working hours alongside 4.5 school hours would maximise output and prevent an outbreak, while minimising the death toll (0.48% of the population). Alternatively, an 89% lockdown among children and a 63% lockdown among adults will minimise the death toll (0.21%) while maximising output and preventing outbreaks.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/covid_second_paper.pdf"},
+					  {"info": "cite", "type": 3, "link": ""}],
+		 "authors": "Teddy Lazebnik, Labib Shami, and Svetlana Bunimovich-Mendrazitsky",
+         "year": 2021,
+         "topic":"Epidemiology",
+         "type":"Paper",
+         "publisher":"Economic Research",
+         "publicationStatus":"Published"
+      },
+      {
+         "name":"Rivendell: Project-Based Academic Search Engine",
+         "description":"Meta academic search engine using project-based search with explicit user tagging to improve search results.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/nano_confirance.pptx"},
+					  {"info": "cite", "type": 3, "link": ""}],
+		 "authors": "Teddy Lazebnik, Hana Weitman, and Gal A. Kaminka",
+         "year": 2018,
+         "topic":"Information Systems",
+         "type":"Abstract",
+         "publisher":"Bar-Ilan Nanotechnology and Advanced Materials",
          "publicationStatus":"Published"
       },
       {
@@ -103,8 +91,8 @@
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., The signature features of COVID-19 pandemic in a hybrid mathematical model - implications for optimal work-school lockdown policy. Advanced Theory and Simulations. 2021"}],
 		 "authors": "Teddy Lazebnik and Svetlana Bunimovich-Mendrazitsky",
          "year": 2021,
-         "topic":"Biomathematics",
-         "type":"paper",
+         "topic":"Epidemiology",
+         "type":"Paper",
          "publisher":"Advanced Theory and Simulations",
          "publicationStatus":"Published"
       }

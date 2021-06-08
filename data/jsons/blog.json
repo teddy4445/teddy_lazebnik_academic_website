@@ -152,6 +152,15 @@
 		 "month": 5,
 		 "day": 8,
 		 "order": 17
+      },
+      {
+         "title":"[Technical Post] Fast Start Your ML Project Using Auto-ML Libraries in Python",
+         "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline...",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "18"}],
+		 "year": 2021,
+		 "month": 5,
+		 "day": 13,
+		 "order": 17
       }
 	]
 }

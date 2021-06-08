@@ -1,5 +1,5 @@
 {
-	"work_with_me_opening": "I am always looking for great students (both undergraduates and M.Sc.). If you are a good student (from the CS. or Math. department in BIU), and you are curious about research and want to learn, we should talk. Expect hard work, but also lots of fun! Currently, I can only co-advise. <br><br> The following topics are projects that I find intresting to do. That said, this list is incomplete; and open to other topics you may have. First, micro-expressions recognition using a standard camera. Second, numerical solution for two-phase floyd in a cylinder (navier-stokes equations). Third, Property-Value extraction from academic papers in English.",
+	"work_with_me_opening": "I am always looking for great opportunities in academia and the industry. Specifically, I am interested in mathematical models for biology, clinical processes, and epidemiology in addition to AI algorithms (if there are machine learning-based so hopefully explainable - if they are not, we will try to make them more explainable) and computer simulations. <br><br> The following topics are projects that I find interesting to do. That said, this list is incomplete and more than open to other topics you may have: <br><br> First, any extension of the epidemiological dynamics (e.g., the SIR/SIS models) and the integration with other fields such as economy, tourism, mental healthcare, etc.<br><br> Second, to find the equlibria, optimum, zero points, asymptotic state for ODE and PDE based models. <br><br> Third, Property-Value extraction from academic papers in English. <br><br> Forth, pharmacokinetics and pharmacodynamics development and in silico experiments of in vivo data (in particular, targeted drug delivery drugs).",
 	"open_positions": [
 	],
 	"projects": [{
@@ -20,17 +20,18 @@
 			"googleLink": "",
 			"linkedinLink": ""
 		}],
-		"description": "An extantion of the privious project, improving flow dynamics and NPs-body interactions. Providing a large scale comparision experiment.",
-		"start_month": 10,
+		"description": "An improved simulation of medical nanoparticles-based targeted drug delivery using more accurate flow dynamics and Pharmacokinetics in different organs in a mouse.",
+		"start_month": 11,
 		"start_year": 2020,
-		"end_month": 7,
+		"end_month": 8,
 		"end_year": 2021,
 		"team_members": 3,
 		"relevant_resources": [
+			
 		]
 	},
 	{
-		"name": "Mathematical Model for Medical Nanoparticles in the Circulatory System",
+		"name": "Graph-Based Pharmacokinetics-Pharmadynamics Modeling for Large Scale Systems: Nanoparticles Case",
 		"participants": [{
 			"name": "Gal A. Kaminka",
 			"title": "Ph.D.",
@@ -57,24 +58,53 @@
 		]
 	},
 	{
-		"name": "Sphera – A template for personal academic websites",
-		"participants": [],
-		"description": "Sphera is a free open-source website template that will vastly improve the communication between lecturers and students. It will provide lecturers and professors with the tools to easily create a professional personal website that contains their research, courses and personal projects. We will study the user behaivor in personal acadmic websites and how to improve it using machine learning reccomendation system.",
-		"start_month": 8,
-		"start_year": 2020,
-		"end_month": 8,
+		"name": "Indoor Spatio-Temporal Epidemiological Model",
+		"participants": [{
+			"name": "Gal A. Kaminka",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://u.cs.biu.ac.il/~galk/",
+			"googleLink": "https://scholar.google.co.il/citations?user=AyzlRJwAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Ariel Alexi",
+			"title": "Ms.",
+			"role": "Main researcher",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": "https://www.linkedin.com/in/ariel-alexi/"
+		}],
+		"description": "We are studing the pandemic spread indoor for several types of buildings based on extended SIR model",
+		"start_month": 4,
+		"start_year": 2021,
+		"end_month": 9,
 		"end_year": 2021,
-		"team_members": 12,
+		"team_members": 3,
 		"relevant_resources": [
-			{
-				"name": "Project Website",
-				"link": "http://sphera.academy/",
-				"description": "Read more about the project... "
-			}
 		]
 	},
 	{
-		"name": "Non-observable Economy Size Estimation with Stabalized Model",
+		"name": "Financing and Managing Epidemiological-Economic Crisis: The Reserve Model",
+		"participants": [{
+			"name": "Labib Shami",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
+			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
+			"linkedinLink": ""
+		}],
+		"description": "An economic taxation policy for handling future crisises with mathematical model and in silico experiments.",
+		"start_month": 3,
+		"start_year": 2021,
+		"end_month": 6,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "A Better Prediction of the Non-Observed Economy in Israel",
 		"participants": [{
 			"name": "Labib Shami",
 			"title": "Ph.D.",
@@ -86,27 +116,77 @@
 		"description": "A new (more stable) mathematical model for estimating the non-observable economy. An empirical analysis for Israel is conducted.",
 		"start_month": 2,
 		"start_year": 2021,
-		"end_month": 5,
+		"end_month": 10,
 		"end_year": 2021,
 		"team_members": 2,
 		"relevant_resources": [
 		]
 	},
 	{
-		"name": "Lung Metastases Growth Patterns From Colorectal Cancer",
-		"participants": [
-		{
-			"name": "Svetlana Bunimovich-Mendrazitsky",
+		"name": "Estimation of Non-Observed Economy Using Observed Economy and Partial Non-Observed Economy with Deep Learning",
+		"participants": [{
+			"name": "Labib Shami",
 			"title": "Ph.D.",
-			"role": "Advisor",
-			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
-			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"role": "Economist researcher",
+			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
+			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
 			"linkedinLink": ""
 		}],
-		"description": "A PDE location-based model of the growth of lung metastases from colorectal cancer and fitting on clinical data.",
+		"description": "",
+		"start_month": 10,
+		"start_year": 2021,
+		"end_month": 6,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Estimating the damages of an unreported oil tanker spill using integrated physical-economic modeling: the Israel February 2021 marine and coastal petroleum contamination",
+		"participants": [{
+			"name": "Shiri Zemah Shamir",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "https://www.idc.ac.il/en/pages/faculty.aspx?username=szemahshamir",
+			"googleLink": "https://scholar.google.com/citations?user=UZLvNL4AAAAJ&hl=iw",
+			"linkedinLink": "https://www.linkedin.com/in/shiri-zemah-shamir-25a68620/"
+		},
+		{
+			"name": "Yoav Peled",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Shiri Zemah Shamir",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "https://www.idc.ac.il/en/pages/faculty.aspx?username=szemahshamir",
+			"googleLink": "https://scholar.google.com/citations?user=UZLvNL4AAAAJ&hl=iw",
+			"linkedinLink": "https://www.linkedin.com/in/shiri-zemah-shamir-25a68620/"
+		},
+		{
+			"name": "Asaf Tzachor",
+			"title": "Ph.D.",
+			"role": "Researcher",
+			"websiteLink": "https://www.cser.ac.uk/team/asaf-tzachor/",
+			"googleLink": "https://scholar.google.co.il/citations?user=nsuAyeMAAAAJ&hl=en",
+			"linkedinLink": "https://www.linkedin.com/in/asaf-tzachor-0266945/?originalSubdomain=uk"
+		},
+		{
+			"name": "Igal Berenshtein",
+			"title": "Ph.D.",
+			"role": "Researcher",
+			"websiteLink": "",
+			"googleLink": "https://scholar.google.co.il/citations?user=WVDgz04AAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "",
 		"start_month": 2,
 		"start_year": 2021,
-		"end_month": 8,
+		"end_month": 6,
 		"end_year": 2021,
 		"team_members": 2,
 		"relevant_resources": [
@@ -139,7 +219,7 @@
 			"googleLink": "https://scholar.google.co.il/citations?user=-cHvrVgAAAAJ&hl=en",
 			"linkedinLink": ""
 		}],
-		"description": "A feature selection algorithms that uses iterative ensemble intersections given preformance and explainability metrics to obtain a balanced feature set.",
+		"description": "A feature selection algorithms that uses iterative ensemble intersections given preformance and explainability metrics to obtain an optimal feature set.",
 		"start_month": 9,
 		"start_year": 2020,
 		"end_month": 5,
@@ -149,7 +229,7 @@
 		]
 	},
 	{
-		"name": "Hebrew words associative distance and connection to depression",
+		"name": "The Connection Between Associative Distance and Rumination in Hebrew Speaking Individuals",
 		"participants": [{
 			"name": "Noa Vardi",
 			"title": "MA.",
@@ -158,7 +238,7 @@
 			"googleLink": "",
 			"linkedinLink": ""
 		}],
-		"description": "Developing a machine learning model for words associative distance (Hebrew). Based on this model, propusing new depression test for clinical professionals.",
+		"description": "Developing a machine learning model for words' associative distance (Hebrew). Based on this model, propusing new rumination test for clinical professionals.",
 		"start_month": 7,
 		"start_year": 2019,
 		"end_month": 1,
@@ -168,19 +248,19 @@
 		]
 	},
 	{
-		"name": "Predicting Acute Kidney Injury Due To Partial Nephrectomy Treatment",
+		"name": "Predicting Acute Kidney Injury Following Open Partial Nephrectomy Treatment Using SAT-Pruned Explainable Machine Learning Model",
 		"participants": [{
 			"name": "Zaher Bahouth",
 			"title": "Ph.D.",
-			"role": "MD",
+			"role": "Clinical researcher",
 			"websiteLink": "",
-			"googleLink": "",
-			"linkedinLink": ""
+			"googleLink": "https://orcid.org/0000-0003-4658-4905",
+			"linkedinLink": "https://www.linkedin.com/in/zaher-bahouth-381648168/"
 		},
 		{
 			"name": "Svetlana Bunimovich-Mendrazitsky",
 			"title": "Ph.D.",
-			"role": "Mathematical Advisor",
+			"role": "Advisor",
 			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
 			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
 			"linkedinLink": ""
@@ -188,57 +268,170 @@
 		{
 			"name": "Sarel Halachmi",
 			"title": "Ph.D.",
-			"role": "MD",
-			"websiteLink": "",
-			"googleLink": "",
+			"role": "Clinical Advisor",
+			"websiteLink": "https://labnesium.com/Sarel-Halachmi-Lab/5287/",
+			"googleLink": "https://orcid.org/0000-0002-8180-8030",
 			"linkedinLink": ""
 		}],
-		"description": "Developing an explanable AI to predict acute kidney injury (AKI) complications due to Partial Nephrectomy (PN) treatment.",
+		"description": "Developing an eXplanable AI to predict acute kidney injury (AKI) complications due to Partial Nephrectomy (PN) treatment.",
 		"start_month": 6,
 		"start_year": 2020,
-		"end_month": 1,
+		"end_month": 2,
 		"end_year": 2021,
 		"team_members": 4,
 		"relevant_resources": [
 		]
 	},
 	{
-		"name": "Decision Tree Post-Pruning Without Loss Of Accuracy",
+		"name": "Sphera – A template for personal academic websites",
+		"participants": [],
+		"description": "Sphera is a free open-source website template that will vastly improve the communication between lecturers and students. It will provide lecturers and professors with the tools to easily create a professional personal website that contains their research, courses and personal projects. We will study the user behaivor in personal acadmic websites and how to improve it using machine learning reccomendation system.",
+		"start_month": 1,
+		"start_year": 2020,
+		"end_month": 4,
+		"end_year": 2021,
+		"team_members": 12,
+		"relevant_resources": [
+			{
+				"name": "Project Website",
+				"link": "http://sphera.academy/",
+				"description": "Read more about the project... "
+			}
+		]
+	},
+	{
+		"name": "Decision Tree Post-Pruning Without Loss Of Accuracy using the SAT-PP algorithm with An Empirical Evaluation on Clinical Data",
 		"participants": [
 		{
 			"name": "Svetlana Bunimovich-Mendrazitsky",
 			"title": "Ph.D.",
-			"role": "Mathematical Advisor",
+			"role": "Advisor",
 			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
 			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
 			"linkedinLink": ""
 		}],
-		"description": "Developing an post pruning algorithm that does not harm the model's performance. Evaluation on oncology data is provided.",
-		"start_month": 11,
-		"start_year": 2020,
-		"end_month": 2,
+		"description": "We propose a new Boolean satisfiability (SAT) based PP algorithm, SAT-PP algorithm, which reduces the tree size while preserving the accuracy of the unpruned tree, since in medical-related tasks, decreasing the model's performance is something we emphatically try to avoid where better training is not an option.",
+		"start_month": 12,
+		"start_year": 2019,
+		"end_month": 4,
 		"end_year": 2021,
 		"team_members": 2,
 		"relevant_resources": [
 		]
 	},
 	{
-		"name": "Stochastic Process Representation Of The Extended SIRD Group Of Models",
+		"name": "Mathematical model for the early stage Type 1 Diabetes BCG-based Prevention Treatment",
 		"participants": [
 		{
 			"name": "Svetlana Bunimovich-Mendrazitsky",
 			"title": "Ph.D.",
-			"role": "Mathematical Advisor",
+			"role": "Advisor",
 			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
 			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
 			"linkedinLink": ""
 		}],
-		"description": "Representation of the SIRD model as a stochastic process and obtaining analytical points of interest.",
-		"start_month": 1,
-		"start_year": 2020,
-		"end_month": 3,
+		"description": "Developing from scratch a new bio-clinical model for type 1 disbetes treatment using BCG in early stages of the diseases.",
+		"start_month": 5,
+		"start_year": 2021,
+		"end_month": 9,
 		"end_year": 2021,
 		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "A More Numerically Accurate Algorithm For Matrix Exponent",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "we propose a novel highly accurate numerical algorithm for the matrix exponent (ME). The algorithm is based on approximating Putzler's algorithm by analytically solving the ODE based coefficients and approximating them.",
+		"start_month": 2,
+		"start_year": 2021,
+		"end_month": 5,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Improved Geometric Configuration for the Bladder Cancer BCG-based Immunotherapy Treatment Model",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "We present an extension to the model proposed by Lazebnik et al. (2020) by improving the approximation of the bladder’s geometry from sphere-ring to ellipsoid-ring. ",
+		"start_month": 3,
+		"start_year": 2021,
+		"end_month": 5,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Novel Method to Analytically Obtain the Asymptotic Stable Equilibria States of Extended SIR-type Epidemiological Models",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Main Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Leonid Shaikhet",
+			"title": "Ph.D.",
+			"role": "Mathematical Advisor",
+			"websiteLink": "https://www.math.cmu.edu/~shaikhet/leonid/",
+			"googleLink": "https://scholar.google.co.il/citations?user=DhQtwDoAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "We present a new analytical method to find the asymptotic stable equilibria states based on the Markov chain technique. We reveal this method on the SIR-type epidemiological model that we developed for viral diseases with long-term immunity memory pandemic.",
+		"start_month": 3,
+		"start_year": 2021,
+		"end_month": 5,
+		"end_year": 2021,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "A Distinction of Three Online Learning Pedagogic Paradigms",
+		"participants": [
+		{
+			"name": "Sarit Natan",
+			"title": "Ph.D.",
+			"role": "Lead Researcher",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Elisa Lerner",
+			"title": "Ms.",
+			"role": "Researcher",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "We studied three online pedagogic paradigm (Synchronous, Asynchronous, and Asynchronous with an audience) and their influence on the students learning process and achievements during an academic mathematics course that was conducted online.",
+		"start_month": 4,
+		"start_year": 2019,
+		"end_month": 1,
+		"end_year": 2021,
+		"team_members": 3,
 		"relevant_resources": [
 		]
 	},
@@ -248,7 +441,7 @@
 		{
 			"name": "Svetlana Bunimovich-Mendrazitsky",
 			"title": "Ph.D.",
-			"role": "Mathematical Advisor",
+			"role": "Advisor",
 			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
 			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
 			"linkedinLink": ""
@@ -265,7 +458,7 @@
 		"description": "A spatio-temporal mathematical model based on the SIR model and graph-based spatial dynamics solved using distrebuted system methods, allowing to investigate several non-pharmaceutical intervention (NPI) policies to control the epidemic.",
 		"start_month": 9,
 		"start_year": 2020,
-		"end_month": 1,
+		"end_month": 2,
 		"end_year": 2021,
 		"team_members": 3,
 		"relevant_resources": [
@@ -277,7 +470,7 @@
 		{
 			"name": "Svetlana Bunimovich-Mendrazitsky",
 			"title": "Ph.D.",
-			"role": "Mathematical Advisor",
+			"role": "Advisor",
 			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
 			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
 			"linkedinLink": ""
@@ -295,6 +488,114 @@
 		"start_month": 8,
 		"start_year": 2020,
 		"end_month": 1,
+		"end_year": 2021,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Spatio-Temporal Influence of Non-Pharmaceutical Interventions Policies on Pandemic Dynamics and the Economy: The Case of COVID-19",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		}
+		],
+		"description": "We have developed an extended mathematical graph-based spatial-temporal SIR model, allowing a multidimensional analysis of the impact of non-pharmaceutical interventions on the pandemic spread, while assessing the economic losses caused by it.",
+		"start_month": 6,
+		"start_year": 2020,
+		"end_month": 11,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "PDE Based Geometry Model for BCG Immunotherapy of Bladder Cancer",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Niva Aaroni",
+			"title": "Ms.",
+			"role": "Researcher",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}
+		],
+		"description": "We present a model describing a BCG immunotherapy dynamic taking into consideration an approximation of the bladder’s geometry using PDE.",
+		"start_month": 6,
+		"start_year": 2020,
+		"end_month": 11,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Mathematical Model For Optimal International Tourism During A Pandemic",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Labib Shami",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
+			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
+			"linkedinLink": ""
+		}
+		],
+		"description": "A epidemiological-economic simulation, allowing to investigate the influance of non-pharmaceutical intervention policies on international tourism during a pandemic.",
+		"start_month": 5,
+		"start_year": 2021,
+		"end_month": 8,
+		"end_year": 2021,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Pharmaceutical and Non-pharmaceutical Intervention Policies of a Multi-Sectoral Economic-Epidemiological Model",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Labib Shami",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
+			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
+			"linkedinLink": ""
+		}
+		],
+		"description": "A epidemiological-economic simulation, allowing to investigate the influance of non-pharmaceutical intervention policies on multi-sectoral economy in a local and international scale.",
+		"start_month": 5,
+		"start_year": 2021,
+		"end_month": 11,
 		"end_year": 2021,
 		"team_members": 3,
 		"relevant_resources": [

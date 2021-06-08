@@ -3,38 +3,65 @@
 </h1>
 <hr class="publications-hr">
 <p>
-As a researcher, it is crucial for my job to quickly code up an idea to see if it works or not. Python is an excellent tool enabling just that. It allows for focusing on the idea itself and not be bothered with boilerplate code and other tedious things. 
+As researchers, it is crucial for the job to quickly code up an idea to see if it works or not. 
+While there are many ways to do so, Python is considered in the last few years the <i>go-to</i> tool enabling just that. 
+It allows for focusing on the idea itself and not spending time on the technicalities of software development like other programming languages require. 
 </p>
 <p>
-In these papers, the authors use <a href="https://www.sciencedirect.com/science/article/pii/B9780128028063000075" title="unsupervised DL summery">unsupervised deep learning</a> in order to find the solution for a given 2-dimensional spatial and time-dimension PDE problem. The solution of this process is mathematically defined by a mapping function from the spatial space (e.g. (x1,y1) points) to their corresponding location (x2,y2) given some point in time (t). From a technical perspective, avoiding as much mathematics as possible, we would focus on the main ideas proposed in this work. 
-</p>
-<h4>Arcitecture</h4>
-<p>
-The arcitecture of the nural network is quite simple relative to the state-of-the-art arcitectures in <a href="https://towardsdatascience.com/review-resnext-1st-runner-up-of-ilsvrc-2016-image-classification-15d7f17b42ac" title="CV DL models size compare">computer vision</a>, <a href="https://venturebeat.com/2020/05/29/openai-debuts-gigantic-gpt-3-language-model-with-175-billion-parameters/" title="gdp 3 size">NLP</a>, etc. It consists of a few <b>fully connected</b> layers with <b>tanh</b> activation and <b>linear sum</b> in the last layer.  A schematical view of the arcitecture are shown below.
-</p>
-<div style="text-align: center;">
-<img src="/img/blog/dl_pde_architecture.png" style="text-align: center; max-width: 600px; max-height: 300px; " alt="Network architecture: the point (x, y) in R^2 serves as an input and U as the out"/>
-</div>
-<h4>Training</h4>
-<p>
-In order to train the DL model to satisfy the PDE with the boundary conditions, the authors defined a new cost function to minimize. The cost function uses two types of distances to handle the complexity of well fit the inner space of the domain and the boundary of the domain. In the first term, the authors used <a href="https://en.wikipedia.org/wiki/Lp_space" title="Lp space">L2</a> (euclidean distance) with the L_{inf}. The second term is important since the L2 term only forces the equation up to a set of zero measures, while the L_{inf} term takes care of possible outliers. In addition to these, another term is used to minimize the error associated with the boundary condition and as a result, imposes boundary conditions in the model.
+That said, <a href="https://www.python.org/">Python</a> is well known for being a relatively slow language in general and especially compared to compiled languages like C or C++ [1].
+So, after one tested an idea by developing a Python prototype and now wants to turn it into a fast and performant module? 
+Most of the time, it would require manually converting the code from Python into another language such as Java, C#, C++, etc.
 </p>
 <p>
-This cost function holds a few promises. First, the solutions are smooth analytic functions that are extremely useable in later analysis. Second, the training procedure is mesh-free which means it is easy to adapt for multiple numerical methods such as finite distances, finite elements, finite volume, and others.  
+In the middle of 2021, where so much wonderful Python code has been developed - would it be great if Python just is fast by itself? 
+Just imigine all the time spent on implementing everything twice - we could use this time for so much more meaningful stuff.
+</p>
+<h4>Meet PyPy</h4>
+<p>
+<a href="https://www.pypy.org/">PyPy</a> is a fast, compliant alternative implementation of Python. 
+PyPy is a replacement for the famous <a href="https://cython.org/">CPython</a> compiler. 
+It is built using the <a href="https://rpython.readthedocs.io/en/latest/">RPython language</a> that was co-developed with it. 
 </p>
 <p>
-This method considered unsupervised learning as the results are untagged, nevertheless is obtained by first calculating the PDE's results either numerically or analytically.
+The reason PyPy is so fast is thanks to a mix of compiler and interpreter logic called the <b>just-in-time (JIT) compilation [2]</b>.  
+What is happening is that PyPy starts like an interpreter running the Python code directly from the source files (so far, equal to Python).
+Nevertheless, instead of running the code line by line, it compiles parts of the code to machine code just before it executes them.
+In a sense, JIT compilation is a combination between interpretation and the classical <a href="https://en.wikipedia.org/wiki/Ahead-of-time_compilation">ahead-of-time compilation</a>. 
+As a result, JIT compilation enjoys both the performance boost of ahead-of-time compilation and the flexibility of interpreted languages.
 </p>
-<h4>Summary</h4>
+
+<h4>Does PyPy holds to the promise?</h4>
 <p>
-In the papers, the authors show usage of this method in both forward and inverse problem settings, presenting its robustness and obtain promising results. 
+To illustrate how much of a speed up PyPy can provide, we perform a small-size experiment. 
+We ran both the standard Python interpreter (Spesificly, Python3.7) and PyPy compiler-interpreter on the following code:
 </p>
 <p>
-A very old idea in mathematics is the approximation of complex functions using simple functions. One can mention famous names as Taylor and Fourier. Another example comes from linear algebra with the idea of eigenvalues and the list is going on. The authors take advantage of this idea as deep networks by their nature use compositions of simple functions such as matrix multiplication and non-linear activations like sigmoid or tanh. This structure enables the approximation of an arbitrary function. Specifically, deep networks can use a relatively large number of degrees of freedom which in turn enables the expressibility of complex functions (such as PDEs). 
+<pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python">
+import math
+
+run_size = math.pow(10, 9)
+sum([i for i in range(run_size)])
+</code>
+</pre>
 </p>
 <p>
-On a personal note, I hope to see more paper combining state-of-the-art methods from computer science and mathematics combined to provide new ways to solve classical questions in both areas and as so operating as a bridge in these similar but yet so different areas. Both papers presented in this post require a deep understanding of both DL and PDEs and may be hard for audience not familiar with these subjects. Nevertheless, further reading is very recommended.  
+While the code is not a meaningful one (just sum all numbers between 0 and 1,000,000,000) or optimal (as we generate a large list and only then calculating its sum) it is a good candidate for our test as it well represents casual, not very optimal, numerical-related code. Although not a scientific evaluation, this example well shows the amazing performance of PyPy as the standard Python interpreter needs around 80 seconds, 
+the PyPy run is fully executed in just 1.89 seconds. This is more than <b>40 times improvment</b>! Furthermore, when comparing this result to the corresponding C++ code that finishes after 1.72 seconds, it is easy to see that PyPy gives a fight to the master of speed.
 </p>
 <p>
-<small>* All images in this blog post have been taken from the papers themself </small>
+It worth mentioning that PyPy works better in the cases that a large portion of the code is in Python and not using libraries that are implemented in a non-python language. 
+</p>
+
 <p>
+To summary things up, if you have a python project that needs a speed boost, just download the PyPy tool from <a href="https://www.pypy.org/">pypy.org</a> and install it on your device.
+On the website, you will be able to find plenty of tips and tricks on fine-tuning your python program to further increase the performance but even without any specific modifications, PyPy will do its magic.
+</p>
+
+<h4>Refferances</h4>
+<p>
+	<ul style="margin-left: 20px; line-height: 1.5 !important; margin-bottom: 1.7rem; font-size: 1.1rem !important; font-weight: 400; color: #212529;">
+		<li><a href="https://doi.org/10.1186/1471-2105-9-82">[1] Fourment, M., Gillings, M.R. A comparison of common programming languages used in bioinformatics. BMC Bioinformatics 9, 82 (2008). </a></li>
+		<li><a href="https://doi.org/10.1007/978-3-642-23099-8_14">[2] Wilbers I.M., Mardal KA., Alnæs M.S. (2012) Instant: just-in-time compilation of C/C++ in Python. In: Logg A., Mardal KA., Wells G. (eds) Automated Solution of Differential Equations by the Finite Element Method. Lecture Notes in Computational Science and Engineering, vol 84. Springer, Berlin, Heidelberg. </a></li>
+	</ul>
+</p>
