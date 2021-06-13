@@ -170,6 +170,15 @@
 		 "month": 6,
 		 "day": 8,
 		 "order": 19
+      },
+      {
+         "title":"AI Agent For The OCTI Board Game",
+         "description":"We developed a digital version of the OCTI board with three artificial intelligence (AI) players. The first two AI players are based on deterministic algorithms (greedy and MinMax) while the third is based on reinforcement learning (RL) algorithm. We train the RL player based on historical games (offline) and then personalize it using online learning against specific player. An experiment conducted with five levels of human players show that the RL is able to win 44% of the time (greedy and MinMax win 14% and 32%, respectively) making it a valid AI player.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "20"}],
+		 "year": 2021,
+		 "month": 6,
+		 "day": 14,
+		 "order": 20
       }
 	]
 }
