@@ -2,6 +2,11 @@
 The graphs every AI developer must know and their python implementation
 </h1>
 <hr class="publications-hr">
+
+<p class="no-show-desktop">
+<b>Technical note: we apologize but the code segments of this blog post are avalible on desktop only.</b>
+</p>
+
 <p>
 The <a href="https://www.sciencedirect.com/science/article/pii/S0016328717300046">Artificial Intelligence (AI) revolution</a> is around the corner where in 2018 alone there are around <a href="https://www.statista.com/statistics/941054/number-of-ai-companies-worldwide-by-country/#:~:text=The%20statistic%20shows%20the%20number,the%20United%20States%20was%202%2C028.">4000 middle-large companies</a> focusing on AI and who knows how many more startups and academic projects.
 One of the main steps in a successful ML \ AI project is well communicating your results to others. It is well known that people prefer graphs and visuals rather than text and equations. Combining these two factors, you need a few graphs for your project. This raises the question - "what graph shall I use?". Here is a few advance graph that put your project in the best light. 
@@ -9,8 +14,8 @@ One of the main steps in a successful ML \ AI project is well communicating your
 
 <p>
 First, we need to import a few libraries so it will be easy to work. One can avoid the <b>numpy</b> and <b>pandas</b> libraries but this will require to re-write a lot of ready, easy to use code so you probably do not need to do so without a really good reason.
-<pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
-<code class="language-python">
+<pre class="language-python no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
 import numpy as np  # for numerical manipulations
 import pandas as pd # for data manipulations
 import matplotlib as mpl # for graphs generations... the main library we discuss today
@@ -33,8 +38,8 @@ This graph gives a two in one solution for parameter density. From the empirical
 On the other hand, from the numerical, easy to work with a perspective you have the density curve fit. This is not too complex or advance graph and this is exactly why it opens our list.
 </p>
 <p>
-<pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
-<code class="language-python">
+<pre class="language-python no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
 # Import Data
 df = pd.read_csv("your-csv-file-goes-here")
 
@@ -60,7 +65,7 @@ plt.close()
 </pre>
 </p>
 <p style="text-align: center;">
-<img width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/23_DensityPlot_With_Histogram_Matplotlib-min-1024x796.png?ezimgfmt=rs:722x561/rscb3/ng:webp/ngcb3" alt="Density Curves with Histogram sample">
+<img style="max-width: 450px; width: 100%;" width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/23_DensityPlot_With_Histogram_Matplotlib-min-1024x796.png?ezimgfmt=rs:722x561/rscb3/ng:webp/ngcb3" alt="Density Curves with Histogram sample">
 </p>
 
 <h4>Time Series Decomposition Plot</h4>
@@ -69,8 +74,8 @@ The time series decomposition plot shows the breakdown of the time series into t
 The pleasure of this plot is the small amount of code needed to obtain a decent decomposition. 
 </p>
 <p>
-<pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
-<code class="language-python">
+<pre class="language-python no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
 from statsmodels.tsa.seasonal import seasonal_decompose
 from dateutil.parser import parse
 
@@ -95,7 +100,7 @@ plt.close()
 </pre>
 </p>
 <p style="text-align: center;">
-<img width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/39_TimeSeries_Decomposition_Statmodels_Matplotlib-min.png?ezimgfmt=rs:722x669/rscb3/ng:webp/ngcb3" alt="Time Series Decomposition Plot Sample">
+<img style="max-width: 450px; width: 100%;" width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/39_TimeSeries_Decomposition_Statmodels_Matplotlib-min.png?ezimgfmt=rs:722x669/rscb3/ng:webp/ngcb3" alt="Time Series Decomposition Plot Sample">
 </p>
 
 <h3>Time series</h3>
@@ -110,8 +115,8 @@ The slope chart plot is useful to see how multiple processes change over two or 
 This plot is best used for a relatively small amount of processes (up to 10) with up to 4 or 5 columns as too much information will shadow each other and make the plot unreadable.  
 </p>
 <p>
-<pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
-<code class="language-python">
+<pre class="language-python no-show-mobile no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
 import matplotlib.lines as mlines
 
 # Import Data # 
@@ -176,7 +181,7 @@ plt.close()
 </pre>
 </p>
 <p style="text-align: center;">
-<img width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/18_Slopechart_Matplotlib-min-1024x880.png?ezimgfmt=rs:722x620/rscb3/ng:webp/ngcb3" alt="Slope Chart Sample">
+<img style="max-width: 450px; width: 100%;" width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/18_Slopechart_Matplotlib-min-1024x880.png?ezimgfmt=rs:722x620/rscb3/ng:webp/ngcb3" alt="Slope Chart Sample">
 </p>
 
 <h4>Autocorrelation Plots</h4>
@@ -188,8 +193,8 @@ Those lags that lie above the blue line are the significant lags.
 This plot is really useful in regression tasks over time to see how different lags influence the model.
 </p>
 <p>
-<pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
-<code class="language-python">
+<pre class="language-python no-show-mobile no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
 # Import Data
@@ -213,7 +218,7 @@ plt.close()
 </pre>
 </p>
 <p style="text-align: center;">
-<img width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/37_ACF_PACF_Plot_Matplotlib_Statmodels-min-1024x384.png?ezimgfmt=rs:722x271/rscb3/ng:webp/ngcb3" alt="Autocorrelation Plot Sample">
+<img style="max-width: 450px; width: 100%;" width="429" height="340" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/37_ACF_PACF_Plot_Matplotlib_Statmodels-min-1024x384.png?ezimgfmt=rs:722x271/rscb3/ng:webp/ngcb3" alt="Autocorrelation Plot Sample">
 </p>
 
 <h3>Model performance with noisy data</h3>
@@ -231,8 +236,8 @@ Then, you blow the viewers' minds with your confidence interval, clearly showing
 This graph is a must in every regression presentation - either in the baseline slide or in the results section. 
 </p>
 <p>
-<pre class="language-python" data-src="/blog/blog-post-15.html" data-download-link>
-<code class="language-python">
+<pre class="language-python no-show-mobile no-show-mobile" data-src="/blog/blog-post-15.html" data-download-link>
+<code class="language-python no-show-mobile">
 # Import Data
 df = pd.read_csv("your-csv-here")
 
@@ -257,7 +262,7 @@ plt.close()
 </pre>
 </p>
 <p style="text-align: center;">
-<img width="600" height="440" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/3_1_Scatterplot_with_linesofbestfit_Seaborn-min-1024x612.png?ezimgfmt=rs:722x431/rscb3/ng:webp/ngcb3" alt="Scatter plot with linear regression line of best fit Sample">
+<img style="max-width: 450px; width: 100%;" width="600" height="440" src="https://www.machinelearningplus.com/wp-content/uploads/2018/11/3_1_Scatterplot_with_linesofbestfit_Seaborn-min-1024x612.png?ezimgfmt=rs:722x431/rscb3/ng:webp/ngcb3" alt="Scatter plot with linear regression line of best fit Sample">
 </p>
 
 <p>
