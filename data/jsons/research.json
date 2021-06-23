@@ -1,9 +1,9 @@
 {
-	"work_with_me_opening": "I am always looking for great opportunities in academia and the industry. Specifically, I am interested in mathematical models for biology, clinical processes, and epidemiology in addition to AI algorithms (if there are machine learning-based so hopefully explainable - if they are not, we will try to make them more explainable) and computer simulations. <br><br> The following topics are projects that I find interesting to do. That said, this list is incomplete and more than open to other topics you may have: <br><br> First, any extension of the epidemiological dynamics (e.g., the SIR/SIS models) and the integration with other fields such as economy, tourism, mental healthcare, etc.<br><br> Second, to find the equlibria, optimum, zero points, asymptotic state for ODE and PDE based models. <br><br> Third, Property-Value extraction from academic papers in English. <br><br> Forth, pharmacokinetics and pharmacodynamics development and in silico experiments of in vivo data (in particular, targeted drug delivery drugs).",
+	"work_with_me_opening": "I am always looking for great opportunities in academia and the industry. Specifically, I am interested in mathematical models for biology, clinical processes, and epidemiology in addition to AI algorithms (if there are machine learning-based so hopefully explainable - if they are not, we will try to make them more explainable) and computer simulations. <br><br> The following topics are projects that I find interesting to do. That said, this list is incomplete and more than open to other topics you may have: <br><br> First, any extension of the epidemiological dynamics (e.g., the SIR/SIS models) and the integration with other fields such as economy, tourism, mental healthcare, etc.<br><br> Second, to find the equlibria, optimum, zero points, asymptotic state for ODE and PDE based models. <br><br> Third, Property-Value extraction from academic papers in English. <br><br> Forth, pharmacokinetics and pharmacodynamics development and in silico experiments of in vivo data (in particular, targeted drug delivery drugs).  <br><br> Fifth, machine learning and statistical algorithms for clinical data.",
 	"open_positions": [
 	],
 	"projects": [{
-		"name": "Extended Pharmacokinetics-Pharmadynamics Mathematical Model For Nanomedicine Targeted Drug Delivery",
+		"name": "Generic Purpose Pharmacokinetics-Pharmacodynamics Mathematical Model For Nanomedicine Targeted Drug Delivery: Mouse Model",
 		"participants": [{
 			"name": "Gal A. Kaminka",
 			"title": "Ph.D.",
@@ -23,7 +23,7 @@
 		"description": "An improved simulation of medical nanoparticles-based targeted drug delivery using more accurate flow dynamics and Pharmacokinetics in different organs in a mouse.",
 		"start_month": 11,
 		"start_year": 2020,
-		"end_month": 8,
+		"end_month": 9,
 		"end_year": 2021,
 		"team_members": 3,
 		"relevant_resources": [
@@ -58,19 +58,12 @@
 		]
 	},
 	{
-		"name": "Indoor Spatio-Temporal Epidemiological Model",
-		"participants": [{
-			"name": "Gal A. Kaminka",
-			"title": "Ph.D.",
-			"role": "Advisor",
-			"websiteLink": "https://u.cs.biu.ac.il/~galk/",
-			"googleLink": "https://scholar.google.co.il/citations?user=AyzlRJwAAAAJ&hl=en",
-			"linkedinLink": ""
-		},
+		"name": "Comparison Of Pandemic Intervention Policies In Different Building Types Using Spatio-Temporal Model",
+		"participants": [
 		{
 			"name": "Ariel Alexi",
 			"title": "Ms.",
-			"role": "Main researcher",
+			"role": "researcher",
 			"websiteLink": "",
 			"googleLink": "",
 			"linkedinLink": "https://www.linkedin.com/in/ariel-alexi/"
@@ -78,7 +71,7 @@
 		"description": "We are studing the pandemic spread indoor for several types of buildings based on extended SIR model",
 		"start_month": 4,
 		"start_year": 2021,
-		"end_month": 9,
+		"end_month": 7,
 		"end_year": 2021,
 		"team_members": 3,
 		"relevant_resources": [
@@ -494,27 +487,6 @@
 		]
 	},
 	{
-		"name": "Spatio-Temporal Influence of Non-Pharmaceutical Interventions Policies on Pandemic Dynamics and the Economy: The Case of COVID-19",
-		"participants": [
-		{
-			"name": "Svetlana Bunimovich-Mendrazitsky",
-			"title": "Ph.D.",
-			"role": "Advisor",
-			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
-			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
-			"linkedinLink": ""
-		}
-		],
-		"description": "We have developed an extended mathematical graph-based spatial-temporal SIR model, allowing a multidimensional analysis of the impact of non-pharmaceutical interventions on the pandemic spread, while assessing the economic losses caused by it.",
-		"start_month": 6,
-		"start_year": 2020,
-		"end_month": 11,
-		"end_year": 2021,
-		"team_members": 2,
-		"relevant_resources": [
-		]
-	},
-	{
 		"name": "PDE Based Geometry Model for BCG Immunotherapy of Bladder Cancer",
 		"participants": [
 		{
@@ -538,7 +510,7 @@
 		"start_month": 6,
 		"start_year": 2020,
 		"end_month": 11,
-		"end_year": 2021,
+		"end_year": 2020,
 		"team_members": 2,
 		"relevant_resources": [
 		]

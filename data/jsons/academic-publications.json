@@ -95,6 +95,18 @@
          "type":"Paper",
          "publisher":"Advanced Theory and Simulations",
          "publicationStatus":"Published"
+      },
+      {
+         "name":"Novel Method to Analytically Obtain the Asymptotic Stable Equilibria States of Extended SIR-Type Epidemiological Models",
+         "description":"We present a new analytical method to find the asymptotic stable equilibria states based on the Markov chain technique. We reveal this method on the Susceptible-Infectious-Recovered (SIR)-type epidemiological model that we developed for viral diseases with long-term immunity memory. This is a large-scale model containing 15 nonlinear ordinary differential equations (ODEs), and classical methods have failed to analytically obtain its equilibria. The proposed method is used to conduct a comprehensive analysis by a stochastic representation of the dynamics of the model, followed by finding all asymptotic stable equilibrium states of the model for any values of parameters and initial conditions thanks to the symmetry of the population size over time.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/symmetry_sir_paper.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Shaikhet, L., Novel Method to Analytically Obtain the Asymptotic Stable Equilibria States of Extended SIR-Type Epidemiological Models. Symmetry. 2021."}],
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky, and Leonid Shaikhet",
+         "year": 2021,
+         "topic":"Biomathematics",
+         "type":"paper",
+         "publisher":"Symmetry",
+         "publicationStatus":"Published"
       }
 	  ]
 }
