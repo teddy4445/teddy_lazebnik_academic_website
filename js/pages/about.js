@@ -300,9 +300,9 @@ class About extends PageRender
 	buildLocations(addresses)
 	{
 	  //adding headlines
-	  document.getElementById("organization").innerHTML = Icons.buildings() + "<div class='after-icon-cell'> Organization Name </div>";
-	  document.getElementById("room").innerHTML = Icons.location() + "<div class='after-icon-cell'> Room Location  </div>";
-	  document.getElementById("hours").innerHTML = Icons.clock() + "<div class='after-icon-cell'> Office Hours  </div>";
+	  document.getElementById("organization").innerHTML = Icons.buildings() + "<div class='after-icon-cell'> Organization </div>";
+	  document.getElementById("room").innerHTML = Icons.location() + "<div class='after-icon-cell'> Office  </div>";
+	  document.getElementById("hours").innerHTML = Icons.clock() + "<div class='after-icon-cell'> Open door hours  </div>";
 
 	  var info_table = document.getElementById("info-table");
 
