@@ -7,27 +7,27 @@
    ],
    "featuredPublications":[
       {
+         "name":"Pandemic Management by a Spatio-temporal Mathematical Model",
+         "description":"Many researchers have tried to predict the impact of the COVID-19 outbreak on morbidity, in order to help policy-makers find optimal isolation policies. However, despite the development and use of many models and sophisticated tools, these forecasting attempts have largely failed. We present a model that considers the severity of the disease and the heterogeneity of contacts between the population in complex space-time dynamics. Using mathematical and computational methods, the applied tool was developed to analyze and manage the COVID-19 pandemic (from an epidemiological point of view), with a particular focus on population heterogeneity in terms of age, susceptibility, and symptom severity. We show improved strategies to prevent an epidemic outbreak. We evaluated the model in three countries, obtaining an average mean square error of 0.067 over a full month of the basic reproduction number (R0). The goal of this study is to create a theoretical framework for crisis management that integrates accumulated epidemiological considerations. An applied result is an open-source program for predicting the outcome of an isolation strategy for future researchers and developers who can use and extend our model.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/Pandemic_Management.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Shami, L., Bunimovich-Mendrazitsky, S., Pandemic Management by a Spatio-temporal Mathematical Model. International Journal of Nonlinear Sciences and Numerical Simulation. 2021."}],
+		 "authors": "Teddy Lazebnik, Labib Shami, Svetlana Bunimovich-Mendrazitsky",
+         "year": 2021,
+         "topic":"Epidemiology",
+         "type":"paper",
+         "publisher":"IJNSNS",
+         "publicationStatus":"Published"
+      },
+      {
          "name":"Novel Method to Analytically Obtain the Asymptotic Stable Equilibria States of Extended SIR-Type Epidemiological Models",
          "description":"We present a new analytical method to find the asymptotic stable equilibria states based on the Markov chain technique. We reveal this method on the Susceptible-Infectious-Recovered (SIR)-type epidemiological model that we developed for viral diseases with long-term immunity memory. This is a large-scale model containing 15 nonlinear ordinary differential equations (ODEs), and classical methods have failed to analytically obtain its equilibria. The proposed method is used to conduct a comprehensive analysis by a stochastic representation of the dynamics of the model, followed by finding all asymptotic stable equilibrium states of the model for any values of parameters and initial conditions thanks to the symmetry of the population size over time.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/symmetry_sir_paper.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Shaikhet, L., Novel Method to Analytically Obtain the Asymptotic Stable Equilibria States of Extended SIR-Type Epidemiological Models. Symmetry. 2021."}],
 		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky, and Leonid Shaikhet",
          "year": 2021,
-         "topic":"Biomathematics",
-         "type":"paper",
-         "publisher":"Symmetry",
-         "publicationStatus":"Published"
-      },
-      {
-         "name":"Spatio-Temporal influence of Non-Pharmaceutical interventions policies on pandemic dynamics and the economy: the case of COVID-19",
-         "description":"We have developed an extended mathematical graph-based spatial-temporal SIR model, allowing a multidimensional analysis of the impact of non-pharmaceutical interventions on the pandemic spread, while assessing the economic losses caused by it. By incorporating into the model dynamics that are a consequence of the interrelationship between the pandemic and the economic crisis, such as job separation not as a result of workers’ morbidity, analysis were enriched. Controlling the spread of the pandemic and preventing outbreaks have been investigated using two NPIs: the duration of working and school days and lockdown to varying degrees among the adult and children populations. Based on the proposed model and data from the Israeli economy, allowing 7.5 working hours alongside 4.5 school hours would maximise output and prevent an outbreak, while minimising the death toll (0.48% of the population). Alternatively, an 89% lockdown among children and a 63% lockdown among adults will minimise the death toll (0.21%) while maximising output and preventing outbreaks.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/covid_second_paper.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Shami, L., Bunimovich-Mendrazitsky, S., Spatio-Temporal influence of Non-Pharmaceutical interventions policies on pandemic dynamics and the economy: the case of COVID-19. Economic Research. 2021."}],
-		 "authors": "Teddy Lazebnik, Labib Shami, and Svetlana Bunimovich-Mendrazitsky",
-         "year": 2021,
          "topic":"Epidemiology",
          "type":"paper",
-         "publisher":"Economic Research-Ekonomska Istraživanja",
+         "publisher":"Symmetry",
          "publicationStatus":"Published"
       },
       {

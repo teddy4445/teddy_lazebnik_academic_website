@@ -1,6 +1,18 @@
 {
    "publications":[
       {
+         "name":"Pandemic Management by a Spatio-temporal Mathematical Model",
+         "description":"Many researchers have tried to predict the impact of the COVID-19 outbreak on morbidity, in order to help policy-makers find optimal isolation policies. However, despite the development and use of many models and sophisticated tools, these forecasting attempts have largely failed. We present a model that considers the severity of the disease and the heterogeneity of contacts between the population in complex space-time dynamics. Using mathematical and computational methods, the applied tool was developed to analyze and manage the COVID-19 pandemic (from an epidemiological point of view), with a particular focus on population heterogeneity in terms of age, susceptibility, and symptom severity. We show improved strategies to prevent an epidemic outbreak. We evaluated the model in three countries, obtaining an average mean square error of 0.067 over a full month of the basic reproduction number (R0). The goal of this study is to create a theoretical framework for crisis management that integrates accumulated epidemiological considerations. An applied result is an open-source program for predicting the outcome of an isolation strategy for future researchers and developers who can use and extend our model.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/Pandemic_Management.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Shami, L., Bunimovich-Mendrazitsky, S., Pandemic Management by a Spatio-temporal Mathematical Model. International Journal of Nonlinear Sciences and Numerical Simulation. 2021."}],
+		 "authors": "Teddy Lazebnik, Labib Shami, Svetlana Bunimovich-Mendrazitsky",
+         "year": 2021,
+         "topic":"Epidemiology",
+         "type":"paper",
+         "publisher":"IJNSNS",
+         "publicationStatus":"Published"
+      },
+      {
          "name":"PDE based geometry model for BCG immunotherapy of bladder cancer",
          "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/pde_biosystem_paper.pdf"},
