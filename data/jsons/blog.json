@@ -188,6 +188,15 @@
 		 "month": 7,
 		 "day": 16,
 		 "order": 21
+      },
+      {
+         "title":"Black Market Size Estimation Methods Are Stacked In The 90s",
+         "description":"The accurate estimation of the black market is an urgent issue for governments as it has a direct influence on the taxation policy, crime, and other activities managed and controlled by the government. However, the current approach for estimating the size of the black market is based on an idea that not holds anymore due to technological shifts. We propose a new approach to perform this task...",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "22"}],
+		 "year": 2021,
+		 "month": 8,
+		 "day": 1,
+		 "order": 22
       }
 	]
 }
