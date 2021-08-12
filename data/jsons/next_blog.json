@@ -1,0 +1,169 @@
+{
+   "21":[
+      {
+         "title":"AI Agent For The OCTI Board Game",
+		 "date": "14/6/2021",
+		 "reading_time": "18",
+		 "link_address": "20",
+         "description":"We developed a digital version of the OCTI board with three artificial intelligence (AI) players. The first two AI players are based on deterministic algorithms (greedy and MinMax) while the third is based on reinforcement learning (RL) algorithm. We train the RL player based on historical games (offline) and then personalize it using online learning against specific player. An experiment conducted with five levels of human players show that the RL is able to win 44% of the time (greedy and MinMax win 14% and 32%, respectively) making it a valid AI player."
+      },
+      {
+         "title":"A Step Towards Explainable AI - The Explainable Boosting Machine",
+		 "date": "8/6/2021",
+		 "reading_time": "2",
+		 "link_address": "19",
+         "description":"Machine learning models are concering new hilltops everyday now and sprading into more fields of life such as medicine, miletary, life-supporting systems and other which require individuals to put their faite in these models. How one can do so without understanding the model? Explainable Boosting Machine (EBM) is one step torwards a more interpretabe machine learning models..."
+      },
+      {
+         "title":"Fast Start Your ML Project Using Auto-ML Libraries in Python",
+		 "date": "13/5/2021",
+		 "reading_time": "3",
+		 "link_address": "18",
+         "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline..."
+      },
+      {
+         "title":"The graphs every AI developer must know and their python implementation",
+		 "date": "15/3/2021",
+		 "reading_time": "7",
+		 "link_address": "15",
+         "description":"If you an AI / Machine Learning / Data Science and doing a project, you probabliy should print one or more of these graphs to really understand what is going on..."
+      }
+	],
+   "20":[
+      {
+         "title":"Meta Reinforcement Learning - What Are You?",
+		 "date": "16/7/2021",
+		 "reading_time": "3",
+		 "link_address": "21",
+         "description":"Meta Reinforcement Learning sounds cool, isn't it? Many ignore this subject due to the complicated mathematics involved in any paper or blog post that talks about this subject. But, no more! Meta reinforcement learning in 3 minutes or less."
+      },
+      {
+         "title":"A Step Towards Explainable AI - The Explainable Boosting Machine",
+		 "date": "8/6/2021",
+		 "reading_time": "2",
+		 "link_address": "19",
+         "description":"Machine learning models are concering new hilltops everyday now and sprading into more fields of life such as medicine, miletary, life-supporting systems and other which require individuals to put their faite in these models. How one can do so without understanding the model? Explainable Boosting Machine (EBM) is one step torwards a more interpretabe machine learning models..."
+      }
+	],
+   "19":[
+      {
+         "title":"Fast Start Your ML Project Using Auto-ML Libraries in Python",
+		 "date": "13/5/2021",
+		 "reading_time": "3",
+		 "link_address": "18",
+         "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline..."
+      },
+      {
+         "title":"The graphs every AI developer must know and their python implementation",
+		 "date": "15/3/2021",
+		 "reading_time": "7",
+		 "link_address": "15",
+         "description":"If you an AI / Machine Learning / Data Science and doing a project, you probabliy should print one or more of these graphs to really understand what is going on..."
+      }
+	],
+   "18":[
+      {
+         "title":"[Technical Post] Running Python as fast as C code",
+		 "date": "8/5/2021",
+		 "reading_time": "3",
+		 "link_address": "17",
+         "description":"Introduction to the just-in-time compilation PyPy compiler for Python..."
+      }
+	],
+   "17":[
+      {
+         "title":"[Technical Post] Fast Start Your ML Project Using Auto-ML Libraries in Python",
+		 "date": "13/5/2021",
+		 "reading_time": "3",
+		 "link_address": "18",
+         "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline..."
+      },
+      {
+         "title":"Why should you use dotnet core for your next AI project production?",
+		 "date": "1/5/2020",
+		 "reading_time": "3",
+		 "link_address": "7",
+         "description":"Python, maybe JavaScript are considrued as the leading ML and AI language to go. But, in production you should considr dotnet core... In this post, we explain why"
+      }
+	],
+   "16":[
+      {
+         "title":"[Technical Post] Fast Start Your ML Project Using Auto-ML Libraries in Python",
+		 "date": "13/5/2021",
+		 "reading_time": "3",
+		 "link_address": "18",
+         "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline..."
+      },
+      {
+         "title":"Why should you use dotnet core for your next AI project production?",
+		 "date": "1/5/2020",
+		 "reading_time": "3",
+		 "link_address": "7",
+         "description":"Python, maybe JavaScript are considrued as the leading ML and AI language to go. But, in production you should considr dotnet core... In this post, we explain why"
+      }
+	],
+   "13":[
+      {
+         "title":"AI Agent For The OCTI Board Game",
+		 "date": "14/6/2021",
+		 "reading_time": "18",
+		 "link_address": "20",
+         "description":"We developed a digital version of the OCTI board with three artificial intelligence (AI) players. The first two AI players are based on deterministic algorithms (greedy and MinMax) while the third is based on reinforcement learning (RL) algorithm. We train the RL player based on historical games (offline) and then personalize it using online learning against specific player. An experiment conducted with five levels of human players show that the RL is able to win 44% of the time (greedy and MinMax win 14% and 32%, respectively) making it a valid AI player."
+      },
+      {
+         "title":"A Step Towards Explainable AI - The Explainable Boosting Machine",
+		 "date": "8/6/2021",
+		 "reading_time": "2",
+		 "link_address": "19",
+         "description":"Machine learning models are concering new hilltops everyday now and sprading into more fields of life such as medicine, miletary, life-supporting systems and other which require individuals to put their faite in these models. How one can do so without understanding the model? Explainable Boosting Machine (EBM) is one step torwards a more interpretabe machine learning models..."
+      },
+      {
+         "title":"Fast Start Your ML Project Using Auto-ML Libraries in Python",
+		 "date": "13/5/2021",
+		 "reading_time": "3",
+		 "link_address": "18",
+         "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline..."
+      },
+      {
+         "title":"The graphs every AI developer must know and their python implementation",
+		 "date": "15/3/2021",
+		 "reading_time": "7",
+		 "link_address": "15",
+         "description":"If you an AI / Machine Learning / Data Science and doing a project, you probabliy should print one or more of these graphs to really understand what is going on..."
+      }
+	],
+   "12":[
+      {
+         "title":"Distributed Computing Based Drugs",
+		 "date": "1/1/2021",
+		 "reading_time": "3",
+		 "link_address": "11",
+         "description":"How a lot of small and without any computational power particles can make our drugs better?"
+      }
+	],
+   "11":[
+      {
+         "title":"Distributed Computing Based Drugs",
+		 "date": "1/2/2021",
+		 "reading_time": "4",
+		 "link_address": "12",
+         "description":"Imagine you are an world-class zoologist studying the flight of a new species of excotic birds your recently descovered..."
+      }
+	],
+   "7":[
+      {
+         "title":"[Technical Post] Running Python as fast as C code",
+		 "date": "8/5/2021",
+		 "reading_time": "3",
+		 "link_address": "17",
+         "description":"A summery of an academic paper propoing a neural network-based algorithm for solving forward and inverse problems for partial differential equations (PDE) in unsupervised fashion with mash free and for arbitrary regular domain..."
+      },
+      {
+         "title":"[Technical Post] Fast Start Your ML Project Using Auto-ML Libraries in Python",
+		 "date": "13/5/2021",
+		 "reading_time": "3",
+		 "link_address": "18",
+         "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline..."
+      }
+	]
+}

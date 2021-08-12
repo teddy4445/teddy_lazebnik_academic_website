@@ -2399,6 +2399,56 @@ margin: 0px 0px;
 
 /* blog page */
 
+
+.blog-post-title-background {
+	margin-top: -20px;
+	background-color: #EBF4FF;
+	width: 100%;
+	padding-bottom: 2rem;
+}
+
+.blog-post-title-section{
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.blog-post-title-container{
+	width: 100%;
+}
+
+.blog-post-title{
+	margin-top: 50px;
+	text-align: left;
+}
+
+.blog-post-title h1{
+	font-weight: 400 !important;
+	font-family: Playfair Display !important;
+	font-size: 48px;
+	line-height: 64px;
+	color: #1A202C;
+}
+
+.meta-blog-post-title{
+	margin-top: 1rem;
+	font-weight: 400;
+	color: #828282;	
+}
+
+.academic-papers-panel h5{
+	color: #1A202C;
+	font-size: 16px;
+	line-height: 150%;
+	font-weight: 400;
+}
+
 .blog-data{
 	
 }
@@ -2421,7 +2471,66 @@ margin: 0px 0px;
 	font-size: 1.1rem !important;
 }
 
+
+.blog-post-next-blogs-background {
+	padding-top: 2rem;
+	background-color: #EBF4FF;
+	width: 100%;
+	padding-bottom: 2rem;
+}
+
+.blog-post-next-blogs-section{
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-top: 1rem;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.next-blog-card-size{
+	width: calc(50% - 20px);
+	margin-right: 20px;
+}
+
+.next-blog-card-wrapper{
+	align-content: space-between;
+}
+
+.blog-post-next-blogs-section h3{
+	font-weight: 400;
+	letter-spacing: 0.04em;
+}
+
+.meta-blog-next-post-time-element{
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.next-post-box-title h3{
+	padding-bottom: 0px !important;
+	margin-bottom: 0px !important;
+	color: #1A202C;
+	text-decoration: none;
+	width: 100%;
+	font-weight: 600;
+}
+
 @media only screen and (max-width: 450px) {
+
+	.next-blog-card-size{
+		width: 100%;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	
+	.blog-post-title h1{
+		font-size: 32px !important;
+	}
 
 	.blog-data{
 		display: none;
@@ -2429,6 +2538,10 @@ margin: 0px 0px;
 	
 	.blog-title{
 		font-size: 16pt !important;
+	}
+
+	.blog-post-title{
+		text-align: center;
 	}
 
 	.blog-post{
@@ -2523,6 +2636,19 @@ margin: 0px 0px;
 		align-self: center;
 	}
 }
+
+@media screen and (max-width: 850px) {
+	.next-blog-card-size{
+		width: 100%;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	
+	.blog-post-title h1{
+		font-size: 40px;
+	}
+}
+
 
 .nowrap{
 	flex-wrap: nowrap !important;
