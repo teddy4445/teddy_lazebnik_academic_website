@@ -8,7 +8,7 @@
 		 "authors": "Teddy Lazebnik, Labib Shami, Svetlana Bunimovich-Mendrazitsky",
          "year": 2021,
          "topic":"Epidemiology",
-         "type":"paper",
+         "type":"Paper",
          "publisher":"IJNSNS",
          "publicationStatus":"Published"
       },
@@ -116,7 +116,7 @@
 		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky, and Leonid Shaikhet",
          "year": 2021,
          "topic":"Biomathematics",
-         "type":"paper",
+         "type":"Paper",
          "publisher":"Symmetry",
          "publicationStatus":"Published"
       }
