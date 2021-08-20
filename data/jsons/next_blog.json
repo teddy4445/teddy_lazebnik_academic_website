@@ -1,4 +1,13 @@
 {
+   "23":[
+      {
+         "title":"The math behind the Coronavirus spread",
+		 "date": "1/5/2020",
+		 "reading_time": "2",
+		 "link_address": "6",
+         "description":"Covid-19 pandemic hit the wolrd at the beginning of 2020 and lead to hundrieds of mathematical models predicting the spread of the pandemic wolrdwide. Here I offer a basic review of some of these methods."
+      }
+	],
    "21":[
       {
          "title":"AI Agent For The OCTI Board Game",
@@ -164,6 +173,15 @@
 		 "reading_time": "3",
 		 "link_address": "18",
          "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline..."
+      }
+	],
+   "6":[
+      {
+         "title":"Optimal Intervention Policies For the COVID-19 Pandemic Emergefrom Socioeconomic-Heterogeneous Dynamics",
+		 "date": "21/8/2021",
+		 "reading_time": "4",
+		 "link_address": "23",
+         "description":"The COVID-19 pandemic is a rolling crisis that required policymakers around the world to take action to manage the pandemic spread. During the period where vaccination was not available, the pandemic spread management lied in non-pharmaceutical interventions (NPIs). A large number of mathematical models have been proposed to predict the pandemic spread and analyze the influence of various NPIs on multiple scenarios, getting more accurate and sophisticated over time. In this post, we review the latest mathematical models for pandemic spread NPIs and their main limitations. Specifically, the usage of modeling a homogeneous population rather than a heterogeneous one."
       }
 	]
 }
