@@ -1,0 +1,58 @@
+<h1>
+Optimal Intervention Policies For the COVID-19 Pandemic Emergefrom Socioeconomic-Heterogeneous Dynamics
+</h1>
+<hr class="publications-hr">
+21/8/2021
+<hr class="publications-hr">
+<p>
+The COVID-19 pandemic has negatively impacted many aspects of our lives, causing massive unrest around the world with significant loss of life [1, 2].
+ In the period where vaccination was inaccessible for the masses (and even afterward), policymakers were forced to rely on non-pharmaceutical intervention (NPI) 
+ policies to control the epidemic all over the world [3]. Computer simulations and mathematical models are shown to be a powerful tool for healthcare professionals and policymakers to predict outcomes of multiple scenarios in a controlled, cheap, and quick manner using available clinical and epidemiological [4, 5].
+</p>
+<p>
+Mathematical models for epidemiology can be divided into two main groups: Susceptible-Infected-Recovered(SIR) based models [6] and non-SIR based models.
+From the second group, the original SIR is too simplistic to accurately predict the spread dynamics.
+Indeed, for the COIVD-19, Nesteruk [7] used the data from January 16 to February 9 (2020), from mainland China with the continuous SIR model, 
+using the least mean square method, which resulted in poor fitting to later officially confirmed infected cases [2].
+</p>
+<p>
+Therefore, the SIR has been extended to take into consideration multiple social and economic processes. The main extensions can be divided into the following three categories. 
+First, dividing the population into subgroups according to a biological/clinical property that is relevant for the pandemic one aims to model. 
+ For example, in the case of COVID-19, the authors of [8] divided the population into two age groups (adults and children) as clinical data indicate different age groups experience the disease differently which has a direct influence on the spread dynamics. Second, dividing infected individuals into sub-groups according to clinical and epidemiological severity. 
+ Indeed, for the COVID-19 pandemic, 7.8% of the population is estimated to be asymptomatic [9]. 
+ Third, adding spatial dynamics to the population. The classical SIR model assumes that at any point in time, every individual in the population can interact with other individuals, 
+ while this is not the case in a realistic scenario. One can add spatial dynamics to the SIR model using a continuous space resulting in a partial differential equation (PDE)
+ based model like the one proposed by Di Domenico et al. [10] that used data from March 17 to May 11 (2020) in Ile-de-France with a stochastic extension of the SEIR (E-exposed) model. 
+ The authors investigated the influence of average social distancing on the duration of the pandemic and the total number of infected individuals. 
+ An additional option is to model the space using a graph-based model where the nodes are either locations in which the population is distributed between and individuals in the same node can interact [5] or each individual is a node by itself and the edges are the possible interactions in the population [11].
+</p>
+<p>
+These extensions on the one hand improve the accuracy of the models in predicting the spread and impact of different NPIs, but on the other hand,
+ making them more complex and data-demanding which be challenging for real-world application in general and for the beginning of the pandemics in particular 
+ - which is a critical time to act to prevent a large-scale epidemic. Moreover, pure epidemiological models are not able to fully represent the dynamic as additional social and economic processes (and even political processes) modify the population's behavior in terms of mobility and interactions.
+</p>
+<p>
+To conclude, computer simulations and mathematical models where only several epidemiological processes are taken into consideration are powerful tools for investigating the global dynamics of a pandemic spread. Nevertheless, policies operate on more fine conditions based on the day-to-day activities and interactions that are dictated by social and economic processes between individuals of the population. These processes are high different between countries and time (for example during the time of the day [8]). 
+ As a result, to obtain an accurate prediction of the pandemic dynamics and the influence of various NPIs, a model needs to be spatio-temporal, heterogeneous,
+ and taking into consideration the influence of the pandemic on other sociological and economic processes its effects (and how they affect it back as well). 
+ A promising approach is to take advantage of an agent-based model [12] to simulate epidemiological and social dynamics at the individual level and obtain complex dynamics emerging from these activities [13].
+</p>
+
+<h3>References</h3>
+<ol style="margin-left: 20px; line-height: 1.5 !important; margin-bottom: 1.7rem; font-size: 1.1rem !important; font-weight: 400; color: #212529;">
+	<li> Eurosurveillance Editorial Team. “Note from the editors: World Health Organization declares novel coro-navirus (2019-nCoV) sixth public health emergency of international concern”. In: Euro Surveill 25 (2020), 200131e.</li>
+	<li><a href="https://covid19.who.int/">WHO Coronavirus Disease (COVID-19) Dashboard. 2021. (visited on 01/08/2021).</a></li>
+	<li>A. Desvars-Larrive, E. Dervic, N. Haug, and et al. “A structured open dataset of government interventionsin response to COVID-19”. In: Sci Data 7 (2020).</li>
+	<li> Daron Acemoglu, Victor Chernozhukov, Iv ́an Werning, and Michael D Whinston.Optimal Targeted Lock-downs in a Multi-Group SIR Model. Working Paper 27102. National Bureau of Economic Research, 2020.</li>
+	<li> T. Lazebnik, L. Shami, and S. Bunimovich-Mendrazitsky. “Spatio-Temporal Influence of Non-PharmaceuticalInterventions Policies on Pandemic Dynamics and the Economy: The Case of COVID-19”. In: ResearchEconomics (2021).</li>
+	<li>W. O. Kermack and A. G. McKendrick. “A contribution to the mathematical theory of epidemics”. In: Proceedings of the Royal Society 115 (1927), pp. 700–721.</li>
+	<li>L. Nesteruk. “Statistics-based Predictions of Coronavirus Epidemic Spreading in Mainland China”. In: Innov Biosyst Bioeng8 (2020), pp. 13–18.</li>
+	<li>T. Lazebnik and S. Bunimovich-Mendrazitsky. “The signature features of COVID-19 pandemic in a hybridmathematical  model  -  implications  for  optimal  work-school  lockdown  policy”. In: advanced theory andsimulations (2021).</li>
+	<li>J. He, Y. Guo, R. Mao, and J. Zhang. “Proportion of asymptomatic coronavirus disease 2019: A systematicreview and meta-analysis”. In: J Med Virol (2020), pp. 1–11.</li>
+	<li>L.  Di  Domenico,  G.  Pullano,  C.  E.  Sabbatini,  P.  Y.  Bo  Elle,  and  V.  Colizza.  “Impact  of  lockdown  on COVID-19 epidemic in Ile-de-France and possible exit strategies”. In: BMC Medicine18 (2020).</li>
+	<li>H-F.  Huo,  Q.  Yang,  and  H.  Xiang.  “Dynamics  of  an  edge-based  SEIR  model  for  sexually  transmitteddiseases”. In: Mathematical Biosciences and Engineering17 (2019), pp. 669–699.</li>
+	<li>C. M. Macal. “To agent-based simulation from System Dynamics”. In: Proceedings of the 2010 WinterSimulation Conference (2010), pp. 371–382.</li>
+	<li>T. Lazebnik and A. Alexi. “Comparison of Pandemic Intervention Policies in Several Building Types UsingHeterogeneous Population Model”. In: medRxiv (2021).</li>
+</ol>
+
+
