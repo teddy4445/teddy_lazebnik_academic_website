@@ -1,9 +1,11 @@
 {
    "biography":"I am Applied Mathematics and Computer Science researcher focusing on epidemiology, medical, economics, and information systems along with other secondary fields. I have ten years of experience in software development - five years developing desktop, web, and server applications and another five years developing algorithms. In between, seven years of experience leading development teams of up to ten professionals. A proven record in system architecture, production-ready algorithms, and working with clients. Specialization in bio-physical simulations (stable and accurate numerical calculation), big data analysis (in particular, social and economic data), NLP for information systems, and computer vision. I am interested in biomathematics, medical data-driven projects, biological and clinical processes modeling and simulation, eXplainable AI (XAI), and AI for video games.",
    "researchInterests":[
-		"Computer Simulation - pharmacokinetics-pharmacodynamic models, epidemiological dynamics, and medical treatments.",
-		"Biomathematical Modeling - bio-clinical personalized ML-based treatments, ODE/PDE-based biological models, and disease dynamics.",
-		"Medical Nanorobotics - nanoscale in vivo interactions, targeted drug delivery, drug discovery, computing, and compilation."
+		"Computer Simulation - pharmacokinetics-pharmacodynamic, epidemiological dynamics, and medical treatments protocols.",
+		"Biomathematical Modeling - bioclinical personalized ML-based treatments, ODE/PDE-based biological models, and disease dynamics.",
+		"Medical Nanorobotics - nanoscale in vivo interactions, targeted drug delivery, drug discovery, computing, and compilation.",
+		"Economic Models - complex socioeconomic models and simulations, black market analysis, costs optimization.",
+		"Meta Machine Learning - automatic feature selection, stability metrics, multi-agent collective learning."
    ],
    "featuredPublications":[
       {
