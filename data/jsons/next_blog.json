@@ -1,4 +1,20 @@
 {
+   "24":[
+      {
+         "title":"Meta Reinforcement Learning - What Are You?",
+		 "date": "16/7/2021",
+		 "reading_time": "3",
+		 "link_address": "21",
+         "description":"Meta Reinforcement Learning sounds cool, isn't it? Many ignore this subject due to the complicated mathematics involved in any paper or blog post that talks about this subject. But, no more! Meta reinforcement learning in 3 minutes or less."
+      },
+      {
+         "title":"Black Market Size Estimation Methods Are Stuck In The 90s",
+		 "date": "1/8/2021",
+		 "reading_time": "6",
+		 "link_address": "22",
+         "description":"The accurate estimation of the black market is an urgent issue for governments as it has a direct influence on the taxation policy, crime, and other activities managed and controlled by the government. However, the current approach for estimating the size of the black market is based on an idea that not holds anymore due to technological shifts. We propose a new approach to perform this task..."
+      }
+	],
    "23":[
       {
          "title":"The math behind the Coronavirus spread",
@@ -6,6 +22,15 @@
 		 "reading_time": "2",
 		 "link_address": "6",
          "description":"Covid-19 pandemic hit the wolrd at the beginning of 2020 and lead to hundrieds of mathematical models predicting the spread of the pandemic wolrdwide. Here I offer a basic review of some of these methods."
+      }
+	],
+   "22":[
+      {
+         "title":"Give Me a One-Handed Economist: The Ongoing Straggle Between Social and Exact Science In Economy",
+		 "date": "28/8/2021",
+		 "reading_time": "5",
+		 "link_address": "24",
+         "description":"Classicial and modern economic research is suffer froma dissonance between social sciences which are mostly empirical-based with minor to no rigorousness theories and the exact science rooted in theories increasingly being built from simple rules. We suggest to overcome this gap using computer science methods..."
       }
 	],
    "21":[

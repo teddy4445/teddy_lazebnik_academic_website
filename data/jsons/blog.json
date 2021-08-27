@@ -206,6 +206,15 @@
 		 "month": 8,
 		 "day": 21,
 		 "order": 23
+      },
+      {
+         "title":"Give Me a One-Handed Economist: The Ongoing Straggle Between Social and Exact Science In Economy",
+         "description":"Classicial and modern economic research is suffer froma dissonance between social sciences which are mostly empirical-based with minor to no rigorousness theories and the exact science rooted in theories increasingly being built from simple rules. We suggest to overcome this gap using computer science methods...",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "24"}],
+		 "year": 2021,
+		 "month": 8,
+		 "day": 27,
+		 "order": 24
       }
 	]
 }
