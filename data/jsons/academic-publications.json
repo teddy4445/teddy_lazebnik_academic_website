@@ -97,6 +97,18 @@
          "publicationStatus":"Published"
       },
       {
+         "name":"Optimal Intervention Policies for the COVID-19 Pandemic Emerge from Socioeconomic-Heterogeneous Dynamics",
+         "description":"The COVID-19 pandemic is a rolling crisis that required policymakers around the world to take action to manage the pandemic spread. During the period where vaccination was not available, the pandemic spread management lied in Non-Pharmaceutical Interventions (NPIs). A large number of mathematical models have been proposed to predict the pandemic spread and analyze the influence of various NPIs on multiple scenarios, getting more accurate and sophisticated over time. In this work, we review the latest mathematical models for pandemic spread NPIs and their main shortages. Specifically, the usage of modeling a homogeneous population rather than a heterogeneous one.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "https://www.hilarispublisher.com/open-access/optimal-intervention-policies-for-the-covid19-pandemic-emerge-from-socioeconomicheterogeneous-dynamics.pdf"},
+					  {"info": "cite", "type": 3, "link": ""}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2018,
+         "topic":"Epidemiology",
+         "type":"Abstract",
+         "publisher":"Journal of Physical Mathematics",
+         "publicationStatus":"Published"
+      },
+      {
          "name":"The signature features of COVID-19 pandemic in a hybrid mathematical model - implications for optimal work-school lockdown policy",
          "description":"The new COVID-19 pandemic has challenged policymakers on key issues. Most countries have adopted “lockdown” policies to reduce the spatial spread of COVID-19, but they have damaged the economic and moral fabric of society. Mathematical modeling in non-pharmaceutical intervention policy management has proven to be a major weapon in this fight due to the lack of an effective COVID-19 vaccine. We present a new \textit{hybrid} model for COVID-19 dynamics using both an age-structured mathematical model based on the SIRD model and spatio-temporal model in silico, analyzing the data of COVID-19 in Israel. Using the \textit{hybrid} model, we have introduced a method for estimating the reproduction number of an epidemic in real-time from the data of daily notification of cases. The results of the proposed model are confirmed by the Israeli Lockdown experience with a mean square error of 0.205 over two weeks. The use of mathematical models promises to reduce the uncertainty in the choice of “Lockdown” policies. Our unique use of contact details from 2 classes (children and adults), the interaction of populations depending on the time of day, and several physical locations, allowed a new look at the differential dynamics of the spread and control of infection.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/covid_first.pdf"},
