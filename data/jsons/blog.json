@@ -74,7 +74,7 @@
       },
       {
          "title":"Medical Nanorobotics - Science or Science Fiction?",
-         "description":"I won't tell you... you will have to read the post to find out",
+         "description":"Nanorobotics is a new kind of robotics with can be defined as 'The technology of creating machines or robots close to the scale of a nanometre'...",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "9"}],
 		 "year": 2017,
 		 "month": 4,
@@ -215,6 +215,15 @@
 		 "month": 8,
 		 "day": 27,
 		 "order": 24
+      },
+      {
+         "title":"Targeted Drug Delivery using Nanoparticles Can Revolutionize Cancer Therapy",
+         "description":"Surgery, chemotherapy, radiotherapy, and hormone therapy are the main common anti-tumor therapeutic approaches...",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "25"}],
+		 "year": 2021,
+		 "month": 11,
+		 "day": 25,
+		 "order": 25
       }
 	]
 }
