@@ -47,22 +47,34 @@
    ],
    "currentProjects":[
       {
+         "name":"The OMEGA Project",
+         "topic": "simulations",
+         "description":"Simulating phatogenic-like DNA sequances from healthy samples, focusing on cancer.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      },
+      {
          "name":"Extended Pharmacokinetics Model For Targeted Drug Delivery Nanoparticles",
          "topic": "simulations",
          "description":"An improved simulation of medical nanoparticles-based targeted drug delivery using more accurate flow dynamics and Pharmacokinetics in different organs in a mouse.",
          "link":{"info": "View project", "type": 2, "link": "/medical-nanorobots-in-the-blood.html", "example":""}
       },
       {
-         "name":"A better Prediction of the Non-Observed Economy in Israel",
+         "name":"Estimation of Non-Observed Economy Using Observed Economy and Partial Non-Observed Economy with Deep Learning",
          "topic": "economy",
          "description":"Using multiple economic and social processes, we are estimating in the size of non-observed economy in Israel.",
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {
-         "name":"Hebrew words associative distance and connection to depression",
+         "name":"Novel Stability Analysis For Feature Selection Algorithms",
          "topic": "machine learning",
-         "description":"Developing a machine learning model for words associative distance (Hebrew). Based on this model, propusing new depression test for clinical professionals",
-         "link":{"info": "View project", "type": 2, "link": "https://pure-talent-302909.oa.r.appspot.com/", "example":""}
+         "description":"Stability analysis of machine learning models in general and in the context of feature selection is based on record-stability, we propose two other metrics to better measure the stability property.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      },
+      {
+         "name":"Socioeconomic Model for Work Engagement in the Public Sector",
+         "topic": "economy",
+         "description":"Engagement at work is known to be a driving fource in the private sector but no model for the public sector has been proposed so far. We try to correct this situation.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
       }
    ]
 }
