@@ -1,0 +1,132 @@
+<h1>
+Computing The Distance Between Two DNA sequances - Not As Simple As You Might Think
+</h1>
+<hr class="publications-hr">
+10/12/2021
+<hr class="publications-hr">
+<p>
+	Scientists and doctors have been studying genes and hereditary conditions (those handed down from parent to child) for many years.
+	These days, it is possible for someone to have a genetic test for a number of illnesses. 
+	A blood sample is taken and closely examined for abnormal chromosomes, but because so much information is stored on the DNA, scientists only tend to look for particular disorders.
+	This process is now avalible thanks to a field known as Genomic Medicine.
+</p>
+<p>
+	Intuitively, genomic medicine is the study of genes (DNA) and their interaction with the medical state of a paitent.
+	Genomics investigates how a person's biological information can be used to perform a more effective diagnosis and provide personalised treatment.
+	For instance, the genomic data is used where the cause of a range of symptoms cannot be pinpointed by any other means. 
+	Another case is where there is a family history of serious genetic disorders, it can tell prospective parents whether or not 
+	they are a carrier and if they can pass it on to their children. In a similar manner, it can also tell someone if they are 
+	likely to develop the inherited condition later in life, even if they do not yet have any symptoms.
+</p>
+<p>
+	The underline research that allow genomic medicine to porspare is Bioinformatic. 
+	According to the National Human Genome Research Institute, Bioinformatics is a subdiscipline of biology and computer science concerned with the acquisition, storage, analysis, and dissemination of biological data, most often DNA and amino acid sequences.
+	Bioinformatics uses computer programs for a variety of applications, including determining gene and protein functions, establishing evolutionary relationships, and predicting the three-dimensional shapes of proteins; to name a few.
+</p>
+<img alt="DNA becoming code image" src="/blog/images/dna_start.png" width="100%"> 
+<p style="text-align: center;">
+<small><b>Figure 1.</b> An ilustration of moving from DNA data into digital data (design by Teddy Lazebnik).</small>
+</p>
+<p>
+	The main tools of a bioinformatician are computer software programs and the internet.
+	A fundamental activity is sequence analysis of DNA and proteins using various programs and 
+	databases available on the world wide web. 
+	Anyone, from clinicians to molecular biologists, with access to the internet and relevant 
+	websites can now (usually) freely discover the composition of biological molecules using bioinformatic tools. 
+	This does not imply that handling and analysis of raw genomic data can easily be carried out by all.
+	Bioinformatics is an evolving discipline, and expert bioinformaticians now use complex computer science and mathematics for retrieving, 
+	sorting out, analysing, predicting, and storing DNA (and protein) sequence data.
+</p>
+<p>
+	For example, <a href="https://www.research.manchester.ac.uk/portal/ardeshir.bayat.html" alt="Dr Ardeshir Bayat - Principal Investigator and Reader (Tenured Associate Professor) based at the University of Manchester">Ardeshir Bayat</a> suggested in his paper from 2002 that "Large commercial enterprises such as pharmaceutical companies employ bioinformaticians to perform and maintain the large scale and complicated bioinformatic needs of these industries. With an ever-increasing need for constant input from bioinformatic experts, most biomedical laboratories may soon have their own in-house bioinformatician. The individual researcher, beyond a basic acquisition and analysis of simple data, would certainly need external bioinformatic advice for any complex analysis." [6].
+</p>
+<p>
+	In the same time, the amount of genomic data is increasing over the years as the price for a single DNA sequancing is droping as shown in figure 2.
+	This reduction in costs is associated with the development of new technology such as single-molecule sequencing [2] and next-generation sequencing [3].
+	Therefore, a trend inwhich research in the genomic sciences is confronted with the volume of sequencing and resequencing data increasing at a higher pace 
+	than that of data storage and communication resources, shifting a significant part of research budgets from the sequencing component of a project to the computational one [4].
+</p>
+<img alt="DNA becoming code image" src="/blog/images/dna_seq_cost.png" width="100%"> 
+<p style="text-align: center;">
+<small><b>Figure 2.</b> The data obtained from the <a href="https://www.genome.gov/" alt="National Human Genome Research Institute">NHGRI Genome Sequencing Program (GSP)</a>, by Kris A. Wetterstrand.
+ The values are reffered to sanger-based sequencing (average read length of 500-600 bases) with 6-fold coverage for the first decade while the latter is reffered to Illumina and SOLiD sequencing (average read length of 75-150 bases) with 30-fold coverage.
+ Note, the graph is schematic, please reffer to <a alt="DNA Sequencing Costs: Data" href="https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data">this website</a> for more detailed values.</small>
+</p>
+<p>
+	Indeed, large-scale projects such as the <a alt="The Cancer Genome Atlas Program" href="http://cancergenome.nih.gov/">Cancer Genome Atlas</a> and <a alt="The International Genome Sample Resource" href="http://www.1000genomes.org/">One Thousend Genomes Project</a> were establishing and more projects emerge by the day.
+	On top of that, we would probably see more cheaper, faster, less prone to errors, and higher-throughput sequencing methodologies which will paving the way to individual genomics and personalized medicine thanks to the prizes various organization offering in the last few years such as <a alt="OUTPACED BY INNOVATION" href="http://genomics.xprize.org/">this one</a> [5].
+</p>
+<p>
+	It is fair to claim that after two decades, Bioinformatic today contains a wide range of computational and mathematical tasks, algorithms, and analysis methods to extract knowledge about biological systems and allow to exploid current our biological and clinical understanding to further push the limit of our modeling and prediction abilities. 
+	In particular, and the main concern of this post, is the evaluation of the similarity between two (or more) DNA sequences, since it is common and central step in multiple DNA sequence analysis.
+	Indeed, it has attracted much research effort over the years and may algorithms and tools have been developed to tackle this task [1]. 
+</p>
+<p>
+	In order to convice the critical reader that the task of finding/developing a well define similarity metric between two DNA sequences which is also can be officially computed is important, one can take a look on the following incomplete list of bioinformatic tasks that require this procedure:
+</p>
+<ol style="margin-left: 20px; line-height: 1.5 !important; margin-bottom: 1.7rem; font-size: 1.1rem !important; font-weight: 400; color: #212529;">
+	<li> Align new small DNA sequances to a full DNA sequance using a refferance DNA.</li>
+	<li> Empirically obtain the level of randomness in the development of a certain diseases over the population. </li>
+	<li> Finding in a large dataset similar DNA sequances with tagged data.</li>
+	<li> Generating simulated DNA sequances that satisfy the same biological conditions of a given set of DNA sequances, such as ethnic relation for example.</li>
+</ol>
+<p>
+	It is possible to divide the DNA sequances comparision into two main groups: <i>direct</i> and <i>representive</i> comparision.
+	The <i>direct</i> comparision group of methods contains ----------------. On the other hand, the <i>representive</i> comparision group of methods contains --------------.
+</p>
+<p>
+	In the following sections, several leading candidates from each group are described with its strength and limitations.
+</p>
+<h3> Direct Comparision Methods </h3>
+<p>
+	
+</p>
+<p>
+	
+</p>
+<p>
+	
+</p>
+<h3> Direct Comparision Methods </h3>
+<p>
+	
+</p>
+<p>
+	
+</p>
+<p>
+	
+</p>
+<h3> Useful Tools </h3>
+<p>
+	
+</p>
+<p>
+	
+</p>
+<h3> Conclusion </h3>
+<p>
+	
+</p>
+<p>
+	
+</p>
+<p>
+	
+</p>
+
+<h3>References</h3>
+<ol style="margin-left: 20px; line-height: 1.5 !important; margin-bottom: 1.7rem; font-size: 1.1rem !important; font-weight: 400; color: #212529;">
+	<li> X. Xie, J. Guan, S. Zhou. "Similarity evaluation of DNA sequences based on frequent patterns and entropy". BMC Genomics. 2015; 16, S5.</li>
+	<li> D. Pushkarev, N. F. Neff, S. R. Quake. "Single-molecule sequencing of an individual human genome". Nature Biotechnology. 2009; 27:9, 847-850. </li>
+	<li> D. Horner, G. Pavesi, T. Castrignano, P. De Meo, S. Liuni, M. Sammeth, E. Picardi, G. Pesole. "Bioinformatics approaches for genomics and post genomics applications of next-generation sequencing". Briefings in Bioinformatics. 2010; 11:2, 181-197.</li>
+	<li> A. J. Pinho, D. Parats, S. P. Garcia. "GReEn: a tool for efficient compression of genome resequencing data". Nucleic Acids Research. 2012; 40:4, e27. </li>
+	<li> J. C. Venter. "Multiple personal genomes await". Nature. 2010; 464, 676-677. </li>
+	<li> A. Bayat. "Bioinformatics". BMJ. 2002; 324(7344): 1018-1022. </li>
+	<li>  </li>
+	<li>  </li>
+	<li>  </li>
+	<li>  </li>
+	<li>  </li>
+	<li>  </li>
+</ol>
