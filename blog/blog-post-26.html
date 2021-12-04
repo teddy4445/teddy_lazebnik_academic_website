@@ -56,7 +56,8 @@ Computing the Distance Between DNA Sequences - Not As Simple As You Might Think
 </p>
 <p>
 	It is fair to claim that after two decades, Bioinformatic today contains a wide range of computational and mathematical tasks, algorithms, and analysis methods to extract knowledge about biological systems and allow us to exploit current our biological and clinical understanding to further push the limit of our modeling and prediction abilities. 
-	In particular, and the main concern of this post is the evaluation of the similarity between two (or more) DNA sequences since it is a common and central step in multiple DNA sequence analysis.
+	In particular, the evaluation of the similarity between two (or more) DNA sequences since it is a common and central step in multiple DNA sequence analysis.
+	Therefore, this is the main concern of this post. 
 	Indeed, it has attracted much research effort over the years, and many algorithms and tools have been developed to tackle this task [6]. 
 </p>
 <p>
@@ -80,7 +81,7 @@ Computing the Distance Between DNA Sequences - Not As Simple As You Might Think
 	While there are multiple implementations for BLAST that researchers proposed over the year, the main idea is to compute the similarity between two or more distributions of DNA properties.
 	In particular, the most spread version of BLAST works by detecting local alignments between short sequences. 
 	This process involves extracting a small set of letters that usually represent some biological element (for instance, the nucleotides <i>ATC</i>). 
-	Afterward, the BLAST algorithm computes the number of times and places along the sequence this sub-sequence appears. 
+	Afterward, the BLAST algorithm computes the number of times the sub-sequence appear and their corosponding places along the sequence. 
 	This defines one distribution (signature) of each DNA sequence. A useful extension is by looking at the distribution signature of closely related sets of letters (continuing the last example, the nucleotides <i>ATT</i> is similar to <i>ATC</i>).
 	Then, the similarity between two DNA sequences is the similarity between the n-dimensional distribution of all the sub-sequences used in the comparison.
 </p>
@@ -137,7 +138,7 @@ Computing the Distance Between DNA Sequences - Not As Simple As You Might Think
 	In some situations, resulting in a search not being sensitive enough to find matches to the query sequence. 
 </p>
 <h3> Representive comparision algorithms </h3>
-<h4> Alignment-free Simiaraly </h4>
+<h4> Alignment-free similarly </h4>
 <p>
 	Driven by the idea that classification (and therefore similarity) over nucleotide bases improves the efficiency when comparing DNA sequences,
 	one can use the word frequency, position, and nucleotide bases classification in calculating the DNA sequence similarity. 
@@ -153,7 +154,7 @@ Computing the Distance Between DNA Sequences - Not As Simple As You Might Think
 	Different alignment-free models employ different features to build feature space. There is a trade-off between the feature vector size and the performance of the align-free model.
 	However, it is a fact that the longer feature vector may not guarantee a better clustering result [9]. 
 </p>
-<h4> Data-driven Alignment-free Feature Vector </h4>
+<h4> Data-driven alignment-free feature vector</h4>
 <p>
 	Following the complexity of obtaining a well-representative feature vector of a DNA sequence and in parallel to the development of the data-driven algorithm, the bioinformatics researcher started to take advantage of the machine learning algorithms to obtain better feature vectors.
 	In particular, first attempts used domain-knowledge with machine learning methods to determinate feature vectors such as the one proposed by Zhou et al. [10] with mathematical descriptor based on the characterization of cis sequence DNA networks.
