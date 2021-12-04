@@ -1,8 +1,8 @@
 <h1>
-Computing The Distance Between Two DNA sequences - Not As Simple As You Might Think
+Computing the Distance Between DNA Sequences - Not As Simple As You Might Think
 </h1>
 <hr class="publications-hr">
-10/12/2021
+5/12/2021
 <hr class="publications-hr">
 <p>
 	Scientists and doctors have been studying genes and hereditary conditions (those handed down from parent to child) for many years.
@@ -19,13 +19,13 @@ Computing The Distance Between Two DNA sequences - Not As Simple As You Might Th
 	likely to develop the inherited condition later in life, even if they do not yet have any symptoms.
 </p>
 <p>
-	The underline research that allows genomic medicine to prospare is Bioinformatic. 
+	The underline research that allows genomic medicine to prosper is Bioinformatic. 
 	According to the National Human Genome Research Institute, Bioinformatics is a subdiscipline of biology and computer science concerned with the acquisition, storage, analysis, and dissemination of biological data, most often DNA and amino acid sequences.
 	Bioinformatics uses computer programs for a variety of applications, including determining gene and protein functions, establishing evolutionary relationships, and predicting the three-dimensional shapes of proteins; to name a few.
 </p>
 <img alt="DNA becoming code image" src="/blog/images/dna_start.png" width="100%"> 
 <p style="text-align: center;">
-<small><b>Figure 1.</b> An ilustration of moving from DNA data into digital data (design by Teddy Lazebnik).</small>
+<small><b>Figure 1.</b> An ilustration of moving from DNA data into digital data.</small>
 </p>
 <p>
 	The main tools of a bioinformatician are computer software programs and the internet.
@@ -41,17 +41,17 @@ Computing The Distance Between Two DNA sequences - Not As Simple As You Might Th
 <p>
 	At the same time, the amount of genomic data is increasing over the years as the price for a single DNA sequencing is dropping as shown in figure 2.
 	This reduction in costs is associated with the development of new technology such as single-molecule sequencing [2] and next-generation sequencing [3].
-	Therefore, a trend inwhich research in the genomic sciences is confronted with the volume of sequencing and resequencing data increasing at a higher pace 
+	Therefore, a trend in which research in the genomic sciences is confronted with the volume of sequencing and resequencing data increasing at a higher pace 
 	than that of data storage and communication resources, shifting a significant part of research budgets from the sequencing component of a project to the computational one [4].
 </p>
 <img alt="DNA becoming code image" src="/blog/images/dna_seq_cost.png" width="100%"> 
 <p style="text-align: center;">
-<small><b>Figure 2.</b> The data obtained from the <a href="https://www.genome.gov/" alt="National Human Genome Research Institute">NHGRI Genome Sequencing Program (GSP)</a>, by Kris A. Wetterstrand.
+<small><b>Figure 2.</b> The data was obtained from the <a href="https://www.genome.gov/" alt="National Human Genome Research Institute">NHGRI Genome Sequencing Program (GSP)</a>, by Kris A. Wetterstrand.
  The values are referred to sanger-based sequencing (average read length of 500-600 bases) with 6-fold coverage for the first decade while the latter is referred to Illumina and SOLiD sequencing (average read length of 75-150 bases) with 30-fold coverage.
- Note, the graph is schematic, please reffer to <a alt="DNA Sequencing Costs: Data" href="https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data">this website</a> for more detailed values.</small>
+ Note, the graph is schematic, please refer to <a alt="DNA Sequencing Costs: Data" href="https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data">this website</a> for more detailed values.</small>
 </p>
 <p>
-	Indeed, large-scale projects such as the <a alt="The Cancer Genome Atlas Program" href="http://cancergenome.nih.gov/">Cancer Genome Atlas</a> and <a alt="The International Genome Sample Resource" href="http://www.1000genomes.org/">One Thousend Genomes Project</a> were establishing and more projects emerge by the day.
+	Indeed, large-scale projects such as the <a alt="The Cancer Genome Atlas Program" href="http://cancergenome.nih.gov/">Cancer Genome Atlas</a> and <a alt="The International Genome Sample Resource" href="http://www.1000genomes.org/">One Thousand Genomes Project</a> were established and more projects emerge by the day.
 	On top of that, we would probably see cheaper, faster, less prone to errors, and higher-throughput sequencing methodologies which will be paving the way to individual genomics and personalized medicine thanks to the prizes various organizations offering in the last few years such as <a alt="OUTPACED BY INNOVATION" href="http://genomics.xprize.org/">this one</a> [5].
 </p>
 <p>
@@ -68,9 +68,9 @@ Computing The Distance Between Two DNA sequences - Not As Simple As You Might Th
 <small><b>Figure 3.</b> A bioinformatic tasks that require computing the similarity between DNA sequences.</small>
 </p>
 <p>
-	It is possible to divide the DNA sequences comparision into two main groups: <i>direct</i> and <i>representive</i> comparision.
+	It is possible to divide the DNA sequence comparison into two main groups: <i>direct</i> and <i>representative</i> comparisons.
 	The <i>direct</i> comparison group contains algorithms that use the whole or portions of the original DNA sequence.
-	On the other hand, the <i>representive</i> comparison group contains algorithms that use an aggregated format of the DNA sequence, usually by mapping the sequence to some small representation space.
+	On the other hand, the <i>representative</i> comparison group contains algorithms that use an aggregated format of the DNA sequence, usually by mapping the sequence to some small representation space.
 	In the following sections, several leading candidates from each group are described with its strength and limitations.
 </p>
 <h3> Direct comparision algorithms </h3>
@@ -81,7 +81,7 @@ Computing The Distance Between Two DNA sequences - Not As Simple As You Might Th
 	In particular, the most spread version of BLAST works by detecting local alignments between short sequences. 
 	This process involves extracting a small set of letters that usually represent some biological element (for instance, the nucleotides <i>ATC</i>). 
 	Afterward, the BLAST algorithm computes the number of times and places along the sequence this sub-sequence appears. 
-	This defines one distribution (signature) of each DNA sequence. An useful extentation is by looking on the distrebution signature of closely related sets of letters (contuning the last example, the necletodies <i>ATT</i> is similar to <i>ATC</i>).
+	This defines one distribution (signature) of each DNA sequence. A useful extension is by looking at the distribution signature of closely related sets of letters (continuing the last example, the nucleotides <i>ATT</i> is similar to <i>ATC</i>).
 	Then, the similarity between two DNA sequences is the similarity between the n-dimensional distribution of all the sub-sequences used in the comparison.
 </p>
 <p>
@@ -141,7 +141,7 @@ Computing The Distance Between Two DNA sequences - Not As Simple As You Might Th
 <p>
 	Driven by the idea that classification (and therefore similarity) over nucleotide bases improves the efficiency when comparing DNA sequences,
 	one can use the word frequency, position, and nucleotide bases classification in calculating the DNA sequence similarity. 
-	The integration of these three classes of data together to enrich the feature vector representing a DNA sequence without increasing too much the dimension of this feature vector is shown to be a promissing approach.
+	The integration of these three classes of data together to enrich the feature vector representing a DNA sequence without increasing too much the dimension of this feature vector is shown to be a promising approach.
 </p>
 <p>
 	According to the chemical properties of nucleotide bases, they can be divided into three categories: purine and pyrimidine group, amino and keto group, and weak\strong hydrogen bond group.
@@ -162,7 +162,7 @@ Computing The Distance Between Two DNA sequences - Not As Simple As You Might Th
 </p>
 <p>
 	Unsurprisingly, these algorithms give better empirical results than expert-based algorithms as happens in so many different disciplines. 
-	Nonetheless, the use of these algorithms is only a partial solution as they require a very large amount of information, to train the data-driven models, and computing power that is not necessarily accessible to everyone.
+	Nonetheless, the use of these algorithms is only a partial solution as they require a very large amount of information, to train the data-driven models and computing power that is not necessarily accessible to everyone.
 	Hence, making these algorithms promising but hard to understand and expensive to use.
 </p>
 <img alt="A bioinformatic tasks that require computing the similarity between DNA sequences" src="/blog/images/dna_evolve.png" width="100%"> 
@@ -195,3 +195,4 @@ Computing The Distance Between Two DNA sequences - Not As Simple As You Might Th
 	<li> J. Zhou, P. Zhong, T. Zhang. "A Novel Method for Alignment-free DNA Sequence Similarity Analysis Based on the Characterization of Complex Networks". Evolutionary Bioinformatic. 2016; 12, 229-235. </li>
 	<li> S. Seo, M. Oh, Y. Park, S. Kim. "DeepFam: deep learning based alignment-free method for protein family modeling and prediction". Bioinformatic. 2018; 34:13, i254-i262. </li>
 </ol>
+
