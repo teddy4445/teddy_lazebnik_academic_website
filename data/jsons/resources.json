@@ -14,6 +14,19 @@
       "type":"code"
     },
 	{
+      "name":"Mathematical course about dynamic systems",
+      "description":"A Hebrew summary (40 pages, hand written) of a dyanmic systems mathematics course in BIU at 2017.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "/files/dynamic_systems_hebrew_course.pdf"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2017,
+      "topic":"math",
+      "type":"course summary"
+    },
+	{
       "name":"The OCTI board game with several levels of AI players",
       "description":"The OCTI board game with nice UI-UX and several levels of AI players.",
       "recommendation":"",
