@@ -21,27 +21,27 @@
          "publicationStatus":"Published"
       },
       {
-         "name":"Novel Method to Analytically Obtain the Asymptotic Stable Equilibria States of Extended SIR-Type Epidemiological Models",
-         "description":"We present a new analytical method to find the asymptotic stable equilibria states based on the Markov chain technique. We reveal this method on the Susceptible-Infectious-Recovered (SIR)-type epidemiological model that we developed for viral diseases with long-term immunity memory. This is a large-scale model containing 15 nonlinear ordinary differential equations (ODEs), and classical methods have failed to analytically obtain its equilibria. The proposed method is used to conduct a comprehensive analysis by a stochastic representation of the dynamics of the model, followed by finding all asymptotic stable equilibrium states of the model for any values of parameters and initial conditions thanks to the symmetry of the population size over time.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/symmetry_sir_paper.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Shaikhet, L., Novel Method to Analytically Obtain the Asymptotic Stable Equilibria States of Extended SIR-Type Epidemiological Models. Symmetry. 2021."}],
-		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky, and Leonid Shaikhet",
+         "name":"Comparison of pandemic intervention policies in several building types using heterogeneous population model",
+         "description":"In this study, we propose a spatio-temporal, heterogeneous population model and in silico simulation to evaluate pandemic IPs in four types of buildings - home, office, school, and mall. We show that indeed each building type has a unique pandemic spread and therefore a different optimal IP. Moreover, we show that temporal-based IPs (such as mask wearing) have a similar influence on the pandemic spread in all four building types while spatial-based IPs (such as social distance) highly differ.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/indoor_pandemic.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Alexi, A., Comparison of pandemic intervention policies in several building types using heterogeneous population model. Communications in Nonlinear Science and Numerical Simulation. 2021."}],
+		 "authors": "Teddy Lazebnik, Ariel Alexi",
          "year": 2021,
          "topic":"Epidemiology",
-         "type":"paper",
-         "publisher":"Symmetry",
+         "type":"Paper",
+         "publisher":"Communications in Nonlinear Science and Numerical Simulation",
          "publicationStatus":"Published"
       },
       {
-         "name":"PDE based geometry model for BCG immunotherapy of bladder cancer",
-         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/pde_biosystem_paper.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Aaroni, N., Bunimovich-Mendrazitsky, S., PDE based geometry model for BCG immunotherapy of bladder cancer. BioSystems. 2020."}],
-		 "authors": "Teddy Lazebnik, Niva Aaroni, and Svetlana Bunimovich-Mendrazitsky",
-         "year": 2020,
-         "topic":"Biomathematics",
-         "type":"paper",
-         "publisher":"Biosystems",
+         "name":"Improved Geometric Configuration for the Bladder Cancer BCG-Based Immunotherapy Treatment Model",
+         "description":"We present an extension to the model proposed by Lazebnik et al. (2021) by improving the approximation of the bladder’s geometry from sphere-ring to ellipsoid-ring [2]. We show the differences between the models on the clinical results and their influence on the optimal treatment protocol.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/ISMCO_2021.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Improved Geometric Configuration for the Bladder Cancer BCG-Based Immunotherapy Treatment Model. International Symposium on Mathematical and Computational Oncology. 2021, pp. 63-67."}],
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky",
+         "year": 2021,
+         "topic":"Epidemiology",
+         "type":"Conference",
+         "publisher":"International Symposium on Mathematical and Computational Oncology",
          "publicationStatus":"Published"
       }
    ],
@@ -59,21 +59,15 @@
          "link":{"info": "View project", "type": 2, "link": "/medical-nanorobots-in-the-blood.html", "example":""}
       },
       {
-         "name":"Estimation of Non-Observed Economy Using Observed Economy and Partial Non-Observed Economy with Deep Learning",
+         "name":"Estimation of Non-Observed Economy Using Data-driven Methods",
          "topic": "economy",
-         "description":"Using multiple economic and social processes, we are estimating in the size of non-observed economy in Israel.",
+         "description":"Using multiple economic and social processes, we are estimating the size of non-observed economy in Israel.",
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {
-         "name":"Novel Stability Analysis For Feature Selection Algorithms",
+         "name":"Feature Selection Algorithms - stability, autoML and more",
          "topic": "machine learning",
-         "description":"Stability analysis of machine learning models in general and in the context of feature selection is based on record-stability, we propose two other metrics to better measure the stability property.",
-         "link":{"info": "View project", "type": 2, "link": "", "example":""}
-      },
-      {
-         "name":"Socioeconomic Model for Work Engagement in the Public Sector",
-         "topic": "economy",
-         "description":"Engagement at work is known to be a driving fource in the private sector but no model for the public sector has been proposed so far. We try to correct this situation.",
+         "description":"Feature Selection (FS) algorithms are in the core of any machine learning model. In this project we study the stability, explainability, performance, and autoML properties of the FS algorithms.",
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       }
    ]
