@@ -1,6 +1,30 @@
 {
    "publications":[
       {
+         "name":"Comparison of pandemic intervention policies in several building types using heterogeneous population model",
+         "description":"In a world where pandemics are a matter of time and increasing urbanization of the world’s population, governments should be prepared with pandemic intervention policies (IPs) to minimize the crisis direct and indirect adverse effects while keeping normal life as much as possible. Successful pandemic IPs have to take into consideration the heterogeneous behavior of individuals in different types of buildings and social contexts. In this study, we propose a spatio-temporal, heterogeneous population model and in silico simulation to evaluate pandemic IPs in four types of buildings - home, office, school, and mall. We show that indeed each building type has a unique pandemic spread and therefore a different optimal IP. Moreover, we show that temporal-based IPs (such as mask wearing) have a similar influence on the pandemic spread in all four building types while spatial-based IPs (such as social distance) highly differ.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/indoor_pandemic.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Alexi, A., Comparison of pandemic intervention policies in several building types using heterogeneous population model. Communications in Nonlinear Science and Numerical Simulation. 2021."}],
+		 "authors": "Teddy Lazebnik, Ariel Alexi",
+         "year": 2021,
+         "topic":"Epidemiology",
+         "type":"Paper",
+         "publisher":"Communications in Nonlinear Science and Numerical Simulation",
+         "publicationStatus":"Published"
+      },
+      {
+         "name":"Improved Geometric Configuration for the Bladder Cancer BCG-Based Immunotherapy Treatment Model",
+         "description":"We present an extension to the model proposed by Lazebnik et al. (2021) by improving the approximation of the bladder’s geometry from sphere-ring to ellipsoid-ring [2]. We show the differences between the models on the clinical results and their influence on the optimal treatment protocol.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/ISMCO_2021.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Improved Geometric Configuration for the Bladder Cancer BCG-Based Immunotherapy Treatment Model. International Symposium on Mathematical and Computational Oncology. 2021, pp. 63-67."}],
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky",
+         "year": 2021,
+         "topic":"Epidemiology",
+         "type":"Conference",
+         "publisher":"International Symposium on Mathematical and Computational Oncology",
+         "publicationStatus":"Published"
+      },
+      {
          "name":"Pandemic Management by a Spatio-temporal Mathematical Model",
          "description":"Many researchers have tried to predict the impact of the COVID-19 outbreak on morbidity, in order to help policy-makers find optimal isolation policies. However, despite the development and use of many models and sophisticated tools, these forecasting attempts have largely failed. We present a model that considers the severity of the disease and the heterogeneity of contacts between the population in complex space-time dynamics. Using mathematical and computational methods, the applied tool was developed to analyze and manage the COVID-19 pandemic (from an epidemiological point of view), with a particular focus on population heterogeneity in terms of age, susceptibility, and symptom severity. We show improved strategies to prevent an epidemic outbreak. We evaluated the model in three countries, obtaining an average mean square error of 0.067 over a full month of the basic reproduction number (R0). The goal of this study is to create a theoretical framework for crisis management that integrates accumulated epidemiological considerations. An applied result is an open-source program for predicting the outcome of an isolation strategy for future researchers and developers who can use and extend our model.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/Pandemic_Management.pdf"},

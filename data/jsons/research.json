@@ -21,9 +21,9 @@
 			"linkedinLink": ""
 		}],
 		"description": "An improved simulation of medical nanoparticles-based targeted drug delivery using more accurate flow dynamics and Pharmacokinetics in different organs in a mouse.",
-		"start_month": 11,
+		"start_month": 5,
 		"start_year": 2020,
-		"end_month": 9,
+		"end_month": 6,
 		"end_year": 2021,
 		"team_members": 3,
 		"relevant_resources": [
@@ -51,9 +51,259 @@
 		"description": "Providing a graph-base model for large scale in vivo pharmacokinetics-pharmadynamics nanoparticles for the drug delivery case.",
 		"start_month": 11,
 		"start_year": 2019,
-		"end_month": 10,
-		"end_year": 2020,
+		"end_month": 3,
+		"end_year": 2021,
 		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Bounding Pandemic Spread By Heat Spread",
+		"participants": [{
+			"name": "Uri Itai",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": "https://www.linkedin.com/in/uri-itai-46641b97/"
+		}],
+		"description": "We provide a theoretical upper boundery for the pandemic spread (SIR model) in the form of heat spread on an infection graph.",
+		"start_month": 7,
+		"start_year": 2021,
+		"end_month": 10,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Generic Approach For Mathematical Model of Multi-Strain Pandemics ",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "We propose a multi-strain epidimological model based on the SIR model and show several analytical properties of the model.",
+		"start_month": 8,
+		"start_year": 2021,
+		"end_month": 11,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Mathematical Model for the BCG-based Treatment Of Type 1 Diabetes",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Advisor (Mathematics)",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Alex Kiselyov",
+			"title": "Ph.D.",
+			"role": "Advisor (Biology)",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "We propose a BCG immunotherapy for the T1D and show numerical results for the mouse model.",
+		"start_month": 5,
+		"start_year": 2021,
+		"end_month": 9,
+		"end_year": 2021,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Assessing The Scientific Neglect Of Animal Species At Risk Of Extinction",
+		"participants": [
+		{
+			"name": "Asaf Tzachor",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "https://www.runi.ac.il/en/pages/faculty.aspx?username=atzachor",
+			"googleLink": "https://scholar.google.co.il/citations?user=nsuAyeMAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "We provide a wide range litreture review of animal species and compute the neglection of the academic community to several of them.",
+		"start_month": 4,
+		"start_year": 2021,
+		"end_month": 2,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Advanced Muti-Mutation with Intervention Policies Pandemic Model",
+		"participants": [
+		{
+			"name": "Gadi Blumrosen",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "https://en-environment.tau.ac.il/Gaddi_Blumrosen",
+			"googleLink": "https://scholar.google.com/citations?user=kiDmFw0AAAAJ",
+			"linkedinLink": "https://www.linkedin.com/in/gaddi-blumrosen-7950114/?originalSubdomain=il"
+		}],
+		"description": "We propose a multi-strain with several clinical and genotype dynamics epidimological model and numerically show its ability to predict the course of a pandemic in Israel.",
+		"start_month": 7,
+		"start_year": 2021,
+		"end_month": 12,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "An Enhanced Pandemic Spread with Mutations SIVRI Model",
+		"participants": [
+		{
+			"name": "Gadi Blumrosen",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "https://en-environment.tau.ac.il/Gaddi_Blumrosen",
+			"googleLink": "https://scholar.google.com/citations?user=kiDmFw0AAAAJ",
+			"linkedinLink": "https://www.linkedin.com/in/gaddi-blumrosen-7950114/?originalSubdomain=il"
+		}],
+		"description": "We extend the multi-strain model from the previous work, including more clinical processes, showing predictions for several countries.",
+		"start_month": 8,
+		"start_year": 2021,
+		"end_month": 2,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Evaluating Taxation Policies Outcomes In a Close and Supply-Demand Based Economy with Heterogeneous Population using Genetic Algorithms",
+		"participants": [
+		{
+			"name": "Ariel Alexi",
+			"title": "Mc.S.",
+			"role": "Co-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Labib Shami",
+			"title": "Ph.D.",
+			"role": "Economist researcher",
+			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
+			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
+			"linkedinLink": ""
+		}],
+		"description": "We developed a mathematical model and computer simulation for close economy supply-demand model to evaluate taxation policies.",
+		"start_month": 8,
+		"start_year": 2021,
+		"end_month": 1,
+		"end_year": 2022,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Socioeconomic Model for Work Engagement in the Public Sector",
+		"participants": [
+		{
+			"name": "Thais Gargantini",
+			"title": "M.A",
+			"role": "Co-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "M. Daly",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "J. Sherlock",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "D. Arieli",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "",
+		"start_month": 3,
+		"start_year": 2021,
+		"end_month": 4,
+		"end_year": 2022,
+		"team_members": 5,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "A review of the behavioural changes and physiological adjustments of elasmobranchs and teleost's to ocean acidification with a focus on sharks",
+		"participants": [{
+			"name": "Ziv Zemah-Shamir",
+			"title": "Ph.D.",
+			"role": "Lead author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Shiri Zemah-Shamir",
+			"title": "Ph.D.",
+			"role": "co-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "A. Scheinin",
+			"title": "Ph.D.",
+			"role": "co-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "D. Tchernov",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "G. Gal",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "A systematic overview of the litreture regarding marine life with focus on sharks.",
+		"start_month": 1,
+		"start_year": 2021,
+		"end_month": 1,
+		"end_year": 2022,
+		"team_members": 6,
 		"relevant_resources": [
 		]
 	},
@@ -97,6 +347,134 @@
 		]
 	},
 	{
+		"name": "A New Definition For Feature Selection Stability Analysis",
+		"participants": [
+		{
+			"name": "Avi Rosenfeld",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "http://homedir.jct.ac.il/~rosenfa/",
+			"googleLink": "https://scholar.google.co.il/citations?user=-cHvrVgAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "We propose a new definition for FS stability analysis and show how it outperform the classical metrics.",
+		"start_month": 7,
+		"start_year": 2020,
+		"end_month": 1,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Optimal Filter And Embedding Feature Selection Ensemble For Explainable Machine Learning Models",
+		"participants": [
+		{
+			"name": "Avi Rosenfeld",
+			"title": "Ph.D.",
+			"role": "Advisor",
+			"websiteLink": "http://homedir.jct.ac.il/~rosenfa/",
+			"googleLink": "https://scholar.google.co.il/citations?user=-cHvrVgAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "We propose a meta-meta search algorithm for automatic machine learning, focusing on Filter and Embedded feature selection.",
+		"start_month": 7,
+		"start_year": 2020,
+		"end_month": 1,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "The Influence Of Lockdown Due To Pandemic On The Population’s Mental Health",
+		"participants": [
+		{
+			"name": "Noa Vardi",
+			"title": "M.A.",
+			"role": "Co-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "We analyze historical data about the COVID-19 pandemic in Israel with epidimological, social, and mental health data.",
+		"start_month": 6,
+		"start_year": 2020,
+		"end_month": 2,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Stable Dataset Summarizing",
+		"participants": [
+		{
+			"name": "Amit Somech",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "https://u.cs.biu.ac.il/~somecha/",
+			"googleLink": "https://scholar.google.com/citations?user=GFIUo14AAAAJ",
+			"linkedinLink": ""
+		}],
+		"description": "We propose a new algorithm to summarize datasets for faster analysis pipelines.",
+		"start_month": 9,
+		"start_year": 2020,
+		"end_month": 2,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "High Resolution Mathematical Model for Airborne Pandemic Spread Indoors",
+		"participants": [
+		{
+			"name": "Ariel Alexi",
+			"title": "Mc.S.",
+			"role": "Lead-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "We investigate the influance of air circulation inside a room on the pandemic spread.",
+		"start_month": 1,
+		"start_year": 2022,
+		"end_month": 6,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "OMEGA",
+		"participants": [
+		{
+			"name": "Olga Chervova",
+			"title": "Ph.D.",
+			"role": "Mathematical Advisor",
+			"websiteLink": "http://www.homepages.ucl.ac.uk/~ucahoch/",
+			"googleLink": "https://scholar.google.co.uk/citations?user=UFGprt0AAAAJ&hl=en",
+			"linkedinLink": "https://www.linkedin.com/in/olga-chervova-65157574/?originalSubdomain=uk"
+		},
+		{
+			"name": "Stephan Beck",
+			"title": "Ph.D.",
+			"role": "Main Advisor",
+			"websiteLink": "https://iris.ucl.ac.uk/iris/browse/profile?upi=BECKX39",
+			"googleLink": "https://scholar.google.co.uk/citations?user=D2eEH-sAAAAJ&hl=en",
+			"linkedinLink": "https://www.linkedin.com/in/stephan-beck-21394314/?originalSubdomain=uk"
+		}],
+		"description": "We develop an algorithm to simulation pathogenic DNA sequences from healthy sequences.",
+		"start_month": 9,
+		"start_year": 2021,
+		"end_month": 8,
+		"end_year": 2022,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
 		"name": "A Better Prediction of the Non-Observed Economy in Israel",
 		"participants": [{
 			"name": "Labib Shami",
@@ -109,8 +487,8 @@
 		"description": "A new (more stable) mathematical model for estimating the non-observable economy. An empirical analysis for Israel is conducted.",
 		"start_month": 2,
 		"start_year": 2021,
-		"end_month": 10,
-		"end_year": 2021,
+		"end_month": 2,
+		"end_year": 2022,
 		"team_members": 2,
 		"relevant_resources": [
 		]
@@ -179,14 +557,14 @@
 		"description": "",
 		"start_month": 2,
 		"start_year": 2021,
-		"end_month": 6,
-		"end_year": 2021,
-		"team_members": 2,
+		"end_month": 1,
+		"end_year": 2022,
+		"team_members": 6,
 		"relevant_resources": [
 		]
 	},
 	{
-		"name": "Balanced Explainability-Performance Feature Selection Algorithm",
+		"name": "An Algorithm to Optimize Explainability using Feature Ensembles",
 		"participants": [
 		{
 			"name": "Roni Reznik",
@@ -225,8 +603,16 @@
 		"name": "The Connection Between Associative Distance and Rumination in Hebrew Speaking Individuals",
 		"participants": [{
 			"name": "Noa Vardi",
-			"title": "MA.",
-			"role": "psychology and brain researcher",
+			"title": "M.A.",
+			"role": "Lead-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		},
+		{
+			"name": "Mosha Bar",
+			"title": "Ph.D.",
+			"role": "Advisor",
 			"websiteLink": "",
 			"googleLink": "",
 			"linkedinLink": ""
@@ -234,9 +620,9 @@
 		"description": "Developing a machine learning model for words' associative distance (Hebrew). Based on this model, propusing new rumination test for clinical professionals.",
 		"start_month": 7,
 		"start_year": 2019,
-		"end_month": 1,
+		"end_month": 4,
 		"end_year": 2022,
-		"team_members": 2,
+		"team_members": 3,
 		"relevant_resources": [
 		]
 	},
@@ -367,6 +753,106 @@
 		"start_month": 3,
 		"start_year": 2021,
 		"end_month": 5,
+		"end_year": 2021,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Predicting the locaiton of metastates of lung cancer using the location of the original location",
+		"participants": [
+		{
+			"name": "Svetlana Bunimovich-Mendrazitsky",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
+			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "We develop a computer simulation in order to predict the locations of metastates in lung cancer.",
+		"start_month": 12,
+		"start_year": 2021,
+		"end_month": 5,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Simulating Street Level Birucrats Decision Making",
+		"participants": [
+		{
+			"name": "Nissim Cohen",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "https://nissimcohen.wixsite.com/homepage",
+			"googleLink": "https://scholar.google.co.il/citations?user=4vsdcOkAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "Not avalible yet.",
+		"start_month": 12,
+		"start_year": 2021,
+		"end_month": 3,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Simulating Street Level Birucrats Decision Making",
+		"participants": [
+		{
+			"name": "Nissim Cohen",
+			"title": "Ph.D.",
+			"role": "Co-author",
+			"websiteLink": "https://nissimcohen.wixsite.com/homepage",
+			"googleLink": "https://scholar.google.co.il/citations?user=4vsdcOkAAAAJ&hl=en",
+			"linkedinLink": ""
+		}],
+		"description": "Not avalible yet.",
+		"start_month": 12,
+		"start_year": 2021,
+		"end_month": 3,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Machine translation from Russian to English for Academic Papers",
+		"participants": [
+		{
+			"name": "Elizaveta Savchenko",
+			"title": "M.A.",
+			"role": "Lead-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "A dedicated ML model for machine translation from Russian to English for Academic papers.",
+		"start_month": 12,
+		"start_year": 2021,
+		"end_month": 4,
+		"end_year": 2022,
+		"team_members": 2,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "Computer Aided Functional Style Identification and Usage In Modern-Russian Texts",
+		"participants": [
+		{
+			"name": "Elizaveta Savchenko",
+			"title": "M.A.",
+			"role": "Lead-author",
+			"websiteLink": "",
+			"googleLink": "",
+			"linkedinLink": ""
+		}],
+		"description": "A deep learning model for functional style classification in Russian and a software to help humans to perform functional style corrections in a text",
+		"start_month": 9,
+		"start_year": 2021,
+		"end_month": 12,
 		"end_year": 2021,
 		"team_members": 2,
 		"relevant_resources": [
@@ -516,7 +1002,7 @@
 		]
 	},
 	{
-		"name": "Mathematical Model For Optimal International Tourism During A Pandemic",
+		"name": "Optimal Border Closure Policy and Tourism Flows During Epidemiological-Economic Crises: An Artificial Intelligence Approach.",
 		"participants": [
 		{
 			"name": "Svetlana Bunimovich-Mendrazitsky",
