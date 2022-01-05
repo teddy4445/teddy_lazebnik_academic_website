@@ -24,7 +24,7 @@
 		"start_month": 5,
 		"start_year": 2020,
 		"end_month": 6,
-		"end_year": 2021,
+		"end_year": 2022,
 		"team_members": 3,
 		"relevant_resources": [
 			
@@ -52,7 +52,35 @@
 		"start_month": 11,
 		"start_year": 2019,
 		"end_month": 3,
-		"end_year": 2021,
+		"end_year": 2022,
+		"team_members": 3,
+		"relevant_resources": [
+		]
+	},
+	{
+		"name": "OMEGA",
+		"participants": [
+		{
+			"name": "Olga Chervova",
+			"title": "Ph.D.",
+			"role": "Mathematical Advisor",
+			"websiteLink": "http://www.homepages.ucl.ac.uk/~ucahoch/",
+			"googleLink": "https://scholar.google.co.uk/citations?user=UFGprt0AAAAJ&hl=en",
+			"linkedinLink": "https://www.linkedin.com/in/olga-chervova-65157574/?originalSubdomain=uk"
+		},
+		{
+			"name": "Stephan Beck",
+			"title": "Ph.D.",
+			"role": "Main Advisor",
+			"websiteLink": "https://iris.ucl.ac.uk/iris/browse/profile?upi=BECKX39",
+			"googleLink": "https://scholar.google.co.uk/citations?user=D2eEH-sAAAAJ&hl=en",
+			"linkedinLink": "https://www.linkedin.com/in/stephan-beck-21394314/?originalSubdomain=uk"
+		}],
+		"description": "We develop an algorithm to simulation pathogenic DNA sequences from healthy sequences.",
+		"start_month": 9,
+		"start_year": 2021,
+		"end_month": 8,
+		"end_year": 2022,
 		"team_members": 3,
 		"relevant_resources": [
 		]
@@ -190,7 +218,7 @@
 		{
 			"name": "Ariel Alexi",
 			"title": "Mc.S.",
-			"role": "Co-author",
+			"role": "Lead-author",
 			"websiteLink": "",
 			"googleLink": "",
 			"linkedinLink": ""
@@ -198,7 +226,7 @@
 		{
 			"name": "Labib Shami",
 			"title": "Ph.D.",
-			"role": "Economist researcher",
+			"role": "Co-author",
 			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
 			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
 			"linkedinLink": ""
@@ -247,7 +275,7 @@
 			"googleLink": "",
 			"linkedinLink": ""
 		}],
-		"description": "",
+		"description": "Not avalible yet.",
 		"start_month": 3,
 		"start_year": 2021,
 		"end_month": 4,
@@ -313,7 +341,7 @@
 		{
 			"name": "Ariel Alexi",
 			"title": "Ms.",
-			"role": "researcher",
+			"role": "co-author",
 			"websiteLink": "",
 			"googleLink": "",
 			"linkedinLink": "https://www.linkedin.com/in/ariel-alexi/"
@@ -332,7 +360,7 @@
 		"participants": [{
 			"name": "Labib Shami",
 			"title": "Ph.D.",
-			"role": "Economist researcher",
+			"role": "Lead-author",
 			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
 			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
 			"linkedinLink": ""
@@ -360,7 +388,7 @@
 		"description": "We propose a new definition for FS stability analysis and show how it outperform the classical metrics.",
 		"start_month": 7,
 		"start_year": 2020,
-		"end_month": 1,
+		"end_month": 2,
 		"end_year": 2022,
 		"team_members": 2,
 		"relevant_resources": [
@@ -380,7 +408,7 @@
 		"description": "We propose a meta-meta search algorithm for automatic machine learning, focusing on Filter and Embedded feature selection.",
 		"start_month": 7,
 		"start_year": 2020,
-		"end_month": 1,
+		"end_month": 2,
 		"end_year": 2022,
 		"team_members": 2,
 		"relevant_resources": [
@@ -447,34 +475,6 @@
 		]
 	},
 	{
-		"name": "OMEGA",
-		"participants": [
-		{
-			"name": "Olga Chervova",
-			"title": "Ph.D.",
-			"role": "Mathematical Advisor",
-			"websiteLink": "http://www.homepages.ucl.ac.uk/~ucahoch/",
-			"googleLink": "https://scholar.google.co.uk/citations?user=UFGprt0AAAAJ&hl=en",
-			"linkedinLink": "https://www.linkedin.com/in/olga-chervova-65157574/?originalSubdomain=uk"
-		},
-		{
-			"name": "Stephan Beck",
-			"title": "Ph.D.",
-			"role": "Main Advisor",
-			"websiteLink": "https://iris.ucl.ac.uk/iris/browse/profile?upi=BECKX39",
-			"googleLink": "https://scholar.google.co.uk/citations?user=D2eEH-sAAAAJ&hl=en",
-			"linkedinLink": "https://www.linkedin.com/in/stephan-beck-21394314/?originalSubdomain=uk"
-		}],
-		"description": "We develop an algorithm to simulation pathogenic DNA sequences from healthy sequences.",
-		"start_month": 9,
-		"start_year": 2021,
-		"end_month": 8,
-		"end_year": 2022,
-		"team_members": 3,
-		"relevant_resources": [
-		]
-	},
-	{
 		"name": "A Better Prediction of the Non-Observed Economy in Israel",
 		"participants": [{
 			"name": "Labib Shami",
@@ -506,7 +506,7 @@
 		"description": "",
 		"start_month": 10,
 		"start_year": 2021,
-		"end_month": 6,
+		"end_month": 4,
 		"end_year": 2022,
 		"team_members": 2,
 		"relevant_resources": [
@@ -557,7 +557,7 @@
 		"description": "",
 		"start_month": 2,
 		"start_year": 2021,
-		"end_month": 1,
+		"end_month": 2,
 		"end_year": 2022,
 		"team_members": 6,
 		"relevant_resources": [
@@ -759,7 +759,7 @@
 		]
 	},
 	{
-		"name": "Predicting the locaiton of metastates of lung cancer using the location of the original location",
+		"name": "Predicting the locaiton of metastates of lung cancer using the location of the primary tumor",
 		"participants": [
 		{
 			"name": "Svetlana Bunimovich-Mendrazitsky",
@@ -773,26 +773,6 @@
 		"start_month": 12,
 		"start_year": 2021,
 		"end_month": 5,
-		"end_year": 2022,
-		"team_members": 2,
-		"relevant_resources": [
-		]
-	},
-	{
-		"name": "Simulating Street Level Birucrats Decision Making",
-		"participants": [
-		{
-			"name": "Nissim Cohen",
-			"title": "Ph.D.",
-			"role": "Co-author",
-			"websiteLink": "https://nissimcohen.wixsite.com/homepage",
-			"googleLink": "https://scholar.google.co.il/citations?user=4vsdcOkAAAAJ&hl=en",
-			"linkedinLink": ""
-		}],
-		"description": "Not avalible yet.",
-		"start_month": 12,
-		"start_year": 2021,
-		"end_month": 3,
 		"end_year": 2022,
 		"team_members": 2,
 		"relevant_resources": [

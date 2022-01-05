@@ -54,9 +54,9 @@ class Resource extends Element
 
 		answer += '<div class="personal-row space-between align-items-center mobile-row-breaker">';
 		
-		for (var i = 0; i < this.fileLinks; i++)
+		for (var i = 0; i < this.fileLinks.length; i++)
 		{
-			if (this.fileLinks[1]["link"] != "" && this.fileLinks[1]["type"] + "" == "1")
+			if (this.fileLinks[i]["link"] != "" && this.fileLinks[i]["type"] + "" == "1")
 			{
 				answer += '<a href="' + this.fileLinks[i]["link"] + '" class="download-btn acadmic-card-margin-fix">' + this.fileLinks[i]["info"] + '</a>';
 			}

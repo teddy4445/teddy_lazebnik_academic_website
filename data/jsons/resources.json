@@ -1,5 +1,18 @@
 {
   "resources":[
+    {
+      "name":"Lightweight JS pathfinding genetic programming",
+      "description":"The idea is to present light weight (Java Script written) genetic programming. There are graphs (using Google's API) for monitoring the optimization process and game-link controlers to control the parameters of the evaluations.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://bitbucket.org/teddy_lazebnik/js-path-finding-genetic-programming/src/master/"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T.",
+      "year": 2021,
+      "topic":"machine learning",
+      "type":"code"
+    },
 	{
       "name":"Medical Flow Graph Creator",
       "description":"Medical flow graph creator for the PKPD graph-based simulation, allowing to create with simple GUI an in-vivo flow graph using the P5.js library.",
@@ -11,6 +24,32 @@
       "authors": "Lazebnik, T.",
       "year": 2020,
       "topic":"meta development",
+      "type":"code"
+    },
+    {
+      "name":"Infinite run game in Unity (C#)",
+      "description":"An Indine game made in Unity (C#) of 3d infinity runer taking place in space. A smart memory management by creating and destraction of objects according to the potentional pathes of the user is included.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/ArielA147/Space-temple-run"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Alexi, A., Spitzer, N., Lazebnik, T.",
+      "year": 2019,
+      "topic":"games",
+      "type":"code"
+    },
+	{
+      "name":"The OCTI board game with several levels of AI players",
+      "description":"The OCTI board game with nice UI-UX and several levels of AI players.",
+      "recommendation":"",
+      "fileLinks":[
+         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/octi_board_game"},
+         {"info": "cite", "type": 3, "link": ""}
+       ],
+      "authors": "Lazebnik, T., Krongauz. D.",
+      "year": 2018,
+      "topic":"machine learning",
       "type":"code"
     },
 	{
@@ -26,32 +65,6 @@
       "topic":"math",
       "type":"course summary"
     },
-	{
-      "name":"The OCTI board game with several levels of AI players",
-      "description":"The OCTI board game with nice UI-UX and several levels of AI players.",
-      "recommendation":"",
-      "fileLinks":[
-         {"info": "Project", "type": 1, "link": "https://github.com/teddy4445/octi_board_game"},
-         {"info": "cite", "type": 3, "link": ""}
-       ],
-      "authors": "Lazebnik, T., Krongauz. D.",
-      "year": 2018,
-      "topic":"machine learning",
-      "type":"code"
-    },
-    {
-      "name":"Lightweight JS pathfinding genetic programming",
-      "description":"The idea is to present light weight (Java Script written) genetic programming. There are graphs (using Google's API) for monitoring the optimization process and game-link controlers to control the parameters of the evaluations.",
-      "recommendation":"",
-      "fileLinks":[
-         {"info": "Project", "type": 1, "link": "https://bitbucket.org/teddy_lazebnik/js-path-finding-genetic-programming/src/master/"},
-         {"info": "cite", "type": 3, "link": ""}
-       ],
-      "authors": "Lazebnik, T.",
-      "year": 2021,
-      "topic":"machine learning",
-      "type":"code"
-    },
     {
       "name":"A python class generator",
       "description":"Allowing to build a class file using code for on-run class generation and meta-class analysis.",
@@ -63,19 +76,6 @@
       "authors": "Lazebnik, T.",
       "year": 2018,
       "topic":"meta development",
-      "type":"code"
-    },
-    {
-      "name":"Infinite run game in Unity (C#)",
-      "description":"An Indine game made in Unity (C#) of 3d infinity runer taking place in space. A smart memory management by creating and destraction of objects according to the potentional pathes of the user is included.",
-      "recommendation":"",
-      "fileLinks":[
-         {"info": "Project", "type": 1, "link": "https://github.com/ArielA147/Space-temple-run"},
-         {"info": "cite", "type": 3, "link": ""}
-       ],
-      "authors": "Alexi, A., Spitzer, N., Lazebnik, T.",
-      "year": 2019,
-      "topic":"games",
       "type":"code"
     },
     {
