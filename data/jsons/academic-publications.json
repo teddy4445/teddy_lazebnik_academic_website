@@ -1,6 +1,18 @@
 {
    "publications":[
       {
+         "name":"Computer aided functional style identifcation and correction in modern russian texts",
+         "description":"Functional style (FS) identification is a classification task in linguistics that categorizes unrestricted texts into several categories of linguistic norms. FS is widely used to attain a satisfying outcome in style processing. As such, we train a deep learning attention neural network model on modern-Russian texts, divide them into four FS categories. The model obtained an accuracy of 0.72. In particular, 81.08% and 85.71% accuracy in classifying the artistic and academic FS. The proposed model is able to automate the FS identification process and aids both domain experts and non-domain experts to perform FS correction by highlighting style anomalies concerning a desired style for the text. In particular, we show a 34% and 31% average improvement in the duration of performing the style correction task. Moreover, domain experts and non-domain experts obtain 3% and 9% more accurate results, respectively.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/liza_paper.pdf"},
+					  {"info": "cite", "type": 3, "link": "Savchenko, E., Lazebnik, T., Computer aided functional style identifcation and correction in modern russian texts. Journal of Data, Information and Management. 2022."}],
+		 "authors": "Teddy Lazebnik, Ariel Alexi",
+         "year": 2022,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Journal of Data, Information and Management",
+         "publicationStatus":"Published"
+      },
+      {
          "name":"Comparison of pandemic intervention policies in several building types using heterogeneous population model",
          "description":"In a world where pandemics are a matter of time and increasing urbanization of the world’s population, governments should be prepared with pandemic intervention policies (IPs) to minimize the crisis direct and indirect adverse effects while keeping normal life as much as possible. Successful pandemic IPs have to take into consideration the heterogeneous behavior of individuals in different types of buildings and social contexts. In this study, we propose a spatio-temporal, heterogeneous population model and in silico simulation to evaluate pandemic IPs in four types of buildings - home, office, school, and mall. We show that indeed each building type has a unique pandemic spread and therefore a different optimal IP. Moreover, we show that temporal-based IPs (such as mask wearing) have a similar influence on the pandemic spread in all four building types while spatial-based IPs (such as social distance) highly differ.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/indoor_pandemic.pdf"},
