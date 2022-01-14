@@ -97,6 +97,18 @@
          "publicationStatus":"Published"
       },
       {
+         "name":"Mathematical Model for the BCG-based Treatment of Type 1Diabetes",
+         "description":"We introduces a model of immunotherapy treatment, namely the Bacillus Calmette-Guerin (BCG) vac-cine, of type 1 diabetes (T1D).",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/abstract_for_DSABNS_2022_conference.pdf"},
+					  {"info": "cite", "type": 3, "link": ""}],
+		 "authors": "Teddy Lazebnik and Svetlana Bunimovich-Mendrazitsky",
+         "year": 2022,
+         "topic":"Biomathematics",
+         "type":"Abstract",
+         "publisher":"Dynamical Systems Applied To Biology And Natural Sceine",
+         "publicationStatus":"Published"
+      },
+      {
          "name":"Epidemiological-Economical Pandemic Management By A Spatio-Temporal Mathematical Model",
          "description":"We present a model that considers the severity of the disease and the heterogeneity of contacts between the population in complex space-time dynamics.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/abstract_for_DSABNS_2021_conference.pdf"},
