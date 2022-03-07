@@ -6,17 +6,17 @@ The Promise and Limitations of Cell-Cell Mathematical Models in Cancer Treatment
 <hr class="publications-hr">
 <p>
 	Mathematical Models are known for decades to be a powerful tool to study, understand, and predict natural processes. 
-	Moreover, as computational power becoming more accessible and affordable, mathematical models become more popular and useful over time.
+	Moreover, as computational power becomes more accessible and affordable, mathematical models become more popular and useful over time.
 	Indeed, one can find mathematical models to be in the heart of multiple products and ideas in our daily life without even noticing. 
-	Do you need an example? When you waiting for the traffic lights it is the shortest time that promises optimal flow of movment in the road. 
-	Maybe you are waiting for the end of the news to know the weather for tomorrow. This is just two examples from uncountable amount souranding us. 
+	Do you need an example? When you wait for the traffic lights it is the shortest time that promises optimal flow of movement in the road. 
+	Maybe you are waiting for the end of the news to know the weather for tomorrow. These are just two examples from an uncountable amount sounding us. 
 </p>
 <p>
-	It is not a superise that mathemtics also entered the healthcare domain, one of the most important domains we have in our life according to the average persion on the street (Did not formally chcked, so just a guess for now).  
-	Since healthcare and clinics are large fields of knowledge, it is hard and out of the scope of this text to pinpoint the contribution of the mathematical science in recent developments.
-	Nonetheless, a large body of work focus on mathematical modeling of cancer development and treatment [1].
-	It is fair to say that these models contributed to the development of drugs and improvment of treatment protocols. However, they are no without flaws.
-	As such, in this blog-post I would like to present a quick overview of the promise and limitations of cell-cell mathematical models in cancer treatment.
+	It is not a wonder that mathematics also entered the healthcare domain, one of the most important domains we have in our life according to the average person on the street (Did not formally check, so just a guess for now).  
+	Since healthcare and clinics are large fields of knowledge, it is hard and out of the scope of this text to pinpoint the contribution of mathematical science in recent developments.
+	Nonetheless, a large body of work focuses on mathematical modeling of cancer development and treatment [1].
+	It is fair to say that these models contributed to the development of drugs and the improvement of treatment protocols. However, they are not without flaws.
+	As such, in this blog post, I would like to present a quick overview of the promise and limitations of cell-cell mathematical models in cancer treatment.
 </p>
 <h4>Background</h4>
 <p>
@@ -32,46 +32,62 @@ The Promise and Limitations of Cell-Cell Mathematical Models in Cancer Treatment
 </p>
 <p>
 	As such, early modeling attempts focused on the tumor growth dynamics while trying to understand how <i>normal</i> cells can mutate into cancer cells.
-	More recently, biological come to the conclusion that oversimplified concept of a single type of normal cell is inadequate. 
-	Hence, the models extended accordily to include interactions among multiple cell types and chemicals play fundamental roles in the initiation and progression of tumors.
-	To accuratly represnent the bio-clinical dynamics, the tumor <i>microenvironment</i> included multiple cell types with unique rules and properties.
+	More recently, biological come to the conclusion that the oversimplified concept of a single type of normal cell is inadequate. 
+	Hence, the models extended accordingly to include interactions among multiple cell types and chemicals play fundamental roles in the initiation and progression of tumors.
+	To accurately represent the bio-clinical dynamics, the tumor <i>microenvironment</i> included multiple cell types with unique rules and properties.
 	For example, immune cells, fibroblasts, endothelial cells, signaling molecules, and tumor cells.
 </p>
 <p>
-	Due to the large number of components, intreactions between them, and the over time changing dynamics,  
+	Due to a large number of components, interactions between them, and the overtime changing dynamics,  
 	understanding these interactions sufficiently to derive cancer immunotherapies, has proven a very challenging task [2].
-	As a tool to tackle this challenge, researchers have used mathematical models, mainly based on the cell-cell interaction of cell population as function of their size.
-	These model more often than not described by ordinary differential equations (ODEs for short).
+	As a tool to tackle this challenge, researchers have used mathematical models, mainly based on the cell-cell interaction of cell populations as a function of their size.
+	These models are more often than not described by ordinary differential equations (ODEs for short).
 </p>
-<h4>Examples of Models</h4>
+<h4>Examples</h4>
 <p>
-	
+	Kiselyov et al. [3] modeled and investigated intravesical Bacillus Calmette–Guerin (BCG) based treatment for non-muscle invasive bladder carcinoma (NMIBC) in order to prevent recurrence and progression of cancer. 
+	The authors used a cell-cell model with a pre-/post-BCG treatment classification of biological markers. To name a few, the authors used clinical pathologies such as tumor size, patient's age, tumor stage, and a number of tumor polyps.
+	From a cellular point of view, the cellular proliferation Ki-67 parameter was used along with others. 
 </p>
 <p>
-	
+	Arciero et al. [4] presented a mathematical model that describes the growth, immune escape, and siRNA treatment of tumors. 
+	The proposed model consists of a system of nonlinear ODEs describing tumor cells and immune effectors, as well as the immuno-stimulatory and suppressive cytokines IL-2 and TGF-beta.
+	The authors developed a computer simulation that stimulates tumor growth by promoting angiogenesis, explaining the inclusion of an angiogenic switch mechanism for TGF-beta activity, predicting that increasing the rate of TGF-beta production for reasonable values of tumor antigenicity enhances tumor growth and its ability to escape host detection. 
+</p>
+<p>
+	Novak and Tyson [5] constructed a mathematical model for the regulation of the Restriction Point based on the Cyclin/CDK
+	complexes, the Rb-E2F interaction and the signal-transduction pathway, Growth Factors–Early response genes–Delayed response genes. 
+	The authors assumed rapid message turnover for mRNA, which occurs in a longer time scale.
+	One of the most important features of this model is the growth and division simulation of the cell.
+	The rate of mass is determined by the level of <i>General machinery</i>, controlled by the concentration of Retinoblastoma Protein and the absence of growth factors.
 </p>
 <h4>The Promise</h4>
 <p>
-	
+	Cell-cell models exploit biological and clinical knowledge to capture complex dynamics in a relatively straightforward way.
 </p>
 <p>
-	
-</p>
-<p>
-	
-</p>
-<p>
-	
+	Of note, as machine learning (ML) becomes more popular by the day, ODE-based models are providing a feasible alternative.
+	ODE-based models (and others in the same category) are outperforming ML models on three fronts: 
+	1) <b>Low-data</b>. Since the ODE-based model performs fitting rather than learning, they require just a small sample to converge into a useful model while ML-based models are usually required at least hundreds to thousands of samples which are extremely hard to obtain especially in clinical settings.
+	2) <b>Explainable</b>. ODE-based models by definition are explainable. I will not argue that it is easy to understand or use them but with the right training, it is possible. On the other hand, ML-based models are often inexplainable by nature. 
+	It would be fair to say the explainable-ML is a hot topic nowadays and multiple companies and labs all over the world are trying to achieve results in this direction. Nonetheless, currently, we are far from both high-performance and explainable ML models.
+	3) <b>Inexpensive computation</b>. As training and even using ML models require a lot of computational power, ODE-based models are usually based on simple computation that is known how to be optimized for some time already. Again, more computation-efficient ML models are promised to become available in the near future but it would be naive to assume they will be as computation-efficient as ODE-based models any time soon.
 </p>
 <h4>The Limitations</h4>
 <p>
-	
+	Cell-cell models usually assume the dynamics taking place in an isolated system where no other processes are taking place and affecting the results.
+	As such, cross-body dynamics are usually neglected. This results in highly specific modeling of the body's systems in a narrow context.
+	In the same manner, as the different processes are not taken into consideration, global and local changes over time as a result of verses activities.
 </p>
 <p>
-	
+	In addition, due to the complexity of gathering clinical data and numerically solving large scale and complex models, most of the models were developed and evaluated for an <b>average</b> person.
+	This practice is common in medical studies on the one hand. On the other hand, as time goes by, researchers better understand the shortcomings of these approaches. 
+	The main issue is that this hypothetical average person does not exist and if it does, 99.99 percent chance it is not you. As such, almost all the cases will obtain a sub-optimal treatment using such as model.
+	The novel model should do the extra mile and proposed a personalization option of their results given the required data, even if it is not available at the time of the model development.
 </p>
 <p>
-	
+	Moreover, most of the cell-cell models are not taking into consideration the spatial dynamics of cell-cell interaction and the influence of distances in chemical, biological, and physical interactions between cells populations.
+	Recent studies show that these dynamics have a non-neglected effect on the biological dynamics and can greatly alter a model's results.
 </p>
 <p>
 	
@@ -79,7 +95,7 @@ The Promise and Limitations of Cell-Cell Mathematical Models in Cancer Treatment
 <h4>Summary</h4>
 <p>
 	Cell-cell interaction models can fairly represent the biological and clinical processes in general and for oncological patients in particular.
-	Current model starting to take into considuation the spatial effect of cells and organs but much more research should be conducted so we fully understand and be able to model these dynamics.
+	The current model starting to take into consideration the spatial effect of cells and organs but much more research should be conducted so we fully understand and be able to model these dynamics.
 </p>
 <h4>Call for papers - Cells (3.2022-9.2022)</h4>
 <p>
@@ -94,5 +110,7 @@ The Promise and Limitations of Cell-Cell Mathematical Models in Cancer Treatment
 <ol style="margin-left: 20px; line-height: 1.5 !important; margin-bottom: 1.7rem; font-size: 1.1rem !important; font-weight: 400; color: #212529;">
 	<li>R. Eftimie, J. L. Bramson. "Interactions Between the Immune System and Cancer: ABrief Review of Non-spatial Mathematical Models". Bullten Mathematical Biology. 2011; 73, 2-32. </li>
 	<li>T. Gajewski. "Failure at the effector phase: immune barriers at the level of melanoma tumor microenvironment". Clin. Cancer Res. 2011; 13:18, 5256-5261. </li>
+	<li>A. Kiselyov, S. Bunimovich-Mendrazitsky, V. Startsev. "Treatment of non-muscle invasive bladder cancer with Bacillus Calmette–Guerin (BCG): Biological markers and simulation studies". BBA Clinical. 2015; 4, 27-34. </li>
+	<li>J. Arciero, T. Jackson, D. Kirschner. "A mathematical model of tumor-immune evasion and siRNA treatment". Discrete Contin. Dyn. Syst., Ser. B. 2004; 4:1, 39-58. </li>
+	<li>B. Novak, J. J. Tyson. "A model for restriction point control of the mammalian cell cycle". J. Theor. Biol 2004; 230, 563-579. </li>
 </ol>
-
