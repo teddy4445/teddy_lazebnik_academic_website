@@ -233,6 +233,15 @@
 		 "month": 12,
 		 "day": 5,
 		 "order": 26
+      },
+      {
+         "title":"The Promise and Limitations of Cell-Cell Mathematical Models in Cancer Treatment",
+         "description":"Cell-cell interaction models can fairly represent the biological and clinical processes in general and for oncological patients in particular. The current model is starting to take into consideration the spatial effect of cells and organs but much more research should be conducted so we fully understand and be able to model these dynamics. ",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "27"}],
+		 "year": 2022,
+		 "month": 3,
+		 "day": 15,
+		 "order": 27
       }
 	]
 }
