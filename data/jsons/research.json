@@ -3,61 +3,6 @@
 	"open_positions": [
 	],
 	"projects": [{
-		"name": "Generic Purpose Pharmacokinetics-Pharmacodynamics Mathematical Model For Nanomedicine Targeted Drug Delivery: Mouse Model",
-		"participants": [{
-			"name": "Gal A. Kaminka",
-			"title": "Ph.D.",
-			"role": "Main Advisor",
-			"websiteLink": "https://u.cs.biu.ac.il/~galk/",
-			"googleLink": "https://scholar.google.co.il/citations?user=AyzlRJwAAAAJ&hl=en",
-			"linkedinLink": ""
-		},
-		{
-			"name": "Hanna Wietman",
-			"title": "Ph.D.",
-			"role": "Nanoparticles Advisor",
-			"websiteLink": "",
-			"googleLink": "",
-			"linkedinLink": ""
-		}],
-		"description": "An improved simulation of medical nanoparticles-based targeted drug delivery using more accurate flow dynamics and Pharmacokinetics in different organs in a mouse.",
-		"start_month": 5,
-		"start_year": 2020,
-		"end_month": 6,
-		"end_year": 2022,
-		"team_members": 3,
-		"relevant_resources": [
-			
-		]
-	},
-	{
-		"name": "Graph-Based Pharmacokinetics-Pharmadynamics Modeling for Large Scale Systems: Nanoparticles Case",
-		"participants": [{
-			"name": "Gal A. Kaminka",
-			"title": "Ph.D.",
-			"role": "Main Advisor",
-			"websiteLink": "https://u.cs.biu.ac.il/~galk/",
-			"googleLink": "https://scholar.google.co.il/citations?user=AyzlRJwAAAAJ&hl=en",
-			"linkedinLink": ""
-		},
-		{
-			"name": "Hanna Wietman",
-			"title": "Ph.D.",
-			"role": "Nanoparticles Advisor",
-			"websiteLink": "",
-			"googleLink": "",
-			"linkedinLink": ""
-		}],
-		"description": "Providing a graph-base model for large scale in vivo pharmacokinetics-pharmadynamics nanoparticles for the drug delivery case.",
-		"start_month": 11,
-		"start_year": 2019,
-		"end_month": 3,
-		"end_year": 2022,
-		"team_members": 3,
-		"relevant_resources": [
-		]
-	},
-	{
 		"name": "OMEGA",
 		"participants": [
 		{
