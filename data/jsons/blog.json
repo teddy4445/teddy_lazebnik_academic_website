@@ -242,6 +242,15 @@
 		 "month": 3,
 		 "day": 15,
 		 "order": 27
+      },
+      {
+         "title":"Automatic Distribution Fitting of Tabular Data using the Simulated Annealing Algorithm",
+         "description":"Allocating a parametric distribution to features in tabular data is a well-known problem for all data analysis as this provides a wide range of abilities such as better explainability, generation of new samples, and better picking of classification and regressions models using meta-learning. In this study, we propose a simulated annealing approach to allocate a parametric distribution for features, obtaining the optimal distribution and its parameters. We show that the proposed approach performs on average similar to the commonly used brute force with maximum likelihood approach even for simple distributions such as uniform and normal distributions. ",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "28"}],
+		 "year": 2022,
+		 "month": 4,
+		 "day": 1,
+		 "order": 28
       }
 	]
 }

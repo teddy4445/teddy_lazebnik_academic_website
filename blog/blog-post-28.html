@@ -1,0 +1,167 @@
+<h1>
+Automatic Distribution Fitting of Tabular Data using the Simulated Annealing Algorithm
+</h1>
+<hr class="publications-hr">
+1/4/2022
+<hr class="publications-hr">
+<h4>(1) Introduction</h4>
+<p>
+	A central problem in data analysis in general and in the development of machine learning (ML) solutions, in particular, is to identify and quantify the behavior of features of the data [1]. One method to better grasp the behavior of a feature is by finding the parametric distribution that yields it [2].
+</p>
+<p>
+	Given a parametric distribution to feature, one can more easily define erroneous data. For example, by
+looking at the distribution one can detect outliers as the rule of ”too far from the mean” is analytically defined
+for most of the parametric distributions. Moreover, a computation of how noisy the data is can be achieved
+by computing the coefficient of determination between the parametric (analytical) and the sample (numerical)
+data. A higher coefficient of determination determines a less noisy signal.
+</p>
+<p>
+These capabilities are later used for a wide range of data analysis and ML-related tasks such as finding
+the most useful features for obtaining the optimal results in a classification or regression task [3]. This paper
+proposed a simulated annealing approach to fit a parametric distribution to each feature in a tabular state by
+defining a discrete-continuous search space of the distribution functions and their parameters.
+</p>
+<p>
+The blog post is organized as follows: Section 2 presents a short literature review of methods for fitting para-
+metric distribution to features, common parametric distributions, and the simulated annealing algorithm. In
+Section 3, we propose our novel simulated annealing based search approach for fitting parametric distribution
+to features. Section 4 describes the results of an empirical evaluation of the proposed approach and comparison
+to other methods. Section 5 concludes the blog post.
+</p>
+<h4>(2) Background</h4>
+<p>
+	Distributions related to engineering and technology, which attempt to model, for instance, the lifetime or time
+to failure of equipment, as well as in biology and pharmaceutics, have blossomed in recent years, driven by the
+fast increasing availability of sensor data and other large sources of quantifiable information. It is common to fit the different features constricting these datasets using the uniform and Gaussian (normal) distributions [4]
+since many data science methods rely on normally distributed data or residuals such as the K-Means and the
+Gaussian Mixture Model (GMM).
+</p>
+<p>
+	Nonetheless, to properly model real-world random processes, one needs to be able to identify and evaluate
+alternative random models due to the fact that multiple biological, social, engineering processes are not normally
+or uniformly distributed [5]. For example, the popular SciPy library (written in Python) contains 123 different
+distributions in which 103 are continuous and 19 are discrete [6].
+</p>
+<p>
+	Several algorithms have been proposed to tackle the challenge of fitting the optimal parametric distribution
+for features over the years [7, 8]. For instance, Nayar et al. [2] proposed a computer vision based method,
+treating the tabular data as a n-dimensional image. The authors used the geometrical topology associated with
+each distribution to test the fitness of each distribution to the data in a two-step procedure: finding candidates
+for the distribution with random parameter values and fine-tuning the distribution’s parameter values. Contrary,
+our approach assumes treats the distribution as a functional property rather than a geometrical configuration.
+</p>
+<p>
+	Another example is the approach proposed by Perkowski et al. [9] which assumes the distribution of each fea-
+ture can be computed using the decomposition of its function to a sequence of basic distribution functions. One
+such sequence is identified, one can treat it as a clustering problem in order to obtain the optimal distribution.
+Afterward, the parameters of the obtained distribution can be obtained by reverse-engineering the values for
+the decommission representation using any numerical method such as the Newton-Raphson algorithm [10]. In
+contrast, our approach assumes that the distribution and its parameters are cons tracing a discrete-continuous
+search space.
+</p>
+<h4>(3) Solutions</h4>
+<p>
+	Our solution is based on the SA algorithm which has several customization’s. First, we define the state space ($S$)
+	to be a discrete-continuous space in which the discrete part is the types of parametric distributions ($D$)
+	and the continuous is the union of all the parameters of these parametric distributions. Formally, $ S:= D \times \mathbb{R}^{\sum_{d \in D} p(d)} $
+	where $ p(d) $ is a functional that gets a parametric distribution function and returns the number of parameters it uses. Second, the cost function $J$ is defined to be the mean squared error between the theoretical distribution parmaters and the empirical data parameters performed on a given state
+	$i \in S$ and the feature's values. Third, the neighbors of a state $i \in S$ are defined to be all the other parametric distributions with the same parameter values. For the edge cases where more parameters are used in the neighbor state $j$ than the current state $i$, they can obtain any value. In a similar manner, in the case where fewer parameters are used in the neighbor state
+	$j$ than the current state $i$, they can be any subset of the parameters of $i$. Forth, the $q_{ij}$ are assumed to be uniformly distributed between all $j \in S(i)$.
+	Finally, the initial condition is chosen at random. The algorithms stop at the $t_f$ iteration, such that $t_f$ satisfies $T(t_f) = \epsilon$, where $\epsilon > 0$
+	is a real value as small as needed which indicates the minimal meaningful probability value to transform between two states $i$ and $j$. 
+</p>
+<h4>(4) Experimental Evaluation</h4>
+<p>
+	In order to evaluate the performance of the proposed approach, we computed both the fitting of the distribution to a known original distribution source and the computation time. First, we describe the experiment's setup including the comparison method and the <i>in silico</i> generated data. Second, we compare our proposed approach to the leading brute force with maximum likelihood. 
+</p>
+<p>
+	Since each fitting method can result in an error while approximating the original distribution that generated real data, we decided to randomly pick distributions, sample them in order to obtain a dataset. That way, we store as a meta-data the original distribution of each feature in the dataset, allowing, later on, to accurately evaluate and compare the performance of each approach. 
+</p>
+<p>
+	In practice, we generate 50 datasets with a random number of rows and columns ranging between [50, 5000]
+and [5, 15], respectively. For each column, we chose in random (with a uniform distribution) one distribution
+and its parameters.
+</p>
+<p>
+	For the proposed approach, we find the optimal hyperparameters by conducting a grid search on the average
+fitting score over all datasets. The implementation is written in Python3.7. On the other hand, the <i>naive</i>
+approach of the brute force with maximum likelihood is implemented in C++ and wrapped with a Python3 interface using the Scipy [6] library. We constrain the search space of the naive approach to the uniform and
+normal distributions (rather than the 123 available distributions) to fairly compare between the two approaches.
+</p>
+<p>
+	Of note, all the experiments were conducted on a PC with the Windows 10 professional operation system
+with Intel i7 (generation 8) and 8 gigabit RAM. At the time of the experiments, only the operating system and
+the test run of the device in order to avoid computation time error due to other processes running in parallel.
+</p>
+<p>
+	The results of the experiment are shown in the table below as mean $\pm$ standard deviation of the $n = 50$ datasets.
+</p>
+<div style="text-align: center; width: 100%;">
+	<table class="table table-hover">
+	  <thead>
+		<tr>
+		  <th scope="col">Dataset Type</th>
+		  <th scope="col">Naive time [s]</th>
+		  <th scope="col">SA time [s]</th>
+		  <th scope="col">Naive performance [1]</th>
+		  <th scope="col">SA performance [1]</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <th scope="row">Uniform</th>
+		  <td>$0.000228 \pm 0.005491$</td>
+		  <td>$0.000141 \pm 0.010347$</td>
+		  <td>$0.000000 \pm 0.000000$</td>
+		  <td>$0.017732 \pm 0.020400$</td>
+		</tr>
+		<tr>
+		  <th scope="row">Normal</th>
+		  <td>$0.000110 \pm 0.004287$</td>
+		  <td>$0.000123 \pm 0.005396$</td>
+		  <td>$0.031791 \pm 0.073414$</td>
+		  <td>$0.399185 \pm 0.250927$</td>
+		</tr>
+		<tr>
+		  <th scope="row">Combined</th>
+		  <td>$0.000226 \pm 0.003748$</td>
+		  <td>$0.000196 \pm 0.004598$</td>
+		  <td>$0.021556 \pm 0.104323$</td>
+		  <td>$0.183447 \pm 0.265312$</td>
+		</tr>
+	  </tbody>
+	</table>
+</div>
+<h4>(5) Conclusion</h4>
+<p>
+	In this work, we proposed a SA approach for fitting parametric distributions for tabular data. We compared the proposed approach to the commonly used brute force with maximum likelihood (e.g., naive) approach, revealing a similar performance in in the computation time metric, with both methods finishing within fractions of a second. However, the Naive approach outperformed the SA algorithm accuracy of the fitting both for Uniform and Normal distribution type data-sets, as shown in the table above.
+</p>
+<p>
+	We believe that one reason of the worse performance of the SA  approach is the discrete nature of the search domain, that combines discrete distribution types with continues parameter fitting. Furthermore, we encountered a major challenge in choosing the suitable <i>goodness-of-fit</i> function that represent the energy in SA. Initially, we chose the Kolmogorov-Smirnov test, that can be used as a <i>goodness-of-fit</i> test, comparing the equality of a data sample to a presumed theoretical probability distribution. However, the p-value returned by test was not sensitive enough, with value equals exactly zero, unless the distribution parameters were highly fitting the data. The test statistic $D$, representing the largest difference between the cumulative distribution functions of the theoretical distribution function and the data sample, was some what better however the SA still did not converge to the correct distribution for most conducted runs. As a result, we had to switch to the SSE method comparing the function parameters to the sample parameters directly. 
+	In addition the naive approach would be a better choice as it theoretically guaranteed to obtain the best distribution while the SA approach does not due to its stochastic nature. 
+</p>
+<p>
+	As future work, one can extend the proposed experiment by taking into consideration a wider range of both continuous and discrete distributions. In this case, an implementation of both approaches in the same programming language would result in a more accurate computing time comparison. Moreover, in the proposed work we used the standard temperature function which can be altered to a more appropriate function that takes advantage of the space of distributions.
+</p>
+
+<h4>Acknowledgement</h4>
+<p>
+	Most of the work done for this blog post has been performed by <a href="https://www.linkedin.com/in/david-krongauz-2a9980159/">David Krongauz</a>.
+	David is M.Sc candidate in the Computer Science Deptartment In Bar Ilan University. His research focues on vision-based swarm collective motion (insipred by the transfomation of grasshoppers to locusts)
+</p>
+
+<h3>References</h3>
+<ol style="margin-left: 20px; line-height: 1.5 !important; margin-bottom: 1.7rem; font-size: 1.1rem !important; font-weight: 400; color: #212529;">
+	<li>L. C. Molina, L. Belanche, and A. Nebot. “Feature selection algorithms: a survey and experimental evaluation”. In: 2002 IEEE International Conference on Data Mining. 2002, pp. 306–313.</li>
+	<li>S.K. Nayar, S. Baker, and H. Murase. “Parametric feature detection”. In: Proceedings CVPR IEEE Computer Society Conference on Computer Vision and Pattern Recognition. 1996, pp. 471–477. doi: 10.1109/CVPR.1996.517114. </li>
+	<li>G. Chandrashekar and F. Sahin. “A survey on feature selection methods”. In: Computers Electrical Engineering 40.1 (2014), pp. 16–28. </li>
+	<li>S. Nadrajah. “A generalized normal distribution”. In: Journal of Applied Statistics 32.7 (2005), pp. 685–694. doi: 10.1080/02664760500079464. </li>
+	<li>L. G. M. Baas Becking and E. F. Drion. “On the origin of frequency distributions in biology”. In: Acta Biotheoretica 1 (1936), pp. 133–150. doi: 10.1007/BF02147636. </li>
+	<li>P. Virtanen, R. Gommers, and T.E. et al. Oliphant. “SciPy 1.0: fundamental algorithms for scientific computing in Python”. In: Nat Methods 17 (2020), pp. 261–272. doi: 10.1038/s41592-019-0686-2. </li>
+	<li>L. Yang and M. Wang. “Sample-Optimal Parametric Q-Learning Using Linearly Additive Features”. In: Proceedings of the 36th International Conference on Machine Learning 97 (2019), pp. 6995–7004. </li>
+	<li>D. R. Cox and C. Kartsonaki. “The fitting of complex parametric models”. In: Proceedings of the 36th International Conference on Machine Learning 99.3 (2012), pp. 741–747. </li>
+	<li>M. A. Perkowski and S. Grygiel. “A Survery of Literature on Function Decomposition Version”. In: Portland State University (1995), pp. 53–59. </li>
+	<li>T. J. Ypma. “Historical Development of the Newton–Raphson Method”. In: SIAM Rev 37.4 (1995), pp. 531–551.</li>
+	<li>R. Davidson and D. Harel. “Drawing graphs nicely using simulated annealing”. In: ACM Transactions on Graphics 15.4 (1996), pp. 301–331.</li>
+	<li>J. C. J. H. Aerts and G. B. M. Heuvelink. “Using simulated annealing for resource allocation”. In: ACM Transactions on Graphics 16.6 (2002), pp. 571–587.</li>
+</ol>
