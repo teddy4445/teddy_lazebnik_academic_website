@@ -1,6 +1,17 @@
 {
    "publications":[
 	{
+         "name":"Generic approach for mathematical model of multi-strain pandemics",
+         "description":"Multi-strain pandemics have emerged as a major concern. We introduce a new model for assessing the connection between multi-strain pandemics and mortality rate, basic reproduction number, and maximum infected individuals. The proposed model provides a general mathematical approach for representing multi-strain pandemics, generalizing for an arbitrary number of strains. We show that the proposed model fits well with epidemiological historical world health data over a long time period. From a theoretical point of view, we show that the increasing number of strains increases logarithmically the maximum number of infected individuals and the mean mortality rate. Moreover, the mean basic reproduction number is statistically identical to the single, most aggressive pandemic strain for multi-strain pandemics.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/multi_strain_model.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Generic approach for mathematical model of multi-strain pandemics. Plos One. 2022."}],
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky",
+         "year": 2022,
+         "topic":"Epidemiology",
+         "type":"Paper",
+         "publisher":"PLOS ONE",
+         "publicationStatus":"Published"
+      },
          "name":"A distinction of three online learning pedagogic paradigms",
          "description":"Online (web-based) courses emerged at the beginning of the twenty-first century. While this new pedagogic paradigm (PP) holds a promise of better learning and training, it comes with challenges as traditional PPs are not suited to the new settings which highly differ from the physical classroom methods. We studied three online PPs (Synchronous, Asynchronous, and Asynchronous with an audience) and their influence on the students learning process and achievements during an academic mathematics course that was conducted online. 168 students took an exam and answered a questionnaire regarding their learning preferences, experience, and habits after experiencing one of these PPs. We found that students who studied according to the asynchronous with an audience PP achieved a higher score in the exam, regardless of their initial level than students who learned by either the synchronous or asynchronous PPs. In addition, we developed a personalized model based on machine learning methods that match an online PP for each student to maximize the student’s score in the exam. In the case of an academic mathematical course, the online PP had a major influence on the students’ scores in the exam. We found that students with high grades in previous courses preferred synchronous learning, which indicates the importance of picking the right online PP for each student. Our model provides a novel tool for the pedagogic community to personalize online learning by recommending the PP that could be most suitable for each student.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/remote_learning_paper.pdf"},
