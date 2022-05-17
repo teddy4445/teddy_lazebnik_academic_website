@@ -30,19 +30,19 @@
          "type":"Paper",
          "publisher":"PLOS ONE",
          "publicationStatus":"Published"
-      },
-      {
-         "name":"Improved geometric configuration for the bladder cancer BCG-based immunotherapy treatment model",
-         "description":"We present an extension to the model proposed by Lazebnik et al. (2021) by improving the approximation of the bladder’s geometry from sphere-ring to ellipsoid-ring [2]. We show the differences between the models on the clinical results and their influence on the optimal treatment protocol.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/ISMCO_2021.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Improved geometric configuration for the bladder cancer BCG-based immunotherapy treatment model. International Symposium on Mathematical and Computational Oncology. 2021, pp. 63-67."}],
-		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky",
-         "year": 2021,
-         "topic":"Epidemiology",
-         "type":"Conference",
-         "publisher":"International Symposium on Mathematical and Computational Oncology",
-         "publicationStatus":"Published"
-      }
+      },	  
+		{
+		 "name":"Predicting acute kidney injury following open partial nephrectomy treatment using SAT-pruned explainable machine learning model",
+		 "description":"Background: One of the most prevalent complications of Partial Nephrectomy (PN) is Acute Kidney Injury (AKI), which could have a negative impact on subsequent renal function and occurs in up to 24.3% of patients undergoing PN. The aim of this study was to predict the occurrence of AKI following PN using preoperative parameters by applying machine learning algorithms. Methods We included all adult patients (n = 723) who underwent open PN in our department since 1995 and on whom we have data on the pre-operative renal function. We developed a random forest (RF) model with Boolean satisfaction-based pruned decision trees for binary classification (AKI or non-AKI). Hyper-parameter grid search was performed to optimize the model's performance. Fivefold cross-validation was applied to evaluate the model. We implemented a RF model with greedy feature selection to binary classify AKI and non-AKI cases based on pre-operative data. Results The best model obtained a 0.69 precision and 0.69 recall in classifying the AKI and non-AKI groups on average (k = 5). In addition, the model's probability to correctly classify a new prediction is 0.75. The proposed model is available as an online calculator. Conclusions Our model predicts the occurrence of AKI following open PN with (75%) accuracy. We plan to externally validate this model and modify it to minimally-invasive PN.",
+		 "fileLinks":[{"info": "download", "type": 1, "link": "/files/aki_paper.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bahouth, Z., Bunimovich-Mendrazitsky, S., Halachmi, S., Predicting acute kidney injury following open partial nephrectomy treatment using SAT-pruned explainable machine learning model. BMC Medical Informatics and Decision Making. 2022."}],
+		 "authors": "Teddy Lazebnik, Zaher Bahouth, Svetlana Bunimovich-Mendrazitsky, Sarel Halachmi",
+		 "year": 2022,
+		 "topic":"Machine learning",
+		 "type":"Paper",
+		 "publisher":"BMC Medical Informatics and Decision Making",
+		 "publicationStatus":"Published"
+		}
    ],
    "currentProjects":[
       {
