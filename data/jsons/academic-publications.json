@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Providing Safe Space for Honest Mistakes in the Public Sector Is the Most Important Predictor for Work Engagement after Strategic Clarity",
+         "description":"Multiple studies highlight the link between engagement at work and performance, influencing organizations to put more effort into improving employee engagement levels. In this study, we begin to examine the influence of multiple psychological parameters on employees’ work engagement (WE) within the public sector. The idea is to break the concept of WE down into eight individually measurable parameters that will allow for a better understanding and development of stronger interventions. Based on this analysis, we reproduce the outcome that strategic clarity is the most connected property to WE. More importantly, we introduce a new concept, honest mistakes, and show that having a safe space for making mistakes and learning from it is the second most important property of WE. This result is of interest, as allowing mistakes, even if they were made innocently, is considered taboo in the public sector. These outcomes are based on the reports of n=7682 public sector employees from Brazil. In particular, the analysis shows that these outcomes hold for both professional and management positions across the health, administrative, justice, police, social work, and education offices. ",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/sustainability-14-07051.pdf"},
+					  {"info": "cite", "type": 3, "link": "Gargantini, T., Daly, M., Sherlock, J., Lazebnik, T., Providing Safe Space for Honest Mistakes in the Public Sector Is the Most Important Predictor for Work Engagement after Strategic Clarity. Sustainability. 2022."}],
+		 "authors": "Thais Gargantini, Michael Daly, Joseph Sherlock, Teddy Lazebnik",
+         "year": 2022,
+         "topic":"Social Science",
+         "type":"Paper",
+         "publisher":"Sustainability",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Predicting acute kidney injury following open partial nephrectomy treatment using SAT-pruned explainable machine learning model",
          "description":"Background: One of the most prevalent complications of Partial Nephrectomy (PN) is Acute Kidney Injury (AKI), which could have a negative impact on subsequent renal function and occurs in up to 24.3% of patients undergoing PN. The aim of this study was to predict the occurrence of AKI following PN using preoperative parameters by applying machine learning algorithms. Methods We included all adult patients (n = 723) who underwent open PN in our department since 1995 and on whom we have data on the pre-operative renal function. We developed a random forest (RF) model with Boolean satisfaction-based pruned decision trees for binary classification (AKI or non-AKI). Hyper-parameter grid search was performed to optimize the model's performance. Fivefold cross-validation was applied to evaluate the model. We implemented a RF model with greedy feature selection to binary classify AKI and non-AKI cases based on pre-operative data. Results The best model obtained a 0.69 precision and 0.69 recall in classifying the AKI and non-AKI groups on average (k = 5). In addition, the model's probability to correctly classify a new prediction is 0.75. The proposed model is available as an online calculator. Conclusions Our model predicts the occurrence of AKI following open PN with (75%) accuracy. We plan to externally validate this model and modify it to minimally-invasive PN.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/aki_paper.pdf"},
