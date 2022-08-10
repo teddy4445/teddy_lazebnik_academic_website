@@ -1,22 +1,21 @@
 {
-   "biography":"I am Applied Mathematics and Computer Science researcher focusing on epidemiology, medical, economics, and information systems. I have ten years of experience in software development - five years developing desktop, web, and server applications and another five years developing algorithms. In between, seven years of experience leading development teams of up to ten professionals. A proven record in system architecture, production-ready algorithms, and working with clients. Specialization in bio-physical simulations (stable and accurate numerical calculation), big data analysis (in particular, social and economic data), NLP for information systems, and computer vision. I am interested in biomathematics, medical data-driven projects, biological and clinical processes modeling and simulation, eXplainable AI (XAI), and AI for video games.",
+   "biography":"I am Applied Mathematics and Computer Science researcher with experience in leading R&D teams in the life sciences and financial domains. I have 10 years of experience in software development, including 7 years of experience leading development teams of up to 14 professionals. A proven record in system architecture, production-ready algorithms, and working with clients. I specialized in bio-physical simulations, big data analysis, and data analysis for information systems. My research focuses on the usage of cutting-edge mathematics and computer science in the life sciences and socio-economic domains, including AI-driven personalized treatment protocols, drug discovery, eXplainable AI, socio-economic systems modeling and simulation, and optimal policy detection from financial data.",
    "researchInterests":[
 		"Computer Simulation - pharmacokinetics-pharmacodynamic, epidemiological dynamics, and medical treatments protocols.",
 		"Biomathematical Modeling - bioclinical personalized ML-based treatments, ODE/PDE-based biological models, and disease dynamics.",
 		"Economic Models - complex socioeconomic models and simulations, black market analysis, costs optimization.",
 		"Meta Machine Learning - automatic feature selection, stability metrics, multi-agent collective learning."
    ],
-   "featuredPublications":[
-      {
-         "name":"Computer aided functional style identifcation and correction in modern Russian texts",
-         "description":"Functional style (FS) identification is a classification task in linguistics that categorizes unrestricted texts into several categories of linguistic norms. FS is widely used to attain a satisfying outcome in style processing. As such, we train a deep learning attention neural network model on modern-Russian texts, divide them into four FS categories. The model obtained an accuracy of 0.72. In particular, 81.08% and 85.71% accuracy in classifying the artistic and academic FS. The proposed model is able to automate the FS identification process and aids both domain experts and non-domain experts to perform FS correction by highlighting style anomalies concerning a desired style for the text. In particular, we show a 34% and 31% average improvement in the duration of performing the style correction task. Moreover, domain experts and non-domain experts obtain 3% and 9% more accurate results, respectively.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/liza_paper.pdf"},
-					  {"info": "cite", "type": 3, "link": "Savchenko, E., Lazebnik, T., Computer aided functional style identifcation and correction in modern russian texts. Journal of Data, Information and Management. 2022."}],
-		 "authors": "Elizaveta Savchenko, Teddy Lazebnik",
+   "featuredPublications":[{
+         "name":"Cell-level Spatio-Temporal Model for Bacillus Calmette--Guerin Based Immunotherapy Treatment Protocol of Superficial Bladder Cancer",
+         "description":"Bladder cancer is one of the most widespread types of cancer. Multiple treatments for non-invasive, superficial bladder cancer have been proposed over the last several decades with a weekly Bacillus Calmette–Guérin immunotherapy-based therapy protocol, which is considered the gold standard today. Nonetheless, due to the complexity of the interactions between the immune system, healthy cells, and cancer cells in the bladder’s microenvironment, clinical outcomes vary significantly among patients. Mathematical models are shown to be effective in predicting the treatment outcome based on the patient’s clinical condition at the beginning of the treatment. Even so, these models still have large errors for long-term treatments and patients that they do not fit. In this work, we utilize modern mathematical tools and propose a novel cell-level spatio-temporal mathematical model that takes into consideration the cell–cell and cell–environment interactions occurring in a realistic bladder’s geometric configuration in order to reduce these errors. We implement the model using the agent-based simulation approach, showing the impacts of different cancer tumor sizes and locations at the beginning of the treatment on the clinical outcomes for today’s gold-standard treatment protocol. In addition, we propose a genetic-algorithm-based approach to finding a successful and time-optimal treatment protocol for a given patient’s initial condition. Our results show that the current standard treatment protocol can be modified to produce cancer-free equilibrium for deeper cancer cells in the urothelium if the cancer cells’ spatial distribution is known, resulting in a greater success rate.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/cells-11-02372.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Cell-Level Spatio-Temporal Model for a Bacillus Calmette–Guérin-Based Immunotherapy Treatment Protocol of Superficial Bladder Cancer. Cells. 2022."}],
+		 "authors": "Teddy Lazebnik",
          "year": 2022,
-         "topic":"Machine learning",
+         "topic":"Biomathematics",
          "type":"Paper",
-         "publisher":"Journal of Data, Information and Management",
+         "publisher":"Cells",
          "publicationStatus":"Published"
       },
       {
@@ -30,7 +29,7 @@
          "type":"Paper",
          "publisher":"PLOS ONE",
          "publicationStatus":"Published"
-      },	  
+      },
 		{
 		 "name":"Predicting acute kidney injury following open partial nephrectomy treatment using SAT-pruned explainable machine learning model",
 		 "description":"Background: One of the most prevalent complications of Partial Nephrectomy (PN) is Acute Kidney Injury (AKI), which could have a negative impact on subsequent renal function and occurs in up to 24.3% of patients undergoing PN. The aim of this study was to predict the occurrence of AKI following PN using preoperative parameters by applying machine learning algorithms. Methods We included all adult patients (n = 723) who underwent open PN in our department since 1995 and on whom we have data on the pre-operative renal function. We developed a random forest (RF) model with Boolean satisfaction-based pruned decision trees for binary classification (AKI or non-AKI). Hyper-parameter grid search was performed to optimize the model's performance. Fivefold cross-validation was applied to evaluate the model. We implemented a RF model with greedy feature selection to binary classify AKI and non-AKI cases based on pre-operative data. Results The best model obtained a 0.69 precision and 0.69 recall in classifying the AKI and non-AKI groups on average (k = 5). In addition, the model's probability to correctly classify a new prediction is 0.75. The proposed model is available as an online calculator. Conclusions Our model predicts the occurrence of AKI following open PN with (75%) accuracy. We plan to externally validate this model and modify it to minimally-invasive PN.",
