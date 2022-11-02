@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Economic aspects of the detection of new strains in a multi-strain epidemiological–mathematical model",
+         "description":"Mankind has struggled with pathogens throughout history. In this context, the contribution of vaccines to the continued economic and social prosperity of humanity is enormous, but it is constantly threatened by the development of vaccine-resistant strains of the pathogen. In this study, we investigate the usage of genomic sequencing tests to detect new strains of a pathogen in a multi-strain pandemic scenario using a mathematical–epidemiological–genomic–economic model. Our model provides a theoretical framework to explore the influence of an extensive number of pharmaceutical interventions in a dynamic multi-strain pandemic. Specifically, we show that while a genomic sequence testing policy can be both economically and epidemiologically efficient, a random sample of the population provides sub-optimal results. Moreover, we demonstrate that the optimal policy is sensitive to the social and economic settings of the population, and provide a machine learning based model that offers a solution to these challenges.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/chaos.pdf"},
+					  {"info": "cite", "type": 3, "link": "Shami, L., Lazebnik, T., Economic aspects of the detection of new strains in a multi-strain epidemiological–mathematical model. Chaos, Solitons & Fractals. 2022."}],
+		 "authors": "Labib Shami, Teddy Lazebnik",
+         "year": 2022,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Chaos, Solitons & Fractals",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Cell-level Spatio-Temporal Model for Bacillus Calmette--Guerin Based Immunotherapy Treatment Protocol of Superficial Bladder Cancer",
          "description":"Bladder cancer is one of the most widespread types of cancer. Multiple treatments for non-invasive, superficial bladder cancer have been proposed over the last several decades with a weekly Bacillus Calmette–Guérin immunotherapy-based therapy protocol, which is considered the gold standard today. Nonetheless, due to the complexity of the interactions between the immune system, healthy cells, and cancer cells in the bladder’s microenvironment, clinical outcomes vary significantly among patients. Mathematical models are shown to be effective in predicting the treatment outcome based on the patient’s clinical condition at the beginning of the treatment. Even so, these models still have large errors for long-term treatments and patients that they do not fit. In this work, we utilize modern mathematical tools and propose a novel cell-level spatio-temporal mathematical model that takes into consideration the cell–cell and cell–environment interactions occurring in a realistic bladder’s geometric configuration in order to reduce these errors. We implement the model using the agent-based simulation approach, showing the impacts of different cancer tumor sizes and locations at the beginning of the treatment on the clinical outcomes for today’s gold-standard treatment protocol. In addition, we propose a genetic-algorithm-based approach to finding a successful and time-optimal treatment protocol for a given patient’s initial condition. Our results show that the current standard treatment protocol can be modified to produce cancer-free equilibrium for deeper cancer cells in the urothelium if the cancer cells’ spatial distribution is known, resulting in a greater success rate.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/cells-11-02372.pdf"},
