@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Bounding Pandemic Spread By Heat Spread",
+         "description":"The beginning of a pandemic is a crucial stage for policymakers. Proper management at this stage can reduce overall health and economical damage. However, knowledge about the pandemic is insufficient. Thus, the use of complex and sophisticated models is challenging. In this study, we propose analytical and stochastic heat spread-based boundaries for the pandemic spread as indicated by the SusceptibleInfected-Recovered (SIR) model. We study the spread of a pandemic on aninteraction (social) graph as a diffusion and compared it with the stochastic SIR model. The proposed boundaries are not requiring accurate biological knowledge such as the SIR model does.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/sir_heat_spread.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Itai, U., Bounding Pandemic Spread By Heat Spread. Journal of Engineering Mathematics. 2023."}],
+		 "authors": "Teddy Lazebnik, Uri Itai",
+         "year": 2023,
+         "topic":"Epidemiology",
+         "type":"Paper",
+         "publisher":"Journal of Engineering Mathematics  ",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Early Detection and Control of the Next Epidemic Wave Using Health Communications: Development of an Artificial Intelligence-Based Tool and Its Validation on COVID-19 Data from the US",
          "description":"Social media networks highly influence on a broad range of global social life, especially in the context of a pandemic. We developed a mathematical model with a computational tool, called EMIT (Epidemic and Media Impact Tool), to detect and control pandemic waves, using mainly topics of relevance on social media networks and pandemic spread. Using EMIT, we analyzed health-related communications on social media networks for early prediction, detection, and control of an outbreak. EMIT is an artificial intelligence-based tool supporting health communication and policy makers decisions. Thus, EMIT, based on historical data, social media trends and disease spread, offers an predictive estimation of the influence of public health interventions such as social media-based communication campaigns. We have validated the EMIT mathematical model on real world data combining COVID-19 pandemic data in the US and social media data from Twitter. EMIT demonstrated a high level of performance in predicting the next epidemiological wave (AUC = 0.909, F1 = 0.899).",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/ijerph.pdf"},
