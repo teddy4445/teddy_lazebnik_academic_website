@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"High Resolution Spatio-Temporal Model for Room-Level Airborne Pandemic Spread",
+         "description":"Airborne pandemics have caused millions of deaths worldwide, large-scale economic losses, and catastrophic sociological shifts in human history. Researchers have developed multiple mathematical models and computational frameworks to investigate and predict pandemic spread on various levels and scales such as countries, cities, large social events, and even buildings. However, attempts of modeling airborne pandemic dynamics on the smallest scale, a single room, have been mostly neglected. As time indoors increases due to global urbanization processes, more infections occur in shared rooms. In this study, a high-resolution spatio-temporal epidemiological model with airflow dynamics to evaluate airborne pandemic spread is proposed. The model is implemented, using Python, with high-resolution 3D data obtained from a light detection and ranging (LiDAR) device and computing model based on the Computational Fluid Dynamics (CFD) model for the airflow and the Susceptible–Exposed–Infected (SEI) model for the epidemiological dynamics. The pandemic spread is evaluated in four types of rooms, showing significant differences even for a short exposure duration. We show that the room’s topology and individual distribution in the room define the ability of air ventilation to reduce pandemic spread throughout breathing zone infection.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/aura_1.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Alexi, A., High Resolution Spatio-Temporal Model for Room-Level Airborne Pandemic Spread. Mathematics. 2023."}],
+		 "authors": "Teddy Lazebnik, Ariel Alexi",
+         "year": 2023,
+         "topic":"Epidemiology",
+         "type":"Paper",
+         "publisher":"Mathematics",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Bounding Pandemic Spread By Heat Spread",
          "description":"The beginning of a pandemic is a crucial stage for policymakers. Proper management at this stage can reduce overall health and economical damage. However, knowledge about the pandemic is insufficient. Thus, the use of complex and sophisticated models is challenging. In this study, we propose analytical and stochastic heat spread-based boundaries for the pandemic spread as indicated by the SusceptibleInfected-Recovered (SIR) model. We study the spread of a pandemic on aninteraction (social) graph as a diffusion and compared it with the stochastic SIR model. The proposed boundaries are not requiring accurate biological knowledge such as the SIR model does.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/sir_heat_spread.pdf"},
