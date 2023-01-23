@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge",
+         "description":"Discovering a meaningful symbolic expression that explains experimental data is a fundamental challenge in many scientific fields. We present a novel, open-source computational framework called Scientist-Machine Equation Detector (SciMED), which integrates scientific discipline wisdom in a scientist-in-the-loop approach, with state-of-the-art symbolic regression (SR) methods. SciMED combines a wrapper selection method, that is based on a genetic algorithm, with automatic machine learning and two levels of SR methods. We test SciMED on five configurations of a settling sphere, with and without aerodynamic non-linear drag force, and with excessive noise in the measurements. We show that SciMED is sufficiently robust to discover the correct physically meaningful symbolic expressions from the data, and demonstrate how the integration of domain knowledge enhances its performance. Our results indicate better performance on these tasks than the state-of-the-art SR software packages , even in cases where no knowledge is integrated. Moreover, we demonstrate how SciMED can alert the user about possible missing features, unlike the majority of current SR systems.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/liron_simon.pdf"},
+					  {"info": "cite", "type": 3, "link": "Simon-Keren, L., Liberzon, A., Lazebnik, T., A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge. Scientific Reports. 2023."}],
+		 "authors": "Liron Simon-Keren, Alex Liberzon, Teddy Lazebnik",
+         "year": 2022,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Scientific Reports",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"High Resolution Spatio-Temporal Model for Room-Level Airborne Pandemic Spread",
          "description":"Airborne pandemics have caused millions of deaths worldwide, large-scale economic losses, and catastrophic sociological shifts in human history. Researchers have developed multiple mathematical models and computational frameworks to investigate and predict pandemic spread on various levels and scales such as countries, cities, large social events, and even buildings. However, attempts of modeling airborne pandemic dynamics on the smallest scale, a single room, have been mostly neglected. As time indoors increases due to global urbanization processes, more infections occur in shared rooms. In this study, a high-resolution spatio-temporal epidemiological model with airflow dynamics to evaluate airborne pandemic spread is proposed. The model is implemented, using Python, with high-resolution 3D data obtained from a light detection and ranging (LiDAR) device and computing model based on the Computational Fluid Dynamics (CFD) model for the airflow and the Susceptible–Exposed–Infected (SEI) model for the epidemiological dynamics. The pandemic spread is evaluated in four types of rooms, showing significant differences even for a short exposure duration. We show that the room’s topology and individual distribution in the room define the ability of air ventilation to reduce pandemic spread throughout breathing zone infection.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/aura_1.pdf"},

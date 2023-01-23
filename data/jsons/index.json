@@ -8,6 +8,18 @@
    ],
    "featuredPublications":[
 	{
+         "name":"A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge",
+         "description":"Discovering a meaningful symbolic expression that explains experimental data is a fundamental challenge in many scientific fields. We present a novel, open-source computational framework called Scientist-Machine Equation Detector (SciMED), which integrates scientific discipline wisdom in a scientist-in-the-loop approach, with state-of-the-art symbolic regression (SR) methods. SciMED combines a wrapper selection method, that is based on a genetic algorithm, with automatic machine learning and two levels of SR methods. We test SciMED on five configurations of a settling sphere, with and without aerodynamic non-linear drag force, and with excessive noise in the measurements. We show that SciMED is sufficiently robust to discover the correct physically meaningful symbolic expressions from the data, and demonstrate how the integration of domain knowledge enhances its performance. Our results indicate better performance on these tasks than the state-of-the-art SR software packages , even in cases where no knowledge is integrated. Moreover, we demonstrate how SciMED can alert the user about possible missing features, unlike the majority of current SR systems.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/liron_simon.pdf"},
+					  {"info": "cite", "type": 3, "link": "Simon-Keren, L., Liberzon, A., Lazebnik, T., A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge. Scientific Reports. 2023."}],
+		 "authors": "Liron Simon-Keren, Alex Liberzon, Teddy Lazebnik",
+         "year": 2022,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Scientific Reports",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Economic aspects of the detection of new strains in a multi-strain epidemiological–mathematical model",
          "description":"Mankind has struggled with pathogens throughout history. In this context, the contribution of vaccines to the continued economic and social prosperity of humanity is enormous, but it is constantly threatened by the development of vaccine-resistant strains of the pathogen. In this study, we investigate the usage of genomic sequencing tests to detect new strains of a pathogen in a multi-strain pandemic scenario using a mathematical–epidemiological–genomic–economic model. Our model provides a theoretical framework to explore the influence of an extensive number of pharmaceutical interventions in a dynamic multi-strain pandemic. Specifically, we show that while a genomic sequence testing policy can be both economically and epidemiologically efficient, a random sample of the population provides sub-optimal results. Moreover, we demonstrate that the optimal policy is sensitive to the social and economic settings of the population, and provide a machine learning based model that offers a solution to these challenges.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/chaos.pdf"},
