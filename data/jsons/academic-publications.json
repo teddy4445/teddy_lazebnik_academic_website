@@ -1,6 +1,30 @@
 {
    "publications":[
 	{
+         "name":"Implementing Machine Learning Methods in Estimating the Size of the Non-observed Economy",
+         "description":"Even though the literature on unregistered economic activity is growing at an increasing rate, we commonly encounter simple ordinary least squares methods and panel regressions, largely ignoring the recent rapid developments in machine learning methods. This study provides a new approach to more accurately estimate the size of the non-observed economy using machine learning methods. Compared to two currency demand-based models used to estimate the size of the non-observed economy, we show that a Random Forest algorithm can more accurately estimate the demand for currency, which is known to provide a fair estimation of the unregistered economic activity. The proposed approach shows superior forecasting capabilities compared to the current state-of-the-art linear regression-based methods dedicated to estimating non-observed economic activity.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/ml_black_economy.pdf"},
+					  {"info": "cite", "type": 3, "link": "Shami, L., Lazebnik, T., Implementing Machine Learning Methods in Estimating the Size of the Non-observed Economy. Computational Economics. 2023."}],
+		 "authors": "Labib Shami, Teddy Lazebnik",
+         "year": 2023,
+         "topic":"Economic",
+         "type":"Paper",
+         "publisher":"Computational Economics",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Financing and managing epidemiological-economic crises: Are we ready for another outbreak?",
+         "description":"An epidemiological-economic crisis presents countries with two significant challenges, in addition to the health challenge - a growing deficit due to fiscal policy measures, and a shortage of essential workers needed to manage the crisis successfully. In this study, we propose an outline for economic readiness in case of a future crisis in general, and a pandemic outbreak in particular. Through the establishment of a dedicated income-based tax-financed budget aimed at funding government excess expenditure during a crisis, and by adopting a reserve program in the essential sector of the economy, social and economic costs can be reduced.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/economy_for_pandemic.pdf"},
+					  {"info": "cite", "type": 3, "link": "Shami, L., Lazebnik, T., Financing and managing epidemiological-economic crises: Are we ready for another outbreak?. Journal of Policy Modeling. 2023."}],
+		 "authors": "Labib Shami, Teddy Lazebnik",
+         "year": 2023,
+         "topic":"Economic",
+         "type":"Paper",
+         "publisher":"Journal of Policy Modeling",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge",
          "description":"Discovering a meaningful symbolic expression that explains experimental data is a fundamental challenge in many scientific fields. We present a novel, open-source computational framework called Scientist-Machine Equation Detector (SciMED), which integrates scientific discipline wisdom in a scientist-in-the-loop approach, with state-of-the-art symbolic regression (SR) methods. SciMED combines a wrapper selection method, that is based on a genetic algorithm, with automatic machine learning and two levels of SR methods. We test SciMED on five configurations of a settling sphere, with and without aerodynamic non-linear drag force, and with excessive noise in the measurements. We show that SciMED is sufficiently robust to discover the correct physically meaningful symbolic expressions from the data, and demonstrate how the integration of domain knowledge enhances its performance. Our results indicate better performance on these tasks than the state-of-the-art SR software packages , even in cases where no knowledge is integrated. Moreover, we demonstrate how SciMED can alert the user about possible missing features, unlike the majority of current SR systems.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/liron_simon.pdf"},
