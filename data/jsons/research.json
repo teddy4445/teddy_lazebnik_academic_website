@@ -3,26 +3,7 @@
 	"open_positions": [
 		
 	],
-	"projects": [{
-		"name": "Hit the Drug Network where It Hurts",
-		"participants": [
-		{
-			"name": "Labib Shami",
-			"title": "Ph.D.",
-			"role": "Economist researcher",
-			"websiteLink": "https://ric.org.il/researcher/labib-shami/",
-			"googleLink": "https://scholar.google.co.il/citations?user=3JxF3NkAAAAJ&hl=iw",
-			"linkedinLink": ""
-		}],
-		"description": "Modeling drug networks and optimal police enforce on them for multiple objectives.",
-		"start_month": 8,
-		"start_year": 2022,
-		"end_month": 12,
-		"end_year": 2022,
-		"team_members": 2,
-		"relevant_resources": [
-		]
-	},
+	"projects": [
 	{
 		"name": "Alexi's Master (1) - A Security Games Inspired Approach for Distributed Controlling Of Pandemic Spread",
 		"participants": [
@@ -174,7 +155,7 @@
 		"start_month": 9,
 		"start_year": 2021,
 		"end_month": 12,
-		"end_year": 2022,
+		"end_year": 2023,
 		"team_members": 3,
 		"relevant_resources": [
 		]
@@ -204,7 +185,7 @@
 		{
 			"name": "Svetlana Bunimovich-Mendrazitsky",
 			"title": "Ph.D.",
-			"role": "Advisor",
+			"role": "Co-author",
 			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
 			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
 			"linkedinLink": ""
@@ -224,7 +205,7 @@
 		{
 			"name": "Svetlana Bunimovich-Mendrazitsky",
 			"title": "Ph.D.",
-			"role": "Advisor (Mathematics)",
+			"role": "Co-author",
 			"websiteLink": "https://www.ariel.ac.il/Projects/trp/GeneralInformation.asp?numRec=342&id_lang=1",
 			"googleLink": "https://scholar.google.com/citations?user=WQIwBuUAAAAJ&hl=en",
 			"linkedinLink": ""

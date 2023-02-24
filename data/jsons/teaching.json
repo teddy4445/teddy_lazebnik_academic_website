@@ -4,7 +4,7 @@
 			"name": "Advanced Programming 1",
 			"code": "89210",
 			"year": "2021",
-			"topic":"programming",
+			"topic": "programming",
 			"semester": "1",
 			"university": "Bar Ilan University",
 			"department": "Computer science",
@@ -20,10 +20,12 @@
 				}
 			],
 			"resources": {
-				"optinal":[{"name": "Moodle page",
+				"optinal": [{
+					"name": "Moodle page",
 					"link": "https://lemida.biu.ac.il/course/view.php?id=56845",
 					"description": "The webpage with all the slides and presentation of the lecturer.",
-					"type": "file"}]
+					"type": "file"
+				}]
 			},
 			"updates": [{
 					"title": "home work 1 submition",
@@ -42,123 +44,126 @@
 					"title": "C++ intro",
 					"explanation": "An introduction to programming concepts in C++ and how they are related to what you know from C and Java",
 					"resources": {
-						"Lectures":[{
-							"name": "Intro video",
-							"link": "https://www.youtube.com/watch?v=UnwtHUy-MX",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Pointers, assignment and other syntax",
-							"link": "https://www.youtube.com/watch?v=ahiWmXunnG",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Referances and OOP in C++",
-							"link": "https://www.youtube.com/watch?v=kUph_ea4NXc",
-							"description": "",
-							"type": "video"
-						}]
-						}
-					},
-					{
+						"Lectures": [{
+								"name": "Intro video",
+								"link": "https://www.youtube.com/watch?v=UnwtHUy-MX",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Pointers, assignment and other syntax",
+								"link": "https://www.youtube.com/watch?v=ahiWmXunnG",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Referances and OOP in C++",
+								"link": "https://www.youtube.com/watch?v=kUph_ea4NXc",
+								"description": "",
+								"type": "video"
+							}
+						]
+					}
+				},
+				{
 					"title": "C++ Advanced",
 					"explanation": "Advanced topics in C++ programming",
 					"resources": {
-						"Lectures":[{
-							"name": "Inheritance and polymorphism",
-							"link": "https://www.youtube.com/watch?v=TbsJss75I7k",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Operator overloading",
-							"link": "https://www.youtube.com/watch?v=hO2DYr3X-pk",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "STL",
-							"link": "https://www.youtube.com/watch?v=-LwVsTX-q-A",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "System API",
-							"link": "https://www.youtube.com/watch?v=4EY2fKptPpo",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Introduction to TCP-IP",
-							"link": "https://www.youtube.com/watch?v=_zy5vLHBeKs",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Templates",
-							"link": "https://www.youtube.com/watch?v=HJNuiDycnjs&ab_channel=TeddyLazebnik",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Encoding",
-							"link": "https://www.youtube.com/watch?v=2QFNQipBRPs&ab_channel=TeddyLazebnik",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Strategy design pattern and callables",
-							"link": "https://www.youtube.com/watch?v=G_y1A9b6z0s&ab_channel=TeddyLazebnik",
-							"description": "Usefull for your second and third assignments",
-							"type": "video"
-						},
-						{
-							"name": "Parallel Processing",
-							"link": "https://www.youtube.com/watch?v=N6bfH30C6fw",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Parallel Processing C++ coding",
-							"link": "https://youtu.be/5dhsAHAnMSg",
-							"description": "",
-							"type": "video"
-						}]
+						"Lectures": [{
+								"name": "Inheritance and polymorphism",
+								"link": "https://www.youtube.com/watch?v=TbsJss75I7k",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Operator overloading",
+								"link": "https://www.youtube.com/watch?v=hO2DYr3X-pk",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "STL",
+								"link": "https://www.youtube.com/watch?v=-LwVsTX-q-A",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "System API",
+								"link": "https://www.youtube.com/watch?v=4EY2fKptPpo",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Introduction to TCP-IP",
+								"link": "https://www.youtube.com/watch?v=_zy5vLHBeKs",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Templates",
+								"link": "https://www.youtube.com/watch?v=HJNuiDycnjs&ab_channel=TeddyLazebnik",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Encoding",
+								"link": "https://www.youtube.com/watch?v=2QFNQipBRPs&ab_channel=TeddyLazebnik",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Strategy design pattern and callables",
+								"link": "https://www.youtube.com/watch?v=G_y1A9b6z0s&ab_channel=TeddyLazebnik",
+								"description": "Usefull for your second and third assignments",
+								"type": "video"
+							},
+							{
+								"name": "Parallel Processing",
+								"link": "https://www.youtube.com/watch?v=N6bfH30C6fw",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Parallel Processing C++ coding",
+								"link": "https://youtu.be/5dhsAHAnMSg",
+								"description": "",
+								"type": "video"
+							}
+						]
 					}
 				},
 				{
 					"title": "Advanced Programming Topics",
 					"explanation": "An introduction to advanced programming concepts which are not just about coding",
 					"resources": {
-						"Lectures":[{
-							"name": "Software development methodologies and patterns",
-							"link": "https://www.youtube.com/watch?v=6QYRZr3v6bo",
-							"description": "Very improtant from students that want to find job after first degree in CS",
-							"type": "video"
-						},
-						{
-							"name": "Design Patterns and the COMMAND design pattern",
-							"link": "https://www.youtube.com/watch?v=xaGahrVu5Wk",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "The SINGLETON design pattern",
-							"link": "https://www.youtube.com/watch?v=gWr__kKk9uc",
-							"description": "",
-							"type": "video"
-						}]
-						}
+						"Lectures": [{
+								"name": "Software development methodologies and patterns",
+								"link": "https://www.youtube.com/watch?v=6QYRZr3v6bo",
+								"description": "Very improtant from students that want to find job after first degree in CS",
+								"type": "video"
+							},
+							{
+								"name": "Design Patterns and the COMMAND design pattern",
+								"link": "https://www.youtube.com/watch?v=xaGahrVu5Wk",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "The SINGLETON design pattern",
+								"link": "https://www.youtube.com/watch?v=gWr__kKk9uc",
+								"description": "",
+								"type": "video"
+							}
+						]
 					}
+				}
 			],
 			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
-		},{
+		}, {
 			"name": "Advanced Programming 2",
 			"code": "89211",
 			"year": "2021",
-			"topic":"programming",
+			"topic": "programming",
 			"semester": "2",
 			"university": "Bar Ilan University",
 			"department": "Computer science",
@@ -174,10 +179,12 @@
 				}
 			],
 			"resources": {
-				"optinal":[{"name": "Moodle page",
+				"optinal": [{
+					"name": "Moodle page",
 					"link": "https://lemida.biu.ac.il/course/view.php?id=59135",
 					"description": "The webpage with all the slides and presentation of the lecturer.",
-					"type": "file"}]
+					"type": "file"
+				}]
 			},
 			"updates": [{
 					"title": "First home work project description",
@@ -202,72 +209,75 @@
 					"title": "C# Introduction",
 					"explanation": "An introduction to C#. Covering WPF, .Net (framework + core) and other useful concepts.",
 					"resources": {
-						"Lectures":[{
+						"Lectures": [{
 							"name": "Intro",
 							"link": "https://www.youtube.com/watch?v=ilYr7MU4NIs&ab_channel=TeddyLazebnik",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
-						},{
+						}, {
 							"name": "C# concepts",
 							"link": "https://www.youtube.com/watch?v=yFRmCZEVswQ&ab_channel=TeddyLazebnik",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
-						},{
+						}, {
 							"name": "WPF introduction",
 							"link": "https://www.youtube.com/watch?v=9EWMLugBkBw&feature=youtu.be&ab_channel=TeddyLazebnik",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
-						},{
+						}, {
 							"name": "WPF introduction - data binding and mvvm architecture",
 							"link": "https://youtu.be/67VEikyaoO8",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
-						},{
+						}, {
 							"name": "WPF introduction - threads in C#",
 							"link": "https://youtu.be/CIMlZxgIcuc",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
 						}]
-					}},
-					{
+					}
+				},
+				{
 					"title": "Introduction to Web Development",
 					"explanation": "An introduction to web development using C# and the dot Net framework.",
 					"resources": {
-						"Lectures":[{
+						"Lectures": [{
 							"name": "Server Side - overview",
 							"link": "https://youtu.be/lTV86vpYEGA?list=PLKeS5iBQNDOQEWUf3ZVn-Q2VCOUaRdPPg",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
-						},{
+						}, {
 							"name": "Client Side - overview",
 							"link": "https://youtu.be/hjcj2Q-iYFk?list=PLKeS5iBQNDOQEWUf3ZVn-Q2VCOUaRdPPg",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
-						},{
+						}, {
 							"name": "Async functions and promises in JavaScript",
 							"link": "https://youtu.be/ha3wprAwsa4?list=PLKeS5iBQNDOQEWUf3ZVn-Q2VCOUaRdPPg",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
 						}]
-					}},
-					{
+					}
+				},
+				{
 					"title": "Introduction to Android Application Development (Kotlin)",
 					"explanation": "An introduction to Android applications development using Kotlin.",
 					"resources": {
-						"Lectures":[{
+						"Lectures": [{
 							"name": "Introdution",
 							"link": "https://youtu.be/uF5SpZRjJI8?list=PLKeS5iBQNDOQEWUf3ZVn-Q2VCOUaRdPPg",
 							"description": "Presentation by Paul Roit",
 							"type": "video"
 						}]
-					}}
+					}
+				}
 			],
 			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
-		},{
+		}, {
 			"name": "Deep Leanring for Computer Vision",
 			"code": "21319",
 			"year": "2020",
-			"topic":"programming",
+			"topic": "programming",
 			"semester": "1",
 			"university": "HIT",
 			"department": "Computer science",
@@ -283,30 +293,43 @@
 				}
 			],
 			"resources": {
-				"optinal":[{"name": "Stanford's cs231n course",
-					"link": "http://cs231n.stanford.edu/",
-					"description": "The course will be similar to the Stanford's cs231n course and all slides from there",
-					"type": "file"},
-					{"name": "Google colab",
-					"link": "https://colab.research.google.com/",
-					"description": "Google colab should help you with the trianing speed of your models",
-					"type": "file"},
-					{"name": "Introducing GIT",
-					"link": "https://rogerdudler.github.io/git-guide/",
-					"description": "Use it in your projects!",
-					"type": "file"},
-					{"name": "BitBacket - your GIT host provider",
-					"link": "https://bitbucket.org/",
-					"description": "Checkout GitHub as well...",
-					"type": "file"},
-					{"name": "Youtube CodeTrain DL course",
-					"link": "https://www.youtube.com/watch?v=XJ7HLz9VYz0&amp;list=PLRqwX-V7Uu6Y7MdSCaIfsxc561QI0U0Tb",
-					"description": "If you want fun youtube video about NN - this is the one I reccomend",
-					"type": "file"},
-					{"name": "Practical DL book",
-					"link": "https://www.d2l.ai/",
-					"description": "A very practical course by Amazon",
-					"type": "file"}]
+				"optinal": [{
+						"name": "Stanford's cs231n course",
+						"link": "http://cs231n.stanford.edu/",
+						"description": "The course will be similar to the Stanford's cs231n course and all slides from there",
+						"type": "file"
+					},
+					{
+						"name": "Google colab",
+						"link": "https://colab.research.google.com/",
+						"description": "Google colab should help you with the trianing speed of your models",
+						"type": "file"
+					},
+					{
+						"name": "Introducing GIT",
+						"link": "https://rogerdudler.github.io/git-guide/",
+						"description": "Use it in your projects!",
+						"type": "file"
+					},
+					{
+						"name": "BitBacket - your GIT host provider",
+						"link": "https://bitbucket.org/",
+						"description": "Checkout GitHub as well...",
+						"type": "file"
+					},
+					{
+						"name": "Youtube CodeTrain DL course",
+						"link": "https://www.youtube.com/watch?v=XJ7HLz9VYz0&amp;list=PLRqwX-V7Uu6Y7MdSCaIfsxc561QI0U0Tb",
+						"description": "If you want fun youtube video about NN - this is the one I reccomend",
+						"type": "file"
+					},
+					{
+						"name": "Practical DL book",
+						"link": "https://www.d2l.ai/",
+						"description": "A very practical course by Amazon",
+						"type": "file"
+					}
+				]
 			},
 			"updates": [{
 					"title": "Final Project Proposal",
@@ -331,226 +354,229 @@
 					"title": "Comupter Vision Introduction",
 					"explanation": "An introduction to computer vision concepts, review of ML methods and first steps in DL",
 					"resources": {
-						"Lectures":[{
-							"name": "Introduction + Knn + Linear Regression",
-							"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/iml2018_lecture1.pdf",
-							"description": "Thanks to Yossi Keshet",
-							"type": "slides"
-						},
-						{
-							"name": "Linear Calssifcation and NN stracture",
-							"link": "https://www.cs.cmu.edu/~avrim/ML10/lect0125.pdf",
-							"description": "Lecture (CMU)",
-							"type": "slides"
-						},
-						{
-							"name": "Python Perceptron",
-							"link": "https://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/",
-							"description": "",
-							"type": "slides"
-						},
-						{
-							"name": "Python Perceptron",
-							"link": "https://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/",
-							"description": "",
-							"type": "slides"
-						},
-						{
-							"name": "Cool NN visual demo",
-							"link": "http://playground.tensorflow.org/",
-							"description": "It will help to understand how your DL looks like",
-							"type": "slides"
-						},
-						{
-							"name": "Backpropagation and FcNN",
-							"link": "http://cs231n.stanford.edu/slides/2019/cs231n_2019_lecture04.pdf",
-							"description": "Lecture by Stanford",
-							"type": "slides"
-						},
-						{
-							"name": "Lession 3",
-							"link": "https://www.youtube.com/embed/ciUGihyYYSw",
-							"description": "",
-							"type": "video"
-						}]
-					}},
-					{
+						"Lectures": [{
+								"name": "Introduction + Knn + Linear Regression",
+								"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/iml2018_lecture1.pdf",
+								"description": "Thanks to Yossi Keshet",
+								"type": "slides"
+							},
+							{
+								"name": "Linear Calssifcation and NN stracture",
+								"link": "https://www.cs.cmu.edu/~avrim/ML10/lect0125.pdf",
+								"description": "Lecture (CMU)",
+								"type": "slides"
+							},
+							{
+								"name": "Python Perceptron",
+								"link": "https://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/",
+								"description": "",
+								"type": "slides"
+							},
+							{
+								"name": "Python Perceptron",
+								"link": "https://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/",
+								"description": "",
+								"type": "slides"
+							},
+							{
+								"name": "Cool NN visual demo",
+								"link": "http://playground.tensorflow.org/",
+								"description": "It will help to understand how your DL looks like",
+								"type": "slides"
+							},
+							{
+								"name": "Backpropagation and FcNN",
+								"link": "http://cs231n.stanford.edu/slides/2019/cs231n_2019_lecture04.pdf",
+								"description": "Lecture by Stanford",
+								"type": "slides"
+							},
+							{
+								"name": "Lession 3",
+								"link": "https://www.youtube.com/embed/ciUGihyYYSw",
+								"description": "",
+								"type": "video"
+							}
+						]
+					}
+				},
+				{
 					"title": "Deep Learning models",
 					"explanation": "CNN, code, model development pipeline",
 					"resources": {
-						"Lectures":[{
-							"name": "Lecture 4",
-							"link": "https://www.youtube.com/embed/Cwy0GuD6XGM",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Lecture 5",
-							"link": "https://www.youtube.com/embed/SXV9Usof-o8",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Lecture 6",
-							"link": "https://www.youtube.com/embed/puZrVE96MXg",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Lecture 8",
-							"link": "https://www.youtube.com/embed/iHjBP7aGCiw",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Lecture 9",
-							"link": "https://www.youtube.com/embed/iHjBP7aGCiw",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Lecture 10",
-							"link": "https://www.youtube.com/embed/K24tiI2hZB0",
-							"description": "",
-							"type": "video"
-						},
-						{
-							"name": "Lecture 10",
-							"link": "https://www.youtube.com/embed/s3jYwycCFmk",
-							"description": "",
-							"type": "video"
-						}],
-						"Slids and Sources":[{
-							"name": "Convolutional Neural Networks (CNN)",
-							"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/iml2018_lecture7.pdf",
-							"description": "",
-							"type": "slides"
-						},
-						{
-							"name": "CNN - keras",
-							"link": "https://towardsdatascience.com/building-a-convolutional-neural-network-cnn-in-keras-329fbbadc5f5/",
-							"description": "",
-							"type": "file"
-						},
-						{
-							"name": "MNIST - dataset",
-							"link": "http://yann.lecun.com/exdb/mnist/",
-							"description": "",
-							"type": "file"
-						},
-						{
-							"name": "Training NN (I) | Hardware and Software",
-							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture08.pdf",
-							"description": "Lecture by Stanford",
-							"type": "slides"
-						},
-						{
-							"name": "Training NN (II) | FNN and CNN Architectures",
-							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture09.pdf",
-							"description": "Lecture by Stanford",
-							"type": "slides"
-						},
-						{
-							"name": "RNNs",
-							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture10.pdf",
-							"description": "",
-							"type": "slides"
-						},
-						{
-							"name": "TensorFlow.js (Tutorials)",
-							"link": "https://www.tensorflow.org/js/tutorials",
-							"description": "",
-							"type": "file"
-						},
-						{
-							"name": "ML5.js",
-							"link": "https://ml5js.org/",
-							"description": "",
-							"type": "file"
-						},
-						{
-							"name": "Toy Neural Network (JS)",
-							"link": "https://github.com/CodingTrain/Toy-Neural-Network-JS/blob/master/examples/neuroevolution-flappybird/ga.js",
-							"description": "",
-							"type": "file"
-						},
-						{
-							"name": "Detection and Segmentation",
-							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture11.pdf",
-							"description": "",
-							"type": "slides"
-						},
-						{
-							"name": "Generative Models",
-							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture12.pdf",
-							"description": "",
-							"type": "slides"
-						},
-						{
-							"name": "Visualizing and Understanding NN",
-							"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture13.pdf",
-							"description": "",
-							"type": "slides"
-						}]
-					}},
-					{
+						"Lectures": [{
+								"name": "Lecture 4",
+								"link": "https://www.youtube.com/embed/Cwy0GuD6XGM",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Lecture 5",
+								"link": "https://www.youtube.com/embed/SXV9Usof-o8",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Lecture 6",
+								"link": "https://www.youtube.com/embed/puZrVE96MXg",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Lecture 8",
+								"link": "https://www.youtube.com/embed/iHjBP7aGCiw",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Lecture 9",
+								"link": "https://www.youtube.com/embed/iHjBP7aGCiw",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Lecture 10",
+								"link": "https://www.youtube.com/embed/K24tiI2hZB0",
+								"description": "",
+								"type": "video"
+							},
+							{
+								"name": "Lecture 10",
+								"link": "https://www.youtube.com/embed/s3jYwycCFmk",
+								"description": "",
+								"type": "video"
+							}
+						],
+						"Slids and Sources": [{
+								"name": "Convolutional Neural Networks (CNN)",
+								"link": "http://u.cs.biu.ac.il/~jkeshet/teaching/iml2018/iml2018_lecture7.pdf",
+								"description": "",
+								"type": "slides"
+							},
+							{
+								"name": "CNN - keras",
+								"link": "https://towardsdatascience.com/building-a-convolutional-neural-network-cnn-in-keras-329fbbadc5f5/",
+								"description": "",
+								"type": "file"
+							},
+							{
+								"name": "MNIST - dataset",
+								"link": "http://yann.lecun.com/exdb/mnist/",
+								"description": "",
+								"type": "file"
+							},
+							{
+								"name": "Training NN (I) | Hardware and Software",
+								"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture08.pdf",
+								"description": "Lecture by Stanford",
+								"type": "slides"
+							},
+							{
+								"name": "Training NN (II) | FNN and CNN Architectures",
+								"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture09.pdf",
+								"description": "Lecture by Stanford",
+								"type": "slides"
+							},
+							{
+								"name": "RNNs",
+								"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture10.pdf",
+								"description": "",
+								"type": "slides"
+							},
+							{
+								"name": "TensorFlow.js (Tutorials)",
+								"link": "https://www.tensorflow.org/js/tutorials",
+								"description": "",
+								"type": "file"
+							},
+							{
+								"name": "ML5.js",
+								"link": "https://ml5js.org/",
+								"description": "",
+								"type": "file"
+							},
+							{
+								"name": "Toy Neural Network (JS)",
+								"link": "https://github.com/CodingTrain/Toy-Neural-Network-JS/blob/master/examples/neuroevolution-flappybird/ga.js",
+								"description": "",
+								"type": "file"
+							},
+							{
+								"name": "Detection and Segmentation",
+								"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture11.pdf",
+								"description": "",
+								"type": "slides"
+							},
+							{
+								"name": "Generative Models",
+								"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture12.pdf",
+								"description": "",
+								"type": "slides"
+							},
+							{
+								"name": "Visualizing and Understanding NN",
+								"link": "http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture13.pdf",
+								"description": "",
+								"type": "slides"
+							}
+						]
+					}
+				},
+				{
 					"title": "Deep Learning Projects",
 					"explanation": "Students projects",
 					"resources": {
-						"Projects":[{
-							"name": "Figure Skating Jump Video Classification",
-							"link": "https://bitbucket.org/teddy_lazebnik/figure-skating-jumps-with-video-classification/src/master/",
-							"description": "By: Elena Golubeva and Vladislav Goteiner. Presentation can be found <a href='/files/students/dl_course/Figure Skating Jump Video Classification-poster-presentation.pdf'>here</a>",
-							"type": "file"
-						},
-						{
-							"name": "Seasonal Color Classification' project",
-							"link": "https://bitbucket.org/teddy_lazebnik/seasonal-color-classification/src/master/",
-							"description": "By: Alona Kalenkovich. Presentation can be found <a href='/files/students/dl_course/Seasonal Color Classification presentation.pdf'>here</a>",
-							"type": "file"
-						},
-						{
-							"name": "The MURA challenge",
-							"link": "https://towardsdatascience.com/building-a-convolutional-neural-network-cnn-in-keras-329fbbadc5f5/",
-							"description": "By: Alon Avrahami, David Chernin, and Yair Hanina.  Presentation can be found <a href='/files/students/dl_course/The MURA challenge-presentation.pdf'>here</a>",
-							"type": "file"
-						},
-						{
-							"name": "Colorization of grayscale images",
-							"link": "https://bitbucket.org/teddy_lazebnik/colorization-of-grayscale-images/src/master/",
-							"description": "By: Tal Ladijinsky and Lior Danon.  Presentation can be found <a href='/files/students/dl_course/colorization-of-grayscale-images-presentation.pdf'>here</a>",
-							"type": "file"
-						},
-						{
-							"name": "Image Completion with DCGAN",
-							"link": "https://bitbucket.org/teddy_lazebnik/face-inpainting-using-a-dcgan/src/master/",
-							"description": "By: Dan Levy and Shay Malkin. resentation can be found <a href='/files/students/dl_course/DCGAN Image Completion_presentation-converted.pdf'>here</a>",
-							"type": "file"
-						}]
+						"Projects": [{
+								"name": "Figure Skating Jump Video Classification",
+								"link": "https://bitbucket.org/teddy_lazebnik/figure-skating-jumps-with-video-classification/src/master/",
+								"description": "By: Elena Golubeva and Vladislav Goteiner. Presentation can be found <a href='/files/students/dl_course/Figure Skating Jump Video Classification-poster-presentation.pdf'>here</a>",
+								"type": "file"
+							},
+							{
+								"name": "Seasonal Color Classification' project",
+								"link": "https://bitbucket.org/teddy_lazebnik/seasonal-color-classification/src/master/",
+								"description": "By: Alona Kalenkovich. Presentation can be found <a href='/files/students/dl_course/Seasonal Color Classification presentation.pdf'>here</a>",
+								"type": "file"
+							},
+							{
+								"name": "The MURA challenge",
+								"link": "https://towardsdatascience.com/building-a-convolutional-neural-network-cnn-in-keras-329fbbadc5f5/",
+								"description": "By: Alon Avrahami, David Chernin, and Yair Hanina.  Presentation can be found <a href='/files/students/dl_course/The MURA challenge-presentation.pdf'>here</a>",
+								"type": "file"
+							},
+							{
+								"name": "Colorization of grayscale images",
+								"link": "https://bitbucket.org/teddy_lazebnik/colorization-of-grayscale-images/src/master/",
+								"description": "By: Tal Ladijinsky and Lior Danon.  Presentation can be found <a href='/files/students/dl_course/colorization-of-grayscale-images-presentation.pdf'>here</a>",
+								"type": "file"
+							},
+							{
+								"name": "Image Completion with DCGAN",
+								"link": "https://bitbucket.org/teddy_lazebnik/face-inpainting-using-a-dcgan/src/master/",
+								"description": "By: Dan Levy and Shay Malkin. resentation can be found <a href='/files/students/dl_course/DCGAN Image Completion_presentation-converted.pdf'>here</a>",
+								"type": "file"
+							}
+						]
 					}
 				}
 			],
 			"description": "In recent years there has been a major breakthrough in the field of artificial neural networks, especially in deep neural networks (namely, networks with many layers). Deep learning is the term coined for the training of such networks, which have shown superiority over other machine learning algorithms in many applications. Nowadays, deep neural networks provide the best performance in tasks such as, voice recognition, object detection, image classification and content suggestion. These networks gradually take over standard machine learning algorithms and we are at the heart of a new generation, where voice recognition and image recognition are based on them fully. In this course we will explain the mathematics at the core of neural networks models, and provide practical tools for using them. The course focuses mainly on image processing and, consequently, on convolutional neural networks."
 		},
 		{
-			"name":"Numerical Analysis",
+			"name": "Numerical Analysis",
 			"code": "88376",
 			"year": "2020",
 			"semester": "1",
-			"topic":"numerical methods",
+			"topic": "numerical methods",
 			"university": "Bar Ilan University",
 			"department": "Mathematics",
 			"location_class": "",
 			"syllabus": "",
-			"grade_parts": [
-				{
-					"name": "Exam",
-					"percent": 100
-				}
-			],
+			"grade_parts": [{
+				"name": "Exam",
+				"percent": 100
+			}],
 			"resources": {
-				"optional":[
-					{
+				"optional": [{
 						"name": "Summery of the course (2018) by Mordeh (part 1)",
 						"link": "https://math-wiki.com/images/2/28/Aln83214_2019_part1.pdf",
 						"description": ""
@@ -573,80 +599,78 @@
 				]
 			},
 			"updates": [{
-					"title": "home work 1",
-					"date": "11.1.2019",
-					"description": "The file can be found <a href='/files/numerical_analysis_hw_1.pdf'>here</a>",
-					"link": ""
-				},{
-					"title": "home work 2",
-					"date": "12.1.2019",
-					"description": "The file can be found <a href='/files/numerical_analysis_hw_2.pdf'>here</a>",
-					"link": ""
-				},{
-					"title": "home work 3",
-					"date": "1.1.2020",
-					"description": "The file can be found <a href='/files/numerical_analysis_hw_3.pdf'>here</a>",
-					"link": ""
-				},{
-					"title": "home work 4",
-					"date": "2.1.2020",
-					"description": "The file can be found <a href='/files/numerical_analysis_hw_4.pdf'>here</a>",
-					"link": ""
-				},{
-					"title": "Answer for home work 1",
-					"date": "2.8.2020",
-					"description": "The file can be found <a href='/files/home_work_1_answer.pdf'>here</a>",
-					"link": ""
-				}
-			],
+				"title": "home work 1",
+				"date": "11.1.2019",
+				"description": "The file can be found <a href='/files/numerical_analysis_hw_1.pdf'>here</a>",
+				"link": ""
+			}, {
+				"title": "home work 2",
+				"date": "12.1.2019",
+				"description": "The file can be found <a href='/files/numerical_analysis_hw_2.pdf'>here</a>",
+				"link": ""
+			}, {
+				"title": "home work 3",
+				"date": "1.1.2020",
+				"description": "The file can be found <a href='/files/numerical_analysis_hw_3.pdf'>here</a>",
+				"link": ""
+			}, {
+				"title": "home work 4",
+				"date": "2.1.2020",
+				"description": "The file can be found <a href='/files/numerical_analysis_hw_4.pdf'>here</a>",
+				"link": ""
+			}, {
+				"title": "Answer for home work 1",
+				"date": "2.8.2020",
+				"description": "The file can be found <a href='/files/home_work_1_answer.pdf'>here</a>",
+				"link": ""
+			}],
 			"modules": [{
 					"title": "Interpolation",
 					"explanation": "Numerical methods for Interpolation",
 					"resources": {
 						"Slides": [{
-								"name": "Legendre and Chebyshev polynomials - file 1",
-								"link": "https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%95%D7%9E%D7%99_%D7%9C%D7%96%27%D7%A0%D7%93%D7%A8",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Legendre and Chebyshev polynomials - file 2",
-								"link": "https://www.hamichlol.org.il/%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%95%D7%9E%D7%99_%D7%A6%27%D7%91%D7%99%D7%A9%D7%91",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Legendre and Chebyshev polynomials - file 3",
-								"link": "/files/numerical_analysis_polynoms.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Legendre and Chebyshev polynomials - file 4",
-								"link": "/files/numerical_analysis_сhvishev.docx",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Interpolation by Lagrange method",
-								"link": "http://u.cs.biu.ac.il/~zarosih/68/NMFiles/tirgul9.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Cubic Spline method",
-								"link": "https://www.math.ntnu.no/emner/TMA4215/2008h/cubicsplines.pdf",
-								"type": "slides",
-								"description": ""
-							}
-						]
+							"name": "Legendre and Chebyshev polynomials - file 1",
+							"link": "https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%95%D7%9E%D7%99_%D7%9C%D7%96%27%D7%A0%D7%93%D7%A8",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Legendre and Chebyshev polynomials - file 2",
+							"link": "https://www.hamichlol.org.il/%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%95%D7%9E%D7%99_%D7%A6%27%D7%91%D7%99%D7%A9%D7%91",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Legendre and Chebyshev polynomials - file 3",
+							"link": "/files/numerical_analysis_polynoms.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Legendre and Chebyshev polynomials - file 4",
+							"link": "/files/numerical_analysis_сhvishev.docx",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Interpolation by Lagrange method",
+							"link": "http://u.cs.biu.ac.il/~zarosih/68/NMFiles/tirgul9.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Cubic Spline method",
+							"link": "https://www.math.ntnu.no/emner/TMA4215/2008h/cubicsplines.pdf",
+							"type": "slides",
+							"description": ""
+						}]
 					}
 				},
 				{
 					"title": "Numerical Differentiation and Integration",
 					"explanation": "Numerical methods differentiation and integration",
 					"resources": {
-						"Slides":[{
+						"Slides": [{
 							"name": "Numerical Differentiation",
 							"link": "http://math-wiki.com/images/2/2c/%D7%AA%D7%A8%D7%92%D7%95%D7%9C_13.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Numerical Integration",
 							"link": "/files/numerical_analysis_numerical_Integration.pdf",
 							"type": "slides",
@@ -658,24 +682,21 @@
 			"description": "This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you."
 		},
 		{
-			"name":"Introduction to Linear Mathematical Optimization",
+			"name": "Introduction to Linear Mathematical Optimization",
 			"code": "88369",
 			"year": "2020",
 			"semester": "2",
-			"topic":"numerical methods",
+			"topic": "numerical methods",
 			"university": "Bar Ilan University",
 			"department": "Mathematics",
 			"location_class": "",
 			"syllabus": "",
-			"grade_parts": [
-				{
-					"name": "Exam",
-					"percent": 100
-				}
-			],
+			"grade_parts": [{
+				"name": "Exam",
+				"percent": 100
+			}],
 			"resources": {
-				"optional":[
-					{
+				"optional": [{
 						"name": "A nice summery of the main algorithm in the course",
 						"link": "https://www3.nd.edu/~dgalvin1/30210/30210_F07/presentations/simplex_full.pdf",
 						"description": ""
@@ -698,126 +719,124 @@
 				]
 			},
 			"updates": [{
-					"title": "Cancalation of home work 4",
-					"date": "5.1.2020",
-					"description": "There will not be home work #4 as plained in order to allow you to focus on more prepartions for the exam.",
-					"link": ""
-				}
-			],
+				"title": "Cancalation of home work 4",
+				"date": "5.1.2020",
+				"description": "There will not be home work #4 as plained in order to allow you to focus on more prepartions for the exam.",
+				"link": ""
+			}],
 			"modules": [{
 					"title": "Introduction to Simplex",
 					"explanation": "Numerical methods for Interpolation",
 					"resources": {
 						"Slides": [{
-								"name": "Introduction to Simplex method and linear optimization background (file 1)",
-								"link": "https://en.wikipedia.org/wiki/George_Dantzig",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Introduction to Simplex method and linear optimization background (file 2)",
-								"link": "http://www.math.wsu.edu/faculty/genz/364/lessons/l3034.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Simplex Algorithm for LP problems (file 1)",
-								"link": "http://www.phpsimplex.com/en/simplex_method_example.htm",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Simplex Algorithm for LP problems (file 2)",
-								"link": "http://www.ms.uky.edu/~jack/2010-01-MA162/2010-02-25-MA162Lab.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Simplex Algorithm for LP problems (file 3)",
-								"link": "http://math.uww.edu/~mcfarlat/s-prob.htm",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Two Phase Simplex Algorithm (file 1)",
-								"link": "http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Two Phase Simplex Algorithm (file 2)",
-								"link": "http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Two Phase Simplex Algorithm (file 3)",
-								"link": "http://www.universalteacherpublications.com/univ/ebooks/or/Ch3/twophase1.htm",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Two Phase Simplex Algorithm (file 4)",
-								"link": "https://www.math.ubc.ca/~anstee/math340/340simplexalgorithmoverview.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Dual theory for linear optimization problems (file 1)",
-								"link": "/files/linear_optimization_big_m_1.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Dual theory for linear optimization problems (file 2)",
-								"link": "/files/linear_optimization_big_m_2.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Dual theory for linear optimization problems",
-								"link": "/files/dual_simplex_example_1.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Dual Simplex analysis",
-								"link": "/files/dual_simplex_example_2.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Network, tranfer and other LP problems modeling",
-								"link": "http://web.mit.edu/15.053/www/AMP-Chapter-09.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Gradient Decent",
-								"link": "https://people.seas.harvard.edu/~yaron/AM221-S16/lecture_notes/AM221_lecture9.pdf",
-								"type": "slides",
-								"description": ""
-							}
-						]
+							"name": "Introduction to Simplex method and linear optimization background (file 1)",
+							"link": "https://en.wikipedia.org/wiki/George_Dantzig",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Introduction to Simplex method and linear optimization background (file 2)",
+							"link": "http://www.math.wsu.edu/faculty/genz/364/lessons/l3034.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Simplex Algorithm for LP problems (file 1)",
+							"link": "http://www.phpsimplex.com/en/simplex_method_example.htm",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Simplex Algorithm for LP problems (file 2)",
+							"link": "http://www.ms.uky.edu/~jack/2010-01-MA162/2010-02-25-MA162Lab.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Simplex Algorithm for LP problems (file 3)",
+							"link": "http://math.uww.edu/~mcfarlat/s-prob.htm",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Two Phase Simplex Algorithm (file 1)",
+							"link": "http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Two Phase Simplex Algorithm (file 2)",
+							"link": "http://optlab.mcmaster.ca/feng/4O03/Two.Phase.Simplex.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Two Phase Simplex Algorithm (file 3)",
+							"link": "http://www.universalteacherpublications.com/univ/ebooks/or/Ch3/twophase1.htm",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Two Phase Simplex Algorithm (file 4)",
+							"link": "https://www.math.ubc.ca/~anstee/math340/340simplexalgorithmoverview.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Dual theory for linear optimization problems (file 1)",
+							"link": "/files/linear_optimization_big_m_1.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Dual theory for linear optimization problems (file 2)",
+							"link": "/files/linear_optimization_big_m_2.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Dual theory for linear optimization problems",
+							"link": "/files/dual_simplex_example_1.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Dual Simplex analysis",
+							"link": "/files/dual_simplex_example_2.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Network, tranfer and other LP problems modeling",
+							"link": "http://web.mit.edu/15.053/www/AMP-Chapter-09.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Gradient Decent",
+							"link": "https://people.seas.harvard.edu/~yaron/AM221-S16/lecture_notes/AM221_lecture9.pdf",
+							"type": "slides",
+							"description": ""
+						}]
 					}
 				},
 				{
 					"title": "Home work",
 					"explanation": "",
 					"resources": {
-						"Home Work":[{
+						"Home Work": [{
 							"name": "Home work 1",
 							"link": "/files/88369-hw-01.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Home work 2",
 							"link": "/files/OR-Exercise 3.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Home work 3",
 							"link": "/files/OR-Exercise 4.pdf",
 							"type": "slides",
 							"description": ""
 						}],
-						"Home Work Answer":[{
+						"Home Work Answer": [{
 							"name": "Home Work Answer 1",
 							"link": "/files/88369-hw-01-sol.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Home Work Answer 2",
 							"link": "/files/linear_optimization_hw_1_answer_1_3.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Home Work Answer 3",
 							"link": "/files/88369-hw-04-sol.pdf",
 							"type": "slides",
@@ -829,30 +848,26 @@
 			"description": "This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you."
 		},
 		{
-			"name":"Tools for Numerical Analysis ",
+			"name": "Tools for Numerical Analysis ",
 			"code": "83214",
 			"year": "2020",
 			"semester": "2",
-			"topic":"numerical methods",
+			"topic": "numerical methods",
 			"university": "Bar Ilan University",
 			"department": "Engineering",
 			"location_class": "",
 			"description": "This page is made for students of this course. Please feel free to email me any suggestion on how to improve this page for you.",
 			"syllabus": "",
-			"grade_parts": [
-				{
-					"name": "Exam",
-					"percent": 100
-				}
-			],
+			"grade_parts": [{
+				"name": "Exam",
+				"percent": 100
+			}],
 			"resources": {
-				"optional":[
-					{
-						"name": "A wonderfull book with all the subject of the course in the first five chapters.",
-						"link": "http://www.math.uni.wroc.pl/~olech/metnum2/Podreczniki/(eBook)%20Introduction%20to%20Numerical%20Analysis%20-%20J.Stoer,R.Bulirsch.pdf",
-						"description": ""
-					}
-				]
+				"optional": [{
+					"name": "A wonderfull book with all the subject of the course in the first five chapters.",
+					"link": "http://www.math.uni.wroc.pl/~olech/metnum2/Podreczniki/(eBook)%20Introduction%20to%20Numerical%20Analysis%20-%20J.Stoer,R.Bulirsch.pdf",
+					"description": ""
+				}]
 			},
 			"updates": [{
 					"title": "Home work 1",
@@ -873,94 +888,93 @@
 					"link": ""
 				}
 			],
-			"modules": [
-				{
+			"modules": [{
 					"title": "Introduction to numerical analysis",
 					"explanation": "Concepts of numerical analysis and ideas from function theory - main slides",
 					"resources": {
 						"Slides": [{
-								"name": "Introduction to numerical analysis and numerical error",
-								"link": "/files/tools_numerical_lession_1_d.pdf",
-								"type": "slides",
-								"description": "Thanks to Oz Pirvandy"
-							},{
-								"name": "Introduction to numerical analysis and numerical error (file 1)",
-								"link": "/files/tools_numerical_lession_1_a.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Introduction to numerical analysis and numerical error (file 2)",
-								"link": "/files/tools_numerical_lession_1_b.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "Introduction to numerical analysis and numerical error (file 3)",
-								"link": "/files/tools_numerical_lession_1_c.pdf",
-								"type": "slides",
-								"description": ""
-							},{
-								"name": "More numerical error and zero points of a function",
-								"link": "/files/tools_numerical_lession_2.pdf",
-								"type": "slides",
-								"description": "Thanks to Oz Pirvandy"
-							},{
-								"name": " Continue zero points of a function, fix points and some Matlab Code",
-								"link": "/files/tools_numerical_lession_3.pdf",
-								"type": "slides",
-								"description": "Thanks to Oz Pirvandy"
-							}]
-						}
+							"name": "Introduction to numerical analysis and numerical error",
+							"link": "/files/tools_numerical_lession_1_d.pdf",
+							"type": "slides",
+							"description": "Thanks to Oz Pirvandy"
+						}, {
+							"name": "Introduction to numerical analysis and numerical error (file 1)",
+							"link": "/files/tools_numerical_lession_1_a.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Introduction to numerical analysis and numerical error (file 2)",
+							"link": "/files/tools_numerical_lession_1_b.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "Introduction to numerical analysis and numerical error (file 3)",
+							"link": "/files/tools_numerical_lession_1_c.pdf",
+							"type": "slides",
+							"description": ""
+						}, {
+							"name": "More numerical error and zero points of a function",
+							"link": "/files/tools_numerical_lession_2.pdf",
+							"type": "slides",
+							"description": "Thanks to Oz Pirvandy"
+						}, {
+							"name": " Continue zero points of a function, fix points and some Matlab Code",
+							"link": "/files/tools_numerical_lession_3.pdf",
+							"type": "slides",
+							"description": "Thanks to Oz Pirvandy"
+						}]
+					}
 				},
 				{
 					"title": "Matrix methods",
 					"explanation": "Methods to calculate several good propertices of Matrices",
 					"resources": {
-						"Slides":[{
+						"Slides": [{
 							"name": "LU and Gauss methods",
 							"link": "/files/linear_numerical_presentation.pptx",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "LU and SVD methods  - LU example",
 							"link": "/files/numerical_tools_lession_5_file_0.pptx",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "LU and SVD methods - LU analysis",
 							"link": "/files/numerical_tools_lession_5_file_1.pptx",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "LU and SVD methods- SVD algorithm",
 							"link": "/files/numerical_tools_lession_5_file_2.pptx",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "LU and SVD methods - SVD example)",
 							"link": "/files/numerical_tools_lession_5_file_3.pptx",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Linear Iterative methods",
 							"link": "/files/numerical_tools_lession_5.pptx",
 							"type": "slides",
 							"description": "Thanks to Oz Pirvandy"
-						},{
+						}, {
 							"name": "Yakobi-Zidal method and interpolation",
 							"link": "/files/tools_numerical_lession_6.pptx",
 							"type": "slides",
 							"description": "Thanks to Oz Pirvandy"
-						},{
+						}, {
 							"name": "Yakobi-Zidal method and interpolation advanced (file 1)",
 							"link": "/files/numerical_tools_lecture_8 (1).pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Yakobi-Zidal method and interpolation advanced (file 2)",
 							"link": "/files/numerical_tools_lecture_8 (2).pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Yakobi-Zidal method and interpolation advanced (file 3)",
 							"link": "/files/numerical_tools_lecture_8 (3).pdf",
 							"type": "slides",
@@ -972,52 +986,52 @@
 					"title": "Advanced Subjects",
 					"explanation": "Methods to extrapolate and interpolate data, FFT, numerical integration and differentiation",
 					"resources": {
-						"Slides":[{
+						"Slides": [{
 							"name": "Least Squres",
 							"link": "http://math.mit.edu/~gs/linearalgebra/ila0403.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "(Fast) Fourier Transform (file 1)",
 							"link": "/files/numerical_tools_lession_9_a.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "(Fast) Fourier Transform (file 2)",
 							"link": "/files/numerical_tools_lession_9_b.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Numerical Differentiation",
 							"link": "/files/numerical_tools_lession_10.PDF",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Numerical Integration",
 							"link": "/files/numerical_analysis_numerical_Integration.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Numerical ODE Solvers - Euler Method",
 							"link": "/files/tools_numerical_ode_lecture.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Numerical ODE Solvers - Runga Kutta example",
 							"link": "https://www.intmath.com/differential-equations/12-runge-kutta-rk4-des.php",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Numerical ODE Solvers - Runga Kutta method",
 							"link": "http://tnt.phys.uniroma1.it/twiki/pub/TNTgroup/AngeloVulpiani/runge.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Numerical PDE Solvers - FEM",
 							"link": "https://www2.icp.uni-stuttgart.de/~icp/mediawiki/images/d/d3/Jcerda_notes_FE0.pdf",
 							"type": "slides",
 							"description": ""
-						},{
+						}, {
 							"name": "Numerical PDE Solvers - code example",
 							"link": "https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/moler/pdes.pdf",
 							"type": "slides",
@@ -1026,6 +1040,79 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Mathematical aspects and applications of modern cyber",
+			"code": "----",
+			"year": "2023",
+			"topic": "Cyber",
+			"semester": "2",
+			"university": "HIT",
+			"department": "Computer science",
+			"location_class": "B6R101",
+			"syllabus": "",
+			"grade_parts": [{
+					"name": "Final Project",
+					"percent": 90
+				},
+				{
+					"name": "Presentation in class",
+					"percent": 10
+				}
+			],
+			"resources": {
+				"optinal": [{
+					"name": "A cool website with a lot of relevent content",
+					"link": "https://cybersecurityguide.org/resources/math-in-cybersecurity/",
+					"description": "",
+					"type": "file"
+				}]
+			},
+			"updates": [{
+				"title": "Final Project Ideas",
+				"date": "2.26.2023",
+				"description": "If you have an idea on which is the best subject for your final project to this course, you can email me the idea :)",
+				"link": ""
+			}],
+			"modules": [{
+					"title": "Intro",
+					"explanation": "We make sure the main mathematical concepts needed for the course are well aligned.",
+					"resources": {
+						"Lectures": [{
+								"name": "Lession 1: Prime numbers and etc.",
+								"link": "/files/hit_math_cyber/1_1_primes.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},
+							{
+								"name": "Lession 1: Intro to encryption",
+								"link": "/files/hit_math_cyber/1_2_encryption.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},
+							{
+								"name": "Lession 2: Crypto cont.",
+								"link": "/files/hit_math_cyber/2_1.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							}
+						]
+					}
+				},
+				{
+					"title": "Graph and network theory",
+					"explanation": "Mathematical concepts for network security",
+					"resources": {
+						"Lectures": [{
+							"name": "Lession 3: Graph theory from a cyber prespective",
+							"link": "/files/hit_math_cyber/3.pdf",
+							"description": "",
+							"type": "file"
+						}]
+					}
+				}
+			],
+			"description": "The course will consist of 4 main parts. 1) Encryption and how to crack it, from a computational point of view: Theoretical encryption and how to crack encryptions using heuristic algorithms. 2) Graph theory for communication networks: general introduction, cyber-attacks with graphs, detecting signals in time and creating a secure network, computationally detecting communication networks. 3) Anomaly detection from the point of view of a cyber defender: The theory of anomalies with examples from the industry on several use-cases. 4) Machine learning to perform and detect cyber-attacks: An introduction to machine learning in the context of cyber security, using machine learning to study an attack on an organization&#39;s network, using machine learning to detect a non-aggressive DDOS attack."
 		}
 	]
 }
