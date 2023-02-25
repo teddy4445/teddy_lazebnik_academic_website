@@ -29,6 +29,15 @@
          "description":"If you an AI / Machine Learning / Data Science and doing a project, you probabliy should print one or more of these graphs to really understand what is going on..."
       }
 	],
+   "27":[
+      {
+         "title":"The math behind the Coronavirus spread",
+		 "date": "1/5/2020",
+		 "reading_time": "2",
+		 "link_address": "6",
+         "description":"Covid-19 pandemic hit the wolrd at the beginning of 2020 and lead to hundrieds of mathematical models predicting the spread of the pandemic wolrdwide. Here I offer a basic review of some of these methods."
+      }
+	],
    "26":[
       {
          "title":"Distributed Computing Based Drugs",

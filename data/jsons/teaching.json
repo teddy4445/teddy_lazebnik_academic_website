@@ -1106,7 +1106,37 @@
 						"Lectures": [{
 							"name": "Lession 3: Graph theory from a cyber prespective",
 							"link": "/files/hit_math_cyber/3.pdf",
-							"description": "",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 4: Time Series Analysis",
+							"link": "/files/hit_math_cyber/4.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 5 (a): Data-driven security challanges",
+							"link": "/files/hit_math_cyber/5_1.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 5 (b): Directions and solutions",
+							"link": "/files/hit_math_cyber/5_2.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 5 (c): Example - cybersecurity events detection in a data-driven manner",
+							"link": "/files/hit_math_cyber/5_3.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 6 (b): Multiagent traffic monitoring",
+							"link": "/files/hit_math_cyber/6_2.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 6 (c): Advanced Persistent Threats",
+							"link": "/files/hit_math_cyber/6_3.pdf",
+								"description": "Thanks to original source",
 							"type": "file"
 						}]
 					}
