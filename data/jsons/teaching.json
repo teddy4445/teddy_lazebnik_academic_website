@@ -1073,6 +1073,12 @@
 				"date": "2.26.2023",
 				"description": "If you have an idea on which is the best subject for your final project to this course, you can email me the idea :)",
 				"link": ""
+			},
+			{
+				"title": "Course's materials",
+				"date": "1.3.2023",
+				"description": "All the materials of the course are uploaded. Feel free to read the PDFs before the lession if you have spare time.",
+				"link": ""
 			}],
 			"modules": [{
 					"title": "Intro",
@@ -1136,6 +1142,85 @@
 						},{
 							"name": "Lession 6 (c): Advanced Persistent Threats",
 							"link": "/files/hit_math_cyber/6_3.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						}]
+					}
+				},
+				{
+					"title": "Data Driven and Machine learning based attacks and defends",
+					"explanation": "Introdution to machine learning as cybersecurity attackers and defenders",
+					"resources": {
+						"Lectures": [{
+							"name": "Lession 7 (a): Anomaly Detection in Time Series",
+							"link": "/files/hit_math_cyber/7_1.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 7 (b): Anomaly Detection in Time Series - more methods",
+							"link": "/files/hit_math_cyber/7_2.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 8 (a): Unsupervised Anomaly Detection on TimeSeries",
+							"link": "/files/hit_math_cyber/8_1.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 8 (b): ANOMALIB: A DEEP LEARNING LIBRARY FOR ANOMALY DETECTION",
+							"link": "/files/hit_math_cyber/8_2.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 9 (a): Cybersecurity Threats and Their Mitigation Approaches Using Machine Learning",
+							"link": "/files/hit_math_cyber/9_1.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 9 (b): Anomaly-Based Intrusion Detection by Machine Learning: A Case Study on Probing Attacks to an Institutional Network",
+							"link": "/files/hit_math_cyber/9_2.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 9 (c): Towards Zero-Shot Flow-Based Cyber-Security Anomaly Detection Framework",
+							"link": "/files/hit_math_cyber/9_3.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						}]
+					}
+				},
+				{
+					"title": "No features, just data - Deep learning methods for cybersecurity",
+					"explanation": "Introdution to deep learning based models usage in the domain of cybersecurity",
+					"resources": {
+						"Lectures": [{
+							"name": "Lession 10 (a): Deep Reinforcement Learning for Cyber Security",
+							"link": "/files/hit_math_cyber/10_1.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 10 (b): An Ensemble Deep Learning-Based Cyber-Attack Detection in Industrial Control System",
+							"link": "/files/hit_math_cyber/10_2.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 11 (a): Internet of Things Cyber Attacks Detection using Machine Learning",
+							"link": "/files/hit_math_cyber/11_1.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 11 (b): DDoS Attack Detection using Machine Learning Techniques in Cloud Computing Environments",
+							"link": "/files/hit_math_cyber/11_2.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 12 (a): From product recommendation to cyber-attack prediction: generating attack graphs and predicting future attacks",
+							"link": "/files/hit_math_cyber/12_1.pdf",
+								"description": "Thanks to original source",
+							"type": "file"
+						},{
+							"name": "Lession 12 (b): A Machine-Learning-Based Cyber Attack Detection Model for Wireless Sensor Networks in Microgrids",
+							"link": "/files/hit_math_cyber/12_2.pdf",
 								"description": "Thanks to original source",
 							"type": "file"
 						}]
