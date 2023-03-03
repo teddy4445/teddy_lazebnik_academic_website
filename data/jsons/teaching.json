@@ -1061,6 +1061,12 @@
 				}
 			],
 			"resources": {
+				"Must": [{
+					"name": "Final Project Guideline",
+					"link": "/files/hit_math_cyber/cyber_final_course.pdf",
+					"description": "All the details about the course's final project.",
+					"type": "file"
+				}],
 				"optinal": [{
 					"name": "A cool website with a lot of relevent content",
 					"link": "https://cybersecurityguide.org/resources/math-in-cybersecurity/",
@@ -1071,8 +1077,8 @@
 			"updates": [{
 				"title": "Final Project - Everything you wanted to ask and did not have the chance to",
 				"date": "3.3.2023",
-				"description": "All the details about the course's final project is provided in the attached file. Shortly, you should summary an academic paper related to the course and prepare a 15-min presentation for it.",
-				"link": "/files/hit_math_cyber/cyber_final_course.pdf"
+				"description": "All the details about the course's final project is provided in the attached file in the 'General' tab, under 'Resources'. Shortly, you should summary an academic paper related to the course and prepare a 15-min presentation for it.",
+				"link": ""
 			},
 			{
 				"title": "Course's materials",
