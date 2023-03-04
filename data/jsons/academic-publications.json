@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Scheduling BCG and IL-2 Injections for Bladder Cancer Immunotherapy Treatment",
+         "description":"Cancer is one of the most common families of diseases today with millions of new patients every year around the world. Bladder cancer (BC) is one of the most prevalent types of cancer affecting both genders, and it is not known to be associated with a specific group in the population. The current treatment standard for BC follows a standard weekly Bacillus Calmette–Guérin (BCG) immunotherapy-based therapy protocol which includes BCG and IL-2 injections. Unfortunately, due to the biological and clinical complexity of the interactions between the immune system, treatment, and cancer cells, clinical outcomes vary significantly among patients. Unfortunately, existing models are commonly developed for a non-existing average patient or pose strict, unrealistic, expectations on the treatment process. In this work, we propose the most extensive ordinary differential equation-based biological model of BCG treatment to date and a deep learning-based scheduling approach to obtain a personalized treatment schedule. Our results show that resulting treatment schedules favorably compare with the current standard practices and the current state-of-the-art scheduling approach.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/liza_2.pdf"},
+					  {"info": "cite", "type": 3, "link": "Yaniv-Rosenfeld, A., Savchenko, E., Rosenfeld, A., Lazebnik., Scheduling BCG and IL-2 Injections for Bladder Cancer Immunotherapy Treatment. Mathematics. 2023."}],
+		 "authors": "Amit Yaniv-Rosenfeld, Elizaveta Savchenko, Ariel Rosenfeld, Teddy Lazebnik",
+         "year": 2023,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Mathematics",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Implementing Machine Learning Methods in Estimating the Size of the Non-observed Economy",
          "description":"Even though the literature on unregistered economic activity is growing at an increasing rate, we commonly encounter simple ordinary least squares methods and panel regressions, largely ignoring the recent rapid developments in machine learning methods. This study provides a new approach to more accurately estimate the size of the non-observed economy using machine learning methods. Compared to two currency demand-based models used to estimate the size of the non-observed economy, we show that a Random Forest algorithm can more accurately estimate the demand for currency, which is known to provide a fair estimation of the unregistered economic activity. The proposed approach shows superior forecasting capabilities compared to the current state-of-the-art linear regression-based methods dedicated to estimating non-observed economic activity.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/ml_black_economy.pdf"},
