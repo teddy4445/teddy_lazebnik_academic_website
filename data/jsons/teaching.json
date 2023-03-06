@@ -1067,7 +1067,7 @@
 					"description": "All the details about the course's final project.",
 					"type": "file"
 				}],
-				"optinal": [{
+				"Optinal": [{
 					"name": "A cool website with a lot of relevent content",
 					"link": "https://cybersecurityguide.org/resources/math-in-cybersecurity/",
 					"description": "",
@@ -1240,6 +1240,96 @@
 				}
 			],
 			"description": "The course will consist of 4 main parts. 1) Encryption and how to crack it, from a computational point of view: Theoretical encryption and how to crack encryptions using heuristic algorithms. 2) Graph theory for communication networks: general introduction, cyber-attacks with graphs, detecting signals in time and creating a secure network, computationally detecting communication networks. 3) Anomaly detection from the point of view of a cyber defender: The theory of anomalies with examples from the industry on several use-cases. 4) Machine learning to perform and detect cyber-attacks: An introduction to machine learning in the context of cyber security, using machine learning to study an attack on an organization&#39;s network, using machine learning to detect a non-aggressive DDOS attack."
+		},
+		{
+			"name": "Operating Systems",
+			"code": "2320084",
+			"year": "2023",
+			"topic": "CS",
+			"semester": "2",
+			"university": "Reichman University",
+			"department": "Computer science",
+			"location_class": "Zoom",
+			"syllabus": "",
+			"grade_parts": [{
+					"name": "Exam",
+					"percent": 70
+				},
+				{
+					"name": "Homework",
+					"percent": 30
+				}
+			],
+			"resources": {
+				"Extra": [{
+					"name": "A wonderfull website for extra materials",
+					"link": "https://www.tutorialspoint.com/operating_system/index.htm",
+					"description": "You have so much short articles with relevent content here so you should use it when needed",
+					"type": "file"
+				},
+				{
+					"name": "Want to learn online the course in English?",
+					"link": "https://online.stanford.edu/courses/cs111-operating-systems-principles",
+					"description": "I am sure you really love my lectures but if you want extra lectures with similar topics in English, Stanford is my personal choice.",
+					"type": "file"
+				}]
+			},
+			"updates": [{
+				"title": "Welcome to the course!",
+				"date": "3.18.2023",
+				"description": "This is my personal website where I usally upload materials. However, following Reichman University's policy, I can not do that. As such, we will use the moodle and here I will add extra stuff for the wolrd and you to see and enjoy",
+				"link": ""
+			}],
+			"modules": [{
+					"title": "All materials are avalible in the course's moodle at Reichman University",
+					"explanation": "Well, the title is pretty self-explanatory, isn't it?",
+					"resources": {
+					}
+				}
+			],
+			"description": "The course will focus on the main components of modern operation systems."
+		},
+		{
+			"name": "Web Development: Server Side",
+			"code": "35619",
+			"year": "2023",
+			"topic": "Back end development",
+			"semester": "2",
+			"university": "Bar Ilan University",
+			"department": "Information Science",
+			"location_class": "Zoom",
+			"syllabus": "",
+			"grade_parts": [{
+					"name": "Final project",
+					"percent": 90
+				},
+				{
+					"name": "Presentation in class",
+					"percent": 10
+				}
+			],
+			"resources": {
+				"Extra": [{
+					"name": "I will add later",
+					"link": "",
+					"description": "'Later' means in a week or two, maybe less, maybe more",
+					"type": "file"
+				}]
+			},
+			"updates": [{
+				"title": "Welcome to the course!",
+				"description": "Since I hate the moodle, all the materials will be uploaded here.",
+				"date": "3.12.2023",
+				"link": ""
+			}],
+			"modules": [{
+					"title": "I will add here everything during the weekend - promise!",
+					"explanation": "Well, the title is pretty self-explanatory, isn't it?",
+					"resources": {
+					}
+				}
+			],
+			"description": "The course will focus on the theoretical and practical components of developing modern server side for web applications in JavaScript (NodeJS)."
 		}
 	]
 }
