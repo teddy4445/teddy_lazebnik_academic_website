@@ -13,6 +13,18 @@
          "publicationStatus":"Published"
       },
 	{
+         "name":"Intervention Policy Influence on the Effect of Epidemiological Crisis on Industry-Level Production Through Input-Output Networks",
+         "description":"During a global epidemiological crisis, lockdowns and border closures substantially disrupt international supply chains, underscoring the importance of choosing an intervention policy that accounts for the unique structure of input-output linkages among domestic industries. This study develops a pioneering mathematical model to quantify the role of pandemic-related intervention policies in the economic impact of a pandemic outbreak in an economy where sectors are complements throughout input-output networks. Our approach is based on three pillars - epidemiological, social, and economic sub-models. Moreover, we present \textit{in silico} computer simulations to examine the influence of work capsules, work-from-home, vaccination, and industry closure on the damage a pandemic could inflict on output at the industry level. A comparison between work capsules and work-from-home policies shows that the latter decreases economic loss much more than the former. Compared to a state without interventions, a work-from-home policy affecting 12\% of the workforce will decrease output loss by 1.4 percentage points during an epidemiological crisis following a COVID-19-like outbreak. Under the constraint of choosing one intervention policy, vaccination significantly reduces the loss of output, particularly in industries that require close customer-seller contacts. In the analysis of scenarios of integrating intervention policies, it is found that, using direct marginal contribution as the measure, the vaccination intervention is approximately 4.5 times more effective in reducing output loss than the work-from-home intervention.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/covid_eco_networks.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Shami, L., Bunimovich-Mendrazitsky, S., Intervention Policy Influence on the Effect of Epidemiological Crisis on Industry-Level Production Through Input-Output Networks. Socio-Economic Planning Sciences. 2023."}],
+		 "authors": "Teddy Lazebnik, Labib Shami, Svetlana Bunimovich-Mendrazitsky",
+         "year": 2023,
+         "topic":"pandemic",
+         "type":"Paper",
+         "publisher":"Socio-Economic Planning Sciences",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Implementing Machine Learning Methods in Estimating the Size of the Non-observed Economy",
          "description":"Even though the literature on unregistered economic activity is growing at an increasing rate, we commonly encounter simple ordinary least squares methods and panel regressions, largely ignoring the recent rapid developments in machine learning methods. This study provides a new approach to more accurately estimate the size of the non-observed economy using machine learning methods. Compared to two currency demand-based models used to estimate the size of the non-observed economy, we show that a Random Forest algorithm can more accurately estimate the demand for currency, which is known to provide a fair estimation of the unregistered economic activity. The proposed approach shows superior forecasting capabilities compared to the current state-of-the-art linear regression-based methods dedicated to estimating non-observed economic activity.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/ml_black_economy.pdf"},
