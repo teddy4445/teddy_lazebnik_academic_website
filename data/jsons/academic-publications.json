@@ -13,6 +13,18 @@
          "publicationStatus":"Published"
       },
 	{
+         "name":"Decision tree post-pruning without loss of accuracy using the SAT-PP algorithm with an empirical evaluation on clinical data",
+         "description":"A decision tree (DT) is one of the most popular and efficient techniques in data mining. Specifically, in the clinical domain, DTs have been widely used thanks to their relatively easy explainable nature, efficient computation time, and relatively accurate predictions. However, some DT constriction algorithms may produce a large tree size structure which is difficult to understand and often leads to misclassification of data in the testing process due to poor generalization. Post pruning (PP) algorithms have been introduced to reduce the size of the tree structure with a minor (or not at all) decrease in the accuracy of classification while trying to improve the model’s generalization. In this paper, we propose a new Boolean satisfiability (SAT) based PP algorithm called SAT-PP. Our algorithm reduces the tree size while preserving the accuracy of the unpruned tree. We implemented our algorithm on a medical-related classification data sets since in medical-related tasks we emphatically try to avoid decreasing the model’s performance when better training is not an option. Namely, in the case of medical-related tasks, one may prefer an unpruned DT model to a pruned DT model with worse performance. Indeed, we empirically obtained that the SAT-PP algorithm produce the same accuracy and F1 score as the DT model without PP while statistically significantly reducing the model size and as a result computation time (6.8%). In addition, we compared the proposed algorithm with other PP algorithms and found similar generalization capabilities.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/sat_pp.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Decision tree post-pruning without loss of accuracy using the SAT-PP algorithm with an empirical evaluation on clinical data. Data & Knowledge Engineering. 2023."}],
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky",
+         "year": 2023,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Data & Knowledge Engineering",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Intervention Policy Influence on the Effect of Epidemiological Crisis on Industry-Level Production Through Input-Output Networks",
          "description":"During a global epidemiological crisis, lockdowns and border closures substantially disrupt international supply chains, underscoring the importance of choosing an intervention policy that accounts for the unique structure of input-output linkages among domestic industries. This study develops a pioneering mathematical model to quantify the role of pandemic-related intervention policies in the economic impact of a pandemic outbreak in an economy where sectors are complements throughout input-output networks. Our approach is based on three pillars - epidemiological, social, and economic sub-models. Moreover, we present in silico computer simulations to examine the influence of work capsules, work-from-home, vaccination, and industry closure on the damage a pandemic could inflict on output at the industry level. A comparison between work capsules and work-from-home policies shows that the latter decreases economic loss much more than the former. Compared to a state without interventions, a work-from-home policy affecting 12% of the workforce will decrease output loss by 1.4 percentage points during an epidemiological crisis following a COVID-19-like outbreak. Under the constraint of choosing one intervention policy, vaccination significantly reduces the loss of output, particularly in industries that require close customer-seller contacts. In the analysis of scenarios of integrating intervention policies, it is found that, using direct marginal contribution as the measure, the vaccination intervention is approximately 4.5 times more effective in reducing output loss than the work-from-home intervention.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/covid_eco_networks.pdf"},
@@ -94,6 +106,18 @@
          "topic":"Epidemiology",
          "type":"Paper",
          "publisher":"International Journal of Environmental Research and Public Health",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"A Security Games Inspired Approach for Distributed Control of Pandemic Spread",
+         "description":"Pandemics are a source of extensive mortality, economic impairment, and dramatic social fluctuation. Once a pandemic occurs, policymakers are faced with the highly challenging task of controlling it over time and space. In this article, a novel pandemic intervention policy that relies on the strategic deployment of inspection units (IUs) is proposed. These IUs are allocated in the environment, represented as a graph, and sample individuals who pass through the same node. If a sampled individual is identified as infected, she is extracted from the environment until she recovers (or dies). A realistic simulation‐based evaluation of the Influenza A pathogen using both synthetic and real‐world data is provided. The results demonstrate potential significant benefits of the proposed PIP in mitigating a pandemic spread which can complement other standard policies such as social distancing and mask-wearing.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/iu_pandemic.pdf"},
+					  {"info": "cite", "type": 3, "link": "Alexi, A., Rosenfeld, A., Lazebnik, T., A Security Games Inspired Approach for Distributed Control of Pandemic Spread. Advanced Theory and Simulations. 2022."}],
+		 "authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
+         "year": 2022,
+         "topic":"Epidemiology",
+         "type":"Paper",
+         "publisher":"Advanced Theory and Simulations",
          "publicationStatus":"Published"
       },
 	{
