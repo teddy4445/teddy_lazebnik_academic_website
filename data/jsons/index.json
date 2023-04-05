@@ -31,18 +31,6 @@
          "publisher":"Chaos, Solitons & Fractals",
          "publicationStatus":"Published"
       },
-	  {
-         "name":"Cell-level Spatio-Temporal Model for Bacillus Calmette--Guerin Based Immunotherapy Treatment Protocol of Superficial Bladder Cancer",
-         "description":"Bladder cancer is one of the most widespread types of cancer. Multiple treatments for non-invasive, superficial bladder cancer have been proposed over the last several decades with a weekly Bacillus Calmette–Guérin immunotherapy-based therapy protocol, which is considered the gold standard today. Nonetheless, due to the complexity of the interactions between the immune system, healthy cells, and cancer cells in the bladder’s microenvironment, clinical outcomes vary significantly among patients. Mathematical models are shown to be effective in predicting the treatment outcome based on the patient’s clinical condition at the beginning of the treatment. Even so, these models still have large errors for long-term treatments and patients that they do not fit. In this work, we utilize modern mathematical tools and propose a novel cell-level spatio-temporal mathematical model that takes into consideration the cell–cell and cell–environment interactions occurring in a realistic bladder’s geometric configuration in order to reduce these errors. We implement the model using the agent-based simulation approach, showing the impacts of different cancer tumor sizes and locations at the beginning of the treatment on the clinical outcomes for today’s gold-standard treatment protocol. In addition, we propose a genetic-algorithm-based approach to finding a successful and time-optimal treatment protocol for a given patient’s initial condition. Our results show that the current standard treatment protocol can be modified to produce cancer-free equilibrium for deeper cancer cells in the urothelium if the cancer cells’ spatial distribution is known, resulting in a greater success rate.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/cells-11-02372.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Cell-Level Spatio-Temporal Model for a Bacillus Calmette–Guérin-Based Immunotherapy Treatment Protocol of Superficial Bladder Cancer. Cells. 2022."}],
-		 "authors": "Teddy Lazebnik",
-         "year": 2022,
-         "topic":"Biomathematics",
-         "type":"Paper",
-         "publisher":"Cells",
-         "publicationStatus":"Published"
-      },
 		{
 		 "name":"Predicting acute kidney injury following open partial nephrectomy treatment using SAT-pruned explainable machine learning model",
 		 "description":"Background: One of the most prevalent complications of Partial Nephrectomy (PN) is Acute Kidney Injury (AKI), which could have a negative impact on subsequent renal function and occurs in up to 24.3% of patients undergoing PN. The aim of this study was to predict the occurrence of AKI following PN using preoperative parameters by applying machine learning algorithms. Methods We included all adult patients (n = 723) who underwent open PN in our department since 1995 and on whom we have data on the pre-operative renal function. We developed a random forest (RF) model with Boolean satisfaction-based pruned decision trees for binary classification (AKI or non-AKI). Hyper-parameter grid search was performed to optimize the model's performance. Fivefold cross-validation was applied to evaluate the model. We implemented a RF model with greedy feature selection to binary classify AKI and non-AKI cases based on pre-operative data. Results The best model obtained a 0.69 precision and 0.69 recall in classifying the AKI and non-AKI groups on average (k = 5). In addition, the model's probability to correctly classify a new prediction is 0.75. The proposed model is available as an online calculator. Conclusions Our model predicts the occurrence of AKI following open PN with (75%) accuracy. We plan to externally validate this model and modify it to minimally-invasive PN.",
@@ -57,12 +45,6 @@
 		}
    ],
    "currentProjects":[
-      {
-         "name":"The OMEGA Project",
-         "topic": "simulations",
-         "description":"Simulating phatogenic-like DNA sequances from healthy samples, focusing on cancer. We ",
-         "link":{"info": "View project", "type": 2, "link": "https://www.ucl.ac.uk/cancer/research/department-cancer-biology/medical-genomics-group", "example":""}
-      },
       {
          "name":"Understanding Epidemiological Dynamics Via Simulations",
          "topic": "epidemiology-mathematics",

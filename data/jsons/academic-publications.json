@@ -43,7 +43,7 @@
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Shami, L., Bunimovich-Mendrazitsky, S., Intervention Policy Influence on the Effect of Epidemiological Crisis on Industry-Level Production Through Input-Output Networks. Socio-Economic Planning Sciences. 2023."}],
 		 "authors": "Teddy Lazebnik, Labib Shami, Svetlana Bunimovich-Mendrazitsky",
          "year": 2023,
-         "topic":"pandemic",
+         "topic":"Epidemiology",
          "type":"Paper",
          "publisher":"Socio-Economic Planning Sciences",
          "publicationStatus":"Published"
@@ -79,7 +79,7 @@
 					  {"info": "cite", "type": 3, "link": "Simon-Keren, L., Liberzon, A., Lazebnik, T., A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge. Scientific Reports. 2023."}],
 		 "authors": "Liron Simon-Keren, Alex Liberzon, Teddy Lazebnik",
          "year": 2022,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Scientific Reports",
          "publicationStatus":"Published"
@@ -187,7 +187,7 @@
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bahouth, Z., Bunimovich-Mendrazitsky, S., Halachmi, S., Predicting acute kidney injury following open partial nephrectomy treatment using SAT-pruned explainable machine learning model. BMC Medical Informatics and Decision Making. 2022."}],
 		 "authors": "Teddy Lazebnik, Zaher Bahouth, Svetlana Bunimovich-Mendrazitsky, Sarel Halachmi",
          "year": 2022,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"BMC Medical Informatics and Decision Making",
          "publicationStatus":"Published"
@@ -211,7 +211,7 @@
 					  {"info": "cite", "type": 3, "link": "Natan, S., Lazebnik, T., Lerner, E., A distinction of three online learning pedagogic paradigms. SN Social Science. 2022."}],
 		 "authors": "Sarit Natan, Teddy Lazebnik, Elisa Lerner",
          "year": 2022,
-         "topic":"Remote Learning",
+         "topic":"Social Science",
          "type":"Paper",
          "publisher":"SN Social Science",
          "publicationStatus":"Published"
@@ -247,7 +247,7 @@
 					  {"info": "cite", "type": 3, "link": "Savchenko, E., Lazebnik, T., Computer aided functional style identifcation and correction in modern russian texts. Journal of Data, Information and Management. 2022."}],
 		 "authors": "Elizaveta Savchenko, Teddy Lazebnik",
          "year": 2022,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Journal of Data, Information and Management",
          "publicationStatus":"Published"
@@ -301,18 +301,6 @@
          "publicationStatus":"Published"
       },
       {
-         "name":"A Stable Algorithm For Numerical Matrix Exponent",
-         "description":"A novel numerical stable algorithm for the computing of any complex squre matrix's exponent with analytical proof for bounded error.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix_exponent.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., A stable algorithm for numerical matrix exponent. Functional Differential Equations. 2020."}],
-		 "authors": "Teddy Lazebnik and Shlomo Yanetz",
-         "year": 2016,
-         "topic":"Numerical Analysis",
-         "type":"Paper",
-         "publisher":"Functional Differential Equations",
-         "publicationStatus":"Published"
-      },
-      {
          "name":"Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling",
          "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modelingOptimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"},
@@ -330,7 +318,7 @@
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., Bunimovich-Mendrazitsky, S., Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations. 2019."}],
 		 "authors": "Teddy Lazebnik, Shlomo Yanetz, and Svetlana Bunimovich-Mendrazitsky",
-         "year": 2019,
+         "year": 2020,
          "topic":"Biomathematics",
          "type":"Conference",
          "publisher":"Functional Differential Equations conference",
@@ -370,18 +358,6 @@
          "topic":"Epidemiology",
          "type":"Paper",
          "publisher":"Economic Research",
-         "publicationStatus":"Published"
-      },
-      {
-         "name":"Rivendell: Project-Based Academic Search Engine",
-         "description":"Meta academic search engine using project-based search with explicit user tagging to improve search results.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/nano_confirance.pptx"},
-					  {"info": "cite", "type": 3, "link": ""}],
-		 "authors": "Teddy Lazebnik, Hana Weitman, and Gal A. Kaminka",
-         "year": 2018,
-         "topic":"Information Systems",
-         "type":"Abstract",
-         "publisher":"Bar-Ilan Nanotechnology and Advanced Materials",
          "publicationStatus":"Published"
       },
       {

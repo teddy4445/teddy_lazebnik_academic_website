@@ -6,15 +6,7 @@
 	"projects": [
 	{
 		"name": "How Colaborations Influance Writting Style",
-		"participants": [
-		{
-			"name": "Elizaveta Savchenko",
-			"title": "Mc.S.",
-			"role": "Lead researcher",
-			"websiteLink": "",
-			"googleLink": "",
-			"linkedinLink": ""
-		},
+		"participants": [{
 		{
 			"name": "Ariel Rosenfeld",
 			"title": "Ph.D.",
@@ -288,9 +280,17 @@
 		"name": "OMEGA",
 		"participants": [
 		{
+			"name": "Liron Simon Keren",
+			"title": "Miss.",
+			"role": "Researcher",
+			"websiteLink": "",
+			"googleLink": "https://scholar.google.com/citations?user=kFAf3CgAAAAJ&hl=en",
+			"linkedinLink": "https://www.linkedin.com/in/liron-simon/"
+		},
+		{
 			"name": "Olga Chervova",
 			"title": "Ph.D.",
-			"role": "Mathematical Researcher",
+			"role": "Mathematical consultant",
 			"websiteLink": "http://www.homepages.ucl.ac.uk/~ucahoch/",
 			"googleLink": "https://scholar.google.co.uk/citations?user=UFGprt0AAAAJ&hl=en",
 			"linkedinLink": "https://www.linkedin.com/in/olga-chervova-65157574/?originalSubdomain=uk"
@@ -298,7 +298,7 @@
 		{
 			"name": "Vitaly Voloshin",
 			"title": "Ph.D.",
-			"role": "Mathematical Researcher",
+			"role": "Mathematical consultant",
 			"websiteLink": "",
 			"googleLink": "",
 			"linkedinLink": ""
@@ -306,7 +306,7 @@
 		{
 			"name": "Ismail Moghul",
 			"title": "Ph.D.",
-			"role": "Computation Researcher",
+			"role": "Computation consultant",
 			"websiteLink": "",
 			"googleLink": "https://scholar.google.com/citations?user=Em8lVkMAAAAJ&hl=en",
 			"linkedinLink": "https://www.linkedin.com/in/ismail-moghul/"
@@ -319,7 +319,7 @@
 			"googleLink": "https://scholar.google.co.uk/citations?user=D2eEH-sAAAAJ&hl=en",
 			"linkedinLink": "https://www.linkedin.com/in/stephan-beck-21394314/?originalSubdomain=uk"
 		}],
-		"description": "We develop an algorithm to simulation pathogenic DNA sequences from healthy sequences as well as to find a small-dimentional representation to calculate the distance between genes.",
+		"description": "We develop an algorithm to simulation pathogenic DNA sequences from healthy sequences.",
 		"start_month": 9,
 		"start_year": 2021,
 		"end_month": 12,
