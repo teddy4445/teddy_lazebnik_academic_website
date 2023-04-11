@@ -260,6 +260,15 @@
 		 "month": 2,
 		 "day": 26,
 		 "order": 29
+      },
+      {
+         "title":"We are Ready to Unleash the Power of Data Science and Mathematics in Medicine",
+         "description":"In this blog-post, we discuss the significant impact that data science and mathematics have had on healthcare research, from precision and personalized medicine to healthcare operations. The use of predictive analytics, data-driven experiment design, and artificial intelligence is providing clinicians and researchers with unique insights that were once unimaginable. We explore several specific examples, such as the use of spatial data about cells to improve treatment protocols, the development of personalized medicine using socio-demographic data, and the usage of pandemic models to predict future outbreaks.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "30"}],
+		 "year": 2023,
+		 "month": 4,
+		 "day": 11,
+		 "order": 30
       }
 	]
 }
