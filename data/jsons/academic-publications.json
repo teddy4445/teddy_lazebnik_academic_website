@@ -1,10 +1,34 @@
 {
    "publications":[ 
 	{
+         "name":"Mathematical Model for the BCG-based Treatment Of Type 1 Diabetes",
+         "description":"This work introduces the first model of immunotherapy treatment, namely the Bacillus Calmette-Guerin (BCG) vaccine, for Type 1 Diabetes (T1D). The model takes into consideration the interaction network between multiple immune cell types and compartments. A set of ordinary differential equations (ODEs) is introduced to capture the connectivity between these variables and the clinical presentation of the disease. Four subsets of the T1D mice and healthy controls that exhibit normal and high-level glucose consumption are evaluated using the proposed model. Numerical results obtained for mice suggest that BCG treatment of the T1D patients that follow healthy eating habits normalizes glucose to levels observed in non-diabetic controls. Furthermore, glucose consumption profoundly influences disease progression. This outcome suggests that immunotherapy may modulate molecular and cellular manifestations of the disease but it does not eliminate T1D. Of note, our data, obtained from numerical simulations, indicate that the BCG immunotherapy treatment may benefit healthy controls on a high-glucose diet and can be used as a tool for further clinical investigation of BCG usage to control T1D.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/add_later.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik. T., Bunimovich-Mendrazitsky, S., Kiselyov, A., Mathematical model for BCG-based treatment of type 1 diabetes. Physica A: Statistical Mechanics and its Applications. 2023."}],
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky, Alex Kiselyov",
+         "year": 2023,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Physica A: Statistical Mechanics and its Applications",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Computational Applications of Extended SIR Models: A Review Focused on Airborne Pandemics",
+         "description":"Epidemiological-Mathematical models are powerful tools for estimating the course of a pandemic and exploring different scenarios through pandemic intervention policies (PIPs). These models are commonly developed to provide decision-support tools for policymakers who are forced to make difficult decisions in a timely manner. Done properly, these models are able to provide a safe, quick, and cheap solution for this challenge. There are numerous types of mathematical models for epidemiological disease spread and control. However, in order to become applicative tools for decision-making, the modelers of these models are required to overcome three computational challenges: efficiently define the model, develop it as computer software, and fit it into historical data. Performed efficiently, one can use the obtained tool to explore possible scenarios and PIPs. In this paper, we present a critical review of models that extend the Susceptible-Infected-Recovered (SIR) model and explore the efficiency of these models, their software characteristics, and model performance on real-world data. We further provide a guide for epidemiological-mathematical model development and implementation, exploring several modeling approaches and their respective implementation options. Lastly, we outline the current trends, limitations, and opportunities in this field. In particular, we find that the spatial properties of a model play a critical role in its accuracy and ability to explain historical pandemic spread, especially in the context of airborne diseases. Moreover, we show that agent-based simulations are preferable over partial/ordinary differential solvers when considering a highly-realistic pandemic model or focusing on a relatively small population size.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/add_later.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik. T., Computational Applications of Extended SIR Models: A Review Focused on Airborne Pandemics. Ecological Modelling. 2023."}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2023,
+         "topic":"Epidemiology",
+         "type":"Paper",
+         "publisher":"Ecological Modelling",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"FSPL: A Meta-Learning Approach for a Filter and Embedded Feature Selection Pipeline",
          "description":"There are two main approaches to tackle the challenge of finding the best filter or embedded feature selection (FS) algorithm: searching for the one best FS algorithm and creating an ensemble of all available FS algorithms. However, in practice, these two processes usually occur as part of a larger machine learning pipeline and not separately. We posit that, due to the influence of the filter FS on the embedded FS, one should aim to optimize both of them as a single FS pipeline rather than separately. We propose a meta-learning approach that automatically finds the best filter and embedded FS pipeline for a given dataset called FSPL. We demonstrate the performance of FSPL on n = 90 datasets, obtaining 0.496 accuracy for the optimal FS pipeline, revealing an improvement of up to 5.98 percent in the model’s accuracy compared to the second-best meta-learning method.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/AMCS_2023_33_1_9.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik., T. Rosenfeld, A., FSPL: A Meta-Learning Approach for a Filter and Embedded Feature Selection Pipeline. International Journal of Applied Mathematics and Computer Science. 2023."}],
+					  {"info": "cite", "type": 3, "link": "Lazebnik. T., Rosenfeld, A., FSPL: A Meta-Learning Approach for a Filter and Embedded Feature Selection Pipeline. International Journal of Applied Mathematics and Computer Science. 2023."}],
 		 "authors": "Teddy Lazebnik, Avi Rosenfeld",
          "year": 2023,
          "topic":"Machine Learning",

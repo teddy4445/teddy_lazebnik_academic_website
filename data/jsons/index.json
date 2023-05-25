@@ -1,10 +1,10 @@
 {
-   "biography":"I am Applied Mathematics and Computer Science researcher with experience in leading R&D teams in the life sciences and financial domains. I have 10 years of experience in software development, including 7 years of experience leading development teams of up to 14 professionals. A proven record in system architecture, production-ready algorithms, and working with clients. I specialized in bio-physical simulations, big data analysis, and data analysis for information systems. My research focuses on the usage of cutting-edge mathematics and computer science in the life sciences and socio-economic domains, including AI-driven personalized treatment protocols, drug discovery, eXplainable AI, socio-economic systems modeling and simulation, and optimal policy detection from financial data.",
+   "biography":"I am Applied Mathematics and Computer Science researcher with experience in leading R&D teams in the life sciences and financial domains. I have a decade years of experience in software development, including seven years of experience leading development teams of up to fourteen professionals. A proven record in system architecture, production-ready algorithms, and working with clients. I specialized in bio-physical simulations, big data analysis, and data analysis for information systems. My research focuses on the usage of cutting-edge mathematics and computer science in the life sciences and socio-economic domains, including AI-driven personalized treatment protocols, drug discovery, eXplainable AI, socio-economic systems modeling and simulation, and optimal policy detection from financial data.",
    "researchInterests":[
-		"Computer Simulation - pharmacokinetics-pharmacodynamic, epidemiological dynamics, and medical treatments protocols.",
-		"Biomathematical Modeling - bioclinical personalized ML-based treatments, ODE/PDE-based biological models, and disease dynamics.",
-		"Economic Models - complex socioeconomic models and simulations, black market analysis, costs optimization.",
-		"Meta Machine Learning - automatic feature selection, stability metrics, multi-agent collective learning."
+		"Biomathematical Modeling - bioclinical personalized ML-based treatments, ODE/PDE-based biological models, and infectious diseases dynamics.",
+		"Computer Simulation - multi agent simulations with decision making for complex dynamics",
+		"Meta Machine Learning - automatic feature selection, stability metrics, multi-agent collective learning",
+		"Using Math For Others - solving real-world research questions in many fields using mathematics and computer science."
    ],
    "featuredPublications":[
 	{
@@ -13,7 +13,7 @@
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/liron_simon.pdf"},
 					  {"info": "cite", "type": 3, "link": "Simon-Keren, L., Liberzon, A., Lazebnik, T., A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge. Scientific Reports. 2023."}],
 		 "authors": "Liron Simon-Keren, Alex Liberzon, Teddy Lazebnik",
-         "year": 2022,
+         "year": 2023,
          "topic":"Machine learning",
          "type":"Paper",
          "publisher":"Scientific Reports",
@@ -46,15 +46,15 @@
    ],
    "currentProjects":[
       {
-         "name":"Understanding Epidemiological Dynamics Via Simulations",
-         "topic": "epidemiology-mathematics",
-         "description":"Pandemic dynamics is multi-diseplinary process including biology, clinics, economics, sociology, and etc. In this line of work, I am collaborating with researchers from wide range of backgrounds to mathematically model and simulate the sub-process that constract the overall pandemic spread and control dynamics.",
+         "name":"The Science Behind Academia",
+         "topic": "Sociometric",
+         "description":"Using mathematics and computer science methods to reveal the socio-economic processes behind the way academia works in the researcher, journal, and institute levels.",
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {
-         "name":"Biological and Clinical Machine Learning and Genetic Algorithm based models",
-         "topic": "Biomedical learning models",
-         "description":"As biological and clinical processes and tasks are my paitent and since I believe we just need to reveal the answers the nature already have, this line of work focus on the usage of genetic algorithm with machine learning model to tackle biological and clinical tasks from healthcare professionals and biologists.",
+         "name":"Climate Change and Urban Design During Airborne Pollution and Infection",
+         "topic": "Simulations",
+         "description":"Taking adventage of spatio-temporal models with 3D represenation with high-resolution biological and physical processes to study the influence of how we build streets on air pollution and pandemic spread.",
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       },
       {
