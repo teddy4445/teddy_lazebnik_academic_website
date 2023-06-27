@@ -7,9 +7,9 @@
 			"name": "More research projects will be update soon",
 			"participants": [],
 			"description": "I need to upload several projects but do not have time at the moment, so promise to do so until the end of the semester :)",
-			"start_month": 4,
+			"start_month": 6,
 			"start_year": 2023,
-			"end_month": 7,
+			"end_month": 9,
 			"end_year": 2023,
 			"team_members": 1,
 			"relevant_resources": []
@@ -18,7 +18,7 @@
 			"participants": [{
 				"name": "Ariel Rosenfeld",
 				"title": "Ph.D.",
-				"role": "Advisor",
+				"role": "Co-author",
 				"websiteLink": "https://arielrosenfeld.com/",
 				"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
 				"linkedinLink": ""
@@ -26,9 +26,9 @@
 			"description": "In this research, we anaylzed using a time-dependent graph model and several deep learning based natural language processing models the dynamics of writting style in academic texts, focusing on papers from the exact science domain from the DBLP dataset.",
 			"start_month": 2,
 			"start_year": 2023,
-			"end_month": 3,
+			"end_month": 4,
 			"end_year": 2023,
-			"team_members": 3,
+			"team_members": 2,
 			"relevant_resources": []
 		},
 		{
@@ -756,7 +756,7 @@
 			"participants": [{
 					"name": "Noa Vardi",
 					"title": "Ph.D.",
-					"role": "Lead researcher",
+					"role": "Co-researcher",
 					"websiteLink": "",
 					"googleLink": "",
 					"linkedinLink": ""
@@ -773,7 +773,7 @@
 			"description": "Developing a machine learning model for words' associative distance (Hebrew). Based on this model, propusing new rumination test for clinical professionals.",
 			"start_month": 7,
 			"start_year": 2019,
-			"end_month": 9,
+			"end_month": 6,
 			"end_year": 2023,
 			"team_members": 5,
 			"relevant_resources": []
