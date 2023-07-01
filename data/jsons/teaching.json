@@ -1354,6 +1354,7 @@
 			"department": "Mathematics",
 			"location_class": "Zoom",
 			"syllabus": "",
+			"description": "The course will provide students with a comprehensive introduction to modern reinforcement learning. The materials are taken from the amazing DeepMind with UCL course and slightly adoptted for first degree students.",
 			"grade_parts": [{
 					"name": "Final project",
 					"percent": 85
@@ -1393,7 +1394,7 @@
 			"updates": [{
 				"title": "Welcome to the course!",
 				"description": "Since I hate the moodle, all the materials will be uploaded here.",
-				"date": "3.12.2023",
+				"date": "2.8.2023",
 				"link": ""
 			}],
 			"modules": [{
@@ -1465,8 +1466,7 @@
 							}]
 					}
 				}
-			],
-			"description": "The course will provide students with a comprehensive introduction to modern reinforcement learning. The materials are taken from the amazing DeepMind with UCL course and slightly adoptted for first degree students."
-		},
+			]
+		}
 	]
 }
