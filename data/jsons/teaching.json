@@ -1045,7 +1045,7 @@
 			"name": "Mathematical aspects and applications of modern cyber",
 			"code": "----",
 			"year": "2023",
-			"topic": "Cyber",
+			"topic": "CS",
 			"semester": "2",
 			"university": "HIT",
 			"department": "Computer science",
@@ -1306,7 +1306,7 @@
 			"name": "Web Development: Server Side",
 			"code": "35619",
 			"year": "2023",
-			"topic": "Back end development",
+			"topic": "programming",
 			"semester": "2",
 			"university": "Bar Ilan University",
 			"department": "Information Science",
@@ -1323,9 +1323,70 @@
 			],
 			"resources": {
 				"Extra": [{
-					"name": "I will add later",
+					"name": "In the Moodle website of the course",
 					"link": "",
-					"description": "'Later' means in a week or two, maybe less, maybe more",
+					"description": "Yes, I do not like the Moodle website too, what can we do...",
+					"type": "file"
+				}]
+			},
+			"updates": [{
+				"title": "Welcome to the course!",
+				"description": "Since I must use the Moodle website, all the materials will be uploaded there.",
+				"date": "3.12.2023",
+				"link": ""
+			}],
+			"modules": [{
+					"title": "Checkout the Moodle Website for all the materials",
+					"explanation": "Well, the title is pretty self-explanatory, isn't it?",
+					"resources": {
+					}
+				}
+			],
+			"description": "The course will focus on the theoretical and practical components of developing modern server side for web applications in JavaScript (NodeJS)."
+		},
+		{
+			"name": "Introduction to Reinforcement Leanring",
+			"code": "12321",
+			"year": "2023",
+			"topic": "cs",
+			"semester": "Summer",
+			"university": "Ariel University",
+			"department": "Mathematics",
+			"location_class": "Zoom",
+			"syllabus": "",
+			"grade_parts": [{
+					"name": "Final project",
+					"percent": 85
+				},
+				{
+					"name": "Presentation in class",
+					"percent": 15
+				}
+			],
+			"resources": {
+				"Must":[{
+					"name": "Final Project Guideline",
+					"link": "/files/rl_course/final_course_guideline.pdf",
+					"description": "All the details about the course's final project - you really should read it carfully.",
+					"type": "file"
+				}
+				],
+				"Extra": [{
+					"name": "HuggingFace course",
+					"link": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
+					"description": "This is an amazing practical course by HuggingFace that will show you how practically use RL.",
+					"type": "slides"
+				},
+				{
+					"name": "CS231N recap about Python",
+					"link": "https://cs231n.github.io/python-numpy-tutorial/",
+					"description": "Taken from Stanford's CS234 course, a recap about Python and Colab.",
+					"type": "slides"
+				},
+				{
+					"name": "RL book with all the course materials",
+					"link": "http://incompleteideas.net/book/RLbook2020.pdf",
+					"description": "The book authored by Richard S. Sutton and Andrew G. Barto.",
 					"type": "file"
 				}]
 			},
@@ -1336,13 +1397,76 @@
 				"link": ""
 			}],
 			"modules": [{
-					"title": "I will add here everything during the weekend - promise!",
-					"explanation": "Well, the title is pretty self-explanatory, isn't it?",
+					"title": "Introduction and basic concepts",
+					"explanation": "In the first part, we will explore the main ideas behind RL.",
 					"resources": {
+						"Lectures": [{
+								"name": "Lession 1: Introduction",
+								"link": "/files/rl_course/1.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 2: Exploration and Exploitation",
+								"link": "/files/rl_course/2.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 3: Markov Decision Processes and Dynamic Programming",
+								"link": "/files/rl_course/3.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							}]
+					}
+				},{
+					"title": "Dynamic programming and reward evaluation",
+					"explanation": "In the second part, we will study different methods for evaluation of agent's actions as well as how to 'train' them.",
+					"resources": {
+						"Lectures": [{
+								"name": "Lession 4: Theoretical Fundamentals of Dynamic Programming",
+								"link": "/files/rl_course/4.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 5: Model-Free Prediction",
+								"link": "/files/rl_course/5.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 6: Model-Free Control",
+								"link": "/files/rl_course/6.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							}]
+					}
+				},{
+					"title": "RL agents training and using",
+					"explanation": "In the third and final part, we will learn how to implement our previous knowledge to obtain a RL agent.",
+					"resources": {
+						"Lectures": [{
+								"name": "Lession 7: Function Approximation in RL",
+								"link": "/files/rl_course/7.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 8: Planning and models",
+								"link": "/files/rl_course/8.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 9: Policy Gradients and Actor Critics",
+								"link": "/files/rl_course/9.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 10: Deep Reinforcement Learning",
+								"link": "/files/rl_course/10.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							}]
 					}
 				}
 			],
-			"description": "The course will focus on the theoretical and practical components of developing modern server side for web applications in JavaScript (NodeJS)."
-		}
+			"description": "The course will provide students with a comprehensive introduction to modern reinforcement learning. The materials are taken from the amazing DeepMind with UCL course and slightly adoptted for first degree students."
+		},
 	]
 }
