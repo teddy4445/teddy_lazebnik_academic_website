@@ -1,6 +1,18 @@
 {
    "publications":[ 
 	{
+         "name":"Multi-species prey–predator dynamics during a multi-strain pandemic",
+         "description":"Small and large scale pandemics are a natural phenomenon repeatably appearing throughout history, causing ecological and biological shifts in ecosystems and a wide range of their habitats. These pandemics usually start with a single strain but shortly become multi-strain due to a mutation process of the pathogen causing the epidemic. In this study, we propose a novel eco-epidemiological model that captures multi-species prey–predator dynamics with a multi-strain pandemic. The proposed model extends and combines the Lotka–Volterra prey–predator model and the Susceptible–Infectious–Recovered epidemiological model. We investigate the ecosystem’s sensitivity and stability during such a multi-strain pandemic through extensive simulation relying on both synthetic cases as well as two real-world configurations. Our results are aligned with known ecological and epidemiological findings, thus supporting the adequacy of the proposed model in realistically capturing the complex eco-epidemiological properties of the multi-species multi-strain pandemic dynamics.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/multi_multi.pdf"},
+					  {"info": "cite", "type": 3, "link": "Alexi. A., Rosenfeld, A., Lazebnik, T., Multi-species prey–predator dynamics during a multi-strain pandemic. Chaos. 2023."}],
+		 "authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
+         "year": 2023,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Chaos",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Mathematical Model for the BCG-based Treatment Of Type 1 Diabetes",
          "description":"This work introduces the first model of immunotherapy treatment, namely the Bacillus Calmette-Guerin (BCG) vaccine, for Type 1 Diabetes (T1D). The model takes into consideration the interaction network between multiple immune cell types and compartments. A set of ordinary differential equations (ODEs) is introduced to capture the connectivity between these variables and the clinical presentation of the disease. Four subsets of the T1D mice and healthy controls that exhibit normal and high-level glucose consumption are evaluated using the proposed model. Numerical results obtained for mice suggest that BCG treatment of the T1D patients that follow healthy eating habits normalizes glucose to levels observed in non-diabetic controls. Furthermore, glucose consumption profoundly influences disease progression. This outcome suggests that immunotherapy may modulate molecular and cellular manifestations of the disease but it does not eliminate T1D. Of note, our data, obtained from numerical simulations, indicate that the BCG immunotherapy treatment may benefit healthy controls on a high-glucose diet and can be used as a tool for further clinical investigation of BCG usage to control T1D.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/bcg_t1d.pdf"},
