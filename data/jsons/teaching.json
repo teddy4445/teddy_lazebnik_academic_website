@@ -1354,7 +1354,7 @@
 			"department": "Mathematics",
 			"location_class": "Zoom",
 			"syllabus": "",
-			"description": "Link to the class: https://biu-ac-il.zoom.us/j/88121861371 \n The course will provide students with a comprehensive introduction to modern reinforcement learning. The materials are taken from the amazing DeepMind with UCL course and slightly adoptted for first degree students.",
+			"description": "Link to the class: https://biu-ac-il.zoom.us/j/88121861371 The course will provide students with a comprehensive introduction to modern reinforcement learning. The materials are taken from the amazing DeepMind with UCL course and slightly adoptted for first degree students.",
 			"grade_parts": [{
 					"name": "Final project",
 					"percent": 85
@@ -1399,7 +1399,7 @@
 			},
 			{
 				"title": "Join the class via zoom",
-				"description": "In order to join the class, use the following link ( https://biu-ac-il.zoom.us/j/88121861371 ) .",
+				"description": "In order to join the class, use the following link.",
 				"date": "8.3.2023",
 				"link": "https://biu-ac-il.zoom.us/j/88121861371"
 			}
