@@ -1414,6 +1414,11 @@
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
+								"name": "Lecture 1 recoding",
+								"link": "https://youtu.be/aVOJyUYxfCg",
+								"description": "",
+								"type": "video"
+							},{
 								"name": "Lession 2: Exploration and Exploitation",
 								"link": "/files/rl_course/2.pdf",
 									"description": "Thanks to original source",
