@@ -1424,6 +1424,11 @@
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
+								"name": "Lecture 2 recoding",
+								"link": "https://youtu.be/ITIdAgBNbO4",
+								"description": "",
+								"type": "video"
+							},{
 								"name": "Lession 3: Markov Decision Processes and Dynamic Programming",
 								"link": "/files/rl_course/3.pdf",
 									"description": "Thanks to original source",
