@@ -7,11 +7,28 @@
 			"name": "More research projects will be update soon",
 			"participants": [],
 			"description": "I need to upload several projects but do not have time at the moment, so promise to do so until the end of the semester :)",
-			"start_month": 6,
+			"start_month": 9,
 			"start_year": 2023,
-			"end_month": 9,
+			"end_month": 11,
 			"end_year": 2023,
 			"team_members": 1,
+			"relevant_resources": []
+		},{
+			"name": "Spatio-Temporal Model Of Multi-Pathogen Disease Dynamics for Pigeons Vising Dairy Farms",
+			"participants": [{
+				"name": "Orr Spiegel",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "https://en-lifesci.tau.ac.il/profile/orrspiegel",
+				"googleLink": "https://scholar.google.com/citations?user=1lEq3csAAAAJ",
+				"linkedinLink": ""
+			}],
+			"description": "Zoonotic disease transmission between animals and humans is a growing risk and the agricultural context as a likely point of transition. Understanding the dynamics of disease spread within wildlife, that may connect spatially isolated farms, and livestock that are often at high local densities facilitating spread within a farm is crucial for mitigating these risks. Specifically, the interactions between pigeons and cows clustered in dairy farms can lead to significant disease transmission, economic losses for farmers, and food shortages affecting animal, livestock, and human populations. In this paper, we propose a novel spatio-temporal multi-pathogen model based on the Susceptible-Exposed-Infected-Recovered-Dead (SEIRD) framework with continuous spatial movement. Our model accounts for both within-species and cross-species transmission of pathogens, as well as the exploratory-expository movement dynamics of pigeons, which play a critical role in the spread of infections. We implemented the proposed model as a computer program using the agent-based simulation approach. We explore different biologically-realistic scenarios using biologically-relevant setups, evaluating the effect of various parameters on the epidemic spread. Namely, we show that the heterogeneity of the pigeons' movement dynamics has only a relatively minor effect on the disease spread. In addition, pigeons' reduced movement behavior due to being infected with pathogens shows to have a positive linear correlation to the average reproduction number of the disease. ",
+			"start_month": 7,
+			"start_year": 2023,
+			"end_month": 10,
+			"end_year": 2023,
+			"team_members": 2,
 			"relevant_resources": []
 		},{
 			"name": "How Colaborations Influance Writting Style",
