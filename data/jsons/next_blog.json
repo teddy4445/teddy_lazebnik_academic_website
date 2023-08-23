@@ -1,5 +1,20 @@
 {
-   "30":[
+   "31":[
+      {
+         "title":"The math behind the Coronavirus spread",
+		 "date": "1/5/2020",
+		 "reading_time": "2",
+		 "link_address": "6",
+         "description":"Covid-19 pandemic hit the wolrd at the beginning of 2020 and lead to hundrieds of mathematical models predicting the spread of the pandemic wolrdwide. Here I offer a basic review of some of these methods."
+      },
+      {
+         "title":"A Step Towards Explainable AI - The Explainable Boosting Machine",
+		 "date": "8/6/2021",
+		 "reading_time": "2",
+		 "link_address": "19",
+         "description":"Machine learning models are concering new hilltops everyday now and sprading into more fields of life such as medicine, miletary, life-supporting systems and other which require individuals to put their faite in these models. How one can do so without understanding the model? Explainable Boosting Machine (EBM) is one step torwards a more interpretabe machine learning models..."
+      }
+	],"30":[
       {
          "title":"The math behind the Coronavirus spread",
 		 "date": "1/5/2020",

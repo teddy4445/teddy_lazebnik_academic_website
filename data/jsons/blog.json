@@ -269,6 +269,15 @@
 		 "month": 4,
 		 "day": 11,
 		 "order": 30
+      },
+      {
+         "title":"Sustainable Urban Planning: Using Data to Create Greener Cities",
+         "description":"In a rapidly urbanizing world, the pressing challenges of reconciling growth and sustainability are being addressed through data-driven urban planning. This blog post explores how data science is reshaping urban development to create environmentally resilient cities, citing examples such as predictive water demand modeling, IoT-enabled waste collection optimization, and dynamic traffic pattern analysis, while emphasizing future research opportunities for students and researchers in the interdisciplinary field.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "31"}],
+		 "year": 2023,
+		 "month": 8,
+		 "day": 23,
+		 "order": 31
       }
 	]
 }
