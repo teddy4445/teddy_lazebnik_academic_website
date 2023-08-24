@@ -1456,6 +1456,11 @@
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
+								"name": "Lecture 4 recoding",
+								"link": "https://youtu.be/pC_2Ge5cvqc",
+								"description": "",
+								"type": "video"
+							},{
 								"name": "Lession 5: Model-Free Prediction",
 								"link": "/files/rl_course/5.pdf",
 									"description": "Thanks to original source",
