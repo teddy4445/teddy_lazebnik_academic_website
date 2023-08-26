@@ -4,14 +4,182 @@
 
 	],
 	"projects": [{
-			"name": "More research projects will be update soon",
-			"participants": [],
-			"description": "I need to upload several projects but do not have time at the moment, so promise to do so until the end of the semester :)",
-			"start_month": 9,
+			"name": "Machine Learning Approaches to Predict and Detect Early-onset of Digital Dermatitis in Dairy Cows using Sensor Data",
+			"participants": [{
+				"name": "Jennifer Magana",
+				"title": "Ms.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "",
+				"linkedinLink": ""
+			},{
+				"name": "Dinu Gavojdian",
+				"title": "Ms.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "",
+				"linkedinLink": ""
+			},{
+				"name": "Yakir Menachem",
+				"title": "Mr.",
+				"role": "Co-author (Student)",
+				"websiteLink": "",
+				"googleLink": "",
+				"linkedinLink": ""
+			},{
+				"name": "Anna Zamansky",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?user=zOwPqJoAAAAJ&hl=en",
+				"linkedinLink": ""
+			},
+				{
+					"name": "Amber Adams-Progar",
+					"title": "Ph.D.",
+					"role": "Co-author",
+					"websiteLink": "",
+					"googleLink": "",
+					"linkedinLink": ""
+				}],
+			"description": "Digital dermatitis is a common foot disease that can cause lameness, decreased milk production and decreased fertility in cows. Its prediction and early detection can positive impact welfare and economic value in dairy cow industry. This study develops machine learning models for easlyonset detection and prediction of digital dermatitis (DD) based on behavior data obtained from a commonly used commercial sensor monitoring system. We present a model for DD detection on day 0 (appearance of signs) with accuracy 79%, and a model for prediction of DD 2 days prior to appearance of signs with accuracy 64%. ",
+			"start_month": 6,
 			"start_year": 2023,
-			"end_month": 11,
+			"end_month": 9,
+			"end_year": 2023,
+			"team_members": 6,
+			"relevant_resources": []
+		},{
+			"name": "Socio-Demographic Indicators for Hospitalization Duration of Patients with Borderline Personality Disorder: A Retrospective Study",
+			"participants": [{
+				"name": "Amit Yaniv-Rosenfeld",
+				"title": "MD.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?hl=en&user=m9NckL4AAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Maya Netzer",
+				"title": "Ms.",
+				"role": "Co-author (student)",
+				"websiteLink": "",
+				"googleLink": "",
+				"linkedinLink": ""
+			},{
+				"name": "Amir Elalouf",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?hl=en&user=i7cq3-YAAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Uri Nitzan",
+				"title": "MD.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "",
+				"linkedinLink": ""
+			},
+				{
+					"name": "Ariel Rosenfeld",
+					"title": "Ph.D.",
+					"role": "Co-advisor",
+					"websiteLink": "https://arielrosenfeld.com/",
+					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
+					"linkedinLink": ""
+				}],
+			"description": "Borderline Personality Disorder (BPD) is a complex psychopathology associated with intense emotional instability and high service utilization rates. While certain socio-demographic factors have been linked to an increased risk of BPD, their relation to hospitalization duration remains unclear. This retrospective study analyzed 1077 hospitalization records of 200 BPD-diagnosed patients. Patients' key socio-demographic characteristics were examined as to their potential relationship with the patients' hospitalization duration.  Patients' gender, age, education level, employment and marital statuses, and living arrangement were statistically significantly linked with patients' hospitalization duration. Additionally, the hospitalization index and previous hospitalization duration were also statistically associated with patients' hospitalization duration. Patients' expected hospitalization duration at admission varies significantly based, in part, on their socio-demographics. In order to prevent potentially unnecessary prolonged and regressive hospitalizations, an estimation of the expected hospitalization duration should be explicitly considered.",
+			"start_month": 5,
+			"start_year": 2023,
+			"end_month": 8,
+			"end_year": 2023,
+			"team_members": 6,
+			"relevant_resources": []
+		},{
+			"name": "The Scientometrics and Reciprocality Underlying Co-Authorship Panels in Google Scholar Profiles",
+			"participants": [{
+					"name": "Ariel Alexi",
+					"title": "Mc.S.",
+					"role": "Lead researcher",
+					"websiteLink": "",
+					"googleLink": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en",
+					"linkedinLink": "https://www.linkedin.com/in/ariel-alexi/"
+				},
+				{
+					"name": "Ariel Rosenfeld",
+					"title": "Ph.D.",
+					"role": "CS Co-advisor",
+					"websiteLink": "https://arielrosenfeld.com/",
+					"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
+					"linkedinLink": ""
+				}],
+			"description": "Online academic profiles are used by scholars to reflect a desired image to their online audience. In Google Scholar,  scholars can select a subset of co-authors for presentation in a central location on their profile using a social feature called the Co-authroship panel. In this work, we examine whether scientometrics and reciprocality can explain the observed selections. To this end, we scrape and thoroughly analyze a novel set of 120,000 Google Scholar profiles, ranging across four disciplines and various academic institutions. Our results suggest that scholars tend to favor co-authors with higher scientometrics over others for inclusion in their co-authorship panels. Interestingly, as one’s own scientometrics are higher, the tendency to include co-authors with high scientometrics is diminishing. Furthermore, we find that reciprocality is central in explaining scholars' selections.",
+			"start_month": 3,
+			"start_year": 2023,
+			"end_month": 8,
+			"end_year": 2023,
+			"team_members": 2,
+			"relevant_resources": []
+		},{
+			"name": "The Family Tree Graph as a Predictor of the Family Members' Satisfaction with One Another",
+			"participants": [],
+			"description": "Individuals' satisfaction with their nuclear and extended family plays a critical role in individuals everyday life. Thus, a better understanding of the features that determine one's satisfaction with her family can open the door to the design of better sociological policies. To this end, this study examines the relationship between the family tree graph and family members' satisfaction with their nuclear and extended family. We collected data from 486 families which included a family tree graph and family members' satisfaction with each other. We obtain a model that is able to explain 75% of the family members' satisfaction with one another. We found three indicators for more satisfied families. First, larger families, on average, have more satisfied members. Moreover, families with kids from the same parents - i.e., without step-siblings also express more satisfaction from both their siblings and parents when the children are already adults. Lastly, the average satisfaction of the family's oldest alive generation has a positive linear and non-linear correlation with the satisfaction of the entire extended family.",
+			"start_month": 1,
+			"start_year": 2023,
+			"end_month": 7,
 			"end_year": 2023,
 			"team_members": 1,
+			"relevant_resources": []
+		},{
+			"name": "Temporal Graphs Anomaly Emergence Detection: Benchmarking For Social Media Interactions",
+			"participants": [{
+				"name": "Or Iny",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "",
+				"linkedinLink": ""
+			}],
+			"description": "Temporal graphs have become an essential tool for analyzing complex dynamic systems with multiple agents. Detecting anomalies in temporal graphs is crucial for various applications, including identifying emerging trends, monitoring network security, understanding social dynamics, tracking disease outbreaks, and understanding financial dynamics. In this paper, we present a comprehensive benchmarking study that compares 12 data-driven methods for anomaly detection in temporal graphs. We conduct experiments on two temporal graphs extracted from Twitter and Facebook, aiming to identify anomalies in group interactions. Surprisingly, our study reveals an unclear pattern regarding the best method for such tasks, highlighting the complexity and challenges involved in anomaly emergence detection in large and dynamic systems. The results underscore the need for further research and innovative approaches to effectively detect emerging anomalies in dynamic systems represented as temporal graphs.",
+			"start_month": 5,
+			"start_year": 2023,
+			"end_month": 7,
+			"end_year": 2023,
+			"team_members": 2,
+			"relevant_resources": []
+		},{
+			"name": "Nash and Trading Equilibria in a Public Good Economy with Finite Number of Private and Public Goods and Asymmetrical Agents",
+			"participants": [{
+				"name": "Labib Shami",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?user=3JxF3NkAAAAJ&hl=en",
+				"linkedinLink": ""
+			}],
+			"description": "Two of the common equilibrium concepts used in the theory of public goods are the Nash and Lindahl equilibria. Although the Nash equilibrium outcome is conceptually appealing, it is not Pareto efficient. Nonetheless, while the Lindahl allocation is Pareto efficient, it does not Pareto dominate the Nash allocation. Scholars have proposed Pareto efficient allocations that are preferable to the Nash equilibrium bundle while exploiting the Pareto efficient properties of the Lindahl equilibrium. However, these models are always restricted. In this paper, we consider an extension of one of these models - the Trading model - to a finite number of private and public goods with asymmetric agents and prove the existence and uniqueness of a Pareto efficient Trading allocation based on personalized Lindahl prices, which Pareto dominates the unique Nash allocation in the economy. We demonstrate the proposed model for a social healthcare service funding program using computer simulation.",
+			"start_month": 10,
+			"start_year": 2022,
+			"end_month": 6,
+			"end_year": 2023,
+			"team_members": 2,
+			"relevant_resources": []
+		},{
+			"name": "Can We Mathematically Spot Possible Manipulation of Results in Research Manuscripts Using Benford's Law?",
+			"participants": [{
+				"name": "Dan Gorlitsky",
+				"title": "Mr.",
+				"role": "Advisor",
+				"websiteLink": "",
+				"googleLink": "",
+				"linkedinLink": "https://www.linkedin.com/in/gorlitskydan/"
+			}],
+			"description": "The reproducibility of academic research has long been a persistent issue, contradicting one of the fundamental principles of science. What is even more concerning is the increasing number of false claims found in academic manuscripts recently, casting doubt on the validity of reported results. In this paper, we utilize an adaptive version of Benford's law, a statistical phenomenon that describes the distribution of leading digits in naturally occurring datasets, to identify potential manipulation of results in research manuscripts, solely using the aggregated data presented in those manuscripts. Our methodology applies the principles of Benford's law to commonly employed analyses in academic manuscripts, thus, reducing the need for the raw data itself. To validate our approach, we employed 100 open-source datasets and successfully predicted 79% of them accurately using our rules. Additionally, we analyzed 100 manuscripts published in the last two years across ten prominent economic journals, with ten manuscripts randomly sampled from each journal. Our analysis predicted a 3% occurrence of result manipulation with a 96% confidence level. Our findings uncover disturbing inconsistencies in recent studies and offer a semi-automatic method for their detection.",
+			"start_month": 10,
+			"start_year": 2022,
+			"end_month": 6,
+			"end_year": 2023,
+			"team_members": 2,
 			"relevant_resources": []
 		},{
 			"name": "Spatio-Temporal Model Of Multi-Pathogen Disease Dynamics for Pigeons Vising Dairy Farms",
@@ -384,7 +552,7 @@
 		{
 			"name": "An Enhanced Pandemic Spread with Mutations SIVRI Model",
 			"participants": [{
-				"name": "Gadi Blumrosen",
+				"name": "Gaddi Blumrosen",
 				"title": "Ph.D.",
 				"role": "Co-author",
 				"websiteLink": "https://en-environment.tau.ac.il/Gaddi_Blumrosen",
