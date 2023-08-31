@@ -1373,6 +1373,11 @@
 				}
 				],
 				"Extra": [{
+					"name": "An example for a similar (good) final project",
+					"link": "/files/rl_course/cyber_final_project_example.pdf",
+					"description": "Note this is a paper from another course and their task was a bit different. That said, the overall design of the work is relevent and you can learn from it.",
+					"type": "file"
+				},{
 					"name": "HuggingFace course",
 					"link": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
 					"description": "This is an amazing practical course by HuggingFace that will show you how practically use RL.",
@@ -1407,7 +1412,13 @@
 				"title": "Submitting your final project and presentation",
 				"description": "Following a technical mistake between the dept. about the exam dates, the last class (19.9.2023) is cancelled. You should submit your paper and presentation until the 18th 23:59. Good Luck!",
 				"date": "8.24.2023",
-				"link": "https://biu-ac-il.zoom.us/j/88121861371"
+				"link": ""
+			},
+			{
+				"title": "Final project clarifications",
+				"description": "Following the discussion in class, you do not have to run the code and add your own results. However, you must review the code and provide an overview of how it is work and its main components.",
+				"date": "8.31.2023",
+				"link": ""
 			}
 			],
 			"modules": [{
@@ -1465,6 +1476,11 @@
 								"link": "/files/rl_course/5.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
+							},{
+								"name": "Lecture 5 recoding",
+								"link": "https://youtu.be/cz2vc3pCkdg",
+								"description": "",
+								"type": "video"
 							},{
 								"name": "Lession 6: Model-Free Control",
 								"link": "/files/rl_course/6.pdf",
