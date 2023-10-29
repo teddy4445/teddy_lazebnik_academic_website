@@ -1,6 +1,114 @@
 {
    "publications":[ 
 	{
+         "name":"Academic co-authorship is a risky game",
+         "description":"Trust has proven to be a predictor of organizational outcomes. In some cases, such as law enforcement, achieving organizational goals requires workers to be willing to risk their lives. Is there a link between street-level bureaucrats’ (SLBs) willingness to endanger their own lives for the public and their trust in their peers, managers, and the institution to which they belong? Using a national survey of 2,733 police officers in Brazil and machine-learning-based methods, we found that there is a significant link between their willingness to risk their lives for others and their trust in their peers, managers, and the institution to which they belong. Our findings indicate that while these SLBs were very willing to risk their lives for certain groups, their willingness declined sharply for others such as lesbian, gay, bisexual, transgender, and questioning (LGBTQ)+ people and the homeless. In addition, police officers’ perceptions about discrimination, police professionalism, and organizational commitment and support are linearly linked to their willingness to risk their lives. Our findings demonstrate the important role of trust in understanding public servants’ practices in the extreme context of risking their lives for others.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/nissim_1.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Beck, S., Shami, L. Academic co-authorship is a risky game. Scientometrics. 2023."}],
+		 "authors": "Teddy Lazebnik, Stephan Beck, Labib Shami",
+         "year": 2023,
+         "topic":"Social",
+         "type":"Paper",
+         "publisher":"Scientometrics",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Trust and Street-Level Bureaucrats’ Willingness to Risk Their Lives for Others: The Case of Brazilian Law Enforcement",
+         "description":"Trust has proven to be a predictor of organizational outcomes. In some cases, such as law enforcement, achieving organizational goals requires workers to be willing to risk their lives. Is there a link between street-level bureaucrats’ (SLBs) willingness to endanger their own lives for the public and their trust in their peers, managers, and the institution to which they belong? Using a national survey of 2,733 police officers in Brazil and machine-learning-based methods, we found that there is a significant link between their willingness to risk their lives for others and their trust in their peers, managers, and the institution to which they belong. Our findings indicate that while these SLBs were very willing to risk their lives for certain groups, their willingness declined sharply for others such as lesbian, gay, bisexual, transgender, and questioning (LGBTQ)+ people and the homeless. In addition, police officers’ perceptions about discrimination, police professionalism, and organizational commitment and support are linearly linked to their willingness to risk their lives. Our findings demonstrate the important role of trust in understanding public servants’ practices in the extreme context of risking their lives for others.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/nissim_1.pdf"},
+					  {"info": "cite", "type": 3, "link": "Cohen, N., Lotta, G., Alcadipani, R., Lazebnik, T. Trust and Street-Level Bureaucrats’ Willingness to Risk Their Lives for Others: The Case of Brazilian Law Enforcement. The American Review of Public Administration. 2023."}],
+		 "authors": "Nissim Cohen, Gabriela Lotta, Rafael Alcadipani, Teddy Lazebnik",
+         "year": 2023,
+         "topic":"Social",
+         "type":"Paper",
+         "publisher":"The American Review of Public Administration",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Multi-species prey–predator dynamics during a multi-strain pandemic ",
+         "description":"Small and large scale pandemics are a natural phenomenon repeatably appearing throughout history, causing ecological and biological shifts in ecosystems and a wide range of their habitats. These pandemics usually start with a single strain but shortly become multi-strain due to a mutation process of the pathogen causing the epidemic. In this study, we propose a novel eco-epidemiological model that captures multi-species prey–predator dynamics with a multi-strain pandemic. The proposed model extends and combines the Lotka–Volterra prey–predator model and the Susceptible–Infectious–Recovered epidemiological model. We investigate the ecosystem’s sensitivity and stability during such a multi-strain pandemic through extensive simulation relying on both synthetic cases as well as two real-world configurations. Our results are aligned with known ecological and epidemiological findings, thus supporting the adequacy of the proposed model in realistically capturing the complex eco-epidemiological properties of the multi-species multi-strain pandemic dynamics.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/msms.pdf"},
+					  {"info": "cite", "type": 3, "link": "Alexi, A., Rosenfeld, A., Lazebnik, T. Multi-species prey–predator dynamics during a multi-strain pandemic. Chaos. 2023."}],
+		 "authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
+         "year": 2023,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Chaos",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Mathematical model of coffee tree’s rust control using snails as biological agents",
+         "description":"Coffee rust is one of the main diseases that affect coffee plantations worldwide, causing large-scale ecological and economic damage. While multiple methods have been proposed to tackle this challenge, using snails as biological agents have shown to be the most consistent and promising approach. However, snails are an invasive species, and overusing them can cause devastating outcomes. In this paper, we develop and explore an ecological-epidemiological mathematical model for the coffee tree rust pandemic control using snails as biological agents. We analyze the equilibria of the proposed system with their stability properties. In addition, we perform numerical analysis to obtain the sensitivity of the system to different changes and manipulation of the snails pandemic control, under specific conditions. Finally, we propose an in silico mechanism to obtain an analytical connection between the system's initial condition and the number of snails needed to optimally control the rust pandemic spread while preventing the snail population to grow unmanageably. Our model can be used to optimize the usage of snails as biological agents to control the rust pandemic in spatially-small areas, by predicting the number of snails one needs to introduce to the ecosystem in order to obtain a desired outcome.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/coffe_1.pdf"},
+					  {"info": "cite", "type": 3, "link": "Herskowitz, Y., Bunimovich-Mendrazitsky, S., Lazebnik, T. Mathematical model of coffee tree’s rust control using snails as biological agents. Biosystems. 2023."}],
+		 "authors": "Yonatan Herskowitz, Svetlana Bunimovich-Mendrazitsky, Teddy Lazebnik",
+         "year": 2023,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Biosystems",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Collective evolution learning model for vision-based collective motion with collision avoidance",
+         "description":"Collective motion (CM) takes many forms in nature; schools of fish, flocks of birds, and swarms of locusts to name a few. Commonly, during CM the individuals of the group avoid collisions. These CM and collision avoidance (CA) behaviors are based on input from the environment such as smell, air pressure, and vision, all of which are processed by the individual and defined action. In this work, a novel vision-based CM with CA model (i.e., VCMCA) simulating the collective evolution learning process is proposed. In this setting, a learning agent obtains a visual signal about its environment, and throughout trial-and-error over multiple attempts, the individual learns to perform a local CM with CA which emerges into a global CM with CA dynamics. The proposed algorithm was evaluated in the case of locusts’ swarms, showing the evolution of these behaviors in a swarm from the learning process of the individual in the swarm. Thus, this work proposes a biologically-inspired learning process to obtain multi-agent multi-objective dynamics.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/hagabubim.pdf"},
+					  {"info": "cite", "type": 3, "link": "Krongauz, D. L., Lazebnik, T. Collective evolution learning model for vision-based collective motion with collision avoidance. Plos One. 2023."}],
+		 "authors": "Teddy Lazebnik, Ariel Alexi",
+         "year": 2023,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Plos One",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"High Resolution Spatio-Temporal Model for Room-Level Airborne Pandemic Spread",
+         "description":"Airborne pandemics have caused millions of deaths worldwide, large-scale economic losses, and catastrophic sociological shifts in human history. Researchers have developed multiple mathematical models and computational frameworks to investigate and predict pandemic spread on various levels and scales such as countries, cities, large social events, and even buildings. However, attempts of modeling airborne pandemic dynamics on the smallest scale, a single room, have been mostly neglected. As time indoors increases due to global urbanization processes, more infections occur in shared rooms. In this study, a high-resolution spatio-temporal epidemiological model with airflow dynamics to evaluate airborne pandemic spread is proposed. The model is implemented, using Python, with high-resolution 3D data obtained from a light detection and ranging (LiDAR) device and computing model based on the Computational Fluid Dynamics (CFD) model for the airflow and the Susceptible–Exposed–Infected (SEI) model for the epidemiological dynamics. The pandemic spread is evaluated in four types of rooms, showing significant differences even for a short exposure duration. We show that the room’s topology and individual distribution in the room define the ability of air ventilation to reduce pandemic spread throughout breathing zone infection.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/room_pandemic.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Alexi, A. SubStrat: A Subset-Based Optimization Strategy for Faster AutoML. VLDP. 2023."}],
+		 "authors": "Teddy Lazebnik, Ariel Alexi",
+         "year": 2023,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Mathematics",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"The ability of governments to accurately forecast tax revenues is essential for the successful implementation of fiscal programs. However, forecasting state government tax revenues using only aggregate economic variables is subject to Lucas’s critique, which is left not fully answered as classical methods do not consider the complex feedback dynamics between heterogeneous consumers, businesses, and the government. In this study we present an agent-based model with a heterogeneous population and genetic algorithm-based decision-making to model and simulate an economy with taxation policy dynamics. The model focuses on assessing state tax revenues obtained from regions or cities within countries while introducing consumers and businesses, each with unique attributes and a decision-making mechanism driven by an adaptive genetic algorithm. We demonstrate the efficacy of the proposed method on a small village, resulting in a mean relative error of 5.44 +- 2.34 percent from the recorded taxes over 4 years and 4.08 +- 1.21 percent for the following year’s assessment. Moreover, we demonstrate the model’s ability to evaluate the effect of different taxation policies on economic activity and tax revenues.",
+         "description":"Airborne pandemics have caused millions of deaths worldwide, large-scale economic losses, and catastrophic sociological shifts in human history. Researchers have developed multiple mathematical models and computational frameworks to investigate and predict pandemic spread on various levels and scales such as countries, cities, large social events, and even buildings. However, attempts of modeling airborne pandemic dynamics on the smallest scale, a single room, have been mostly neglected. As time indoors increases due to global urbanization processes, more infections occur in shared rooms. In this study, a high-resolution spatio-temporal epidemiological model with airflow dynamics to evaluate airborne pandemic spread is proposed. The model is implemented, using Python, with high-resolution 3D data obtained from a light detection and ranging (LiDAR) device and computing model based on the Computational Fluid Dynamics (CFD) model for the airflow and the Susceptible–Exposed–Infected (SEI) model for the epidemiological dynamics. The pandemic spread is evaluated in four types of rooms, showing significant differences even for a short exposure duration. We show that the room’s topology and individual distribution in the room define the ability of air ventilation to reduce pandemic spread throughout breathing zone infection.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/economy_model.pdf"},
+					  {"info": "cite", "type": 3, "link": "Alexi, A., Lazebnik, T., Shami, L. SubStrat: Microfounded Tax Revenue Forecast Model with Heterogeneous Population and Genetic Algorithm Approach. Computational Economics. 2023."}],
+		 "authors": "Ariel Alexi, Teddy Lazebnik, Labib Shami",
+         "year": 2023,
+         "topic":"Economy",
+         "type":"Paper",
+         "publisher":"Computational Economics",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"SubStrat: A Subset-Based Optimization Strategy for Faster AutoML",
+         "description":"Automated machine learning (AutoML) frameworks have become important  tools in the data scientist's arsenal, as they dramatically reduce the manual work devoted to the construction of ML pipelines. Such frameworks intelligently search among millions of possible ML pipelines - typically containing feature engineering, model selection, and hyper parameters tuning steps - and finally output an optimal pipeline in terms of predictive accuracy. However, when the dataset is large, each individual configuration takes longer to execute, therefore the overall AutoML running times become increasingly high. To this end, we present \system{}, an AutoML optimization strategy that tackles the data size, rather than configuration space. It wraps existing AutoML tools, and instead of executing them directly on the entire dataset, \system{} uses a genetic-based algorithm to find a small yet representative data \textit{subset} that preserves a particular characteristic of the full data. It then employs the AutoML tool on the small subset, and finally, it refines the resulting pipeline by executing a restricted, much shorter, AutoML process on the large dataset. ",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/substrat.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik et al., SubStrat: A Subset-Based Optimization Strategy for Faster AutoML. VLDP. 2023."}],
+		 "authors": "Teddy Lazebnik, Amit Somech, Abraham Itzhak Weinberg",
+         "year": 2023,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"VLDP",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"SynthEye: Investigating the Impact of Synthetic Data on Artificial Intelligence assisted Gene Diagnosis of Inherited Retinal Disease",
+         "description":"Synthetic generation of realistic IRD FAF images is feasible. Synthetic data augmentation does not deliver improvements in classification performance. However, synthetic data alone deliver a similar performance as real data, and hence may be useful as a proxy to real data.Financial Disclosure(s): Proprietary or commercial disclosure may be found after the references.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/syntheye.pdf"},
+					  {"info": "cite", "type": 3, "link": "Veturi et al., SynthEye: Investigating the Impact of Synthetic Data on Artificial Intelligence assisted Gene Diagnosis of Inherited Retinal Disease. Ophthalmology Science. 2023."}],
+		 "authors": "Yoga Advaith Veturi, William Woof, Teddy Lazebnik, Ismail Moghul, Peter Woodward-Court, Siegfried K. Wagner, Thales Antonio Cabral de Guimarães, Malena Daich Varela, Bart Liefers, Praveen J. Patel, Stephan Beck, Andrew R. Webster, Omar Mahroo, Pearse A. Keane, Michel Michaelides, Konstantinos Balaskas, Nikolas Pontikos",
+         "year": 2023,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Ophthalmology Science",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Cancer-inspired genomics mapper model for the generation of synthetic DNA sequences with desired genomics signatures",
          "description":"Genome data are crucial in modern medicine, offering significant potential for diagnosis and treatment. Thanks to technological advancements, many millions of healthy and diseased genomes have already been sequenced; however, obtaining the most suitable data for a specific study, and specifically for validation studies, remains challenging with respect to scale and access. Therefore, in silico genomics sequence generators have been proposed as a possible solution. However, the current generators produce inferior data using mostly shallow (stochastic) connections, detected with limited computational complexity in the training data. This means they do not take the appropriate biological relations and constraints, that originally caused the observed connections, into consideration. To address this issue, we propose cancer-inspired genomics mapper model (CGMM), that combines genetic algorithm (GA) and deep learning (DL) methods to tackle this challenge. CGMM mimics processes that generate genetic variations and mutations to transform readily available control genomes into genomes with the desired phenotypes. We demonstrate that CGMM can generate synthetic genomes of selected phenotypes such as ancestry and cancer that are indistinguishable from real genomes of such phenotypes, based on unsupervised clustering. Our results show that CGMM outperforms four current state-of-the-art genomics generators on two different tasks, suggesting that CGMM will be suitable for a wide range of purposes in genomic medicine, especially for much-needed validation studies.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/ucl_main.pdf"},
@@ -140,6 +248,18 @@
          "topic":"Economic",
          "type":"Paper",
          "publisher":"Journal of Policy Modeling",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"The Causal Role of Lockdowns in COVID-19: Conclusions From Daily Epidemiological, Psychological, and Sociological Data",
+         "description":"Much has been written about the COVID-19 pandemic’s epidemiological, psychological, and sociological consequences. Yet, the question about the role of the lockdown policy from psychological and sociological points of view has not been sufficiently addressed. Using epidemiological, psychological, and sociological daily data, we examined the causal role of lockdown and variation in morbidity referring to emotional and behavioral aspects. Dynamics of support requests to the Sahar organization concerning loneliness, depression, anxiety, family difficulties, and sexual trauma were investigated alongside processes of emergency and domestic violence reports to the Ministry of Welfare and Social Affairs. By exploring the signals and predictive modeling for a situation with no lockdown implementation, the lockdown was found as a critical factor in distress rising among the general population, which could affect long after the improvement in pandemic case counts. Applications and implications are discussed in the context of decision-making in dealing with crises as well as the need to allocate resources for adaptive coping.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/psycho.pdf"},
+					  {"info": "cite", "type": 3, "link": "Vardi, N., Lazebnik, T. The Causal Role of Lockdowns in COVID-19: Conclusions From Daily Epidemiological, Psychological, and Sociological Data. Psychiatric Quarterly. 2023."}],
+		 "authors": "Vardi Noa, Teddy Lazebnik",
+         "year": 2023,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Psychiatric Quarterly",
          "publicationStatus":"Published"
       },
 	{
