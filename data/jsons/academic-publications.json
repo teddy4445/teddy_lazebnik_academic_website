@@ -3,7 +3,7 @@
 	{
          "name":"Academic co-authorship is a risky game",
          "description":"Trust has proven to be a predictor of organizational outcomes. In some cases, such as law enforcement, achieving organizational goals requires workers to be willing to risk their lives. Is there a link between street-level bureaucrats’ (SLBs) willingness to endanger their own lives for the public and their trust in their peers, managers, and the institution to which they belong? Using a national survey of 2,733 police officers in Brazil and machine-learning-based methods, we found that there is a significant link between their willingness to risk their lives for others and their trust in their peers, managers, and the institution to which they belong. Our findings indicate that while these SLBs were very willing to risk their lives for certain groups, their willingness declined sharply for others such as lesbian, gay, bisexual, transgender, and questioning (LGBTQ)+ people and the homeless. In addition, police officers’ perceptions about discrimination, police professionalism, and organizational commitment and support are linearly linked to their willingness to risk their lives. Our findings demonstrate the important role of trust in understanding public servants’ practices in the extreme context of risking their lives for others.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/nissim_1.pdf"},
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/risky_game.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Beck, S., Shami, L. Academic co-authorship is a risky game. Scientometrics. 2023."}],
 		 "authors": "Teddy Lazebnik, Stephan Beck, Labib Shami",
          "year": 2023,
