@@ -1,6 +1,18 @@
 {
    "publications":[ 
 	{
+         "name":"Can We Mathematically Spot the Possible Manipulation of Results in Research Manuscripts Using Benford’s Law?",
+         "description":"The reproducibility of academic research has long been a persistent issue, contradicting one of the fundamental principles of science. Recently, there has been an increasing number of false claims found in academic manuscripts, casting doubt on the validity of reported results. In this paper, we utilize an adapted version of Benford’s law, a statistical phenomenon that describes the distribution of leading digits in naturally occurring datasets, to identify the potential manipulation of results in research manuscripts, solely using the aggregated data presented in those manuscripts rather than the commonly unavailable raw datasets. Our methodology applies the principles of Benford’s law to commonly employed analyses in academic manuscripts, thus reducing the need for the raw data itself. To validate our approach, we employed 100 open-source datasets and successfully predicted 79% of them accurately using our rules. Moreover, we tested the proposed method on known retracted manuscripts, showing that around half (48.6%) can be detected using the proposed method. Additionally, we analyzed 100 manuscripts published in the last two years across ten prominent economic journals, with 10 manuscripts randomly sampled from each journal. Our analysis predicted a 3% occurrence of results manipulation with a 96% confidence level. Our findings show that Benford’s law adapted for aggregated data, can be an initial tool for identifying data manipulation; however, it is not a silver bullet, requiring further investigation for each flagged manuscript due to the relatively low prediction accuracy.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/academic_data_fruad.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Gorlitsky, D. Can We Mathematically Spot the Possible Manipulation of Results in Research Manuscripts Using Benford’s Law?. Data. 2023."}],
+		 "authors": "Teddy Lazebnik, Gorlitsky Dan",
+         "year": 2023,
+         "topic":"Social",
+         "type":"Paper",
+         "publisher":"Scientometrics",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Academic co-authorship is a risky game",
          "description":"Trust has proven to be a predictor of organizational outcomes. In some cases, such as law enforcement, achieving organizational goals requires workers to be willing to risk their lives. Is there a link between street-level bureaucrats’ (SLBs) willingness to endanger their own lives for the public and their trust in their peers, managers, and the institution to which they belong? Using a national survey of 2,733 police officers in Brazil and machine-learning-based methods, we found that there is a significant link between their willingness to risk their lives for others and their trust in their peers, managers, and the institution to which they belong. Our findings indicate that while these SLBs were very willing to risk their lives for certain groups, their willingness declined sharply for others such as lesbian, gay, bisexual, transgender, and questioning (LGBTQ)+ people and the homeless. In addition, police officers’ perceptions about discrimination, police professionalism, and organizational commitment and support are linearly linked to their willingness to risk their lives. Our findings demonstrate the important role of trust in understanding public servants’ practices in the extreme context of risking their lives for others.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/risky_game.pdf"},
