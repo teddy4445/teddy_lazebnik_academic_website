@@ -32,11 +32,11 @@ class Blog extends PageRender
 
 	/* build section functions */
 
-	buildBody()
+	buildBody(search_term = "")
 	{
 		// perpare ds //
 		// sort the list
-		var buildPublicationList = BlogCard.sortByProperty(this.publicationList, default_sorter);
+		var buildPublicationList = TeamCard.sortByProperty(this.publicationList, default_sorter);
 
 		// build the UI //
 		try
@@ -51,11 +51,11 @@ class Blog extends PageRender
 						ansewrHtml += buildPublicationList[elementIndex].toHtml();	
 					}
 				}
-				document.getElementById("publications-body").innerHTML = ansewrHtml;
+				document.getElementById("team-body").innerHTML = ansewrHtml;
 			}
 			else // show error message
 			{
-				document.getElementById("publications-body").innerHTML = "<h3>Currently, the lab is empty, but it will be full in a short time...</h3>"; // should not happen
+				document.getElementById("team-body").innerHTML = "<h3>Currently, the lab is empty, but it will be full in a short time...</h3>"; // should not happen
 			}
 		}
 		catch (error)

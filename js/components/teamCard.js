@@ -20,12 +20,13 @@ class TeamCard extends Element
 	// convert the object into HTML
 	toHtml()
 	{
-		var answer = '<div class="academic-papers-panel"><h3 class="blog-title">' 
-		+ this.name + '</h3><h4 class="blog-title">' 
-		+ this.title + '</h4><p>'
-		+ this.description + '</p><div class="personal-row space-between align-items-center mobile-row-breaker"><div class="w-100"><span class="blog-data"> During:'
-		+ this.s_date + "-" + this.e_date +  '</span></div><div class="w-100 flex-end align-items-center mobile-row-spacer"><a href="'
-		+ this.info_link + '" class="download-btn">Learn more</a></div></div></div>';
+		var answer = '<div class="academic-papers-panel"><div class="row"><div class="col-lg-8 col-md-8 col-sm-12"><h2 class="blog-title">' 
+		+ this.name + '</h2><h3 class="blog-title-second">' 
+		+ this.title + ' (' + this.category_name + ')' + '</h3><span class="blog-data">'
+		+ this.s_date + " - " + this.e_date +  '</span><p class="member-disc"><br>'
+		+ this.description + '</p><a href="'
+		+ this.info_link + '" class="download-btn member-link-btn">Learn more</a></div><div class="col-lg-4 col-md-4 col-sm-12 img-delete-mobile member-div-image"><img src="/' 
+		+ this.image_link + '" alt="Lab member\'s image" /> </div></div></div></div>';
 		return answer;
 	}
 	
@@ -43,11 +44,13 @@ class TeamCard extends Element
 	// build a list of this object from Json object
 	static createFromJson(jsonObj)
 	{
-		return new TeamCard(jsonObj["title"],
+		return new TeamCard(jsonObj["name"],
+		jsonObj["title"],
 		jsonObj["description"], 
 		jsonObj["s_date"], 
 		jsonObj["e_date"], 
 		jsonObj["image_link"], 
+		jsonObj["info_link"], 
 		jsonObj["category_name"],
 		jsonObj["order"]);
 	}
@@ -59,9 +62,9 @@ class TeamCard extends Element
 		{
 			var x = a[property + ""]; 
 			var y = b[property + ""];
-			return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+			return ((x > y) ? -1 : ((x < y) ? 1 : 0));
 		});
 	}
 	
 }
-export {BlogCard};
+export {TeamCard};

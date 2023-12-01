@@ -1616,8 +1616,6 @@ flickity-prev-next-button[disabled]{
 
 
 .search-description{
-	/* Bar Ilan University */
-
 position: static;
 width: 160px;
 height: 34.92px;
@@ -1800,6 +1798,35 @@ margin: 0px 0px;
 /* end - index page */
 
 
+/* lab page */
+
+.member-disc{
+	font-size: 18px !important;
+}
+
+.member-link-btn{
+	max-width: 200px !important;
+}
+
+.member-div-image{
+	display: flex;
+	justify-content: center;
+}
+
+.member-div-image img{
+	max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .img-delete-mobile{
+	display: none;
+	}
+}
+
+
+
+/* end - lab page */
+
 /* publications page  */
 
 #reset-btn{
@@ -1974,10 +2001,6 @@ margin: 0px 0px;
 	.academic-papers-container{
 		margin-top: 1rem;
 	}
-
-  .academic-papers-body-section h3{
-	  margin-left: 16px;
-  }
 
 	.publications-hr {
 		margin-top: 0.5rem;
@@ -2456,6 +2479,9 @@ margin: 0px 0px;
 .blog-title{
 }
 
+.blog-title-second{
+}
+
 .blog-post{
 	margin-bottom: 30px;
 }
@@ -2538,6 +2564,10 @@ margin: 0px 0px;
 	
 	.blog-title{
 		font-size: 16pt !important;
+	}
+	
+	.blog-title-second{
+		font-size: 14pt !important;
 	}
 
 	.blog-post-title{
