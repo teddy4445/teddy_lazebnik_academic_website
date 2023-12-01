@@ -103,7 +103,7 @@
 					  {"info": "cite", "type": 3, "link": "Alexi, A., Lazebnik, T., Shami, L. SubStrat: Microfounded Tax Revenue Forecast Model with Heterogeneous Population and Genetic Algorithm Approach. Computational Economics. 2023."}],
 		 "authors": "Ariel Alexi, Teddy Lazebnik, Labib Shami",
          "year": 2023,
-         "topic":"Economy",
+         "topic":"Economic",
          "type":"Paper",
          "publisher":"Computational Economics",
          "publicationStatus":"Published"
@@ -389,7 +389,7 @@
 					  {"info": "cite", "type": 3, "link": "Gargantini, T., Daly, M., Sherlock, J., Lazebnik, T., Providing Safe Space for Honest Mistakes in the Public Sector Is the Most Important Predictor for Work Engagement after Strategic Clarity. Sustainability. 2022."}],
 		 "authors": "Thais Gargantini, Michael Daly, Joseph Sherlock, Teddy Lazebnik",
          "year": 2022,
-         "topic":"Social Science",
+         "topic":"Social",
          "type":"Paper",
          "publisher":"Sustainability",
          "publicationStatus":"Published"
@@ -425,7 +425,7 @@
 					  {"info": "cite", "type": 3, "link": "Natan, S., Lazebnik, T., Lerner, E., A distinction of three online learning pedagogic paradigms. SN Social Science. 2022."}],
 		 "authors": "Sarit Natan, Teddy Lazebnik, Elisa Lerner",
          "year": 2022,
-         "topic":"Social Science",
+         "topic":"Social",
          "type":"Paper",
          "publisher":"SN Social Science",
          "publicationStatus":"Published"
