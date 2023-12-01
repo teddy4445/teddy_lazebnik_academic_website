@@ -3,7 +3,7 @@
       {
          "name": "Ariel Alexi",
          "title": "PhD. Student",
-         "description": "Ariel is still not sure what she is going to study but she is working on it...",
+         "description": "Ariel done her Master degree at Bar Ilan University, Information Science department, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=jk8bS5QAAAAJ&hl=iw' alt='Dr. Ariel Rosenfeld'>Dr. Ariel Rosenfeld</a> and mine. Ariel's research is focusing on optimal resource allocation for clinical care in a heterogeneous population during a pandemic.",
          "s_date": "1/12/2023",
 		 "e_date": "1/12/2027",
 		 "image_link": "img/lab/ariel.png",
@@ -14,10 +14,10 @@
 	  {
          "name": "Dr. Assaf Shmuel",
          "title": "PhD. Student",
-         "description": "Assaf is a PhD Student in Bar Ilan University, CS department, under the joint supervision of <a href='https://dsi.biu.ac.il/team/dr-oren-glickman/' alt='Dr. Oren Glickman website'>Dr. Oren Glickman</a> and mine. Assaf's research focuses on symbolic regression integration with machine and deep learning models to obtain better results (in many asspects of the term). ",
+         "description": "Assaf is a PhD Student in Bar Ilan University, CS department, under the joint supervision of <a href='https://dsi.biu.ac.il/team/dr-oren-glickman/' alt='Dr. Oren Glickman website'>Dr. Oren Glickman</a> and mine. Assaf's research focuses on integrating symbolic regression into machine and deep learning models to obtain accurate and explainable data-driven models. An additional part of his research focuses on generalization and out-of-distribution prediction in machine and deep learning. ",
          "s_date": "1/08/2023",
 		 "e_date": "1/08/2026",
-		 "image_link": "img/lab/user.png",
+		 "image_link": "img/lab/assaf.png",
 		 "info_link": "https://scholar.google.com/citations?hl=en&user=LCOIWK0AAAAJ",
 		 "category_name": "Current - offical",
 		 "order": 2
