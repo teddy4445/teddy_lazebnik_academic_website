@@ -56,40 +56,8 @@
 	<main class="content" id="main_section">
 		<div class="academic-papers-container">
 			<div class="academic-papers-header-section">
-				<h1>Academic publications</h1>
-				<p class="top_p"> Published academic papers, presentations, and abstracts.</p>
-				<div class="academic-papers-order-filter-wrapper"  onclick="document.academicPublications.showOrderOptions()">
-					<img src="img/order-icon.svg" class="publications-order-by-icon">
-					<h5 class="publications-order-by-btn">Order By</h5>
-				</div>
-				<form id="orderOptions">
-					<div class="personal-row wrap">
-						<button type="button" id="sort-btn-year" onclick="document.academicPublications.changeSort('year')"> Year </button>
-						<button type="button" id="sort-btn-type" onclick="document.academicPublications.changeSort('type')"> Type </button>
-						<button type="button" id="sort-btn-topic" onclick="document.academicPublications.changeSort('topic')"> Topic </button>
-					</div>
-				</form>
-				<div class="academic-papers-order-filter-wrapper" onclick="document.academicPublications.showFilterOptions()">
-					<img src="img/filter-icon.svg" class="publications-filter-icon">
-					<h5 class="publications-filter-btn">Filter</h5>
-				</div>
-
-				<div class="academic-papers-filters w-100" id="academic_papers_filters">
-					<form id="FilterOptions">
-						<div class="personal-row wrap">
-							<select id="year-filter" class="filter" onchange="document.academicPublications.changeFilterYear();">
-								<option>Year</option>
-							</select>
-							<select id="type-filter" class="filter" onchange="document.academicPublications.changeFilterType();">
-								<option>Type</option>
-							</select>
-							<select id="topic-filter" class="filter" onchange="document.academicPublications.changeFilterTopic();">
-								<option>Topic</option>
-							</select>
-							<a id="reset-btn" id="reset-btn"></a>
-						</div>
-					</form>
-				</div>
+				<h1>My Lab</h1>
+				<p>Meet the amazing people behind the lab.</p>
 			</div>
 			<hr class="publications-hr">
 			<div class="academic-papers-body-section" id="publications-body">
@@ -109,7 +77,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="/js/main.js"> </script>
 	<script src="/js/search.js"> </script>
-	<script src="/js/pages/academic-publications.js" type="module"> </script>
+	<script src="/js/pages/blog.js" type="module"> </script>
 	<script>
 
 	</script>

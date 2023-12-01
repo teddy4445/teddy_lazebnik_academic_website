@@ -1,0 +1,15 @@
+{
+   "members":[
+      {
+         "name": "Ariel Alexi",
+         "title": "PhD. Student",
+         "description": "Ariel is still not sure what she is going to study but she is working on it...",
+         "s_date": "1/12/2023",
+		 "e_date": "1/12/2027",
+		 "image_link": "img/lab/ariel.png",
+		 "info_link": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en",
+		 "category_name": "Current - Offical",
+		 "order": 1
+      }
+	]
+}
