@@ -36,7 +36,7 @@
 	  {
          "name": "Liron Simon-Keren",
          "title": "MS. Student",
-         "description": "Liron was a MS Student in Tel Aviv University, Mechanical Engineering department, under the supervision of <a href='https://scholar.google.com/citations?user=aKtsRT4AAAAJ&hl=en' alt='Prof. Alex Liberzon website'>Prof. Alex Liberzon</a> with my unformal supervision. Liron's research focused on machine learning models for multi-fluid dynamics.",
+         "description": "Liron, an honored M.Sc. graduate in Mechanical Engineering from Tel Aviv University, conducted research on symbolic regression frameworks with knowledge integration. She applied them to generate predictive correlations in fluid dynamics under the joint supervision of <a href='https://scholar.google.com/citations?user=aKtsRT4AAAAJ&hl=en' alt='Prof. Alex Liberzon website'>Prof. Alex Liberzon</a>and myself.",
          "s_date": "1/09/2020",
 		 "e_date": "1/09/2022",
 		 "image_link": "img/lab/liron.png",
@@ -53,7 +53,7 @@
 		 "image_link": "img/lab/user.png",
 		 "info_link": "https://www.sciencedirect.com/science/article/pii/S0303264723000916",
 		 "category_name": "Alumni - offical",
-		 "order": 5
+		 "order": 6
       },
 	  {
          "name": "Liel Mushiev",
@@ -64,7 +64,7 @@
 		 "image_link": "img/lab/userf.png",
 		 "info_link": "https://www.linkedin.com/in/liel-mushiev/?originalSubdomain=il",
 		 "category_name": "Alumni - unoffical",
-		 "order": 6
+		 "order": 7
       },
 	  {
          "name": "Tzach Fleischer",
@@ -75,7 +75,7 @@
 		 "image_link": "img/lab/tzach.png",
 		 "info_link": "https://www.linkedin.com/in/tzach-fleischer-software-developer?trk=public_profile_browsemap&originalSubdomain=il",
 		 "category_name": "Alumni - unoffical",
-		 "order": 7
+		 "order": 5
       }
 	]
 }
