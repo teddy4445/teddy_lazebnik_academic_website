@@ -1,5 +1,20 @@
 {
-   "32":[
+   "33":[
+      {
+         "title":"A Step Towards Explainable AI - The Explainable Boosting Machine",
+		 "date": "8/6/2021",
+		 "reading_time": "2",
+		 "link_address": "19",
+         "description":"Machine learning models are concering new hilltops everyday now and sprading into more fields of life such as medicine, miletary, life-supporting systems and other which require individuals to put their faite in these models. How one can do so without understanding the model? Explainable Boosting Machine (EBM) is one step torwards a more interpretabe machine learning models..."
+      },
+      {
+         "title":"3 Things I learned about Conflicts in Academia",
+		 "date": "26/2/2023",
+		 "reading_time": "3",
+		 "link_address": "29",
+         "description":"In this blog-post, I present from a personal point of view an analysis of common sources of conflicts in academic settings and practical strategies for managing them effectively. Through personal experiences and reflections, I identify three main key lessons: the importance of communication, understanding power dynamics, and understand differences in objectives of the team members."
+      }
+	],"32":[
       {
          "title":"Give Me a One-Handed Economist: The Ongoing Struggle Between Social and Exact Science In Economy",
 		 "date": "28/8/2021",
