@@ -1646,6 +1646,62 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Introduction for Cybersecurity for Managers",
+			"code": "111111",
+			"year": "2024",
+			"topic": "CS",
+			"semester": "1",
+			"university": "Bar Ilan University",
+			"department": "Professional studies",
+			"location_class": "zoom",
+			"syllabus": "",
+			"description": "Link to the class is provided in the Lamda website of the course. This course will provide students with an overview of cybersecurity with slight technical lession. The objective is that students will be able to further develop their knowledge about cybersecurity in a more deep level after the course as they famailar with most of the basic ideas.",
+			"grade_parts": [{
+					"name": "Team project",
+					"percent": 70
+				},
+				{
+					"name": "Presentation",
+					"percent": 30
+				}
+			],
+			"resources": {
+				"Must":[{
+					"name": "I will add next week",
+					"link": "",
+					"description": "",
+					"type": "file"
+				}
+				],
+				"Extra": [{
+					"name": "I will add next week",
+					"link": "",
+					"description": "",
+					"type": "file"
+				}]
+			},
+			"updates": [{
+				"title": "Welcome to the course!",
+				"description": "Offically, Lamda is the course's website. However, to align with other courses, I will also copy-upload the main materials here. Please note that the class will be in class but recorded, and uploaded to Lamda.",
+				"date": "1.1.2024",
+				"link": ""
+			}
+			],
+			"modules": [{
+					"title": "All the material",
+					"explanation": "In this part",
+					"resources": {
+						"Lectures": [{
+								"name": "Lession 1 - Intro",
+								"link": "",
+								"description": "",
+								"type": "file"
+							}]
+					}
+				}
+			]
 		}
 	]
 }
