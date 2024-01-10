@@ -1582,7 +1582,17 @@
 								"type": "file"
 							},{
 								"name": "Lecture 1 recoding",
-								"link": "https://youtu.be/aVOJyUYxfCg",
+								"link": "",
+								"description": "",
+								"type": "video"
+							},{
+								"name": "Lession 2 - Function's limits and continous",
+								"link": "https://drive.google.com/file/d/1mZCcA0ZbuE-rQxYvrZGsdqids50N3sQx/view?usp=sharing",
+								"description": "Pages 25-77 in the book.",
+								"type": "file"
+							},{
+								"name": "Lecture 2 recoding",
+								"link": "https://biu-ac-il.zoom.us/rec/share/_yUb6D7RV3n4LR3qAlZuk1I25Qz1MVDLsUxl1ANUsOvsEalEEvU2C2BKhU0HsX8x.2JNh3NPnb__FG17H",
 								"description": "",
 								"type": "video"
 							}]
@@ -1639,7 +1649,17 @@
 								"type": "file"
 							},{
 								"name": "Lecture 1 recoding",
-								"link": "https://youtu.be/aVOJyUYxfCg",
+								"link": "",
+								"description": "",
+								"type": "video"
+							},{
+								"name": "Lession 2 - Function's limits and continous",
+								"link": "https://drive.google.com/file/d/1mZCcA0ZbuE-rQxYvrZGsdqids50N3sQx/view?usp=sharing",
+								"description": "Pages 25-77 in the book.",
+								"type": "file"
+							},{
+								"name": "Lecture 2 recoding",
+								"link": "https://biu-ac-il.zoom.us/rec/share/_yUb6D7RV3n4LR3qAlZuk1I25Qz1MVDLsUxl1ANUsOvsEalEEvU2C2BKhU0HsX8x.2JNh3NPnb__FG17H",
 								"description": "",
 								"type": "video"
 							}]
