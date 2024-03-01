@@ -1,6 +1,66 @@
 {
    "publications":[ 
 	{
+         "name":"A new definition for feature selection stability analysis",
+         "description":"Feature selection (FS) stability is an important topic of recent interest. Finding stable features is important for creating reliable, non-overfitted feature sets, which in turn can be used to generate machine learning models with better accuracy and explanations and are less prone to adversarial attacks. There are currently several definitions of FS stability that are widely used. In this paper, we demonstrate that existing stability metrics fail to quantify certain key elements of many datasets such as resilience to data drift or non-uniformly distributed missing values. To address this shortcoming, we propose a new definition for FS stability inspired by Lyapunov stability in dynamic systems. We show the proposed definition is statistically different from the classical record-stability on (n=90) datasets. We present the advantages and disadvantages of using Lyapunov and other stability definitions and demonstrate three scenarios in which each one of the three proposed stability metrics is best suited.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/xai_2.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Rosenfeld, A., A new definition for feature selection stability analysis.  Annals of Mathematics and Artificial Intelligence. 2024."}],
+		 "authors": "Teddy Lazebnik, Avi Rosenfeld",
+         "year": 2024,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Annals of Mathematics and Artificial Intelligence",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Environmental enrichments and data-driven welfare indicators for sheltered dogs using telemetric physiological measures and signal processing",
+         "description":"Shelters are stressful environments for domestic dogs which are known to negatively impact their welfare. The introduction of outside stimuli for dogs in this environment can improve their welfare and life conditions. However, our current understanding of the influence of different stimuli on shelter dogs’ welfare is limited and the data is still insufficient to draw conclusions. In this study, we collected 28 days (four weeks) of telemetry data from eight male dogs housed in an Italian shelter for a long period of time. During this period, three types of enrichment were introduced into the dogs’ pens for one week each: entertaining objects, intraspecific, and interspecific social enrichment, by means of the presence of female conspecifics and the presence of a human. To quantify their impact, we introduce novel metrics as indicators of sheltered dogs’ welfare based on telemetry data: the variation of heart rate, muscle activity, and body temperature from an average baseline day, quality of sleep, and the regularity for cyclicity of the aforementioned parameters, based on the day-night cycle. Using these metrics, we show that while all three stimuli statistically improve the dogs’ welfare, the variance between individual dogs is large. Moreover, our findings indicate that the presence of female conspecific is the best stimulus among the three explored options which improves both the quality of sleep and the parameters’ cyclicity. Our results are consistent with previous research findings while providing novel data-driven welfare indicators that promote objectivity. Thus, this research provides some useful guidelines for managing shelters and improving dogs’ welfare.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/italian_dogs.pdf"},
+					  {"info": "cite", "type": 3, "link": "Travain, T., Lazebnik, T., Zamansky, A., Cafazzo, S., Valsecchi, P., Natoli, E., Environmental enrichments and data-driven welfare indicators for sheltered dogs using telemetric physiological measures and signal processing. Scientific Reports. 2024."}],
+		 "authors": "Tiziano Travain, Teddy Lazebnik, Anna Zamansky, Simona Cafazzo, Paola Valsecchi & Eugenia Natoli",
+         "year": 2024,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Scientific Reports",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"BovineTalk: machine learning for vocalization analysis of dairy cattle under the negative affective state of isolation",
+         "description":"There is a critical need to develop and validate non-invasive animal-based indicators of affective states in livestock species, in order to integrate them into on-farm assessment protocols, potentially via the use of precision livestock farming (PLF) tools. One such promising approach is the use of vocal indicators. The acoustic structure of vocalizations and their functions were extensively studied in important livestock species, such as pigs, horses, poultry, and goats, yet cattle remain understudied in this context to date. Cows were shown to produce two types of vocalizations: low-frequency calls (LF), produced with the mouth closed, or partially closed, for close distance contacts, and open mouth emitted high-frequency calls (HF), produced for long-distance communication, with the latter considered to be largely associated with negative affective states. Moreover, cattle vocalizations were shown to contain information on individuality across a wide range of contexts, both negative and positive. Nowadays, dairy cows are facing a series of negative challenges and stressors in a typical production cycle, making vocalizations during negative affective states of special interest for research. One contribution of this study is providing the largest to date pre-processed (clean from noises) dataset of lactating adult multiparous dairy cows during negative affective states induced by visual isolation challenges. Here, we present two computational frameworks—deep learning based and explainable machine learning based, to classify high and low-frequency cattle calls and individual cow voice recognition. Our models in these two frameworks reached 87.2 and 89.4% accuracy for LF and HF classification, with 68.9 and 72.5% accuracy rates for the cow individual identification, respectively.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/BovineTalk.pdf"},
+					  {"info": "cite", "type": 3, "link": "Gavojdian, D., Mincu1, M., Lazebnik, T., Oren, A., Nicolae, I., Zamansky, A., BovineTalk: machine learning for vocalization analysis of dairy cattle under the negative affective state of isolation. Frontiers in Veterinary Science. 2024."}],
+		 "authors": "Dinu Gavojdian, Madalina Mincu1, Teddy Lazebnik, Ariel Oren, Ioana Nicolae, Anna Zamansky",
+         "year": 2024,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Frontiers in Veterinary Science",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Improved prediction of settling behavior of solid particles through machine learning analysis of experimental retention time data",
+         "description":"The motion of particles through density-stratified interfaces is a common phenomenon in environmental and engineering applications. However, the mechanics of particle-stratification interactions in various combinations of particle and fluid properties are not well understood. This study presents a novel machine-learning (ML) approach to experimental data of inertial particles crossing a density-stratified interface. A simplified particle settling experiment was conducted to obtain a large number of particles and expand the parameter range. Using ML, the study explores new correlations that collapse the data gathered in this and in previous work by Verso et al. (2019). The “delay time”, which is the time between the particle exiting the interfacial layer and reaching a steady-state velocity, is found to strongly depend on six dimensionless parameters formulated by ML feature selection. The data shows a correlation between the Reynolds and Froude numbers within the range of the experiments, and the best symbolic regression is based on the Froude number only. This experiment provides valuable insights into the behavior of inertial particles in stratified layers and highlights opportunities for future improvement in predicting their motion.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/liron_alex_physics.pdf"},
+					  {"info": "cite", "type": 3, "link": "Simon-Keren, L., Lazebnik, T., Liberzon, A., Improved prediction of settling behavior of solid particles through machine learning analysis of experimental retention time data. International Journal of Multiphase Flow. 2024."}],
+		 "authors": "Liron Simon-Keren, Teddy Lazebnik, Alex Liberzon",
+         "year": 2024,
+         "topic":"Physics",
+         "type":"Paper",
+         "publisher":"International Journal of Multiphase Flow",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"An algorithm to optimize explainability using feature ensembles",
+         "description":"Feature Ensembles are a robust and effective method for finding the feature set that yields the best predictive accuracy for learning agents. However, current feature ensemble algorithms do not consider explainability as a key factor in their construction. To address this limitation, we present an algorithm that optimizes for the explainability and performance of a model – the Optimizing Feature Ensembles for Explainability (OFEE) algorithm. OFEE uses intersections of feature sets to produce a feature ensemble that optimally balances explainability and performance. Furthermore, OFEE is parameter-free and as such optimizes itself to a given dataset and explainability requirements. To evaluated OFEE, we considered two explainability measures, one based on ensemble size and the other based on ensemble stability. We found that OFEE was overall extremely effective within the nine canonical datasets we considered. It outperformed other feature selection algorithms by an average of over 8% and 7% respectively when considering the size and stability explainability measures.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/xai_1.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Rosenfeld, A., An algorithm to optimize explainability using feature ensembles. Applied Intelligence. 2024."}],
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky, Avi Rosenfeld",
+         "year": 2024,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Applied Intelligence",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"A Hybrid Mathematical Model for Optimal Border Closure Policy during Pandemic",
          "description":"During a global health crisis, a country’s borders are a weak point through which carriers from countries with high morbidity rates can enter, endangering the health of the local community and undermining the authorities efforts to prevent the spread of the pathogen. Therefore, most countries have adopted some level of border closure policies as one of the first steps in handling pandemics. However, this step involves a significant economic loss, especially for countries that rely on tourism as a source of income. We developed a pioneering model to help decision-makers determine the optimal border closure policies during a health crisis that minimize the magnitude of the outbreak and maximize the revenue of the tourism industry. This approach is based on a hybrid mathematical model that consists of an epidemiological sub-model with tourism and a pandemic-focused economic sub-model, which relies on elements from the field of artificial intelligence to provide policymakers with a data-driven model for a border closure strategy for tourism during a global pandemic.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/pandemic_tourisem.pdf"},
