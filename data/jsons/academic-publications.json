@@ -1,6 +1,18 @@
 {
    "publications":[ 
 	{
+         "name":"Cost-optimal Seeding Strategy During a Botanical Pandemic in Domesticated Fields",
+         "description":"Botanical pandemics cause enormous economic damage and food shortages around the globe. However, since botanical pandemics are here to stay in the short-medium term, domesticated field owners can strategically seed their fields to optimize each session’s economic profit. In this work, we propose a novel epidemiological-economic mathematical model that describes the economic profit from a field of plants during a botanical pandemic. We describe the epidemiological dynamics using a spatiotemporal extended susceptible-infected-recovered epidemiological model with a non-linear output economic model. We provide an algorithm to obtain an optimal grid-formed seeding strategy to maximize economic profit, given field and pathogen properties. We show that the recovery and basic infection rates have a similar economic influence. Unintuitively, we show that a larger farm does not promise higher economic profit. Our results demonstrate a significant benefit of using the proposed seeding strategy and shed more light on the dynamics of the botanical pandemic.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/eco_pandemic_in_the_field.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Cost-optimal Seeding Strategy During a Botanical Pandemic in Domesticated Fields. Chaos. 2024."}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2024,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Chaos",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"A new definition for feature selection stability analysis",
          "description":"Feature selection (FS) stability is an important topic of recent interest. Finding stable features is important for creating reliable, non-overfitted feature sets, which in turn can be used to generate machine learning models with better accuracy and explanations and are less prone to adversarial attacks. There are currently several definitions of FS stability that are widely used. In this paper, we demonstrate that existing stability metrics fail to quantify certain key elements of many datasets such as resilience to data drift or non-uniformly distributed missing values. To address this shortcoming, we propose a new definition for FS stability inspired by Lyapunov stability in dynamic systems. We show the proposed definition is statistically different from the classical record-stability on (n=90) datasets. We present the advantages and disadvantages of using Lyapunov and other stability definitions and demonstrate three scenarios in which each one of the three proposed stability metrics is best suited.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/xai_2.pdf"},
