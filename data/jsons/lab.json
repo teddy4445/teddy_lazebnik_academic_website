@@ -1,26 +1,37 @@
 {
    "members":[
-      {
-         "name": "Ariel Alexi",
+	  {
+         "name": "Adi Shuchami",
          "title": "PhD. Student",
-         "description": "Ariel done her Master degree at Bar Ilan University, Information Science department, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=jk8bS5QAAAAJ&hl=iw' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine. Ariel's research is focusing on optimal resource allocation for clinical care in a heterogeneous population during a pandemic as well as scientometrics.",
-         "s_date": "1/10/2023",
-		 "e_date": "1/7/2024",
-		 "image_link": "img/lab/ariel.png",
-		 "info_link": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en",
+         "description": "Adi is a PhD Student in Ariel University, Mathematics department, under my supervision. Adi's research focuses on optimal resource allocation for pandmeic manamgment in the community during war times. In addition, Adi develops data-driven decision-support using machine and deep learning models.",
+         "s_date": "14/04/2023",
+		 "e_date": "14/04/2025",
+		 "image_link": "img/lab/adi.png",
+		 "info_link": "https://scholar.google.com/citations?hl=en&user=LCOIWK0AAAAJ",
 		 "category_name": "Current - offical",
 		 "order": 1
       },
 	  {
          "name": "Dr. Assaf Shmuel",
          "title": "PhD. Student",
-         "description": "Assaf is a PhD Student in Bar Ilan University, CS department, under the joint supervision of <a href='https://dsi.biu.ac.il/team/dr-oren-glickman/' alt='Dr. Oren Glickman website'>Dr. Oren Glickman</a> and mine. Assaf's research focuses on integrating symbolic regression into machine and deep learning models to obtain accurate and explainable data-driven models. An additional part of his research focuses on generalization and out-of-distribution prediction in machine and deep learning. ",
-         "s_date": "1/08/2023",
-		 "e_date": "1/08/2026",
-		 "image_link": "img/lab/assaf.png",
+         "description": "Assaf is a PhD Student in Bar Ilan University, CS department, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=WWPHtjIAAAAJ&hl=en' alt='Dr. Oren Glickman'>Dr. Oren Glickman</a> and mine. Assaf's research focuses on integrating symbolic regression into machine and deep learning models to obtain accurate and explainable data-driven models. An additional part of his research focuses on generalization and out-of-distribution prediction in machine and deep learning.",
+         "s_date": "01/08/2023",
+		 "e_date": "01/08/2025",
+		 "image_link": "img/lab/adi.png",
 		 "info_link": "https://scholar.google.com/citations?hl=en&user=LCOIWK0AAAAJ",
 		 "category_name": "Current - offical",
 		 "order": 2
+      },
+      {
+         "name": "Ariel Alexi",
+         "title": "MA. Student",
+         "description": "Ariel finishing her Master degree at Bar Ilan University, Information Science department, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=jk8bS5QAAAAJ&hl=iw' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine. Ariel's research is focusing on optimal resource allocation for clinical care in a heterogeneous population during a pandemic as well as scientometrics.",
+         "s_date": "1/10/2023",
+		 "e_date": "1/7/2024",
+		 "image_link": "img/lab/ariel.png",
+		 "info_link": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en",
+		 "category_name": "Current - offical",
+		 "order": 3
       },
 	  {
          "name": "Naor Matania",
@@ -31,7 +42,7 @@
 		 "image_link": "img/lab/naor.png",
 		 "info_link": "https://github.com/naormatania",
 		 "category_name": "Alumni - unoffical",
-		 "order": 3
+		 "order": 4
       },
 	  {
          "name": "Liron Simon-Keren",
@@ -42,29 +53,7 @@
 		 "image_link": "img/lab/liron.png",
 		 "info_link": "https://scholar.google.com/citations?user=kFAf3CgAAAAJ",
 		 "category_name": "Alumni - unoffical",
-		 "order": 4
-      },
-	  {
-         "name": "Yonatan Herskowitz",
-         "title": "MS. Student",
-         "description": "Yonatan was a MS Student in Ariel University, Mathematical department, under the supervision of <a href='https://scholar.google.com/citations?user=WQIwBuUAAAAJ' alt='Prof. Svetlana Bunimovich-Mendrazitsky  website'>Prof. Svetlana Bunimovich-Mendrazitsky </a> and mine. Yonatan's research focused on pandemic spread modeling for coffee tree and its control using biological agents. ",
-         "s_date": "1/03/2022",
-		 "e_date": "1/03/2023",
-		 "image_link": "img/lab/user.png",
-		 "info_link": "https://www.sciencedirect.com/science/article/pii/S0303264723000916",
-		 "category_name": "Alumni - offical",
-		 "order": 6
-      },
-	  {
-         "name": "Liel Mushiev",
-         "title": "Research assistance",
-         "description": "Liel participent in a study that proposed a novel scientometrics metric using big data analysis of researcher with a focus on the mathematical domain.",
-         "s_date": "1/07/2023",
-		 "e_date": "1/10/2023",
-		 "image_link": "img/lab/userf.png",
-		 "info_link": "https://www.linkedin.com/in/liel-mushiev/?originalSubdomain=il",
-		 "category_name": "Alumni - unoffical",
-		 "order": 7
+		 "order": 5
       },
 	  {
          "name": "Tzach Fleischer",
@@ -75,7 +64,29 @@
 		 "image_link": "img/lab/tzach.png",
 		 "info_link": "https://www.linkedin.com/in/tzach-fleischer-software-developer?trk=public_profile_browsemap&originalSubdomain=il",
 		 "category_name": "Alumni - unoffical",
-		 "order": 5
+		 "order": 6
+      },
+	  {
+         "name": "Yonatan Herskowitz",
+         "title": "MS. Student",
+         "description": "Yonatan was a MS Student in Ariel University, Mathematical department, under the supervision of <a href='https://scholar.google.com/citations?user=WQIwBuUAAAAJ' alt='Prof. Svetlana Bunimovich-Mendrazitsky  website'>Prof. Svetlana Bunimovich-Mendrazitsky </a> and mine. Yonatan's research focused on pandemic spread modeling for coffee tree and its control using biological agents. ",
+         "s_date": "1/03/2022",
+		 "e_date": "1/03/2023",
+		 "image_link": "img/lab/user.png",
+		 "info_link": "https://www.sciencedirect.com/science/article/pii/S0303264723000916",
+		 "category_name": "Alumni - offical",
+		 "order": 7
+      },
+	  {
+         "name": "Liel Mushiev",
+         "title": "Research assistance",
+         "description": "Liel participent in a study that proposed a novel scientometrics metric using big data analysis of researcher with a focus on the mathematical domain.",
+         "s_date": "1/07/2023",
+		 "e_date": "1/10/2023",
+		 "image_link": "img/lab/userf.png",
+		 "info_link": "https://www.linkedin.com/in/liel-mushiev/?originalSubdomain=il",
+		 "category_name": "Alumni - unoffical",
+		 "order": 8
       }
 	]
 }

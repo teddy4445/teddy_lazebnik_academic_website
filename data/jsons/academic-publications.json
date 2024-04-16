@@ -1,6 +1,18 @@
 {
    "publications":[ 
 	{
+         "name":"More Numerically Accurate Algorithm for Stiff Matrix Exponential",
+         "description":"In this paper, we propose a novel, highly accurate numerical algorithm for matrix exponentials (MEs). The algorithm is based on approximating Putzer’s algorithm by analytically solving the ordinary differential equation (ODE)-based coefficients and approximating them. We show that the algorithm outperforms other ME algorithms for stiff matrices for several matrix sizes while keeping the computation and memory consumption asymptotically similar to these algorithms. In addition, we propose a numerical-error- and complexity-optimized decision tree model for efficient ME computation based on machine learning and genetic programming methods. We show that, while there is not one ME algorithm that outperforms the others, one can find a good algorithm for any given matrix according to its properties.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., More Numerically Accurate Algorithm for Stiff Matrix Exponential. Mathematics. 2024."}],
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky",
+         "year": 2024,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Mathematics",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Cost-optimal Seeding Strategy During a Botanical Pandemic in Domesticated Fields",
          "description":"Botanical pandemics cause enormous economic damage and food shortages around the globe. However, since botanical pandemics are here to stay in the short-medium term, domesticated field owners can strategically seed their fields to optimize each session’s economic profit. In this work, we propose a novel epidemiological-economic mathematical model that describes the economic profit from a field of plants during a botanical pandemic. We describe the epidemiological dynamics using a spatiotemporal extended susceptible-infected-recovered epidemiological model with a non-linear output economic model. We provide an algorithm to obtain an optimal grid-formed seeding strategy to maximize economic profit, given field and pathogen properties. We show that the recovery and basic infection rates have a similar economic influence. Unintuitively, we show that a larger farm does not promise higher economic profit. Our results demonstrate a significant benefit of using the proposed seeding strategy and shed more light on the dynamics of the botanical pandemic.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/eco_pandemic_in_the_field.pdf"},
