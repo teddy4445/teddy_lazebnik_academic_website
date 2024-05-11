@@ -1,6 +1,18 @@
 {
    "publications":[ 
 	{
+         "name":"Going a Step Deeper Down the Rabbit Hole: Deep Learning Model to Measure the Size of the Unregistered Economy",
+         "description":"Accurately estimating the size of unregistered economies is crucial for informed policymaking and economic analysis. However, many studies seem to overfit partial data as these use simple linear regression models. Recent studies adopted a more advanced approach, using non-linear models obtained using machine learning techniques. In this study, we take a step forward on the road of data-driven models for the unregistered economy activity’s (UEA) size prediction using a novel deep-learning approach. The proposed two-phase deep learning model combines an AutoEncoder for feature representation and a Long Short-Term Memory (LSTM) for time-series prediction. We show it outperforms traditional linear regression models and current state-of-the-art machine learning-based models, offering a more accurate and reliable estimation. Moreover, we show that the proposed model is better in generalizing UEA’s dynamics across countries and timeframes, providing policymakers with a more profound group to design socio-economic policies to tackle UEA.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/black_economy_dl.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Going a Step Deeper Down the Rabbit Hole: Deep Learning Model to Measure the Size of the Unregistered Economy. Computational Economics. 2024."}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2024,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Computational Economics",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"More Numerically Accurate Algorithm for Stiff Matrix Exponential",
          "description":"In this paper, we propose a novel, highly accurate numerical algorithm for matrix exponentials (MEs). The algorithm is based on approximating Putzer’s algorithm by analytically solving the ordinary differential equation (ODE)-based coefficients and approximating them. We show that the algorithm outperforms other ME algorithms for stiff matrices for several matrix sizes while keeping the computation and memory consumption asymptotically similar to these algorithms. In addition, we propose a numerical-error- and complexity-optimized decision tree model for efficient ME computation based on machine learning and genetic programming methods. We show that, while there is not one ME algorithm that outperforms the others, one can find a good algorithm for any given matrix according to its properties.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/matrix.pdf"},
