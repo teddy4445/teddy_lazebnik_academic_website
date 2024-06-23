@@ -305,6 +305,15 @@
 		 "month": 3,
 		 "day": 3,
 		 "order": 34
+      },
+      {
+         "title":"My Five Tips for PhD Students That I Wished I Knew When I Started",
+         "description":"Discover five essential tips for navigating your PhD journey smoothly! In this blog post, I share my five top tips for new PhD students and share my personal experiences of how and when I learned these lessons.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "36"}],
+		 "year": 2024,
+		 "month": 6,
+		 "day": 23,
+		 "order": 35
       }
 	]
 }
