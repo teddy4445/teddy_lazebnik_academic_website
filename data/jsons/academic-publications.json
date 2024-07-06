@@ -1,6 +1,66 @@
 {
    "publications":[ 
 	{
+         "name":"Large Language Models (LLMs), exemplified by ChatGPT, have significantly reshaped text generation, particularly in the realm of writing assistance. While ethical considerations underscore the importance of transparently acknowledging LLM use, especially in scientific communication, genuine acknowledgment remains infrequent. A potential avenue to encourage accurate acknowledging of LLM-assisted writing involves employing automated detectors. Our evaluation of four cutting-edge LLM-generated text detectors reveals their suboptimal performance compared to a simple ad-hoc detector designed to identify abrupt writing style changes around the time of LLM proliferation. We contend that the development of specialized detectors exclusively dedicated to LLM-assisted writing detection is necessary. Such detectors could play a crucial role in fostering more authentic recognition of LLM involvement in scientific communication, addressing the current challenges in acknowledgment practices.",
+         "description":"Background: Lung cancer is a global leading cause of cancer-related deaths, and metastasis profoundly influences treatment outcomes. The limitations of conventional imaging in detecting small metastases highlight the crucial need for advanced diagnostic approaches. Methods: This study developed a bioclinical model using three-dimensional CT scans to predict the spatial spread of lung cancer metastasis. Utilizing a three-layer biological model, we identified regions with a high probability of metastasis colonization and validated the model on real-world data from 10 patients. Findings: The validated bioclinical model demonstrated a promising 74% accuracy in predicting metastasis locations, showcasing the potential of integrating biophysical and machine learning models. These findings underscore the significance of a more comprehensive approach to lung cancer diagnosis and treatment. Interpretation: This study's integration of biophysical and machine learning models contributes to advancing lung cancer diagnosis and treatment, providing nuanced insights for informed decision-making.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/llm_1.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Rosenfeld, A., Detecting LLM-assisted writing in scientific communication: Are we there yet?. Journal of Data and Information Science. 2024."}],
+		 "authors": "Teddy Lazebnik, Ariel Rosenfeld",
+         "year": 2024,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Journal of Data and Information Science",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Predicting lung cancer's metastats' locations using bioclinical model",
+         "description":"Background: Lung cancer is a global leading cause of cancer-related deaths, and metastasis profoundly influences treatment outcomes. The limitations of conventional imaging in detecting small metastases highlight the crucial need for advanced diagnostic approaches. Methods: This study developed a bioclinical model using three-dimensional CT scans to predict the spatial spread of lung cancer metastasis. Utilizing a three-layer biological model, we identified regions with a high probability of metastasis colonization and validated the model on real-world data from 10 patients. Findings: The validated bioclinical model demonstrated a promising 74% accuracy in predicting metastasis locations, showcasing the potential of integrating biophysical and machine learning models. These findings underscore the significance of a more comprehensive approach to lung cancer diagnosis and treatment. Interpretation: This study's integration of biophysical and machine learning models contributes to advancing lung cancer diagnosis and treatment, providing nuanced insights for informed decision-making.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/lung_cancer_location.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Bunimovich-Mendrazitsky, S., Predicting lung cancer's metastats' locations using bioclinical model. Frontiers in Medicine. 2024."}],
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Mendrazitsky",
+         "year": 2024,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Frontiers in Medicine",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Symbolic regression as a feature engineering method for machine and deep learning regression tasks",
+         "description":"In the realm of machine and deep learning (DL) regression tasks, the role of effective feature engineering (FE) is pivotal in enhancing model performance. Traditional approaches of FE often rely on domain expertise to manually design features for machine learning (ML) models. In the context of DL models, the FE is embedded in the neural network's architecture, making it hard for interpretation. In this study, we propose to integrate symbolic regression (SR) as an FE process before a ML model to improve its performance. We show, through extensive experimentation on synthetic and 21 real-world datasets, that the incorporation of SR-derived features significantly enhances the predictive capabilities of both machine and DL regression models with 34%–86% root mean square error (RMSE) improvement in synthetic datasets and 4%–11.5% improvement in real-world datasets. In an additional realistic use case, we show the proposed method improves the ML performance in predicting superconducting critical temperatures based on Eliashberg theory by more than 20% in terms of RMSE. These results outline the potential of SR as an FE component in data-driven models, improving them in terms of performance and interpretability.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/autoencoder.pdf"},
+					  {"info": "cite", "type": 3, "link": "Shmuel, A., Glickman, O., Lazebnik, T., Symbolic regression as a feature engineering method for machine and deep learning regression tasks. Machine Learning: Science and Technology. 2024."}],
+		 "authors": "Assaf Shmuel, Oren Glickman, Teddy Lazebnik",
+         "year": 2024,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Machine Learning: Science and Technology",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Knowledge-integrated autoencoder model",
+         "description":"Data encoding is a common and central operation in most data analysis tasks. The performance of other models downstream in the computational process highly depends on the quality of data encoding. One of the most powerful ways to encode data is using the neural network AutoEncoder (AE) architecture. However, the developers of AE cannot easily influence the produced embedding space, as it is usually treated as a black box technique. This means the embedding space is uncontrollable and does not necessarily possess the properties desired for downstream tasks. This paper introduces a novel approach for developing AE models that can integrate external knowledge sources into the learning process, possibly leading to more accurate results. The proposed Knowledge-integrated AutoEncoder (KiAE) model can leverage domain-specific information to make sure the desired distance and neighborhood properties between samples are preservative in the embedding space. The proposed model is evaluated on three large-scale datasets from three scientific fields and is compared to nine existing encoding models. The results demonstrate that the KiAE model effectively captures the underlying structures and relationships between the input data and external knowledge, meaning it generates a more useful representation. This leads to outperforming the rest of the models in terms of reconstruction accuracy.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/autoencoder.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Simon-Keren, L. Knowledge-integrated autoencoder model. Expert Systems with Applications. 2024."}],
+		 "authors": "Teddy Lazebnik, Liron Simon-Keren",
+         "year": 2024,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Expert Systems with Applications",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"The scientometrics and reciprocality underlying co-authorship panels in Google Scholar profiles",
+         "description":"Online academic profiles are used by scholars to reflect a desired image to their online audience. In Google Scholar, scholars can select a subset of co-authors for presentation in a central location on their profile using a social feature called the “co-authroship panel”. In this work, we examine whether scientometrics and reciprocality can explain the observed selections. To this end, we scrape and thoroughly analyze a novel set of 120,000 Google Scholar profiles, ranging across four dieffectsciplines and various academic institutions. Our results seem to suggest that scholars tend to favor co-authors with higher scientometrics over others for inclusion in their co-authorship panels. Interestingly, as one’s own scientometrics are higher, the tendency to include co-authors with high scientometrics is diminishing. Furthermore, we find that reciprocality is central in explaining scholars’ selections.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/coauthors_panel.pdf"},
+					  {"info": "cite", "type": 3, "link": "Alexi, A., Lazebnik, T., Rosenfeld, A. The scientometrics and reciprocality underlying co-authorship panels in Google Scholar profiles. Scientometrics. 2024."}],
+		 "authors": "Ariel Alexi, Teddy Lazebnik, Ariel Rosenfeld",
+         "year": 2024,
+         "topic":"Social",
+         "type":"Paper",
+         "publisher":"Scientometrics ",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Going a Step Deeper Down the Rabbit Hole: Deep Learning Model to Measure the Size of the Unregistered Economy",
          "description":"Accurately estimating the size of unregistered economies is crucial for informed policymaking and economic analysis. However, many studies seem to overfit partial data as these use simple linear regression models. Recent studies adopted a more advanced approach, using non-linear models obtained using machine learning techniques. In this study, we take a step forward on the road of data-driven models for the unregistered economy activity’s (UEA) size prediction using a novel deep-learning approach. The proposed two-phase deep learning model combines an AutoEncoder for feature representation and a Long Short-Term Memory (LSTM) for time-series prediction. We show it outperforms traditional linear regression models and current state-of-the-art machine learning-based models, offering a more accurate and reliable estimation. Moreover, we show that the proposed model is better in generalizing UEA’s dynamics across countries and timeframes, providing policymakers with a more profound group to design socio-economic policies to tackle UEA.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/black_economy_dl.pdf"},

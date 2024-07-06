@@ -1,5 +1,5 @@
 {
-   "biography":"I am Applied Mathematics and Computer Science researcher with experience in leading R&D teams in the life sciences and financial domains. I have a decade years of experience in software development, including seven years of experience leading development teams of up to fourteen professionals. A proven record in system architecture, production-ready algorithms, and working with clients. I specialized in bio-physical simulations, big data analysis, and data analysis for information systems. My research focuses on the usage of cutting-edge mathematics and computer science in the life sciences and socio-economic domains, including AI-driven personalized treatment protocols, drug discovery, eXplainable AI, socio-economic systems modeling and simulation, and optimal policy detection from financial data.",
+   "biography":"I am a researcher in Applied Mathematics and Computer Science with extensive experience leading R&D teams in both the life sciences and financial domains. Over the past decade, I have honed my software development skills, including seven years of experience managing development teams of up to fourteen professionals. I have a proven track record in system architecture, developing production-ready algorithms, and collaborating with clients. My expertise includes bio-physical simulations, big data analysis, and data analysis for information systems. My research is focused on applying advanced mathematics and computer science to the life sciences and socio-economic domains, covering areas such as AI-driven personalized treatment protocols, drug discovery, eXplainable AI, socio-economic systems modeling and simulation, and optimal policy detection from financial data.",
    "researchInterests":[
 		"Biomathematical Modeling - bioclinical personalized ML-based treatments, ODE/PDE-based biological models, and infectious diseases dynamics.",
 		"Computer Simulation - multi agent simulations with decision making for complex dynamics",
@@ -7,6 +7,30 @@
 		"Using Math For Others - solving real-world research questions in many fields using mathematics and computer science."
    ],
    "featuredPublications":[
+	{
+         "name":"Large Language Models (LLMs), exemplified by ChatGPT, have significantly reshaped text generation, particularly in the realm of writing assistance. While ethical considerations underscore the importance of transparently acknowledging LLM use, especially in scientific communication, genuine acknowledgment remains infrequent. A potential avenue to encourage accurate acknowledging of LLM-assisted writing involves employing automated detectors. Our evaluation of four cutting-edge LLM-generated text detectors reveals their suboptimal performance compared to a simple ad-hoc detector designed to identify abrupt writing style changes around the time of LLM proliferation. We contend that the development of specialized detectors exclusively dedicated to LLM-assisted writing detection is necessary. Such detectors could play a crucial role in fostering more authentic recognition of LLM involvement in scientific communication, addressing the current challenges in acknowledgment practices.",
+         "description":"Background: Lung cancer is a global leading cause of cancer-related deaths, and metastasis profoundly influences treatment outcomes. The limitations of conventional imaging in detecting small metastases highlight the crucial need for advanced diagnostic approaches. Methods: This study developed a bioclinical model using three-dimensional CT scans to predict the spatial spread of lung cancer metastasis. Utilizing a three-layer biological model, we identified regions with a high probability of metastasis colonization and validated the model on real-world data from 10 patients. Findings: The validated bioclinical model demonstrated a promising 74% accuracy in predicting metastasis locations, showcasing the potential of integrating biophysical and machine learning models. These findings underscore the significance of a more comprehensive approach to lung cancer diagnosis and treatment. Interpretation: This study's integration of biophysical and machine learning models contributes to advancing lung cancer diagnosis and treatment, providing nuanced insights for informed decision-making.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/llm_1.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Rosenfeld, A., Detecting LLM-assisted writing in scientific communication: Are we there yet?. Journal of Data and Information Science. 2024."}],
+		 "authors": "Teddy Lazebnik, Ariel Rosenfeld",
+         "year": 2024,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Journal of Data and Information Science",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Knowledge-integrated autoencoder model",
+         "description":"Data encoding is a common and central operation in most data analysis tasks. The performance of other models downstream in the computational process highly depends on the quality of data encoding. One of the most powerful ways to encode data is using the neural network AutoEncoder (AE) architecture. However, the developers of AE cannot easily influence the produced embedding space, as it is usually treated as a black box technique. This means the embedding space is uncontrollable and does not necessarily possess the properties desired for downstream tasks. This paper introduces a novel approach for developing AE models that can integrate external knowledge sources into the learning process, possibly leading to more accurate results. The proposed Knowledge-integrated AutoEncoder (KiAE) model can leverage domain-specific information to make sure the desired distance and neighborhood properties between samples are preservative in the embedding space. The proposed model is evaluated on three large-scale datasets from three scientific fields and is compared to nine existing encoding models. The results demonstrate that the KiAE model effectively captures the underlying structures and relationships between the input data and external knowledge, meaning it generates a more useful representation. This leads to outperforming the rest of the models in terms of reconstruction accuracy.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/autoencoder.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Simon-Keren, L. Knowledge-integrated autoencoder model. Expert Systems with Applications. 2024."}],
+		 "authors": "Teddy Lazebnik, Liron Simon-Keren",
+         "year": 2024,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Expert Systems with Applications",
+         "publicationStatus":"Published"
+      },
 	{
          "name":"A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge",
          "description":"Discovering a meaningful symbolic expression that explains experimental data is a fundamental challenge in many scientific fields. We present a novel, open-source computational framework called Scientist-Machine Equation Detector (SciMED), which integrates scientific discipline wisdom in a scientist-in-the-loop approach, with state-of-the-art symbolic regression (SR) methods. SciMED combines a wrapper selection method, that is based on a genetic algorithm, with automatic machine learning and two levels of SR methods. We test SciMED on five configurations of a settling sphere, with and without aerodynamic non-linear drag force, and with excessive noise in the measurements. We show that SciMED is sufficiently robust to discover the correct physically meaningful symbolic expressions from the data, and demonstrate how the integration of domain knowledge enhances its performance. Our results indicate better performance on these tasks than the state-of-the-art SR software packages , even in cases where no knowledge is integrated. Moreover, we demonstrate how SciMED can alert the user about possible missing features, unlike the majority of current SR systems.",
@@ -19,48 +43,30 @@
          "publisher":"Scientific Reports",
          "publicationStatus":"Published"
       },
-	{
-         "name":"Multi-species prey–predator dynamics during a multi-strain pandemic ",
-         "description":"Small and large scale pandemics are a natural phenomenon repeatably appearing throughout history, causing ecological and biological shifts in ecosystems and a wide range of their habitats. These pandemics usually start with a single strain but shortly become multi-strain due to a mutation process of the pathogen causing the epidemic. In this study, we propose a novel eco-epidemiological model that captures multi-species prey–predator dynamics with a multi-strain pandemic. The proposed model extends and combines the Lotka–Volterra prey–predator model and the Susceptible–Infectious–Recovered epidemiological model. We investigate the ecosystem’s sensitivity and stability during such a multi-strain pandemic through extensive simulation relying on both synthetic cases as well as two real-world configurations. Our results are aligned with known ecological and epidemiological findings, thus supporting the adequacy of the proposed model in realistically capturing the complex eco-epidemiological properties of the multi-species multi-strain pandemic dynamics.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/msms.pdf"},
-					  {"info": "cite", "type": 3, "link": "Alexi, A., Rosenfeld, A., Lazebnik, T. Multi-species prey–predator dynamics during a multi-strain pandemic. Chaos. 2023."}],
-		 "authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
-         "year": 2023,
-         "topic":"Biomathematics",
-         "type":"Paper",
-         "publisher":"Chaos",
-         "publicationStatus":"Published"
-      },
-		{
-         "name":"Academic co-authorship is a risky game",
-         "description":"Trust has proven to be a predictor of organizational outcomes. In some cases, such as law enforcement, achieving organizational goals requires workers to be willing to risk their lives. Is there a link between street-level bureaucrats’ (SLBs) willingness to endanger their own lives for the public and their trust in their peers, managers, and the institution to which they belong? Using a national survey of 2,733 police officers in Brazil and machine-learning-based methods, we found that there is a significant link between their willingness to risk their lives for others and their trust in their peers, managers, and the institution to which they belong. Our findings indicate that while these SLBs were very willing to risk their lives for certain groups, their willingness declined sharply for others such as lesbian, gay, bisexual, transgender, and questioning (LGBTQ)+ people and the homeless. In addition, police officers’ perceptions about discrimination, police professionalism, and organizational commitment and support are linearly linked to their willingness to risk their lives. Our findings demonstrate the important role of trust in understanding public servants’ practices in the extreme context of risking their lives for others.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/risky_game.pdf"},
-					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Beck, S., Shami, L. Academic co-authorship is a risky game. Scientometrics. 2023."}],
-		 "authors": "Teddy Lazebnik, Stephan Beck, Labib Shami",
-         "year": 2023,
-         "topic":"Social",
-         "type":"Paper",
-         "publisher":"Scientometrics",
-         "publicationStatus":"Published"
-		}
    ],
    "currentProjects":[
       {
-         "name":"Studying Science Through Biological Lenses: A Biologically-Informed Approach to Understanding the Science of Science",
-         "topic": "Sociometric",
-         "description":"In this line of work, we suggest a major paradigm shift through which, instead of tailoring specific quantitative means to specific research questions, we intend to develop and investigate a biologically informed framework that is well-grounded in theoretical constructs and empirical data.  Our proposal builds on a core assumption that there are inherent similarities between biology and the scientific domain which can leveraged for the study of science through biological lenses (i.e., biological constructs, models, and techniques).",
-         "link":{"info": "View project", "type": 2, "link": "", "example":""}
-      },
-      {
-         "name":"AI for Animals",
-         "topic": "AI",
-         "description":"In this line of work, we investigating a wide range of data science and AI methods to develop applicative solutions for animal (dogs, cats, cows, etc.) healthcare and well-being. ",
-         "link":{"info": "View project", "type": 2, "link": "", "example":""}
-      },
-      {
-         "name":"Mathematical and Computational Models for Personalized Medice",
+         "name":"Understanding pandemic spread and optimizing resource allocation to control it",
          "topic": "Biomathematics",
-         "description":"In this line of work, My Ph.D. students and I are developing mathematical models and AI solutions for more personalized treatment protocols in both the individual and population levels.",
+         "description":"This line of projects focuses on developing mathematical models and simulations to predict the spread of infectious diseases - mainly using extended spatio-temporal SIR models with agent-based simulation and decision making using RL. By leveraging these models, we aim to create efficient strategies for resource allocation, ensuring optimal control and mitigation of pandemics.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      },
+      {
+         "name":"Individual and community personalized medicine using AI",
+         "topic": "AI",
+         "description":"This initiative aims to harness the power of artificial intelligence (AI) to tailor medical treatments to individual patients and improve medical resource allocation for specific communities. By analyzing vast amounts of medical data, from our clinical partners, we strive to develop personalized treatment protocols that improve health outcomes and enhance the efficacy of medical interventions.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      },
+      {
+         "name":"A biologically-informed and data-driven approach to scientometrics",
+         "topic": "Sociometric",
+         "description":"This research line leverages biological principles and advanced data analytics to evaluate and understand scientific research impact and trends. By integrating these approaches, we aim to develop more accurate and insightful metrics for assessing scientific contributions and guiding future research directions.",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      },
+      {
+         "name":"Understanding animals' behavior and improving their wellness using AI",
+         "topic": "AI",
+         "description":"By analyzing behavioral and sensorial data, we seek to gain deeper insights into animal health and habits, enabling the development of advanced strategies for monitoring, diagnosing, and improving their overall wellness. This approach supports more effective and compassionate care practices for animals. For this line of work, we closely work with the Tech4animal lab from University of Haifa.",
          "link":{"info": "View project", "type": 2, "link": "", "example":""}
       }
    ]

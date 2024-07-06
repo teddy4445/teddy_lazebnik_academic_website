@@ -4,7 +4,31 @@
 
 	],
 	"projects": [{
-			"name": "Studying Science Through Biological Lenses: A Biologically-Informed Approach to Understanding the Science of Science",
+			"name": "Understanding pandemic spread and optimizing resource allocation to control it",
+			"participants": [{
+				"name": "Adi Shuchami",
+				"title": "Mc.S.",
+				"role": "Ph.D. student",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?hl=en&user=vbN5b1EAAAAJ",
+				"linkedinLink": "https://www.linkedin.com/in/adi-shuchami-1a93aa7a/?originalSubdomain=il"
+			},{
+					"name": "Ariel Alexi",
+					"title": "Mc.S.",
+					"role": "Lead researcher",
+					"websiteLink": "",
+					"googleLink": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en",
+					"linkedinLink": "https://www.linkedin.com/in/ariel-alexi/"
+				}],
+			"description": "This line of projects focuses on developing mathematical models and simulations to predict the spread of infectious diseases - mainly using extended spatio-temporal SIR models with agent-based simulation and decision making using RL. By leveraging these models, we aim to create efficient strategies for resource allocation, ensuring optimal control and mitigation of pandemics.",
+			"start_month": 3,
+			"start_year": 2024,
+			"end_month": 7,
+			"end_year": 2025,
+			"team_members": 3,
+			"relevant_resources": []
+		},{
+			"name": "A biologically-informed and data-driven approach to scientometrics",
 			"participants": [{
 				"name": "Ariel Rosenfeld",
 				"title": "Ph.D.",
@@ -13,15 +37,15 @@
 				"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
 				"linkedinLink": ""
 			}],
-			"description": "In this line of work, we suggest a major paradigm shift through which, instead of tailoring specific quantitative means to specific research questions, we intend to develop and investigate a biologically informed framework that is well-grounded in theoretical constructs and empirical data.  Our proposal builds on a core assumption that there are inherent similarities between biology and the scientific domain which can leveraged for the study of science through biological lenses (i.e., biological constructs, models, and techniques). ",
+			"description": "This research line leverages biological principles and advanced data analytics to evaluate and understand scientific research impact and trends. By integrating these approaches, we aim to develop more accurate and insightful metrics for assessing scientific contributions and guiding future research directions.",
 			"start_month": 11,
 			"start_year": 2023,
-			"end_month": 1,
+			"end_month": 3,
 			"end_year": 2025,
 			"team_members": 2,
 			"relevant_resources": []
 		},{
-			"name": "AI for Animals",
+			"name": "Understanding animals' behavior and improving their wellness using AI",
 			"participants": [{
 				"name": "Anna Zamansky",
 				"title": "Ph.D.",
@@ -30,20 +54,20 @@
 				"googleLink": "https://scholar.google.com/citations?user=zOwPqJoAAAAJ&hl=en",
 				"linkedinLink": ""
 			}],
-			"description": "In this line of work, we investigating a wide range of data science and AI methods to develop applicative solutions for animal (dogs, cats, cows, etc.) healthcare and well-being. ",
+			"description": "By analyzing behavioral and sensorial data, we seek to gain deeper insights into animal health and habits, enabling the development of advanced strategies for monitoring, diagnosing, and improving their overall wellness. This approach supports more effective and compassionate care practices for animals. For this line of work, we closely work with the Tech4animal lab from University of Haifa.",
 			"start_month": 6,
 			"start_year": 2023,
-			"end_month": 1,
+			"end_month": 9,
 			"end_year": 2025,
 			"team_members": 2,
 			"relevant_resources": []
 		},{
-			"name": "Mathematical and Computational Models for Personalized Medice",
+			"name": "Individual and community personalized medicine using AI",
 			"participants": [],
-			"description": "In this line of work, My Ph.D. students and I are developing mathematical models and AI solutions for more personalized treatment protocols in both the individual and population levels.",
+			"description": "This initiative aims to harness the power of artificial intelligence (AI) to tailor medical treatments to individual patients and improve medical resource allocation for specific communities. By analyzing vast amounts of medical data, from our clinical partners, we strive to develop personalized treatment protocols that improve health outcomes and enhance the efficacy of medical interventions.",
 			"start_month": 10,
 			"start_year": 2023,
-			"end_month": 1,
+			"end_month": 9,
 			"end_year": 2025,
 			"team_members": 1,
 			"relevant_resources": []
@@ -67,8 +91,8 @@
 			"description": "In this line of work, which is the (third) Ph.D. of Dr. Assaf Shmual, we are investigating the usage of symbolic regression as a tool with machine learning and deep learning tools in solving real-wolrd problems.",
 			"start_month": 7,
 			"start_year": 2023,
-			"end_month": 6,
-			"end_year": 2026,
+			"end_month": 3,
+			"end_year": 2025,
 			"team_members": 3,
 			"relevant_resources": []
 		},{
