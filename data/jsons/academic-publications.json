@@ -1,13 +1,25 @@
 {
    "publications":[ 
 	{
+         "name":"Exploration-Exploitation Model of Moth-Inspired Olfactory Navigation",
+         "description":"Navigation of male moths toward females during the mating search offers a unique perspective on the exploration-exploitation (EE) model in decision-making. This study uses the EE model to explain male moth pheromone-driven flight paths. Wind tunnel measurements and 3D tracking using infrared cameras have been leveraged to gain insights into male moth behavior. During the experiments in the wind tunnel, disturbance to the airflow has been added and the effect of increased fluctuations on moth flights has been analyzed, in the context of the proposed EE model. The exploration and exploitation phases are separated using a genetic algorithm to the experimentally-obtained dataset of moth 3D trajectories. First, the exploration-to-exploitation rate (EER) increases with distance from the source of the female pheromone is demonstrated, which can be explained in the context of the EE model. Furthermore, our findings reveal a compelling relationship between EER and increased flow fluctuations near the pheromone source. Using an olfactory navigation simulation and our moth-inspired navigation model, the phenomenon where male moths exhibit an enhanced EER as turbulence levels increase is explained. This research extends our understanding of optimal navigation strategies based on general biological EE models and supports the development of bio-inspired navigation algorithms.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/mooth.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Golov, Y., Gurka, R., Harari, A., Liberzon, A., Exploration-Exploitation Model of Moth-Inspired Olfactory Navigation. Royal Society Interface. 2024."}],
+		 "authors": "Teddy Lazebnik, Yiftach Golov, Roi Gurka, Ally Harari, Alex Liberzon$",
+         "year": 2024,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Royal Society Interface",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Detecting LLM-assisted writing in scientific communication: Are we there yet?",
          "description":"Large Language Models (LLMs), exemplified by ChatGPT, have significantly reshaped text generation, particularly in the realm of writing assistance. While ethical considerations underscore the importance of transparently acknowledging LLM use, especially in scientific communication, genuine acknowledgment remains infrequent. A potential avenue to encourage accurate acknowledging of LLM-assisted writing involves employing automated detectors. Our evaluation of four cutting-edge LLM-generated text detectors reveals their suboptimal performance compared to a simple ad-hoc detector designed to identify abrupt writing style changes around the time of LLM proliferation. We contend that the development of specialized detectors exclusively dedicated to LLM-assisted writing detection is necessary. Such detectors could play a crucial role in fostering more authentic recognition of LLM involvement in scientific communication, addressing the current challenges in acknowledgment practices.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/llm_1.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Rosenfeld, A., Detecting LLM-assisted writing in scientific communication: Are we there yet?. Journal of Data and Information Science. 2024."}],
 		 "authors": "Teddy Lazebnik, Ariel Rosenfeld",
          "year": 2024,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Journal of Data and Information Science",
          "publicationStatus":"Published"
@@ -31,7 +43,7 @@
 					  {"info": "cite", "type": 3, "link": "Shmuel, A., Glickman, O., Lazebnik, T., Symbolic regression as a feature engineering method for machine and deep learning regression tasks. Machine Learning: Science and Technology. 2024."}],
 		 "authors": "Assaf Shmuel, Oren Glickman, Teddy Lazebnik",
          "year": 2024,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Machine Learning: Science and Technology",
          "publicationStatus":"Published"
@@ -43,7 +55,7 @@
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Simon-Keren, L. Knowledge-integrated autoencoder model. Expert Systems with Applications. 2024."}],
 		 "authors": "Teddy Lazebnik, Liron Simon-Keren",
          "year": 2024,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Expert Systems with Applications",
          "publicationStatus":"Published"
@@ -57,7 +69,7 @@
          "year": 2024,
          "topic":"Social",
          "type":"Paper",
-         "publisher":"Scientometrics ",
+         "publisher":"Scientometrics",
          "publicationStatus":"Published"
       },
 	{
@@ -67,7 +79,7 @@
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Going a Step Deeper Down the Rabbit Hole: Deep Learning Model to Measure the Size of the Unregistered Economy. Computational Economics. 2024."}],
 		 "authors": "Teddy Lazebnik",
          "year": 2024,
-         "topic":"Machine Learning",
+         "topic":"Economic",
          "type":"Paper",
          "publisher":"Computational Economics",
          "publicationStatus":"Published"
@@ -139,7 +151,7 @@
 					  {"info": "cite", "type": 3, "link": "Simon-Keren, L., Lazebnik, T., Liberzon, A., Improved prediction of settling behavior of solid particles through machine learning analysis of experimental retention time data. International Journal of Multiphase Flow. 2024."}],
 		 "authors": "Liron Simon-Keren, Teddy Lazebnik, Alex Liberzon",
          "year": 2024,
-         "topic":"Physics",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"International Journal of Multiphase Flow",
          "publicationStatus":"Published"
