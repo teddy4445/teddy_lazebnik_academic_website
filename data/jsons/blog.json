@@ -314,6 +314,15 @@
 		 "month": 6,
 		 "day": 23,
 		 "order": 35
+      },
+      {
+         "title":"Find Your Perfect PhD Research Topic In 4 Not-Very-Easy Steps",
+         "description":"Stuck choosing a PhD topic? Feeling lost in a sea of possibilities? This blog post ignites your passion and equips you with a 4-step guide to find the perfect research question that fuels your PhD journey and leads to groundbreaking results.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "38"}],
+		 "year": 2024,
+		 "month": 7,
+		 "day": 16,
+		 "order": 36
       }
 	]
 }

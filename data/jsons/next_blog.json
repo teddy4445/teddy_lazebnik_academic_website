@@ -1,5 +1,34 @@
 {
-   "36":[
+   "38":[
+      {
+         "title":"Find Your Perfect PhD Research Topic In 4 Not-Very-Easy Steps",
+		 "date": "16/7/2023",
+		 "reading_time": "5",
+		 "link_address": "36",
+         "description":"Discover five essential tips for navigating your PhD journey smoothly! In this blog post, I share my five top tips for new PhD students and share my personal experiences of how and when I learned these lessons."
+      },{
+         "title":"3 Things I learned about Conflicts in Academia",
+		 "date": "26/2/2023",
+		 "reading_time": "3",
+		 "link_address": "29",
+         "description":"In this blog-post, I present from a personal point of view an analysis of common sources of conflicts in academic settings and practical strategies for managing them effectively. Through personal experiences and reflections, I identify three main key lessons: the importance of communication, understanding power dynamics, and understand differences in objectives of the team members."
+      },
+      {
+         "title":"5 AI Tools That Makes The Academics Life Easier",
+		 "date": "1/1/2024",
+		 "reading_time": "4",
+		 "link_address": "33",
+         "description":"It is not a secret Artificial Intelligence (AI) revolutioning the wolrd for some time now. However, the release of chatGPT was a game changer, brining Large Language Models (LLMs) in a productize and free way to the masses. This amazing tool has been also adopted by academics, if they admit it or not.  In this context, using AI tools in academia is still debated for multiple moral, legal, and operational reasons.  Nonetheless, the end is clear - we will use AI as we use computers, the internet, and grammer correction models. This is a question of when the old academics will understand they can not hold the gate close much longer. Until this happens, in this blog post I quickly present five AI tools you should try out..."
+      },
+      {
+         "title":"The Revolution Has Begun: How Large Language Models are Set to Transform Academia",
+         "description":"In this blog post, we explore the transformative potential of Large Language Models (LLMs) in academia, shedding light on their impact across three key domains: writing assistance, literature navigation, and global collaboration. From alleviating writer's block to breaking down language barriers, LLMs are revolutionizing the scholarly landscape by enhancing productivity, facilitating knowledge dissemination, and fostering interdisciplinary collaboration. Join us on a journey into the future of academia, where the power of LLMs promises to reshape the way we think, write, and collaborate in the pursuit of knowledge.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "34"}],
+		 "date": "3/3/2024",
+		 "reading_time": "4",
+		 "link_address": "34",
+      },
+	],"36":[
       {
          "title":"3 Things I learned about Conflicts in Academia",
 		 "date": "26/2/2023",
