@@ -91,7 +91,24 @@ This blog post will review the evolution of music technology algorithms, beginni
 <p>
 	Music recommendation and personalization powered by AI relies on sophisticated machine learning models such as collaborative filtering, content-based filtering, and hybrid recommendation systems. Collaborative filtering techniques include user-based and item-based approaches, where similarities between users or music items are computed based on historical interaction data. Models like Matrix Factorization and Singular Value Decomposition (SVD) are commonly used in collaborative filtering to predict user preferences and recommend music based on similar user behaviors. Content-based filtering, on the other hand, utilizes attributes of songs such as genre, tempo, and acoustic features to recommend music that matches a user's preferences. Natural Language Processing (NLP) models may be employed to analyze song metadata and user-generated content for enhanced recommendations. Hybrid recommendation systems integrate both collaborative and content-based approaches, leveraging their respective strengths to provide more accurate and diverse music suggestions. These AI-driven systems continuously update user profiles using techniques like deep learning and reinforcement learning to adapt to evolving user preferences and contextual factors such as time of day and location, ensuring personalized and engaging music discovery experiences in digital music platforms.
 </p>
-
+<h3>What is going on today?</h3>
+<p>
+	What can be more intresting than the current state of the art? Nowadays, there is a tend to the "prompt to X" where users write a query in natural text and obtained some output X.
+	This is part of the GenAI (generative AI) revolution we expriance since OpenAI's ChatGPT released in 2022. 
+	AI music generation models function by leveraging machine learning algorithms, particularly deep learning techniques, to analyze vast amounts of music data and translate that knowledge into creating new musical pieces. 
+	First, data preparation and processing. The first step involves collecting a large and diverse dataset of music. This data can come from various sources like MIDI files, music recordings in different genres, or even sheet music.
+	The raw music data needs to be converted into a format understandable by the machine learning model. This can involve techniques like converting note sequences into numerical representations or using more complex methods to capture musical characteristics like pitch, rhythm, and timbre.
+	Second, a chosen model (sorry, not spesifics at this point) is trained on the prepared music data. During training, the model analyzes patterns, structures, and stylistic elements within the data. It essentially learns the relationships between musical elements and how they typically come together in different genres and styles.
+</p>
+<p>
+	Now, we can actually generate music! Once trained, the model can generate music through various prompts or starting points. This could be a simple melody, a specific genre, or even just a description of the desired mood.
+	The model uses its knowledge of musical patterns to predict the next element in a musical sequence. It considers the information provided in the prompt and the music it has already "seen" during training. Techniques like autoregressive models predict the next note based on previous ones, while sampling from learned probabilities allows for creating entirely new passages
+	The model iteratively predicts the next element in the sequence, building the music piece one step at a time. This can involve generating melodies, harmonies, rhythms, and even selecting appropriate instruments based on the learned styles.
+	In some cases, the generated music may be evaluated using metrics like coherence, musicality, and adherence to the prompt's style. Based on this evaluation, the model might be fine-tuned to improve the quality of future generations.
+</p>
+<p>
+	This is a simplified explanation, but it captures the essence of how AI music generation models work. By analyzing massive datasets and employing powerful machine learning algorithms, these models can learn the intricacies of music and create new and interesting musical pieces based on the information they have been trained on.
+</p>
 <h3>Conclusions</h3>
 <p>
 	In conclusion, the evolution of music technology, from the advent of MIDI and Digital Audio Workstations (DAWs) to the current era of AI-driven innovations, has profoundly reshaped the landscape of music creation, production, and consumption. MIDI and DAWs laid the groundwork for digital music production, democratizing access to professional tools and expanding creative possibilities. The integration of AI has further revolutionized the industry, enabling tasks such as composition, production, mixing, and personalized recommendation to be augmented or automated with unprecedented efficiency and creativity. AI's ability to analyze vast datasets, emulate artistic styles, and adapt to user preferences signifies a transformative shift towards personalized, adaptive music experiences.
