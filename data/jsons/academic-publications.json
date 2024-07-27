@@ -1,11 +1,23 @@
 {
    "publications":[ 
 	{
+         "name":"Machine learning computational model to predict lung cancer using electronic medical records",
+         "description":"Background: Lung cancer (LC) screening using low-dose computed tomography (CT) is recommended according to standard risk criteria or personalized risk calculators. Machine learning (ML) models that can predict disease risk are an emerging method in medicine for identifying hidden associations that are personally unique. Materials and methods: Using the tree-based pipeline optimization tool (TPOT), we developed an ML-based model, which is an ensemble of the Random Forest and XGboost models, based on known risk factors for LC, as part of a larger trial for ML prediction using electronic medical records and chest CT. We used data from patients with LC vs. controls (1:2) of patients aged ≥ 35 years. We developed a model for all LC patients as well as for patients with and without a smoking background. We included age, gender, body mass index (BMI), smoking history, socioeconomic status (SES), history of chronic obstructive pulmonary disease (COPD)/emphysema/chronic bronchitis (CB), interstitial lung disease (ILD)/pulmonary fibrosis (PF), and family history of LC. Results: Of the 4076 patients, 1428 (35 %) were in the LC group and 2648 (65 %) were in the control group. For the entire study population, our model achieved an accuracy of 71.2 %, with a sensitivity of 69 % and a positive predictive value (PPV) of 74 %. Higher accuracy was achieved for the two subgroups. An accuracy of 74.8 % (sensitivity 72 %, PPV 76 %) and 73.0 % (sensitivity 76 %, PPV 72 %) was achieved for the smoking and never-smoking cohorts, respectively. For the entire population and smoker cohort, COPD/emphysema/CB were the most important contributors, followed by BMI and age, while in the never-smoking cohort, BMI, age and SES were the most important contributors. Conclusion: Known risk factors for LC could be used in ML models to modestly predict LC. Further studies are needed to confirm these results in new patients and to improve them.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/lung_ml_1.pdf"},
+					  {"info": "cite", "type": 3, "link": "Levi, M., Lazebnik, T., Kushnir, S., Yosef, N., Shlomi, D., Machine learning computational model to predict lung cancer using electronic medical records. Cancer Epidemiology. 2024."}],
+		 "authors": "Matanel Levi, Teddy Lazebnik, Shiri Kushnir, Noga Yosef, Dekel Shlomi",
+         "year": 2024,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Cancer Epidemiology",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Exploration-Exploitation Model of Moth-Inspired Olfactory Navigation",
          "description":"Navigation of male moths toward females during the mating search offers a unique perspective on the exploration-exploitation (EE) model in decision-making. This study uses the EE model to explain male moth pheromone-driven flight paths. Wind tunnel measurements and 3D tracking using infrared cameras have been leveraged to gain insights into male moth behavior. During the experiments in the wind tunnel, disturbance to the airflow has been added and the effect of increased fluctuations on moth flights has been analyzed, in the context of the proposed EE model. The exploration and exploitation phases are separated using a genetic algorithm to the experimentally-obtained dataset of moth 3D trajectories. First, the exploration-to-exploitation rate (EER) increases with distance from the source of the female pheromone is demonstrated, which can be explained in the context of the EE model. Furthermore, our findings reveal a compelling relationship between EER and increased flow fluctuations near the pheromone source. Using an olfactory navigation simulation and our moth-inspired navigation model, the phenomenon where male moths exhibit an enhanced EER as turbulence levels increase is explained. This research extends our understanding of optimal navigation strategies based on general biological EE models and supports the development of bio-inspired navigation algorithms.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/mooth.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Golov, Y., Gurka, R., Harari, A., Liberzon, A., Exploration-Exploitation Model of Moth-Inspired Olfactory Navigation. Royal Society Interface. 2024."}],
-		 "authors": "Teddy Lazebnik, Yiftach Golov, Roi Gurka, Ally Harari, Alex Liberzon$",
+		 "authors": "Teddy Lazebnik, Yiftach Golov, Roi Gurka, Ally Harari, Alex Liberzon",
          "year": 2024,
          "topic":"Machine Learning",
          "type":"Paper",
