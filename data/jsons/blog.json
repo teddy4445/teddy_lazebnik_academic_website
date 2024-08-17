@@ -335,7 +335,7 @@
       },
       {
          "title":"Crafting RL solutions - from simple to hard, a beginners guide",
-         "description":"	This blog post offers a comprehensive guide to Reinforcement Learning (RL), bridging the gap between theoretical understanding and practical implementation.  We shortly discuss the foundational concepts of RL, providing a mathematical basis for the applicative (and cool) part. Subsequently, we explore core algorithms, practical considerations, and real-world applications.  By combining theoretical depth with practical insights, this guide empowers readers to build robust and effective RL agents.",
+         "description":"This blog post offers a comprehensive guide to Reinforcement Learning (RL), bridging the gap between theoretical understanding and practical implementation. We shortly discuss the foundational concepts of RL, providing a mathematical basis for the applicative part. Subsequently, we explore core algorithms, practical considerations, and real-world applications. By combining theoretical depth with practical insights, this guide empowers readers to build robust and effective RL agents.",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "39"}],
 		 "year": 2024,
 		 "month": 8,
