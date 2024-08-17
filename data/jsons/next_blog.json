@@ -1,4 +1,34 @@
 {
+   "39":[
+      {
+         "title":"The graphs every AI developer must know and their python implementation",
+		 "date": "15/3/2021",
+		 "reading_time": "7",
+		 "link_address": "15",
+         "description":"If you an AI / Machine Learning / Data Science and doing a project, you probabliy should print one or more of these graphs to really understand what is going on..."
+      },
+      {
+         "title":"A Step Towards Explainable AI - The Explainable Boosting Machine",
+		 "date": "8/6/2021",
+		 "reading_time": "2",
+		 "link_address": "19",
+         "description":"Machine learning models are concering new hilltops everyday now and sprading into more fields of life such as medicine, miletary, life-supporting systems and other which require individuals to put their faite in these models. How one can do so without understanding the model? Explainable Boosting Machine (EBM) is one step torwards a more interpretabe machine learning models..."
+      },
+      {
+         "title":"Fast Start Your ML Project Using Auto-ML Libraries in Python",
+		 "date": "13/5/2021",
+		 "reading_time": "3",
+		 "link_address": "18",
+         "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline..."
+      },
+      {
+         "title":"[Technical Post] Running Python as fast as C code",
+		 "date": "8/5/2021",
+		 "reading_time": "3",
+		 "link_address": "17",
+         "description":"A summery of an academic paper propoing a neural network-based algorithm for solving forward and inverse problems for partial differential equations (PDE) in unsupervised fashion with mash free and for arbitrary regular domain..."
+      }
+	],
    "35":[
       {
          "title":"A Step Towards Explainable AI - The Explainable Boosting Machine",
