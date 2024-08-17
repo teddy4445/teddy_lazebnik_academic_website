@@ -1,0 +1,616 @@
+<h1>
+From Theory to Practice: Crafting Robust RL Solutions
+</h1>
+<hr class="publications-hr">
+18/8/2024
+<hr class="publications-hr">
+<p>
+	This blog post offers a comprehensive guide to Reinforcement Learning (RL), bridging the gap between theoretical understanding and practical implementation. 
+	We shortly discuss the foundational concepts of RL, providing a mathematical basis for the applicative (and cool) part.
+	Subsequently, we explore core algorithms, practical considerations, and real-world applications. 
+	By combining theoretical depth with practical insights, this guide empowers readers to build robust and effective RL agents.
+</p>
+<p>
+	This blog post is stractured as follows. First, we begin by laying down the essential mathematical concepts that underpin RL. 
+	Building on this, we explore core RL algorithms, providing insights into their mechanics and applications. 
+	The heart of the post lies in practical considerations, where we address challenges such as reward engineering, feature engineering, and exploration-exploitation trade-offs.
+	To solidify your understanding, we show a gamified code snippets as a use-case.
+</p>
+<h3>Short Intro - RL</h3>
+<p>
+	RL is a subfield of artificial intelligence (AI) where an agent learns to make decisions by interacting with an environment.
+	Unlike supervised learning, where the agent is provided with correct outputs for given inputs, RL agents learn through trial and error, receiving rewards or penalties for their actions. 
+	This learning process allows the agent to gradually improve its decision-making capabilities.   
+	To understand RL better, let's break it down into its core components:
+</p>
+<ul>
+	<li><b>Agent:</b>  This is the decision-maker, the entity that learns to interact with the environment. It can be anything from a simple algorithm to a complex neural network.</li>
+	<li><b>Environment:</b> The world in which the agent operates. It presents states, takes actions, and provides feedback in the form of rewards. </li>
+	<li><b>State:</b> A representation of the environment at a particular point in time. It contains all the information the agent needs to make a decision.</li>
+	<li><b>Action:</b> A choice made by the agent to interact with the environment.</li>
+	<li><b>Reward:</b> A numerical value assigned to a state-action pair, indicating the desirability of the outcome.</li>
+	<li><b>Policy:</b> A strategy that maps states to actions, determining what the agent will do in a given situation. </li>
+</ul>
+<p>
+	The core process in RL involves an iterative cycle including observation, action, interaction, reward, and learning. 
+	The agent begins by observing the current state of the environment. Based on this observation, the agent selects an action to perform. After taking the action, the environment transitions to a new state and provides a reward to the agent, reflecting the outcome of the action. The agent then uses this reward to update its internal policy, aiming to improve future decision-making. This cycle repeats continuously, allowing the agent to learn and adapt its behavior over time.
+</p>
+<p>
+	RL algorithms can be categorized into two primary types: model-free and model-based. Model-free RL agents learn directly from their interactions with the environment, without building an explicit internal representation of it. In contrast, model-based RL agents construct a model of the environment to predict the outcomes of their actions, enabling them to plan and make more informed decisions. Each approach has its strengths and weaknesses, and the choice of method depends on the specific problem and available resources.
+</p>
+<p>
+	Generaly speaking, any RL is a mathematical framework for modeling sequential decision-making problems under uncertainty. It is characterized by the following components:
+</p>
+<ul>
+	<li><b>State Space:</b>  The set of all possible states the system can be in. Denoted as S.</li>
+	<li><b>Action Space:</b>  The set of all possible actions the agent can take in a given state. Denoted as A. </li>
+	<li><b>Transition Probability:</b> The probability of transitioning from state s to state s' by taking action a. Denoted as P(s'|s, a).</li>
+	<li><b>Reward Function:</b> A function that maps state-action pairs to a scalar reward. Denoted as R(s, a).</li>
+	<li><b>Discount Factor:</b> A scalar value between 0 and 1 that determines the importance of future rewards. Denoted as γ.</li>
+</ul>
+<p>
+	RL models are based on these components, introducing a mathematical frameworks that combine them under different sets of assumptions and objectives.
+	For example, the simplest case is the <b>Markov Decision Processes (MDPs)</b>. MDP is defined as a tuple: M = (S, A, P, R, γ).
+	The Markov Property states that the future state depends only on the current state and the current action, not on the entire history of the process. Mathematically:P(s_{t+1}|s_t, a_t, s_{t-1}, a_{t-1}, ...) = P(s_{t+1}|s_t, a_t).
+	To evaluate the goodness of a state or a state-action pair, we introduce value functions.
+	The first option is the State Value Function where the expected return starting from state s and following an optimal policy thereafter. Denoted as V(s).
+	The second option is the State-Action Value Function (Q-value) where the expected return starting from state s, taking action a, and following an optimal policy thereafter. Denoted as Q(s, a).
+</p>
+<p>
+	While RL boasts elegant theoretical foundations, translating these concepts into practical, high-performing systems often proves challenging. 
+	The gap between theory and practice is pronounced due to factors such as reward engineering, feature engineering, and the complexities of real-world environments.
+	In a more general sense, RL is active field of study with multiple exciting open questions. For instance, the exploration-exploitation dilemma is a core issue, as agents must balance trying new actions to discover optimal strategies (exploration) with exploiting known successful actions (exploitation). 
+	Additionally, many real-world problems suffer from sparse rewards, making it difficult for agents to learn effectively due to infrequent positive feedback. 
+	Furthermore, credit assignment, determining which actions contributed to a reward in complex sequences, is a persistent challenge in RL. 
+</p>
+<h3>First example: Tic-Tac-Toe</h3>
+<p>
+	While Tic-Tac-Tor might seem trivial due to its deterministic nature and small state space, it provides a valuable platform to understand core RL concepts.
+	Tic-tac-toe is a simple yet strategic game played on a 3x3 grid. Two players take turns marking spaces in the grid with their respective symbols, typically 'X' and 'O'. The objective is to be the first player to form a continuous line of three of one's own marks horizontally, vertically, or diagonally across the grid. The game ends in a win for one player, a draw if the grid is filled without a winner, or an incomplete game if all spaces are not filled.
+</p>
+<p>
+	Before coding, lets focus on the RL formalization of the problem. First, the state space - a 3x3 grid representing the game board. Each cell can be empty, filled with 'X', or filled with 'O'.
+	Next, the actions space, placing an 'X' (or 'O') in an empty cell on the board. The reward? this one is actually tricker and not defined directly from the game.
+	For now, let us assume +1 for winning the game, -1 for losing the game, and  0 for a draw or for intermediate states.
+</p>
+<p>
+	For this example, I will use the Q-learning model. It is a model-free algorithm that learns the optimal action-value function (Q-value) for each state-action pair.
+	Importantly, a Q-table is used to store the estimated Q-values for all possible state-action pairs. For tic-tac-toe, it would be relatively small table due to the game's simplicity and therefore it is feasible to store it in memory.
+	I picked Q-learning due to five main reasons. First, Tic-tac-toe has a finite number of possible states (board configurations) and actions (placing an 'X' in an empty cell), making it suitable for tabular Q-learning.
+	Second, the game's outcome directly determines the reward, making it easy to define and learn from. Third,  Q-learning does not require a model of the environment, which simplifies the implementation for tic-tac-toe.
+	Forth, using an epsilon-greedy policy, the agent can balance exploration (trying new moves) and exploitation (choosing the best known move), crucial for learning optimal strategies.
+	Fifth, Q-learning's core concept is relatively straightforward, making it a good starting point for understanding RL.
+</p>
+<p>
+	To ensure the agent explores different moves and doesn't get stuck in local optima, an epsilon-greedy policy can be used. This means the agent will choose a random action with probability epsilon and the best action according to the Q-table with probability 1-epsilon.
+	By iteratively playing games and updating the Q-table, the agent can learn to play tic-tac-toe optimally. Shall we code it?
+</p>
+<pre class="language-python no-show-mobile" data-src="/blog/blog-post-39.html" data-download-link>
+<code class="language-python no-show-mobile">
+import numpy as np
+
+# Define possible actions (placing an 'X' in an empty cell)
+actions = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
+
+# Define rewards
+WIN_REWARD = 1
+LOSS_REWARD = -1
+DRAW_REWARD = 0
+
+# Hyperparameters
+ALPHA = 0.1  # Learning rate
+GAMMA = 0.9  # Discount factor
+EPSILON = 0.1  # Exploration rate
+
+# Initialize Q-table
+q_table = np.zeros((3, 3, 9))  # State (3x3 board), Action (9 possible actions), Q-value
+
+def is_empty(board, action):
+    return board[action] == ' '
+
+def make_move(board, action, player):
+    board[action] = player
+
+def check_winner(board, player):
+    # Check rows, columns, and diagonals
+    for i in range(3):
+        if all(board[i, j] == player for j in range(3)) or all(board[j, i] == player for j in range(3)):
+            return True   
+
+    if all(board[i, i] == player for i in range(3)) or all(board[i, 2 - i] == player for i in range(3)):
+        return True
+    return False
+
+def is_full(board):
+    return   
+ not np.any(board == ' ')
+
+def get_available_actions(board):
+    return [(i, j) for i in range(3) for j in range(3) if board[i, j] == ' ']
+
+def choose_action(state, q_table, epsilon):
+    if np.random.rand() < epsilon:
+        # Explore: Choose a random action
+        return np.random.choice(get_available_actions(state))
+    else:
+        # Exploit: Choose the best action according to Q-values
+        q_values = q_table[tuple(state.flatten())]
+        return get_available_actions(state)[np.argmax(q_values[get_available_actions(state)])]
+
+def update_q_table(state, action, reward, next_state, q_table, alpha, gamma):
+    q_value = q_table[tuple(state.flatten()), action]
+    next_max = np.max(q_table[tuple(next_state.flatten())])
+    new_q_value = q_value + alpha * (reward + gamma * next_max - q_value)
+    q_table[tuple(state.flatten()), action] = new_q_value
+
+def play_game(q_table, epsilon):
+    board = np.full((3, 3), ' ')
+    player = 'X'
+
+    while True:
+        action = choose_action(board, q_table, epsilon)
+        make_move(board, action, player)
+
+        if check_winner(board, player):
+            reward = WIN_REWARD if player == 'X' else LOSS_REWARD
+            break
+        elif is_full(board):
+            reward = DRAW_REWARD
+            break
+
+        # Opponent's turn (random for simplicity)
+        opponent_action = np.random.choice(get_available_actions(board))
+        make_move(board, opponent_action, 'O')
+
+        if check_winner(board, 'O'):
+            reward = LOSS_REWARD if player == 'X' else WIN_REWARD
+            break
+        elif is_full(board):
+            reward = DRAW_REWARD
+            break
+
+        next_state = board.copy()
+        update_q_table(board, action, reward, next_state, q_table, ALPHA, GAMMA)
+        player = 'O'
+
+    return reward
+
+# Training loop
+for episode in range(1000): # I have not tested the value 1000, just as an example
+    reward = play_game(q_table, EPSILON)
+
+# After training, the q_table will contain learned values
+</code>
+</pre>
+<p>
+	While Tic-Tac-Toe is a good starting point, let's explore a more complex examples.
+</p>
+<h3>Second example: Tic-Tac-Toe</h3>
+<p>
+	<b>Problem definition:</b> Let's consider a simplified cloud computing system with two types of servers: small and large.
+	Jobs arrive with varying computational requirements (small, medium, large). 
+	The goal is to allocate jobs to servers to minimize job completion time while maintaining a reasonable server utilization.
+</p>
+<p>
+	Like before, we first formalize the task in the RL framework. 
+	The state of the system is defined by the number of idle small servers, the number of idle large servers, and the distribution of jobs in the queue categorized by their size (small, medium, large). 
+	The agent can take four actions: assigning a small job to a small server, assigning a medium job to a small server, assigning a large job to a large server, or leaving a job in the queue. 
+	The reward function incorporates negative job waiting times, positive incentives for server utilization up to a certain threshold, and penalties for idle servers. 
+	The environment is simulated with job arrivals following a Poisson process, job processing times exponentially distributed based on job size and server type, and servers having fixed processing capacities. 
+	By simplifying the problem in this way, we can create a more manageable and implementable reinforcement learning environment.
+</p>
+<p>
+	For this case, we will use <b>Deep Q-Network (DQN)</b>.
+	DQN is a suitable choice for this resource allocation problem due to the following reasons.
+	First, the problem involves a finite set of actions, making DQN applicable.
+	Second, the state representation includes multiple numerical features, which DQN can handle effectively through function approximation.
+	Third, DQN can balance exploration (trying new actions) and exploitation (sticking to known good actions) using techniques like epsilon-greedy.
+	Notably, while other algorithms like SARSA or policy gradient methods can be considered, DQN is a popular and effective choice for many reinforcement learning problems.
+</p>
+<p>
+	Developing an RL agent for resource allocation involves several key steps. First, we define the environment, specifying the state space, action space, and reward function. Next, we choose a suitable RL algorithm, such as Deep Q-Network (DQN), and initialize its parameters. The agent then learns through interaction with the environment, updating its Q-values based on observed rewards and state transitions. To improve performance, techniques like experience replay and target networks can be incorporated. Finally, the agent's policy is evaluated on unseen data to assess its effectiveness in managing resources.
+</p>
+<p>
+	The following code provides a basic framework. It will require further refinement, optimization, and hyperparameter tuning for a production-ready solution.
+	Moreover, in real-world settings, the information should be provided from real servers or at least using historical data from such servers.
+</p>
+<pre class="language-python no-show-mobile" data-src="/blog/blog-post-39.html" data-download-link>
+<code class="language-python no-show-mobile">
+# Import Necessary Libraries
+import random
+import numpy as np
+from scipy.stats import expon
+from collections import deque
+
+# Define Environment Parameters
+NUM_SMALL_SERVERS = 10
+NUM_LARGE_SERVERS = 5
+JOB_TYPES = ['small', 'medium', 'large']
+JOB_ARRIVAL_RATES = {'small': 2, 'medium': 1, 'large': 0.5}  # Adjust arrival rates as needed
+JOB_PROCESSING_TIMES = {'small': {'small': 2, 'large': 3}, 'medium': {'small': 4, 'large': 5}, 'large': {'small': 6, 'large': 7}}
+
+# RL agent parameters
+ALPHA = 0.1  # Learning rate
+GAMMA = 0.9  # Discount factor
+EPSILON = 0.1  # Exploration rate
+
+# Action space
+ACTIONS = ['assign_small_to_small', 'assign_medium_to_small', 'assign_large_to_large', 'queue']
+
+# Create Q-table
+q_table = np.zeros((NUM_SMALL_SERVERS + 1, NUM_LARGE_SERVERS + 1, len(JOB_TYPES), len(ACTIONS)))
+
+# Define State Representation
+def get_state(num_small_servers, num_large_servers, job_queue):
+  state = [num_small_servers, num_large_servers]
+  for job_type in JOB_TYPES:
+    state.append(job_queue.count(job_type))
+  return tuple(state)
+
+# Define Action Selection
+def choose_action(state, q_table, epsilon):
+  if np.random.rand() < epsilon:
+    return random.choice(ACTIONS)
+  else:
+    return ACTIONS[np.argmax(q_table[state])]
+	
+# Simulate Job Arrival
+def generate_job():
+  job_type = np.random.choice(JOB_TYPES, p=[0.5, 0.3, 0.2])  # Adjust probabilities as needed
+  return job_type
+
+# Simulate Job Processing
+def process_job(job_type, server_type):
+  processing_time = JOB_PROCESSING_TIMES[job_type][server_type]
+  # Simulate processing time using exponential distribution
+  return np.random.exponential(processing_time)
+  
+# Calculate Reward
+def calculate_reward(state, action, next_state):
+  # Extract relevant information from states
+  num_small_servers, num_large_servers, job_queue = state
+  next_num_small_servers, next_num_large_servers, next_job_queue = next_state
+
+  # Calculate reward components
+  # Reward for job completion
+  reward_completion = 0
+  if len(job_queue) < len(next_job_queue):
+    # Assuming job completion is based on job_queue length reduction
+    reward_completion = 10  # Adjust reward value
+
+  # Reward for server utilization
+  reward_utilization = (NUM_SMALL_SERVERS - next_num_small_servers + NUM_LARGE_SERVERS - next_num_large_servers) / (NUM_SMALL_SERVERS + NUM_LARGE_SERVERS) * 5  # Adjust reward value
+
+  # Penalty for idle servers
+  reward_idle = -(next_num_small_servers + next_num_large_servers) * 0.5  # Adjust penalty value
+
+  # Combine rewards
+  reward = reward_completion + reward_utilization + reward_idle
+
+  return reward
+
+# Update Q-Table
+def update_q_table(state, action, reward, next_state, q_table, alpha, gamma):
+  q_value = q_table[state][action]
+  next_max = np.max(q_table[next_state])
+  new_q_value = q_value + alpha * (reward + gamma * next_max - q_value)
+  q_table[state][action] = new_q_value
+  
+# Training Loop
+def train_agent(num_episodes):
+  for episode in range(num_episodes):
+    num_small_servers = NUM_SMALL_SERVERS
+    num_large_servers = NUM_LARGE_SERVERS
+    job_queue = deque([])
+
+    for t in range(100):  # Replace with appropriate time horizon
+      state = get_state(num_small_servers, num_large_servers, job_queue)
+      action = choose_action(state, q_table, EPSILON)
+
+      # Simulate job arrival
+      if random.random() < JOB_ARRIVAL_RATES['small']:
+        job_queue.append('small')
+      if random.random() < JOB_ARRIVAL_RATES['medium']:
+        job_queue.append('medium')
+      if random.random() < JOB_ARRIVAL_RATES['large']:
+        job_queue.append('large')
+
+      # Simulate job processing and server allocation based on action
+      # ...
+
+      # Calculate reward
+      reward = calculate_reward(state, action, next_state)
+
+      # Update Q-table
+      update_q_table(state, action, reward, next_state, q_table, ALPHA, GAMMA)
+
+      # Update environment state
+      num_small_servers, num_large_servers, job_queue = next_state
+  
+  # Evaluation phase
+  total_reward = 0
+  num_episodes_eval = 100
+  for episode in range(num_episodes_eval):
+    # Initialize environment
+    num_small_servers = NUM_SMALL_SERVERS
+    num_large_servers = NUM_LARGE_SERVERS
+    job_queue = deque([])
+
+    for t in range(100):  # Replace with appropriate time horizon
+      # ... (simulation without learning)
+      total_reward += reward
+
+  average_reward = total_reward / (num_episodes_eval * 100)
+  print(f"Average reward: {average_reward}")
+</code>
+</pre>
+<p>
+	In the first two examples, we considered a single RL agent. The next step? lets make a lot of them.
+</p>
+<h3>Third example: Smart Grid Energy Management</h3>
+<p>
+	We are in the big boys (and girls, and unicorns) area now. So, the task definition is slightly more complex.
+	We aim to optimize the operation of a smart grid system by employing multi-agent RL.
+	Specifically, we want to: 1) Minimize energy losses, optimize resource utilization; 
+	2) Prevent blackouts or brownouts by balancing supply and demand; 
+	3) Effectively incorporate fluctuating renewable energy generation;
+	4) Optimize energy purchasing and selling for all agents;
+	5) Provide reliable and affordable electricity to end-users. <br>
+	By modeling the smart grid as a multi-agent system, we can explore how decentralized decision-making can lead to improved overall system performance.
+</p>
+<p>
+	Agents in the smart grid system are autonomous entities with their own objectives. Each agent maintains an internal state representing its current condition and capabilities.
+</p>
+<p>
+	<b>Power Plant Agent</b>. 
+	<u>State</u>: Generation level, fuel level, maintenance status, operational costs.
+	<u>Actions</u>: Discrete actions (e.g., increase generation by X%, decrease generation by X%, maintain current level) or continuous actions (generation level as a continuous value).
+	<u>Reward</u>: Profit from energy sales, penalties for unmet demand, fuel costs, operational costs.
+</p>
+<p>
+	<b>Energy Storage Agent</b>. 
+	<u>State</u>: State of charge (SOC), current power flow (charging/discharging), energy price.
+	<u>Actions</u>: Discrete actions (charge, discharge, idle) or continuous actions (charging/discharging rate).
+	<u>Reward</u>: Profit from arbitrage, penalties for deep discharges, degradation costs.
+</p>
+<p>
+	<b>Demand Response Agent</b>. 
+	<u>State</u>: Current demand, potential demand reduction, price elasticity, customer preferences.
+	<u>Actions</u>: Discrete actions (offer incentive, no incentive) or continuous actions (incentive level).
+	<u>Reward</u>: Revenue from demand response programs, customer satisfaction, grid stability contributions.
+</p>
+<p>
+	The environment serves as the intermediary between agents, simulating the physical and economic aspects of the power grid.
+	<u>State</u>: Aggregate demand, energy prices, system frequency, reserve margins, and other relevant grid parameters.
+	<u>Dynamics</u>: Updates agent states based on actions, simulates random events (e.g., load fluctuations, equipment failures), handles energy flow and balancing.
+	<u>Information flow</u>: Provides observations to agents (e.g., energy prices, system imbalance).
+	<u>Market clearing</u>: Determines energy prices based on supply and demand curves.
+</p>
+<p>
+	For this task, we picked Multi-Agent Deep Deterministic Policy Gradient (MADDPG) as it handles continuous action spaces and complex interactions effectively.
+	I choose it as generation levels, energy storage rates, and demand response levels are continuous variables, making MADDPG suitable.
+	Moreover, the interdependent nature of power plants, energy storage, and demand response requires an algorithm that can model these interactions effectively. MADDPG addresses this by allowing agents to observe other agents' actions.
+	In addition, it can be adapted to various reward structures and environmental dynamics, which can be useful as we do not have a clear definitions of these (the author of this blog post has a healthy self-critic).
+</p>
+<p>
+	<b>Disclaimer</b>: the following code provides a basic framework and will require significant expansion and refinement for a realistic simulation. It focuses on the core components of the environment and agent interactions.
+</p>
+<pre class="language-python no-show-mobile" data-src="/blog/blog-post-39.html" data-download-link>
+<code class="language-python no-show-mobile">
+	
+	
+import random
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from copy import deepcopy 
+
+	
+class PowerPlant:
+    def __init__(self, max_generation):
+        self.max_generation = max_generation
+        self.current_generation = 0
+
+    def set_generation(self, generation):
+        self.current_generation = max(0, min(generation, self.max_generation))
+
+
+class EnergyStorage:
+    def __init__(self, max_capacity):
+        self.max_capacity = max_capacity
+        self.current_charge = 0
+        self.charging_efficiency = 0.9  # Example efficiency
+        self.discharging_efficiency = 0.9
+
+    def charge(self, power):
+        self.current_charge = min(self.current_charge + power * self.charging_efficiency, self.max_capacity)
+
+    def discharge(self, power):
+        self.current_charge = max(0, self.current_charge - power / self.discharging_efficiency)
+
+class DemandResponse:
+    def __init__(self, max_demand_reduction):
+        self.max_demand_reduction = max_demand_reduction
+        self.current_demand_reduction = 0
+
+    def reduce_demand(self, amount):
+        self.current_demand_reduction = min(amount, self.max_demand_reduction)
+
+class Environment:
+    def __init__(self, num_power_plants, num_storage, num_demand_response):
+        self.power_plants = [PowerPlant(max_generation=100) for _ in range(num_power_plants)]
+        self.energy_storages = [EnergyStorage(max_capacity=50) for _ in range(num_storage)]
+        self.demand_responses = [DemandResponse(max_demand_reduction=20) for _ in range(num_demand_response)]
+        self.total_demand = 150  # Example total demand
+        self.price = 50  # Example energy price
+		
+    def step(self, actions):
+        # Update power plant generation
+        for i, action in enumerate(actions[:len(self.power_plants)]):
+            self.power_plants[i].set_generation(self.power_plants[i].current_generation + action)
+
+        # Update energy storage
+        for i, action in enumerate(actions[len(self.power_plants):len(self.power_plants)+len(self.energy_storages)]):
+            if action == 0:  # charge
+                self.energy_storages[i].charge(10)  # Replace with actual charging rate
+            elif action == 1:  # discharge
+                self.energy_storages[i].discharge(10)  # Replace with actual discharging rate
+
+        # Update demand response
+        for i, action in enumerate(actions[len(self.power_plants)+len(self.energy_storages):]):
+            if action == 1:
+                self.demand_responses[i].reduce_demand(self.price)
+
+        # Calculate total generation, demand, and imbalance
+        total_generation = sum(pp.current_generation for pp in self.power_plants)
+        total_storage_output = sum(es.current_charge for es in self.energy_storages)
+        total_demand_reduction = sum(dr.current_demand_reduction for dr in self.demand_responses)
+        total_demand = self.base_load - total_demand_reduction
+        imbalance = total_generation + total_storage_output - total_demand * self.loss_factor
+
+        # Update energy price based on imbalance (simplified)
+        self.price = max(0, self.price + imbalance * 0.1)
+
+        # Calculate rewards
+		rewards = []
+		for i, power_plant in enumerate(self.power_plants):
+			reward = (power_plant.current_generation * self.price) - (power_plant.current_generation * power_plant.fuel_cost)
+			# Add penalties for over/undergeneration, ramping costs, etc.
+			rewards.append(reward)
+		for i, energy_storage in enumerate(self.energy_storages):
+			reward = (self.price * energy_storage.current_charge * self.energy_storages[i].discharging_efficiency) - (self.price / self.energy_storages[i].charging_efficiency * energy_storage.current_charge)
+			# Add penalties for deep discharges, charging/discharging inefficiencies
+			rewards.append(reward)
+		for i, demand_response in enumerate(self.demand_responses):
+			reward = self.price * demand_response.current_demand_reduction
+			# Add penalties for excessive demand reduction, customer dissatisfaction
+			rewards.append(reward)
+
+        # Update agent states
+		for i, power_plant in enumerate(self.power_plants):
+			power_plant.current_generation = self.power_plants[i].current_generation
+		for i, energy_storage in enumerate(self.energy_storages):
+			energy_storage.current_charge = self.energy_storages[i].current_charge
+		for i, demand_response in enumerate(self.demand_responses):
+			demand_response.current_demand_reduction = self.demand_responses[i].current_demand_reduction
+
+
+        return new_state, rewards, done, info
+
+class Actor(nn.Module):
+    def __init__(self, state_dim, action_dim, hidden_size=64):
+        super(Actor, self).__init__()
+        self.fc1 = nn.Linear(state_dim, hidden_size)
+        self.fc2 = nn.Linear(hidden_size, hidden_size)
+        self.fc3 = nn.Linear(hidden_size,   
+ action_dim)   
+
+        self.tanh = nn.Tanh()
+
+    def forward(self, state):
+        x = self.fc1(state)
+        x = torch.relu(x)
+        x = self.fc2(x)
+        x = torch.relu(x)
+        x = self.fc3(x)
+        return self.tanh(x)
+
+class Critic(nn.Module):
+    def __init__(self, state_dim, action_dim, hidden_size=64):
+        super(Critic, self).__init__()
+        # Combine state and action as input
+        self.fc1 = nn.Linear(state_dim + action_dim, hidden_size)
+        self.fc2 = nn.Linear(hidden_size, hidden_size)
+        self.fc3 = nn.Linear(hidden_size, 1)
+
+    def forward(self, state_action):   
+
+        x = self.fc1(state_action)
+        x = torch.relu(x)
+        x = self.fc2(x)
+        x = torch.relu(x)
+        x = self.fc3(x)
+        return x
+
+class MADDPGAgent:
+    def __init__(self, agent_index, state_dim, action_dim, num_agents):
+        self.agent_index = agent_index
+        self.actor = Actor(state_dim, action_dim)
+        self.actor_target = copy.deepcopy(self.actor)
+        self.critic = Critic(state_dim * num_agents, action_dim * num_agents)
+        self.critic_target = copy.deepcopy(self.critic)
+        self.actor_optimizer = optim.Adam(self.actor.parameters(), lr=learning_rate)
+        self.critic_optimizer = optim.Adam(self.critic.parameters(), lr=learning_rate)   
+
+        # ... other parameters (tau, batch_size, buffer_size, etc.)
+
+    def select_action(self, state, deterministic=False):
+        state = torch.FloatTensor(state).unsqueeze(0)
+        if deterministic:
+            action = self.actor(state).detach().numpy()[0]
+        else:
+            action = self.actor(state).sample().detach().numpy()[0]
+        return action
+
+    def update(self, batch):
+        states, actions, rewards, next_states, dones = batch
+
+        # Compute critic loss (Q_target)
+        with torch.no_grad():
+            # Detached next actions for stability
+            next_actions = torch.cat([agent.actor_target(next_state) for agent in agents], dim=1)
+            target_q_values = self.critic_target(torch.cat((next_states, next_actions), dim=1))
+            target_q_values = rewards + (gamma * (1 - dones)) * target_q_values
+
+        q_values = self.critic(torch.cat((states, actions), dim=1))
+        critic_loss = nn.MSELoss()(q_values, target_q_values)
+
+        # Compute actor loss (policy gradient)
+        actor_loss = -torch.mean(self.critic(torch.cat((states, self.actor(states)), dim=1)))
+
+        # Update critic network
+        self.critic_optimizer.zero_grad()
+        critic_loss.backward()
+        self.critic_optimizer.step()
+
+        # Update actor network
+        self.actor_optimizer.zero_grad()
+        actor_loss.backward()
+        self.actor_optimizer.step()
+
+        # Update target networks (soft update)
+        self.soft_update(self.critic_target, self.critic, tau)
+        self.soft_update(self.actor_target, self.actor, tau)
+
+    def soft_update(self, target_net, local_net, tau):
+        for target_param, local_param in zip(target_net.parameters(), local_net.parameters()):
+            target_param.data.copy_(tau * local_param.data + (1 - tau) * target_param.data)   
+
+	
+
+def train(env, agents, num_episodes, max_steps, batch_size, buffer_size, gamma, tau):
+    replay_buffer = ReplayBuffer(buffer_size)
+    for episode in range(num_episodes):
+        state = env.reset()
+        for t in range(max_steps):
+            actions = [agent.select_action(state[i]) for i, agent in enumerate(agents)]
+            next_state, rewards, done, _ = env.step(actions)
+            replay_buffer.add(state, actions, rewards, next_state, done)
+            if len(replay_buffer) >= batch_size:
+                batch = replay_buffer.sample(batch_size)
+                for agent in agents:
+                    agent.update(batch)
+            state = next_state
+            if done:
+                break
+
+</code>
+</pre>
+
+<h3>Closing remarks</h3>
+<p>
+	As the field of RL continues to evolve, exciting advancements are being made. Open questions such as balancing exploration and exploitation, addressing sparse rewards, and credit assignment remain active areas of research.
+	In conclusion, this blog post has equipped you with a solid foundation in RL. With the knowledge you have gained, you can begin exploring the exciting potential of RL in various domains and contribute to the development of intelligent autonomous systems.
+	That say, the objective of this blog post is to give you some initial idea and I really reccomend to explore the field much more before you are going ahead and writting your production-ready RL agent.
+</p>
