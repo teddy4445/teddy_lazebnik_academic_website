@@ -8,10 +8,11 @@ import { Icons } from '/js/components/icons.js';
 
 class Course extends Element
 {
-	constructor(name, description, code, year, semester, university, department, location_class, syllabus, grade_parts, resources, updates, modules)
+	constructor(name, passkey, description, code, year, semester, university, department, location_class, syllabus, grade_parts, resources, updates, modules)
 	{
 		super();
 		this.name = name;
+		this.passkey = passkey;
 		this.description = description;
 		this.code = code;
 		this.year = year;
@@ -76,9 +77,9 @@ class Course extends Element
 		for(let i = 0; i < grades.length; i++) {
 			subTitle += grades[i]['name'] + " ";
 			if(i == grades.length - 1) {
-				subTitle += grades[i]["percent"] + "%";
+				subTitle += "(" + grades[i]["percent"] + "%)";
 			} else {
-				subTitle += grades[i]['percent'] + "%, ";
+				subTitle += "(" + grades[i]['percent'] + "%), ";
 			}
 		}
 		text = descriptionTrim(this.description, "summary","content-text" );
@@ -86,8 +87,6 @@ class Course extends Element
 		return html;
 	}
 
-
-	
 	// resources section inside the general tab of the course
 	createResourceList(lastVisit)
 	{
@@ -180,6 +179,7 @@ class Course extends Element
 	static createFromJson(jsonObj)
 	{	
 		return new Course(jsonObj["name"],
+			jsonObj["passkey"], 
 			jsonObj["description"], 
 			jsonObj["code"], 
 			jsonObj["year"], 

@@ -263,6 +263,29 @@ function removeAlertsPanels()
     }
 }
 
+function passkey() {
+    // Get the URL from the hidden input field
+    let url = document.getElementById('passkey_path').value;
+
+    // Get the passkey entered by the user
+    const passkey = encodeURIComponent(document.getElementById('passkey').value);
+
+    // Create a URL object for easier manipulation
+    const urlObj = new URL(url, window.location.origin);
+
+    // Check if the 'course_password' parameter exists
+    if (urlObj.searchParams.has('course_password')) {
+        // If it exists, update its value
+        urlObj.searchParams.set('course_password', passkey);
+    } else {
+        // If it doesn't exist, append it
+        urlObj.searchParams.append('course_password', passkey);
+    }
+
+    // Redirect the user to the new URL
+    window.location.href = urlObj.toString();
+}
+
 // end - cookie related functions // 
 
 /* end - help functions */

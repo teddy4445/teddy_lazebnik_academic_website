@@ -1,5 +1,6 @@
 import { PageRender, retrivedData } from '/js/pageRender.js';
 import { Course } from '/js/components/course.js';
+import { passkeyPanel } from '/js/components/passkeyPanel.js';
 import { Tabs } from '/js/components/tabs.js';
 import { addCollapseFunction } from '/js/descriptionSlicer.js';
 import { Icons } from '/js/components/icons.js';
@@ -24,6 +25,7 @@ class CoursePage extends PageRender {
 		try {
 			var getParms = PageRender.readGetPrams();
 			this.course_code = getParms.get("course_id");
+			this.course_password = ''+getParms.get("course_password");
 		}
 		catch (error) {
 			// no course ID, we cannot work with this - return to teaching page so the user pick another course page
@@ -74,19 +76,31 @@ class CoursePage extends PageRender {
 	}
 
 	build() {
-		// this.buildBreadcrumb();
-		this.createDetailsCourse();
+		
+		if ((this.data.passkey == "") || (this.data.passkey == this.course_password))
+		{
+			// this.buildBreadcrumb();
+			this.createDetailsCourse();
+			let course = this.data.toHtml(this.last_visit);
+			document.getElementById('main-body-page').innerHTML = course;
+			
+			this.createTabsSection();
+			this.pickTab();
 
-		let course = this.data.toHtml(this.last_visit);
-		document.getElementById('main-body-page').innerHTML = course;
+			addCollapseFunction();
 
-		this.createTabsSection();
-		this.pickTab();
-
-		addCollapseFunction();
-
-		// for the "new" tags, put new cookie with current date so we can check the needed tags next run of the page
-		setCookie(PRE_COOKIE_KEY + this.course_code, new Date().toString(), 365);
+			// for the "new" tags, put new cookie with current date so we can check the needed tags next run of the page
+			setCookie(PRE_COOKIE_KEY + this.course_code, new Date().toString(), 365);
+		}
+		else
+		{
+			var error = "";
+			if (this.course_password != "null")
+			{
+				error = "Wrong passkey";
+			}
+			document.getElementById('main-body-page').innerHTML = new passkeyPanel(window.location.pathname + window.location.search, error).toHtml();
+		}
 	}
 
 	//create html of Breadcrumb

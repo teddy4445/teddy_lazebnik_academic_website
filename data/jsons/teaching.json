@@ -2,6 +2,7 @@
 	"teaching_philosophy": "Online learning is the future. Students should be able to find quality acadmic resources easly which provided by their lecturers.",
 	"courses": [{
 			"name": "Advanced Programming 1",
+			"passkey": "",
 			"code": "89210",
 			"year": "2021",
 			"topic": "programming",
@@ -161,6 +162,7 @@
 			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
 		}, {
 			"name": "Advanced Programming 2",
+			"passkey": "",
 			"code": "89211",
 			"year": "2021",
 			"topic": "programming",
@@ -275,6 +277,7 @@
 			"description": "The purpose of the Advanced Programming course (1,2) is to prepare you for the industry. In particular, the course is structured so that at the end of Advanced Programming 1 you can start looking for a job in a serious way, and you will have the first part of the project with the help of which you can demonstrate to the employer your experience and abilities."
 		}, {
 			"name": "Deep Leanring for Computer Vision",
+			"passkey": "",
 			"code": "21319",
 			"year": "2020",
 			"topic": "programming",
@@ -563,6 +566,7 @@
 		},
 		{
 			"name": "Numerical Analysis",
+			"passkey": "",
 			"code": "88376",
 			"year": "2020",
 			"semester": "1",
@@ -683,6 +687,7 @@
 		},
 		{
 			"name": "Introduction to Linear Mathematical Optimization",
+			"passkey": "",
 			"code": "88369",
 			"year": "2020",
 			"semester": "2",
@@ -849,6 +854,7 @@
 		},
 		{
 			"name": "Tools for Numerical Analysis ",
+			"passkey": "",
 			"code": "83214",
 			"year": "2020",
 			"semester": "2",
@@ -1043,6 +1049,7 @@
 		},
 		{
 			"name": "Mathematical aspects and applications of modern cyber",
+			"passkey": "",
 			"code": "----",
 			"year": "2023",
 			"topic": "CS",
@@ -1256,6 +1263,7 @@
 		},
 		{
 			"name": "Operating Systems",
+			"passkey": "",
 			"code": "2320084",
 			"year": "2023",
 			"topic": "CS",
@@ -1304,6 +1312,7 @@
 		},
 		{
 			"name": "Web Development: Server Side",
+			"passkey": "",
 			"code": "35619",
 			"year": "2023",
 			"topic": "programming",
@@ -1346,6 +1355,7 @@
 		},
 		{
 			"name": "Introduction to Reinforcement Leanring",
+			"passkey": "",
 			"code": "233929",
 			"year": "2023",
 			"topic": "cs",
@@ -1522,6 +1532,227 @@
 								"link": "/files/rl_course/10.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
+							}]
+					}
+				}
+			]
+		},
+		{
+			"name": "Reinforcement Leanring",
+			"passkey": "sweden2025",
+			"code": "jsrlm2",
+			"year": "2025",
+			"topic": "cs",
+			"semester": "Summer",
+			"university": "Jonkoping University",
+			"department": "School of Engineering",
+			"location_class": "TBD",
+			"syllabus": "/files/ju_rl_course/syllabus.pdf",
+			"description": "The quest to fully realize the potential of Artificial Intelligence (AI), requires autonomous systems that can learn to make good decisions by interacting with their environment. Reinforcement learning is a paradigm that meets these requirements, and can be applied to various tasks, including game-playing, healthcare, economics, and robotics. This course gives a solid introduction to reinforcement learning with its core approaches and challenges, and is structured around several lectures, assignments, and a project.",
+			"grade_parts": [{
+					"name": "Final project",
+					"percent": 50
+				},
+				{
+					"name": "Home work 2",
+					"percent": 25
+				},
+				{
+					"name": "Home work 1",
+					"percent": 25
+				}
+			],
+			"resources": {
+				"Must":[{
+					"name": "Course's stracture",
+					"link": "/files/ju_rl_course/course_structure.pdf",
+					"description": "A one-page description of the course so you can be oriented quickly during the semester.",
+					"type": "file"
+				},{
+					"name": "Home Work #1",
+					"link": "/files/ju_rl_course/hw1.pdf",
+					"description": "Home work #1 for submission",
+					"type": "file"
+				},{
+					"name": "Home Work #2",
+					"link": "/files/ju_rl_course/hw2.pdf",
+					"description": "Home work #2 for submission",
+					"type": "file"
+				},{
+					"name": "Final Project Guideline",
+					"link": "/files/ju_rl_course/final_project.pdf",
+					"description": "All the details about the course's final project - you really should read it carfully.",
+					"type": "file"
+				}
+				],
+				"Extra": [{
+					"name": "HuggingFace course",
+					"link": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
+					"description": "This is an amazing practical course by HuggingFace that will show you how practically use RL.",
+					"type": "slides"
+				},
+				{
+					"name": "An introduction to Deep RL - tutorial paper",
+					"link": "https://arxiv.org/pdf/1811.12560",
+					"description": "An easy-to-read theoretical and practical introduction to Deep RL with decent explanations of the math.",
+					"type": "slides"
+				},
+				{
+					"name": "CS231N recap about Python",
+					"link": "https://cs231n.github.io/python-numpy-tutorial/",
+					"description": "Taken from Stanford's CS234 course, a recap about Python and Colab.",
+					"type": "slides"
+				},
+				{
+					"name": "RL book with all the course materials",
+					"link": "http://incompleteideas.net/book/RLbook2020.pdf",
+					"description": "The book authored by Richard S. Sutton and Andrew G. Barto.",
+					"type": "file"
+				}]
+			},
+			"updates": [{
+				"title": "Welcome to our RL course!",
+				"description": "All the materials will be uploaded here. Please note that classes will be recorded and uploaded to Youtube with a link from this page. As such, you can re-watch them as much as you please.",
+				"date": "10.21.2024",
+				"link": ""
+			}
+			],
+			"modules": [{
+					"title": "Introduction and basic concepts",
+					"explanation": "In the first part, we will explore the main ideas behind RL.",
+					"resources": {
+						"Lectures": [{
+								"name": "Lession 1: Introduction to Reinforcement Learning",
+								"link": "/files/rl_course/1.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 1 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							},{
+								"name": "Lession 2: Tabular MDP Planning and RL Policy Evaluation",
+								"link": "/files/rl_course/2.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 2 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							},{
+								"name": "Lession 3: Q-learning",
+								"link": "/files/rl_course/3.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 3 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							}]
+					}
+				},{
+					"title": "Policy Gradient Methods",
+					"explanation": "In the second part, we will study different methods for evaluation of agent's actions as well as how to 'train' them.",
+					"resources": {
+						"Lectures": [{
+								"name": "Lession 4: Policy Gradient Methods (1)",
+								"link": "/files/rl_course/4.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 4 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							},{
+								"name": "Lession 5: Policy Gradient Methods (2)",
+								"link": "/files/rl_course/5.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 5 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							},{
+								"name": "Lession 6: Policy Gradient Methods (3)",
+								"link": "/files/rl_course/6.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 6 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							}]
+					}
+				},{
+					"title": "RL agents training and evaluation",
+					"explanation": "In the third and final part, we will learn how to implement our previous knowledge to obtain a RL agent.",
+					"resources": {
+						"Lectures": [{
+								"name": "Lession 7: Imitation Learning",
+								"link": "/files/rl_course/7.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 7 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							},{
+								"name": "Lession 8: Rewards in RL",
+								"link": "/files/rl_course/8.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 8 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							},{
+								"name": "Lession 9: Deep Reinforcement Learning (1)",
+								"link": "/files/rl_course/9.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 9 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							},{
+								"name": "Lession 10: Deep Reinforcement Learning (2)",
+								"link": "/files/rl_course/10.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 10 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							},{
+								"name": "Lession 11: Data Efficient RL",
+								"link": "/files/rl_course/11.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 11 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
+							},{
+								"name": "Lession 12: RL Evaluation",
+								"link": "/files/rl_course/12.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lecture 12 recoding",
+								"link": "",
+								"description": "TBD",
+								"type": "video"
 							}]
 					}
 				}
