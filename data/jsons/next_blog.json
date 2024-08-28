@@ -1,4 +1,32 @@
 {
+   "40":[
+      {
+         "title":"5 AI Tools That Makes The Academics Life Easier",
+		 "date": "1/1/2024",
+		 "reading_time": "4",
+		 "link_address": "33",
+         "description":"It is not a secret Artificial Intelligence (AI) revolutioning the wolrd for some time now. However, the release of chatGPT was a game changer, brining Large Language Models (LLMs) in a productize and free way to the masses. This amazing tool has been also adopted by academics, if they admit it or not.  In this context, using AI tools in academia is still debated for multiple moral, legal, and operational reasons.  Nonetheless, the end is clear - we will use AI as we use computers, the internet, and grammer correction models. This is a question of when the old academics will understand they can not hold the gate close much longer. Until this happens, in this blog post I quickly present five AI tools you should try out..."
+      },{
+         "title":"3 Things I learned about Conflicts in Academia",
+		 "date": "26/2/2023",
+		 "reading_time": "3",
+		 "link_address": "29",
+         "description":"In this blog-post, I present from a personal point of view an analysis of common sources of conflicts in academic settings and practical strategies for managing them effectively. Through personal experiences and reflections, I identify three main key lessons: the importance of communication, understanding power dynamics, and understand differences in objectives of the team members."
+      },
+      {
+         "title":"Fast Start Your ML Project Using Auto-ML Libraries in Python",
+		 "date": "13/5/2021",
+		 "reading_time": "3",
+		 "link_address": "18",
+         "description":"4 Auto-ML Libraries to Automate Machine Learning Pipeline..."
+      },{
+         "title":"The graphs every AI developer must know and their python implementation",
+		 "date": "15/3/2021",
+		 "reading_time": "7",
+		 "link_address": "15",
+         "description":"If you an AI / Machine Learning / Data Science and doing a project, you probabliy should print one or more of these graphs to really understand what is going on..."
+      }
+	],
    "39":[
       {
          "title":"The graphs every AI developer must know and their python implementation",
