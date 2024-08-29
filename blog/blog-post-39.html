@@ -1,5 +1,5 @@
 <h1>
-Crafting RL solutions - from simple to hard, a beginners guide
+[Code post] Crafting RL solutions - from simple to hard, a beginners guide
 </h1>
 <hr class="publications-hr">
 18/8/2024
@@ -85,8 +85,8 @@ Crafting RL solutions - from simple to hard, a beginners guide
 	To ensure the agent explores different moves and doesn't get stuck in local optima, an epsilon-greedy policy can be used. This means the agent will choose a random action with probability epsilon and the best action according to the Q-table with probability 1-epsilon.
 	By iteratively playing games and updating the Q-table, the agent can learn to play tic-tac-toe optimally. Shall we code it?
 </p>
-<pre class="language-python no-show-mobile" style="max-width: 1080px;" data-src="/blog/blog-post-39.html" data-download-link>
-<code class="language-python no-show-mobile">
+<pre class="language-python " style="max-width: 1080px;" data-src="/blog/blog-post-39.html" data-download-link>
+<code class="language-python ">
 import numpy as np
 
 # Define possible actions (placing an 'X' in an empty cell)
@@ -214,8 +214,8 @@ for episode in range(1000): # I have not tested the value 1000, just as an examp
 	The following code provides a basic framework. It will require further refinement, optimization, and hyperparameter tuning for a production-ready solution.
 	Moreover, in real-world settings, the information should be provided from real servers or at least using historical data from such servers.
 </p>
-<pre class="language-python no-show-mobile" style="max-width: 1080px;" data-src="/blog/blog-post-39.html" data-download-link>
-<code class="language-python no-show-mobile">
+<pre class="language-python " style="max-width: 1080px;" data-src="/blog/blog-post-39.html" data-download-link>
+<code class="language-python ">
 # Import Necessary Libraries
 import random
 import numpy as np
@@ -395,8 +395,8 @@ def train_agent(num_episodes):
 <p>
 	<b>Disclaimer</b>: the following code provides a basic framework and will require significant expansion and refinement for a realistic simulation. It focuses on the core components of the environment and agent interactions.
 </p>
-<pre class="language-python no-show-mobile" style="max-width: 1080px;" data-src="/blog/blog-post-39.html" data-download-link>
-<code class="language-python no-show-mobile">
+<pre class="language-python " style="max-width: 1080px;" data-src="/blog/blog-post-39.html" data-download-link>
+<code class="language-python ">
 	
 	
 import random

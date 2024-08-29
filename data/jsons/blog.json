@@ -334,7 +334,7 @@
 		 "order": 37
       },
       {
-         "title":"Crafting RL solutions - from simple to hard, a beginners guide",
+         "title":"[Code post] Crafting RL solutions - from simple to hard, a beginners guide",
          "description":"This blog post offers a comprehensive guide to Reinforcement Learning (RL), bridging the gap between theoretical understanding and practical implementation. We shortly discuss the foundational concepts of RL, providing a mathematical basis for the applicative part. Subsequently, we explore core algorithms, practical considerations, and real-world applications. By combining theoretical depth with practical insights, this guide empowers readers to build robust and effective RL agents.",
          "fileLinks":[{"info": "Read More", "type": 2, "link": "39"}],
 		 "year": 2024,
@@ -350,6 +350,15 @@
 		 "month": 8,
 		 "day": 29,
 		 "order": 39
+      },
+      {
+         "title":"[Code post] Building a Snake AI with Deep Reinforcement Learning: A Step-by-Step Guide Using Keras",
+         "description":"In this blog post, we have step-by-step guide to train a neural network to navigate a grid, eat apples, and avoid collisions - yes, the Snake game! Discover how to implement experience replay, visualize gameplay with Pygame, and fine-tune your AI's performance. Whether you are a seasoned developer or new to AI, this hands-on guide offers practical insights and techniques to elevate your projects. Ready to see how AI can master the classic Snake game?",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "41"}],
+		 "year": 2024,
+		 "month": 9,
+		 "day": 15,
+		 "order": 40
       }
 	]
 }
