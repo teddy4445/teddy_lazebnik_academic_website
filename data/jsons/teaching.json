@@ -1540,13 +1540,13 @@
 		{
 			"name": "Reinforcement Leanring",
 			"passkey": "sweden2025",
-			"code": "jsrlm2",
+			"code": "TFSS25",
 			"year": "2025",
 			"topic": "cs",
-			"semester": "Summer",
+			"semester": "1",
 			"university": "Jonkoping University",
 			"department": "School of Engineering",
-			"location_class": "TBD",
+			"location_class": "see agenda",
 			"syllabus": "/files/ju_rl_course/syllabus.pdf",
 			"description": "The quest to fully realize the potential of Artificial Intelligence (AI), requires autonomous systems that can learn to make good decisions by interacting with their environment. Reinforcement learning is a paradigm that meets these requirements, and can be applied to various tasks, including game-playing, healthcare, economics, and robotics. This course gives a solid introduction to reinforcement learning with its core approaches and challenges, and is structured around several lectures, assignments, and a project.",
 			"grade_parts": [{
