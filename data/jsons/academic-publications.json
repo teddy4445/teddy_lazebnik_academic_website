@@ -1,6 +1,30 @@
 {
    "publications":[ 
 	{
+         "name":"Mathematical model of dating apps’ influence on sexually transmitted diseases spread",
+         "description":"Sexually transmitted diseases (STDs) are a group of pathogens infecting new hosts through sexual interactions. Due to its social and economic burden, multiple models have been proposed to study the spreading of pathogens. In parallel, in the ever-evolving landscape of digital social interactions, the pervasive utilization of dating apps has become a prominent facet of modern society. Despite the surge in popularity and the profound impact on relationship formation, a crucial gap in the literature persists regarding the potential ramifications of dating apps usage on the dynamics of STDs. In this paper, we address this gap by presenting a novel mathematical framework - an extended Susceptible-Infected-Susceptible (SIS) epidemiological model to elucidate the intricate interplay between dating apps engagement and the propagation of STDs. Namely, as dating apps are designed to make users revisit them and have mainly casual sexual interactions with other users, they increase the number of causal partners, which increases the overall spread of STDS. Using extensive simulation, based on real-world data, explore the effect of dating apps adoption and control on the STD spread. We show that an increased adoption of dating apps can result in an STD outbreak if not handled appropriately.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/std_pandemic_model.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Mathematical model of dating apps’ influence on sexually transmitted diseases spread. Social Network Analysis and Mining. 2024."}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2024,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Social Network Analysis and Mining",
+         "publicationStatus":"Published"
+      }, 
+	{
+         "name":"Temporal graphs anomaly emergence detection: benchmarking for social media interactions",
+         "description":"Temporal graphs have become an essential tool for analyzing complex dynamic systems with multiple agents. Detecting anomalies in temporal graphs is crucial for various applications, including identifying emerging trends, monitoring network security, understanding social dynamics, tracking disease outbreaks, and understanding financial dynamics. In this paper, we present a comprehensive benchmarking study that compares 12 data-driven methods for anomaly detection in temporal graphs. We conduct experiments on two temporal graphs extracted from Twitter and Facebook, aiming to identify anomalies in group interactions. Surprisingly, our study reveals an unclear pattern regarding the best method for such tasks, highlighting the complexity and challenges involved in anomaly emergence detection in large and dynamic systems. The results underscore the need for further research and innovative approaches to effectively detect emerging anomalies in dynamic systems represented as temporal graphs.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/spatiotemporal_graphs.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Iny, O., Temporal graphs anomaly emergence detection: benchmarking for social media interactions. Applied Intelligence. 2024."}],
+		 "authors": "Teddy Lazebnik, Or Iny",
+         "year": 2024,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Applied Intelligence",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Machine learning computational model to predict lung cancer using electronic medical records",
          "description":"Background: Lung cancer (LC) screening using low-dose computed tomography (CT) is recommended according to standard risk criteria or personalized risk calculators. Machine learning (ML) models that can predict disease risk are an emerging method in medicine for identifying hidden associations that are personally unique. Materials and methods: Using the tree-based pipeline optimization tool (TPOT), we developed an ML-based model, which is an ensemble of the Random Forest and XGboost models, based on known risk factors for LC, as part of a larger trial for ML prediction using electronic medical records and chest CT. We used data from patients with LC vs. controls (1:2) of patients aged ≥ 35 years. We developed a model for all LC patients as well as for patients with and without a smoking background. We included age, gender, body mass index (BMI), smoking history, socioeconomic status (SES), history of chronic obstructive pulmonary disease (COPD)/emphysema/chronic bronchitis (CB), interstitial lung disease (ILD)/pulmonary fibrosis (PF), and family history of LC. Results: Of the 4076 patients, 1428 (35 %) were in the LC group and 2648 (65 %) were in the control group. For the entire study population, our model achieved an accuracy of 71.2 %, with a sensitivity of 69 % and a positive predictive value (PPV) of 74 %. Higher accuracy was achieved for the two subgroups. An accuracy of 74.8 % (sensitivity 72 %, PPV 76 %) and 73.0 % (sensitivity 76 %, PPV 72 %) was achieved for the smoking and never-smoking cohorts, respectively. For the entire population and smoker cohort, COPD/emphysema/CB were the most important contributors, followed by BMI and age, while in the never-smoking cohort, BMI, age and SES were the most important contributors. Conclusion: Known risk factors for LC could be used in ML models to modestly predict LC. Further studies are needed to confirm these results in new patients and to improve them.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/lung_ml_1.pdf"},
