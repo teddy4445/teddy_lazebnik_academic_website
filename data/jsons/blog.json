@@ -359,6 +359,15 @@
 		 "month": 9,
 		 "day": 15,
 		 "order": 40
+      },
+      {
+         "title":"Introducing - Tracademic!",
+         "description":"Navigating academic submissions can feel like a maze. Researchers juggle multiple deadlines, revisions, and journals, often losing track in the chaos. Tracademic steps in quietly, offering a platform that could be your lifeline—tracking your submissions and deadlines in one neat dashboard. For those who are unfunded or overwhelmed, Tracademic offers a free plan. It's not flashy, but it does what you need: keeps you on top of submission statuses and provides gentle reminders when your papers need attention. Maybe it will not solve all your problems, but it might just help you manage your lab a litter better.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "42"}],
+		 "year": 2024,
+		 "month": 9,
+		 "day": 27,
+		 "order": 41
       }
 	]
 }
