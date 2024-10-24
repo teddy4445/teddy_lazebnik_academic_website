@@ -1632,7 +1632,7 @@
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
-								"name": "Lession 3: Q-learning",
+								"name": "Lession 3: MDP cont.",
 								"link": "/files/rl_course/3.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
@@ -1643,18 +1643,18 @@
 					"explanation": "In the second part, we will study different methods for evaluation of agent's actions as well as how to 'train' them.",
 					"resources": {
 						"Lectures": [{
-								"name": "Lession 4: Policy Gradient Methods (1)",
-								"link": "/files/rl_course/4.pdf",
+								"name": "Lession 4: Model-free prediction",
+								"link": "/files/rl_course/5.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							},{
-								"name": "Lession 5: Policy Gradient Methods (2)",
-								"link": "/files/rl_course/5.pdf",
+								"name": "Lession 5: Model-free control",
+								"link": "/files/rl_course/6.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
-								"name": "Lession 6: Policy Gradient Methods (3)",
-								"link": "/files/rl_course/6.pdf",
+								"name": "Lession 6: Function approximation",
+								"link": "/files/rl_course/7.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							}]
@@ -1664,33 +1664,38 @@
 					"explanation": "In the third and final part, we will learn how to implement our previous knowledge to obtain a RL agent.",
 					"resources": {
 						"Lectures": [{
-								"name": "Lession 7: Imitation Learning",
-								"link": "/files/rl_course/7.pdf",
-								"description": "Thanks to original source",
-								"type": "file"
-							},{
-								"name": "Lession 8: Rewards in RL",
+								"name": "Lession 7: Planning and models",
 								"link": "/files/rl_course/8.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							},{
-								"name": "Lession 9: Deep Reinforcement Learning (1)",
+								"name": "Lession 8: Policy gradients and Actor Critics",
 								"link": "/files/rl_course/9.pdf",
-									"description": "Thanks to original source",
+								"description": "Thanks to original source",
 								"type": "file"
 							},{
-								"name": "Lession 10: Deep Reinforcement Learning (2)",
+								"name": "Lession 9: Deep Reinforcement Learning (1)",
 								"link": "/files/rl_course/10.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
+							}{
+								"name": "Lession 10: Deep Reinforcement Learning (2)",
+								"link": "/files/rl_course/14.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
 							},{
-								"name": "Lession 11: Data Efficient RL",
+								"name": "Lession 11: Mimic learning",
 								"link": "/files/rl_course/11.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							},{
-								"name": "Lession 12: RL Evaluation",
+								"name": "Lession 12a: RL rewards",
 								"link": "/files/rl_course/12.pdf",
+									"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 12b: Monte Carlo Tree Search",
+								"link": "/files/rl_course/13.pdf",
 									"description": "Thanks to original source",
 								"type": "file"
 							}]
