@@ -1586,6 +1586,11 @@
 				}
 				],
 				"Extra": [{
+					"name": "RL project ideas",
+					"link": "/files/ju_rl_course/ideas.docx",
+					"description": "A list of possible RL project ideas for the end of the course.",
+					"type": "file"
+				},{
 					"name": "HuggingFace course",
 					"link": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
 					"description": "This is an amazing practical course by HuggingFace that will show you how practically use RL.",
