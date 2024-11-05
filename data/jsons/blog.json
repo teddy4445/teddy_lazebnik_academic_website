@@ -368,6 +368,15 @@
 		 "month": 9,
 		 "day": 27,
 		 "order": 41
+      },
+      {
+         "title":"A Guide For AI-Revolutionizing Academic Teaching",
+         "description":"Discover how to transform your teaching approach with AI tools, creating engaging and effective learning experiences in just a few easy steps. Embrace the future of academia and revolutionize your classroom today!",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "43"}],
+		 "year": 2024,
+		 "month": 11,
+		 "day": 6,
+		 "order": 42
       }
 	]
 }
