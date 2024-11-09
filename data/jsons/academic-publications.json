@@ -1,5 +1,17 @@
 {
-   "publications":[ 
+   "publications":[
+	{
+         "name":"Economical–epidemiological analysis of the coffee trees rust pandemic",
+         "description":"Coffee leaf rust is a prevalent botanical disease that causes a worldwide reduction in coffee supply and its quality, leading to immense economic losses. While several pandemic intervention policies (PIPs) for tackling this rust pandemic are commercially available, they seem to provide only partial epidemiological relief for farmers. In this work, we develop a high-resolution spatiotemporal economical–epidemiological model, extending the Susceptible-Infected-Removed model, that captures the rust pandemic’s spread in coffee tree farms and its associated economic impact. Through extensive simulations for the case of Colombia, a country that consists mostly of small-size coffee farms and is the second-largest coffee producer in the world, our results show that it is economically impractical to sustain any profit without directly tackling the rust pandemic. Furthermore, even in the hypothetical case where farmers perfectly know their farm’s epidemiological state and the weather in advance, any rust pandemic-related efforts can only amount to a limited profit of roughly 4% on investment. In the more realistic case, any rust pandemic-related efforts are expected to result in economic losses, indicating that major disturbances in the coffee market are anticipated.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/coffee_eco_paper.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Rosenfeld, A., Labib, S., Economical–epidemiological analysis of the coffee trees rust pandemic. Chaos. 2024."}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2024,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Choas",
+         "publicationStatus":"Published"
+      }, 
 	{
          "name":"Mathematical model of dating apps’ influence on sexually transmitted diseases spread",
          "description":"Sexually transmitted diseases (STDs) are a group of pathogens infecting new hosts through sexual interactions. Due to its social and economic burden, multiple models have been proposed to study the spreading of pathogens. In parallel, in the ever-evolving landscape of digital social interactions, the pervasive utilization of dating apps has become a prominent facet of modern society. Despite the surge in popularity and the profound impact on relationship formation, a crucial gap in the literature persists regarding the potential ramifications of dating apps usage on the dynamics of STDs. In this paper, we address this gap by presenting a novel mathematical framework - an extended Susceptible-Infected-Susceptible (SIS) epidemiological model to elucidate the intricate interplay between dating apps engagement and the propagation of STDs. Namely, as dating apps are designed to make users revisit them and have mainly casual sexual interactions with other users, they increase the number of causal partners, which increases the overall spread of STDS. Using extensive simulation, based on real-world data, explore the effect of dating apps adoption and control on the STD spread. We show that an increased adoption of dating apps can result in an STD outbreak if not handled appropriately.",
