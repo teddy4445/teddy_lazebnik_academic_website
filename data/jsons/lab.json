@@ -14,8 +14,8 @@
       {
          "name": "Ariel Alexi",
          "title": "PhD. Student",
-         "description": "Ariel is a PhD Student in Ariel University, Mathematics department, under my supervision. Ariel's research focus on the influence of pandemics on the population furtility and its socio-economic impact. Ariel done her Master degree at Bar Ilan University, Information Science department, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=jk8bS5QAAAAJ&hl=iw' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine.",
-         "s_date": "1/8/2024",
+         "description": "Ariel is a PhD Student in Bar Ilan University, Information System department, under the joint supervision of <a href='https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=en' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine. Ariel's investigates scientometric dynamics using bio-mathematical modeling approach. Ariel did her Master degree at Bar Ilan University, Information Science department, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=jk8bS5QAAAAJ&hl=iw' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine.",
+         "s_date": "1/12/2024",
 		 "e_date": "Current",
 		 "image_link": "img/lab/ariel.png",
 		 "info_link": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en",
@@ -34,6 +34,28 @@
 		 "order": 3
       },
 	  {
+         "name": "Amit Bengiat",
+         "title": "PhD. Student",
+         "description": "Amit is a PhD Student in Bar Ilan University, Information System department, under the joint supervision of <a href='https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=en' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine. Amit's research focused on the scientometric properties and dynamics of academic collaborations.",
+         "s_date": "01/08/2023",
+		 "e_date": "Current",
+		 "image_link": "img/lab/amit.jpeg",
+		 "info_link": "https://scholar.google.com/citations?hl=en&user=LCOIWK0AAAAJ",
+		 "category_name": "Current - offical",
+		 "order": 4
+      },
+	  {
+         "name": "Eden Aloni",
+         "title": "BS. Student",
+         "description": "Eden is a bachelor student in Ariel University, Mathematics department. Eden's research focuses on mathematically modeling the connections between stress and cancer development.",
+         "s_date": "01/12/2023",
+		 "e_date": "Current - offical",
+		 "image_link": "img/lab/eden.jpeg",
+		 "info_link": "",
+		 "category_name": "Current - offical",
+		 "order": 5
+      },
+	  {
          "name": "Naor Matania",
          "title": "Research assistance",
          "description": "Naor lead the RnD development of a machine learning model of clinical data obtained from Clalit. He was responsible for the data preparation, model development, model analysis, and results report and visualization.",
@@ -42,7 +64,7 @@
 		 "image_link": "img/lab/naor.png",
 		 "info_link": "https://github.com/naormatania",
 		 "category_name": "Alumni - unoffical",
-		 "order": 4
+		 "order": 6
       },
 	  {
          "name": "Liron Simon-Keren",
@@ -53,7 +75,7 @@
 		 "image_link": "img/lab/liron.png",
 		 "info_link": "https://scholar.google.com/citations?user=kFAf3CgAAAAJ",
 		 "category_name": "Alumni - unoffical",
-		 "order": 5
+		 "order": 7
       },
 	  {
          "name": "Tzach Fleischer",
@@ -64,7 +86,7 @@
 		 "image_link": "img/lab/tzach.png",
 		 "info_link": "https://www.linkedin.com/in/tzach-fleischer-software-developer?trk=public_profile_browsemap&originalSubdomain=il",
 		 "category_name": "Alumni - unoffical",
-		 "order": 6
+		 "order": 8
       },
 	  {
          "name": "Yonatan Herskowitz",
@@ -75,7 +97,7 @@
 		 "image_link": "img/lab/user.png",
 		 "info_link": "https://www.sciencedirect.com/science/article/pii/S0303264723000916",
 		 "category_name": "Alumni - offical",
-		 "order": 7
+		 "order": 9
       },
 	  {
          "name": "Liel Mushiev",
@@ -86,7 +108,7 @@
 		 "image_link": "img/lab/userf.png",
 		 "info_link": "https://www.linkedin.com/in/liel-mushiev/?originalSubdomain=il",
 		 "category_name": "Alumni - unoffical",
-		 "order": 8
+		 "order": 10
       }
 	]
 }
