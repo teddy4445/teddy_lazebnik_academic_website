@@ -1,15 +1,51 @@
 {
    "publications":[
 	{
+         "name":"Novel Objective Tool to Assess Tremor Reveals Unilateral Focused Ultrasound Improves Tremor Bilaterally",
+         "description":"Tremor in essential tremor and in tremor-dominant Parkinson’s disease is assessed by subjective observations in patients undergoing focused ultrasound thalamotomy, a minimally invasive procedure intended to alleviate tremor in these patients. To develop an objective tool for tremor analysis to be used before and after focused ultrasound thalamotomy treatment in the treated hand (contralateral to ablation) and non-treated (ipsilateral to ablation). Using image processing and signal processing that utilized images of a Archimedes spiral drawing, we created a tool to analyze tremor. First, we showed that the proposed tool reproduces known clinical dynamics on the treated hand, and then we used it to evaluate the clinical dynamics on the non-treated hand. Using the tool we developed, we were able to demonstrate a significant reduction in tremor following focused ultrasound thalamotomy among 132 essential tremor and 26 tremor-dominant Parkinson’s disease patients in the treated hand using drawings of Archimedes spirals up to 1 year following the procedure. Thus, we reproduced known clinical data and therefore validated the proposed tool. In addition, we were able to demonstrate a significant improvement in the non-treated hand as well as a significant deterioration in the efficacy of focused ultrasound thalamotomy over time. Our objective method, which incorporated image processing and signal processing, provided a quantitative measure of tremor reduction following focused ultrasound thalamotomy. It demonstrated significant improvement in tremors in the treated and non-treated hands following focused ultrasound thalamotomy as well as deterioration in the efficacy of treatment over time. If replicated in other studies, this method may complement current subjective assessments.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/rambam_neurology.pdf"},
+					  {"info": "cite", "type": 3, "link": "V. Aharonson, T. Lazebnik, A. Sinai, M. Nassar, I. Senderova, M. Constantinescu, L. Lev Tov, I. Schlesinger, Novel Objective Tool to Assess Tremor Reveals Unilateral Focused Ultrasound Improves Tremor Bilaterally. Neurology and Therapy . 2025."}],
+		 "authors": "Vered Aharonson, Teddy Lazebnik, Alon Sinai, Maria Nassar, Inna Senderova, Marius Constantinescu, Lior Lev Tov, Ilana Schlesinger",
+         "year": 2025,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Neurology and Therapy ",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Spatio-Temporal Model of Combining Chemotherapy with Senolytic Treatment in Lung Cancer",
          "description":"Senescent cells are cells that stop dividing but sustain viability. Cellular senescence is the hallmark of aging, but senescence also appears in cancer, triggered by cells stress, tumor suppression of gene activation, and oncogene activity. In lung cancer, senescent cancer cells secrete VEGF, which initiates a process of angiogenesis, enabling the cancer to grow and proliferate. Chemotherapy kills cancer cells, but some cancer cells become senescent. Hence, a senolytic drug, a drug that eliminates senescent cells, should significantly improve the efficacy of chemotherapy. In this paper, we developed a mathematical spatio-temporal model of combination chemotherapy with senolytic drug in treatment of lung cancer. Model’s simulations of tumor volume growth are shown to agree with mouse experiments in the case where cyclophosphamide is combined with the senolytic drug fisetin. It is then shown how the model can be used to assess the benefits of treatments with different combinations and different schedules of the two drugs in order to achieve optimal tumor volume reduction.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/avner_1.pdf"},
-					  {"info": "cite", "type": 3, "link": "L. Lazebnik, A. Friedman, Spatio-Temporal Model of Combining Chemotherapy with Senolytic Treatment in Lung Cancer. Mathematical Biosciences. 2025."}],
+					  {"info": "cite", "type": 3, "link": "T. Lazebnik, A. Friedman, Spatio-Temporal Model of Combining Chemotherapy with Senolytic Treatment in Lung Cancer. Mathematical Biosciences. 2025."}],
 		 "authors": "Teddy Lazebnik, Avner Friedman",
          "year": 2025,
-         "topic":"AI",
+         "topic":"Biomathematics",
          "type":"Paper",
          "publisher":"Mathematical Biosciences",
+         "publicationStatus":"Published"
+      }, 
+	{
+         "name":"Machine and deep learning performance in out-of-distribution regressions",
+         "description":"Machine learning (ML) and deep learning (DL) models are gaining popularity due to their effectiveness in many computational tasks. These models are based on an intuitive, but frequently unsatisfied, assumption that the data used to train these models is well-representing the task at hand. This gives rise to the out-of-distribution (OOD) challenge which can cause an unexpected drop in the data-driven model's performance. In this study, we evaluate the performance of various ML and DL models in in-distribution (ID) versus OOD prediction. While the degradation in OOD performance is well acknowledged, to the best of our knowledge, this is one of the first studies to quantify it for various models on a large benchmark n = 15 real-world regression datasets. We extensively (runs) compare the ID versus OOD performance of XGBoost, random forest, K-nearest-neighbors, support vector machine, and linear regression models, as well as AutoML models (Tree-based Pipeline Optimization Tool and AutoKeras). In addition, to tackle this challenge, we propose to integrate a symbolic regression (SR) as a feature engineering method model with an ML or DL model to improve its performance for OOD samples. Our results show that the incorporation of SR-derived features significantly enhances the predictive capabilities of both ML and DL models with 3.70% and 10.20%, on average, of the OOD samples, respectively, without reducing ID performance and in fact improving it to a slightly lower extent. As such, this method can help produce more generalized and robust data-driven models.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/Shmuel_2024_Mach._Learn.__Sci._Technol._5_045078.pdf"},
+					  {"info": "cite", "type": 3, "link": "A. Shmuel, O. Glickman, T. Lazebnik, Machine and deep learning performance in out-of-distribution regressions. Machine Learning: Science and Technology. 2025."}],
+		 "authors": "Assaf Shmuel, Oren Glickman, Teddy Lazebnik",
+         "year": 2025,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Machine Learning: Science and Technology",
+         "publicationStatus":"Published"
+      }, 
+	{
+         "name":"Automated landmark-based cat facial analysis and its applications",
+         "description":"Facial landmarks, widely studied in human affective computing, are beginning to gain interest in the animal domain. Specifically, landmark-based geometric morphometric methods have been used to objectively assess facial expressions in cats, focusing on pain recognition and the impact of breed-specific morphology on facial signaling. These methods employed a 48-landmark scheme grounded in cat facial anatomy. Manually annotating these landmarks, however, is a labor-intensive process, deeming it impractical for generating sufficiently large amounts of data for machine learning purposes and for use in applied real-time contexts with cats. Our previous work introduced an AI pipeline for automated landmark detection, which showed good performance in standard machine learning metrics. Nonetheless, the effectiveness of fully automated, end-to-end landmark-based systems for practical cat facial analysis tasks remained underexplored. In this paper we develop AI pipelines for three benchmark tasks using two previously collected datasets of cat faces. The tasks include automated cat breed recognition, cephalic type recognition and pain recognition. Our fully automated end-to-end pipelines reached accuracy of 75% and 66% in cephalic type and pain recognition respectively, suggesting that landmark-based approaches hold promise for automated pain assessment and morphological explorations.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/cat_landmark.pdf"},
+					  {"info": "cite", "type": 3, "link": "G. Martvel, T. Lazebnik, M. eighelstein, S. Meller, I. Shimshoni, L. Finka, S. P. L. Luna, D. M. Mills, H. A. Volk, A. Zamansky, Automated landmark-based cat facial analysis and its applications. Frontiers in Veterinary Science. 2025."}],
+		 "authors": "George Martvel, Teddy Lazebnik, Marcelo Feighelstein, Sebastian Meller, Ilan Shimshoni, Lauren Finka, Stelio P. L. Luna, Daniel S. Mills, Holger A. Volk, Anna Zamansky",
+         "year": 2024,
+         "topic":"AI",
+         "type":"Paper",
+         "publisher":"Frontiers in Veterinary Science",
          "publicationStatus":"Published"
       }, 
 	{
