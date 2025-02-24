@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Spatio-temporal model of combining ADT and chemotherapy with senolytic treatment in metastatic prostate cancer",
+         "description":"Prostate cancer cells depend on androgen for their survival. A standard treatment of metastatic prostate cancer (mPC) is androgen deprivation treatment (ADT). However, after a period of remission, some cancer cells changed into androgen-independent cells, and then treatment proceeds with a combination of ADT and chemotherapy. Senescent cells are cells that stop dividing but sustain viability. Senescence cancer cells are common in cancer, and they affect cancer treatment negatively by secreting inflammatory cytokines and pro-cancer VEGF. In this paper, we include the effect of senescence in a model of mPC. We consider combinations of ADT, chemotherapy, and senolytic drug, which eliminate senescent cells, in a spatio-temporal partial differential equations model, and demonstrate that simulations of the model are in agreement with experimental results. We evaluate the synergy between different doses of chemotherapy and senolytic drugs, at different fixed doses of ADT. We also consider optimal scheduling of the drugs, and the hypothesis that, in optimal schedule, a senolytic drug is to be administered immediately following the chemotherapy drug.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/avner_2.pdf"},
+					  {"info": "cite", "type": 3, "link": "T. Lazebnik, A. Friedman, Spatio-temporal model of combining ADT and chemotherapy with senolytic treatment in metastatic prostate cancer. Journal of Theoretical Biology. 2025."}],
+		 "authors": "Teddy Lazebnik, Avner Friedman",
+         "year": 2025,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Journal of Theoretical Biology",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Novel Objective Tool to Assess Tremor Reveals Unilateral Focused Ultrasound Improves Tremor Bilaterally",
          "description":"Tremor in essential tremor and in tremor-dominant Parkinson’s disease is assessed by subjective observations in patients undergoing focused ultrasound thalamotomy, a minimally invasive procedure intended to alleviate tremor in these patients. To develop an objective tool for tremor analysis to be used before and after focused ultrasound thalamotomy treatment in the treated hand (contralateral to ablation) and non-treated (ipsilateral to ablation). Using image processing and signal processing that utilized images of a Archimedes spiral drawing, we created a tool to analyze tremor. First, we showed that the proposed tool reproduces known clinical dynamics on the treated hand, and then we used it to evaluate the clinical dynamics on the non-treated hand. Using the tool we developed, we were able to demonstrate a significant reduction in tremor following focused ultrasound thalamotomy among 132 essential tremor and 26 tremor-dominant Parkinson’s disease patients in the treated hand using drawings of Archimedes spirals up to 1 year following the procedure. Thus, we reproduced known clinical data and therefore validated the proposed tool. In addition, we were able to demonstrate a significant improvement in the non-treated hand as well as a significant deterioration in the efficacy of focused ultrasound thalamotomy over time. Our objective method, which incorporated image processing and signal processing, provided a quantitative measure of tremor reduction following focused ultrasound thalamotomy. It demonstrated significant improvement in tremors in the treated and non-treated hands following focused ultrasound thalamotomy as well as deterioration in the efficacy of treatment over time. If replicated in other studies, this method may complement current subjective assessments.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/rambam_neurology.pdf"},
@@ -9,7 +21,7 @@
          "year": 2025,
          "topic":"Machine Learning",
          "type":"Paper",
-         "publisher":"Neurology and Therapy ",
+         "publisher":"Neurology and Therapy",
          "publicationStatus":"Published"
       },
 	{
