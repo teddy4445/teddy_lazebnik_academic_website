@@ -1714,7 +1714,7 @@
 			"code": "4260910",
 			"year": "2025",
 			"topic": "cs",
-			"semester": "1",
+			"semester": "2",
 			"university": "Ariel University",
 			"department": "Industrial Engineering and Management",
 			"location_class": "Zoom",
@@ -1869,6 +1869,118 @@
 								"name": "Lession 12b: Monte Carlo Tree Search",
 								"link": "/files/rl_course/13.pdf",
 									"description": "Thanks to original source",
+								"type": "file"
+							}]
+					}
+				}
+			]
+		},
+		{
+			"name": "Topology",
+			"passkey": "",
+			"code": "7531910",
+			"year": "2025",
+			"topic": "Mathematical",
+			"semester": "2",
+			"university": "Ariel University",
+			"department": "Mathematics",
+			"location_class": "Zoom",
+			"syllabus": "/files/topology_syllabus.docx",
+			"description": "This course introduces fundamental concepts in mathematical topology, including continuity, compactness, connectedness, and fundamental groups. Students will explore topological spaces, homeomorphisms, and algebraic topology techniques with applications in geometry and analysis.",
+			"grade_parts": [{
+					"name": "Final project/Exam - to be determined",
+					"percent": 90
+				},
+				{
+					"name": "Class presentation",
+					"percent": 10
+				}
+			],
+			"resources": {
+				"Must":[
+				],
+				"Extra": [{
+					"name": "Extra tasks and materials",
+					"link": "https://math-wiki.com/index.php/88-222_%D7%AA%D7%A9%D7%A4%D7%90_%D7%A1%D7%9E%D7%A1%D7%98%D7%A8_%D7%91_%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%A1%D7%98%D7%99%D7%9D/%D7%AA%D7%9E%D7%A8",
+					"description": "Extra Tasks from Bar Ilan University Tpology course (2021).",
+					"type": "file"
+				}]
+			},
+			"updates": [{
+				"title": "Welcome to our Topology course!",
+				"description": "All the materials will be uploaded here. ",
+				"date": "09.03.2025",
+				"link": ""
+			}
+			],
+			"modules": [{
+					"title": "All the materials, no sub-subjects in this course",
+					"explanation": "What the title says.",
+					"resources": {
+						"Lectures": [{
+								"name": "Lession 1: Introduction ",
+								"link": "https://math-wiki.com/images/5/54/Top1Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 2: Open and close sets",
+								"link": "https://math-wiki.com/images/0/03/Top2Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 3: Heine.",
+								"link": "https://math-wiki.com/images/e/e9/Top3Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 4: Norm, Metric, and Topology spaces.",
+								"link": "https://math-wiki.com/images/5/50/Top4Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 5: Topological properties.",
+								"link": "https://math-wiki.com/images/d/d6/Top5Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 6: Topological properties (cont.).",
+								"link": "https://math-wiki.com/images/9/97/Top6Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 7: Conectivity.",
+								"link": "https://math-wiki.com/images/9/9e/Top7Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 8: Conectivity (cont.).",
+								"link": "https://math-wiki.com/images/1/1e/Top8Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 9: Groups.",
+								"link": "https://https://math-wiki.com/images/d/db/Top9Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 10: Compactness.",
+								"link": "https://math-wiki.com/images/2/28/Top10Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 11: Compactness (cont.).",
+								"link": "https://math-wiki.com/images/c/c2/Top11Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 12: Lebesque.",
+								"link": "https://math-wiki.com/images/d/d6/Top12Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
+							},{
+								"name": "Lession 13: Extras - home reading.",
+								"link": "https://math-wiki.com/images/6/64/Top13Lect21.pdf",
+								"description": "Thanks to original source",
 								"type": "file"
 							}]
 					}
