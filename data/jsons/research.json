@@ -4,7 +4,7 @@
 
 	],
 	"projects": [{
-			"name": "Understanding pandemic spread and optimizing resource allocation to control it",
+			"name": "Individual and community personalized medicine using AI",
 			"participants": [{
 				"name": "Adi Shuchami",
 				"title": "Mc.S.",
@@ -12,37 +12,103 @@
 				"websiteLink": "",
 				"googleLink": "https://scholar.google.com/citations?hl=en&user=vbN5b1EAAAAJ",
 				"linkedinLink": "https://www.linkedin.com/in/adi-shuchami-1a93aa7a/?originalSubdomain=il"
-			},{
-					"name": "Ariel Alexi",
-					"title": "Mc.S.",
-					"role": "Lead researcher",
-					"websiteLink": "",
-					"googleLink": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en",
-					"linkedinLink": "https://www.linkedin.com/in/ariel-alexi/"
-				}],
-			"description": "This line of projects focuses on developing mathematical models and simulations to predict the spread of infectious diseases - mainly using extended spatio-temporal SIR models with agent-based simulation and decision making using RL. By leveraging these models, we aim to create efficient strategies for resource allocation, ensuring optimal control and mitigation of pandemics.",
+			}],
+			"description": "This initiative aims to harness the power of artificial intelligence (AI) to tailor medical treatments to individual patients and improve medical resource allocation for specific communities. By analyzing vast amounts of medical data, from our clinical partners, we strive to develop personalized treatment protocols that improve health outcomes and enhance the efficacy of medical interventions.",
+			"start_month": 10,
+			"start_year": 2023,
+			"end_month": 11,
+			"end_year": 2025,
+			"team_members": 2,
+			"relevant_resources": []
+		},{
+			"name": "Biomathematical modeling of cancer and beyound",
+			"participants": [{
+				"name": "Avner Friedman",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "https://math.osu.edu/people/friedman.158",
+				"googleLink": "https://scholar.google.com/citations?user=S2JQtgQAAAAJ&hl=en",
+				"linkedinLink": ""
+			}],
+			"description": "Developing bio-mathematical models for cancer spread and treatment as well as other diseases using ODEs, PDEs, and computer simulations.",
 			"start_month": 3,
 			"start_year": 2024,
-			"end_month": 7,
+			"end_month": 3,
+			"end_year": 2026,
+			"team_members": 2,
+			"relevant_resources": []
+		},{
+			"name": "Unvealing the Informal Economy Mistories Using AI",
+			"participants": [{
+				"name": "Labib Shami",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "https://www.taubcenter.org.il/en/team/labib-shami/",
+				"googleLink": "https://scholar.google.com/citations?user=3JxF3NkAAAAJ&hl=en",
+				"linkedinLink": "https://www.linkedin.com/in/labib-shami-b97b0521a"
+			}],
+			"description": "This research explores the hidden dynamics of the informal economy using AI-driven methods, uncovering patterns, behaviors, and socio-economic impacts that traditional approaches often miss. By leveraging machine learning and computational models, it provides deeper insights for policymakers, economists, and researchers to better understand and address the challenges of informal labor and markets.",
+			"start_month": 10,
+			"start_year": 2023,
+			"end_month": 11,
 			"end_year": 2025,
-			"team_members": 3,
+			"team_members": 2,
+			"relevant_resources": []
+		},{
+			"name": "Developing the next step of physics-inspired symbolic regression",
+			"participants": [{
+				"name": "Alexander Liberzon",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "https://english.tau.ac.il/profile/alexlib",
+				"googleLink": "https://scholar.google.com/citations?user=3vgugREAAAAJ&hl=en",
+				"linkedinLink": "https://il.linkedin.com/in/alexliberzon"
+			},
+			{
+				"name": "Liron Simon-Keren",
+				"title": "Ms.c.",
+				"role": "Ms.c. student",
+				"websiteLink": "https://github.com/LironSimon/SciMED",
+				"googleLink": "https://scholar.google.com/citations?user=kFAf3CgAAAAJ&hl=en",
+				"linkedinLink": "https://il.linkedin.com/in/liron-simon"
+			}],
+			"description": "This research advances physics-inspired symbolic regression, developing next-generation methods that uncover interpretable mathematical models from data. By integrating physical principles with AI-driven techniques, it enhances equation discovery, offering deeper insights into complex systems across scientific domains.",
+			"start_month": 3,
+			"start_year": 2023,
+			"end_month": 3,
+			"end_year": 2026,
+			"team_members": 2,
 			"relevant_resources": []
 		},{
 			"name": "A biologically-informed and data-driven approach to scientometrics",
 			"participants": [{
 				"name": "Ariel Rosenfeld",
 				"title": "Ph.D.",
-				"role": "Co-author",
+				"role": "Co-author & Co-supervisor",
 				"websiteLink": "https://arielrosenfeld.com/",
 				"googleLink": "https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=iw&oi=ao",
 				"linkedinLink": ""
-			}],
+			},{
+					"name": "Ariel Alexi",
+					"title": "Mc.S.",
+					"role": "Ph.D. student",
+					"websiteLink": "",
+					"googleLink": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en",
+					"linkedinLink": "https://www.linkedin.com/in/ariel-alexi/"
+				},{
+					"name": "Amit Bengiat",
+					"title": "Mc.S.",
+					"role": "Ph.D. student",
+					"websiteLink": "",
+					"googleLink": "",
+					"linkedinLink": "https://il.linkedin.com/in/amit-bengiat-379288230"
+				}],
 			"description": "This research line leverages biological principles and advanced data analytics to evaluate and understand scientific research impact and trends. By integrating these approaches, we aim to develop more accurate and insightful metrics for assessing scientific contributions and guiding future research directions.",
 			"start_month": 11,
 			"start_year": 2023,
-			"end_month": 3,
-			"end_year": 2025,
-			"team_members": 2,
+			"end_month": 11,
+			"end_year": 2027,
+			"team_members": 3,
 			"relevant_resources": []
 		},{
 			"name": "Understanding animals' behavior and improving their wellness using AI",
@@ -57,18 +123,18 @@
 			"description": "By analyzing behavioral and sensorial data, we seek to gain deeper insights into animal health and habits, enabling the development of advanced strategies for monitoring, diagnosing, and improving their overall wellness. This approach supports more effective and compassionate care practices for animals. For this line of work, we closely work with the Tech4animal lab from University of Haifa.",
 			"start_month": 6,
 			"start_year": 2023,
-			"end_month": 9,
+			"end_month": 10,
 			"end_year": 2025,
 			"team_members": 2,
 			"relevant_resources": []
 		},{
-			"name": "Individual and community personalized medicine using AI",
+			"name": "Understanding pandemic spread and optimizing resource allocation to control it",
 			"participants": [],
-			"description": "This initiative aims to harness the power of artificial intelligence (AI) to tailor medical treatments to individual patients and improve medical resource allocation for specific communities. By analyzing vast amounts of medical data, from our clinical partners, we strive to develop personalized treatment protocols that improve health outcomes and enhance the efficacy of medical interventions.",
-			"start_month": 10,
-			"start_year": 2023,
-			"end_month": 9,
-			"end_year": 2025,
+			"description": "This line of projects focuses on developing mathematical models and simulations to predict the spread of infectious diseases - mainly using extended spatio-temporal SIR models with agent-based simulation and decision making using RL. By leveraging these models, we aim to create efficient strategies for resource allocation, ensuring optimal control and mitigation of pandemics.",
+			"start_month": 3,
+			"start_year": 2024,
+			"end_month": 3,
+			"end_year": 2026,
 			"team_members": 1,
 			"relevant_resources": []
 		},{
