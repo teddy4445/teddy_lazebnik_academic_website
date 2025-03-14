@@ -14,7 +14,7 @@
       {
          "name": "Ariel Alexi",
          "title": "PhD. Student",
-         "description": "Ariel is a PhD Student in Bar Ilan University, Information System department, under the joint supervision of <a href='https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=en' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine. Ariel's investigates scientometric dynamics using bio-mathematical modeling approach. Ariel did her Master degree at Bar Ilan University, Information Science department, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=jk8bS5QAAAAJ&hl=iw' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine.",
+         "description": "Ariel is a PhD Student in Bar Ilan University, department of Information Science, under the joint supervision of <a href='https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=en' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine. Ariel's investigates scientometric dynamics using bio-mathematical modeling approach. Ariel did her Master degree at Bar Ilan University, department of Information Science, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=jk8bS5QAAAAJ&hl=iw' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine.",
          "s_date": "1/12/2024",
 		 "e_date": "Current",
 		 "image_link": "img/lab/ariel.png",
@@ -23,48 +23,81 @@
 		 "order": 2
       },
 	  {
+         "name": "Amit Bengiat",
+         "title": "PhD. Student",
+         "description": "Amit is a PhD Student in Bar Ilan University, department of Information Science, under the joint supervision of <a href='https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=en' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine. Amit's research focused on the scientometric properties and dynamics of academic collaborations.",
+         "s_date": "01/11/2024",
+		 "e_date": "Current",
+		 "image_link": "img/lab/amit.jpeg",
+		 "info_link": "https://il.linkedin.com/in/amit-bengiat-379288230",
+		 "category_name": "Current - offical",
+		 "order": 3
+      },
+	  {
          "name": "Dr. Assaf Shmuel",
          "title": "PhD. Student",
-         "description": "Assaf is a PhD Student in Bar Ilan University, Computer Science department, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=WWPHtjIAAAAJ&hl=en' alt='Dr. Oren Glickman'>Dr. Oren Glickman</a> and mine. Assaf's research focuses on integrating symbolic regression into machine and deep learning models to obtain accurate and explainable data-driven models. An additional part of his research focuses on generalization and out-of-distribution prediction in machine and deep learning.",
+         "description": "Assaf is a PhD Student in Bar Ilan University, department of Computer Science, under the joint supervision of <a href='https://scholar.google.co.il/citations?user=WWPHtjIAAAAJ&hl=en' alt='Dr. Oren Glickman'>Dr. Oren Glickman</a> and mine. Assaf's research focuses on integrating symbolic regression into machine and deep learning models to obtain accurate and explainable data-driven models. An additional part of his research focuses on generalization and out-of-distribution prediction in machine and deep learning.",
          "s_date": "01/08/2023",
 		 "e_date": "Current",
 		 "image_link": "img/lab/assaf.png",
 		 "info_link": "https://scholar.google.com/citations?hl=en&user=LCOIWK0AAAAJ",
 		 "category_name": "Current - offical",
-		 "order": 3
-      },
-	  {
-         "name": "Amit Bengiat",
-         "title": "PhD. Student",
-         "description": "Amit is a PhD Student in Bar Ilan University, Information System department, under the joint supervision of <a href='https://scholar.google.com/citations?user=jk8bS5QAAAAJ&hl=en' alt='Prof. Ariel Rosenfeld'>Prof. Ariel Rosenfeld</a> and mine. Amit's research focused on the scientometric properties and dynamics of academic collaborations.",
-         "s_date": "01/11/2024",
-		 "e_date": "Current",
-		 "image_link": "img/lab/amit.jpeg",
-		 "info_link": "",
-		 "category_name": "Current - offical",
 		 "order": 4
       },
 	  {
-         "name": "Eden Aloni",
-         "title": "BS. Student",
-         "description": "Eden is a bachelor student in Ariel University, Mathematics department. Eden's research focuses on mathematically modeling the connections between stress and cancer development.",
-         "s_date": "01/12/2024",
+         "name": "Lukas Toral",
+         "title": "McS. Student",
+         "description": "Lukas is a Master student in Jonkoping University, department of Computing. Lukas's research focuses on using pre-trained large language models with reinforcement learning in a teacher-student architecture to accelerate reinforcement learning models' convergence.",
+         "s_date": "01/01/2025",
 		 "e_date": "Current - offical",
-		 "image_link": "img/lab/eden.jpeg",
+		 "image_link": "img/lab/user.png",
 		 "info_link": "",
 		 "category_name": "Current - offical",
 		 "order": 5
       },
 	  {
+         "name": "Bilge Taskin",
+         "title": "McS. Student",
+         "description": "Bilge is a Master student in Jonkoping University, department of Computing. Bilge's research focuses on introducing domain knowledge using pre-trained large language models to physical symbolic regression models.",
+         "s_date": "01/01/2025",
+		 "e_date": "Current - offical",
+		 "image_link": "img/lab/bilge.jpg",
+		 "info_link": "",
+		 "category_name": "Current - offical",
+		 "order": 6
+      },
+	  {
+         "name": "Wenxiong Xie",
+         "title": "McS. Student",
+         "description": "Wenxiong is a Master student in Jonkoping University, department of Computing. Wenxiong's research focuses on introducing domain knowledge using pre-trained large language models to physical symbolic regression models.",
+         "s_date": "01/01/2025",
+		 "e_date": "Current - offical",
+		 "image_link": "img/lab/user.png",
+		 "info_link": "",
+		 "category_name": "Current - offical",
+		 "order": 7
+      },
+	  {
+         "name": "Eden Aloni",
+         "title": "BS. Student",
+         "description": "Eden is a bachelor student in Ariel University, department of Mathematics. Eden's research focuses on mathematically modeling the connections between stress and cancer development.",
+         "s_date": "01/12/2024",
+		 "e_date": "Current - offical",
+		 "image_link": "img/lab/eden.jpeg",
+		 "info_link": "",
+		 "category_name": "Current - offical",
+		 "order": 8
+      },
+	  {
          "name": "Naor Matania",
          "title": "Research assistance",
-         "description": "Naor lead the RnD development of a machine learning model of clinical data obtained from Clalit. He was responsible for the data preparation, model development, model analysis, and results report and visualization.",
+         "description": "Naor lead the research and development of a machine learning model of clinical data obtained from Clalit for lung cancer prediction from sparse blood samples.",
          "s_date": "1/06/2023",
 		 "e_date": "1/12/2023",
 		 "image_link": "img/lab/naor.png",
 		 "info_link": "https://github.com/naormatania",
 		 "category_name": "Alumni - unoffical",
-		 "order": 6
+		 "order": 9
       },
 	  {
          "name": "Liron Simon-Keren",
@@ -75,18 +108,18 @@
 		 "image_link": "img/lab/liron.png",
 		 "info_link": "https://scholar.google.com/citations?user=kFAf3CgAAAAJ",
 		 "category_name": "Alumni - unoffical",
-		 "order": 7
+		 "order": 10
       },
 	  {
          "name": "Tzach Fleischer",
          "title": "Research assistance",
-         "description": "Tzach participent in a study entitled 'Benchmarking biologically-inspired automatic machine learning for economic tasks'. He was responsible for the data curation, prepration, and running the experiments.",
+         "description": "Tzach participent in a study entitled 'Benchmarking biologically-inspired automatic machine learning for economic tasks'. He was responsible for the data curation, study design, and running the experiments.",
          "s_date": "1/05/2023",
 		 "e_date": "1/08/2023",
 		 "image_link": "img/lab/tzach.png",
 		 "info_link": "https://www.linkedin.com/in/tzach-fleischer-software-developer?trk=public_profile_browsemap&originalSubdomain=il",
 		 "category_name": "Alumni - unoffical",
-		 "order": 8
+		 "order": 11
       },
 	  {
          "name": "Yonatan Herskowitz",
@@ -97,7 +130,7 @@
 		 "image_link": "img/lab/user.png",
 		 "info_link": "https://www.sciencedirect.com/science/article/pii/S0303264723000916",
 		 "category_name": "Alumni - offical",
-		 "order": 9
+		 "order": 12
       },
 	  {
          "name": "Liel Mushiev",
@@ -108,7 +141,7 @@
 		 "image_link": "img/lab/userf.png",
 		 "info_link": "https://www.linkedin.com/in/liel-mushiev/?originalSubdomain=il",
 		 "category_name": "Alumni - unoffical",
-		 "order": 10
+		 "order": 13
       }
 	]
 }

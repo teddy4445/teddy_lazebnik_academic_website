@@ -18,15 +18,21 @@ class TeamCard extends Element
 	}
 	
 	// convert the object into HTML
-	toHtml()
-	{
+	toHtml() {
 		var answer = '<div class="academic-papers-panel"><div class="row"><div class="col-lg-8 col-md-8 col-sm-12"><h2 class="blog-title">' 
 		+ this.name + '</h2><h3 class="blog-title-second">' 
 		+ this.title + ' (' + this.category_name + ')' + '</h3><span class="blog-data">'
-		+ this.s_date + " - " + this.e_date +  '</span><p class="member-disc"><br>'
-		+ this.description + '</p><a href="'
-		+ this.info_link + '" class="download-btn member-link-btn">Learn more</a></div><div class="col-lg-4 col-md-4 col-sm-12 img-delete-mobile member-div-image"><img src="/' 
+		+ this.s_date + " - " + this.e_date + '</span><p class="member-disc"><br>'
+		+ this.description + '</p>';
+
+		// Only add the button if info_link is not empty
+		if (this.info_link && this.info_link.trim() !== '') {
+			answer += '<a href="' + this.info_link + '" class="download-btn member-link-btn">Learn more</a>';
+		}
+
+		answer += '</div><div class="col-lg-4 col-md-4 col-sm-12 img-delete-mobile member-div-image"><img src="/' 
 		+ this.image_link + '" alt="Lab member\'s image" /> </div></div></div></div>';
+
 		return answer;
 	}
 	
