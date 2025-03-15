@@ -1718,7 +1718,7 @@
 			"university": "Ariel University",
 			"department": "Industrial Engineering and Management",
 			"location_class": "Zoom",
-			"syllabus": "/files/rl_syllabus.pdf",
+			"syllabus": "/files/rl_ariel_sylabous.docx",
 			"description": "The quest to fully realize the potential of Artificial Intelligence (AI), requires autonomous systems that can learn to make good decisions by interacting with their environment. Reinforcement learning is a paradigm that meets these requirements, and can be applied to various tasks, including game-playing, healthcare, economics, and robotics. This course gives a solid introduction to reinforcement learning with its core approaches and challenges, and is structured around several lectures, assignments, and a project.",
 			"grade_parts": [{
 					"name": "Final project",
@@ -1890,15 +1890,15 @@
 			"university": "Ariel University",
 			"department": "Mathematics",
 			"location_class": "Zoom",
-			"syllabus": "/files/topology_syllabus.docx",
+			"syllabus": "/files/topology_sylabous.docx",
 			"description": "This course introduces fundamental concepts in mathematical topology, including continuity, compactness, connectedness, and fundamental groups. Students will explore topological spaces, homeomorphisms, and algebraic topology techniques with applications in geometry and analysis.",
 			"grade_parts": [{
-					"name": "Final project/Exam - to be determined",
-					"percent": 90
+					"name": "Exam",
+					"percent": 75
 				},
 				{
 					"name": "Class presentation",
-					"percent": 10
+					"percent": 25
 				}
 			],
 			"resources": {
