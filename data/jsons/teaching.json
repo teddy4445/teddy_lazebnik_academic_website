@@ -1785,7 +1785,7 @@
 			"updates": [{
 				"title": "Welcome to our RL course!",
 				"description": "All the materials will be uploaded here. ",
-				"date": "09.03.2025",
+				"date": "03.09.2025",
 				"link": ""
 			}
 			],
@@ -1902,19 +1902,60 @@
 				}
 			],
 			"resources": {
-				"Must":[
+				"Must":[{
+					"name": "Final course presentation paper #1",
+					"link": "/files/topology_course_papers/bubble_method_topology.pdf",
+					"description": "Bubble method for topology and shape optimization of structures",
+					"type": "file"
+				},{
+					"name": "Final course presentation paper #2",
+					"link": "/files/topology_course_papers/graph_topology_genetic_algorithm.pdf",
+					"description": "Graph representation for structural topology optimization using genetic algorithms",
+					"type": "file"
+				},{
+					"name": "Final course presentation paper #3",
+					"link": "/files/topology_course_papers/intro_to_topology.pdf",
+					"description": "Introduction to Topology - you should pick one chapter, not the full book.",
+					"type": "file"
+				},{
+					"name": "Final course presentation paper #4",
+					"link": "/files/topology_course_papers/survey_topology_visuals.pdf",
+					"description": "A Survey of Topology-based Methods in Visualization",
+					"type": "file"
+				},{
+					"name": "Final course presentation paper #5",
+					"link": "/files/topology_course_papers/topology_graph_patterns.pdf",
+					"description": "Capturing Topology in Graph Pattern Matching",
+					"type": "file"
+				},{
+					"name": "Final course presentation paper #6",
+					"link": "/files/topology_course_papers/topology_shape_optimization.pdf",
+					"description": "Integration of topology and shape optimization for design of structural components",
+					"type": "file"
+				},{
+					"name": "Final course presentation paper #7",
+					"link": "/files/topology_course_papers/topology_with_data.pdf",
+					"description": "Topology and Data",
+					"type": "file"
+				}
 				],
 				"Extra": [{
 					"name": "Extra tasks and materials",
 					"link": "https://math-wiki.com/index.php/88-222_%D7%AA%D7%A9%D7%A4%D7%90_%D7%A1%D7%9E%D7%A1%D7%98%D7%A8_%D7%91_%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%A1%D7%98%D7%99%D7%9D/%D7%AA%D7%9E%D7%A8",
-					"description": "Extra Tasks from Bar Ilan University Tpology course (2021).",
+					"description": "Extra Tasks from Bar Ilan University Topology course (2021).",
 					"type": "file"
 				}]
 			},
-			"updates": [{
+			"updates": [
+			{
+				"title": "Presentation papers are online",
+				"description": "Please checkout the presenation papers and pick one for yourself. For the book, you can pick one chapter (there are 5). You can do the work and presentation alone or in pairs. Please note that the presentation will take place in the last lecture.",
+				"date": "03.21.2025",
+				"link": ""
+			},{
 				"title": "Welcome to our Topology course!",
 				"description": "All the materials will be uploaded here. ",
-				"date": "09.03.2025",
+				"date": "03.09.2025",
 				"link": ""
 			}
 			],
@@ -1937,6 +1978,11 @@
 								"link": "https://math-wiki.com/images/0/03/Top2Lect21.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
+							},{
+								"name": "Lession 2 - video",
+								"link": "https://biu-ac-il.zoom.us/rec/share/P2VmDRpwSvwi-gSi6D-v5bFPOaiQcPiebiEiyfftMJDQy9_KnFoPVPnHO_p_HZos.a0-JVsu8_bioaaBC",
+								"description": "",
+								"type": "video"
 							},{
 								"name": "Lession 3: Heine.",
 								"link": "https://math-wiki.com/images/e/e9/Top3Lect21.pdf",
