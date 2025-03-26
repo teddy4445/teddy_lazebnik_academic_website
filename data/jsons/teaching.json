@@ -1809,6 +1809,11 @@
 									"description": "Thanks to original source",
 								"type": "slides"
 							},{
+								"name": "Lession 2 - video",
+								"link": "https://biu-ac-il.zoom.us/rec/share/yGcMkSWsPzKRFvg9PHwb2oSGrRvcPU2_OFPp9r88yisR_KX-tqy4Iylh2awosVOV.Ckw29fw85he78A3n",
+									"description": "",
+								"type": "video"
+							},{
 								"name": "Lession 3: MDP cont.",
 								"link": "/files/rl_course/3.pdf",
 									"description": "Thanks to original source",
@@ -1988,6 +1993,11 @@
 								"link": "https://math-wiki.com/images/e/e9/Top3Lect21.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
+							},{
+								"name": "Lession 3 - video",
+								"link": "https://biu-ac-il.zoom.us/rec/share/T9pmxSEQpydRRjmM7dJb38Sm5yrVC0H4y9JJIJnPhJOBhDqGC0qnp_sKphZAZeS8.pBDVNWjDMws8n2bN",
+								"description": "",
+								"type": "video"
 							},{
 								"name": "Lession 4: Norm, Metric, and Topology spaces.",
 								"link": "https://math-wiki.com/images/5/50/Top4Lect21.pdf",
