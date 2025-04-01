@@ -876,7 +876,7 @@
          "publicationStatus":"Published"
       },
       {
-         "name":"Mathematical Model for the BCG-based Treatment of Type 1Diabetes",
+         "name":"Mathematical Model for the BCG-based Treatment of Type 1 Diabetes",
          "description":"We introduces a model of immunotherapy treatment, namely the Bacillus Calmette-Guerin (BCG) vac-cine, of type 1  diabetes (T1D).",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/abstract_for_DSABNS_2022_conference.pdf"},
 					  {"info": "cite", "type": 3, "link": ""}],

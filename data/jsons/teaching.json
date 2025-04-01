@@ -1793,26 +1793,33 @@
 					"title": "Introduction and basic concepts",
 					"explanation": "In the first part, we will explore the main ideas behind RL.",
 					"resources": {
+						"Records": [{
+								"name": "Lession 1 - video",
+								"link": "https://biu-ac-il.zoom.us/rec/share/Qciqx3L3_9AurzPOgDW30sqVoBuTgYuoLPGkIUUegUm0PyS8Ob3ZgY5M9LGbGUDO.tR1vNkkfpGecy-Ig",
+									"description": "",
+								"type": "video"
+							},{
+								"name": "Lession 2 - video",
+								"link": "https://biu-ac-il.zoom.us/rec/share/yGcMkSWsPzKRFvg9PHwb2oSGrRvcPU2_OFPp9r88yisR_KX-tqy4Iylh2awosVOV.Ckw29fw85he78A3n",
+									"description": "",
+								"type": "video"
+							},{
+								"name": "Lession 3 - video",
+								"link": "https://biu-ac-il.zoom.us/rec/share/zo_Pi_tuSC1_yDzJaCJRApmVzm-OWlKoTttL70UTPvqtT2JNLNjrVC2LfQoTT6mU.wyLKKWB4O7KhuyjC",
+									"description": "",
+								"type": "video"
+							}]
+					},
 						"Lectures": [{
 								"name": "Lession 1: Introduction to Reinforcement Learning",
 								"link": "/files/rl_course/1.pdf",
 									"description": "Thanks to original source",
 								"type": "slides"
 							},{
-								"name": "Lession 1 - video",
-								"link": "https://biu-ac-il.zoom.us/rec/share/Qciqx3L3_9AurzPOgDW30sqVoBuTgYuoLPGkIUUegUm0PyS8Ob3ZgY5M9LGbGUDO.tR1vNkkfpGecy-Ig",
-									"description": "",
-								"type": "video"
-							},{
 								"name": "Lession 2: Tabular MDP Planning and RL Policy Evaluation",
 								"link": "/files/rl_course/2.pdf",
 									"description": "Thanks to original source",
 								"type": "slides"
-							},{
-								"name": "Lession 2 - video",
-								"link": "https://biu-ac-il.zoom.us/rec/share/yGcMkSWsPzKRFvg9PHwb2oSGrRvcPU2_OFPp9r88yisR_KX-tqy4Iylh2awosVOV.Ckw29fw85he78A3n",
-									"description": "",
-								"type": "video"
 							},{
 								"name": "Lession 3: MDP cont.",
 								"link": "/files/rl_course/3.pdf",
@@ -1953,6 +1960,12 @@
 			},
 			"updates": [
 			{
+				"title": "Register your presentation pick in this file",
+				"description": "Please register your paper so the other will not pick the same one in the following file: <a href='https://docs.google.com/spreadsheets/d/1Xjy1vhk4BOTDlxEj6tlSKe7M9GfpMJT4YrXJJaDAnbY/edit?usp=sharing'>here</a>.",
+				"date": "03.21.2025",
+				"link": ""
+			},
+			{
 				"title": "Presentation papers are online",
 				"description": "Please checkout the presenation papers and pick one for yourself. For the book, you can pick one chapter (there are 5). You can do the work and presentation alone or in pairs. Please note that the presentation will take place in the last lecture.",
 				"date": "03.21.2025",
@@ -1968,36 +1981,42 @@
 					"title": "All the materials, no sub-subjects in this course",
 					"explanation": "What the title says.",
 					"resources": {
-						"Lectures": [{
-								"name": "Lession 1: Introduction ",
-								"link": "https://math-wiki.com/images/5/54/Top1Lect21.pdf",
-								"description": "Thanks to original source",
-								"type": "file"
-							},{
+						"Records": [{
 								"name": "Lession 1 - video",
 								"link": "https://biu-ac-il.zoom.us/rec/share/3Bfp7qlUjkhZwlM7_DoJwKHcx4UO2UMxQ8iKZYOHxofQ0MhS4Hk3k0znVIoopQI._FufCbTjuZW0WOv5",
 									"description": "",
 								"type": "video"
+							},{
+								"name": "Lession 2 - video",
+								"link": "https://biu-ac-il.zoom.us/rec/share/P2VmDRpwSvwi-gSi6D-v5bFPOaiQcPiebiEiyfftMJDQy9_KnFoPVPnHO_p_HZos.a0-JVsu8_bioaaBC",
+								"description": "",
+								"type": "video"
+							},,{
+								"name": "Lession 3 - video",
+								"link": "https://biu-ac-il.zoom.us/rec/share/T9pmxSEQpydRRjmM7dJb38Sm5yrVC0H4y9JJIJnPhJOBhDqGC0qnp_sKphZAZeS8.pBDVNWjDMws8n2bN",
+								"description": "",
+								"type": "video"
+							},{
+								"name": "Lession 4 - video",
+								"link": "https://biu-ac-il.zoom.us/rec/share/_M3K_cgRr29pb8ZO_onbO_2LN6LtTY1jyCG8htF3_O80V2ZOHDpCTol82Pz-ybq_.x8s-e8bNeUakF6FP",
+								"description": "",
+								"type": "video"
+							}],
+						"Materials": [{
+								"name": "Lession 1: Introduction ",
+								"link": "https://math-wiki.com/images/5/54/Top1Lect21.pdf",
+								"description": "Thanks to original source",
+								"type": "file"
 							},{
 								"name": "Lession 2: Open and close sets",
 								"link": "https://math-wiki.com/images/0/03/Top2Lect21.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
 							},{
-								"name": "Lession 2 - video",
-								"link": "https://biu-ac-il.zoom.us/rec/share/P2VmDRpwSvwi-gSi6D-v5bFPOaiQcPiebiEiyfftMJDQy9_KnFoPVPnHO_p_HZos.a0-JVsu8_bioaaBC",
-								"description": "",
-								"type": "video"
-							},{
 								"name": "Lession 3: Heine.",
 								"link": "https://math-wiki.com/images/e/e9/Top3Lect21.pdf",
 								"description": "Thanks to original source",
 								"type": "file"
-							},{
-								"name": "Lession 3 - video",
-								"link": "https://biu-ac-il.zoom.us/rec/share/T9pmxSEQpydRRjmM7dJb38Sm5yrVC0H4y9JJIJnPhJOBhDqGC0qnp_sKphZAZeS8.pBDVNWjDMws8n2bN",
-								"description": "",
-								"type": "video"
 							},{
 								"name": "Lession 4: Norm, Metric, and Topology spaces.",
 								"link": "https://math-wiki.com/images/5/50/Top4Lect21.pdf",
