@@ -386,6 +386,15 @@
 		 "month": 3,
 		 "day": 18,
 		 "order": 43
+      },
+      {
+         "title":"Write Your Thesis with AI: A Guide for Students",
+         "description":"Stuck staring at a blank thesis page? Ditch the endless all-nighters and discover how AI tools can revolutionize your writing process! From structuring your chapters to polishing your prose, this post reveals the secrets to crafting a compelling and academically sound thesis with the help of your new AI co-author. Get ready to level up your research game!",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "45"}],
+		 "year": 2025,
+		 "month": 4,
+		 "day": 6,
+		 "order": 44
       }
 	]
 }
