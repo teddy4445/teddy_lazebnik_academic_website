@@ -2011,6 +2011,12 @@
             },
             "updates": [
                 {
+                    "title": "Final project - pick your subject",
+                    "description": "All students are encouraged to pick a subject for the final project that you will have to submit and present in the final lessons (15.6.25)",
+                    "date": "04.08.2025",
+                    "link": ""
+                },
+                {
                     "title": "Welcome to our RL course!",
                     "description": "All the materials will be uploaded here. ",
                     "date": "03.09.2025",
@@ -2069,19 +2075,24 @@
                         "Lectures": [
                             {
                                 "name": "Lession 4: Model-free prediction",
+                                "link": "/files/rl_course/4.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },{
+                                "name": "Lession 4 - video",
+                                "link": "https://biu-ac-il.zoom.us/rec/share/BUSqRkZPa1N9Io7AojWdQNy_OENyd2zA95Bfdww34U-jfA5bh8azRNO-Sp0-PK-m.SXJkoHxXRU7IHScY",
+                                "description": "",
+                                "type": "video"
+                            },
+                            {
+                                "name": "Lession 5: Model-free control",
                                 "link": "/files/rl_course/5.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             },
                             {
-                                "name": "Lession 5: Model-free control",
-                                "link": "/files/rl_course/6.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
                                 "name": "Lession 6: Function approximation",
-                                "link": "/files/rl_course/7.pdf",
+                                "link": "/files/rl_course/6.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             }
@@ -2095,42 +2106,48 @@
                         "Lectures": [
                             {
                                 "name": "Lession 7: Planning and models",
-                                "link": "/files/rl_course/8.pdf",
+                                "link": "/files/rl_course/7.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             },
                             {
                                 "name": "Lession 8: Policy gradients and Actor Critics",
-                                "link": "/files/rl_course/9.pdf",
+                                "link": "/files/rl_course/8.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             },
                             {
                                 "name": "Lession 9: Deep Reinforcement Learning (1)",
+                                "link": "/files/rl_course/9.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 10: Deep Reinforcement Learning (1)",
                                 "link": "/files/rl_course/10.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             },
                             {
-                                "name": "Lession 10: Deep Reinforcement Learning (2)",
+                                "name": "Lession 11: Deep Reinforcement Learning (2)",
                                 "link": "/files/rl_course/14.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             },
                             {
-                                "name": "Lession 11: Mimic learning",
+                                "name": "Lession 12: Mimic learning",
                                 "link": "/files/rl_course/11.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             },
                             {
-                                "name": "Lession 12a: RL rewards",
+                                "name": "Lession 13a: RL rewards",
                                 "link": "/files/rl_course/12.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             },
                             {
-                                "name": "Lession 12b: Monte Carlo Tree Search",
+                                "name": "Lession 13b: Monte Carlo Tree Search",
                                 "link": "/files/rl_course/13.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
@@ -2220,7 +2237,7 @@
                 {
                     "title": "Register your presentation pick in this file",
                     "description": "Please register your paper so the other will not pick the same one in the following file: <a href='https://docs.google.com/spreadsheets/d/1Xjy1vhk4BOTDlxEj6tlSKe7M9GfpMJT4YrXJJaDAnbY/edit?usp=sharing'>here</a>.",
-                    "date": "03.21.2025",
+                    "date": "03.28.2025",
                     "link": ""
                 },
                 {
@@ -2295,6 +2312,12 @@
                                 "link": "https://math-wiki.com/images/d/d6/Top5Lect21.pdf",
                                 "description": "Thanks to original source",
                                 "type": "file"
+                            },
+							{
+                                "name": "Lession 5 - video",
+                                "link": "",
+                                "description": "",
+                                "type": "video"
                             },
                             {
                                 "name": "Lession 6: Topological properties (cont.).",
