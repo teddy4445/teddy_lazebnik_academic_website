@@ -2236,7 +2236,7 @@
             "updates": [
                 {
                     "title": "Register your presentation pick in this file",
-                    "description": "Please register your paper so the other will not pick the same one in the following file: <a href='https://docs.google.com/spreadsheets/d/1Xjy1vhk4BOTDlxEj6tlSKe7M9GfpMJT4YrXJJaDAnbY/edit?usp=sharing'>here</a>.",
+                    "description": "Please register your paper so the other will not pick the same one in the following file: https://docs.google.com/spreadsheets/d/1Xjy1vhk4BOTDlxEj6tlSKe7M9GfpMJT4YrXJJaDAnbY/edit?usp=sharing.",
                     "date": "03.28.2025",
                     "link": ""
                 },
@@ -2315,7 +2315,7 @@
                             },
 							{
                                 "name": "Lession 5 - video",
-                                "link": "",
+                                "link": "https://biu-ac-il.zoom.us/rec/share/0Ds-yWDovG2MgQwUcZg0b2ue3jGRcXejsE0f9G6-Xyix0DyxFTlkBt8bBmWCVk9T.sUTNQJ-QIAcp5zu1",
                                 "description": "",
                                 "type": "video"
                             },
