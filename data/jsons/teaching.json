@@ -2011,6 +2011,12 @@
             },
             "updates": [
                 {
+                    "title": "Final project - default idea",
+                    "description": "Picking a subject idea is hard, if someone wants a good start, you can use a quick game I developed for the course: https://github.com/teddy4445/ShipBattleSimRL",
+                    "date": "04.13.2025",
+                    "link": ""
+                },
+                {
                     "title": "Final project - pick your subject",
                     "description": "All students are encouraged to pick a subject for the final project that you will have to submit and present in the final lessons (15.6.25)",
                     "date": "04.08.2025",
