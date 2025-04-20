@@ -2011,6 +2011,12 @@
             },
             "updates": [
                 {
+                    "title": "Register your presentation pick in this file",
+                    "description": "Please register your paper so the other will not pick the same one in the following file: https://docs.google.com/spreadsheets/d/1aGZRH_9omcFqP_Sm2qkPlm_3ZeKHAYYXI9OGHN8z_Rk/edit?usp=sharing",
+                    "date": "04.20.2025",
+                    "link": ""
+                },
+                {
                     "title": "Final project - default idea",
                     "description": "Picking a subject idea is hard, if someone wants a good start, you can use a quick game I developed for the course: https://github.com/teddy4445/ShipBattleSimRL",
                     "date": "04.13.2025",
@@ -2095,6 +2101,12 @@
                                 "link": "/files/rl_course/5.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
+                            },
+                            {
+                                "name": "Lession 5 - video",
+                                "link": "https://arielacil-my.sharepoint.com/:v:/g/personal/tedil_ariel_ac_il/EUZHefdwck9Br0kNhvwK5FYB184lnURFTN95PbVMPVjMbw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1ae6FN",
+                                "description": "",
+                                "type": "video"
                             },
                             {
                                 "name": "Lession 6: Function approximation",
