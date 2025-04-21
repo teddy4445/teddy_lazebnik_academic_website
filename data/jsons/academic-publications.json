@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Got much, got nothing: analyzing the impact of increased special interest groups’ influence on utility",
+         "description":"This study investigates the economic dynamics associated with interest groups receiving allowances and influencing public policy, particularly focusing on the ultra-Orthodox community in Israel. The research aims to model the socio-economic implications of increasing transfer payments to interest group members who abstain from labor market participation. Using an innovative differential equation model, the study evaluates the long-term impact on utility for both the broader working population and interest group members. Key findings indicate that while increased allowances enhance private consumption for interest group members, they paradoxically reduce the overall provision of public goods due to a decline in working contributors. This depletion negatively impacts utility and eventually diminishes benefits for the interest group members. The model underscores a tipping point where, beyond a critical level of allowance, public good provision and utility are compromised. The study combines theoretical analysis with sensitivity tests to assess the effects of allowance levels, tax burden, utility, and population growth rates. Results demonstrate that sustained increases in allowances can accelerate the transition of working individuals to non-working status, ultimately destabilizing both public good provision and the utility balance across populations.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/got_much_got_nothing.pdf"},
+					  {"info": "cite", "type": 3, "link": "Shami, L., Lazebnik, T., Got much, got nothing: analyzing the impact of increased special interest groups’ influence on utility. Eurasian Economic Review. 2025."}],
+		 "authors": "Labib Shami and Teddy Lazebnik",
+         "year": 2025,
+         "topic":"Social",
+         "type":"Paper",
+         "publisher":"Eurasian Economic Review",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Pulling the carpet below the learner’s feet: Genetic algorithm to learn ensemble machine learning model during concept drift",
          "description":"Data-driven models, in general, and machine learning (ML) models, in particular, have gained popularity over recent years with an increased usage of such models across the scientific and engineering domains. When using ML models in realistic and dynamic environments, users often need to handle the challenge of concept drift (CD). In this study, we explore the application of genetic algorithms (GAs) to address the challenges posed by CD in such settings. Formally, we propose a novel two-level ensemble ML model, which combines a global ML model with a CD detector, operating as an aggregator for a population of ML pipeline models, each one with an adjusted CD detector by itself responsible for re-training its ML model. In addition, we show that one can further improve the proposed model by utilizing off-the-shelf automatic ML (AutoML) methods. Through extensive synthetic dataset analysis, we show that the proposed model statistically significantly outperforms an ML pipeline with a CD algorithm, particularly in scenarios with unknown CD characteristics or a mixture of moving and shifting CDs. Moreover, we show a sub-linear decline in the proposed method’s performance with respect to a higher drifting rate and robustness to the underlying AutoML method utilized.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/ga_cd.pdf"},
