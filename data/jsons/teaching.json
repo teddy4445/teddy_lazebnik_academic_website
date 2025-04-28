@@ -2129,6 +2129,12 @@
                                 "type": "slides"
                             },
                             {
+                                "name": "Lession 7 - video",
+                                "link": "https://biu-ac-il.zoom.us/rec/share/f5Mxfz103jdqLNk8aMMCbCnw43PBl6QH8Y5r8DCo2mG7fIS1OwN2-3ZORhqBCVon.nqm_wrmYV9i85DiL",
+                                "description": "",
+                                "type": "video"
+                            },
+                            {
                                 "name": "Lession 8: Policy gradients and Actor Critics",
                                 "link": "/files/rl_course/8.pdf",
                                 "description": "Thanks to original source",
@@ -2342,6 +2348,12 @@
                                 "link": "https://math-wiki.com/images/9/97/Top6Lect21.pdf",
                                 "description": "Thanks to original source",
                                 "type": "file"
+                            },
+							{
+                                "name": "Lession 6 - video",
+                                "link": "https://biu-ac-il.zoom.us/rec/share/OSBmqaqnWPQ12s9Y9fCmkkEkWpEB6CaJ5F8c9T0ecQJdLm1lv1f4Z2J_WJ5Aw2Gu.LhVuD7mZeet-TF_q",
+                                "description": "",
+                                "type": "video"
                             },
                             {
                                 "name": "Lession 7: Conectivity.",
