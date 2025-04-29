@@ -2259,6 +2259,12 @@
             },
             "updates": [
                 {
+                    "title": "Lecture is cancelled",
+                    "description": "The lecture today is cancelled - the 29th of April, 2025. Apologize for the inconvenience. ",
+                    "date": "04.29.2025",
+                    "link": ""
+                },
+                {
                     "title": "Register your presentation pick in this file",
                     "description": "Please register your paper so the other will not pick the same one in the following file: https://docs.google.com/spreadsheets/d/1Xjy1vhk4BOTDlxEj6tlSKe7M9GfpMJT4YrXJJaDAnbY/edit?usp=sharing.",
                     "date": "03.28.2025",
