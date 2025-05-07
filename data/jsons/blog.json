@@ -395,6 +395,15 @@
 		 "month": 4,
 		 "day": 6,
 		 "order": 44
+      },
+      {
+         "title":"Fight Academic Toxicity with Toxic Positivity",
+         "description":"The secret strategy to handle toxic academic individuals.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "46"}],
+		 "year": 2025,
+		 "month": 5,
+		 "day": 8,
+		 "order": 45
       }
 	]
 }
