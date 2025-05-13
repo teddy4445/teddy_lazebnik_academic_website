@@ -2114,6 +2114,12 @@
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             }
+                            {
+                                "name": "Lession 6 - video",
+                                "link": "https://biu-ac-il.zoom.us/rec/share/f5Mxfz103jdqLNk8aMMCbCnw43PBl6QH8Y5r8DCo2mG7fIS1OwN2-3ZORhqBCVon.nqm_wrmYV9i85DiL",
+                                "description": "",
+                                "type": "video"
+                            },
                         ]
                     }
                 },
@@ -2130,7 +2136,7 @@
                             },
                             {
                                 "name": "Lession 7 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/f5Mxfz103jdqLNk8aMMCbCnw43PBl6QH8Y5r8DCo2mG7fIS1OwN2-3ZORhqBCVon.nqm_wrmYV9i85DiL",
+                                "link": "https://biu-ac-il.zoom.us/rec/share/1R9BzIO1vMrC4Fyto4XuNAPpxyTGO4FLWB-yzBVZ_rZ0zsdzghn0FaWIl5QgXxCN.bKsuz4kn9pWCRJ6e",
                                 "description": "",
                                 "type": "video"
                             },
@@ -2367,11 +2373,23 @@
                                 "description": "Thanks to original source",
                                 "type": "file"
                             },
+							{
+                                "name": "Lession 7 - video",
+                                "link": "https://biu-ac-il.zoom.us/rec/share/aDClG0VXLWVgU5s7lX5BplSgzcQcEx9ESgyVOzlHITnW3xY4-dL3LXPRZRxpCECR.3_sGcgJeTsFReaS1",
+                                "description": "",
+                                "type": "video"
+                            },
                             {
                                 "name": "Lession 8: Conectivity (cont.).",
                                 "link": "https://math-wiki.com/images/1/1e/Top8Lect21.pdf",
                                 "description": "Thanks to original source",
                                 "type": "file"
+                            },
+							{
+                                "name": "Lession 8 - video",
+                                "link": "",
+                                "description": "",
+                                "type": "video"
                             },
                             {
                                 "name": "Lession 9: Groups.",

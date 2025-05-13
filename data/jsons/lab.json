@@ -51,7 +51,7 @@
          "s_date": "01/01/2025",
 		 "e_date": "Current - offical",
 		 "image_link": "img/lab/lukas.jpeg",
-		 "info_link": "",
+		 "info_link": "https://www.linkedin.com/in/lukastoral/",
 		 "category_name": "Current - offical",
 		 "order": 5
       },
@@ -62,7 +62,7 @@
          "s_date": "01/01/2025",
 		 "e_date": "Current - offical",
 		 "image_link": "img/lab/bilge.jpg",
-		 "info_link": "",
+		 "info_link": "https://www.linkedin.com/in/bilgesi/",
 		 "category_name": "Current - offical",
 		 "order": 6
       },
@@ -84,7 +84,7 @@
          "s_date": "01/12/2024",
 		 "e_date": "01/6/2025",
 		 "image_link": "img/lab/eden.jpeg",
-		 "info_link": "",
+		 "info_link": "https://www.linkedin.com/in/eden-aloni-618967359/",
 		 "category_name": "Alumni - offical",
 		 "order": 8
       },
