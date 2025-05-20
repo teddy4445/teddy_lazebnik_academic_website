@@ -2265,6 +2265,12 @@
             },
             "updates": [
                 {
+                    "title": "Prepare your presentation",
+                    "description": "Please prepare a 15 minutes + 5 minutes questions presentation for the 10th of June. If you have any concerns about the presenation, please ask in class or via email.",
+                    "date": "05.13.2025",
+                    "link": ""
+                },
+                {
                     "title": "Lecture is cancelled",
                     "description": "The lecture today is cancelled - the 29th of April, 2025. Apologize for the inconvenience. ",
                     "date": "04.29.2025",
@@ -2393,7 +2399,7 @@
                             },
                             {
                                 "name": "Lession 9: Groups.",
-                                "link": "https://https://math-wiki.com/images/d/db/Top9Lect21.pdf",
+                                "link": "https://math-wiki.com/images/d/db/Top9Lect21.pdf",
                                 "description": "Thanks to original source",
                                 "type": "file"
                             },
