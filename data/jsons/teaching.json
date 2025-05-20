@@ -2147,6 +2147,12 @@
                                 "type": "slides"
                             },
                             {
+                                "name": "Lession 8 - video",
+                                "link": "https://biu-ac-il.zoom.us/rec/share/87AC-CowHCeGBTc0ISutU6F7yWTAOBOc1ZkRAcK5UKDWRHLF7IaDIqnmgP2hkedQ.NirmFwOBv7fVcqHW",
+                                "description": "",
+                                "type": "video"
+                            },
+                            {
                                 "name": "Lession 9: Deep Reinforcement Learning (1)",
                                 "link": "/files/rl_course/9.pdf",
                                 "description": "Thanks to original source",
