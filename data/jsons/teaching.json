@@ -2159,6 +2159,12 @@
                                 "type": "slides"
                             },
                             {
+                                "name": "Lession 9 - video",
+                                "link": "https://biu-ac-il.zoom.us/rec/share/sRnyOqCxAH3MnNZ9fBZyuonvyV7I3qBUHesdQGlfzPav7nO2BIcGIP8zheltSEg.wpxM-TEgPYgBSj-Q",
+                                "description": "",
+                                "type": "video"
+                            },
+                            {
                                 "name": "Lession 10: Deep Reinforcement Learning (1)",
                                 "link": "/files/rl_course/10.pdf",
                                 "description": "Thanks to original source",
@@ -2400,7 +2406,7 @@
 							{
                                 "name": "Lession 8 - video",
                                 "link": "",
-                                "description": "",
+                                "description": "https://biu-ac-il.zoom.us/rec/share/uZ99bYQXYDaI_vmRKq1aO10STMVlzIFYkvobjHETRfXI7pGLSMqNKVwYj1cGNhnJ.h3R03Mrr6pF_Ev1K",
                                 "type": "video"
                             },
                             {
@@ -2408,6 +2414,12 @@
                                 "link": "https://math-wiki.com/images/d/db/Top9Lect21.pdf",
                                 "description": "Thanks to original source",
                                 "type": "file"
+                            },
+							{
+                                "name": "Lession 9 - video",
+                                "link": "",
+                                "description": "https://biu-ac-il.zoom.us/rec/share/SyS59i2oxHyI3pHzPxZEtRmG_7-_GTb1UDqoY1zkKRt78ouKFTxXHoEPJ00-e_NO.YsZs6kZG3v_YAiwN",
+                                "type": "video"
                             },
                             {
                                 "name": "Lession 10: Compactness.",
