@@ -1,10 +1,13 @@
 {
    "biography":"I am a researcher in Applied Mathematics and Computer Science with extensive experience leading RnD teams in both the life sciences and financial domains. Over the past decade, I have honed my software development skills, including seven years of experience managing development teams of up to fourteen professionals. I have a proven track record in system architecture, developing production-ready algorithms, and collaborating with clients. My expertise includes bio-physical simulations, big data analysis, and data analysis for information systems. My research is focused on applying advanced mathematics and computer science to the life sciences and socio-economic domains, covering areas such as AI-driven personalized treatment protocols, drug discovery, eXplainable AI, socio-economic systems modeling and simulation, and optimal policy detection from financial data.",
    "researchInterests":[
-		"Biomathematical Modeling - bioclinical personalized ML-based treatments, ODE/PDE-based biological models, and infectious diseases dynamics.",
-		"Computer Simulation - multi agent simulations with decision making for complex dynamics",
-		"Meta Machine Learning - automatic feature selection, stability metrics, multi-agent collective learning",
-		"Using Math For Others - solving real-world research questions in many fields using mathematics and computer science."
+		"Biomathematics - developing ODE/PDE and data-driven models for diseases (mainly cancer) treatment and diagnosis.",
+		"Epidemiological models - developing epidemiological models for policymakers to better combat the next pandemic.",
+		"Socio-economic policy optimization - using methods such as multi agent simulations and machine Learning for socio-economic decision making and policy design",
+		"Meta Machine Learning - we have good machine and deep learning models, how we can use them better",
+		"Scientometrics - trying to understand science itself using data science tools",
+		"Animals AI - using advanced machine and deep learning to answer animal-related questions",
+		"Everyting that is interesting - solving real-world research questions in many fields using mathematics and computer science."
    ],
    "featuredPublications":[
 	{
