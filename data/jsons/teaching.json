@@ -2224,6 +2224,12 @@
             "resources": {
                 "Must": [
                     {
+                        "name": "Final course project explanation document",
+                        "link": "/files/topology_project.pdf",
+                        "description": "This document outlines, in Hebrew, the expectations from the final project document.",
+                        "type": "file"
+                    },
+                    {
                         "name": "Final course presentation paper #1",
                         "link": "/files/topology_course_papers/bubble_method_topology.pdf",
                         "description": "Bubble method for topology and shape optimization of structures",
