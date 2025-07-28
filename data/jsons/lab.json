@@ -1,6 +1,50 @@
 {
    "members":[
 	  {
+         "name": "Dr. Amit Yaniv Rosenfeld",
+         "title": "Post-doc",
+         "description": "Amit is a post-doc in Haifa University, Information System department. Amit's research will focus on developing novel machine learning methods for psychiatric patient management.",
+         "s_date": "1/10/2025",
+		 "e_date": "Current",
+		 "image_link": "img/lab/userf.png",
+		 "info_link": "https://scholar.google.com/citations?hl=en&authuser=1&user=m9NckL4AAAAJ",
+		 "category_name": "Current - offical",
+		 "order": 1
+      },
+	  {
+         "name": "Dr. Meirav Har Even",
+         "title": "Post-doc",
+         "description": "Meirav is a post-doc in Haifa University, Information System department. Meirav's research will focus on a cool thing we still looking for at this moment. ",
+         "s_date": "1/1/2026",
+		 "e_date": "Current",
+		 "image_link": "img/lab/userf.png",
+		 "info_link": "",
+		 "category_name": "Current - offical",
+		 "order": 2
+      },
+	  {
+         "name": "Dr. Maxim Glebov",
+         "title": "PhD. Student",
+         "description": "Maxim is a PhD student in Haifa University, Information System department. Maxim's research focuses on machine learning for perioperative workflow optimization and enhanced surgical outcomes",
+         "s_date": "1/10/2025",
+		 "e_date": "Current",
+		 "image_link": "img/lab/user.png",
+		 "info_link": "https://scholar.google.com/citations?user=tXZ3diUAAAAJ&hl=en&authuser=1",
+		 "category_name": "Current - offical",
+		 "order": 3
+      },
+	  {
+         "name": "Irena Shami",
+         "title": "PhD. Student",
+         "description": "Irena is a PhD student in Haifa University, Information System department. Irena's research focuses on leveraging LLMs, ML, and Socio-Economic profiling for fair, transparent portfolio optimisation",
+         "s_date": "1/10/2025",
+		 "e_date": "Current",
+		 "image_link": "img/lab/userf.png",
+		 "info_link": "",
+		 "category_name": "Current - offical",
+		 "order": 4
+      },
+	  {
          "name": "Adi Shuchami",
          "title": "PhD. Student",
          "description": "Adi is a PhD student in Ariel University, department of Mathematics, under the joint supervision of <a href='https://scholar.google.com/citations?user=AX0UBo0AAAAJ&hl=en' alt='Prof. Svetlana Bunimovich-Mendrazitsky'>Prof. Svetlana Bunimovich-Mendrazitsky</a> and mine. Adi's research focuses on the data science of dual-use community and hospital data in data-driven decision-support using machine and deep learning models.",
@@ -9,7 +53,7 @@
 		 "image_link": "img/lab/adi.png",
 		 "info_link": "https://scholar.google.com/citations?user=vbN5b1EAAAAJ&hl=en",
 		 "category_name": "Current - offical",
-		 "order": 1
+		 "order": 5
       },
       {
          "name": "Ariel Alexi",
@@ -20,7 +64,7 @@
 		 "image_link": "img/lab/ariel.png",
 		 "info_link": "https://scholar.google.com/citations?user=GGQ6sw0AAAAJ&hl=en",
 		 "category_name": "Current - offical",
-		 "order": 2
+		 "order": 6
       },
 	  {
          "name": "Amit Bengiat",
@@ -31,7 +75,7 @@
 		 "image_link": "img/lab/amit.jpeg",
 		 "info_link": "https://il.linkedin.com/in/amit-bengiat-379288230",
 		 "category_name": "Current - offical",
-		 "order": 3
+		 "order": 7
       },
 	  {
          "name": "Dr. Assaf Shmuel",
@@ -42,7 +86,7 @@
 		 "image_link": "img/lab/assaf.png",
 		 "info_link": "https://scholar.google.com/citations?hl=en&user=LCOIWK0AAAAJ",
 		 "category_name": "Current - offical",
-		 "order": 4
+		 "order": 8
       },
 	  {
          "name": "Lukas Toral",
@@ -53,7 +97,7 @@
 		 "image_link": "img/lab/lukas.jpeg",
 		 "info_link": "https://www.linkedin.com/in/lukastoral/",
 		 "category_name": "Alumni - offical",
-		 "order": 5
+		 "order": 9
       },
 	  {
          "name": "Bilge Taskin",
@@ -64,7 +108,7 @@
 		 "image_link": "img/lab/bilge.jpg",
 		 "info_link": "https://www.linkedin.com/in/bilgesi/",
 		 "category_name": "Alumni - offical",
-		 "order": 6
+		 "order": 10
       },
 	  {
          "name": "Wenxiong Xie",
@@ -75,7 +119,7 @@
 		 "image_link": "img/lab/Wenxiong.jpeg",
 		 "info_link": "",
 		 "category_name": "Alumni - offical",
-		 "order": 7
+		 "order": 11
       },
 	  {
          "name": "Eden Aloni",
@@ -86,7 +130,7 @@
 		 "image_link": "img/lab/eden.jpeg",
 		 "info_link": "https://www.linkedin.com/in/eden-aloni-618967359/",
 		 "category_name": "Alumni - offical",
-		 "order": 8
+		 "order": 12
       },
 	  {
          "name": "Naor Matania",
@@ -97,7 +141,7 @@
 		 "image_link": "img/lab/naor.png",
 		 "info_link": "https://github.com/naormatania",
 		 "category_name": "Alumni - unoffical",
-		 "order": 9
+		 "order": 13
       },
 	  {
          "name": "Liron Simon-Keren",
@@ -108,7 +152,7 @@
 		 "image_link": "img/lab/liron.png",
 		 "info_link": "https://scholar.google.com/citations?user=kFAf3CgAAAAJ",
 		 "category_name": "Alumni - unoffical",
-		 "order": 10
+		 "order": 14
       },
 	  {
          "name": "Tzach Fleischer",
@@ -119,7 +163,7 @@
 		 "image_link": "img/lab/tzach.png",
 		 "info_link": "https://www.linkedin.com/in/tzach-fleischer-software-developer?trk=public_profile_browsemap&originalSubdomain=il",
 		 "category_name": "Alumni - unoffical",
-		 "order": 11
+		 "order": 15
       },
 	  {
          "name": "Yonatan Herskowitz",
@@ -130,7 +174,7 @@
 		 "image_link": "img/lab/user.png",
 		 "info_link": "https://www.sciencedirect.com/science/article/pii/S0303264723000916",
 		 "category_name": "Alumni - offical",
-		 "order": 12
+		 "order": 16
       },
 	  {
          "name": "Liel Mushiev",
@@ -141,7 +185,7 @@
 		 "image_link": "img/lab/userf.png",
 		 "info_link": "https://www.linkedin.com/in/liel-mushiev/?originalSubdomain=il",
 		 "category_name": "Alumni - unoffical",
-		 "order": 13
+		 "order": 17
       }
 	]
 }
