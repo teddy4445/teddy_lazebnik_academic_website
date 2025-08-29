@@ -1,0 +1,10 @@
+# https://teddylazebnik.com llms.txt
+
+- [Teddy Lazebnik's Research](https://teddylazebnik.com/): Teddy Lazebnik: AI expert and mathematician at University of Haifa.
+- [Courses Offered by Universities](https://teddylazebnik.com/teaching.html): Explore diverse courses in programming and mathematics.
+- [Academic Insights Blog](https://teddylazebnik.com/blog.html): Explore insightful blog posts on academia, AI, and research.
+- [Teddy Lazebnik Profile](https://teddylazebnik.com/about.html): Teddy Lazebnik: Mathematician and AI expert with diverse projects.
+- [Teddy Lazebnik's Academic Publications](https://teddylazebnik.com/publications.html): Explore Teddy Lazebnik's diverse academic publications on machine learning, epidemiology, and more.
+- [The Lab Team](https://teddylazebnik.com/lab.html): Explore the lab's current and alumni researchers' profiles.
+- [Research Projects Overview](https://teddylazebnik.com/research.html): Explore innovative research projects in AI, medicine, and economics.
+- [Teddy Lazebnik's Blog](https://teddylazebnik.com/blog-post.html): Explore insights and stories from Teddy Lazebnik's blog.
