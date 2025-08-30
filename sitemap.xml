@@ -8,34 +8,39 @@
 
 
 <url>
-  <loc>https://teddylazebnik.info/</loc>
-  <lastmod>2025-08-16T08:39:36+00:00</lastmod>
+  <loc>https://teddylazebnik.com/</loc>
+  <lastmod>2025-08-29T08:39:36+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://teddylazebnik.info/publications.html</loc>
-  <lastmod>2025-08-16T08:39:36+00:00</lastmod>
+  <loc>https://teddylazebnik.com/publications.html</loc>
+  <lastmod>2025-08-29T08:39:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://teddylazebnik.info/research.html</loc>
-  <lastmod>2025-08-16T08:39:36+00:00</lastmod>
+  <loc>https://teddylazebnik.com/research.html</loc>
+  <lastmod>2025-08-29T08:39:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://teddylazebnik.info/about.html</loc>
-  <lastmod>2025-08-16T08:39:36+00:00</lastmod>
+  <loc>https://teddylazebnik.com/about.html</loc>
+  <lastmod>2025-08-29T08:39:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://teddylazebnik.info/teaching.html</loc>
-  <lastmod>2025-08-16T08:39:36+00:00</lastmod>
+  <loc>https://teddylazebnik.com/teaching.html</loc>
+  <lastmod>2025-08-29T08:39:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://teddylazebnik.info/blog.html</loc>
-  <lastmod>2025-08-16T08:39:36+00:00</lastmod>
+  <loc>https://teddylazebnik.com/blog.html</loc>
+  <lastmod>2025-08-29T08:39:36+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://acml.teddylazebnik.com/index.html</loc>
+  <lastmod>2025-08-29T08:39:36+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 
 
