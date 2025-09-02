@@ -1731,7 +1731,7 @@
         {
             "name": "Reinforcement Leanring",
             "passkey": "sweden2025",
-            "code": "TFSS25",
+            "code": "TFSS25_2025",
             "year": "2025",
             "topic": "cs",
             "semester": "1",
@@ -2450,6 +2450,205 @@
                                 "link": "https://math-wiki.com/images/6/64/Top13Lect21.pdf",
                                 "description": "Thanks to original source",
                                 "type": "file"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Reinforcement Leanring",
+            "passkey": "sweden2025",
+            "code": "TFSS25_2026",
+            "year": "2026",
+            "topic": "cs",
+            "semester": "1",
+            "university": "Jonkoping University",
+            "department": "School of Engineering",
+            "location_class": "see agenda",
+            "syllabus": "/files/ju_rl_course/syllabus.pdf",
+            "description": "The quest to fully realize the potential of Artificial Intelligence (AI), requires autonomous systems that can learn to make good decisions by interacting with their environment. Reinforcement learning is a paradigm that meets these requirements, and can be applied to various tasks, including game-playing, healthcare, economics, and robotics. This course gives a solid introduction to reinforcement learning with its core approaches and challenges, and is structured around several lectures, assignments, and a project.",
+            "grade_parts": [
+                {
+                    "name": "Final project",
+                    "percent": 50
+                },
+                {
+                    "name": "Home work 2",
+                    "percent": 25
+                },
+                {
+                    "name": "Home work 1",
+                    "percent": 25
+                }
+            ],
+            "resources": {
+                "Must": [
+                    {
+                        "name": "Course's stracture",
+                        "link": "/files/ju_rl_course/course_structure.pdf",
+                        "description": "A one-page description of the course so you can be oriented quickly during the semester.",
+                        "type": "file"
+                    },
+                    {
+                        "name": "Home Work #1",
+                        "link": "/files/ju_rl_course/hw1.pdf",
+                        "description": "Home work #1 for submission",
+                        "type": "file"
+                    },
+                    {
+                        "name": "Home Work #2",
+                        "link": "/files/ju_rl_course/hw2.pdf",
+                        "description": "Home work #2 for submission",
+                        "type": "file"
+                    },
+                    {
+                        "name": "Final Project Guideline",
+                        "link": "/files/ju_rl_course/final_project.pdf",
+                        "description": "All the details about the course's final project - you really should read it carfully.",
+                        "type": "file"
+                    }
+                ],
+                "Extra": [
+                    {
+                        "name": "RL project ideas",
+                        "link": "/files/ju_rl_course/ideas.docx",
+                        "description": "A list of possible RL project ideas for the end of the course.",
+                        "type": "file"
+                    },
+                    {
+                        "name": "HuggingFace course",
+                        "link": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
+                        "description": "This is an amazing practical course by HuggingFace that will show you how practically use RL.",
+                        "type": "slides"
+                    },
+                    {
+                        "name": "An introduction to Deep RL - tutorial paper",
+                        "link": "https://arxiv.org/pdf/1811.12560",
+                        "description": "An easy-to-read theoretical and practical introduction to Deep RL with decent explanations of the math.",
+                        "type": "slides"
+                    },
+                    {
+                        "name": "CS231N recap about Python",
+                        "link": "https://cs231n.github.io/python-numpy-tutorial/",
+                        "description": "Taken from Stanford's CS234 course, a recap about Python and Colab.",
+                        "type": "slides"
+                    },
+                    {
+                        "name": "RL book with all the course materials",
+                        "link": "http://incompleteideas.net/book/RLbook2020.pdf",
+                        "description": "The book authored by Richard S. Sutton and Andrew G. Barto.",
+                        "type": "file"
+                    }
+                ]
+            },
+            "updates": [
+                {
+                    "title": "Welcome to our RL course!",
+                    "description": "All the materials will be uploaded here. ",
+                    "date": "09.02.2025",
+                    "link": ""
+                }
+            ],
+            "modules": [
+                {
+                    "title": "Introduction and basic concepts",
+                    "explanation": "In the first part, we will explore the main ideas behind RL.",
+                    "resources": {
+                        "Lectures": [
+                            {
+                                "name": "Lession 1: Introduction to Reinforcement Learning",
+                                "link": "/files/rl_course/1.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 2: Tabular MDP Planning and RL Policy Evaluation",
+                                "link": "/files/rl_course/2.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 3: MDP cont.",
+                                "link": "/files/rl_course/3.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Policy Gradient Methods",
+                    "explanation": "In the second part, we will study different methods for evaluation of agent's actions as well as how to 'train' them.",
+                    "resources": {
+                        "Lectures": [
+                            {
+                                "name": "Lession 4: Model-free prediction",
+                                "link": "/files/rl_course/5.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 5: Model-free control",
+                                "link": "/files/rl_course/6.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 6: Function approximation",
+                                "link": "/files/rl_course/7.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "RL agents training and evaluation",
+                    "explanation": "In the third and final part, we will learn how to implement our previous knowledge to obtain a RL agent.",
+                    "resources": {
+                        "Lectures": [
+                            {
+                                "name": "Lession 7: Planning and models",
+                                "link": "/files/rl_course/8.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 8: Policy gradients and Actor Critics",
+                                "link": "/files/rl_course/9.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 9: Deep Reinforcement Learning (1)",
+                                "link": "/files/rl_course/10.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 10: Deep Reinforcement Learning (2)",
+                                "link": "/files/rl_course/14.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 11: Mimic learning",
+                                "link": "/files/rl_course/11.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 12a: RL rewards",
+                                "link": "/files/rl_course/12.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 12b: Monte Carlo Tree Search",
+                                "link": "/files/rl_course/13.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
                             }
                         ]
                     }
