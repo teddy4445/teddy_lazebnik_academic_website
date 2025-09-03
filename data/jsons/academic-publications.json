@@ -169,6 +169,18 @@
          "publicationStatus":"Published"
       },
 	{
+         "name":"A computational model for individual scholars' writing style dynamics",
+         "description":"A manuscript’s writing style is central to determining its readership, influence, and impact. Past research has shown that, in many cases, scholars present a unique writing style that is manifested in their manuscripts. In this work, we report a comprehensive investigation into how scholars’ writing styles evolve throughout their careers focusing on their academic relations with their advisors and peers. Our results show that scholars’ writing styles tend to stabilize early on in their careers – roughly around their 13th publication. Around the same time, schol- ars’ departures from their advisors’ writing styles seem to converge as well. Last, collaborations involving fewer scholars, scholars from the same gender, or from the same field of study seem to bring about a great change in their co-authors’ writing styles with younger scholars being especially influenceable. The proposed method can help to investigate the dynamic behavior of academic writing style.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/ws.pdf"},
+					  {"info": "cite", "type": 3, "link": "Lazebnik, T., A. Rosenfeld, A computational model for individual scholars' writing style dynamics. Journal of writing research. 2025."}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2025,
+         "topic":"Machine Learning",
+         "type":"Paper",
+         "publisher":"Journal of writing research",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Predicting Social Rankings in Captive Chimpanzees (Pan troglodytes) Through Communicative Interactions-Based Data-Driven Model",
          "description":"Primates demonstrate variability regarding the degree to which they display status hierarchies, which are influenced by a multitude of demographic and ecological factors. Additionally, primates must manage their interactions within these social hierarchies through the use of diverse communicative signals, including facial signals and manual gestures. Often times, these variables are assessed independently; however, it is probable that they collectively influence social rankings among primates. Our study investigates the application and accuracy of data‐driven techniques, based on the genetic algorithm approach, in capturing social rankings among a group of captive chimpanzees, focusing on the analysis of communicative and demographic factors. We utilize observational data collected from a group of 18 chimpanzees residing at the Los Angeles Zoo from 2017 to 2019, derived from three previous studies carried out by the first author (BF). Our data‐driven model exhibited a high degree of accuracy in capturing established social hierarchies in 2017, in addition to identifying notable fluctuations in rankings during periods of social instability from 2018 to 2019, especially in the aftermath of the passing of the highest‐ranking female in the troop. Feature importance analysis revealed that social bond strength, measured via the dyadic composite sociality index (DCSI), was the most significant predictor of rank, highlighting the importance of social bonding in shaping status hierarchies. These models provide valuable insights for future research on primate behavior and social structures, as well as assist in making informed decisions for zoo management.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/FlorkiewiczLazebnik2025.pdf"},
