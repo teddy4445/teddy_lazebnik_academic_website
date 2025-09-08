@@ -1,11 +1,23 @@
 {
    "publications":[
 	{
+         "name":"Non-Invasive Computer Vision-Based Fruit Fly Larvae Differentiation: Ceratitis capitata and Bactrocera zonata",
+         "description":"The Mediterranean fruit fly (Ceratitis capitata) and the peach fruit fly (Bactrocera zonata) are two of the most economically sig-nificant agricultural pests affecting fruit production worldwide. Both are considered quarantine pests in several countries, whichoblige the use of restrictive measures to assure safe trade with countries where these flies are present. As the quarantine statusof these two pests is not similar in every country, discriminating measures among these two fruit flies' larvae in the exportedfruits is critical for safe trade. Traditional DNA-based detection methods, though accurate, are costly and time-consuming, whilemanual morphological identification is practically impossible. In this study, we propose a novel non-invasive method utilisingcomputer vision for rapid differentiation between larvae of these two species based on a short video recording of a single larvafreely moving on a Petri dish. Our results reveal good separation between the two species with 90% accuracy using videos asshort as 15 s long..",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/sam.pdf"},
+					  {"info": "cite", "type": 3, "link": "Kanevsky, E., Lazebnik, T., Kaspi, R., Gazit, Y., Halon, E., Fried, D., Zamansky, A., Pines, G., Non-Invasive Computer Vision-Based Fruit Fly Larvae Differentiation: Ceratitis capitata and Bactrocera zonata. Journal of Applied Entomology. 2025."}],
+		 "authors": "Eddie Kanevsky, Teddy Lazebnik, Roy Kaspi, Yoav Gazit, Eyal Halon, Dror Fried, Anna Zamansky, Gur Pines",
+         "year": 2025,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Journal of Applied Entomology",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"A Machine Learning-Based Guide for Repeated Laboratory Testing in Pediatric Emergency Departments",
          "description":"Background/Objectives: Laboratory tests conducted in community settings are occasionally repeated within hours of presentation to pediatric emergency departments (PEDs). Reducing unnecessary repetitions can ease child discomfort and alleviate the healthcare burden without compromising the diagnostic process or quality of care. The aim of this study was to develop a decision tree (DT) model to guide physicians in minimizing unnecessary repeat blood tests in PEDs. The minimal decision tree (MDT) algorithm was selected for its interpretability and capacity to generate optimally pruned classification trees. Methods: Children aged 3 months to 18 years with community-based complete blood count (CBC), electrolyte (ELE), and C-reactive protein (CRP) measurements obtained between 2016 and 2023 were included. Repeat tests performed in the pediatric emergency department within 12 h were evaluated by comparing paired measurements, with tests considered justified when values transitioned from normal to abnormal ranges or changed by ≥20%. Additionally, sensitivity analyses were conducted for absolute change thresholds of 10% and 30% and for repeat intervals of 6, 18, and 24 h. Results: Among 7813 children visits in this study, 6044, 1941, and 2771 underwent repeated CBC, ELE, and CRP tests, respectively. The mean ages of patients undergoing CRP, ELE, and CBC testing were 6.33 ± 5.38, 7.91 ± 5.71, and 5.08 ± 5.28 years, respectively. The majority were of middle socio-economic class, with 66.61–71.24% living in urban areas. Pain was the predominant presented complaint (83.69–85.99%), and in most cases (83.69–85.99%), the examination was conducted by a pediatrician. The DT model was developed and evaluated on training and validation cohorts, and it demonstrated high accuracy in predicting the need for repeat CBC and ELE tests but not CRP. Performance of the DT model significantly exceeded that of the logistic regression model. Conclusions: The data-driven guide derived from the DT model provides clinicians with a practical, interpretable tool to minimize unnecessary repeat laboratory testing, thereby enhancing patient care and optimizing healthcare resource utilization.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/repeat_test.pdf"},
 					  {"info": "cite", "type": 3, "link": "Shuchami, A., Lazebnik, T., Ashkenazi, S., Herman Cohen, A., Reichenberg, Y., Shkalim Zemer, V., A Machine Learning-Based Guide for Repeated Laboratory Testing in Pediatric Emergency Departments. Diagnostics. 2025."}],
-		 "authors": " Adi Shuchami, Teddy Lazebnik, Shai Ashkenazi, Avner Herman Cohen, Yael Reichenberg, Vered Shkalim Zemer",
+		 "authors": "Adi Shuchami, Teddy Lazebnik, Shai Ashkenazi, Avner Herman Cohen, Yael Reichenberg, Vered Shkalim Zemer",
          "year": 2025,
          "topic":"Machine learning",
          "type":"Paper",
