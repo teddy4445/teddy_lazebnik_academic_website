@@ -404,6 +404,15 @@
 		 "month": 5,
 		 "day": 8,
 		 "order": 45
+      },
+      {
+         "title":"There is No One AI Frontier - There Are Two (And That is Good News for Humans)",
+         "description":"A somewhat phiolsophical thought about the frontier of AI, how many of these there are, and what its meaning for us humans.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "47"}],
+		 "year": 2025,
+		 "month": 10,
+		 "day": 18,
+		 "order": 46
       }
 	]
 }
