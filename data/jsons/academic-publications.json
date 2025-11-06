@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Comparing partial differential equations and agent-based simulations in spatio-temporal modeling of cancer growth and shape",
+         "description":"Spatio-temporal partial differential equations (PDEs) models of cancer make several ad-hoc assumptions about the dynamics on the unknown boundary of the tumor in order to solve the PDE system of equations and, at the same time, determine also the boundary of the tumor. In this paper, we developed a different computation approach using the agent-based simulation (ABS) modeling method. We consider a simple cancer model, and use, in the ABS model, the same parameters that express the rates of interactions among cells and proteins, as in the PDE model, but we make no ad-hoc assumptions on the dynamics of the unknown tumor boundary. However, ABS is a stochastic process, hence, in order to get a good approximation of the tumor boundary, we need to repeat the simulations many times, and then take the average. We show, in the spherical case, that the tumor volume computed by the ABS is in increasingly good agreement with the PDE volume as the number of ABS repetitions is increased. We next use the ABS model to compute several non-symmetric shapes that are commonly seen in non-invasive and invasive cancers.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/teddy_avner_new_math.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Friedman, A., Comparing partial differential equations and agent-based simulations in spatio-temporal modeling of cancer growth and shape. Journal of Computational and Applied Mathematics. 2025."}],
+		 "authors": "Teddy Lazebnik, Avner Friedman",
+         "year": 2025,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Journal of Computational and Applied Mathematics",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Explainable Surgical Procedures Recommender System Leveraging Large Language Models",
          "description":"Significant advancements have recently been made in the fields of recommender systems and natural language processing, particularly with large language models (LLMs). In most cases, recommender systems have been used to suggest items and enhance personalization for users, while LLMs have been applied to textual tasks such as text completion, translation, and summarization. In this study, we demonstrate that integrating recommender system models with recent LLMs can effectively suggest appropriate surgical procedures for patients. We employ several LLMs to process clinical text in a morphologically rich language, serving three crucial roles: information representation, information enrichment, and explaining the surgical procedure suggestions made by the recommender system. Our method was evaluated using real-world clinical data, considering patients’ demographic attributes and health conditions. To assess the explainability of our method, we conducted an extensive experiment involving several clinicians. The results achieved by our method indicate that using recommender systems and LLMs can lead to high performance and improved explanations. Our study has the potential to enhance the personalization of healthcare and could be adopted by health services to assist healthcare professionals in recommending appropriate surgical procedures.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/clinical_surgery_llm.pdf"},
