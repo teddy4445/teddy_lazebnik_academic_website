@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Faces of time: a historical overview of rapid innovations in coding animal facial signals",
+         "description":"Since Charles Darwin's influential work on The Expression of the Emotions in Man and Animals, there have been significant advancements in how animal behaviorists identify and describe the facial signals of animals, including humans. Most of these advancements are largely attributed to technological innovations in how data are recorded in addition to the establishment of computer programs that aid with behavioral coding and analysis. Consequently, various manual and automated approaches can be adopted, each with its own benefits and drawbacks. The goal of this overview is twofold. First, we provide an overview of the past and present techniques for coding animal facial signals. Second, we compare and contrast each method, offering multiple examples of how each technique has been used and can be applied in the study of animal facial signaling today. Our examples include studies that address empirical questions related to animal behavior, as well as studies aimed at generating applications for animal welfare. Instead of favoring or criticizing one approach over another, our aim is to foster appreciation for the advancements in animal facial signal coding and to inspire future innovations in this field.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/faces_of_time.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Florkiewicz, B., Faces of time: a historical overview of rapid innovations in coding animal facial signals. Frontiers in Veterinary Science. 2025."}],
+		 "authors": "Teddy Lazebnik, Brittany Florkiewicz",
+         "year": 2025,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Frontiers in Veterinary Science",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Comparing partial differential equations and agent-based simulations in spatio-temporal modeling of cancer growth and shape",
          "description":"Spatio-temporal partial differential equations (PDEs) models of cancer make several ad-hoc assumptions about the dynamics on the unknown boundary of the tumor in order to solve the PDE system of equations and, at the same time, determine also the boundary of the tumor. In this paper, we developed a different computation approach using the agent-based simulation (ABS) modeling method. We consider a simple cancer model, and use, in the ABS model, the same parameters that express the rates of interactions among cells and proteins, as in the PDE model, but we make no ad-hoc assumptions on the dynamics of the unknown tumor boundary. However, ABS is a stochastic process, hence, in order to get a good approximation of the tumor boundary, we need to repeat the simulations many times, and then take the average. We show, in the spherical case, that the tumor volume computed by the ABS is in increasingly good agreement with the PDE volume as the number of ABS repetitions is increased. We next use the ABS model to compute several non-symmetric shapes that are commonly seen in non-invasive and invasive cancers.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/teddy_avner_new_math.pdf"},
