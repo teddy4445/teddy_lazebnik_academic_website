@@ -413,6 +413,15 @@
 		 "month": 10,
 		 "day": 18,
 		 "order": 46
+      },
+      {
+         "title":"When a Diploma Stops Being a Ticket In",
+         "description":"This post dives into why a bachelor’s is no longer a guaranteed ticket in, how AI is quietly killing (and creating) opportunities, and what young workers can actually do to survive, and even stand out, in this new landscape.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "48"}],
+		 "year": 2025,
+		 "month": 12,
+		 "day": 1,
+		 "order": 47
       }
 	]
 }
