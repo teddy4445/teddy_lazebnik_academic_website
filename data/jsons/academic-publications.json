@@ -1,6 +1,30 @@
 {
    "publications":[
 	{
+         "name":"Introducing “Inside” out of distribution",
+         "description":"Detecting and understanding out-of-distribution (OOD) samples is crucial in machine learning (ML) to ensure reliable modelperformance. Current OOD studies primarily focus on extrapolatory (outside) OOD, neglecting potential cases of interpolatory(inside) OOD. In this study, we introduce a novel perspective on OOD by suggesting that it can be divided into inside andoutside cases. We examine the inside–outside OOD profiles of datasets and their impact on ML model performance, usingnormalized root mean squared error (RMSE) and F1 score as the performance metrics on synthetically generated datasets withboth inside and outside OOD. Our analysis demonstrates that different inside–outside OOD profiles lead to unique effects onML model performance, with outside OOD generally causing greater performance degradation, on average. These findingshighlight the importance of distinguishing between inside and outside OOD for developing effective counter-OOD methods.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/inside_ood.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Introducing “Inside” out of distribution. International Journal of Data Science and Analytics. 2025."}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2025,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"International Journal of Data Science and Analytics",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Do Institutions Make Street-Level Bureaucrats Prosocial? Agent-Based Evidence Shows That New Public Management Does Not",
+         "description":"Does street-level bureaucrats' (SLBs) willingness to sacrifice their own self-interests to meet the needs of their clients vary depending on their contexts? To date, it has been very challenging to empirically examine how SLBs who have different orientations toward social values might act in different institutional and administrative contexts. To overcome this obstacle, in this study, we develop an agent-based simulation of the interactions between SLBs and their citizen–clients. We use our simulations with SLBs in traditional public administration, new public management (NPM), and post-NPM contexts. Our results reveal that the SLBs' personal characteristics are less important than the institutional and administrative context with regard to their interactions with their clients. In NPM environments, SLBs are much less prosocial than in traditional public administration settings. In a post-NPM setting, they are more prosocial than in the NPM environment. In addition, we demonstrate how various elements, including the ratio between SLBs and their citizen–clients play an important role in this regard. Regardless of the institutional or administrative context, adding more SLBs to public administration increases their prosocial orientations. However, this link is not linear.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/abs_slb.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "Cohen, N., Lazebnik, T., Do Institutions Make Street-Level Bureaucrats Prosocial? Agent-Based Evidence Shows That New Public Management Does Not. European Policy Analysis. 2025."}],
+		 "authors": "Nissim Cohen, Teddy Lazebnik",
+         "year": 2025,
+         "topic":"socio-economic",
+         "type":"Paper",
+         "publisher":" European Policy Analysis",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Tighten the lasso: a convex hull volume-based anomaly detection method",
          "description":"Detecting out-of-distribution (OOD) data is a critical task for maintaining model reliability and robustness. In this study, we propose a novel anomaly detection algorithm that leverages the convex hull (CH) property of a dataset by exploiting the observation that OOD samples marginally increase the CH’s volume compared to in-distribution samples. Thus, we establish a decision boundary between OOD and in-distribution data by iteratively computing the CH’s volume as samples are removed, stopping when such removal does not significantly alter the CH’s volume. The proposed algorithm is evaluated against seven widely used anomaly detection methods across ten datasets, demonstrating performance comparable to state-of-the-art (SOTA) techniques. Furthermore, we introduce a computationally efficient criterion for identifying datasets where the proposed method outperforms existing SOTA approaches.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/hcad.pdf"},
@@ -9,7 +33,7 @@
          "year": 2025,
          "topic":"Machine learning",
          "type":"Paper",
-         "publisher":" International Journal of Data Science and Analytics",
+         "publisher":"International Journal of Data Science and Analytics",
          "publicationStatus":"Published"
       },
 	{
