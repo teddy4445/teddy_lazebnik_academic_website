@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Tighten the lasso: a convex hull volume-based anomaly detection method",
+         "description":"Detecting out-of-distribution (OOD) data is a critical task for maintaining model reliability and robustness. In this study, we propose a novel anomaly detection algorithm that leverages the convex hull (CH) property of a dataset by exploiting the observation that OOD samples marginally increase the CH’s volume compared to in-distribution samples. Thus, we establish a decision boundary between OOD and in-distribution data by iteratively computing the CH’s volume as samples are removed, stopping when such removal does not significantly alter the CH’s volume. The proposed algorithm is evaluated against seven widely used anomaly detection methods across ten datasets, demonstrating performance comparable to state-of-the-art (SOTA) techniques. Furthermore, we introduce a computationally efficient criterion for identifying datasets where the proposed method outperforms existing SOTA approaches.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/hcad.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "Itai, U., Bar Ilan, A., Lazebnik, T., Tighten the lasso: a convex hull volume-based anomaly detection method.  International Journal of Data Science and Analytics. 2025."}],
+		 "authors": "Uri Itai, Asael Bar Ilan, Teddy Lazebnik",
+         "year": 2025,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":" International Journal of Data Science and Analytics",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Faces of time: a historical overview of rapid innovations in coding animal facial signals",
          "description":"Since Charles Darwin's influential work on The Expression of the Emotions in Man and Animals, there have been significant advancements in how animal behaviorists identify and describe the facial signals of animals, including humans. Most of these advancements are largely attributed to technological innovations in how data are recorded in addition to the establishment of computer programs that aid with behavioral coding and analysis. Consequently, various manual and automated approaches can be adopted, each with its own benefits and drawbacks. The goal of this overview is twofold. First, we provide an overview of the past and present techniques for coding animal facial signals. Second, we compare and contrast each method, offering multiple examples of how each technique has been used and can be applied in the study of animal facial signaling today. Our examples include studies that address empirical questions related to animal behavior, as well as studies aimed at generating applications for animal welfare. Instead of favoring or criticizing one approach over another, our aim is to foster appreciation for the advancements in animal facial signal coding and to inspire future innovations in this field.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/faces_of_time.pdf"},
