@@ -422,6 +422,15 @@
 		 "month": 12,
 		 "day": 1,
 		 "order": 47
+      },
+      {
+         "title":"Finite vs. Infinite Games: A Game Theoretic Perspective on Strategy and Stability",
+         "description":"Most strategic chaos stems from a single variable: misidentifying the game you are playing. In this blog post we answer why trying to 'win' a system designed to never end is a mathematical guarantee of failure.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "49"}],
+		 "year": 2025,
+		 "month": 12,
+		 "day": 9,
+		 "order": 48
       }
 	]
 }
