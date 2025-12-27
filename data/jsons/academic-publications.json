@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Transforming norm-based to graph-based spatial representation for spatio-temporal epidemiological models",
+         "description":"Pandemics, with their profound societal and economic impacts, pose significant threats to global health, mortality rates, economic stability, and political landscapes. In response to these challenges, numerous studies have employed spatio-temporal models to enhance our understanding and management of these complex phenomena. These spatio-temporal models can be roughly divided into two main spatial categories: norm-based and graph-based. Norm-based models are usually more accurate and easier to model, but are more computationally intensive and require more data to fit. On the other hand, graph-based models are less accurate and harder to model, but are less computationally intensive and require fewer data to fit. As such, ideally, one would like to use a graph-based model while preserving the representation accuracy obtained by the norm-based model. In this study, we explore the ability to transform from norm-based to graph-based spatial representation for these models. We first show that no analytical mapping between the two exists, requiring one to use numerical approximation methods instead. We introduce a novel framework for this task, together with twelve possible implementations using a wide range of heuristic optimization approaches. Our findings show that by leveraging agent-based simulations and heuristic algorithms for the graph node’s location and population’s spatial walk dynamics approximation, one can use graph-based spatial representation without losing much of the model’s accuracy and expressiveness. We investigate our framework for three real-world cases, achieving 93% accuracy preservation, on average, while obtaining 86% relative computational time reduction. Moreover, an analysis of synthetic cases shows the proposed framework is relatively robust for changes in both spatial and temporal properties.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/norm_to_graph.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Transforming norm-based to graph-based spatial representation for spatio-temporal epidemiological models. Engineering Applications of Artificial Intelligence. 2025."}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2026,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Engineering Applications of Artificial Intelligence",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Introducing “Inside” out of distribution",
          "description":"Detecting and understanding out-of-distribution (OOD) samples is crucial in machine learning (ML) to ensure reliable modelperformance. Current OOD studies primarily focus on extrapolatory (outside) OOD, neglecting potential cases of interpolatory(inside) OOD. In this study, we introduce a novel perspective on OOD by suggesting that it can be divided into inside andoutside cases. We examine the inside–outside OOD profiles of datasets and their impact on ML model performance, usingnormalized root mean squared error (RMSE) and F1 score as the performance metrics on synthetically generated datasets withboth inside and outside OOD. Our analysis demonstrates that different inside–outside OOD profiles lead to unique effects onML model performance, with outside OOD generally causing greater performance degradation, on average. These findingshighlight the importance of distinguishing between inside and outside OOD for developing effective counter-OOD methods.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/inside_ood.pdf"},
