@@ -1,0 +1,106 @@
+<h1>
+Five Skills That Will Keep Developers Irreplaceable in the Age of AI Code
+</h1>
+<hr class="publications-hr">
+1/1/2026
+<hr class="publications-hr">
+
+<p>
+A few weeks ago I watched a familiar scene play out (again). Someone asked an AI coding tool to "build a dashboard".
+The model returned clean, confident, “production-ready” code in seconds. The team shipped it. And then the real world
+showed up: the app crashed under load, a response accidentally included sensitive user data, and the incident turned
+into a very expensive lesson.
+</p>
+
+<p>
+This is not a story about bad developers or “do not use AI". I actually like these tools. I use them. A lot.
+But after spending months stress-testing AI coding assistants across different stacks and use cases, one pattern became
+impossible to ignore: AI is great at producing code, but it’s not great at owning the consequences of that code.
+That gap is exactly where developers become more valuable, not less.
+</p>
+
+<p>
+While everyone is debating whether AI will replace developers, the developers who understand why AI-generated code fails in production are quietly becoming the most valuable people in the room. In my experience, that value clusters around five skills. Not “knowing the latest framework.” Not “typing faster.” These five.
+</p>
+
+<h4>System Design and Architecture</h4>
+<p>
+AI can write functions all day. It can scaffold an API. It can generate components and glue code.
+What it cannot do, reliably, is design a system that fits your constraints.
+</p> 
+<p>
+Should this project be a monolith or microservices? When is Redis the right tool, and when is PostgreSQL enough?
+How do you prepare for 10× growth without building a spaceship for a bicycle ride? If you ask the AI, you’ll often get textbook answers: safe, generic, context-free. But architecture is never context-free.
+</p>
+<p>
+The real job is translating business reality into technical structure. Deadlines, budget, team size, risk tolerance, existing infrastructure, compliance requirements, and “what happens if this breaks at 2am.” If you can hold all of that in your head and still make a clean design decision, you’re not just writing code. You’re reducing organizational risk.
+</p>
+
+<h4>Product Thinking and UX</h4>
+<p>
+Even the best architecture is useless if users do not understand the product, don’t trust it, or simply do not enjoy using it. 
+AI does not genuinely understand human intent. It can mimic patterns, but it doesn’t have empathy, and it doesn’t feel the friction in a workflow.
+</p>
+<p>
+A small example I keep seeing: “Should this be a modal or a new page?” That looks trivial until you remember that the answer depends on user flow, cognitive load, what the user needs to compare, where they came from, what they’re trying to accomplish, and what your product is optimizing for (speed, clarity, conversion, retention, trust).
+</p>
+<p>
+Developers who can think like product owners become translators between stakeholders and users. That translation is strategy, and strategy is where products win or lose. AI can generate UI; it cannot own user outcomes.
+</p>
+
+<h4>Performance and Debugging</h4>
+<p>
+When something is slow or broken, AI is often enthusiastic and vague. "Add caching". "Optimize your queries". "Use a CDN". Helpful ideas, but they are not answers.
+</p>
+<p>
+The answer is knowing where time and memory are actually going. Is it the database doing N+1 queries? Is it an inefficient index? Is it front-end rendering thrashing the main thread? Is it a memory leak that only appears after an hour in production?
+Is it a network waterfall? A bundle size issue? An accidental retry loop? The difference between guessing and diagnosing is the difference between junior and senior work.
+</p>
+<p>
+Debugging is not just reading error messages. It is building a mental model of how browsers render, how JavaScript engines behave, how databases execute queries, and how systems degrade under load. 
+AI can read documentation. You can build intuition.
+Intuition is what turns "we are down" into "here is the root cause and a safe fix".
+</p>
+
+<h4>Security and Code Review</h4>
+<p>
+This one is uncomfortable, but important: AI-generated code regularly ships with security holes.
+SQL injection paths, exposed API keys, authorization bypasses, sensitive data leaking in responses, misconfigured CORS, unsafe file uploads, missing rate limits—the list is long.
+</p>
+<p>
+The model is optimizing for "code that works", not "code that survives hostile environments". It does not understand your threat model. It doesn’t know what attackers are likely to try against your specific system. It doesn’t carry the paranoia that good security engineers learn the hard way.
+</p>
+<p>
+Strong developers do more than implement features; they review, challenge, and harden them. If you can consistently catch what AI (and humans) miss, you become the person a company relies on to prevent catastrophic mistakes. In many organizations, that makes you effectively recession-proof.
+</p>
+
+<h4>Legacy Systems and Integration</h4>
+<p>
+Most real-world engineering is not greenfield. It is archaeology.
+You inherit a ten-year-old internal API with zero documentation. You integrate a third-party system that sometimes returns strings, sometimes numbers, and occasionally both in the same field because “historical reasons.” You discover edge cases that only exist for one client in one region on one billing plan. This is the messy reality of real companies.
+</p>
+<p>
+AI does not know your company’s history. It was not there when the payment integration was hacked together in 2015 and then never touched again. 
+It ca not feel the weight of technical debt that is been accumulating for years. 
+But you can navigate chaos, reverse engineer behavior, add guardrails, and ship improvements without breaking everything else. 
+That skill is rare, and it is incredibly valuable.
+</p>
+
+<h4>How to Actually Build These Skills</h4>
+<p>
+Knowing the list is easy. Building the skills is the work. The shift I keep recommending (and reminding myself to follow) is to stop obsessing over syntax and start obsessing over systems. Syntax is searchable. Systems thinking is earned.
+If you want a practical approach, build projects that force tradeoffs. Not another to-do app. Build something with real constraints: multi-tenant permissions, data privacy concerns, performance targets, third-party integrations, failure modes, and a plan for scaling. The goal is not a flashy demo. The goal is to practice making decisions you can defend.
+</p>
+<p>
+I also like using system design interviews as training material even when I’m not interviewing. They compress years of engineering lessons into patterns: how senior engineers reason, what they ask first, how they handle uncertainty, and how they communicate risk. Treat those interviews like case studies, not puzzles.
+Finally, practice code review on purpose. Read open-source pull requests. Try to spot performance problems and security issues before reading the comments. 
+Train your eye to notice what “looks correct” but is not safe, scalable, or maintainable.
+This is exactly the muscle AI cannot replace, because it’s not about writing code—it’s about judgment.
+</p>
+<p>
+AI coding tools are not going away. They will get better. And that is fine. The developers who thrive will be the ones who can take AI output, pressure-test it against reality, and ship software that stays up, stays fast, and keeps user data safe.
+That’s not a fear-based career plan. It’s a professional one.
+</p>
+<p>
+One last thing: even if you’re already working on these five skills, there are still a handful of fundamental mistakes that can quietly sabotage your growth. I covered the ten biggest mistakes programmers make in my last video. If you’ve been feeling stuck, that’s a good next step.
+</p>

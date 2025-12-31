@@ -431,6 +431,15 @@
 		 "month": 12,
 		 "day": 9,
 		 "order": 48
+      },
+      {
+         "title":"Five Skills That Will Keep Developers Irreplaceable in the Age of AI Code",
+         "description":"AI can generate “perfect” code in seconds—until it hits production, breaks, leaks data, and costs real money. After months of testing AI coding tools, I realized the developers who thrive wo not be the fastest typers, but the ones with five skills AI ca not replace: system design, product thinking, debugging, security review, and navigating legacy chaos. This post breaks down why these matter, and how to build them.",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "50"}],
+		 "year": 2026,
+		 "month": 1,
+		 "day": 1,
+		 "order": 49
       }
 	]
 }
