@@ -1,0 +1,197 @@
+<h1>
+Elastic Hashing: Beating Uniform Probing Without Reordering
+</h1>
+<hr class="publications-hr">
+22/2/2026
+<hr class="publications-hr">
+
+
+    <p>
+      Open-addressed hash tables are one of those “so simple they’re scary” data structures:
+      store everything in one array, and if two keys collide, just keep probing until you find an empty slot.
+      They are fast, cache-friendly, and everywhere (databases, language runtimes, networking stacks… you name it).
+    </p>
+
+    <p>
+      But at high load factors, open addressing becomes a game of musical chairs. If the table is
+      <em>1 − δ</em> full (so only a δ-fraction of slots are free), probing can get expensive—especially if you
+      care about the <em>worst</em> insertion/search and not only the average.
+    </p>
+
+    <p>
+      A recent paper by Farach-Colton, Krapivin, and Kuszmaul revisits this classic topic and shows something
+      I honestly didn’t expect: even if you <strong>never move elements after they are inserted</strong> (no reordering),
+      you can still do dramatically better than the “folk wisdom” implied by decades of results.
+    </p>
+
+    <div class="callout">
+      <p style="margin:0;">
+        <strong>Two headline results:</strong><br/>
+        (1) A non-greedy scheme with <strong>O(1)</strong> amortized expected search probes and <strong>O(log(1/δ))</strong> worst-case expected probes.<br/>
+        (2) A greedy scheme with worst-case expected probes <strong>O(log²(1/δ))</strong>, disproving a long-standing conjecture by Yao.
+      </p>
+    </div>
+
+    <h2>The classic story: uniform probing and the coupon-collector wall</h2>
+
+    <p>
+      If you learned hashing from Knuth, you likely met <em>uniform probing</em>: each key gets a random permutation
+      of the array as its probe order, and insertion takes the first free slot in that order.
+      At load factor <em>1 − δ</em>, the amortized expected probe complexity is Θ(log(1/δ)).
+    </p>
+
+    <p>
+      This is not an accident. There’s a “coupon collector” flavor here: to fill almost all slots you need to
+      “discover” a lot of distinct empty positions, and the last few free slots become increasingly hard to hit.
+      Yao famously proved that among <em>greedy</em> strategies (always take the first free slot), Θ(log(1/δ)) amortized
+      is optimal—so many people internalized “open addressing without reordering can’t really beat log(1/δ).”
+    </p>
+
+    <p>
+      The paper’s first twist is: that intuition is too pessimistic once you allow the insertion algorithm to be
+      <em>non-greedy</em> (still no moving old elements—just smarter decisions at insertion time).
+    </p>
+
+    <h2>Elastic hashing: probe far, then “snap back”</h2>
+
+    <p>
+      The first construction (called <strong>elastic hashing</strong>) answers a simple but deep question:
+      <em>Can we get amortized expected probe complexity better than log(1/δ) without reordering?</em>
+      The answer is yes—down to <strong>O(1)</strong>.
+    </p>
+
+    <h3>The intuition in one paragraph</h3>
+    <p>
+      Elastic hashing splits the array into progressively smaller “levels” (think: halves, quarters, eighths…).
+      When inserting a key, the algorithm may spend time probing a nearly-full level (to “collect coupons” and
+      learn about occupancy), but if it doesn’t quickly find a good spot, it redirects the key into the next level,
+      which is intentionally kept less full. The key idea is that the algorithm <strong>decouples insertion work</strong>
+      from <strong>search cost</strong>: it can afford many probes while deciding, yet still place the key in a position that
+      will be found with very few probes later.
+    </p>
+
+    <h3>What you get (and why it matters)</h3>
+    <ul>
+      <li>
+        <strong>Amortized expected search probes: O(1).</strong> Over the whole build-up to load factor <em>1 − δ</em>, the average
+        key becomes cheap to find.
+      </li>
+      <li>
+        <strong>Worst-case expected search probes: O(log(1/δ)).</strong> Even the “unlucky” insertions (late in the process)
+        are only logarithmic in the inverse slack.
+      </li>
+      <li>
+        <strong>Worst-case expected insertion time: O(log(1/δ)).</strong> The scheme spreads the coupon-collecting effort
+        so no single insertion is forced into a δ<sup>−1</sup>-style disaster.
+      </li>
+    </ul>
+
+    <p>
+      There is also a matching lower bound: if you prohibit reordering entirely, you can’t beat
+      <strong>Ω(log(1/δ))</strong> for worst-case expected probe complexity in general—so elastic hashing is optimal in that sense.
+    </p>
+
+    <h2>Funnel hashing: greedy can be better than we thought</h2>
+
+    <p>
+      The second part of the paper is about the greedy world, where the insertion must take the first free slot
+      in whatever probe sequence you give it. This is the regime where Yao’s earlier results live, and it is also
+      where a notorious conjecture lingered for decades:
+      that worst-case expected probe complexity should be basically Θ(1/δ) for greedy open addressing near full tables.
+    </p>
+
+    <p>
+      The paper disproves this with a construction called <strong>funnel hashing</strong>.
+    </p>
+
+    <h3>The funnel idea</h3>
+    <p>
+      Instead of one monolithic probe sequence, the table is organized into multiple geometrically shrinking regions,
+      each further divided into buckets of size about <code>Θ(log(1/δ))</code>. A greedy insertion “attempts” to insert into one
+      bucket in each region (scan the bucket; if there’s an empty slot, take the first one), and only if it fails does it
+      move to the next region. If all regions fail, it falls back to a small “special” area designed to behave nicely.
+    </p>
+
+    <p>
+      The outcome is a surprisingly clean bound:
+    </p>
+
+    <ul>
+      <li><strong>Worst-case expected probes: O(log²(1/δ)).</strong> (And the same for insertion time.)</li>
+      <li>
+        <strong>High-probability worst-case probes: O(log²(1/δ) + log log n).</strong>
+        So even the tail is well-controlled with very high probability.
+      </li>
+      <li><strong>Amortized expected probes: O(log(1/δ)).</strong> Which matches the classic greedy barrier.</li>
+    </ul>
+
+    <p>
+      Importantly, the authors also provide matching lower bounds showing these “weird-looking” log-squared
+      and log-log terms are not artifacts of the proof: they are essentially the right answers for the model.
+    </p>
+
+    <h2>So… what changed, conceptually?</h2>
+
+    <div class="callout">
+      <p style="margin:0;">
+        If I had to summarize the conceptual upgrade in one sentence:<br/>
+        <strong>Stop treating “the probe sequence” as a single linear destiny.</strong><br/>
+        Once you allow structure (levels, buckets) and you carefully manage how full each region gets,
+        you can distribute the pain of high load factors without paying for it on every lookup.
+      </p>
+    </div>
+
+    <p>
+      Elastic hashing shows that “no reordering” is not the same as “stuck with uniform probing performance.”
+      Funnel hashing shows that even within greedy rules, uniform probing isn’t the end of the story for worst-case behavior.
+    </p>
+
+    <h2>Why should practitioners care?</h2>
+
+    <p>
+      I don’t expect production hash tables to copy these constructions line-by-line tomorrow.
+      But results like these have a way of changing what we consider “possible,” and that matters:
+    </p>
+
+    <ul>
+      <li>
+        <strong>High-load design space:</strong> If your system must run hot (high occupancy), it’s valuable to know that
+        low average lookup cost and good tail behavior are not inherently incompatible with “no moving elements.”
+      </li>
+      <li>
+        <strong>Latency tails:</strong> The difference between δ<sup>−1</sup> and polylog(1/δ) worst-case expectations can be the difference
+        between “rare annoyance” and “SLO violation.”
+      </li>
+      <li>
+        <strong>Theory-to-systems inspiration:</strong> Leveling, bucketing, and “fallback zones” show up in real systems all the time.
+        This paper gives a sharp theoretical lens for why those patterns work.
+      </li>
+    </ul>
+
+    <h2>Closing remarks</h2>
+
+    <p>
+      Hashing is one of those areas where “it’s already solved” is almost always wrong.
+      This paper is a great example: by slightly reframing what the insertion algorithm is allowed to do
+      (non-greedy choices without reordering), and by engineering structure into the probe process,
+      the authors get optimal bounds that also settle (and overturn!) long-standing beliefs.
+    </p>
+
+    <p class="small">
+      Reference: Farach-Colton, Krapivin, Kuszmaul, “Optimal Bounds for Open Addressing Without Reordering,” arXiv:2501.02305v2 (2025).
+      You can find it on arXiv by searching the identifier <code>2501.02305</code>.
+    </p>
+	
+	
+<style>
+a:hover { text-decoration: underline; }
+    .callout {
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #fafafa;
+      margin: 16px 0;
+    }
+    .small { font-size: 0.95rem; color: var(--muted); }
+    code { background:#f5f5f5; padding: 2px 6px; border-radius: 8px; }
+</style>

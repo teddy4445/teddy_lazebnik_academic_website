@@ -432,14 +432,23 @@
 		 "day": 9,
 		 "order": 48
       },
-      {
-         "title":"Five Skills That Will Keep Developers Irreplaceable in the Age of AI Code",
-         "description":"AI can generate “perfect” code in seconds—until it hits production, breaks, leaks data, and costs real money. After months of testing AI coding tools, I realized the developers who thrive wo not be the fastest typers, but the ones with five skills AI ca not replace: system design, product thinking, debugging, security review, and navigating legacy chaos. This post breaks down why these matter, and how to build them.",
-         "fileLinks":[{"info": "Read More", "type": 2, "link": "50"}],
-		 "year": 2026,
-		 "month": 1,
-		 "day": 1,
-		 "order": 49
-      }
+	{
+	  "title": "Elastic Hashing: Beating Uniform Probing Without Reordering",
+	  "description": "Open-addressed hash tables are fast—until the table is almost full and probe lengths explode. This paper shows a surprising shift in what’s possible without reordering: elastic hashing achieves O(1) amortized expected probes with only O(log(1/δ)) worst-case expected probes at load 1−δ, and funnel hashing disproves a long-standing conjecture by giving a greedy scheme with O(log²(1/δ)) worst-case expected probes. Here’s the intuition, the guarantees, and why it changes how we should think about high-load performance and tail latency.",
+	  "fileLinks": [{ "info": "Read More", "type": 2, "link": "51" }],
+	  "year": 2026,
+	  "month": 2,
+	  "day": 21,
+	  "order": 49
+	},
+{
+  "title": "Elastic Hashing: Beating Uniform Probing Without Reordering",
+  "description": "Open-addressed hash tables are fast—until the table is almost full and probe lengths explode. This paper shows a surprising shift in what’s possible without reordering: elastic hashing achieves O(1) amortized expected probes with only O(log(1/δ)) worst-case expected probes at load 1−δ, and funnel hashing disproves a long-standing conjecture by giving a greedy scheme with O(log²(1/δ)) worst-case expected probes. Here’s the intuition, the guarantees, and why it changes how we should think about high-load performance and tail latency.",
+  "fileLinks": [{ "info": "Read More", "type": 2, "link": "51" }],
+  "year": 2026,
+  "month": 2,
+  "day": 21,
+  "order": 50
+}
 	]
 }
