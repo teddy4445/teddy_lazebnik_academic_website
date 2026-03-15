@@ -449,6 +449,15 @@
   "month": 2,
   "day": 21,
   "order": 50
+},
+{
+  "title": "[Technical post] The Agentic Loop: Orchestrating GPT-5.4, Gemini, and Codex for Algorithmic Development",
+  "description": "Stop treating AI as a chatbot and start using it as a development team. In this post, I break down a 2026-ready agentic workflow that orchestrates GPT-5.4, Gemini, and Codex to build high-performance algorithmic code. From architectural blueprints to automated unit testing loops, learn how to move beyond simple prompts to professional-grade engineering. Read more to see how to master the multi-agent pipeline.",
+  "fileLinks": [{ "info": "Read More", "type": 2, "link": "52" }],
+  "year": 2026,
+  "month": 3,
+  "day": 15,
+  "order": 51
 }
 	]
 }
