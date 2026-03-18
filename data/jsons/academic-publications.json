@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"The impact of collective performance-related pay on street-level bureaucrats’ performance and clients’ outcomes",
+         "description":"How does collective performance-related pay influence street-level bureaucrats’ job performance in public service settings? What is the magnitude of this effect? How do such incentive systems ultimately impact clients’ outcomes? To address these questions in a natural work environment, we analyze a dataset of 35,635 elective surgical procedures conducted in 23 public hospitals in Israel during the 2018–2019 fiscal years, where performance-related pay is implemented at the collective, hospital-level rather than the individual level. Overall, the findings support our hypothesis that collective performance-related pay improves SLBs’ performance. For client outcomes (LOS), the evidence is heterogeneous: the pooled nonparametric comparison shows no robust difference, while the causal model detects a small average signal, and hospital-level patterns vary—suggesting context-dependent effects. By drawing on large-scale administrative data from an actual policy implementation, this study extends prior research that has largely focused on individual-based incentives in experimental or highly stylized settings and contributes to the street-level bureaucracy and performance management literature by empirically distinguishing between effects on frontline performance and effects on client outcomes.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/healthcare_slb.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "Cohen, N., Lazebnik, T., Khalatnik, Y.,  The impact of collective performance-related pay on street-level bureaucrats’ performance and clients’ outcomes. Public Performance & Management Review. 2026."}],
+		 "authors": "Nissim Cohen, Teddy Lazebnik, Yonatan Khalatnik",
+         "year": 2026,
+         "topic":"socio-economic",
+         "type":"Paper",
+         "publisher":"Public Performance & Management Review",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Break a Lag: Triple Exponential Moving Average for Enhanced Optimization",
          "description":"The performance of deep learning models hinges on the effectiveness of their optimization strategies, yet existing methods remain fundamentally constrained. Many optimizers rely on first-order Exponential Moving Average (EMA) techniques, which struggle to accurately track complex gradient trends, resulting in a lag in trend identification and suboptimal convergence. To overcome this critical limitation, we introduce Fast Adaptive Moment Estimation (FAME), a novel optimizer that harnesses the power of Triple Exponential Moving Average (TEMA). By inherently integrating a multi-level tracking mechanism, FAME significantly enhances gradient responsiveness, mitigates trend lag, and maximizes learning efficiency. Our extensive evaluation spans diverse computer vision tasks-including image classification, object detection, and semantic segmentation-incorporating FAME into 22 distinct architectures, from lightweight CNNs to cutting-edge Vision Transformers. Rigorous benchmarking against state-of-the-art optimizers confirms FAME’s superiority in accuracy, stability, and robustness. Notably, FAME excels in scalability, demonstrating consistent and substantial performance gains across architectures, tasks, and datasets, positioning it as a powerful optimizer for computer vision.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/break_a_lag.pdf"},
