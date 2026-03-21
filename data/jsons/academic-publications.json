@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Follow the Forest Trail: Distillation by Gradient Boosting Models to Enhance Symbolic Regression Performance",
+         "description":"In recent years, Machine Learning (ML) models have been introduced across diverse scientific fields, due to their strong predictive performance. However, in many applications the demand for interpretable models often surpasses the need for mere accuracy. Symbolic Regression (SR) offers a solution with its concise and explainable formulas, yet it typically falls short in accuracy when compared to other ML models such as Random Forests. This paper proposes a novel two-step ensemble approach, inspired by the student-teacher model in knowledge distillation. Initially, a Gradient Boosting Model (GBM) is trained to harness its high accuracy; this model acts as the ‘teacher.’ Subsequently, an SR ‘student’ model is trained on the output of the gradient boosting model, effectively distilling the knowledge into a form that combines interpretability with enhanced performance. We perform an extensive evaluation of this method across three different SR models and 10 regression datasets. Our findings show that the proposed method exhibits a consistent improvement of 3.3-6.7% in accuracy compared to standard SR models. Furthermore, this process serves as an explainability framework that helps to uncover and interpret the decisions of complex ML models.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/gbm_to_sr.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "Shmuel, A., Lazebnik, T., Glickman, O., Follow the Forest Trail: Distillation by Gradient Boosting Models to Enhance Symbolic Regression Performance. IEEE Access. 2026."}],
+		 "authors": "Assaf Shmuel, Teddy Lazebnik, Oren Glickman",
+         "year": 2026,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"IEEE Access",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"The impact of collective performance-related pay on street-level bureaucrats’ performance and clients’ outcomes",
          "description":"How does collective performance-related pay influence street-level bureaucrats’ job performance in public service settings? What is the magnitude of this effect? How do such incentive systems ultimately impact clients’ outcomes? To address these questions in a natural work environment, we analyze a dataset of 35,635 elective surgical procedures conducted in 23 public hospitals in Israel during the 2018–2019 fiscal years, where performance-related pay is implemented at the collective, hospital-level rather than the individual level. Overall, the findings support our hypothesis that collective performance-related pay improves SLBs’ performance. For client outcomes (LOS), the evidence is heterogeneous: the pooled nonparametric comparison shows no robust difference, while the causal model detects a small average signal, and hospital-level patterns vary—suggesting context-dependent effects. By drawing on large-scale administrative data from an actual policy implementation, this study extends prior research that has largely focused on individual-based incentives in experimental or highly stylized settings and contributes to the street-level bureaucracy and performance management literature by empirically distinguishing between effects on frontline performance and effects on client outcomes.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/healthcare_slb.pdf"},
