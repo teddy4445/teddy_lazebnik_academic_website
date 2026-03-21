@@ -1516,219 +1516,6 @@
             "description": "The course will focus on the theoretical and practical components of developing modern server side for web applications in JavaScript (NodeJS)."
         },
         {
-            "name": "Introduction to Reinforcement Leanring",
-            "passkey": "",
-            "code": "233929",
-            "year": "2023",
-            "topic": "cs",
-            "semester": "Summer",
-            "university": "Ariel University",
-            "department": "Mathematics",
-            "location_class": "Zoom",
-            "syllabus": "",
-            "description": "Link to the class: https://biu-ac-il.zoom.us/j/88121861371 The course will provide students with a comprehensive introduction to modern reinforcement learning. The materials are taken from the amazing DeepMind with UCL course and slightly adoptted for first degree students.",
-            "grade_parts": [
-                {
-                    "name": "Final project",
-                    "percent": 85
-                },
-                {
-                    "name": "Presentation in class",
-                    "percent": 15
-                }
-            ],
-            "resources": {
-                "Must": [
-                    {
-                        "name": "Final Project Guideline",
-                        "link": "/files/rl_course/final_course_guideline.pdf",
-                        "description": "All the details about the course's final project - you really should read it carfully.",
-                        "type": "file"
-                    }
-                ],
-                "Extra": [
-                    {
-                        "name": "An example for a similar (good) final project",
-                        "link": "/files/rl_course/cyber_final_project_example.pdf",
-                        "description": "Note this is a paper from another course and their task was a bit different. That said, the overall design of the work is relevent and you can learn from it.",
-                        "type": "file"
-                    },
-                    {
-                        "name": "HuggingFace course",
-                        "link": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
-                        "description": "This is an amazing practical course by HuggingFace that will show you how practically use RL.",
-                        "type": "slides"
-                    },
-                    {
-                        "name": "CS231N recap about Python",
-                        "link": "https://cs231n.github.io/python-numpy-tutorial/",
-                        "description": "Taken from Stanford's CS234 course, a recap about Python and Colab.",
-                        "type": "slides"
-                    },
-                    {
-                        "name": "RL book with all the course materials",
-                        "link": "http://incompleteideas.net/book/RLbook2020.pdf",
-                        "description": "The book authored by Richard S. Sutton and Andrew G. Barto.",
-                        "type": "file"
-                    }
-                ]
-            },
-            "updates": [
-                {
-                    "title": "Welcome to the course!",
-                    "description": "Since I hate the moodle, all the materials will be uploaded here. Please note that the class will be held via Zoom, recorded, and uploaded to Youtube with a link from this page.",
-                    "date": "8.2.2023",
-                    "link": ""
-                },
-                {
-                    "title": "Join the class via zoom",
-                    "description": "In order to join the class, use the following link - https://biu-ac-il.zoom.us/j/88121861371.",
-                    "date": "8.3.2023",
-                    "link": "https://biu-ac-il.zoom.us/j/88121861371"
-                },
-                {
-                    "title": "Submitting your final project and presentation",
-                    "description": "Following a technical mistake between the dept. about the exam dates, the last class (19.9.2023) is cancelled. You should submit your paper and presentation until the 18th 23:59. Good Luck!",
-                    "date": "8.24.2023",
-                    "link": ""
-                },
-                {
-                    "title": "Final project clarifications",
-                    "description": "Following the discussion in class, you do not have to run the code and add your own results. However, you must review the code and provide an overview of how it is work and its main components.",
-                    "date": "8.31.2023",
-                    "link": ""
-                }
-            ],
-            "modules": [
-                {
-                    "title": "Introduction and basic concepts",
-                    "explanation": "In the first part, we will explore the main ideas behind RL.",
-                    "resources": {
-                        "Lectures": [
-                            {
-                                "name": "Lession 1: Introduction",
-                                "link": "/files/rl_course/1.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lecture 1 recoding",
-                                "link": "https://youtu.be/aVOJyUYxfCg",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 2: Exploration and Exploitation",
-                                "link": "/files/rl_course/2.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lecture 2 recoding",
-                                "link": "https://youtu.be/ITIdAgBNbO4",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 3: Markov Decision Processes and Dynamic Programming",
-                                "link": "/files/rl_course/3.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lecture 3 recoding",
-                                "link": "https://youtu.be/nK_G-hAnPNU",
-                                "description": "",
-                                "type": "video"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "title": "Dynamic programming and reward evaluation",
-                    "explanation": "In the second part, we will study different methods for evaluation of agent's actions as well as how to 'train' them.",
-                    "resources": {
-                        "Lectures": [
-                            {
-                                "name": "Lession 4: Theoretical Fundamentals of Dynamic Programming",
-                                "link": "/files/rl_course/4.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lecture 4 recoding",
-                                "link": "https://youtu.be/pC_2Ge5cvqc",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 5: Model-Free Prediction",
-                                "link": "/files/rl_course/5.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lecture 5 recoding",
-                                "link": "https://youtu.be/cz2vc3pCkdg",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 6: Model-Free Control",
-                                "link": "/files/rl_course/6.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lecture 6 recoding",
-                                "link": "https://youtu.be/v79N_w7VJwo",
-                                "description": "",
-                                "type": "video"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "title": "RL agents training and using",
-                    "explanation": "In the third and final part, we will learn how to implement our previous knowledge to obtain a RL agent.",
-                    "resources": {
-                        "Lectures": [
-                            {
-                                "name": "Lession 7: Function Approximation in RL",
-                                "link": "/files/rl_course/7.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lecture 7 recoding",
-                                "link": "https://youtu.be/wJfQicswsVY",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 8: Planning and models",
-                                "link": "/files/rl_course/8.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lession 9: Policy Gradients and Actor Critics",
-                                "link": "/files/rl_course/9.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lession 10: Deep Reinforcement Learning",
-                                "link": "/files/rl_course/10.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
             "name": "Reinforcement Leanring",
             "passkey": "sweden2025",
             "code": "TFSS25_2025",
@@ -1738,7 +1525,7 @@
             "university": "Jonkoping University",
             "department": "School of Engineering",
             "location_class": "see agenda",
-            "syllabus": "/files/ju_rl_course/syllabus.pdf",
+            "syllabus": "/files/haifa_rl_course/syllabus.pdf",
             "description": "The quest to fully realize the potential of Artificial Intelligence (AI), requires autonomous systems that can learn to make good decisions by interacting with their environment. Reinforcement learning is a paradigm that meets these requirements, and can be applied to various tasks, including game-playing, healthcare, economics, and robotics. This course gives a solid introduction to reinforcement learning with its core approaches and challenges, and is structured around several lectures, assignments, and a project.",
             "grade_parts": [
                 {
@@ -1758,25 +1545,25 @@
                 "Must": [
                     {
                         "name": "Course's stracture",
-                        "link": "/files/ju_rl_course/course_structure.pdf",
+                        "link": "/files/haifa_rl_course/course_structure.pdf",
                         "description": "A one-page description of the course so you can be oriented quickly during the semester.",
                         "type": "file"
                     },
                     {
                         "name": "Home Work #1",
-                        "link": "/files/ju_rl_course/hw1.pdf",
+                        "link": "/files/haifa_rl_course/hw1.pdf",
                         "description": "Home work #1 for submission",
                         "type": "file"
                     },
                     {
                         "name": "Home Work #2",
-                        "link": "/files/ju_rl_course/hw2.pdf",
+                        "link": "/files/haifa_rl_course/hw2.pdf",
                         "description": "Home work #2 for submission",
                         "type": "file"
                     },
                     {
                         "name": "Final Project Guideline",
-                        "link": "/files/ju_rl_course/final_project.pdf",
+                        "link": "/files/haifa_rl_course/final_project.pdf",
                         "description": "All the details about the course's final project - you really should read it carfully.",
                         "type": "file"
                     }
@@ -1784,7 +1571,7 @@
                 "Extra": [
                     {
                         "name": "RL project ideas",
-                        "link": "/files/ju_rl_course/ideas.docx",
+                        "link": "/files/haifa_rl_course/ideas.docx",
                         "description": "A list of possible RL project ideas for the end of the course.",
                         "type": "file"
                     },
@@ -1928,535 +1715,6 @@
             ]
         },
         {
-            "name": "Introduction to Reinforcement Leanring",
-            "passkey": "",
-            "code": "4260910",
-            "year": "2025",
-            "topic": "cs",
-            "semester": "2",
-            "university": "Ariel University",
-            "department": "Industrial Engineering and Management",
-            "location_class": "Zoom",
-            "syllabus": "/files/rl_ariel_sylabous.docx",
-            "description": "The quest to fully realize the potential of Artificial Intelligence (AI), requires autonomous systems that can learn to make good decisions by interacting with their environment. Reinforcement learning is a paradigm that meets these requirements, and can be applied to various tasks, including game-playing, healthcare, economics, and robotics. This course gives a solid introduction to reinforcement learning with its core approaches and challenges, and is structured around several lectures, assignments, and a project.",
-            "grade_parts": [
-                {
-                    "name": "Final project",
-                    "percent": 90
-                },
-                {
-                    "name": "Class presentation",
-                    "percent": 10
-                }
-            ],
-            "resources": {
-                "Must": [
-                    {
-                        "name": "Course's stracture",
-                        "link": "/files/ju_rl_course/course_structure.pdf",
-                        "description": "A one-page description of the course so you can be oriented quickly during the semester.",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Home Work #1",
-                        "link": "/files/ju_rl_course/hw1.pdf",
-                        "description": "Home work #1 (lecture 4)",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Home Work #2",
-                        "link": "/files/ju_rl_course/hw2.pdf",
-                        "description": "Home work #2 (lecture 8)",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Final Project Guideline",
-                        "link": "/files/ju_rl_course/final_project.pdf",
-                        "description": "All the details about the course's final project - you really should read it carfully.",
-                        "type": "file"
-                    }
-                ],
-                "Extra": [
-                    {
-                        "name": "RL project ideas",
-                        "link": "/files/ju_rl_course/ideas.docx",
-                        "description": "A list of possible RL project ideas for the end of the course.",
-                        "type": "file"
-                    },
-                    {
-                        "name": "HuggingFace course",
-                        "link": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
-                        "description": "This is an amazing practical course by HuggingFace that will show you how practically use RL.",
-                        "type": "slides"
-                    },
-                    {
-                        "name": "An introduction to Deep RL - tutorial paper",
-                        "link": "https://arxiv.org/pdf/1811.12560",
-                        "description": "An easy-to-read theoretical and practical introduction to Deep RL with decent explanations of the math.",
-                        "type": "slides"
-                    },
-                    {
-                        "name": "CS231N recap about Python",
-                        "link": "https://cs231n.github.io/python-numpy-tutorial/",
-                        "description": "Taken from Stanford's CS234 course, a recap about Python and Colab.",
-                        "type": "slides"
-                    },
-                    {
-                        "name": "RL book with all the course materials",
-                        "link": "http://incompleteideas.net/book/RLbook2020.pdf",
-                        "description": "The book authored by Richard S. Sutton and Andrew G. Barto.",
-                        "type": "file"
-                    }
-                ]
-            },
-            "updates": [
-                {
-                    "title": "Register your presentation pick in this file",
-                    "description": "Please register your paper so the other will not pick the same one in the following file: https://docs.google.com/spreadsheets/d/1aGZRH_9omcFqP_Sm2qkPlm_3ZeKHAYYXI9OGHN8z_Rk/edit?usp=sharing",
-                    "date": "04.20.2025",
-                    "link": ""
-                },
-                {
-                    "title": "Final project - default idea",
-                    "description": "Picking a subject idea is hard, if someone wants a good start, you can use a quick game I developed for the course: https://github.com/teddy4445/ShipBattleSimRL",
-                    "date": "04.13.2025",
-                    "link": ""
-                },
-                {
-                    "title": "Final project - pick your subject",
-                    "description": "All students are encouraged to pick a subject for the final project that you will have to submit and present in the final lessons (15.6.25)",
-                    "date": "04.08.2025",
-                    "link": ""
-                },
-                {
-                    "title": "Welcome to our RL course!",
-                    "description": "All the materials will be uploaded here. ",
-                    "date": "03.09.2025",
-                    "link": ""
-                }
-            ],
-            "modules": [
-                {
-                    "title": "Introduction and basic concepts",
-                    "explanation": "In the first part, we will explore the main ideas behind RL.",
-                    "resources": {
-                        "Lectures": 
-                            [
-                        {
-                            "name": "Lession 1: Introduction to Reinforcement Learning",
-                            "link": "/files/rl_course/1.pdf",
-                            "description": "Thanks to original source",
-                            "type": "slides"
-                        },
-						{
-                                "name": "Lession 1 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/Qciqx3L3_9AurzPOgDW30sqVoBuTgYuoLPGkIUUegUm0PyS8Ob3ZgY5M9LGbGUDO.tR1vNkkfpGecy-Ig",
-                                "description": "",
-                                "type": "video"
-                            },
-                        {
-                            "name": "Lession 2: Tabular MDP Planning and RL Policy Evaluation",
-                            "link": "/files/rl_course/2.pdf",
-                            "description": "Thanks to original source",
-                            "type": "slides"
-                        },
-						{
-                                "name": "Lession 2 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/yGcMkSWsPzKRFvg9PHwb2oSGrRvcPU2_OFPp9r88yisR_KX-tqy4Iylh2awosVOV.Ckw29fw85he78A3n",
-                                "description": "",
-                                "type": "video"
-                            },
-                        {
-                            "name": "Lession 3: MDP cont.",
-                            "link": "/files/rl_course/3.pdf",
-                            "description": "Thanks to original source",
-                            "type": "slides"
-                        },{
-                                "name": "Lession 3 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/zo_Pi_tuSC1_yDzJaCJRApmVzm-OWlKoTttL70UTPvqtT2JNLNjrVC2LfQoTT6mU.wyLKKWB4O7KhuyjC",
-                                "description": "",
-                                "type": "video"
-                            }
-                    ]
-                    }
-                },
-                {
-                    "title": "Policy Gradient Methods",
-                    "explanation": "In the second part, we will study different methods for evaluation of agent's actions as well as how to 'train' them.",
-                    "resources": {
-                        "Lectures": [
-                            {
-                                "name": "Lession 4: Model-free prediction",
-                                "link": "/files/rl_course/4.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },{
-                                "name": "Lession 4 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/BUSqRkZPa1N9Io7AojWdQNy_OENyd2zA95Bfdww34U-jfA5bh8azRNO-Sp0-PK-m.SXJkoHxXRU7IHScY",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 5: Model-free control",
-                                "link": "/files/rl_course/5.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 5 - video",
-                                "link": "https://arielacil-my.sharepoint.com/:v:/g/personal/tedil_ariel_ac_il/EUZHefdwck9Br0kNhvwK5FYB184lnURFTN95PbVMPVjMbw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1ae6FN",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 6: Function approximation",
-                                "link": "/files/rl_course/6.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 6 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/f5Mxfz103jdqLNk8aMMCbCnw43PBl6QH8Y5r8DCo2mG7fIS1OwN2-3ZORhqBCVon.nqm_wrmYV9i85DiL",
-                                "description": "",
-                                "type": "video"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "title": "RL agents training and evaluation",
-                    "explanation": "In the third and final part, we will learn how to implement our previous knowledge to obtain a RL agent.",
-                    "resources": {
-                        "Lectures": [
-                            {
-                                "name": "Lession 7: Planning and models",
-                                "link": "/files/rl_course/7.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 7 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/1R9BzIO1vMrC4Fyto4XuNAPpxyTGO4FLWB-yzBVZ_rZ0zsdzghn0FaWIl5QgXxCN.bKsuz4kn9pWCRJ6e",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 8: Policy gradients and Actor Critics",
-                                "link": "/files/rl_course/8.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 8 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/87AC-CowHCeGBTc0ISutU6F7yWTAOBOc1ZkRAcK5UKDWRHLF7IaDIqnmgP2hkedQ.NirmFwOBv7fVcqHW",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 9: Deep Reinforcement Learning (1)",
-                                "link": "/files/rl_course/9.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 9 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/sRnyOqCxAH3MnNZ9fBZyuonvyV7I3qBUHesdQGlfzPav7nO2BIcGIP8zheltSEg.wpxM-TEgPYgBSj-Q",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 10: Deep Reinforcement Learning (1)",
-                                "link": "/files/rl_course/10.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 11: Deep Reinforcement Learning (2)",
-                                "link": "/files/rl_course/14.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 12: Mimic learning",
-                                "link": "/files/rl_course/11.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 13a: RL rewards",
-                                "link": "/files/rl_course/12.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 13b: Monte Carlo Tree Search",
-                                "link": "/files/rl_course/13.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Topology",
-            "passkey": "",
-            "code": "7531910",
-            "year": "2025",
-            "topic": "Mathematical",
-            "semester": "2",
-            "university": "Ariel University",
-            "department": "Mathematics",
-            "location_class": "Zoom",
-            "syllabus": "/files/topology_sylabous.docx",
-            "description": "This course introduces fundamental concepts in mathematical topology, including continuity, compactness, connectedness, and fundamental groups. Students will explore topological spaces, homeomorphisms, and algebraic topology techniques with applications in geometry and analysis.",
-            "grade_parts": [
-                {
-                    "name": "Exam",
-                    "percent": 75
-                },
-                {
-                    "name": "Class presentation",
-                    "percent": 25
-                }
-            ],
-            "resources": {
-                "Must": [
-                    {
-                        "name": "Final course project explanation document",
-                        "link": "/files/topology_project.pdf",
-                        "description": "This document outlines, in Hebrew, the expectations from the final project document.",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Final course presentation paper #1",
-                        "link": "/files/topology_course_papers/bubble_method_topology.pdf",
-                        "description": "Bubble method for topology and shape optimization of structures",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Final course presentation paper #2",
-                        "link": "/files/topology_course_papers/graph_topology_genetic_algorithm.pdf",
-                        "description": "Graph representation for structural topology optimization using genetic algorithms",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Final course presentation paper #3",
-                        "link": "/files/topology_course_papers/intro_to_topology.pdf",
-                        "description": "Introduction to Topology - you should pick one chapter, not the full book.",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Final course presentation paper #4",
-                        "link": "/files/topology_course_papers/survey_topology_visuals.pdf",
-                        "description": "A Survey of Topology-based Methods in Visualization",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Final course presentation paper #5",
-                        "link": "/files/topology_course_papers/topology_graph_patterns.pdf",
-                        "description": "Capturing Topology in Graph Pattern Matching",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Final course presentation paper #6",
-                        "link": "/files/topology_course_papers/topology_shape_optimization.pdf",
-                        "description": "Integration of topology and shape optimization for design of structural components",
-                        "type": "file"
-                    },
-                    {
-                        "name": "Final course presentation paper #7",
-                        "link": "/files/topology_course_papers/topology_with_data.pdf",
-                        "description": "Topology and Data",
-                        "type": "file"
-                    }
-                ],
-                "Extra": [
-                    {
-                        "name": "Extra tasks and materials",
-                        "link": "https://math-wiki.com/index.php/88-222_%D7%AA%D7%A9%D7%A4%D7%90_%D7%A1%D7%9E%D7%A1%D7%98%D7%A8_%D7%91_%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%A1%D7%98%D7%99%D7%9D/%D7%AA%D7%9E%D7%A8",
-                        "description": "Extra Tasks from Bar Ilan University Topology course (2021).",
-                        "type": "file"
-                    }
-                ]
-            },
-            "updates": [
-                {
-                    "title": "Prepare your presentation",
-                    "description": "Please prepare a 15 minutes + 5 minutes questions presentation for the 10th of June. If you have any concerns about the presenation, please ask in class or via email.",
-                    "date": "05.13.2025",
-                    "link": ""
-                },
-                {
-                    "title": "Lecture is cancelled",
-                    "description": "The lecture today is cancelled - the 29th of April, 2025. Apologize for the inconvenience. ",
-                    "date": "04.29.2025",
-                    "link": ""
-                },
-                {
-                    "title": "Register your presentation pick in this file",
-                    "description": "Please register your paper so the other will not pick the same one in the following file: https://docs.google.com/spreadsheets/d/1Xjy1vhk4BOTDlxEj6tlSKe7M9GfpMJT4YrXJJaDAnbY/edit?usp=sharing.",
-                    "date": "03.28.2025",
-                    "link": ""
-                },
-                {
-                    "title": "Presentation papers are online",
-                    "description": "Please checkout the presenation papers and pick one for yourself. For the book, you can pick one chapter (there are 5). You can do the work and presentation alone or in pairs. Please note that the presentation will take place in the last lecture.",
-                    "date": "03.21.2025",
-                    "link": ""
-                },
-                {
-                    "title": "Welcome to our Topology course!",
-                    "description": "All the materials will be uploaded here. ",
-                    "date": "03.09.2025",
-                    "link": ""
-                }
-            ],
-            "modules": [
-                {
-                    "title": "All the materials, no sub-subjects in this course",
-                    "explanation": "What the title says.",
-                    "resources": {
-                        "Lessions": [
-                            {
-                                "name": "Lession 1: Introduction ",
-                                "link": "https://math-wiki.com/images/5/54/Top1Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-							{
-                                "name": "Lession 1 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/3Bfp7qlUjkhZwlM7_DoJwKHcx4UO2UMxQ8iKZYOHxofQ0MhS4Hk3k0znVIoopQI._FufCbTjuZW0WOv5",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 2: Open and close sets",
-                                "link": "https://math-wiki.com/images/0/03/Top2Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-							{
-                                "name": "Lession 2 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/P2VmDRpwSvwi-gSi6D-v5bFPOaiQcPiebiEiyfftMJDQy9_KnFoPVPnHO_p_HZos.a0-JVsu8_bioaaBC",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 3: Heine.",
-                                "link": "https://math-wiki.com/images/e/e9/Top3Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-							{
-                                "name": "Lession 3 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/T9pmxSEQpydRRjmM7dJb38Sm5yrVC0H4y9JJIJnPhJOBhDqGC0qnp_sKphZAZeS8.pBDVNWjDMws8n2bN",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 4: Norm, Metric, and Topology spaces.",
-                                "link": "https://math-wiki.com/images/5/50/Top4Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-							{
-                                "name": "Lession 4 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/_M3K_cgRr29pb8ZO_onbO_2LN6LtTY1jyCG8htF3_O80V2ZOHDpCTol82Pz-ybq_.x8s-e8bNeUakF6FP",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 5: Topological properties.",
-                                "link": "https://math-wiki.com/images/d/d6/Top5Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-							{
-                                "name": "Lession 5 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/0Ds-yWDovG2MgQwUcZg0b2ue3jGRcXejsE0f9G6-Xyix0DyxFTlkBt8bBmWCVk9T.sUTNQJ-QIAcp5zu1",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 6: Topological properties (cont.).",
-                                "link": "https://math-wiki.com/images/9/97/Top6Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-							{
-                                "name": "Lession 6 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/OSBmqaqnWPQ12s9Y9fCmkkEkWpEB6CaJ5F8c9T0ecQJdLm1lv1f4Z2J_WJ5Aw2Gu.LhVuD7mZeet-TF_q",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 7: Conectivity.",
-                                "link": "https://math-wiki.com/images/9/9e/Top7Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-							{
-                                "name": "Lession 7 - video",
-                                "link": "https://biu-ac-il.zoom.us/rec/share/aDClG0VXLWVgU5s7lX5BplSgzcQcEx9ESgyVOzlHITnW3xY4-dL3LXPRZRxpCECR.3_sGcgJeTsFReaS1",
-                                "description": "",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 8: Conectivity (cont.).",
-                                "link": "https://math-wiki.com/images/1/1e/Top8Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-							{
-                                "name": "Lession 8 - video",
-                                "link": "",
-                                "description": "https://biu-ac-il.zoom.us/rec/share/uZ99bYQXYDaI_vmRKq1aO10STMVlzIFYkvobjHETRfXI7pGLSMqNKVwYj1cGNhnJ.h3R03Mrr6pF_Ev1K",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 9: Groups.",
-                                "link": "https://math-wiki.com/images/d/db/Top9Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-							{
-                                "name": "Lession 9 - video",
-                                "link": "",
-                                "description": "https://biu-ac-il.zoom.us/rec/share/SyS59i2oxHyI3pHzPxZEtRmG_7-_GTb1UDqoY1zkKRt78ouKFTxXHoEPJ00-e_NO.YsZs6kZG3v_YAiwN",
-                                "type": "video"
-                            },
-                            {
-                                "name": "Lession 10: Compactness.",
-                                "link": "https://math-wiki.com/images/2/28/Top10Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lession 11: Compactness (cont.).",
-                                "link": "https://math-wiki.com/images/c/c2/Top11Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lession 12: Lebesque.",
-                                "link": "https://math-wiki.com/images/d/d6/Top12Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Lession 13: Extras - home reading.",
-                                "link": "https://math-wiki.com/images/6/64/Top13Lect21.pdf",
-                                "description": "Thanks to original source",
-                                "type": "file"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
             "name": "Reinforcement Leanring",
             "passkey": "sweden2025",
             "code": "TFSS25_2026",
@@ -2567,6 +1825,219 @@
                                 "link": "/files/rl_course/2.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
+                            },
+                            {
+                                "name": "Lession 3: MDP cont.",
+                                "link": "/files/rl_course/3.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Policy Gradient Methods",
+                    "explanation": "In the second part, we will study different methods for evaluation of agent's actions as well as how to 'train' them.",
+                    "resources": {
+                        "Lectures": [
+                            {
+                                "name": "Lession 4: Model-free prediction",
+                                "link": "/files/rl_course/5.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 5: Model-free control",
+                                "link": "/files/rl_course/6.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 6: Function approximation",
+                                "link": "/files/rl_course/7.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "RL agents training and evaluation",
+                    "explanation": "In the third and final part, we will learn how to implement our previous knowledge to obtain a RL agent.",
+                    "resources": {
+                        "Lectures": [
+                            {
+                                "name": "Lession 7: Planning and models",
+                                "link": "/files/rl_course/8.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 8: Policy gradients and Actor Critics",
+                                "link": "/files/rl_course/9.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 9: Deep Reinforcement Learning (1)",
+                                "link": "/files/rl_course/10.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 10: Deep Reinforcement Learning (2)",
+                                "link": "/files/rl_course/14.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 11: Mimic learning",
+                                "link": "/files/rl_course/11.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 12a: RL rewards",
+                                "link": "/files/rl_course/12.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 12b: Monte Carlo Tree Search",
+                                "link": "/files/rl_course/13.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Reinforcement Leanring",
+            "passkey": "haifa2026",
+            "code": "2143704",
+            "year": "2026",
+            "topic": "cs",
+            "semester": "2",
+            "university": "University of Haifa",
+            "department": "Computer science and Information faculty",
+            "location_class": "Amir building, room 502",
+            "syllabus": "/files/haifa_rl_course/haifa_rl.pdf",
+            "description": "The quest to fully realize the potential of Artificial Intelligence (AI), requires autonomous systems that can learn to make good decisions by interacting with their environment. Reinforcement learning is a paradigm that meets these requirements, and can be applied to various tasks, including game-playing, healthcare, economics, and robotics. This course gives a solid introduction to reinforcement learning with its core approaches and challenges, and is structured around several lectures, assignments, and a project.",
+            "grade_parts": [
+                {
+                    "name": "Final project",
+                    "percent": 90
+                },
+                {
+                    "name": "Presentation in class",
+                    "percent": 10
+                }
+            ],
+            "resources": {
+                "Must": [
+                    {
+                        "name": "Course's stracture",
+                        "link": "/files/haifa_rl_course/course_structure.pdf",
+                        "description": "A one-page description of the course so you can be oriented quickly during the semester.",
+                        "type": "file"
+                    },
+                    {
+                        "name": "Final Project Guideline",
+                        "link": "/files/haifa_rl_course/final_project.pdf",
+                        "description": "All the details about the course's final project - you really should read it carfully.",
+                        "type": "file"
+                    }
+                ],
+                "Extra": [
+                    {
+                        "name": "RL project ideas",
+                        "link": "/files/haifa_rl_course/ideas.docx",
+                        "description": "A list of possible RL project ideas for the end of the course.",
+                        "type": "file"
+                    },
+                    {
+                        "name": "HuggingFace course",
+                        "link": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
+                        "description": "This is an amazing practical course by HuggingFace that will show you how practically use RL.",
+                        "type": "slides"
+                    },
+                    {
+                        "name": "An introduction to Deep RL - tutorial paper",
+                        "link": "https://arxiv.org/pdf/1811.12560",
+                        "description": "An easy-to-read theoretical and practical introduction to Deep RL with decent explanations of the math.",
+                        "type": "slides"
+                    },
+                    {
+                        "name": "CS231N recap about Python",
+                        "link": "https://cs231n.github.io/python-numpy-tutorial/",
+                        "description": "Taken from Stanford's CS234 course, a recap about Python and Colab.",
+                        "type": "slides"
+                    },
+                    {
+                        "name": "RL book with all the course materials",
+                        "link": "http://incompleteideas.net/book/RLbook2020.pdf",
+                        "description": "The book authored by Richard S. Sutton and Andrew G. Barto.",
+                        "type": "file"
+                    }
+                ]
+            },
+            "updates": [
+                {
+                    "title": "Welcome to our RL course!",
+                    "description": "All the materials will be uploaded here. ",
+                    "date": "22.03.2026",
+                    "link": ""
+                }
+            ],
+            "modules": [
+                {
+                    "title": "Introduction and basic concepts",
+                    "explanation": "In the first part, we will explore the main ideas behind RL.",
+                    "resources": {
+                        "Lectures": [
+                            {
+                                "name": "Lession 1: Introduction to Reinforcement Learning",
+                                "link": "/files/rl_course/1.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 1: Cover info",
+                                "link": "/files/rl_course/1_cover.png",
+                                "description": "Cover image to get the big idea quickly",
+                                "type": "file"
+                            },
+                            {
+                                "name": "Lession 1: Podcast",
+                                "link": "/files/rl_course/1_podcast.m4a",
+                                "description": "An AI-summary podcast of the lesson that is fun and short",
+                                "type": "video"
+                            },
+                            {
+                                "name": "Lession 1: Explainer video",
+                                "link": "/files/rl_course/1_video.mp4",
+                                "description": "An explainer video of the lesson",
+                                "type": "video"
+                            },
+                            {
+                                "name": "Lession 2: Tabular MDP Planning and RL Policy Evaluation",
+                                "link": "/files/rl_course/2.pdf",
+                                "description": "Thanks to original source",
+                                "type": "slides"
+                            },
+                            {
+                                "name": "Lession 2: Cover info",
+                                "link": "/files/rl_course/2_cover.png",
+                                "description": "Cover image to get the big idea quickly",
+                                "type": "file"
+                            },
+                            {
+                                "name": "Lession 2: Podcast",
+                                "link": "/files/rl_course/2_podcast.m4a",
+                                "description": "An AI-summary of the lesson that is fun and short",
+                                "type": "video"
                             },
                             {
                                 "name": "Lession 3: MDP cont.",
