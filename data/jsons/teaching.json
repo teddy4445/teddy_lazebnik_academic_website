@@ -1987,7 +1987,7 @@
                 {
                     "title": "Welcome to our RL course!",
                     "description": "All the materials will be uploaded here. ",
-                    "date": "22.03.2026",
+                    "date": "03.22.2026",
                     "link": ""
                 }
             ],
@@ -2005,19 +2005,19 @@
                             },
                             {
                                 "name": "Lession 1: Cover info",
-                                "link": "/files/rl_course/1_cover.png",
+                                "link": "/files/haifa_rl_course/1_cover.png",
                                 "description": "Cover image to get the big idea quickly",
                                 "type": "file"
                             },
                             {
                                 "name": "Lession 1: Podcast",
-                                "link": "/files/rl_course/1_podcast.m4a",
+                                "link": "/files/haifa_rl_course/1_podcast.m4a",
                                 "description": "An AI-summary podcast of the lesson that is fun and short",
                                 "type": "video"
                             },
                             {
                                 "name": "Lession 1: Explainer video",
-                                "link": "/files/rl_course/1_video.mp4",
+                                "link": "/files/haifa_rl_course/1_video.mp4",
                                 "description": "An explainer video of the lesson",
                                 "type": "video"
                             },
@@ -2029,13 +2029,13 @@
                             },
                             {
                                 "name": "Lession 2: Cover info",
-                                "link": "/files/rl_course/2_cover.png",
+                                "link": "/files/haifa_rl_course/2_cover.png",
                                 "description": "Cover image to get the big idea quickly",
                                 "type": "file"
                             },
                             {
                                 "name": "Lession 2: Podcast",
-                                "link": "/files/rl_course/2_podcast.m4a",
+                                "link": "/files/haifa_rl_course/2_podcast.m4a",
                                 "description": "An AI-summary of the lesson that is fun and short",
                                 "type": "video"
                             },
