@@ -64,12 +64,6 @@
                         "type": "file"
                     },
                     {
-                        "name": "A blog post about RL agent for the OCTI Board Game",
-                        "link": "/blog-post.html?post=20",
-                        "description": "This website's blog post with practical code examples",
-                        "type": "file"
-                    },
-                    {
                         "name": "RL project ideas",
                         "link": "/files/haifa_rl_course/ideas.docx",
                         "description": "A list of possible RL project ideas for the end of the course.",
@@ -126,6 +120,12 @@
                                 "link": "/files/rl_course/1.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
+                            },
+                            {
+                                "name": "Lession 1: recodings",
+                                "link": "https://us02web.zoom.us/rec/share/lSVEHMkw0C3SO60J8QAKd9lDzPUVPn0VgeBIzaOrfSfGt_nKtm-wLFt6j5VXCXAq._9DRzlA12UWGbU3H",
+                                "description": "",
+                                "type": "video"
                             },
                             {
                                 "name": "Lession 1: Cover info",
