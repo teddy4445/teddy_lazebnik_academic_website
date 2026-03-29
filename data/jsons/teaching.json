@@ -97,17 +97,23 @@
             },
             "updates": [
                 {
+                    "title": "Zoom link for the second lecture",
+                    "description": "A Zoom link for the second lecture (24.3.2026): https://us02web.zoom.us/j/83554367929",
+                    "date": "03.29.2026",
+                    "link": "https://us02web.zoom.us/j/83554367929"
+                },
+                {
+                    "title": "Zoom link for the first lecture",
+                    "description": "A Zoom link for the first lecture (24.3.2026): [removed]",
+                    "date": "03.24.2026",
+                    "link": ""
+                }
+                {
                     "title": "Welcome to our RL course!",
                     "description": "All the materials will be uploaded here. ",
                     "date": "03.22.2026",
                     "link": ""
                 },
-                {
-                    "title": "Zoom link for the first lecture",
-                    "description": "A Zoom link for the first lecture (24.3.2026): https://us02web.zoom.us/meetings/88287936037/invitations?signature=_YIRGsCI7CJyjdpEW4UmQOZaJmzZAQlZKOtefBG-Sig",
-                    "date": "03.24.2026",
-                    "link": "https://us02web.zoom.us/meetings/88287936037/invitations?signature=_YIRGsCI7CJyjdpEW4UmQOZaJmzZAQlZKOtefBG-Sig"
-                }
             ],
             "modules": [
                 {
