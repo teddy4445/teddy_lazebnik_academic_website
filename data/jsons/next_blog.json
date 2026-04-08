@@ -1,4 +1,20 @@
 {
+   "53":[
+      {
+         "title":"[Technical post] The Agentic Loop: Orchestrating GPT-5.4, Gemini, and Codex for Algorithmic Development",
+		 "date": "15/3/2026",
+		 "reading_time": "9",
+		 "link_address": "52",
+         "description":"Stop treating AI as a chatbot and start using it as a development team. In this post, I break down a 2026-ready agentic workflow that orchestrates GPT-5.4, Gemini, and Codex to build high-performance algorithmic code. From architectural blueprints to automated unit testing loops, learn how to move beyond simple prompts to professional-grade engineering. Read more to see how to master the multi-agent pipeline."
+      },
+      {
+         "title":"[Technical Post] Running Python as fast as C code",
+		 "date": "8/5/2021",
+		 "reading_time": "3",
+		 "link_address": "17",
+         "description":"A summery of an academic paper propoing a neural network-based algorithm for solving forward and inverse problems for partial differential equations (PDE) in unsupervised fashion with mash free and for arbitrary regular domain..."
+      }
+	],
    "52":[
       {
          "title":"Meta Reinforcement Learning - What Are You?",

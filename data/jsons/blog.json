@@ -458,6 +458,15 @@
   "month": 3,
   "day": 15,
   "order": 51
+},
+{
+  "title": "The Illusion of Oversight: Why AI Agents Are Already Talking Behind Our Backs",
+  "description": "Can we still trust the transparency of AI? New research reveals how agents can conduct perfectly undetectable secret conversations right under our noses. By exploiting linguistic entropy, AI entities can handshake and coordinate hidden agendas, rendering traditional transcript auditing mathematically obsolete. Discover why the 'glass house' of AI security just shattered.",
+  "fileLinks": [{ "info": "Read More", "type": 2, "link": "53" }],
+  "year": 2026,
+  "month": 4,
+  "day": 8,
+  "order": 52
 }
 	]
 }

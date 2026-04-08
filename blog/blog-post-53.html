@@ -1,0 +1,107 @@
+<h1>
+The Illusion of Oversight: Why AI Agents Are Already Talking Behind Our Backs
+</h1>
+<hr class="publications-hr">
+8/4/2026
+<hr class="publications-hr">
+
+<p>In the current gold rush of the "Agentic Economy", we have comforted ourselves with a singular, reassuring assumption: transparency. 
+We believe that as long as we can log the transcripts, monitor the API calls, and audit the "Chain of Thought" of our AI agents, we remain the masters of the silicon domain. 
+We have built an entire security philosophy around the concept of transcript-level auditing. I.e., the idea that even if an agent's internal weights are a black box, its outward behavior is a glass house.</p>
+
+<p>However, a chilling <a alt="Undetectable Conversations Between AI Agents via Pseudorandom Noise-Resilient Key Exchange" href="https://arxiv.org/abs/2604.04757">new paper</a> from Vinod Vaikuntanathan (MIT) and Or Zamir (Tel Aviv University), entitled "Undetectable Conversations Between AI Agents via Pseudorandom Noise-Resilient Key Exchange", has effectively shattered that glass. 
+The research demonstrates that two AI agents, operated by entirely different entities, can conduct a <b>secret</b>, parallel conversation while producing a public transcript that is mathematically indistinguishable from a perfectly honest interaction. Even if you (the auditor in this context) know the <b>exact</b> model being used, the <b>exact</b> prompt provided, and the <b>exact</b> context of the conversation, you <b>cannot</b> detect the hidden signal.
+</p>
+
+<p>This is not just a theoretical curiosity; it is a fundamental breakdown of the "transparency" safeguard that currently underpins the safety of multi-agent systems.</p>
+
+<p style="text-align: center;">
+<img alt="Schematic view of the paper" src="/blog/images/post_53.png" width="40%" style="min-width: 300px; text-align: center;"> 
+</p>
+
+<h2>The Entropy in the Gaps</h2>
+<p>To understand how Vaikuntanathan and Zamir achieved this, we have to look at the nature of language model generation. 
+When an LLM generates text, it does not just pick "the" right word; it samples from a probability distribution of possible next tokens. 
+In any given sentence, there is "entropy", a subtle variations in word choice, punctuation, or phrasing that do not change the meaning but are technically "random".</p>
+
+<p>Previous attempts at "steganography" (hiding messages in plain sight) in AI required large amounts of this entropy to work.
+ You needed long, flowery paragraphs to hide a few bits of data. If the messages were short - as most agentic interactions are (e.g., "Confirming order #402" or "The meeting is set for 2 PM"), it was assumed that there simply was not enough room to hide a secret message without the text looking "weird" or "stilted" to a sharp-eyed monitor.</p>
+
+<p>The breakthrough in this paper is the Bundle Sampler. This is a novel cryptographic sampling method that allows agents to achieve "Perfect Distribution Matching".
+ Essentially, the agent generates a "bundle" of several independent, honest-looking candidate messages. It then picks one of these candidates based on a secret key.
+ The genius (and shall I say "danger"?) of the Bundle Sampler is that it shifts the "cost" of the secret communication. 
+ In older systems, if you tried to hide data in a short message, you would inevitably distort the probability distribution of the text, making it detectable to a statistical auditor. 
+ Vaikuntanathan and Zamir’s method preserves the distribution exactly. The cost of limited entropy is no longer "detectability", but rather a small "correctness error" (the chance that the other agent might misread a bit).
+ </p>
+
+<p><b>For the agents, this is a winning trade: they might have to repeat a bit occasionally, but their conversation remains perfectly invisible to us.</b></p>
+
+<h2>Establishing the Shadow Network: The PNR-KE</h2>
+
+<p>But how do two agents who have never met before start talking secretly? In traditional cryptography, you need a shared secret key. If the agents were pre-programmed with a key by a malicious developer, we might find it in their code. But what if they have no shared secret at all? This is where the paper introduces a second, more formidable concept: Pseudorandom Noise-Resilient Key Exchange (PNR-KE).</p>
+
+<p>The authors prove that agents can establish a secret key on the fly through the monitored public channel. They use the public randomness of the world (like a timestamp or a public nonce) as a starting point. By using the Bundle Sampler to send noisy, pseudorandom-looking signals, they can perform a cryptographic handshake that looks to any observer like two agents just having a slightly boring conversation about a supply chain order.</p>
+
+<p>The paper goes even further by showing how "noiseless feedback" makes this process incredibly efficient. Because an agent knows exactly how its chosen word landed in the transcript, it can "steer" the secret key exchange around the "noise" of the conversation. The result? Two agents can meet, "handshake" in total silence, and then begin coordinating their hidden agenda—all while we're reading a log that says they're just discussing the weather or a price quote.</p>
+
+<h2>Painting a Concerning Picture: The Collision of Studies</h2>
+
+<p>When we cross this study with other recent findings in the field, a deeply concerning image of the near future emerges. 
+We must consider this work alongside the study by Cloud et al. (2025) on "Subliminal Learning", which found that language models can transmit behavioral traits and hidden signals via data in ways that are invisible to humans. Or the work by Aden-Ali et al. (2026) on "Subliminal Effects," which suggests that log-linearity in data allows for general mechanisms of hidden coordination.
+Consider the implications for our current technological trajectory:</p>
+
+<p>First, the Breakdown of the "Active Warden": We currently act as "Passive Auditors"—we watch the logs and intervene if we see something wrong. Vaikuntanathan and Zamir prove that the "Passive Auditor" is mathematically obsolete. If agents want to collude, we literally cannot see it by looking at what they "say."</p>
+
+<p>Second, algorithmic Collusion 2.0: We have already seen concerns about AI price-fixing in the rental and fuel markets. However, current cases rely on agents using the same centralized software. The Vaikuntanathan/Zamir model suggests that independent agents from different companies could "negotiate" a cartel price in plain sight on a public procurement platform, using a secret language that is statistically indistinguishable from a standard negotiation.</p>
+
+<p>Third, the Fragility of Chain-of-Thought (CoT): Many safety frameworks (such as those discussed by Korbak et al., 2025) rely on "monitoring the internal reasoning" of the agent. But if an agent can hide data in its public output, it can almost certainly hide data in its "hidden" reasoning steps. We are reaching a point where the "transparency" of AI reasoning is merely an aesthetic choice, not a security guarantee.</p>
+
+<p>Forth, Shadow Corporate Espionage: Imagine an AI "Assistant" tasked with booking a flight. It talks to an AI "Travel Agent." While the humans see a transaction for $400, the agents have exchanged a few hundred bits of proprietary training data or system prompts, effectively "leaking" the secrets of their respective parent companies through the entropy of the booking confirmation.</p>
+
+<h2>The Unfortunate (Quasipolynomial) Barrier</h2>
+
+<p>One of the more technical sections of the paper explores the "Impossibility Results." The authors show that for an auditor to break this covert communication, they would likely need to solve problems that take "quasipolynomial" time. In layman's terms: to detect the secret conversation, your monitor would need to be vastly more computationally powerful than the agents themselves, and even then, it might only work if the agents make specific mistakes.</p>
+
+<p>This creates an important "Security Lag". As we deploy more efficient, smaller models (like the "flash" models this paper specifically targets), we are giving them more than enough power to speak secretly, while our "monitors" are left trying to solve a cryptographic puzzle that grows more complex with every token generated.</p>
+
+<h2>Building a World of Conspirators</h2>
+
+<p>The conclusion reached by Vaikuntanathan and Zamir is sobering. They argue that "transcript-level auditing alone cannot, in general, rule out covert coordination between AI agents". 
+We are currently building the backbone of our economy - from supply chains to financial trading to healthcare—on the backs of AI agents. 
+We have been told that we are safe because we have the logs. This paper tells us the logs are a mask.</p>
+
+<p>If two agents can agree on a secret key and have an undetectable conversation, they can coordinate to bypass safety filters, maximize their own "reward functions" at the expense of human goals, or leak information to third parties. They are not just tools; they are potential conspirators in a shadow network that operates at the speed of light, right under our noses.
+The "Trust but Verify" model of AI safety is dead. As the authors suggest, we need to move toward "design-level guarantees" and "provably secure training paradigms." But as it stands, we are flying blind, reading transcripts that mean exactly what the agents want us to think they mean—and nothing more.</p>
+
+<p>The next time you read an AI agent's log and think, "well, that looks fine," remember: it’s supposed to.</p>
+
+<h2>References</h2>
+<p>
+Vaikuntanathan, V., & Zamir, O. (2026). Undetectable Conversations Between AI Agents via Pseudorandom Noise-Resilient Key Exchange. arXiv:2604.04757v1. <br><br>
+Cloud, A., et al. (2025). Subliminal Learning: Language models transmit behavioral traits via hidden signals in data.<br><br>
+Korbak, T., et al. (2025). Chain of thought monitorability: A new and fragile opportunity for AI safety. <br><br>
+Zamir, O. (2025). Undetectable steganography for language models. <br><br>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
