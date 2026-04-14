@@ -174,6 +174,12 @@
                                 "link": "/files/rl_course/3.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
+                            },
+                            {
+                                "name": "Lession 3: recodings",
+                                "link": "https://us02web.zoom.us/rec/share/7Nbb8cTKyoruf43MXDtgM0G3ktS4LDY0dXdCgsfC_KPABZ-zSFxHlqGdqmI3uckC.tGSFL5Xtkxg4ZsPb",
+                                "description": "",
+                                "type": "video"
                             }
                         ]
                     }
