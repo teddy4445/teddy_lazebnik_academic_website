@@ -97,16 +97,10 @@
             },
             "updates": [
                 {
-                    "title": "Zoom link for the second lecture",
-                    "description": "A Zoom link for the second lecture (24.3.2026): https://us02web.zoom.us/j/83554367929",
-                    "date": "03.29.2026",
-                    "link": "https://us02web.zoom.us/j/83554367929"
-                },
-                {
-                    "title": "Zoom link for the first lecture",
-                    "description": "A Zoom link for the first lecture (24.3.2026): [removed]",
-                    "date": "03.24.2026",
-                    "link": ""
+                    "title": "Zoom link for the third lecture",
+                    "description": "A Zoom link for the third lecture (24.3.2026): https://us02web.zoom.us/j/84767685638",
+                    "date": "04.14.2026",
+                    "link": "https://us02web.zoom.us/j/84767685638"
                 },
                 {
                     "title": "Welcome to our RL course!",
