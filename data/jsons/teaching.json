@@ -196,6 +196,12 @@
                                 "type": "slides"
                             },
                             {
+                                "name": "Lession 4: recodings",
+                                "link": "https://us02web.zoom.us/rec/share/R7YcqaDWbm23WbkiUN7MmlaX_Y1c4skgjVtq_V554ePDHckHZJ3SAvSWnqRJUBf5.v9HmqrDsxaoTBwN3",
+                                "description": "",
+                                "type": "video"
+                            },
+                            {
                                 "name": "Lession 5: Model-free control",
                                 "link": "/files/rl_course/6.pdf",
                                 "description": "Thanks to original source",
