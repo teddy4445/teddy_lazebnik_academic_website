@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Chronic Stress, Immune Suppression, and Cancer Occurrence: Unveiling the Connection Using Survey Data and Predictive Models",
+         "description":"Chronic stress has been implicated in cancer occurrence, but a direct causal connection has not been consistently established. Machine learning and causal modeling offer opportunities to explore complex causal interactions between psychological chronic stress and cancer occurrences. We developed predictive models employing variables from stress indicators, cancer history, and demographic data from self-reported surveys to examine the direct association between chronic stress and cancer occurrence, as well as a hypothesized immune-suppression-mediated pathway. The models were corroborated by traditional statistical methods. Our findings indicated significant associations between stress frequency, stress level, perceived health impact, and cancer occurrence. Although stress alone showed limited predictive power, integrating socio-demographic and familial cancer history data significantly enhanced model accuracy. These results highlight the multidimensional nature of cancer risk, with stress emerging as a notable factor alongside genetic predisposition. These findings strengthen the case for addressing chronic stress as a modifiable cancer risk factor, supporting its integration into personalized prevention strategies and public health interventions to reduce cancer incidence.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/stress_cancer.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Aharonson, V., Chronic Stress, Immune Suppression, and Cancer Occurrence: Unveiling the Connection Using Survey Data and Predictive Models. Medical Sciences. 2026."}],
+		 "authors": "Teddy Lazebnik, Vered Aharonson",
+         "year": 2026,
+         "topic":"Machine learning",
+         "type":"Paper",
+         "publisher":"Medical Sciences",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Follow the Forest Trail: Distillation by Gradient Boosting Models to Enhance Symbolic Regression Performance",
          "description":"In recent years, Machine Learning (ML) models have been introduced across diverse scientific fields, due to their strong predictive performance. However, in many applications the demand for interpretable models often surpasses the need for mere accuracy. Symbolic Regression (SR) offers a solution with its concise and explainable formulas, yet it typically falls short in accuracy when compared to other ML models such as Random Forests. This paper proposes a novel two-step ensemble approach, inspired by the student-teacher model in knowledge distillation. Initially, a Gradient Boosting Model (GBM) is trained to harness its high accuracy; this model acts as the ‘teacher.’ Subsequently, an SR ‘student’ model is trained on the output of the gradient boosting model, effectively distilling the knowledge into a form that combines interpretability with enhanced performance. We perform an extensive evaluation of this method across three different SR models and 10 regression datasets. Our findings show that the proposed method exhibits a consistent improvement of 3.3-6.7% in accuracy compared to standard SR models. Furthermore, this process serves as an explainability framework that helps to uncover and interpret the decisions of complex ML models.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/gbm_to_sr.pdf"},
