@@ -208,6 +208,12 @@
                                 "type": "slides"
                             },
                             {
+                                "name": "Lession 5: recodings",
+                                "link": "https://us02web.zoom.us/rec/share/F_znHUQ7XjHv7430YMqZsqHWWVyQc4cPijW38uApPbL8mMqTZ-IAmFqZReNNXPgG.9NsTkX6FLrqUDpaV",
+                                "description": "",
+                                "type": "video"
+                            },
+                            {
                                 "name": "Lession 6: Function approximation",
                                 "link": "/files/rl_course/7.pdf",
                                 "description": "Thanks to original source",
