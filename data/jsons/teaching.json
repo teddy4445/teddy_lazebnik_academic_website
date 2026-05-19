@@ -97,6 +97,12 @@
             },
             "updates": [
                 {
+                    "title": "Lecture 7 (26.5.26) is canceled",
+                    "description": "Please note that the 7th lecture (26.5.26) is canceled. We will have it in another time that will be scheduled in the future. Thank you for your understanding",
+                    "date": "05.19.2026",
+                    "link": ""
+                },
+                {
                     "title": "Zoom link for the third lecture",
                     "description": "A Zoom link for the third lecture (24.3.2026): https://us02web.zoom.us/j/84767685638",
                     "date": "04.14.2026",
@@ -218,6 +224,12 @@
                                 "link": "/files/rl_course/7.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
+                            },
+                            {
+                                "name": "Lession 6: recording",
+                                "link": "https://us02web.zoom.us/rec/share/sdW8g7pXYF7nciMI7Rfg4yYtqrBI3zRF8j989vq56GJ4i3tjKUUN0asgQxBadNc.NdYC_EyyC3ZYWFUs",
+                                "description": "",
+                                "type": "video"
                             }
                         ]
                     }
