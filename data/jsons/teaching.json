@@ -246,6 +246,12 @@
                                 "type": "slides"
                             },
                             {
+                                "name": "Lession 7: recording",
+                                "link": "https://us02web.zoom.us/rec/share/I3I8O9mECB9MM3zyu3q4Ej1MrLYXiRXIkzkQoE8CMP9o_kI7VgPV7DZnoN3uXN_K.X0KkSlwMOh_r9Cot",
+                                "description": "",
+                                "type": "video"
+                            },
+                            {
                                 "name": "Lession 8: Policy gradients and Actor Critics",
                                 "link": "/files/rl_course/9.pdf",
                                 "description": "Thanks to original source",
