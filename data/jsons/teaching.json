@@ -47,19 +47,19 @@
                     },
                     {
                         "name": "Crafting RL solutions - from simple to hard, a beginners guide",
-                        "link": "/blog-post.html?post=39",
+                        "link": "/blog/blog-post-39.html",
                         "description": "This website's blog post with practical code examples",
                         "type": "file"
                     },
                     {
                         "name": " Building a Snake AI with Deep Reinforcement Learning",
-                        "link": "/blog-post.html?post=41",
+                        "link": "/blog/blog-post-41.html",
                         "description": "This website's blog post with practical code examples",
                         "type": "file"
                     },
                     {
                         "name": "A blog post about RL agent for the OCTI Board Game",
-                        "link": "/blog-post.html?post=20",
+                        "link": "/blog/blog-post-20.html",
                         "description": "This website's blog post with practical code examples",
                         "type": "file"
                     },

@@ -1,10 +1,181 @@
-<h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>[Technical post] The Agentic Loop: Orchestrating GPT-5.4, Gemini, and Codex for Algorithmic Development | Teddy Lazebnik</title>
+	<meta content="Stop treating AI as a chatbot and start using it as a development team. In this post, I break down a 2026-ready agentic workflow that orchestrates GPT-5.4, Gemini, and Codex to build high-performance algorithmic code. From architectural blueprints to automated unit testing loops, learn how to move beyond simple prompts to professional-grade engineering. Read more to see how to master the multi-agent pipeline." name="description"/>
+	<meta name="keywords" content="lazebnik, teddy lazebnik, applied computational mathematics, academic blog"/>
+	<meta content="Teddy Lazebnik" name="author"/>
+	<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+	<link rel="canonical" href="https://teddylazebnik.com/blog/blog-post-52.html"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:site_name" content="Teddy Lazebnik"/>
+	<meta property="og:title" content="[Technical post] The Agentic Loop: Orchestrating GPT-5.4, Gemini, and Codex for Algorithmic Development | Teddy Lazebnik"/>
+	<meta property="og:description" content="Stop treating AI as a chatbot and start using it as a development team. In this post, I break down a 2026-ready agentic workflow that orchestrates GPT-5.4, Gemini, and Codex to build high-performance algorithmic code. From architectural blueprints to automated unit testing loops, learn how to move beyond simple prompts to professional-grade engineering. Read more to see how to master the multi-agent pipeline."/>
+	<meta property="og:url" content="https://teddylazebnik.com/blog/blog-post-52.html"/>
+	<meta name="twitter:card" content="summary"/>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"/>
+	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/descriptionTrim.css" rel="stylesheet">
+	<link href="/css/prism.css" rel="stylesheet">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']]
+	  }
+	};
+	</script>
+	<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[Technical post] The Agentic Loop: Orchestrating GPT-5.4, Gemini, and Codex for Algorithmic Development",
+  "description": "Stop treating AI as a chatbot and start using it as a development team. In this post, I break down a 2026-ready agentic workflow that orchestrates GPT-5.4, Gemini, and Codex to build high-performance algorithmic code. From architectural blueprints to automated unit testing loops, learn how to move beyond simple prompts to professional-grade engineering. Read more to see how to master the multi-agent pipeline.",
+  "datePublished": "2026-03-15",
+  "author": {
+    "@type": "Person",
+    "name": "Teddy Lazebnik"
+  },
+  "mainEntityOfPage": "https://teddylazebnik.com/blog/blog-post-52.html",
+  "url": "https://teddylazebnik.com/blog/blog-post-52.html"
+}
+	</script>
+</head>
+<body class="line-numbers">
+	<header class="header" id="header">
+		<div class="mobile-menu-bg" id="mobile-menu-bg"></div>
+<!-- start of mobile menu-->
+<div id="mobile-menu" class="mobile-menu">
+	<div class="personal-coloum">
+		<h2 id="lecturer-name-template">Teddy Lazebnik</h2>
+		<div class="input-group input-group-mobile">
+		  <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input" />
+		  <span class="input-group-append">
+			<button id="header-search-btn" class="btn btn-outline-secondary border-left-0 border search-menu-btn" type="button" onclick="searchPage();">
+				<i class="fa fa-search"></i>
+			</button>
+		  </span>
+		</div>
+		
+		<a class="mobile-menu-link-home" href="/">
+			Home
+		</a>
+		
+		<!-- start of menu -->
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/about.html">
+				About 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/publications.html">
+				Publications 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/research.html">
+				Research 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/teaching.html">
+				Courses 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="https://acml.teddylazebnik.com/index.html">
+				Lab 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/blog.html">
+				Blog
+			</a>
+		</div>
+	</div>
+</div>
+<!-- end of moblie menu-->
+<!-- start of navigation bar-->
+<nav class="navbar navbar-expand-md main-nav">
+	<div class="spacer"></div>
+	<a class="logo navbar-brand order-first order-md-0 mx-0" href="#" onclick="gotoIndex();">
+	<button class="hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation" onclick="document.getElementById('mobile-menu').style.marginLeft = '0px';document.getElementById('mobile-menu-bg').style.marginLeft = '0px';">
+	  <span class="hamburger-box">
+		<span class="hamburger-inner"></span>
+	  </span>
+	</button>Teddy Lazebnik</a>
+	<!-- start of navigation bar: menus-->
+	<div class="collapse navbar-collapse w-100">
+		<ul class="nav navbar-nav w-100 nowrap">
+			<li class="nav-item menu-main-link active">
+				<a class="nav-link collapsible" href="/about.html">About
+				</a>
+			</li>
+			<li class="nav-item menu-main-link active">
+				<a class="nav-link collapsible" href="/publications.html">Publications
+				</a>
+			</li>
+			<li class="nav-item menu-main-link active">
+				<a class="nav-link collapsible" href="/research.html">Research
+				</a>
+			</li>
+			<li class="nav-item menu-main-link">
+				<a class="nav-link collapsible" href="/teaching.html">Courses 
+				</a>
+			</li>
+			<li class="nav-item menu-main-link">
+				<a class="nav-link collapsible" href="https://acml.teddylazebnik.com/index.html">Lab 
+				</a>
+			</li>
+			<li class="nav-item menu-main-link">
+				<a class="nav-link collapsible" href="/blog.html">Blog
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end of navigation bar: menus-->
+	<!-- start of navigation bar: about and search-->
+	<div class="collapse navbar-collapse w-100">
+		<ul class="nav navbar-nav ml-auto nowrap">
+			<li class="nav-item">
+				<div class="input-group">
+				  <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input_mobile" />
+				  <span class="input-group-append">
+					<button id="header-search-btn" class="btn btn-outline-secondary border-left-0 border search-menu-btn" type="button"  onclick="searchPage();">
+						<i class="fa fa-search"></i>
+					</button>
+				  </span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- end of navigation bar: about and search-->
+	<div class="spacer"></div>
+</nav>
+<!-- end of navigation bar-->
+	</header>
+	<main class="content" id="main_section">
+		<div class="blog-post-title-background">
+			<div class="blog-post-title-container">
+				<div class="blog-post-title-section">
+					<div id="title" class="blog-post-title">
+						<h1>
 [Technical post] The Agentic Loop: Orchestrating GPT-5.4, Gemini, and Codex for Algorithmic Development
 </h1>
-<hr class="publications-hr">
-15/3/2026
-<hr class="publications-hr">
-    <p>Building complex algorithmic code requires more than just a single prompt to a single model. To achieve production-grade results, we can implement an agentic workflow that treats different AI models as specialized members of a development team. This process leverages the unique reasoning strengths of GPT-5.4, the structural capabilities of Gemini, and the raw coding power of Codex. By following a multi-stage pipeline, we ensure that the architecture is sound, the logic is mapped out, and the final output is rigorously tested.</p>
+						<div class="meta-blog-post-title">15/3/2026 &#9679; 9 minutes to read </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="academic-papers-container" style="margin-top: 0px;">
+			<div class="academic-papers-header-section">
+				<div id="content" class="blog-post">
+					<p>Building complex algorithmic code requires more than just a single prompt to a single model. To achieve production-grade results, we can implement an agentic workflow that treats different AI models as specialized members of a development team. This process leverages the unique reasoning strengths of GPT-5.4, the structural capabilities of Gemini, and the raw coding power of Codex. By following a multi-stage pipeline, we ensure that the architecture is sound, the logic is mapped out, and the final output is rigorously tested.</p>
 
 <h2>Step 1: Establishing the Foundation with Codex</h2>
 
@@ -73,3 +244,206 @@ In contrast, OpenAI’s Codex is engineered for a "set and forget" style of auto
 <p>However, it is important to remember that in this era of "exponential engineering," the tools we use are changing almost as fast as the code they generate. Just this month, we have seen the consolidation of GPT-5.4’s agentic capabilities and the introduction of native computer-use features that may soon automate the "testing loop" even further. While Codex remains the superior choice for pure algorithmic logic today due to its decisive technical output and token efficiency, new interactive paradigms like Claude Code are rapidly closing the gap in multi-file refactoring and codebase navigation.</p>
 
 <p>Staying ahead in 2026 means remaining "model agnostic" and being ready to swap specialized agents as their capabilities evolve. The core principles of this workflow—architecting before coding, structural mapping, and isolated testing—will remain relevant regardless of which model holds the top spot on the leaderboard. As we move deeper into this year, the most successful developers will be those who master the art of the agentic loop, treating their AI tools not as simple assistants, but as a dynamic, evolving team of digital coworkers.</p>
+				</div>
+			</div>
+		</div>
+		<div class="blog-post-next-blogs-background" id="next_read_all">
+			<div class="blog-post-title-container">
+				<div class="blog-post-next-blogs-section">
+					<div id="next_blogs_title" class="continue_reading">
+						<h3>Continue Reading</h3>
+					</div>
+				</div>
+				<div class="blog-post-next-blogs-section next-blog-card-wrapper" id="next_papers">
+					<div class="academic-papers-panel next-blog-card-size">
+	<div class="personal-col w-100 next-post-box-title">
+		<h3>Meta Reinforcement Learning - What Are You?</h3>
+		<div class="meta-blog-next-post-time-element meta-blog-post-title">16/7/2021 &#9679; 3 minutes to read </div>
+		<h5>Meta Reinforcement Learning sounds cool, isn&#x27;t it? Many ignore this subject due to the complicated mathematics involved in any paper or blog post that...</h5>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-21.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel next-blog-card-size">
+	<div class="personal-col w-100 next-post-box-title">
+		<h3>[Technical Post] Running Python as fast as C code</h3>
+		<div class="meta-blog-next-post-time-element meta-blog-post-title">8/5/2021 &#9679; 3 minutes to read </div>
+		<h5>A summery of an academic paper propoing a neural network-based algorithm for solving forward and inverse problems for partial differential equations (...</h5>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-17.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer" id="footer">
+		<!-- Footer legal -->
+<div class="footer-container">
+	<div class="footer-section">
+		<div class="personal-row-col-footer">
+			<div class="footer-menu w-100" style="align-content: space-evenly;">
+				<h1 id="lecturer-name-id">
+					Teddy Lazebnik
+				</h1>
+				<h2 id="position">
+					Algorithms Developer & Researcher
+				</h2>
+				<p class="footer-description">
+					I am an entrepreneur and data scientist, with 10+ years of large-scale AI development experience (research & production), in Finances, Medical, and Retail verticals.
+				</p>
+				<div class="personal-row footer-details-icons">
+						<img title="email" src="/img/footer/email.png" />
+					<p id="email-address">lazebnik.teddy (at) gmail.com</p>
+				</div>
+				<div class="personal-row footer-details-icons">
+						<img title="phone" src="/img/footer/phone.png" />
+					<p id="phone-number">0545524589</p>
+				</div>
+				<div class="personal-row">
+					<p>Find me on:</p><br>
+				</div>
+				<div class="personal-row footer-social">
+					<a href="mailto:lazebnik.teddy@gmail.com" class="footer-social-icons footer-find-me-mail-and-phone" title="email" id="footer-email">
+						<img title="email" src="/img/footer/email.png" />
+					</a>
+					
+					<a href="tel:+972545524589" class="footer-social-icons footer-find-me-mail-and-phone" title="phone" id="footer-phone">
+						<img title="phone" src="/img/footer/phone.png" />
+					</a>
+					
+					<a href="https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en" class="footer-social-icons" title="google profile" id="footer-google">
+						<img title="google profile" src="/img/footer/google.png" />
+					</a>
+					
+					<a href="https://www.linkedin.com/in/teddy-lazebnik/" class="footer-social-icons" title="github profile" id="footer-github">
+						<img title="linkedin profile" src="/img/footer/linkedin.png" />
+					</a>
+					<!--
+					<a href="https://bitbucket.org/teddy_lazebnik/" class="footer-social-icons" title="bitbucket profile" id="footer-bitbucket">
+						<img title="bitbucket profile" src="/img/footer/bitbucket.png" />
+					</a>
+					-->
+					<a href="https://github.com/teddy4445" class="footer-social-icons" title="github profile" id="footer-bitbucket">
+						<img title="github profile" src="/img/footer/github.png" />
+					</a>
+				</div>
+			</div>
+			<div class="personal-coloum w-100" style="align-content: space-evenly;" id="footer-menu-row"> 
+				<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/about.html">
+							About
+						</a>
+						<a class="footer-menu-item" href="/about.html?section=Biography">
+							Biography
+						</a>
+						<a class="footer-menu-item" href="/about.html?section=Personal-projects">
+							Personal Projects
+						</a>
+						<a class="footer-menu-item" href="/about.html?section=Recommended-resources">
+							Recommended resources
+						</a>
+					</div>
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/research.html">
+							Research
+						</a>
+						<a class="footer-menu-item" href="/research.html?section=Ongoing-Projects">
+							 Ongoing projects
+						</a>
+						<a class="footer-menu-item" href="/research.html?section=Previous-Projects">
+							 Previous projects
+						</a>
+						<a class="footer-menu-item" href="/research.html?section=Work-with-me">
+							Work with me
+						</a>
+					</div>
+				</div>
+				<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/publications.html">
+							Publication
+						</a>
+						<a class="footer-menu-item" href="/files/sir_review.pdf">
+							Computational Applications of Extended SIR Models: A Review Focused on Airborne Pandemics
+						</a>
+						<a class="footer-menu-item" href="/files/autoencoder.pdf">
+							Knowledge-integrated autoencoder model
+						</a>
+					</div>
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/teaching.html">
+							Courses
+						</a>
+						<a class="footer-menu-item" href="/course-page.html?course_id=12321">
+							Introduction to Reinforcement Leanring
+						</a>
+						<a class="footer-menu-item" href="/course-page.html?course_id=----">
+							Mathematical aspects and applications of modern cyber
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+<div class="footer-section">
+	<div class="personal-row center brand-footer" >
+		<a href="#" title="An academic website generator">Powered by <img title="An academic website generator" src="/img/logo.png" /></a>
+	</div>
+	<div class="year-logo">
+		<span>© 2025 </span>
+		<a href="#">Privacy - Terms</a>
+	</div>
+</div> 
+
+		
+<div class="alert" id="alert-panel-1">
+  <span id="alert-close-btn" class="closebtn" onclick="this.parentElement.style.opacity=0;"></span>
+  <div id="cite-alert">
+  </div>
+</div>
+		
+<div class="alert" id="alert-panel-2">
+  <span id="search-close-btn" class="closebtn" onclick="this.parentElement.style.opacity=0;"></span>
+  <div id="search-alert">
+  </div>
+</div>
+	</footer>
+	<script src="/js/search.js"></script>
+	<script src="/js/prism.js"></script>
+	<script>
+function gotoIndex() {
+  var width = Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+  if (width > 850) {
+    window.location.replace("/");
+  }
+}
+
+(function () {
+  var background = document.getElementById("mobile-menu-bg");
+  var menu = document.getElementById("mobile-menu");
+
+  if (background && menu) {
+    background.onclick = function () {
+      menu.style.marginLeft = "-320px";
+      background.style.marginLeft = "100%";
+    };
+
+    menu.onclick = function (event) {
+      event.stopPropagation();
+    };
+  }
+})();
+</script>
+</body>
+</html>

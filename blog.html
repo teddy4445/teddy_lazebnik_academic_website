@@ -1,34 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- technical meta -->
 	<meta charset="utf-8"/>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-	<!-- end - technical meta -->
-
-	<!-- seo -->
-		<title> Prof. Teddy Lazebnik </title>
-		<meta content="Prof' Teddy Lazebnik - Mathematics and Computer Science researcher focusing on applied computational mathematics including Biomathematical Modeling, Computer Simulation, Personalized Medicince, and AI" name="description"/>
-		<meta content="keywords" content="lazebnik, לזנבניק, teddy lazebnik, applied computational mathematics" />
-		<meta content="Teddy Lazebnik" name="author"/>
-		<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
-	<!-- end - seo -->
-
-	<!-- css -->
+	<title>Blog | Teddy Lazebnik</title>
+	<meta content="Published non-academic papers, presentations, and blog posts by Teddy Lazebnik." name="description"/>
+	<meta name="keywords" content="lazebnik, teddy lazebnik, applied computational mathematics, academic blog"/>
+	<meta content="Teddy Lazebnik" name="author"/>
+	<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+	<link rel="canonical" href="https://teddylazebnik.com/blog.html"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:site_name" content="Teddy Lazebnik"/>
+	<meta property="og:title" content="Blog | Teddy Lazebnik"/>
+	<meta property="og:description" content="Published non-academic papers, presentations, and blog posts by Teddy Lazebnik."/>
+	<meta property="og:url" content="https://teddylazebnik.com/blog.html"/>
+	<meta name="twitter:card" content="summary"/>
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"/>
 	<link href="/css/main.css" rel="stylesheet">
 	<link href="/css/descriptionTrim.css" rel="stylesheet">
-	<!-- end - css -->
-	
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Teddy Lazebnik Blog",
+  "url": "https://teddylazebnik.com/blog.html",
+  "description": "Published non-academic papers, presentations, and blog posts by Teddy Lazebnik."
+}
+	</script>
 </head>
 <body>
-	<!-- header -->
 	<header class="header" id="header">
+		<div class="mobile-menu-bg" id="mobile-menu-bg"></div>
+<!-- start of mobile menu-->
+<div id="mobile-menu" class="mobile-menu">
+	<div class="personal-coloum">
+		<h2 id="lecturer-name-template">Teddy Lazebnik</h2>
+		<div class="input-group input-group-mobile">
+		  <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input" />
+		  <span class="input-group-append">
+			<button id="header-search-btn" class="btn btn-outline-secondary border-left-0 border search-menu-btn" type="button" onclick="searchPage();">
+				<i class="fa fa-search"></i>
+			</button>
+		  </span>
+		</div>
+		
+		<a class="mobile-menu-link-home" href="/">
+			Home
+		</a>
+		
+		<!-- start of menu -->
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/about.html">
+				About 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/publications.html">
+				Publications 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/research.html">
+				Research 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/teaching.html">
+				Courses 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="https://acml.teddylazebnik.com/index.html">
+				Lab 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/blog.html">
+				Blog
+			</a>
+		</div>
+	</div>
+</div>
+<!-- end of moblie menu-->
+<!-- start of navigation bar-->
+<nav class="navbar navbar-expand-md main-nav">
+	<div class="spacer"></div>
+	<a class="logo navbar-brand order-first order-md-0 mx-0" href="#" onclick="gotoIndex();">
+	<button class="hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation" onclick="document.getElementById('mobile-menu').style.marginLeft = '0px';document.getElementById('mobile-menu-bg').style.marginLeft = '0px';">
+	  <span class="hamburger-box">
+		<span class="hamburger-inner"></span>
+	  </span>
+	</button>Teddy Lazebnik</a>
+	<!-- start of navigation bar: menus-->
+	<div class="collapse navbar-collapse w-100">
+		<ul class="nav navbar-nav w-100 nowrap">
+			<li class="nav-item menu-main-link active">
+				<a class="nav-link collapsible" href="/about.html">About
+				</a>
+			</li>
+			<li class="nav-item menu-main-link active">
+				<a class="nav-link collapsible" href="/publications.html">Publications
+				</a>
+			</li>
+			<li class="nav-item menu-main-link active">
+				<a class="nav-link collapsible" href="/research.html">Research
+				</a>
+			</li>
+			<li class="nav-item menu-main-link">
+				<a class="nav-link collapsible" href="/teaching.html">Courses 
+				</a>
+			</li>
+			<li class="nav-item menu-main-link">
+				<a class="nav-link collapsible" href="https://acml.teddylazebnik.com/index.html">Lab 
+				</a>
+			</li>
+			<li class="nav-item menu-main-link">
+				<a class="nav-link collapsible" href="/blog.html">Blog
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end of navigation bar: menus-->
+	<!-- start of navigation bar: about and search-->
+	<div class="collapse navbar-collapse w-100">
+		<ul class="nav navbar-nav ml-auto nowrap">
+			<li class="nav-item">
+				<div class="input-group">
+				  <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input_mobile" />
+				  <span class="input-group-append">
+					<button id="header-search-btn" class="btn btn-outline-secondary border-left-0 border search-menu-btn" type="button"  onclick="searchPage();">
+						<i class="fa fa-search"></i>
+					</button>
+				  </span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- end of navigation bar: about and search-->
+	<div class="spacer"></div>
+</nav>
+<!-- end of navigation bar-->
 	</header>
-	<!-- end - header -->
-
-	<!-- main content -->
 	<main class="content" id="main_section">
 		<div class="academic-papers-container">
 			<div class="academic-papers-header-section">
@@ -37,26 +151,785 @@
 			</div>
 			<hr class="publications-hr">
 			<div class="academic-papers-body-section" id="publications-body">
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">The Illusion of Oversight: Why AI Agents Are Already Talking Behind Our Backs</h3>
+	<p>Can we still trust the transparency of AI? New research reveals how agents can conduct perfectly undetectable secret conversations right under our noses. By exploiting linguistic entropy, AI entities can handshake and coordinate hidden agendas, rendering traditional transcript auditing mathematically obsolete. Discover why the &#x27;glass house&#x27; of AI security just shattered.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">8/4/2026</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-53.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">[Technical post] The Agentic Loop: Orchestrating GPT-5.4, Gemini, and Codex for Algorithmic Development</h3>
+	<p>Stop treating AI as a chatbot and start using it as a development team. In this post, I break down a 2026-ready agentic workflow that orchestrates GPT-5.4, Gemini, and Codex to build high-performance algorithmic code. From architectural blueprints to automated unit testing loops, learn how to move beyond simple prompts to professional-grade engineering. Read more to see how to master the multi-agent pipeline.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">15/3/2026</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-52.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Elastic Hashing: Beating Uniform Probing Without Reordering</h3>
+	<p>Open-addressed hash tables are fast—until the table is almost full and probe lengths explode. This paper shows a surprising shift in what’s possible without reordering: elastic hashing achieves O(1) amortized expected probes with only O(log(1/δ)) worst-case expected probes at load 1−δ, and funnel hashing disproves a long-standing conjecture by giving a greedy scheme with O(log²(1/δ)) worst-case expected probes. Here’s the intuition, the guarantees, and why it changes how we should think about high-load performance and tail latency.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">21/2/2026</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-51.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Finite vs. Infinite Games: A Game Theoretic Perspective on Strategy and Stability</h3>
+	<p>Most strategic chaos stems from a single variable: misidentifying the game you are playing. In this blog post we answer why trying to &#x27;win&#x27; a system designed to never end is a mathematical guarantee of failure.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">9/12/2025</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-49.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">When a Diploma Stops Being a Ticket In</h3>
+	<p>This post dives into why a bachelor’s is no longer a guaranteed ticket in, how AI is quietly killing (and creating) opportunities, and what young workers can actually do to survive, and even stand out, in this new landscape.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/12/2025</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-48.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">There is No One AI Frontier - There Are Two (And That is Good News for Humans)</h3>
+	<p>A somewhat phiolsophical thought about the frontier of AI, how many of these there are, and what its meaning for us humans.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">18/10/2025</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-47.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Fight Academic Toxicity with Toxic Positivity</h3>
+	<p>The secret strategy to handle toxic academic individuals.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">8/5/2025</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-46.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Write Your Thesis with AI: A Guide for Students</h3>
+	<p>Stuck staring at a blank thesis page? Ditch the endless all-nighters and discover how AI tools can revolutionize your writing process! From structuring your chapters to polishing your prose, this post reveals the secrets to crafting a compelling and academically sound thesis with the help of your new AI co-author. Get ready to level up your research game!</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">6/4/2025</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-45.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Beyond Todo Lists: My System for Task Management and Prioritization</h3>
+	<p>Drowning in endless to-do lists and feeling overwhelmed? Discover my comprehensive task management system that goes beyond basic lists, providing the structure and clarity you need to finally take control of your time and get things done!</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">18/3/2025</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-44.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">A Guide For AI-Revolutionizing Academic Teaching</h3>
+	<p>Discover how to transform your teaching approach with AI tools, creating engaging and effective learning experiences in just a few easy steps. Embrace the future of academia and revolutionize your classroom today!</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">6/11/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-43.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Introducing - Tracademic!</h3>
+	<p>Navigating academic submissions can feel like a maze. Researchers juggle multiple deadlines, revisions, and journals, often losing track in the chaos. Tracademic steps in quietly, offering a platform that could be your lifeline—tracking your submissions and deadlines in one neat dashboard. For those who are unfunded or overwhelmed, Tracademic offers a free plan. It&#x27;s not flashy, but it does what you need: keeps you on top of submission statuses and provides gentle reminders when your papers need attention. Maybe it will not solve all your problems, but it might just help you manage your lab a litter better.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">27/9/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-42.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">[Code post] Building a Snake AI with Deep Reinforcement Learning: A Step-by-Step Guide Using Keras</h3>
+	<p>In this blog post, we have step-by-step guide to train a neural network to navigate a grid, eat apples, and avoid collisions - yes, the Snake game! Discover how to implement experience replay, visualize gameplay with Pygame, and fine-tune your AI&#x27;s performance. Whether you are a seasoned developer or new to AI, this hands-on guide offers practical insights and techniques to elevate your projects. Ready to see how AI can master the classic Snake game?</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">15/9/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-41.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Supercharge Your Research: The Best AI Tools Every Scholar Needs</h3>
+	<p>Discover how cutting-edge tools like Research Kik, Syspace, and ChatGPT are revolutionizing the way scholars generate questions, promote their work, and analyze data. From streamlining literature reviews to enhancing data visualizations, these AI innovations are designed to boost productivity and impact. </p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">29/8/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-40.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">[Code post] Crafting RL solutions - from simple to hard, a beginners guide</h3>
+	<p>This blog post offers a comprehensive guide to Reinforcement Learning (RL), bridging the gap between theoretical understanding and practical implementation. We shortly discuss the foundational concepts of RL, providing a mathematical basis for the applicative part. Subsequently, we explore core algorithms, practical considerations, and real-world applications. By combining theoretical depth with practical insights, this guide empowers readers to build robust and effective RL agents.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">17/8/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-39.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">The Biology of Music - Are these fields are that different from the AI perspective?</h3>
+	<p>This article explores the surprising connection between music and biology, revealed through the lens of AI. Discover how AI unlocks the mathematical secrets of music, and how it&#x27;s used to create virtual musicians and personalize your listening experience.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">18/7/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-35.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Find Your Perfect PhD Research Topic In 4 Not-Very-Easy Steps</h3>
+	<p>Stuck choosing a PhD topic? Feeling lost in a sea of possibilities? This blog post ignites your passion and equips you with a 4-step guide to find the perfect research question that fuels your PhD journey and leads to groundbreaking results.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">16/7/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-38.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">My Five Tips for PhD Students That I Wished I Knew When I Started</h3>
+	<p>Discover five essential tips for navigating your PhD journey smoothly! In this blog post, I share my five top tips for new PhD students and share my personal experiences of how and when I learned these lessons.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">23/6/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-36.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">The Revolution Has Begun: How Large Language Models (LLMs) are Set to Transform Academia</h3>
+	<p>In this blog post, we explore the transformative potential of Large Language Models (LLMs) in academia, shedding light on their impact across three key domains: writing assistance, literature navigation, and global collaboration. From alleviating writer&#x27;s block to breaking down language barriers, LLMs are revolutionizing the scholarly landscape by enhancing productivity, facilitating knowledge dissemination, and fostering interdisciplinary collaboration. Join us on a journey into the future of academia, where the power of LLMs promises to reshape the way we think, write, and collaborate in the pursuit of knowledge.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">3/3/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-34.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">5 AI Tools That Makes The Academics Life Easier</h3>
+	<p>It is not a secret Artificial Intelligence (AI) revolutioning the wolrd for some time now. However, the release of chatGPT was a game changer, brining Large Language Models (LLMs) in a productize and free way to the masses. This amazing tool has been also adopted by academics, if they admit it or not.  In this context, using AI tools in academia is still debated for multiple moral, legal, and operational reasons.  Nonetheless, the end is clear - we will use AI as we use computers, the internet, and grammer correction models. This is a question of when the old academics will understand they can not hold the gate close much longer. Until this happens, in this blog post I quickly present five AI tools you should try out...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/1/2024</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-33.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Go Ahead and Ask for a Nickle on the Dime: The Systematic Issue of Academic Collaboration and How to Negotiate It Gracefully</h3>
+	<p>Academic collaboration is pivotal for groundbreaking research but comes with unspoken complexities. Negotiating credit, resource distribution, and dynamics is akin to solving a puzzle. Addressing these challenges is crucial for fruitful teamwork. Research indicates early conflicts in authorship credit, highlighting a systemic issue in academia. Strategies include understanding co-authors on a personal level, agreeing on authors&#x27; list order, task delegation, and mediation mechanisms. An exit strategy is essential for irreconcilable differences. While effective, these strategies might challenge traditional norms, requiring a balance between pragmatic navigation and academic goodwill. Acknowledging the impact of collaborators, this blog post advocates for constructive collaboration.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/9/2023</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-32.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Sustainable Urban Planning: Using Data to Create Greener Cities</h3>
+	<p>In a rapidly urbanizing world, the pressing challenges of reconciling growth and sustainability are being addressed through data-driven urban planning. This blog post explores how data science is reshaping urban development to create environmentally resilient cities, citing examples such as predictive water demand modeling, IoT-enabled waste collection optimization, and dynamic traffic pattern analysis, while emphasizing future research opportunities for students and researchers in the interdisciplinary field.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">23/8/2023</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-31.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">We are Ready to Unleash the Power of Data Science and Mathematics in Medicine</h3>
+	<p>In this blog-post, we discuss the significant impact that data science and mathematics have had on healthcare research, from precision and personalized medicine to healthcare operations. The use of predictive analytics, data-driven experiment design, and artificial intelligence is providing clinicians and researchers with unique insights that were once unimaginable. We explore several specific examples, such as the use of spatial data about cells to improve treatment protocols, the development of personalized medicine using socio-demographic data, and the usage of pandemic models to predict future outbreaks.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">11/4/2023</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-30.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">3 Things I learned about Conflicts in Academia</h3>
+	<p>In this blog-post, I present from a personal point of view an analysis of common sources of conflicts in academic settings and practical strategies for managing them effectively. Through personal experiences and reflections, I identify three main key lessons: the importance of communication, understanding power dynamics, and understand differences in objectives of the team members. </p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">26/2/2023</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-29.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Automatic Distribution Fitting of Tabular Data using the Simulated Annealing Algorithm</h3>
+	<p>Allocating a parametric distribution to features in tabular data is a well-known problem for all data analysis as this provides a wide range of abilities such as better explainability, generation of new samples, and better picking of classification and regressions models using meta-learning. In this study, we propose a simulated annealing approach to allocate a parametric distribution for features, obtaining the optimal distribution and its parameters. We show that the proposed approach performs on average similar to the commonly used brute force with maximum likelihood approach even for simple distributions such as uniform and normal distributions. </p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/4/2022</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-28.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">The Promise and Limitations of Cell-Cell Mathematical Models in Cancer Treatment</h3>
+	<p>Cell-cell interaction models can fairly represent the biological and clinical processes in general and for oncological patients in particular. The current model is starting to take into consideration the spatial effect of cells and organs but much more research should be conducted so we fully understand and be able to model these dynamics. </p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">15/3/2022</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-27.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Computing the Distance Between DNA Sequences - Not As Simple As You Might Think</h3>
+	<p>Bioinformatics in general and in the context of medical genomics is a promising field of study which allows us to develop better and more personalized treatments and provide more accurate diagnostics. Computing the distance between DNA sequences is a central task in multiple bioinformation tasks. From a quick glance, it may seem straightforward to compare the similarity between two vectors. However, it is not as simple as you might think... </p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">5/12/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-26.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Targeted Drug Delivery using Nanoparticles Can Revolutionize Cancer Therapy</h3>
+	<p>Surgery, chemotherapy, radiotherapy, and hormone therapy are the main common anti-tumor therapeutic approaches...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">25/11/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-25.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Give Me a One-Handed Economist: The Ongoing Struggle Between Social and Exact Sciences In Economy</h3>
+	<p>Classicial and modern economic research is suffer froma dissonance between social sciences which are mostly empirical-based with minor to no rigorousness theories and the exact science rooted in theories increasingly being built from simple rules. We suggest to overcome this gap using computer science methods...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">27/8/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-24.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Optimal Intervention Policies For the COVID-19 Pandemic Emerge from Socioeconomic-Heterogeneous Dynamics</h3>
+	<p>The COVID-19 pandemic is a rolling crisis that required policymakers around the world to take action to manage the pandemic spread. During the period where vaccination was not available, the pandemic spread management lied in non-pharmaceutical interventions (NPIs). A large number of mathematical models have been proposed to predict the pandemic spread and analyze the influence of various NPIs on multiple scenarios, getting more accurate and sophisticated over time. In this post, we review the latest mathematical models for pandemic spread NPIs and their main limitations. Specifically, the usage of modeling a homogeneous population rather than a heterogeneous one. </p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">21/8/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-23.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Black Market Size Estimation Methods Are Stuck In The 90s</h3>
+	<p>The accurate estimation of the black market is an urgent issue for governments as it has a direct influence on the taxation policy, crime, and other activities managed and controlled by the government. However, the current approach for estimating the size of the black market is based on an idea that not holds anymore due to technological shifts. We propose a new approach to perform this task...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/8/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-22.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Meta Reinforcement Learning - What Are You?</h3>
+	<p>Meta Reinforcement Learning sounds cool, isn&#x27;t it? Many ignore this subject due to the complicated mathematics involved in any paper or blog post that talks about this subject. But, no more! Meta reinforcement learning in 3 minutes or less.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">16/7/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-21.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">AI Agent For The OCTI Board Game</h3>
+	<p>We developed a digital version of the OCTI board with three artificial intelligence (AI) players. The first two AI players are based on deterministic algorithms (greedy and MinMax) while the third is based on reinforcement learning (RL) algorithm. We train the RL player based on historical games (offline) and then personalize it using online learning against specific player. An experiment conducted with five levels of human players show that the RL is able to win 44% of the time (greedy and MinMax win 14% and 32%, respectively) making it a valid AI player.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">14/6/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-20.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">[Short] A Step Towards Explainable AI - The Explainable Boosting Machine</h3>
+	<p>Machine learning models are concering new hilltops everyday now and sprading into more fields of life such as medicine, miletary, life-supporting systems and other which require individuals to put their faite in these models. How one can do so without understanding the model? Explainable Boosting Machine (EBM) is one step torwards a more interpretabe machine learning models...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">8/6/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-19.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">[Technical Post] Fast Start Your ML Project Using Auto-ML Libraries in Python</h3>
+	<p>4 Auto-ML Libraries to Automate Machine Learning Pipeline...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">13/5/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-18.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">[Technical Post] Running Python as fast as C code</h3>
+	<p>Introduction to the just-in-time compilation PyPy compiler for Python...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">8/5/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-17.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">[Technical Post] Novel Method For Using Unsupervised Deep Learning for PDE-based Problems</h3>
+	<p>A summery of an academic paper propoing a neural network-based algorithm for solving forward and inverse problems for partial differential equations (PDE) in unsupervised fashion with mash free and for arbitrary regular domain...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/4/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-16.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">The graphs every AI developer must know and their python implementation</h3>
+	<p>If you an AI / Machine Learning / Data Science and doing a project, you probabliy should print one or more of these graphs to really understand what is going on...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">15/3/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-15.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Do You Need Portfolio Project As A Junior Developer? Make Online Game!</h3>
+	<p>Are you a jounier developer? If so, you probabliy need a protfolio projects to show off your skills. You do not need to look further, pick a lovable game. This is way...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/3/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-14.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">A Few Lessons From Adversarial, Multi-agent Reinforcement Learning Project</h3>
+	<p>Do you have a RL project? does it in an Adversarial settings and with multi-agents? you should do the following...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">15/2/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-13.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Birds Flocking And Targeted Drug Delivery Medicine Are Basically The Same</h3>
+	<p>Imagine you are an world-class zoologist studying the flight of a new species of excotic birds your recently descovered...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/2/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-12.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Distributed Computing Based Drugs</h3>
+	<p>How a lot of small and without any computational power particles can make our drugs better? check out and find out</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/1/2021</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-11.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">4 Things To Consider When You User-Testing Your Service</h3>
+	<p>Large or small - few use cases from Facebook user-fitting in 3rd wolrd users from start-up prospective</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/8/2020</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-5.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">The math behind the Coronavirus spread</h3>
+	<p>Covid-19 pandemic hit the wolrd at the beginning of 2020 and lead to hundrieds of mathematical models predicting the spread of the pandemic wolrdwide. Here I offer a basic review of some of these methods</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/5/2020</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-6.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Why should you use dotnet core for your next AI project production?</h3>
+	<p>Python, maybe JavaScript are considrued as the leading ML and AI language to go. But, in production you should considr dotnet core... In this post, we explain why</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/5/2020</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-7.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">3 techniques for a better quality of tagged data for ML tasks.</h3>
+	<p>Current machine learning models require huge amount of data. How can you make assure the quality of your tagged data? Here are three techniques to do so...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/4/2020</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-3.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Daily Issues and Solutions of a Nano-bioinformatic Research</h3>
+	<p>Nano-bioinformatic research is hard. But did you know what are the real daily issues such researchers have? and more importantly, how they solve them and how this effects you?</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/3/2019</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-2.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">The History of NLP with the Hebrew Language</h3>
+	<p>In the post, I provide a quick review of the development of NLP technologies alongside the Hebrew language and the problems we have while using NLP in Hebrew.</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/3/2018</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-1.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">3 steps to the medicine of the future</h3>
+	<p>What are the next three steps that should happen when we are talking about nanomedicine in general and medical nanorobotics in particular</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/2/2018</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-4.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Medical Nanorobotics - Science or Science Fiction?</h3>
+	<p>Nanorobotics is a new kind of robotics with can be defined as &#x27;The technology of creating machines or robots close to the scale of a nanometre&#x27;...</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/4/2017</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-9.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">The Connection Between Archery And Programming</h3>
+	<p>This may sound strange but there is actully really intresting connection, you should check it out</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/2/2017</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-10.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel">
+	<h3 class="blog-title">Most interesting people in history knew this fact</h3>
+	<p>Can you pin point the propertise of what making a person interesting? well, we can</p>
+	<div class="personal-row space-between align-items-center mobile-row-breaker">
+		<div class="w-100">
+			<span class="blog-data">1/7/2016</span>
+		</div>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-8.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
 			</div>
 		</div>
 	</main>
-	<!-- end - main content -->
-
-	<!-- footer -->
 	<footer class="footer" id="footer">
+		<!-- Footer legal -->
+<div class="footer-container">
+	<div class="footer-section">
+		<div class="personal-row-col-footer">
+			<div class="footer-menu w-100" style="align-content: space-evenly;">
+				<h1 id="lecturer-name-id">
+					Teddy Lazebnik
+				</h1>
+				<h2 id="position">
+					Algorithms Developer & Researcher
+				</h2>
+				<p class="footer-description">
+					I am an entrepreneur and data scientist, with 10+ years of large-scale AI development experience (research & production), in Finances, Medical, and Retail verticals.
+				</p>
+				<div class="personal-row footer-details-icons">
+						<img title="email" src="/img/footer/email.png" />
+					<p id="email-address">lazebnik.teddy (at) gmail.com</p>
+				</div>
+				<div class="personal-row footer-details-icons">
+						<img title="phone" src="/img/footer/phone.png" />
+					<p id="phone-number">0545524589</p>
+				</div>
+				<div class="personal-row">
+					<p>Find me on:</p><br>
+				</div>
+				<div class="personal-row footer-social">
+					<a href="mailto:lazebnik.teddy@gmail.com" class="footer-social-icons footer-find-me-mail-and-phone" title="email" id="footer-email">
+						<img title="email" src="/img/footer/email.png" />
+					</a>
+					
+					<a href="tel:+972545524589" class="footer-social-icons footer-find-me-mail-and-phone" title="phone" id="footer-phone">
+						<img title="phone" src="/img/footer/phone.png" />
+					</a>
+					
+					<a href="https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en" class="footer-social-icons" title="google profile" id="footer-google">
+						<img title="google profile" src="/img/footer/google.png" />
+					</a>
+					
+					<a href="https://www.linkedin.com/in/teddy-lazebnik/" class="footer-social-icons" title="github profile" id="footer-github">
+						<img title="linkedin profile" src="/img/footer/linkedin.png" />
+					</a>
+					<!--
+					<a href="https://bitbucket.org/teddy_lazebnik/" class="footer-social-icons" title="bitbucket profile" id="footer-bitbucket">
+						<img title="bitbucket profile" src="/img/footer/bitbucket.png" />
+					</a>
+					-->
+					<a href="https://github.com/teddy4445" class="footer-social-icons" title="github profile" id="footer-bitbucket">
+						<img title="github profile" src="/img/footer/github.png" />
+					</a>
+				</div>
+			</div>
+			<div class="personal-coloum w-100" style="align-content: space-evenly;" id="footer-menu-row"> 
+				<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/about.html">
+							About
+						</a>
+						<a class="footer-menu-item" href="/about.html?section=Biography">
+							Biography
+						</a>
+						<a class="footer-menu-item" href="/about.html?section=Personal-projects">
+							Personal Projects
+						</a>
+						<a class="footer-menu-item" href="/about.html?section=Recommended-resources">
+							Recommended resources
+						</a>
+					</div>
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/research.html">
+							Research
+						</a>
+						<a class="footer-menu-item" href="/research.html?section=Ongoing-Projects">
+							 Ongoing projects
+						</a>
+						<a class="footer-menu-item" href="/research.html?section=Previous-Projects">
+							 Previous projects
+						</a>
+						<a class="footer-menu-item" href="/research.html?section=Work-with-me">
+							Work with me
+						</a>
+					</div>
+				</div>
+				<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/publications.html">
+							Publication
+						</a>
+						<a class="footer-menu-item" href="/files/sir_review.pdf">
+							Computational Applications of Extended SIR Models: A Review Focused on Airborne Pandemics
+						</a>
+						<a class="footer-menu-item" href="/files/autoencoder.pdf">
+							Knowledge-integrated autoencoder model
+						</a>
+					</div>
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/teaching.html">
+							Courses
+						</a>
+						<a class="footer-menu-item" href="/course-page.html?course_id=12321">
+							Introduction to Reinforcement Leanring
+						</a>
+						<a class="footer-menu-item" href="/course-page.html?course_id=----">
+							Mathematical aspects and applications of modern cyber
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+<div class="footer-section">
+	<div class="personal-row center brand-footer" >
+		<a href="#" title="An academic website generator">Powered by <img title="An academic website generator" src="/img/logo.png" /></a>
+	</div>
+	<div class="year-logo">
+		<span>© 2025 </span>
+		<a href="#">Privacy - Terms</a>
+	</div>
+</div> 
+
+		
+<div class="alert" id="alert-panel-1">
+  <span id="alert-close-btn" class="closebtn" onclick="this.parentElement.style.opacity=0;"></span>
+  <div id="cite-alert">
+  </div>
+</div>
+		
+<div class="alert" id="alert-panel-2">
+  <span id="search-close-btn" class="closebtn" onclick="this.parentElement.style.opacity=0;"></span>
+  <div id="search-alert">
+  </div>
+</div>
 	</footer>
-	<!-- end - footer -->
-
-	<!-- js -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="/js/main.js"> </script>
-	<script src="/js/search.js"> </script>
-	<script src="/js/pages/blog.js" type="module"> </script>
+	<script src="/js/search.js"></script>
 	<script>
+function gotoIndex() {
+  var width = Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+  if (width > 850) {
+    window.location.replace("/");
+  }
+}
 
-	</script>
-	<!-- end - js -->
+(function () {
+  var background = document.getElementById("mobile-menu-bg");
+  var menu = document.getElementById("mobile-menu");
+
+  if (background && menu) {
+    background.onclick = function () {
+      menu.style.marginLeft = "-320px";
+      background.style.marginLeft = "100%";
+    };
+
+    menu.onclick = function (event) {
+      event.stopPropagation();
+    };
+  }
+})();
+</script>
 </body>
 </html>

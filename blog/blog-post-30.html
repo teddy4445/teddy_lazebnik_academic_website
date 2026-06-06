@@ -1,10 +1,181 @@
-<h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>We are Ready to Unleash the Power of Data Science and Mathematics in Medicine | Teddy Lazebnik</title>
+	<meta content="In this blog-post, we discuss the significant impact that data science and mathematics have had on healthcare research, from precision and personalized medicine to healthcare operations. The use of predictive analytics, data-driven experiment design, and artificial intelligence is providing clinicians and researchers with unique insights that were once unimaginable. We explore several specific examples, such as the use of spatial data about cells to improve treatment protocols, the development of personalized medicine using socio-demographic data, and the usage of pandemic models to predict future outbreaks." name="description"/>
+	<meta name="keywords" content="lazebnik, teddy lazebnik, applied computational mathematics, academic blog"/>
+	<meta content="Teddy Lazebnik" name="author"/>
+	<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+	<link rel="canonical" href="https://teddylazebnik.com/blog/blog-post-30.html"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:site_name" content="Teddy Lazebnik"/>
+	<meta property="og:title" content="We are Ready to Unleash the Power of Data Science and Mathematics in Medicine | Teddy Lazebnik"/>
+	<meta property="og:description" content="In this blog-post, we discuss the significant impact that data science and mathematics have had on healthcare research, from precision and personalized medicine to healthcare operations. The use of predictive analytics, data-driven experiment design, and artificial intelligence is providing clinicians and researchers with unique insights that were once unimaginable. We explore several specific examples, such as the use of spatial data about cells to improve treatment protocols, the development of personalized medicine using socio-demographic data, and the usage of pandemic models to predict future outbreaks."/>
+	<meta property="og:url" content="https://teddylazebnik.com/blog/blog-post-30.html"/>
+	<meta name="twitter:card" content="summary"/>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"/>
+	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/descriptionTrim.css" rel="stylesheet">
+	<link href="/css/prism.css" rel="stylesheet">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']]
+	  }
+	};
+	</script>
+	<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "We are Ready to Unleash the Power of Data Science and Mathematics in Medicine",
+  "description": "In this blog-post, we discuss the significant impact that data science and mathematics have had on healthcare research, from precision and personalized medicine to healthcare operations. The use of predictive analytics, data-driven experiment design, and artificial intelligence is providing clinicians and researchers with unique insights that were once unimaginable. We explore several specific examples, such as the use of spatial data about cells to improve treatment protocols, the development of personalized medicine using socio-demographic data, and the usage of pandemic models to predict future outbreaks.",
+  "datePublished": "2023-04-11",
+  "author": {
+    "@type": "Person",
+    "name": "Teddy Lazebnik"
+  },
+  "mainEntityOfPage": "https://teddylazebnik.com/blog/blog-post-30.html",
+  "url": "https://teddylazebnik.com/blog/blog-post-30.html"
+}
+	</script>
+</head>
+<body class="line-numbers">
+	<header class="header" id="header">
+		<div class="mobile-menu-bg" id="mobile-menu-bg"></div>
+<!-- start of mobile menu-->
+<div id="mobile-menu" class="mobile-menu">
+	<div class="personal-coloum">
+		<h2 id="lecturer-name-template">Teddy Lazebnik</h2>
+		<div class="input-group input-group-mobile">
+		  <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input" />
+		  <span class="input-group-append">
+			<button id="header-search-btn" class="btn btn-outline-secondary border-left-0 border search-menu-btn" type="button" onclick="searchPage();">
+				<i class="fa fa-search"></i>
+			</button>
+		  </span>
+		</div>
+		
+		<a class="mobile-menu-link-home" href="/">
+			Home
+		</a>
+		
+		<!-- start of menu -->
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/about.html">
+				About 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/publications.html">
+				Publications 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/research.html">
+				Research 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/teaching.html">
+				Courses 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="https://acml.teddylazebnik.com/index.html">
+				Lab 
+			</a>
+		</div>
+		<div class="mobile-menu-link collapsible">
+			<a class="mobile-menu-link" href="/blog.html">
+				Blog
+			</a>
+		</div>
+	</div>
+</div>
+<!-- end of moblie menu-->
+<!-- start of navigation bar-->
+<nav class="navbar navbar-expand-md main-nav">
+	<div class="spacer"></div>
+	<a class="logo navbar-brand order-first order-md-0 mx-0" href="#" onclick="gotoIndex();">
+	<button class="hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation" onclick="document.getElementById('mobile-menu').style.marginLeft = '0px';document.getElementById('mobile-menu-bg').style.marginLeft = '0px';">
+	  <span class="hamburger-box">
+		<span class="hamburger-inner"></span>
+	  </span>
+	</button>Teddy Lazebnik</a>
+	<!-- start of navigation bar: menus-->
+	<div class="collapse navbar-collapse w-100">
+		<ul class="nav navbar-nav w-100 nowrap">
+			<li class="nav-item menu-main-link active">
+				<a class="nav-link collapsible" href="/about.html">About
+				</a>
+			</li>
+			<li class="nav-item menu-main-link active">
+				<a class="nav-link collapsible" href="/publications.html">Publications
+				</a>
+			</li>
+			<li class="nav-item menu-main-link active">
+				<a class="nav-link collapsible" href="/research.html">Research
+				</a>
+			</li>
+			<li class="nav-item menu-main-link">
+				<a class="nav-link collapsible" href="/teaching.html">Courses 
+				</a>
+			</li>
+			<li class="nav-item menu-main-link">
+				<a class="nav-link collapsible" href="https://acml.teddylazebnik.com/index.html">Lab 
+				</a>
+			</li>
+			<li class="nav-item menu-main-link">
+				<a class="nav-link collapsible" href="/blog.html">Blog
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end of navigation bar: menus-->
+	<!-- start of navigation bar: about and search-->
+	<div class="collapse navbar-collapse w-100">
+		<ul class="nav navbar-nav ml-auto nowrap">
+			<li class="nav-item">
+				<div class="input-group">
+				  <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input_mobile" />
+				  <span class="input-group-append">
+					<button id="header-search-btn" class="btn btn-outline-secondary border-left-0 border search-menu-btn" type="button"  onclick="searchPage();">
+						<i class="fa fa-search"></i>
+					</button>
+				  </span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- end of navigation bar: about and search-->
+	<div class="spacer"></div>
+</nav>
+<!-- end of navigation bar-->
+	</header>
+	<main class="content" id="main_section">
+		<div class="blog-post-title-background">
+			<div class="blog-post-title-container">
+				<div class="blog-post-title-section">
+					<div id="title" class="blog-post-title">
+						<h1>
 We are Ready to Unleash the Power of Data Science and Mathematics in Medicine
 </h1>
-<hr class="publications-hr">
-11/4/2023
-<hr class="publications-hr">
-<p>
+						<div class="meta-blog-post-title">11/4/2023 &#9679; 3 minutes to read </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="academic-papers-container" style="margin-top: 0px;">
+			<div class="academic-papers-header-section">
+				<div id="content" class="blog-post">
+					<p>
 	The world of medicine is constantly changing and evolving, and data science and mathematics have become integral components of this progress. 
 	Data science and mathematics can provide powerful insights into the diagnosis and treatment of diseases and can help to create more personalized and effective treatments while also acting in resource-bounded settings.
 	In this blog post, we explore some of the exciting examples of how data science and mathematics are being applied to medical research and healthcare delivery. 
@@ -55,3 +226,226 @@ We are Ready to Unleash the Power of Data Science and Mathematics in Medicine
 	In order to achieve these goals, healthcare professionals would need to work together with technological individuals.
 	Moreover, making more clinical data accessible would be an important step in the right direction.
 </p>
+				</div>
+			</div>
+		</div>
+		<div class="blog-post-next-blogs-background" id="next_read_all">
+			<div class="blog-post-title-container">
+				<div class="blog-post-next-blogs-section">
+					<div id="next_blogs_title" class="continue_reading">
+						<h3>Continue Reading</h3>
+					</div>
+				</div>
+				<div class="blog-post-next-blogs-section next-blog-card-wrapper" id="next_papers">
+					<div class="academic-papers-panel next-blog-card-size">
+	<div class="personal-col w-100 next-post-box-title">
+		<h3>The math behind the Coronavirus spread</h3>
+		<div class="meta-blog-next-post-time-element meta-blog-post-title">1/5/2020 &#9679; 2 minutes to read </div>
+		<h5>Covid-19 pandemic hit the wolrd at the beginning of 2020 and lead to hundrieds of mathematical models predicting the spread of the pandemic wolrdwide....</h5>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-6.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel next-blog-card-size">
+	<div class="personal-col w-100 next-post-box-title">
+		<h3>A Step Towards Explainable AI - The Explainable Boosting Machine</h3>
+		<div class="meta-blog-next-post-time-element meta-blog-post-title">8/6/2021 &#9679; 2 minutes to read </div>
+		<h5>Machine learning models are concering new hilltops everyday now and sprading into more fields of life such as medicine, miletary, life-supporting syst...</h5>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-19.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel next-blog-card-size">
+	<div class="personal-col w-100 next-post-box-title">
+		<h3>Fast Start Your ML Project Using Auto-ML Libraries in Python</h3>
+		<div class="meta-blog-next-post-time-element meta-blog-post-title">13/5/2021 &#9679; 3 minutes to read </div>
+		<h5>4 Auto-ML Libraries to Automate Machine Learning Pipeline...</h5>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-18.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				<div class="academic-papers-panel next-blog-card-size">
+	<div class="personal-col w-100 next-post-box-title">
+		<h3>The graphs every AI developer must know and their python implementation</h3>
+		<div class="meta-blog-next-post-time-element meta-blog-post-title">15/3/2021 &#9679; 7 minutes to read </div>
+		<h5>If you an AI / Machine Learning / Data Science and doing a project, you probabliy should print one or more of these graphs to really understand what i...</h5>
+		<div class="w-100 flex-end align-items-center mobile-row-spacer">
+			<a href="/blog/blog-post-15.html" class="download-btn">Read More</a>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer" id="footer">
+		<!-- Footer legal -->
+<div class="footer-container">
+	<div class="footer-section">
+		<div class="personal-row-col-footer">
+			<div class="footer-menu w-100" style="align-content: space-evenly;">
+				<h1 id="lecturer-name-id">
+					Teddy Lazebnik
+				</h1>
+				<h2 id="position">
+					Algorithms Developer & Researcher
+				</h2>
+				<p class="footer-description">
+					I am an entrepreneur and data scientist, with 10+ years of large-scale AI development experience (research & production), in Finances, Medical, and Retail verticals.
+				</p>
+				<div class="personal-row footer-details-icons">
+						<img title="email" src="/img/footer/email.png" />
+					<p id="email-address">lazebnik.teddy (at) gmail.com</p>
+				</div>
+				<div class="personal-row footer-details-icons">
+						<img title="phone" src="/img/footer/phone.png" />
+					<p id="phone-number">0545524589</p>
+				</div>
+				<div class="personal-row">
+					<p>Find me on:</p><br>
+				</div>
+				<div class="personal-row footer-social">
+					<a href="mailto:lazebnik.teddy@gmail.com" class="footer-social-icons footer-find-me-mail-and-phone" title="email" id="footer-email">
+						<img title="email" src="/img/footer/email.png" />
+					</a>
+					
+					<a href="tel:+972545524589" class="footer-social-icons footer-find-me-mail-and-phone" title="phone" id="footer-phone">
+						<img title="phone" src="/img/footer/phone.png" />
+					</a>
+					
+					<a href="https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en" class="footer-social-icons" title="google profile" id="footer-google">
+						<img title="google profile" src="/img/footer/google.png" />
+					</a>
+					
+					<a href="https://www.linkedin.com/in/teddy-lazebnik/" class="footer-social-icons" title="github profile" id="footer-github">
+						<img title="linkedin profile" src="/img/footer/linkedin.png" />
+					</a>
+					<!--
+					<a href="https://bitbucket.org/teddy_lazebnik/" class="footer-social-icons" title="bitbucket profile" id="footer-bitbucket">
+						<img title="bitbucket profile" src="/img/footer/bitbucket.png" />
+					</a>
+					-->
+					<a href="https://github.com/teddy4445" class="footer-social-icons" title="github profile" id="footer-bitbucket">
+						<img title="github profile" src="/img/footer/github.png" />
+					</a>
+				</div>
+			</div>
+			<div class="personal-coloum w-100" style="align-content: space-evenly;" id="footer-menu-row"> 
+				<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/about.html">
+							About
+						</a>
+						<a class="footer-menu-item" href="/about.html?section=Biography">
+							Biography
+						</a>
+						<a class="footer-menu-item" href="/about.html?section=Personal-projects">
+							Personal Projects
+						</a>
+						<a class="footer-menu-item" href="/about.html?section=Recommended-resources">
+							Recommended resources
+						</a>
+					</div>
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/research.html">
+							Research
+						</a>
+						<a class="footer-menu-item" href="/research.html?section=Ongoing-Projects">
+							 Ongoing projects
+						</a>
+						<a class="footer-menu-item" href="/research.html?section=Previous-Projects">
+							 Previous projects
+						</a>
+						<a class="footer-menu-item" href="/research.html?section=Work-with-me">
+							Work with me
+						</a>
+					</div>
+				</div>
+				<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/publications.html">
+							Publication
+						</a>
+						<a class="footer-menu-item" href="/files/sir_review.pdf">
+							Computational Applications of Extended SIR Models: A Review Focused on Airborne Pandemics
+						</a>
+						<a class="footer-menu-item" href="/files/autoencoder.pdf">
+							Knowledge-integrated autoencoder model
+						</a>
+					</div>
+					<div class="footer-menu w-100">
+						<a class="footer-menu-title" href="/teaching.html">
+							Courses
+						</a>
+						<a class="footer-menu-item" href="/course-page.html?course_id=12321">
+							Introduction to Reinforcement Leanring
+						</a>
+						<a class="footer-menu-item" href="/course-page.html?course_id=----">
+							Mathematical aspects and applications of modern cyber
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+<div class="footer-section">
+	<div class="personal-row center brand-footer" >
+		<a href="#" title="An academic website generator">Powered by <img title="An academic website generator" src="/img/logo.png" /></a>
+	</div>
+	<div class="year-logo">
+		<span>© 2025 </span>
+		<a href="#">Privacy - Terms</a>
+	</div>
+</div> 
+
+		
+<div class="alert" id="alert-panel-1">
+  <span id="alert-close-btn" class="closebtn" onclick="this.parentElement.style.opacity=0;"></span>
+  <div id="cite-alert">
+  </div>
+</div>
+		
+<div class="alert" id="alert-panel-2">
+  <span id="search-close-btn" class="closebtn" onclick="this.parentElement.style.opacity=0;"></span>
+  <div id="search-alert">
+  </div>
+</div>
+	</footer>
+	<script src="/js/search.js"></script>
+	<script src="/js/prism.js"></script>
+	<script>
+function gotoIndex() {
+  var width = Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+  if (width > 850) {
+    window.location.replace("/");
+  }
+}
+
+(function () {
+  var background = document.getElementById("mobile-menu-bg");
+  var menu = document.getElementById("mobile-menu");
+
+  if (background && menu) {
+    background.onclick = function () {
+      menu.style.marginLeft = "-320px";
+      background.style.marginLeft = "100%";
+    };
+
+    menu.onclick = function (event) {
+      event.stopPropagation();
+    };
+  }
+})();
+</script>
+</body>
+</html>
