@@ -98,9 +98,9 @@
             "updates": [
                 {
                     "title": "Zoom link for the lecture",
-                    "description": "A Zoom link for the lecture (9.6.2026): https://us02web.zoom.us/j/81399539351",
+                    "description": "A Zoom link for the lecture (9.6.2026): REMOVED",
                     "date": "06.09.2026",
-                    "link": "https://us02web.zoom.us/j/81399539351"
+                    "link": ""
                 },
                 {
                     "title": "Lecture 7 (26.5.26) is canceled",
@@ -110,9 +110,9 @@
                 },
                 {
                     "title": "Zoom link for the third lecture",
-                    "description": "A Zoom link for the third lecture (24.3.2026): https://us02web.zoom.us/j/84767685638",
+                    "description": "A Zoom link for the third lecture (24.3.2026): REMOVED",
                     "date": "04.14.2026",
-                    "link": "https://us02web.zoom.us/j/84767685638"
+                    "link": " "
                 },
                 {
                     "title": "Welcome to our RL course!",
@@ -262,6 +262,12 @@
                                 "link": "/files/rl_course/9.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
+                            },
+                            {
+                                "name": "Lession 8: recording",
+                                "link": "https://us02web.zoom.us/rec/share/nxUOoRXdYDRbERQIn_erTNFAM74vXVvlc9pJNjPY-GIiGRZGPOBIYreac01Yjsbd.2IhEAHqdVIWgjlvV",
+                                "description": "",
+                                "type": "video"
                             },
                             {
                                 "name": "Lession 9: Deep Reinforcement Learning (1)",
