@@ -97,6 +97,12 @@
             },
             "updates": [
                 {
+                    "title": "Zoom link for the lecture",
+                    "description": "A Zoom link for the lecture (9.6.2026): https://us02web.zoom.us/j/81399539351",
+                    "date": "06.09.2026",
+                    "link": "https://us02web.zoom.us/j/81399539351"
+                },
+                {
                     "title": "Lecture 7 (26.5.26) is canceled",
                     "description": "Please note that the 7th lecture (26.5.26) is canceled. We will have it in another time that will be scheduled in the future. Thank you for your understanding",
                     "date": "05.19.2026",
