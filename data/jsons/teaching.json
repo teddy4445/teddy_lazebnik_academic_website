@@ -276,6 +276,12 @@
                                 "type": "slides"
                             },
                             {
+                                "name": "Lession 9: recording",
+                                "link": "https://us02web.zoom.us/rec/share/mchQg906k5rfdiqg3q3wuJIcb8EChruiDYIkdQM9sGPy0q89OEqAOtpkFKfr0tkq.p2BAHvI35AS08qV9",
+                                "description": "",
+                                "type": "video"
+                            },
+                            {
                                 "name": "Lession 10: Deep Reinforcement Learning (2)",
                                 "link": "/files/rl_course/14.pdf",
                                 "description": "Thanks to original source",
@@ -284,18 +290,6 @@
                             {
                                 "name": "Lession 11: Mimic learning",
                                 "link": "/files/rl_course/11.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 12a: RL rewards",
-                                "link": "/files/rl_course/12.pdf",
-                                "description": "Thanks to original source",
-                                "type": "slides"
-                            },
-                            {
-                                "name": "Lession 12b: Monte Carlo Tree Search",
-                                "link": "/files/rl_course/13.pdf",
                                 "description": "Thanks to original source",
                                 "type": "slides"
                             }
