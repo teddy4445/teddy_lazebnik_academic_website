@@ -288,6 +288,12 @@
                                 "type": "slides"
                             },
                             {
+                                "name": "Lession 10: recording",
+                                "link": "https://us02web.zoom.us/rec/share/OZiYYUtPkHycvv7vaJJXEBWjdhHDAlMWz3J6HLKV7bPOZeVhe-qWnnIkVxXO1O_y.MMhUM8TywLqtLR0X",
+                                "description": "",
+                                "type": "video"
+                            },
+                            {
                                 "name": "Lession 11: Mimic learning",
                                 "link": "/files/rl_course/11.pdf",
                                 "description": "Thanks to original source",
