@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Why Bigger Is Not Just More: The Mathematics Connecting Elephants, Heartbeats, and Cities | Teddy Lazebnik</title>
+<meta content="Why does an elephant use less energy per kilogram than a mouse, and why do larger cities need less infrastructure per person? A practical introduction to power laws, Kleiber's law, fractal networks, lifetime heartbeats, and urban scaling." name="description"/>
+<meta content="lazebnik, teddy lazebnik, applied computational mathematics, scaling laws, power laws, Kleiber law, allometry, metabolic scaling, urban scaling" name="keywords"/>
+<meta content="Teddy Lazebnik" name="author"/>
+<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://teddylazebnik.com/blog/blog-post-54.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Teddy Lazebnik" property="og:site_name"/>
+<meta content="Why Bigger Is Not Just More: The Mathematics Connecting Elephants, Heartbeats, and Cities | Teddy Lazebnik" property="og:title"/>
+<meta content="Why does an elephant use less energy per kilogram than a mouse, and why do larger cities need less infrastructure per person? A practical introduction to power laws, Kleiber's law, fractal networks, lifetime heartbeats, and urban scaling." property="og:description"/>
+<meta content="https://teddylazebnik.com/blog/blog-post-54.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet"/>
+<link href="/css/descriptionTrim.css" rel="stylesheet"/>
+<link href="/css/prism.css" rel="stylesheet"/>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']]
+	  }
+	};
+	</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why Bigger Is Not Just More: The Mathematics Connecting Elephants, Heartbeats, and Cities",
+  "description": "Why does an elephant use less energy per kilogram than a mouse, and why do larger cities need less infrastructure per person? A practical introduction to power laws, Kleiber's law, fractal networks, lifetime heartbeats, and urban scaling.",
+  "datePublished": "2026-07-27",
+  "author": {
+    "@type": "Person",
+    "name": "Teddy Lazebnik"
+  },
+  "mainEntityOfPage": "https://teddylazebnik.com/blog/blog-post-54.html",
+  "url": "https://teddylazebnik.com/blog/blog-post-54.html",
+  "image": "https://teddylazebnik.com/blog/images/blog_54.png"
+}</script>
+</link></head>
+<body class="line-numbers">
+<header class="header" id="header">
+<div class="mobile-menu-bg" id="mobile-menu-bg"></div>
+<!-- start of mobile menu-->
+<div class="mobile-menu" id="mobile-menu">
+<div class="personal-coloum">
+<h2 id="lecturer-name-template">Teddy Lazebnik</h2>
+<div class="input-group input-group-mobile">
+<input class="form-control py-2 border-left-0 border" id="search_input" placeholder="Search" type="search"/>
+<span class="input-group-append">
+<button class="btn btn-outline-secondary border-left-0 border search-menu-btn" id="header-search-btn" onclick="searchPage();" type="button">
+<i class="fa fa-search"></i>
+</button>
+</span>
+</div>
+<a class="mobile-menu-link-home" href="/">
+			Home
+		</a>
+<!-- start of menu -->
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/about.html">
+				About 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/publications.html">
+				Publications 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/research.html">
+				Research 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/teaching.html">
+				Courses 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="https://acml.teddylazebnik.com/index.html">
+				Lab 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/blog.html">
+				Blog
+			</a>
+</div>
+</div>
+</div>
+<!-- end of moblie menu-->
+<!-- start of navigation bar-->
+<nav class="navbar navbar-expand-md main-nav">
+<div class="spacer"></div>
+<a class="logo navbar-brand order-first order-md-0 mx-0" href="#" onclick="gotoIndex();">
+<button aria-controls="navigation" aria-label="Menu" class="hamburger hamburger--collapse" onclick="document.getElementById('mobile-menu').style.marginLeft = '0px';document.getElementById('mobile-menu-bg').style.marginLeft = '0px';" type="button">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</button>Teddy Lazebnik</a>
+<!-- start of navigation bar: menus-->
+<div class="collapse navbar-collapse w-100">
+<ul class="nav navbar-nav w-100 nowrap">
+<li class="nav-item menu-main-link active">
+<a class="nav-link collapsible" href="/about.html">About
+				</a>
+</li>
+<li class="nav-item menu-main-link active">
+<a class="nav-link collapsible" href="/publications.html">Publications
+				</a>
+</li>
+<li class="nav-item menu-main-link active">
+<a class="nav-link collapsible" href="/research.html">Research
+				</a>
+</li>
+<li class="nav-item menu-main-link">
+<a class="nav-link collapsible" href="/teaching.html">Courses 
+				</a>
+</li>
+<li class="nav-item menu-main-link">
+<a class="nav-link collapsible" href="https://acml.teddylazebnik.com/index.html">Lab 
+				</a>
+</li>
+<li class="nav-item menu-main-link">
+<a class="nav-link collapsible" href="/blog.html">Blog
+				</a>
+</li>
+</ul>
+</div>
+<!-- end of navigation bar: menus-->
+<!-- start of navigation bar: about and search-->
+<div class="collapse navbar-collapse w-100">
+<ul class="nav navbar-nav ml-auto nowrap">
+<li class="nav-item">
+<div class="input-group">
+<input class="form-control py-2 border-left-0 border" id="search_input_mobile" placeholder="Search" type="search"/>
+<span class="input-group-append">
+<button class="btn btn-outline-secondary border-left-0 border search-menu-btn" id="header-search-btn" onclick="searchPage();" type="button">
+<i class="fa fa-search"></i>
+</button>
+</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- end of navigation bar: about and search-->
+<div class="spacer"></div>
+</nav>
+<!-- end of navigation bar-->
+</header>
+<main class="content" id="main_section">
+<div class="blog-post-title-background">
+<div class="blog-post-title-container">
+<div class="blog-post-title-section">
+<div class="blog-post-title" id="title">
+<h1>Why Bigger Is Not Just More: The Mathematics Connecting Elephants, Heartbeats, and Cities</h1>
+<div class="meta-blog-post-title">27/7/2026 &#9679; 8 minutes to read</div>
+</div>
+</div>
+</div>
+</div>
+<div class="academic-papers-container" style="margin-top: 0px;">
+<div class="academic-papers-header-section">
+<div class="blog-post" id="content">
+<p>What is the correct dose of a drug for an elephant? The instinctive answer is surprisingly dangerous: take the dose used for a smaller animal and multiply it by the difference in body mass. A thousand-times-heavier animal receives a thousand-times-larger dose. The logic feels natural, and the conclusion can be catastrophically wrong.</p>
+<p>In 1962, researchers administered 297 milligrams of LSD to Tusko, a male Asian elephant. Within minutes, he collapsed and entered severe seizures; he later died after emergency treatment. The medical story is complicated, but the experiment remains a brutal reminder of a broader mathematical fact: <b>large systems are not simply small systems multiplied by a constant</b>.</p>
+<p style="text-align: center;">
+<img alt="Storyboard explaining biological and urban scaling laws" src="/blog/images/blog_54.png" style="min-width: 300px; text-align: center;" width="100%"/>
+</p>
+<h2>The Comfortable Mistake of Linear Thinking</h2>
+<p>We usually begin with proportional reasoning: twice as many machines should produce twice as much work. In mathematical terms, we assume that an output $Y$ grows directly with size $M$:</p>
+<p style="text-align: center;">$Y \propto M$</p>
+<p>This is linear scaling: an exponent of one. Yet biology is shaped by surface area, volume, transport distance, branching networks, and resource exchange. Each mechanism changes at a different rate as an organism grows.</p>
+<p>If an animal becomes ten times longer while keeping roughly the same shape, its surface area grows by $10^2=100$, but its mass grows by $10^3=1000$. The larger animal has less surface area per kilogram. A mouse therefore loses heat rapidly, while an elephant must remove heat from a huge body.</p>
+<h2>Power Laws: The Mathematics Behind “Not Proportional”</h2>
+<p>The natural language of scaling is the power law:</p>
+<p style="text-align: center;">$Y = cM^{\alpha}$</p>
+<p>Here, $c$ is a constant and $\alpha$ is the scaling exponent. When $\alpha=1$, size and output grow proportionally. When $\alpha&lt;1$, the relationship is <b>sublinear</b>: the output grows, but more slowly than size. When $\alpha&gt;1$, it is <b>superlinear</b>: the output grows faster than size.</p>
+<p>On a log-log plot, a power law becomes a straight line whose slope is $\alpha$. Measurements from many species can therefore reveal a common rule hidden by the raw numbers.</p>
+<h2>Kleiber’s Law and the Efficiency of Being Big</h2>
+<p>In 1932, Max Kleiber compared body mass with metabolic rate and found that metabolism appeared to scale approximately as mass raised to the three-quarter power:</p>
+<p style="text-align: center;">$B \propto M^{3/4}$</p>
+<p>This result, now called <a href="https://doi.org/10.3733/hilg.v06n11p315">Kleiber’s law</a>, says that a larger animal consumes more energy overall, but less per unit of mass. A 1,000-fold increase in mass predicts only $1000^{3/4}\approx178$ times the metabolic rate, rather than 1,000 times.</p>
+<p>Divide metabolism by mass and the efficiency becomes visible:</p>
+<p style="text-align: center;">$\frac{B}{M} \propto M^{-1/4}$</p>
+<p>As body size increases, metabolic demand per kilogram decreases. In a useful but slightly simplified sense, every gram of elephant is cheaper to operate than every gram of mouse. This is the biological economy of scale.</p>
+<h2>The Network Hidden Inside the Body</h2>
+<p>Geometry alone predicts an exponent of $2/3$, because surface area grows as length squared while volume grows as length cubed. So where might the famous $3/4$ come from?</p>
+<p>In 1997, Geoffrey West, James Brown, and Brian Enquist proposed an influential explanation based on the body’s transport networks. Blood vessels, airways, and plant vascular systems must fill space, reach every active unit, and move resources without wasting too much energy. Their model assumes a branching, approximately self-similar network whose terminal units, such as capillaries, remain similar in size across organisms. From these assumptions, the quarter-power family of scaling laws emerges.</p>
+<p>The intuition resembles a delivery network. Instead of building a separate route from the warehouse to every house, traffic shares main roads and branches near its destination. Arteries, smaller vessels, and capillaries form the body’s equivalent distribution architecture.</p>
+<h2>Why a Mouse and an Elephant “Spend” Similar Heartbeats</h2>
+<p>Once metabolism scales sublinearly, several other patterns become easier to understand. Mammalian heart rate is often approximated as scaling with $M^{-1/4}$, while lifespan scales approximately with $M^{1/4}$. Small mammals have rapid heartbeats and short lives; large mammals run more slowly and tend to live longer.</p>
+<p>Multiply heart rate by lifespan and the mass terms cancel:</p>
+<p style="text-align: center;">$M^{-1/4}\times M^{1/4}=M^0=1$</p>
+<p>This produces the memorable observation that many mammals experience roughly the same <i>order of magnitude</i> of lifetime heartbeats—often close to one billion. It is not a biological stopwatch and there are important exceptions, but it captures something profound: animals can spend their biological budget quickly or slowly.</p>
+<h2>Humans Changed the Biological Contract</h2>
+<p>Humans are a striking exception. Our resting heart rate is not extraordinarily slow for our size, yet modern people routinely live for many decades. Sanitation, vaccination, antibiotics, safer childbirth, and public-health infrastructure removed many causes of early death. Rather than rewriting every cell, we changed the environment surrounding the organism.</p>
+<p>A scaling rule may suggest a biological trajectory, but social systems can move the outcome far from that baseline. Scaling laws describe constraints and averages—not destiny.</p>
+<h2>Cities: Organisms Made of People?</h2>
+<p>And here is where the story becomes even more interesting. Similar power laws appear in cities. Research by Luís Bettencourt, Geoffrey West, and colleagues found that urban infrastructure—such as roads, electrical cables, and fuel stations—often scales sublinearly with population. A city twice as large does not require twice as much infrastructure. With an exponent around $0.85$, doubling population requires roughly $2^{0.85}\approx1.8$ times the infrastructure.</p>
+<p>However, socioeconomic activity often scales in the opposite direction. Wages, GDP, patents, and some measures of innovation have been reported to scale superlinearly, with exponents around $1.15$. Doubling population can then produce approximately $2^{1.15}\approx2.2$ times the output. Density allows infrastructure and knowledge to be shared while increasing possible human interactions.</p>
+<p>Superlinear scaling is morally neutral. Crime and contagious disease can also increase faster than population. Cities amplify creativity and harmful interactions through the same network effect: scale multiplies activity without choosing its value.</p>
+<h2>The Important Scientific Caveat</h2>
+<p>The quarter-power story is elegant, but the exact metabolic exponent remains debated. Some datasets are closer to $2/3$, others to $3/4$, and the value may depend on species, size range, temperature, activity, and measurement method. The West-Brown-Enquist model is influential, not final.</p>
+<p>This uncertainty does not destroy the central lesson. Researchers broadly agree that metabolism is usually sublinear, even if nature does not use one exponent everywhere. Urban scaling is likewise an average pattern, not a promise about every city.</p>
+<h2>The Real Lesson: Always Ask How It Scales</h2>
+<p>The elephant, mouse, human heart, and modern city point toward one practical rule: before multiplying a solution by size, identify the mechanism that changes. Is the system limited by area, volume, transport, heat, communication, or interaction density? Each answer produces a different exponent—and a different future.</p>
+<p>Linear thinking is attractive because it is simple. Scaling thinking is powerful because it is closer to reality. Sometimes becoming larger creates efficiency. Sometimes it creates acceleration. Sometimes it creates a new failure mode that did not exist at the smaller scale.</p>
+<p><b>Size does not merely change how much of a system we have. It can change the rules by which the system operates.</b></p>
+<h2>References</h2>
+<p>
+West, L. J., Pierce, C. M., &amp; Thomas, W. D. (1962). <a href="https://doi.org/10.1126/science.138.3545.1100">Lysergic Acid Diethylamide: Its Effects on a Male Asiatic Elephant</a>. <i>Science</i>, 138(3545), 1100–1103.<br/><br/>
+Kleiber, M. (1932). <a href="https://doi.org/10.3733/hilg.v06n11p315">Body Size and Metabolism</a>. <i>Hilgardia</i>, 6(11), 315–353.<br/><br/>
+West, G. B., Brown, J. H., &amp; Enquist, B. J. (1997). <a href="https://doi.org/10.1126/science.276.5309.122">A General Model for the Origin of Allometric Scaling Laws in Biology</a>. <i>Science</i>, 276(5309), 122–126.<br/><br/>
+Bettencourt, L. M. A., Lobo, J., Helbing, D., Kühnert, C., &amp; West, G. B. (2007). <a href="https://doi.org/10.1073/pnas.0610172104">Growth, Innovation, Scaling, and the Pace of Life in Cities</a>. <i>Proceedings of the National Academy of Sciences</i>, 104(17), 7301–7306.<br/><br/>
+Glazier, D. S. (2023). <a href="https://doi.org/10.1152/physiol.00015.2023">How and Why Does Metabolism Scale with Body Mass?</a> <i>Physiology</i>.
+</p>
+</div>
+</div>
+</div>
+<div class="blog-post-next-blogs-background" id="next_read_all">
+<div class="blog-post-title-container">
+<div class="blog-post-next-blogs-section">
+<div class="continue_reading" id="next_blogs_title">
+<h3>Continue Reading</h3>
+</div>
+</div>
+<div class="blog-post-next-blogs-section next-blog-card-wrapper" id="next_papers">
+<div class="academic-papers-panel next-blog-card-size">
+<div class="personal-col w-100 next-post-box-title">
+<h3>Sustainable Urban Planning: Using Data to Create Greener Cities</h3>
+<div class="meta-blog-next-post-time-element meta-blog-post-title">23/8/2023 ● 5 minutes to read</div>
+<h5>How data science can help cities grow while improving resilience, transport, water use, and environmental sustainability.</h5>
+<div class="w-100 flex-end align-items-center mobile-row-spacer">
+<a class="download-btn" href="/blog/blog-post-31.html">Read More</a>
+</div>
+</div>
+</div>
+<div class="academic-papers-panel next-blog-card-size">
+<div class="personal-col w-100 next-post-box-title">
+<h3>We are Ready to Unleash the Power of Data Science and Mathematics in Medicine</h3>
+<div class="meta-blog-next-post-time-element meta-blog-post-title">11/4/2023 ● 5 minutes to read</div>
+<h5>A look at how mathematical models, predictive analytics, and artificial intelligence can improve medicine and healthcare operations.</h5>
+<div class="w-100 flex-end align-items-center mobile-row-spacer">
+<a class="download-btn" href="/blog/blog-post-30.html">Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer" id="footer">
+<!-- Footer legal -->
+<div class="footer-container">
+<div class="footer-section">
+<div class="personal-row-col-footer">
+<div class="footer-menu w-100" style="align-content: space-evenly;">
+<h1 id="lecturer-name-id">
+					Teddy Lazebnik
+				</h1>
+<h2 id="position">
+					Algorithms Developer &amp; Researcher
+				</h2>
+<p class="footer-description">
+					I am an entrepreneur and data scientist, with 10+ years of large-scale AI development experience (research &amp; production), in Finances, Medical, and Retail verticals.
+				</p>
+<div class="personal-row footer-details-icons">
+<img src="/img/footer/email.png" title="email">
+<p id="email-address">lazebnik.teddy (at) gmail.com</p>
+</img></div>
+<div class="personal-row footer-details-icons">
+<img src="/img/footer/phone.png" title="phone"/>
+<p id="phone-number">0545524589</p>
+</div>
+<div class="personal-row">
+<p>Find me on:</p><br/>
+</div>
+<div class="personal-row footer-social">
+<a class="footer-social-icons footer-find-me-mail-and-phone" href="mailto:lazebnik.teddy@gmail.com" id="footer-email" title="email">
+<img src="/img/footer/email.png" title="email"/>
+</a>
+<a class="footer-social-icons footer-find-me-mail-and-phone" href="tel:+972545524589" id="footer-phone" title="phone">
+<img src="/img/footer/phone.png" title="phone"/>
+</a>
+<a class="footer-social-icons" href="https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&amp;hl=en" id="footer-google" title="google profile">
+<img src="/img/footer/google.png" title="google profile"/>
+</a>
+<a class="footer-social-icons" href="https://www.linkedin.com/in/teddy-lazebnik/" id="footer-github" title="github profile">
+<img src="/img/footer/linkedin.png" title="linkedin profile"/>
+</a>
+<!--
+					<a href="https://bitbucket.org/teddy_lazebnik/" class="footer-social-icons" title="bitbucket profile" id="footer-bitbucket">
+						<img title="bitbucket profile" src="/img/footer/bitbucket.png" />
+					</a>
+					-->
+<a class="footer-social-icons" href="https://github.com/teddy4445" id="footer-bitbucket" title="github profile">
+<img src="/img/footer/github.png" title="github profile"/>
+</a>
+</div>
+</div>
+<div class="personal-coloum w-100" id="footer-menu-row" style="align-content: space-evenly;">
+<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+<div class="footer-menu w-100">
+<a class="footer-menu-title" href="/about.html">
+							About
+						</a>
+<a class="footer-menu-item" href="/about.html?section=Biography">
+							Biography
+						</a>
+<a class="footer-menu-item" href="/about.html?section=Personal-projects">
+							Personal Projects
+						</a>
+<a class="footer-menu-item" href="/about.html?section=Recommended-resources">
+							Recommended resources
+						</a>
+</div>
+<div class="footer-menu w-100">
+<a class="footer-menu-title" href="/research.html">
+							Research
+						</a>
+<a class="footer-menu-item" href="/research.html?section=Ongoing-Projects">
+							 Ongoing projects
+						</a>
+<a class="footer-menu-item" href="/research.html?section=Previous-Projects">
+							 Previous projects
+						</a>
+<a class="footer-menu-item" href="/research.html?section=Work-with-me">
+							Work with me
+						</a>
+</div>
+</div>
+<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+<div class="footer-menu w-100">
+<a class="footer-menu-title" href="/publications.html">
+							Publication
+						</a>
+<a class="footer-menu-item" href="/files/sir_review.pdf">
+							Computational Applications of Extended SIR Models: A Review Focused on Airborne Pandemics
+						</a>
+<a class="footer-menu-item" href="/files/autoencoder.pdf">
+							Knowledge-integrated autoencoder model
+						</a>
+</div>
+<div class="footer-menu w-100">
+<a class="footer-menu-title" href="/teaching.html">
+							Courses
+						</a>
+<a class="footer-menu-item" href="/course-page.html?course_id=12321">
+							Introduction to Reinforcement Leanring
+						</a>
+<a class="footer-menu-item" href="/course-page.html?course_id=----">
+							Mathematical aspects and applications of modern cyber
+						</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-section">
+<div class="personal-row center brand-footer">
+<a href="#" title="An academic website generator">Powered by <img src="/img/logo.png" title="An academic website generator"/></a>
+</div>
+<div class="year-logo">
+<span>© 2026 </span>
+<a href="#">Privacy - Terms</a>
+</div>
+</div>
+<div class="alert" id="alert-panel-1">
+<span class="closebtn" id="alert-close-btn" onclick="this.parentElement.style.opacity=0;"></span>
+<div id="cite-alert">
+</div>
+</div>
+<div class="alert" id="alert-panel-2">
+<span class="closebtn" id="search-close-btn" onclick="this.parentElement.style.opacity=0;"></span>
+<div id="search-alert">
+</div>
+</div>
+</footer>
+<script src="/js/search.js"></script>
+<script src="/js/prism.js"></script>
+<script>
+function gotoIndex() {
+  var width = Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+  if (width > 850) {
+    window.location.replace("/");
+  }
+}
+
+(function () {
+  var background = document.getElementById("mobile-menu-bg");
+  var menu = document.getElementById("mobile-menu");
+
+  if (background && menu) {
+    background.onclick = function () {
+      menu.style.marginLeft = "-320px";
+      background.style.marginLeft = "100%";
+    };
+
+    menu.onclick = function (event) {
+      event.stopPropagation();
+    };
+  }
+})();
+</script>
+</body>
+</html>
