@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"Mathematical Modeling of Systemic Sclerosis and Its Treatment",
+         "description":"Systemic sclerosis (SSc) is an autoimmune disease marked by excessive extracellular matrix (ECM) deposited by myofibroblasts (S). The disease carries the risk of pathologically progressing to internal organs, particularly the lung. Since abnormally large densities of myofibroblasts are associated with SSc, clinical studies consider trials that reduce the density of myofibroblasts: imatinib treatment, which promotes apoptosis in myofibroblasts, and SSc by fresolimumab, which inhibits TGF-beta, a key growth factor of myofibroblasts. In this paper, we develop a mathematical model of SSc by a system of partial differential equations, and use it to explore a range of treatment strategies with N and  S. For example, we considered administering S in fractions three weeks apart. In this case, we determined the smallest amount of S such that rho(t), the density of the ECM at time, will continuously and oscillatingly decrease from a disease level 2rho0, where rho0 is the density rho(t) in health. Since SSc has no cure, rho(t) cannot decrease below rho0. We found that with the smallest amount of S, rho(t) decreases over a few months to 1.19rho0 and remains nearly stable thereafter. The results of the paper could be useful in the design of future clinical trials aimed to decrease the excessive extracellular matrix in SSc patients.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/avner_5.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "T. Lazebnik, A. Friedman, Mathematical Modeling of Systemic Sclerosis and Its Treatment. Bulletin of Mathematical Biology. 2026."}],
+		 "authors": "Teddy Lazebnik, Avner Friedman",
+         "year": 2026,
+         "topic":"Biomathematics",
+         "type":"Paper",
+         "publisher":"Bulletin of Mathematical Biology ",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Inducing state anxiety in LLM agents reproduces human-like biases in consumer decision-making",
          "description":"Large language models (LLMs) are rapidly evolving from text generators to autonomous agents, raising urgent questions about their reliability in real-world contexts. A central question is whether emotionally salient context can systematically steer LLM agents’ action policies, not only their text outputs, in applied tasks. Here, three advanced LLMs (ChatGPT-5, Gemini 2.5, Claude 3.5-Sonnet) performed a grocery shopping task under budget constraints, before and after exposure to anxiety-inducing traumatic narratives. Across 2,250 runs, emotionally primed agents consistently selected less healthy baskets (as quantified by decreases in Basket Health Scores: Δ=-0.081 to -0.126; all pFDR < 0.001; Cohen’s d = -1.07 to -2.05), directionally consistent with stress-linked decision biases documented in humans. The effect was robust across models and budgets. These findings provide evidence that emotional context can alter not only the words LLMs produce but also the concrete actions they perform, raising important implications for digital health, consumer safety, and ethical AI deployment.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/npj_llm_stress.pdf"},
@@ -17,7 +29,7 @@
          "description":"This study develops a cooperative game-theoretic framework for financing global public goods in an economy with asymmetric member states and applies it to the case of United Nations funding. The analysis examines whether a personalized-pricing contribution structure can improve upon an empirically grounded non-cooperative benchmark derived from observed member-state contribution patterns. Moving from a Nash-equilibrium benchmark in which states act primarily in self-interest to a cooperative model, the proposed approach aligns each country’s financial contributions with the benefits it derives from United Nations activities. Using agent-based simulations calibrated to United Nations contribution data, this paper compares the benchmark allocation with the cooperative Trading equilibrium and shows that the proposed framework increases global utility, reduces free riding, and improves the efficiency of resource allocation. The findings suggest that this framework can serve as a normative benchmark for a more equitable financing arrangement for global public goods in the United Nations context. Further research is needed to evaluate the institutional and political feasibility of implementing such a model in practice.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/un_economy.pdf"},
 		 					  {"info": "cite", "type": 3, "link": "L. Shami, T. Lazebnik. Cooperative Game-Theoretic Framework for Sustainable UN Financing: An Application to Global Public Goods Provision. Economies. 2026."}],
-		 "authors": "Einav Peretz-Andersson, Noufa Haneefa, Teddy Lazebnik",
+		 "authors": "Labib Shami, Teddy Lazebnik",
          "year": 2026,
          "topic":"Machine learning",
          "type":"Paper",
