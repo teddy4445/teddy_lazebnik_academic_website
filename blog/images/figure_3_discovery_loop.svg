@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Human AI Verifier Discovery Loop</title><desc id="desc">A five-stage loop: humans ask, AI explores, proofs are formalized in Lean, the kernel verifies, and results are reused through Mathlib.</desc>
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#1E5AA8"/></marker>
+  <marker id="arrowTeal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0C8B8F"/></marker>
+  <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2A9D67"/></marker>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B2E59" flood-opacity="0.12"/></filter>
+</defs>
+<rect width="1600" height="900" fill="#F7F9FC"/>
+<text x="800" y="86" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" fill="#0B2E59" text-anchor="middle">A Human–AI–Verifier Discovery Loop</text>
+<text x="800" y="132" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400" fill="#657586" text-anchor="middle">Creativity stays human; exhaustive search and checking become computational</text>
+<circle cx="800" cy="490" r="125" fill="#FFFFFF" stroke="#DDE5EE" stroke-width="5" filter="url(#shadow)"/>
+<text x="800" y="465" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#0B2E59" text-anchor="middle">NEW</text>
+<text x="800" y="510" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#0B2E59" text-anchor="middle">MATHEMATICAL</text>
+<text x="800" y="553" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#0C8B8F" text-anchor="middle">KNOWLEDGE</text>
+<g filter="url(#shadow)"><circle cx="800" cy="215" r="112" fill="#FFFFFF" stroke="#1E5AA8" stroke-width="5"/></g>
+<circle cx="800" cy="175" r="30" fill="#1E5AA8"/>
+<text x="800" y="185" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="800" y="233" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#0B2E59" text-anchor="middle">QUESTION</text>
+<text x="800" y="268" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#657586" text-anchor="middle">human intuition</text>
+<g filter="url(#shadow)"><circle cx="1215" cy="370" r="112" fill="#FFFFFF" stroke="#D79B2B" stroke-width="5"/></g>
+<circle cx="1215" cy="330" r="30" fill="#D79B2B"/>
+<text x="1215" y="340" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="1215" y="388" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#0B2E59" text-anchor="middle">EXPLORE</text>
+<text x="1215" y="423" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#657586" text-anchor="middle">AI search</text>
+<g filter="url(#shadow)"><circle cx="1150" cy="690" r="112" fill="#FFFFFF" stroke="#0C8B8F" stroke-width="5"/></g>
+<circle cx="1150" cy="650" r="30" fill="#0C8B8F"/>
+<text x="1150" y="660" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="1150" y="708" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#0B2E59" text-anchor="middle">FORMALIZE</text>
+<text x="1150" y="743" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#657586" text-anchor="middle">Lean proof</text>
+<g filter="url(#shadow)"><circle cx="450" cy="690" r="112" fill="#FFFFFF" stroke="#2A9D67" stroke-width="5"/></g>
+<circle cx="450" cy="650" r="30" fill="#2A9D67"/>
+<text x="450" y="660" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="450" y="708" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#0B2E59" text-anchor="middle">VERIFY</text>
+<text x="450" y="743" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#657586" text-anchor="middle">kernel check</text>
+<g filter="url(#shadow)"><circle cx="385" cy="370" r="112" fill="#FFFFFF" stroke="#0B2E59" stroke-width="5"/></g>
+<circle cx="385" cy="330" r="30" fill="#0B2E59"/>
+<text x="385" y="340" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="385" y="388" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#0B2E59" text-anchor="middle">REUSE</text>
+<text x="385" y="423" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#657586" text-anchor="middle">Mathlib library</text>
+<path d="M 894 250 C 1010 260, 1090 290, 1135 315" fill="none" stroke="#1E5AA8" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 1260 470 C 1265 550, 1220 610, 1188 640" fill="none" stroke="#1E5AA8" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 1048 736 C 930 790, 690 790, 552 736" fill="none" stroke="#1E5AA8" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 412 618 C 345 560, 325 470, 343 430" fill="none" stroke="#1E5AA8" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 470 300 C 570 235, 680 214, 688 214" fill="none" stroke="#1E5AA8" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="800.0" y1="330.0" x2="800.0" y2="365.0" stroke="#DDE5EE" stroke-width="4" stroke-dasharray="10 12"/>
+<line x1="1104.525758943365" y1="401.9443588597499" x2="920.0806968006902" y2="455.2778708046197" stroke="#DDE5EE" stroke-width="4" stroke-dasharray="10 12"/>
+<line x1="1050.1520386556872" y1="632.9440220889641" x2="908.5303927655574" y2="552.0173672946042" stroke="#DDE5EE" stroke-width="4" stroke-dasharray="10 12"/>
+<line x1="549.8479613443128" y1="632.9440220889641" x2="691.4696072344426" y2="552.0173672946042" stroke="#DDE5EE" stroke-width="4" stroke-dasharray="10 12"/>
+<line x1="495.4742410566351" y1="401.9443588597499" x2="679.9193031993098" y2="455.2778708046197" stroke="#DDE5EE" stroke-width="4" stroke-dasharray="10 12"/>
+<text x="800" y="856" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="600" fill="#18324B" text-anchor="middle">The output is not just an answer—it becomes reusable, machine-checkable infrastructure.</text>
+</svg>

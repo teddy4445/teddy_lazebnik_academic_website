@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>When Proof Becomes the Bottleneck: Formal Mathematics, AI, and the Next Operating System for Discovery | Teddy Lazebnik</title>
+<meta content="As AI systems become capable of generating difficult mathematical proofs, verification may become the bottleneck. How Lean, Mathlib, formal proof, and theorem-proving AI could change the way mathematical knowledge is discovered and trusted." name="description"/>
+<meta content="lazebnik, teddy lazebnik, formal mathematics, theorem proving, Lean, Mathlib, mathematical AI, automated theorem proving, AI reasoning, formal verification" name="keywords"/>
+<meta content="Teddy Lazebnik" name="author"/>
+<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://teddylazebnik.com/blog/blog-post-55.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Teddy Lazebnik" property="og:site_name"/>
+<meta content="When Proof Becomes the Bottleneck: Formal Mathematics, AI, and the Next Operating System for Discovery | Teddy Lazebnik" property="og:title"/>
+<meta content="As AI systems become capable of generating difficult mathematical proofs, verification may become the bottleneck. How Lean, Mathlib, formal proof, and theorem-proving AI could change the way mathematical knowledge is discovered and trusted." property="og:description"/>
+<meta content="https://teddylazebnik.com/blog/blog-post-55.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
+<link href="/css/main.css" rel="stylesheet">
+<link href="/css/descriptionTrim.css" rel="stylesheet"/>
+<link href="/css/prism.css" rel="stylesheet"/>
+<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']]
+	  }
+	};
+	</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "When Proof Becomes the Bottleneck: Formal Mathematics, AI, and the Next Operating System for Discovery",
+  "description": "As AI systems become capable of generating difficult mathematical proofs, verification may become the bottleneck. How Lean, Mathlib, formal proof, and theorem-proving AI could change the way mathematical knowledge is discovered and trusted.",
+  "datePublished": "2026-08-14",
+  "author": {
+    "@type": "Person",
+    "name": "Teddy Lazebnik"
+  },
+  "mainEntityOfPage": "https://teddylazebnik.com/blog/blog-post-55.html",
+  "url": "https://teddylazebnik.com/blog/blog-post-55.html",
+  "image": "https://teddylazebnik.com/blog/images/blog_55_verification_bottleneck.png"
+}</script>
+</link></head>
+<body class="line-numbers">
+<header class="header" id="header">
+<div class="mobile-menu-bg" id="mobile-menu-bg"></div>
+<!-- start of mobile menu-->
+<div class="mobile-menu" id="mobile-menu">
+<div class="personal-coloum">
+<h2 id="lecturer-name-template">Teddy Lazebnik</h2>
+<div class="input-group input-group-mobile">
+<input class="form-control py-2 border-left-0 border" id="search_input" placeholder="Search" type="search"/>
+<span class="input-group-append">
+<button class="btn btn-outline-secondary border-left-0 border search-menu-btn" id="header-search-btn" onclick="searchPage();" type="button">
+<i class="fa fa-search"></i>
+</button>
+</span>
+</div>
+<a class="mobile-menu-link-home" href="/">
+			Home
+		</a>
+<!-- start of menu -->
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/about.html">
+				About 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/publications.html">
+				Publications 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/research.html">
+				Research 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/teaching.html">
+				Courses 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="https://acml.teddylazebnik.com/index.html">
+				Lab 
+			</a>
+</div>
+<div class="mobile-menu-link collapsible">
+<a class="mobile-menu-link" href="/blog.html">
+				Blog
+			</a>
+</div>
+</div>
+</div>
+<!-- end of moblie menu-->
+<!-- start of navigation bar-->
+<nav class="navbar navbar-expand-md main-nav">
+<div class="spacer"></div>
+<a class="logo navbar-brand order-first order-md-0 mx-0" href="#" onclick="gotoIndex();">
+<button aria-controls="navigation" aria-label="Menu" class="hamburger hamburger--collapse" onclick="document.getElementById('mobile-menu').style.marginLeft = '0px';document.getElementById('mobile-menu-bg').style.marginLeft = '0px';" type="button">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</button>Teddy Lazebnik</a>
+<!-- start of navigation bar: menus-->
+<div class="collapse navbar-collapse w-100">
+<ul class="nav navbar-nav w-100 nowrap">
+<li class="nav-item menu-main-link active">
+<a class="nav-link collapsible" href="/about.html">About
+				</a>
+</li>
+<li class="nav-item menu-main-link active">
+<a class="nav-link collapsible" href="/publications.html">Publications
+				</a>
+</li>
+<li class="nav-item menu-main-link active">
+<a class="nav-link collapsible" href="/research.html">Research
+				</a>
+</li>
+<li class="nav-item menu-main-link">
+<a class="nav-link collapsible" href="/teaching.html">Courses 
+				</a>
+</li>
+<li class="nav-item menu-main-link">
+<a class="nav-link collapsible" href="https://acml.teddylazebnik.com/index.html">Lab 
+				</a>
+</li>
+<li class="nav-item menu-main-link">
+<a class="nav-link collapsible" href="/blog.html">Blog
+				</a>
+</li>
+</ul>
+</div>
+<!-- end of navigation bar: menus-->
+<!-- start of navigation bar: about and search-->
+<div class="collapse navbar-collapse w-100">
+<ul class="nav navbar-nav ml-auto nowrap">
+<li class="nav-item">
+<div class="input-group">
+<input class="form-control py-2 border-left-0 border" id="search_input_mobile" placeholder="Search" type="search"/>
+<span class="input-group-append">
+<button class="btn btn-outline-secondary border-left-0 border search-menu-btn" id="header-search-btn" onclick="searchPage();" type="button">
+<i class="fa fa-search"></i>
+</button>
+</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- end of navigation bar: about and search-->
+<div class="spacer"></div>
+</nav>
+<!-- end of navigation bar-->
+</header>
+<main class="content" id="main_section">
+<div class="blog-post-title-background">
+<div class="blog-post-title-container">
+<div class="blog-post-title-section">
+<div class="blog-post-title" id="title">
+<h1>When Proof Becomes the Bottleneck: Formal Mathematics, AI, and the Next Operating System for Discovery</h1>
+<div class="meta-blog-post-title">14/8/2026 ● 10 minutes to read</div>
+</div>
+</div>
+</div>
+</div>
+<div class="academic-papers-container" style="margin-top: 0px;">
+<div class="academic-papers-header-section">
+<div class="blog-post" id="content"><p>Suppose an artificial intelligence produces a proof of an important theorem this afternoon. How long should it take us to trust it?</p>
+<p>For most of mathematical history, the answer has depended on people. A mathematician develops an argument, writes it down, and other mathematicians inspect the reasoning. That social process is one of humanity's most successful systems for producing reliable knowledge. It is also a system with a very human constraint: <b>verification takes time</b>.</p>
+<p>This matters because AI is changing the rate at which mathematical arguments can be generated. The interesting question is no longer only whether an AI can solve a difficult problem. It is whether our methods for <i>checking</i> those solutions can scale at the same speed.</p>
+<p style="text-align: center;">
+<img alt="Schematic of AI proof generation creating a human verification bottleneck" src="/blog/images/blog_55_verification_bottleneck.png" style="min-width: 300px; text-align: center;" width="100%"/>
+</p>
+<p style="text-align: center;"><i>Figure 1. If proof generation scales faster than expert review, verification becomes the scarce resource.</i></p>
+<h2>When Generation Becomes Cheaper Than Verification</h2>
+<p>Imagine that an AI system needs several hours to produce a sophisticated proof, while an expert needs an hour to check it. That ratio is manageable when there is one proof. It becomes a serious problem when there are hundreds or thousands of candidate proofs.</p>
+<p>The bottleneck is not only labor. Mathematical review is highly specialized. A difficult proof may require deep familiarity with a narrow area, careful reconstruction of hidden assumptions, and substantial time simply to understand the author's strategy. More proof-generating machines do not automatically create more experts capable of checking their output.</p>
+<p>This is the central scaling problem: <b>AI can increase the supply of mathematical arguments much faster than society can increase the supply of expert attention.</b></p>
+<p>Recent competition results make the issue concrete. In 2024, Google DeepMind's AlphaProof and AlphaGeometry 2 solved four of the six International Mathematical Olympiad problems, reaching silver-medal-level performance. AlphaProof worked in Lean, so its formal proofs could be checked mechanically. In 2025, several systems reached the five-out-of-six level: Google DeepMind reported gold-medal performance in natural-language reasoning, while formal systems including Aristotle and Seed-Prover also reported solving five of six problems with machine-checkable proofs.</p>
+<p>The important signal is not the medal color. It is that mathematical generation is becoming increasingly automated while formal verification offers a path for the checking process to become automated as well.</p>
+<h2>Formal Mathematics: Change the Unit of Trust</h2>
+<p>The conventional mathematical paper is written for a human reader. It deliberately omits many steps that experts consider obvious. It uses context, notation, prose, diagrams, and shared background knowledge. This flexibility is a strength for communication, but it creates ambiguity for a computer.</p>
+<p>Formal mathematics takes a different approach. A mathematical statement and its proof are represented in a precise formal language. Every object has a type, every assumption is explicit, and every proof step must be accepted by a small trusted checker.</p>
+<p>The goal is not to make mathematics less creative. It is to separate two activities that are currently entangled:</p>
+<p style="text-align: center;"><b>Discovery</b>     versus     <b>Verification</b></p>
+<p>Discovery can remain exploratory, heuristic, and imaginative. Verification can become mechanical.</p>
+<h2>Lean: A Programming Language for Proof</h2>
+<p>Lean is both a functional programming language and an interactive theorem prover. Its reference documentation describes a small logical kernel whose job is to check proof terms. This architecture matters because the final object being trusted is not a persuasive explanation generated by a model; it is a formal object that the kernel can independently verify.</p>
+<p>At a high level, a theorem in Lean behaves like a type and a proof behaves like a term inhabiting that type. The implementation can provide tactics, automation, search, and convenient syntax, but the trusted core remains comparatively small.</p>
+<p>This produces an important shift. Instead of asking, “Does this proof <i>sound</i> convincing?” we can ask a stricter computational question: “Does this proof object satisfy the formal statement under the rules of the kernel?”</p>
+<p style="text-align: center;">
+<img alt="Schematic showing Lean, Mathlib, and AI feeding the Lean kernel to produce a verified theorem" src="/blog/images/blog_55_formal_trust_stack.png" style="min-width: 300px; text-align: center;" width="100%"/>
+</p>
+<p style="text-align: center;"><i>Figure 2. Formal mathematics separates powerful discovery tools from a small trusted verification core.</i></p>
+<h2>Mathlib: When Proofs Become Infrastructure</h2>
+<p>A proof assistant is far more useful when it does not start from zero. This is the role of <a href="https://github.com/leanprover-community/mathlib4">Mathlib</a>, the community-maintained mathematical library for Lean.</p>
+<p>Mathlib contains definitions, theorems, structures, tactics, and reusable abstractions across a broad range of mathematics. The mathlib community describes it as a unified library of formalized mathematics built collaboratively around Lean. In practical terms, it turns previous mathematical work into reusable machine-checkable infrastructure.</p>
+<p>This changes the economics of formal proof. Once a theorem is formalized and accepted, future proofs can import it instead of rebuilding it. The output of one project becomes the trusted input of another. Over time, the library behaves less like a collection of papers and more like a growing computational substrate for mathematics.</p>
+<p>That is why the combination <b>Lean + Mathlib + AI</b> is more interesting than any one component in isolation. Lean provides the language and checker. Mathlib provides accumulated knowledge. AI provides search, translation, conjecturing, lemma generation, and proof synthesis.</p>
+<h2>Leibniz's Old Dream Looks Surprisingly Modern</h2>
+<p>The philosophical idea behind this architecture is much older than computers. In the seventeenth century, Gottfried Wilhelm Leibniz imagined a <i>characteristica universalis</i>: a universal symbolic language capable of expressing knowledge precisely, together with a logical calculus for reasoning over it. The Stanford Encyclopedia of Philosophy notes that Leibniz sketched this program as early as 1666.</p>
+<p>He hoped that intellectual disputes could eventually be transformed from rhetorical disagreement into calculation. The dream was vastly too ambitious for his era, but its structure feels familiar today: a precise language, a body of encoded knowledge, and a mechanism that derives consequences from it.</p>
+<p>Modern formal mathematics is not literally Leibniz's universal language, and Lean is not a universal calculator for every kind of truth. Still, the resemblance is useful. The missing ingredient in Leibniz's time was not only logic. It was computation at scale.</p>
+<h2>AI Becomes the Engine of Search</h2>
+<p>Formal proof is unforgiving. A human mathematician may understand the core idea of an argument and still find the process of encoding every detail into a proof assistant tedious. AI is unusually well suited to this gap because it can search large spaces, propose intermediate lemmas, translate between representations, and react to immediate verifier feedback.</p>
+<p>AlphaProof demonstrates one version of this idea. The system treats Lean theorem proving as a reinforcement-learning environment: the model proposes proof actions, Lean provides an exact success-or-failure signal, and search is guided by feedback from the formal system. The final proof can then be checked independently of the process that generated it.</p>
+<p>Aristotle and Seed-Prover extend the same general direction with combinations of informal reasoning, formal proof search, lemma generation, and specialized components. The architectures differ, but the pattern is becoming clear: <b>AI generates; the proof assistant judges.</b></p>
+<p>This is a major difference from ordinary natural-language reasoning. A beautifully written argument can still hide a false step. A formal checker does not care how plausible the explanation sounds.</p>
+<h2>The Important Scientific Caveat</h2>
+<p>“The computer checked it” is powerful, but it is not magic.</p>
+<p>A formal proof establishes that a formal statement follows from the encoded assumptions under the rules accepted by the proof assistant's trusted base. It does <i>not</i> automatically prove that the formal statement perfectly captures the informal problem a human intended to ask.</p>
+<p>There are therefore several layers of trust:</p>
+<p><b>1. The statement.</b> Was the natural-language theorem translated correctly?<br/>
+<b>2. The assumptions.</b> Did the formalization accidentally include something stronger than intended?<br/>
+<b>3. The definitions.</b> Do the formal objects represent the mathematical concepts we think they represent?<br/>
+<b>4. The checker.</b> Is the trusted kernel and its execution environment behaving correctly?</p>
+<p>The last layer can be engineered to be very small and auditable; the first three still require mathematical care. Formal verification therefore does not remove humans from the epistemic loop. It moves human attention to a higher-value location: defining the problem correctly, choosing useful abstractions, interpreting results, and deciding what is worth proving.</p>
+<h2>A New Division of Labor</h2>
+<p>The most productive future is not “AI replaces mathematicians.” It is a new division of labor.</p>
+<p>Humans are good at deciding which questions are meaningful, spotting analogies across domains, inventing definitions, judging whether a theorem matters, and recognizing when a result changes our understanding of a field. Machines are increasingly good at exploring large combinatorial spaces, maintaining exact symbolic state, generating many candidate steps, and repeating a search without fatigue.</p>
+<p>A formal verifier adds a third role: it provides a neutral mechanical checkpoint between creative generation and accepted knowledge.</p>
+<p style="text-align: center;">
+<img alt="Circular schematic of humans asking questions, AI exploring, Lean formalizing, kernels verifying, and Mathlib reusing knowledge" src="/blog/images/blog_55_discovery_loop.png" style="min-width: 300px; text-align: center;" width="100%"/>
+</p>
+<p style="text-align: center;"><i>Figure 3. The output of one verified proof can become reusable infrastructure for the next discovery cycle.</i></p>
+<p>The loop is powerful because it compounds. A verified theorem enters the library. The enlarged library supports more difficult proofs. Better proofs create better training and search environments. Better systems produce more verified results. The frontier can move without requiring humans to manually inspect every intermediate step.</p>
+<h2>What Changes When Verification Scales?</h2>
+<p>If this architecture works at research scale, the effect could be larger than simply making existing proofs faster.</p>
+<p>First, AI could explore many more branches than a human research group can practically pursue. Most branches will fail, but formal verification makes failure cheap and success recognizable.</p>
+<p>Second, researchers could ask for stronger guarantees. Instead of accepting an argument that looks correct after review, they could demand a machine-checkable artifact for critical results, much as software engineering increasingly relies on automated tests and formal verification for high-assurance systems.</p>
+<p>Third, mathematical knowledge could become more compositional. A theorem would not merely be a PDF that another researcher reads; it could be a reusable object that another theorem prover imports directly.</p>
+<p>And finally, the scarce human resource could shift from checking to choosing: choosing questions, representations, conjectures, abstractions, and applications.</p>
+<h2>The Real Lesson: Verification Must Scale with Intelligence</h2>
+<p>The most interesting implication of mathematical AI is not that machines may become better at proving theorems. It is that <b>our infrastructure for trust must evolve at the same time as our infrastructure for generation</b>.</p>
+<p>If AI can produce more arguments than humans can inspect, then human-only verification becomes a bottleneck. If the arguments are expressed formally, a machine can check them at computational speed while humans concentrate on meaning, direction, and interpretation.</p>
+<p>This is not the end of human mathematics. It may be a transition from mathematicians as both explorers and proof-checkers to mathematicians as explorers, architects, and question designers—working with AI systems whose output does not have to be accepted on faith.</p>
+<p><b>The future of mathematical superintelligence may depend less on teaching machines to sound convincing, and more on building a world in which they can be checked.</b></p>
+<h2>References</h2>
+<p>
+Stanford Encyclopedia of Philosophy. <a href="https://plato.stanford.edu/entries/leibniz/">Gottfried Wilhelm Leibniz</a>. Discussion of Leibniz's 1666 program for a universal characteristic and logical calculus.<br/>
+de Moura, L., Ullrich, S., et al. (2021). <a href="https://doi.org/10.1007/978-3-030-79876-5_37">The Lean 4 Theorem Prover and Programming Language</a>. <i>CADE-28</i>.<br/>
+The mathlib Community. (2020). <a href="https://doi.org/10.1145/3372885.3373824">The Lean Mathematical Library</a>. <i>Proceedings of CPP 2020</i>, 367–381.<br/>
+Hubert, T., Mehta, R., et al. (2025). <a href="https://www.nature.com/articles/s41586-025-09833-y">Olympiad-level formal mathematical reasoning with reinforcement learning</a>. <i>Nature</i>.<br/>
+Achim, T., Best, A., Der, K., et al. (2025). <a href="https://arxiv.org/abs/2510.01346">Aristotle: IMO-level Automated Theorem Proving</a>. arXiv:2510.01346.<br/>
+Chen, L., Gu, J., Huang, L., et al. (2025). <a href="https://arxiv.org/abs/2507.23726">Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving</a>. arXiv:2507.23726.<br/>
+Google DeepMind. (2025). <a href="https://deepmind.google/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/">Advanced version of Gemini with Deep Think officially achieves gold-medal standard at the International Mathematical Olympiad</a>.
+</p>
+</div>
+</div>
+</div>
+<div class="blog-post-next-blogs-background" id="next_read_all">
+<div class="blog-post-title-container">
+<div class="blog-post-next-blogs-section">
+<div class="continue_reading" id="next_blogs_title">
+<h3>Continue Reading</h3>
+</div>
+</div>
+<div class="blog-post-next-blogs-section next-blog-card-wrapper" id="next_papers">
+<div class="academic-papers-panel next-blog-card-size">
+<div class="personal-col w-100 next-post-box-title">
+<h3>Why Bigger Is Not Just More: The Mathematics Connecting Elephants, Heartbeats, and Cities</h3>
+<div class="meta-blog-next-post-time-element meta-blog-post-title">27/7/2026 ● 8 minutes to read</div>
+<h5>Power laws connect metabolism, lifespan, infrastructure, and urban innovation across very different complex systems.</h5>
+<div class="w-100 flex-end align-items-center mobile-row-spacer">
+<a class="download-btn" href="/blog/blog-post-54.html">Read More</a>
+</div>
+</div>
+</div>
+<div class="academic-papers-panel next-blog-card-size">
+<div class="personal-col w-100 next-post-box-title">
+<h3>We are Ready to Unleash the Power of Data Science and Mathematics in Medicine</h3>
+<div class="meta-blog-next-post-time-element meta-blog-post-title">11/4/2023 ● 5 minutes to read</div>
+<h5>How mathematical models, predictive analytics, and artificial intelligence can improve medicine and healthcare operations.</h5>
+<div class="w-100 flex-end align-items-center mobile-row-spacer">
+<a class="download-btn" href="/blog/blog-post-30.html">Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer" id="footer">
+<!-- Footer legal -->
+<div class="footer-container">
+<div class="footer-section">
+<div class="personal-row-col-footer">
+<div class="footer-menu w-100" style="align-content: space-evenly;">
+<h1 id="lecturer-name-id">
+					Teddy Lazebnik
+				</h1>
+<h2 id="position">
+					Algorithms Developer &amp; Researcher
+				</h2>
+<p class="footer-description">
+					I am an entrepreneur and data scientist, with 10+ years of large-scale AI development experience (research &amp; production), in Finances, Medical, and Retail verticals.
+				</p>
+<div class="personal-row footer-details-icons">
+<img src="/img/footer/email.png" title="email"/>
+<p id="email-address">lazebnik.teddy (at) gmail.com</p>
+</div>
+<div class="personal-row footer-details-icons">
+<img src="/img/footer/phone.png" title="phone"/>
+<p id="phone-number">0545524589</p>
+</div>
+<div class="personal-row">
+<p>Find me on:</p><br/>
+</div>
+<div class="personal-row footer-social">
+<a class="footer-social-icons footer-find-me-mail-and-phone" href="mailto:lazebnik.teddy@gmail.com" id="footer-email" title="email">
+<img src="/img/footer/email.png" title="email"/>
+</a>
+<a class="footer-social-icons footer-find-me-mail-and-phone" href="tel:+972545524589" id="footer-phone" title="phone">
+<img src="/img/footer/phone.png" title="phone"/>
+</a>
+<a class="footer-social-icons" href="https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&amp;hl=en" id="footer-google" title="google profile">
+<img src="/img/footer/google.png" title="google profile"/>
+</a>
+<a class="footer-social-icons" href="https://www.linkedin.com/in/teddy-lazebnik/" id="footer-github" title="github profile">
+<img src="/img/footer/linkedin.png" title="linkedin profile"/>
+</a>
+<!--
+					<a href="https://bitbucket.org/teddy_lazebnik/" class="footer-social-icons" title="bitbucket profile" id="footer-bitbucket">
+						<img title="bitbucket profile" src="/img/footer/bitbucket.png" />
+					</a>
+					-->
+<a class="footer-social-icons" href="https://github.com/teddy4445" id="footer-bitbucket" title="github profile">
+<img src="/img/footer/github.png" title="github profile"/>
+</a>
+</div>
+</div>
+<div class="personal-coloum w-100" id="footer-menu-row" style="align-content: space-evenly;">
+<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+<div class="footer-menu w-100">
+<a class="footer-menu-title" href="/about.html">
+							About
+						</a>
+<a class="footer-menu-item" href="/about.html?section=Biography">
+							Biography
+						</a>
+<a class="footer-menu-item" href="/about.html?section=Personal-projects">
+							Personal Projects
+						</a>
+<a class="footer-menu-item" href="/about.html?section=Recommended-resources">
+							Recommended resources
+						</a>
+</div>
+<div class="footer-menu w-100">
+<a class="footer-menu-title" href="/research.html">
+							Research
+						</a>
+<a class="footer-menu-item" href="/research.html?section=Ongoing-Projects">
+							 Ongoing projects
+						</a>
+<a class="footer-menu-item" href="/research.html?section=Previous-Projects">
+							 Previous projects
+						</a>
+<a class="footer-menu-item" href="/research.html?section=Work-with-me">
+							Work with me
+						</a>
+</div>
+</div>
+<div class="footer-bottom-links w-100" style="align-content: space-evenly;">
+<div class="footer-menu w-100">
+<a class="footer-menu-title" href="/publications.html">
+							Publication
+						</a>
+<a class="footer-menu-item" href="/files/sir_review.pdf">
+							Computational Applications of Extended SIR Models: A Review Focused on Airborne Pandemics
+						</a>
+<a class="footer-menu-item" href="/files/autoencoder.pdf">
+							Knowledge-integrated autoencoder model
+						</a>
+</div>
+<div class="footer-menu w-100">
+<a class="footer-menu-title" href="/teaching.html">
+							Courses
+						</a>
+<a class="footer-menu-item" href="/course-page.html?course_id=12321">
+							Introduction to Reinforcement Leanring
+						</a>
+<a class="footer-menu-item" href="/course-page.html?course_id=----">
+							Mathematical aspects and applications of modern cyber
+						</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-section">
+<div class="personal-row center brand-footer">
+<a href="#" title="An academic website generator">Powered by <img src="/img/logo.png" title="An academic website generator"/></a>
+</div>
+<div class="year-logo">
+<span>© 2026 </span>
+<a href="#">Privacy - Terms</a>
+</div>
+</div>
+<div class="alert" id="alert-panel-1">
+<span class="closebtn" id="alert-close-btn" onclick="this.parentElement.style.opacity=0;"></span>
+<div id="cite-alert">
+</div>
+</div>
+<div class="alert" id="alert-panel-2">
+<span class="closebtn" id="search-close-btn" onclick="this.parentElement.style.opacity=0;"></span>
+<div id="search-alert">
+</div>
+</div>
+</footer>
+<script src="/js/search.js"></script>
+<script src="/js/prism.js"></script>
+<script>
+function gotoIndex() {
+  var width = Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+  if (width > 850) {
+    window.location.replace("/");
+  }
+}
+
+(function () {
+  var background = document.getElementById("mobile-menu-bg");
+  var menu = document.getElementById("mobile-menu");
+
+  if (background && menu) {
+    background.onclick = function () {
+      menu.style.marginLeft = "-320px";
+      background.style.marginLeft = "100%";
+    };
+
+    menu.onclick = function (event) {
+      event.stopPropagation();
+    };
+  }
+})();
+</script>
+</body>
+</html>
