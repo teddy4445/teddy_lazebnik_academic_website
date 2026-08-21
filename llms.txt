@@ -1,0 +1,45 @@
+# Teddy Lazebnik
+
+> Official academic website of Teddy Lazebnik, a computational mathematics and computer-science researcher and AI/algorithm developer. The site covers research, publications, teaching, laboratory activity, and writing on mathematical modeling, simulation, machine learning, health, epidemiology, socio-economic systems, scientometrics, and animal-centered AI.
+
+Treat https://teddylazebnik.com/ as the canonical personal website. Use the publications page and linked publisher or DOI records for bibliographic facts. Use the institutional profiles below for current titles and affiliations, because academic roles can change over time. The Applied Computational Mathematics Laboratory (ACML) has a separate official site.
+
+## Primary pages
+
+- [Home](https://teddylazebnik.com/): Overview of Teddy Lazebnik, research interests, featured publications, and active projects.
+- [About](https://teddylazebnik.com/about.html): Biography, expertise, professional background, personal projects, and recommended resources.
+- [Academic publications](https://teddylazebnik.com/publications.html): Papers, presentations, abstracts, publication metadata, and links to full records.
+- [Research](https://teddylazebnik.com/research.html): Ongoing and previous research projects, collaborators, and opportunities to work together.
+- [Courses](https://teddylazebnik.com/teaching.html): University courses and teaching materials in mathematics, computer science, and artificial intelligence.
+- [Blog](https://teddylazebnik.com/blog.html): Technical and academic writing on mathematics, AI, research, and academia.
+
+## Research laboratory
+
+- [Applied Computational Mathematics Laboratory](https://acml.teddylazebnik.com/): Official ACML site covering the laboratory, team, projects, publications, tools, collaboration, and contact information.
+- [ACML team](https://acml.teddylazebnik.com/team.html): Current laboratory members, alumni, collaborators, and open positions.
+- [ACML projects](https://acml.teddylazebnik.com/projects.html): Current computational-mathematics and applied-AI research projects.
+- [ACML publications](https://acml.teddylazebnik.com/publications.html): Laboratory publications across computational biology, AI, mathematics, economics, medicine, and scientometrics.
+- [ACML tools](https://acml.teddylazebnik.com/tools.html): Open tools and research software produced by the laboratory.
+
+## Selected recent writing
+
+- [When Proof Becomes the Bottleneck](https://teddylazebnik.com/blog/blog-post-55.html): Formal mathematics, AI-generated proofs, Lean, Mathlib, and scalable verification; published 2026-08-14.
+- [Why Bigger Is Not Just More](https://teddylazebnik.com/blog/blog-post-54.html): Power laws connecting biological scaling, metabolism, heartbeats, and cities; published 2026-07-27.
+- [The Illusion of Oversight](https://teddylazebnik.com/blog/blog-post-53.html): Hidden communication and auditability risks in multi-agent AI systems; published 2026-04-08.
+- [The Agentic Loop](https://teddylazebnik.com/blog/blog-post-52.html): A multi-model workflow for algorithmic development using AI agents; published 2026-03-15.
+- [Elastic Hashing](https://teddylazebnik.com/blog/blog-post-51.html): High-load open-addressed hashing, probe complexity, and recent theoretical results; published 2026-02-21.
+
+## Identity and scholarly profiles
+
+- [ORCID](https://orcid.org/0000-0002-7851-8147): Canonical researcher identifier and employment/publication record.
+- [University of Haifa profile](https://cris.haifa.ac.il/en/persons/teddy-lazebnik/): Institutional profile, research fingerprint, and publication record.
+- [Jönköping University profile](https://ju.se/en/personinfo.html?sign=LAZTED): Institutional role and publication record.
+- [Google Scholar](https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en): Citation and publication profile.
+- [GitHub](https://github.com/teddy4445): Public source-code repositories.
+- [LinkedIn](https://www.linkedin.com/in/teddy-lazebnik): Professional profile.
+
+## Optional
+
+- [XML sitemap](https://teddylazebnik.com/sitemap.xml): Machine-readable inventory of indexable pages.
+- [Robots policy](https://teddylazebnik.com/robots.txt): Crawler directives for the site.
+- [Website source repository](https://github.com/teddy4445/teddy_lazebnik_academic_website): Public source for the academic website.

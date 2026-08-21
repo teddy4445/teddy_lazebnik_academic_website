@@ -20,65 +20,165 @@
 		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 		<link href="/css/main.css" rel="stylesheet">
 		<link href="/css/descriptionTrim.css" rel="stylesheet">
+		<link rel="describedby" href="https://teddylazebnik.com/llms.txt">
 		<!-- end - css -->
 		
 		<!-- stracture page data -->
 		<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org",
-		  "@type": "Person",
-		  "name": "Teddy Lazebnik",
-		  "gender": "https://schema.org/Male",
-		  "url": "http://teddylazebnik.com",
-		  "givenName": "Teddy",
-		  "familyName": "Lazebnik",
-		  "honorificPrefix": "Prof.",
-		  "nationality": "Israeli",
-		  "image": "http://teddylazebnik.com/img/personal_image.png",
-		  "birthDate": "1997",
-		  "spouse": "Elizaveta Savchenko",
-		  "telephone": "(972) 545524589"
-		}
-		</script>
-		
-		<script type="application/ld+json">
 {
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "name": "Teddy Lazebnik",
-  "honorificPrefix": "Prof.",
-  "givenName": "Teddy",
-  "familyName": "Lazebnik",
-		  "jobTitle": "Mathematican | AI expert | Entrepreneur",
-		  "description": "Senior computational mathematics researcher and algorithm developer with expertise in the biotech and fintech industries.",
-  "gender": "Male",
-  "nationality": "Israeli",
-  "birthDate": "1997",
-  "url": "https://teddylazebnik.com",
-  "image": "https://teddylazebnik.com/img/personal_image.png",
-  "spouse": {
-    "@type": "Person",
-    "name": "Elizaveta Savchenko"
-  },
-  "telephone": "+972545524589",
-  "knowsAbout": [
-    "Computational Mathematics",
-    "Biomathematics",
-    "Machine learning",
-    "Agent-Based Simulation",
-    "Algorithmic development",
-    "Artificial Intelligence",
-    "Health Informatics"
-  ],
-  "sameAs": [
-    "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en", 
-    "https://www.linkedin.com/in/teddy-lazebnik",
-    "https://github.com/teddy4445"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://teddylazebnik.com/#website",
+      "url": "https://teddylazebnik.com/",
+      "name": "Teddy Lazebnik",
+      "alternateName": "Prof. Teddy Lazebnik",
+      "description": "Official academic website of Teddy Lazebnik, covering research, publications, teaching, projects, and writing in computational mathematics and artificial intelligence.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://teddylazebnik.com/#person"
+      },
+      "creator": {
+        "@id": "https://teddylazebnik.com/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://teddylazebnik.com/#webpage",
+      "url": "https://teddylazebnik.com/",
+      "name": "Prof. Teddy Lazebnik",
+      "description": "Profile, research interests, selected publications, and ongoing projects of Teddy Lazebnik.",
+      "isPartOf": {
+        "@id": "https://teddylazebnik.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://teddylazebnik.com/#person"
+      },
+      "about": {
+        "@id": "https://teddylazebnik.com/#person"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://teddylazebnik.com/#primaryimage"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://teddylazebnik.com/#primaryimage",
+      "url": "https://teddylazebnik.com/img/personal_image.png",
+      "contentUrl": "https://teddylazebnik.com/img/personal_image.png",
+      "caption": "Teddy Lazebnik"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://teddylazebnik.com/#person",
+      "name": "Teddy Lazebnik",
+      "honorificPrefix": "Prof.",
+      "givenName": "Teddy",
+      "familyName": "Lazebnik",
+      "url": "https://teddylazebnik.com/",
+      "image": {
+        "@id": "https://teddylazebnik.com/#primaryimage"
+      },
+      "description": "Computational mathematics and computer-science researcher working on mathematical modeling, simulation, machine learning, health, epidemiology, socio-economic systems, scientometrics, and animal-centered artificial intelligence.",
+      "jobTitle": "Computational mathematics researcher and AI/algorithm developer",
+      "mainEntityOfPage": {
+        "@id": "https://teddylazebnik.com/#webpage"
+      },
+      "worksFor": [
+        {
+          "@id": "https://www.haifa.ac.il/#organization"
+        },
+        {
+          "@id": "https://ju.se/#organization"
+        }
+      ],
+      "memberOf": {
+        "@id": "https://acml.teddylazebnik.com/#organization"
+      },
+      "knowsAbout": [
+        "Computational mathematics",
+        "Biomathematics",
+        "Mathematical modeling",
+        "Agent-based simulation",
+        "Epidemiological modeling",
+        "Machine learning",
+        "Artificial intelligence",
+        "Explainable artificial intelligence",
+        "Socio-economic simulation",
+        "Scientometrics",
+        "Health informatics",
+        "Animal-centered artificial intelligence"
+      ],
+      "sameAs": [
+        "https://orcid.org/0000-0002-7851-8147",
+        "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+        "https://cris.haifa.ac.il/en/persons/teddy-lazebnik/",
+        "https://ju.se/en/personinfo.html?sign=LAZTED",
+        "https://www.linkedin.com/in/teddy-lazebnik",
+        "https://github.com/teddy4445"
+      ]
+    },
+    {
+      "@type": "ResearchOrganization",
+      "@id": "https://acml.teddylazebnik.com/#organization",
+      "name": "Applied Computational Mathematics Laboratory",
+      "alternateName": "ACML",
+      "url": "https://acml.teddylazebnik.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://acml.teddylazebnik.com/img/logo.png",
+        "contentUrl": "https://acml.teddylazebnik.com/img/logo.png"
+      },
+      "description": "A multidisciplinary research laboratory developing mathematical models, complex simulations, computational methods, and applied AI solutions across science, engineering, medicine, biology, economics, and scientometrics.",
+      "member": {
+        "@id": "https://teddylazebnik.com/#person"
+      },
+      "parentOrganization": [
+        {
+          "@id": "https://www.haifa.ac.il/#organization"
+        },
+        {
+          "@id": "https://ju.se/#organization"
+        }
+      ],
+      "subjectOf": [
+        {
+          "@type": "AboutPage",
+          "url": "https://acml.teddylazebnik.com/team.html",
+          "name": "ACML research team"
+        },
+        {
+          "@type": "CollectionPage",
+          "url": "https://acml.teddylazebnik.com/publications.html",
+          "name": "ACML publications"
+        }
+      ]
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://www.haifa.ac.il/#organization",
+      "name": "University of Haifa",
+      "url": "https://www.haifa.ac.il/",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q591115",
+        "https://en.wikipedia.org/wiki/University_of_Haifa"
+      ]
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://ju.se/#organization",
+      "name": "Jönköping University",
+      "url": "https://ju.se/en.html",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q2496060",
+        "https://en.wikipedia.org/wiki/J%C3%B6nk%C3%B6ping_University"
+      ]
+    }
   ]
 }
 </script>
-
-
 		<!-- end - stracture page data -->
 	</head>
 	
