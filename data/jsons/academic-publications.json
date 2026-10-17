@@ -5,7 +5,7 @@
          "description":"Community‑ordered laboratory blood tests are frequently re-ordered when the patients arrive at the pediatric emergency departments. When only a few hours separate the initial community blood tests from assessment in the emergency department, repeated laboratory testing often does not contribute to clinical management. Additional testing can inconvenience patients, increase out-of-pocket costs for patients and families, add costs to the healthcare system, and delay clinical decision-making. To address this issue, we collected community-issued laboratory tests for complete blood count, electrolytes, and C-reactive protein for children aged three months to 18 years treated in pediatric emergency departments within a nationwide Health Maintenance Organization. These were compared to repeated laboratory tests performed in the pediatric emergency department within 12 hours. Using these data, we first analyzed the frequency of the justified repeated testing according to pre-set criteria. Next, we developed a decision-support machine learning model to predict whether a laboratory test should be repeated, leveraging the patient’s prior community laboratory results and sociodemographic features. For complete blood count, electrolytes, and C-reactive protein, we found that only 13.3%, 16.3%, and 19.0% of the repeated tests, respectively, were deemed justified. Moreover, we show that an out-of-the-box XGboost model can predict the necessity for repeating these laboratory tests with 91.8%, 89.1%, and 79.2% accuracy, respectively. In the absence of false negatives, a condition of high clinical importance, the model maintains accuracies of 73.9%, 67.3%, and 55.4% for the three laboratory categories, respectively. This performance level remains sufficient to substantially reduce unnecessary repeat testing for complete blood count and electrolyte tests, but less so for C-reactive protein. The benefits of the model in clinical practice should be further studied.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/shall_we_repeat.pdf"},
 		 					  {"info": "cite", "type": 3, "link": "A. Shuchami, T. Lazebnik, S. Ashkenazi, A. H. Cohen, Y. Reichenberg, V. Shkalim Zemer, Shall we repeat? Predicting the necessity to repeat blood testing in pediatric emergency departments of laboratory tests previously performed in the community using a machine learning model. Plos One. 2026."}],
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
 		 "authors": "Adi Shuchami, Teddy Lazebnik, Shai Ashkenazi, Avner Herman Cohen, Yael Reichenberg, Vered Shkalim Zemer",
          "year": 2026,
          "type":"Paper",
@@ -17,7 +17,7 @@
          "description":"Pandemics throughout history have raised challenges in many forms, such as increased mortality rates, economic instability, and political shifts. Recent pandemics, coupled with globally declining fertility rates, pose unprecedented demographic challenges for humanity. A pandemic is inherently connected to a population’s fertility in many ways - psychological, economic, and, most importantly, physiological. Nevertheless, this connection is mostly left unintended, blinding us to the effects of the pandemic-caused physiological fertility decline on the population’s growth over time. In this study, we proposed a novel epidemiological model incorporating physiological fertility decline dynamics using an extended Susceptible-Infected-Recovered (SIR) model incorporating age groups, genders, birth and death dynamics, and infection-induced physiological fertility decline. Our model, based on real-world data from 10 large cities globally, demonstrates the impact of infection on fertility, which can persist for generations, creating demographic ripple effects that extend well beyond the immediate pandemic period. That said, the fertility drop is secondary to the pandemic spread, even for relatively high fertility decline due to the pathogen. These results have significant implications for public health policy and population planning. They highlight the need to integrate fertility considerations into pandemic preparedness strategies. Our study provides a quantitative framework for assessing the long-term demographic impacts of pandemics, offering policymakers tools to assess and potentially mitigate the impact of future disease outbreaks at the population level.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/pandemic_fertility.pdf"},
 		 					  {"info": "cite", "type": 3, "link": "T. Lazebnik, S. Bunimovich-Medrazitsky, A. Alexi., Modeling the effects of pandemics on physiology-related fertility decline in society. Frontiers in Epidemiology. 2026."}],
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
 		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Medrazitsky, Ariel Alexi",
          "year": 2026,
          "type":"Paper",
@@ -29,8 +29,8 @@
          "description":"Particles settling through sharply density-stratified fluids exhibit transient dynamics that remain difficult to capture with classical buoyancy–drag models, including strong deceleration, prolonged retention near the interface, and, in some cases, apparent bouncing. Existing mechanistic models that reproduce parts of this behavior through the equation of motion rely on auxiliary artificial virtual-mass ODEs whose physical interpretation and predictive generality are limited. In this study, we demonstrate implementation of physics-informed symbolic regression (PISR) method, applied to high-resolution dataset of particle-tracking experiments across stratified interface, enabling a compact analytical closure for the delayed stratification-induced force acting on spheres crossing sharp density interfaces, replacing an virtual mass ODE and capturing complex transient dynamics. Using fully resolved position-time trajectories of spheres from water–salt and water–glycerol stratified experiments, the PISR framework is designed to select a delayed, exponentially damped oscillatory force closure that is consistent with physical mechanisms of interfacial memory, wake detachment, recoil, and viscous relaxation. The resulting force closure reproduces qualitatively and quantitatively key features of the observed sphere dynamics and improves reconstruction transient-rich cases relative to a virtual-mass-based baseline. More broadly, the study demonstrates how scientist-in-the-loop or physically-informed symbolic regression (SR) can assist physical-model discovery by combining fully resolved time series experimental data, dimensional and physical constraints, and physically interpretable analytical model selection. These results provide a practical modeling framework for sphere motion across stably-stratified density interfaces and illustrate the potential of artificial intelligence assisted SR for extracting compact, testable closures in complex fluid dynamics problems.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/teddy_alex_p.pdf"},
 		 					  {"info": "cite", "type": 3, "link": "T. Lazebnik, C. Mortenfeld, A. Liberzon., Physics-informed symbolic regression reveals a delayed oscillatory closure for particle–interface dynamics. Machine Learning: Science and Technology. 2026."}],
-         "topic":"Machine learning",
-		 "authors": "Teddy Lazebnik, Chen Mortenfeld and Alex Liberzon",
+         "topic":"Machine Learning",
+		 "authors": "Teddy Lazebnik, Chen Mortenfeld, Alex Liberzon",
          "year": 2026,
          "type":"Paper",
          "publisher":"Machine Learning: Science and Technology",
@@ -42,8 +42,8 @@
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/bitoh.pdf"},
 		 					  {"info": "cite", "type": 3, "link": "I. Kirshenbaum, T. Lazebnik, The Implications of a Maritime Blockade on Energy Poverty in Israel. Social Security. 2026."}],
          "year": 2026,
-		 "authors": "Teddy Lazebnik, Amit Yaniv-Rosenfeld",
-         "topic":"Machine learning",
+		 "authors": "Teddy Lazebnik, Inbar Kirshenboim",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Social Security",
          "publicationStatus":"Published"
@@ -55,19 +55,19 @@
 		 					  {"info": "cite", "type": 3, "link": "T. Lazebnik, A. Yaniv-Rosenfeld, The topology of a family tree graph and its members’ satisfaction with one another: a machine learning approach. Frontiers in Human Dynamics. 2026."}],
 		 "authors": "Teddy Lazebnik, Amit Yaniv-Rosenfeld",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Frontiers in Human Dynamics",
          "publicationStatus":"Published"
       },
 	{
          "name":"Facial color patterns and intraspecific facial signaling complexity in domesticated cats (Felis silvestris catus)",
-         "description":"Recent studies have revealed an inverse relationship between the complexity of facial color patterns and the intricacy of facial signaling. As facial color patterns become more elaborate, facial signaling complexity de-creases, because intricate colors may distract from and hinder the perception of subtle facial muscle movements. Recent studies have confirmed this trade-off across multiple primate species and have also identified it within domesticated dogs. The goal of our current study was to assess whether such a trade-off exists among other domesticated species, such as cats (Felis silvestris catus). Data were collected at a cat caf ́e, including 53 adult domestic shorthairs that vary extensively in their fur colors and patterns. We constructed a facial color pattern complexity scoring rubric that is consistent with previously published work. This rubric was implemented using automated approaches (Google Gemini) to ensure consistency in the evaluation of cat faces. We utilized sys-tematic and standardized methods to study cat facial muscle movements (catFACS). We assessed and oper-ationalized the complexity of facial signaling based on three criteria: (1) the number of distinct types of facial muscle movements produced by each cat (AU Type); (2) the number of unique combinations of facial muscle movements produced by each cat (AU Combo); and (3) the total number of discrete facial muscle movements that typically make up each cat's facial signals (AU Length). Ordinal regressions were used to evaluate the relationship between our independent (facial color pattern complexity scores) and dependent (AU Type, AU Combo, AU Length) variables. Our results indicate that there are no statistically significant differences in our three measures of facial signaling complexity based on cat facial color pattern complexity scores. Further research with other felids, both domestic and wild, is necessary to explore these relationships more thoroughly.",
+         "description":"Recent studies have revealed an inverse relationship between the complexity of facial color patterns and the intricacy of facial signaling. As facial color patterns become more elaborate, facial signaling complexity de-creases, because intricate colors may distract from and hinder the perception of subtle facial muscle movements. Recent studies have confirmed this trade-off across multiple primate species and have also identified it within domesticated dogs. The goal of our current study was to assess whether such a trade-off exists among other domesticated species, such as cats (Felis silvestris catus). Data were collected at a cat café, including 53 adult domestic shorthairs that vary extensively in their fur colors and patterns. We constructed a facial color pattern complexity scoring rubric that is consistent with previously published work. This rubric was implemented using automated approaches (Google Gemini) to ensure consistency in the evaluation of cat faces. We utilized sys-tematic and standardized methods to study cat facial muscle movements (catFACS). We assessed and oper-ationalized the complexity of facial signaling based on three criteria: (1) the number of distinct types of facial muscle movements produced by each cat (AU Type); (2) the number of unique combinations of facial muscle movements produced by each cat (AU Combo); and (3) the total number of discrete facial muscle movements that typically make up each cat's facial signals (AU Length). Ordinal regressions were used to evaluate the relationship between our independent (facial color pattern complexity scores) and dependent (AU Type, AU Combo, AU Length) variables. Our results indicate that there are no statistically significant differences in our three measures of facial signaling complexity based on cat facial color pattern complexity scores. Further research with other felids, both domestic and wild, is necessary to explore these relationships more thoroughly.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/cats_faces.pdf"},
 		 					  {"info": "cite", "type": 3, "link": "B. N. Florkiewicz, T. Lazebnik, D. Cherry, C. J. Henry, Facial color patterns and intraspecific facial signaling complexity in domesticated cats (Felis silvestris catus). Applied Animal Behaviour Science. 2026."}],
 		 "authors": "Brittany N. Florkiewicz, Teddy Lazebnik, Don Cherry, Carolyn J. Henry",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Applied Animal Behaviour Science",
          "publicationStatus":"Published"
@@ -79,7 +79,7 @@
 		 					  {"info": "cite", "type": 3, "link": "T. Lazebnik, A Portfolio-Theoretic Algorithm for Institutional Research Planning Under Scientometric Objectives. Algorithms. 2026."}],
 		 "authors": "Teddy Lazebnik",
          "year": 2026,
-         "topic":"scientometric",
+         "topic":"Scientometrics",
          "type":"Paper",
          "publisher":"Algorithms",
          "publicationStatus":"Published"
@@ -103,7 +103,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Z. Ben-Zion, Z. Elyoseph, T. Spiller, T. Lazebnik. Inducing state anxiety in LLM agents reproduces human-like biases in consumer decision-making. npj Artificial Intelligence. 2026."}],
 		 "authors": "Ziv Ben-Zion, Zohar Elyoseph, Tobias Spiller, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"npj Artificial Intelligence",
          "publicationStatus":"Published"
@@ -115,7 +115,7 @@
 		 					  {"info": "cite", "type": 3, "link": "L. Shami, T. Lazebnik. Cooperative Game-Theoretic Framework for Sustainable UN Financing: An Application to Global Public Goods Provision. Economies. 2026."}],
 		 "authors": "Labib Shami, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Economies",
          "publicationStatus":"Published"
@@ -127,7 +127,7 @@
 		 					  {"info": "cite", "type": 3, "link": "E. Peretz-Andersson, N. Haneefa, T. Lazebnik. A quality-preserving model for test reduction in electronics production. Frontiers in Mechnical Engineering. 2026."}],
 		 "authors": "Einav Peretz-Andersson, Noufa Haneefa, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Frontiers in Mechnical Engineering",
          "publicationStatus":"Published"
@@ -139,7 +139,7 @@
 		 					  {"info": "cite", "type": 3, "link": "A. Kleinerman, D. Benrimoh, A. Yaniv-Rosenfeld, G. Golden, M. Tanguay-Sela, H. C. Margolese, T. Lazebnik, B. H. Amit, H. Samuel, A. Rosenfeld. Moving from table to graph in physics-informed spatio-temporal symbolic regression. Frontiers in Psychiatry. 2026."}],
 		 "authors": "Akiva Kleinerman, David Benrimoh, Amit Yaniv-Rosenfeld, Grace Golden, Myriam Tanguay-Sela, Howard C. Margolese, Teddy Lazebnik, Ben H. Amit, Hadar Samuel, Ariel Rosenfeld",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Frontiers in Psychiatry",
          "publicationStatus":"Published"
@@ -151,7 +151,7 @@
 		 					  {"info": "cite", "type": 3, "link": "T. Lazebnik, A. Liberzon. Moving from table to graph in physics-informed spatio-temporal symbolic regression. Scientific Reports. 2026."}],
 		 "authors": "Teddy Lazebnik, Alex Liberzon",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Scientific Reports",
          "publicationStatus":"Published"
@@ -163,7 +163,7 @@
 		 					  {"info": "cite", "type": 3, "link": "O. Edri-Peer, N. Cohen, T. Lazebnik. A Decision Tree Model for Profiling Citizens’ Support for Self-Help Strategies. Deviant Behavior . 2026."}],
 		 "authors": "Ofek Edri-Peer, Nissim Cohen, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Deviant Behavior",
          "publicationStatus":"Published"
@@ -175,9 +175,9 @@
 		 					  {"info": "cite", "type": 3, "link": "Y. Gargi, A. Cohen, D. Stein, O. Levi, D. Cohen, J. Klein, H. S. Taube, J. Vine, M. Glebov, T. Lazebnik, M. Saban, Y. Haviv, E. Segal. Noradrenaline-trajectory phenotypes in septic shock: derivation and external validation in two independent cohorts. Intensive Care Medicine experimental. 2026."}],
 		 "authors": "Yonatan Gargi, Amir Cohen, Dorit Stein, Ori Levi, Dor Cohen, Julia Klein, Hamutal S Taube, Jacob Vine, Maxim Glebov, Teddy Lazebnik, Mor Saban, Yael Haviv, Eran Segal",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
-         "publisher":"Intensive Care Medicine experimental",
+         "publisher":"Intensive Care Medicine Experimental",
          "publicationStatus":"Published"
       },
 	{
@@ -187,23 +187,11 @@
 		 					  {"info": "cite", "type": 3, "link": "S. Nemet, M. Har-Even, A. Herman Cohen, T. Lazebnik, E. Ganelin-Cohen, Y. Levinsky, V. Shkalim Zemer. Allergic diseases in early childhood and their association with migraine: a large-scale retrospective study. Frontiers in Allergy. 2026."}],
 		 "authors": "Shay Nemet, Meirav Har-Even, Avner Herman Cohen, Teddy Lazebnik, Esther Ganelin-Cohen, Yoel Levinsky, Vered Shkalim Zemer",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Frontiers in Allergy",
          "publicationStatus":"Published"
       }, 
-	{
-         "name":"Inducing state anxiety in LLM agents reproduces human-like biases in consumer decision-making",
-         "description":"Large language models (LLMs) are rapidly evolving from text generators to autonomous agents, raising urgent questions about their reliability in real-world contexts. A central question is whether emotionally salient context can systematically steer LLM agents’ action policies, not only their text outputs, in applied tasks. Here, three advanced LLMs (ChatGPT-5, Gemini 2.5, Claude 3.5-Sonnet) performed a grocery shopping task under budget constraints, before and after exposure to anxiety-inducing traumatic narratives. Across 2,250 runs, emotionally primed agents consistently selected less healthy baskets (as quantified by decreases in Basket Health Scores: Δ=-0.081 to -0.126; all pFDR < 0.001; Cohen’s d = -1.07 to -2.05), directionally consistent with stress-linked decision biases documented in humans. The effect was robust across models and budgets. These findings provide evidence that emotional context can alter not only the words LLMs produce but also the concrete actions they perform, raising important implications for digital health, consumer safety, and ethical AI deployment.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/ziv_nature.pdf"},
-		 					  {"info": "cite", "type": 3, "link": "Z. Ben-Zion, Z. Elyoseph, T. Spiller, T. Lazebnik. Inducing state anxiety in LLM agents reproduces human-like biases in consumer decision-making. npj Artificial Intelligence. 2026."}],
-		 "authors": "Ziv Ben-Zion, Zohar Elyoseph, Tobias Spiller, Teddy Lazebnik",
-         "year": 2026,
-         "topic":"Machine learning",
-         "type":"Paper",
-         "publisher":"npj Artificial Intelligence",
-         "publicationStatus":"Published"
-      },
 	{
          "name":"Pre-transition nutrition dose and mortality using a CRP-Free operational metabolic transition framework: A MIMIC-IV transportability analysis",
          "description":"Background and aims. A physiology-based framework to identify transition from early catabolism toward recovery was previously derived using a steroid-corrected insulin-resistance index (IRI) and concordant recovery criteria. For external testing in MIMIC-IV, we prespecified a C-reactive protein–free operational rule requiring a ≥40% post-peak IRI decline and ≥3 concordant non-CRP criteria, and asked whether the pre-transition feeding pattern seen in derivation could be reproduced. Methods. We performed a retrospective MIMIC-IV re-implementation. After adult/eligible stay filtering, ICU length of stay ≥2 days, candidate intravenous insulin exposure, and exclusion of stays with no analyzable insulin segments, missing weight, or fewer than 3 glucose values, 8732 stays remained. The primary analysis pooled fed stay-day rows from transitioned stays on ICU days 3–7 whose prior 24-h nutrition window lay wholly before the model-derived transition time and compared high dose (≥0.8 kcal/kg/h) with lower fed exposure using parsimonious sequential-landmark models. Overlap weighting was prespecified as an adjusted secondary analysis to improve measured covariate balance; secondary sensitivity analyses tested alternative covariate sets and EN-only restriction. Results. Of 8732 retained stays, the transported 40%/3-of-7 C-reactive protein–free rule detected transition in 4836 (55.4%). Quantified enteral/parenteral nutrition rows were available in 2765 stays overall and in 2066 transitioned stays. The primary pooled risk set comprised 2015 fed pre-transition stay-day rows contributed by 741 transitioned stays, including 303 high-dose rows from 165 stays. High recent dose was associated with higher 90-day mortality in crude analysis (OR 1.52, 95% CI 1.19–1.94), after parsimonious adjustment (1.62, 1.11–2.37), and after overlap weighting (1.54, 1.08–2.21). The 28-day endpoint was directionally similar, although the overlap-weighted estimate did not reach conventional significance (1.45, 0.99–2.11; p = 0.057). High-dose rows had lower APACHE II than lower-dose rows (27 [22–32] vs 29 [23–34]) despite identical day-1 SOFA. In descriptive exact-window analyses, signals remained concentrated in the 0–72 h preceding transition. Conclusions. In this restricted subcohort of transitioned stays with quantified enteral/parenteral nutrition exposure, higher recent dose within windows lying wholly before model-derived metabolic transition was associated with higher subsequent mortality after sequential-landmark adjustment and overlap weighting. These findings provide hypothesis-generating external support for a transition-guided nutrition framework but do not establish that modifying nutrition dose before transition would improve outcomes. Prospective validation and interventional testing are required before this approach can inform bedside feeding decisions.",
@@ -211,23 +199,12 @@
 		 					  {"info": "cite", "type": 3, "link": "Y. Gargi, N. Levran, D. Stein, O. Levi, D. Cohen, J. Vine, T. Lazebnik, E. Segal, A. Cohen. Pre-transition nutrition dose and mortality using a CRP-Free operational metabolic transition framework: A MIMIC-IV transportability analysis. Clinical Nutrition ESPEN. 2026."}],
 		 "authors": "Yonatan Gargi, Neriya Levran, Dorit Stein, Ori Levi, Dor Cohen, Jacob Vine, Teddy Lazebnik, Eran Segal, Amir Cohen",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Clinical Nutrition ESPEN",
          "publicationStatus":"Published"
       },
-	{
-         "name":"Noradrenaline-trajectory phenotypesin septic shock: derivation and externalvalidation in two independent cohorts",
-         "description":"Background Septic shock is heterogeneous, and noradrenaline (NA) requirements evolve over time in waysthat reflect vascular responsiveness and shock biology. Whether long-horizon NA dose-trajectory phenotypes arereproducible across healthcare systems and identifiable early in the clinical course remains uncertain.Methods We retrospectively analyzed 1111 adults with septic shock at Sheba Medical Center (Israel) and 9343adults from MIMIC-IV. Hourly NA infusion trajectories were reconstructed for 10 days. A fully prespecified clusteringpipeline combining static-feature K-means with dynamic time warping refinement was derived in Sheba and appliedunchanged to MIMIC-IV. The primary outcome was 90-day mortality; 30-day mortality was analyzed as a support-ive secondary outcome. Secondary analyses included feature interpretability, multivariable landmark Cox models(24–144 h), and early phenotype prediction using exposure features available at 24–96 h.Results Five stable phenotypes emerged in Sheba and six in MIMIC-IV. Despite this numerical difference and some-what more prolonged high-dose exposure in Sheba sustained/late-escalating patterns, both cohorts exhibitedthe same core families of trajectory shapes with preserved mortality gradients (90-day mortality 37–89% in Sheba;16–69% in MIMIC-IV). Mortality gradients were preserved at both 30 and 90 days across cohorts. Across cohorts,exposure-persistence features—particularly time to maximal NA dose and cumulative NA burden during days 2–4—were key determinants of phenotype structure and mortality. Early-prediction models identified final phenotypesusing 24-h data with 85% accuracy in Sheba and 86% in MIMIC-IV, improving by 48 h to 89% and 88%, respectively;high-confidence assignments achieved approximately 91%–95% accuracy.Conclusions Long-horizon NA dose-trajectory phenotypes are clinically interpretable hemodynamic exposure/response patterns, prognostically coherent, and externally reproducible. Their defining features were detectablewithin the first 24 h and showed stronger discrimination by 48 h. At present, these phenotypes should be interpretedas descriptive hemodynamic-response patterns that may support dynamic risk stratification, prognostic enrichmentfor future trials, and hypothesis generation; whether early phenotype identification can improve management or out-comes requires prospective evaluation.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/yoni_sheba.pdf"},
-		 					  {"info": "cite", "type": 3, "link": "G. Yonatan, A. Cohen, D. Stein, O. Levi, D. Cohen, J. Klein, H. S. Taube, J. Vine, M. Glebov, T. Lazebnik, M. Saban, Y. Haviv, E. Segal. Noradrenaline-trajectory phenotypesin septic shock: derivation and externalvalidation in two independent cohorts. Intensive Care Medicine Experimental. 2026."}],
-		 "authors": "Gargi Yonatan, Amir Cohen, Dorit Stein, Ori Levi, Dor Cohen, Julia Klein, Hamutal S. Taube, Jacob Vine, Maxim Glebov, Teddy Lazebnik, Mor Saban, Yael Haviv, Eran Segal",
-         "year": 2026,
-         "topic":"Machine learning",
-         "type":"Paper",
-         "publisher":"Intensive Care Medicine Experimental",
-         "publicationStatus":"Published"
-      },
+
 	{
          "name":"Whose LLM Is It Anyway? Linguistic Comparison and LLM Attribution for GPT-3.5, GPT-4 and Bard",
          "description":"Large Language Models (LLMs) are capable of generating text that is similar to or surpasses human quality. However, it is unclear whether LLMs tend to exhibit distinctive linguistic styles akin to how human authors do. Through a comprehensive linguistic analysis, we compare the vocabulary, Part-of-Speech (POS) distribution, dependency distribution, and sentiment of texts generated by three of the most popular LLMS today (GPT-3.5, GPT-4, and Bard) to diverse inputs. The results point to significant linguistic variations which, in turn, enable us to attribute a given text to its LLM origin with a favorable 88% accuracy using a simple off-the-shelf classification model. Theoretical and practical implications of this intriguing finding are discussed.",
@@ -235,7 +212,7 @@
 		 					  {"info": "cite", "type": 3, "link": "A. Rosenfeld , T. Lazebnik. Whose LLM Is It Anyway? Linguistic Comparison and LLM Attribution for GPT-3.5, GPT-4 and Bard. Mathematics. 2026."}],
 		 "authors": "Ariel Rosenfeld, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Mathematics",
          "publicationStatus":"Published"
@@ -245,9 +222,9 @@
          "description":"Background: Hip fractures are associated with significant mortality, especially among elderly patients. Accurate prediction of mortality risk is crucial for optimising perioperative care and resource allocation. Recent advances in machine learning (ML) and deep learning (DL) offer promising methods to enhance clinical risk prediction models; however, their clinical implementation often remains limited due to the complexity of these techniques. Methods: This retrospective cohort study included 2,604 elderly patients (≥65 years) undergoing urgent hip fracture surgery at Sheba Medical Center, Israel, between January 2017 and November 2023. Multiple ML and DL algorithms were evaluated for predicting one-year all-cause mortality using a comprehensive set of clinical, demographic, perioperative, and laboratory variables. Models were rigorously developed and validated through stratified 5-fold cross-validation, addressing class imbalance with the Synthetic Minority Oversampling Technique (SMOTE). Additionally, an automated ML pipeline, generated using a large language model (LLM) coupled with the Tree-based Pipeline Optimisation Tool (TPOT), was benchmarked against manually optimised models. Model performances were assessed using area under the receiver operating characteristic curve (AUC), accuracy, precision, recall, F1-score, false-positive rate, and true-negative rate, supplemented by permutation importance and SHapley Additive exPlanations (SHAP) for interpretability. Results: Among all models evaluated, the manually optimised Extreme Gradient Boosting (XGB) algorithm demonstrated superior predictive performance (AUC=0.846, accuracy=0.791, F1-score=0.667, precision=0.773, NPV=0.798). Important predictors identified included baseline serum albumin and urea levels, patient age, intraoperative hypothermia, and the number of chronic diseases. The automated ML model, generated via LLM and TPOT frameworks, showed comparable performance to the XGB model (AUC=0.844), with a higher recall but slightly lower precision. Discussion: ML-based models, particularly the XGB algorithm, significantly enhance predictive accuracy for one-year mortality among elderly hip fracture patients. Crucially, an automated ML framework leveraging large language models provides a practical, clinically accessible alternative, effectively democratising advanced predictive analytics in healthcare settings.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/adi_3.pdf"},
 		 					  {"info": "cite", "type": 3, "link": "V. Aharonson, V. Christodoulou, C. Karpasitis, J. Joselowitz, S. Nowaczyk, T. Lazebnik, K. Iordanou, Comparing Manual vs. Automated Machine Learning and Deep Learning Models for Predicting One-Year Mortality in Elderly Hip Fracture Patients. Frontiers in Medicine. 2026."}],
-		 "authors": "Adi Shuchami, Maxim Glebov, Maksim  Katsin, Yotam Portnoy, Haim Berkenstadt, Dina Orkin, Teddy Lazebnik",
+		 "authors": "Adi Shuchami, Maxim Glebov, Maksim Katsin, Yotam Portnoy, Haim Berkenstadt, Dina Orkin, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Frontiers in Medicine",
          "publicationStatus":"Published"
@@ -255,11 +232,11 @@
 	{
          "name":"Expanding the horizons of facial mimicry in chimpanzees (Pan troglodytes): new insights into diverse signal types and contexts",
          "description":"Facial mimicry (FM) is an evolved mechanism in social mammals that potentially fosters emotional and physical connections through the production of congruent facial signals. Most research on FM has primarily examined relaxed open-mouth facial displays in the context of play. However, if the primary function of FM is to enhance the accuracy of predicting others’ behaviors, it stands to reason that FM would extend to various contexts and signal types. The aim of our current study was to determine whether rapid FM also occurred in different contexts and types of facial signals in a captive troop of chimpanzees. We hypothesized that rapid FM would be more prevalent in social contexts where evidence of FM has been reported across multiple species (hypothesis 1), as well as in the facial signal types associated with these contexts (hypothesis 2). Additionally, we expected that rapid FM would occur more frequently with simpler facial signals composed of fewer distinct muscle movements (hypothesis 3). We tested our three hypotheses across ten different contexts and with nine types of facial signals. We employed new computational methods that measure the number and proportion of facial muscle movements mimicked, which we refer to as RMsize and RMratio, respectively. These methods help us differentiate between types of rapid FM (exact matching versus type matching). We found no evidence to support our three hypotheses, suggesting that FM may be a more widespread mechanism than previously believed.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/error.pdf"},
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/monkeys_face.pdf"},
 		 					  {"info": "cite", "type": 3, "link": "B. N. Florkiewicz , T. Lazebnik. Expanding the horizons of facial mimicry in chimpanzees (Pan troglodytes): new insights into diverse signal types and contexts. Current Zoology. 2026."}],
 		 "authors": "Brittany N. Florkiewicz, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Current Zoology",
          "publicationStatus":"Published"
@@ -271,7 +248,7 @@
 		 					  {"info": "cite", "type": 3, "link": "V. Aharonson, V. Christodoulou, C. Karpasitis, J. Joselowitz, S. Nowaczyk, T. Lazebnik, K. Iordanou, Audience engagement with climate change content on YouTube: an analysis of video attributes and user interactions. Frontiers in Climate. 2026."}],
 		 "authors": "Vered Aharonson, Vasiliki Christodoulou, Christos Karpasitis, Jared Joselowitz, Slawomir Nowaczyk, Teddy Lazebnik, Kalypso Iordanou",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":" Frontiers in Climate",
          "publicationStatus":"Published"
@@ -283,7 +260,7 @@
 		 					  {"info": "cite", "type": 3, "link": "A. Shmuel, N. Koren, O. Glickman, T. Lazebnik, Interpretable knowledge distillation via symbolic regression for feedforward neural networks.  Neural Computing and Applications. 2026."}],
 		 "authors": "Assaf Shmuel, Nir Koren, Oren Glickman, Teddy Lazebnik ",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":" Neural Computing and Applications",
          "publicationStatus":"Published"
@@ -295,7 +272,7 @@
 		 					  {"info": "cite", "type": 3, "link": "D. Cherry, T. Lazebnik, C. J. Henry, B. N. Florkiewicz Harnessing AI-based computer vision to evaluate biological and behavioral variables in dog-dog play interactions. Journal of Veterinary Behavior. 2026."}],
 		 "authors": "Don Cherry, Teddy Lazebnik, Carolyn J. Henry, Brittany N. Florkiewicz",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Journal of Veterinary Behavior",
          "publicationStatus":"Published"
@@ -306,7 +283,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Gargi, et al, Detecting the metabolic transition to personalize nutritional timing: model development and preliminary validation in a large ICU cohort. Critical Care. 2026."}],
 		 "authors": "Yonatan Gargi, Neriya Levran, Jacob Vine, Amir Cohen, Dana Weiner, Dorit Stein, Ori Levi, Dor Cohen, Julia Klein, Hamutal S. Taube, Maxim Glebov, Teddy Lazebnik, Mor Saban, Shaked Efrat, Elad Drori, Yael Haviv, Eran Segal ",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Critical Care",
          "publicationStatus":"Published"
@@ -318,7 +295,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Friedman, A., PDE and agent based simulation approaches to Ischemic Dermal Wound Closure. Plos One. 2026."}],
 		 "authors": "Teddy Lazebnik, Avner Friedman",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Plos One",
          "publicationStatus":"Published"
@@ -330,7 +307,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Aharonson, V., Chronic Stress, Immune Suppression, and Cancer Occurrence: Unveiling the Connection Using Survey Data and Predictive Models. Medical Sciences. 2026."}],
 		 "authors": "Teddy Lazebnik, Vered Aharonson",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Medical Sciences",
          "publicationStatus":"Published"
@@ -342,7 +319,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Shmuel, A., Lazebnik, T., Glickman, O., Follow the Forest Trail: Distillation by Gradient Boosting Models to Enhance Symbolic Regression Performance. IEEE Access. 2026."}],
 		 "authors": "Assaf Shmuel, Teddy Lazebnik, Oren Glickman",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"IEEE Access",
          "publicationStatus":"Published"
@@ -354,7 +331,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Cohen, N., Lazebnik, T., Khalatnik, Y.,  The impact of collective performance-related pay on street-level bureaucrats’ performance and clients’ outcomes. Public Performance & Management Review. 2026."}],
 		 "authors": "Nissim Cohen, Teddy Lazebnik, Yonatan Khalatnik",
          "year": 2026,
-         "topic":"socio-economic",
+         "topic":"Economics",
          "type":"Paper",
          "publisher":"Public Performance & Management Review",
          "publicationStatus":"Published"
@@ -366,7 +343,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Peleg, R., Smadar. Y., Lazebnik, T., Hoogi, A., Break a Lag: Triple Exponential Moving Average for Enhanced Optimizatio. Machine Learning. 2026."}],
 		 "authors": "Roi Peleg, Yair Smadar, Teddy Lazebnik, Assaf Hoogi",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Machine Learning",
          "publicationStatus":"Published"
@@ -378,7 +355,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., L. Shami, E. Peret-Andersson, Tell Me Who Your Neighbors Are and I Will Tell You Your Informal Economy Size: The Case of Sweden. Computational Economics. 2026."}],
 		 "authors": "Teddy Lazebnik, Labib Shami, Einav Peretz-Andersson",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Computational Economics",
          "publicationStatus":"Published"
@@ -390,7 +367,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Glebov, M., Katsin, M., Berkenstadt, H., Orkin, D., Portnoy, Y., Schuchami, A., Lazebnik, T., A time-series clustering analysis of postinduction blood pressure trajectories. Scientific Reports. 2026."}],
 		 "authors": "Maxim Glebov, Maksim Katsin, Haim Berkenstadt, Dina Orkin, Yotam Portnoy, Adi Schuchami, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Scientific Reports",
          "publicationStatus":"Published"
@@ -402,7 +379,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Samuel, Y., Tichon, J., Lapid, R., King, R., Nissimyan, T., Spiegel, O., An empirically-parameterized spatio-temporal extended-SIR model for combined dilution and vaccination mitigation for rabies outbreaks in wild jackals. Ecological Modelling. 2026."}],
 		 "authors": "Teddy Lazebnik, Yehuda Samuel, Jonathan Tichon, Roi Lapid, Roni King, Tomer Nissimyan, Orr Spiegel",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Ecological Modelling",
          "publicationStatus":"Published"
@@ -414,7 +391,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Taskin, B., Xie, W., Lazebnik, T., Knowledge integration for physics-informed symbolic regression using pre-trained large language models. Scientific Reports. 2026."}],
 		 "authors": "Bilge Taskin, Wenxiong Xie, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Scientific Reports",
          "publicationStatus":"Published"
@@ -426,7 +403,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Florkiewicz, B. N., Kanevsky, E., Zamansky, A., Lazebnik, T., Close encounters of the cat kind: The influence of context and sex on facial signaling proximity in domesticated cats (Felis silvestris catus). Journal of Veterinary Behavior. 2026."}],
 		 "authors": "Brittany N. Florkiewicz, Eddie Kanevsky, Anna Zamansky, Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Journal of Veterinary Behavior",
          "publicationStatus":"Published"
@@ -438,7 +415,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Transforming norm-based to graph-based spatial representation for spatio-temporal epidemiological models. Engineering Applications of Artificial Intelligence. 2025."}],
 		 "authors": "Teddy Lazebnik",
          "year": 2026,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Engineering Applications of Artificial Intelligence",
          "publicationStatus":"Published"
@@ -450,7 +427,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Introducing “Inside” out of distribution. International Journal of Data Science and Analytics. 2025."}],
 		 "authors": "Teddy Lazebnik",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"International Journal of Data Science and Analytics",
          "publicationStatus":"Published"
@@ -462,7 +439,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Cohen, N., Lazebnik, T., Do Institutions Make Street-Level Bureaucrats Prosocial? Agent-Based Evidence Shows That New Public Management Does Not. European Policy Analysis. 2025."}],
 		 "authors": "Nissim Cohen, Teddy Lazebnik",
          "year": 2025,
-         "topic":"socio-economic",
+         "topic":"Economics",
          "type":"Paper",
          "publisher":" European Policy Analysis",
          "publicationStatus":"Published"
@@ -474,7 +451,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Itai, U., Bar Ilan, A., Lazebnik, T., Tighten the lasso: a convex hull volume-based anomaly detection method.  International Journal of Data Science and Analytics. 2025."}],
 		 "authors": "Uri Itai, Asael Bar Ilan, Teddy Lazebnik",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"International Journal of Data Science and Analytics",
          "publicationStatus":"Published"
@@ -482,11 +459,11 @@
 	{
          "name":"Faces of time: a historical overview of rapid innovations in coding animal facial signals",
          "description":"Since Charles Darwin's influential work on The Expression of the Emotions in Man and Animals, there have been significant advancements in how animal behaviorists identify and describe the facial signals of animals, including humans. Most of these advancements are largely attributed to technological innovations in how data are recorded in addition to the establishment of computer programs that aid with behavioral coding and analysis. Consequently, various manual and automated approaches can be adopted, each with its own benefits and drawbacks. The goal of this overview is twofold. First, we provide an overview of the past and present techniques for coding animal facial signals. Second, we compare and contrast each method, offering multiple examples of how each technique has been used and can be applied in the study of animal facial signaling today. Our examples include studies that address empirical questions related to animal behavior, as well as studies aimed at generating applications for animal welfare. Instead of favoring or criticizing one approach over another, our aim is to foster appreciation for the advancements in animal facial signal coding and to inspire future innovations in this field.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/faces_of_time.pdf"},
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/facee_of_times.pdf"},
 		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Florkiewicz, B., Faces of time: a historical overview of rapid innovations in coding animal facial signals. Frontiers in Veterinary Science. 2025."}],
 		 "authors": "Teddy Lazebnik, Brittany Florkiewicz",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Frontiers in Veterinary Science",
          "publicationStatus":"Published"
@@ -498,7 +475,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Friedman, A., Comparing partial differential equations and agent-based simulations in spatio-temporal modeling of cancer growth and shape. Journal of Computational and Applied Mathematics. 2025."}],
 		 "authors": "Teddy Lazebnik, Avner Friedman",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Journal of Computational and Applied Mathematics",
          "publicationStatus":"Published"
@@ -510,7 +487,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Solomon, A., Glebov, M., Lazebnik, T., Explainable Surgical Procedures Recommender System Leveraging Large Language Models. ACM Transactions on Recommender Systems. 2025."}],
 		 "authors": "Adir Solomon, Maxim Glebov, Teddy Lazebnik",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"ACM Transactions on Recommender Systems",
          "publicationStatus":"Published"
@@ -522,7 +499,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Kanevsky, E., Lazebnik, T., Kaspi, R., Gazit, Y., Halon, E., Fried, D., Zamansky, A., Pines, G., Non-Invasive Computer Vision-Based Fruit Fly Larvae Differentiation: Ceratitis capitata and Bactrocera zonata. Journal of Applied Entomology. 2025."}],
 		 "authors": "Eddie Kanevsky, Teddy Lazebnik, Roy Kaspi, Yoav Gazit, Eyal Halon, Dror Fried, Anna Zamansky, Gur Pines",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Journal of Applied Entomology",
          "publicationStatus":"Published"
@@ -534,7 +511,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Shmuel, A., Glickman, O., Lazebnik, T., A comprehensive benchmark of machine and deep learning models on structured data for regression and classification. Neurocomputing. 2025."}],
 		 "authors": "Assaf Shmuel, Oren Glickman, Teddy Lazebnik",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Neurocomputing",
          "publicationStatus":"Published"
@@ -546,7 +523,7 @@
 		 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Zalmanson, L., Mokryn, O., Mind Your Manners: The Dynamics of Politeness in Human-AI vs. Human-Human Interactions. Proceedings of the ACM on Human-Computer Interaction. 2025."}],
 		 "authors": "Teddy Lazebnik, Lior Zalmanson, Osnat Mokryn",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Proceedings of the ACM on Human-Computer Interaction",
          "publicationStatus":"Published"
@@ -558,45 +535,9 @@
 		 {"info": "cite", "type": 3, "link": "Martvel, G., Pedretti, G., Lazebnik, T., Zamansky, A., Ouchi, Y., Monteiro, T., Farhat, N., Shimshoni, I., Grinstein, D., Michaeli, Y., Valsecchi, P., Hall, N., Marshall-Pescini, S., Does the tail show when the nose knows? Artificial intelligence outperforms human experts at predicting detection dogs finding their target through tail kinematics. Royal Society Open science. 2025."}],
 		 "authors": "George Martvel, Giulia Pedretti, Teddy Lazebnik, Anna Zamansky, Yuri Ouchi, Tiago Monteiro, Nareed Farhat, Ilan Shimshoni, Dan Grinstein, Yuval Michaeli, Paola Valsecchi, Nathaniel Hall and Sarah Marshall-Pescini",					  
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Royal Society Open science",
-         "publicationStatus":"Published"
-      },
-	{
-         "name":"Explainable Surgical Procedures Recommender System Leveraging Large Language Models",
-         "description":"Significant advancements have recently been made in the fields of recommender systems and natural language processing, particularly with large language models (LLMs). In most cases, recommender systems have been used to suggest items and enhance personalization for users, while LLMs have been applied to textual tasks such as text completion, translation, and summarization. In this study, we demonstrate that integrating recommender system models with recent LLMs can effectively suggest appropriate surgical procedures for patients. We employ several LLMs to process clinical text in a morphologically rich language, serving three crucial roles: information representation, information enrichment, and explaining the surgical procedure suggestions made by the recommender system. Our method was evaluated using real-world clinical data, considering patients’ demographic attributes and health conditions. To assess the explainability of our method, we conducted an extensive experiment involving several clinicians. The results achieved by our method indicate that using recommender systems and LLMs can lead to high performance and improved explanations. Our study has the potential to enhance the personalization of healthcare and could be adopted by health services to assist healthcare professionals in recommending appropriate surgical procedures.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/llm_clinical.pdf"},
-					  {"info": "cite", "type": 3, "link": "Solomon, A., Glebov, M., Lazebnik, T., Explainable Surgical Procedures Recommender System Leveraging Large Language Models. ACM Transactions on Recommender Systems. 2025."}],
-		 "authors": "Adir Solomon, Maxim Glebov, Teddy Lazebnik",
-         "year": 2025,
-         "topic":"Machine learning",
-         "type":"Paper",
-         "publisher":"ACM Transactions on Recommender Systems",
-         "publicationStatus":"Published"
-      },
-	{
-         "name":"A comprehensive benchmark of machine and deep learning models on structured data for regression and classification",
-         "description":"The analysis of tabular datasets is highly prevalent both in scientific research and real-world applications of Machine Learning (ML). Unlike many other ML tasks, Deep Learning (DL) models often do not outperform traditional methods in this area. Previous comparative benchmarks have shown that DL performance is frequently equivalent to or even inferior to models such as Gradient Boosting Machines (GBMs). In this study, we introduce a comprehensive benchmark aimed at better characterizing the types of datasets where DL models excel. Although several important benchmarks for tabular datasets already exist, our contribution lies in the variety and depth of our comparison: we evaluate 111 datasets with 20 different models, including both regression and classification tasks. These datasets vary in scale and include both those with and without categorical variables. Importantly, our benchmark contains a sufficient number of datasets where DL models perform best, allowing for a thorough analysis of the conditions under which DL models excel. Building on the results of this benchmark, we train a model that predicts scenarios where DL models significantly outperform alternative methods, considering only datasets where the performance difference between the two groups is statistically significant. This filtering yields 36 datasets out of the original 111. On this subset, our model achieves 92 % accuracy. We present insights derived from this characterization and compare these findings to previous benchmarks.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/ml_table_benchmark.pdf"},
-					  {"info": "cite", "type": 3, "link": "Shmuel, A., Glickman, O., Lazebnik, T., A comprehensive benchmark of machine and deep learning models on structured data for regression and classification. Neurocomputing. 2025."}],
-		 "authors": "Assaf Shmuel, Oren Glickman, Teddy Lazebnik",
-         "year": 2025,
-         "topic":"Machine learning",
-         "type":"Paper",
-         "publisher":"Neurocomputing",
-         "publicationStatus":"Published"
-      },
-	{
-         "name":"Non-Invasive Computer Vision-Based Fruit Fly Larvae Differentiation: Ceratitis capitata and Bactrocera zonata",
-         "description":"The Mediterranean fruit fly (Ceratitis capitata) and the peach fruit fly (Bactrocera zonata) are two of the most economically sig-nificant agricultural pests affecting fruit production worldwide. Both are considered quarantine pests in several countries, whichoblige the use of restrictive measures to assure safe trade with countries where these flies are present. As the quarantine statusof these two pests is not similar in every country, discriminating measures among these two fruit flies' larvae in the exportedfruits is critical for safe trade. Traditional DNA-based detection methods, though accurate, are costly and time-consuming, whilemanual morphological identification is practically impossible. In this study, we propose a novel non-invasive method utilisingcomputer vision for rapid differentiation between larvae of these two species based on a short video recording of a single larvafreely moving on a Petri dish. Our results reveal good separation between the two species with 90% accuracy using videos asshort as 15 s long.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/sam.pdf"},
-					  {"info": "cite", "type": 3, "link": "Kanevsky, E., Lazebnik, T., Kaspi, R., Gazit, Y., Halon, E., Fried, D., Zamansky, A., Pines, G., Non-Invasive Computer Vision-Based Fruit Fly Larvae Differentiation: Ceratitis capitata and Bactrocera zonata. Journal of Applied Entomology. 2025."}],
-		 "authors": "Eddie Kanevsky, Teddy Lazebnik, Roy Kaspi, Yoav Gazit, Eyal Halon, Dror Fried, Anna Zamansky, Gur Pines",
-         "year": 2025,
-         "topic":"Machine learning",
-         "type":"Paper",
-         "publisher":"Journal of Applied Entomology",
          "publicationStatus":"Published"
       },
 	{
@@ -606,7 +547,7 @@
 					  {"info": "cite", "type": 3, "link": "Shuchami, A., Lazebnik, T., Ashkenazi, S., Herman Cohen, A., Reichenberg, Y., Shkalim Zemer, V., A Machine Learning-Based Guide for Repeated Laboratory Testing in Pediatric Emergency Departments. Diagnostics. 2025."}],
 		 "authors": "Adi Shuchami, Teddy Lazebnik, Shai Ashkenazi, Avner Herman Cohen, Yael Reichenberg, Vered Shkalim Zemer",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Diagnostics",
          "publicationStatus":"Published"
@@ -618,7 +559,7 @@
 					  {"info": "cite", "type": 3, "link": "Shmuel, A., Lazebnik, T., Heifetz, E., Glickman, O., Price, C., Fire weather indices tailored to regional patterns outperform global models. npj natural hazards. 2025."}],
 		 "authors": "Assaf Shmuel, Teddy Lazebnik, Eyal Heifetz, Oren Glickman, Colin Price",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"NPJ natural hazards",
          "publicationStatus":"Published"
@@ -627,12 +568,12 @@
          "name":"Interpretable transformation and analysis of timelines through learning via surprisability",
          "description":"The analysis of high-dimensional timeline data and the identification of outliers and anomalies are critical across diverse domains, including sensor readings, biological and medical data, historical records, and global statistics. However, conventional analysis techniques often struggle with challenges such as high dimensionality, complex distributions, and sparsity. These limitations hinder the ability to extract meaningful insights from complex temporal datasets, making it difficult to identify trending features, outliers, and anomalies effectively. Inspired by surprisability—a cognitive science concept describing how humans instinctively focus on unexpected deviations—we propose Learning via Surprisability (LvS), a novel approach for transforming high-dimensional timeline data. LvS quantifies and prioritizes anomalies in time-series data by formalizing deviations from the expected behavior. LvS bridges cognitive theories of attention with computational methods, enabling the detection of anomalies and shifts in a way that preserves critical context, offering a new lens for interpreting complex datasets. We demonstrate the usefulness of LvS on three high-dimensional timeline use cases: a time series of sensor data, a global dataset of mortality causes over multiple years, and a textual corpus containing over two centuries of the State of the Union Addresses by U.S. presidents. Our results show that LvS transformation enables efficient and interpretable identification of outliers, anomalies, and the most variable features along the timeline.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/lvs.pdf"},
-					  {"info": "cite", "type": 3, "link": "Mokryn, O., Lazebnik, T., Ben-Shoshan, H., Interpretable transformation and analysis of timelines through learning via surprisability. Choas. 2025."}],
+					  {"info": "cite", "type": 3, "link": "Mokryn, O., Lazebnik, T., Ben-Shoshan, H., Interpretable transformation and analysis of timelines through learning via surprisability. Chaos. 2025."}],
 		 "authors": "Osnat Mokryn, Teddy Lazebnik, Hagit Ben-Shoshan",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
-         "publisher":"Choas",
+         "publisher":"Chaos",
          "publicationStatus":"Published"
       },
 	{
@@ -642,7 +583,7 @@
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Aviv-Reuven, S., Rosenfeld, A., Publishing instincts: An exploration-exploitation framework for studying academic publishing behavior and 'Home Venues'. Journal of Informetrics. 2025."}],
 		 "authors": "Teddy Lazebnik, Aviv-Reuven, Ariel Rosenfeld",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Journal of Informetrics",
          "publicationStatus":"Published"
@@ -650,11 +591,11 @@
 	{
          "name":"Trust and street-level bureaucrats’ readiness for emergencies",
          "description":"Is street-level bureaucrats’ (SLBs) trust in their organisation, managers, and peers related to their perceptions of the emergency readiness of their organisation? Using a national survey among a representative sample of 2,733 police officers in Brazil, we found a significant correlation between SLBs’ perceptions regarding their organisations’ readiness for emergencies and their trust in their peers, managers, and the institutions to which they belong. Our findings, therefore, highlight the important role of trust in SLBs’ perceptions of readiness for emergencies. We show that, while there is a linear correlation between the two factors, a non-linear correlation provides a better explanation of the connection, revealing a complex sociological dynamic between trust and perceptions of readiness. We also discuss the implications of our findings and suggest an agenda for future research.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/lvs.pdf"},
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/trust.pdf"},
 					  {"info": "cite", "type": 3, "link": "Cohen, N., Davidovitz, M., Lotta, G., Lazebnik, T., Trust and street-level bureaucrats’ readiness for emergencies. International Public Management Journal. 2025."}],
 		 "authors": "Nissim Cohen, Maayan Davidovitz, Gabriela Lotta, Teddy Lazebnik",
          "year": 2025,
-         "topic":"socio-economic",
+         "topic":"Economics",
          "type":"Paper",
          "publisher":"International Public Management Journal",
          "publicationStatus":"Published"
@@ -666,7 +607,7 @@
 					  {"info": "cite", "type": 3, "link": "Schwartz, L., Matania, N., Levi, M., Lazebnik, T., Kushnir, S., Yosef, N., Hoogi, A., Shlomi, D., A blood test-based machine learning model for predicting lung cancer risk. Frontiers in Medicine. 2025."}],
 		 "authors": "Lihi Schwartz, Naor Matania, Matanel Levi, Teddy Lazebnik, Shiri Kushnir, Noga Yosef, Assaf Hoogi, Dekel Shlomi",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Frontiers in Medicine",
          "publicationStatus":"Published"
@@ -678,7 +619,7 @@
 					  {"info": "cite", "type": 3, "link": "Rosenfeld, A., Alexi, A., Mushiev, L., Lazebnik, T., The Academic Midas Touch: A citation-based indicator of research excellence. Journal of Data and Information Science. 2025."}],
 		 "authors": "Ariel Rosenfeld, Ariel Alexi, Liel Mushiev, Teddy Lazebnik",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Journal of Data and Information Science",
          "publicationStatus":"Published"
@@ -690,7 +631,7 @@
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Evaluating supply chain resilience during pandemic using agent-based simulation. Physica A: Statistical Mechanics and its Applications. 2025."}],
 		 "authors": "Teddy Lazebnik",
          "year": 2025,
-         "topic":"Machine learning",
+         "topic":"Machine Learning",
          "type":"Paper",
          "publisher":"Physica A: Statistical Mechanics and its Applications",
          "publicationStatus":"Published"
@@ -903,7 +844,7 @@
          "name":"Automated Video-Based Pain Recognition in Cats using Facial Landmarks",
          "description":"Affective states are reflected in the facial expressions of all mammals. Facial behaviors linked to pain have attracted most of the attention so far in non-human animals, leading to the development of numerous instruments for evaluating pain through facial expressions for various animal species. Nevertheless, manual facial expression analysis is susceptible to subjectivity and bias, is labor-intensive and often necessitates specialized expertise and training. This challenge has spurred a growing body of research into automated pain recognition, which has been explored for multiple species, including cats. In our previous studies, we have presented and studied artificial intelligence (AI) pipelines for automated pain recognition in cats using 48 facial landmarks grounded in cats’ facial musculature, as well as an automated detector of these landmarks. However, so far automated recognition of pain in cats used solely static information obtained from hand-picked single images of good quality. This study takes a significant step forward in fully automated pain detection applications by presenting an end-to-end AI pipeline that requires no manual efforts in the selection of suitable images or their landmark annotation. By working with video rather than still images, this new pipeline approach also optimises the temporal dimension of visual information capture in a way that is not practical to preform manually. The presented pipeline reaches over 70% and 66% accuracy respectively in two different cat pain datasets, outperforming previous automated landmark-based approaches using single frames under similar conditions, indicating that dynamics matter in cat pain recognition. We further define metrics for measuring different dimensions of deficiencies in datasets with animal pain faces, and investigate their impact on the performance of the presented pain recognition AI pipeline.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/cats_pain.pdf"},
-					  {"info": "cite", "type": 3, "link": "G. Martvel, T. Lazebnik, M. Feighelstein, L. Henze, S. Meller, I. Shimshoni, F. Twele, A. Sch¨utter, N. Dorn, S. Kastner, L. Finka, S. P. L. Luna, D. S. Mills, H. A. Volk, A. Zamansky, A, Automated Video-Based Pain Recognition in Cats using Facial Landmarks. Scientific Reports. 2024."}],
+					  {"info": "cite", "type": 3, "link": "G. Martvel, T. Lazebnik, M. Feighelstein, L. Henze, S. Meller, I. Shimshoni, F. Twele, A. Schütter, N. Dorn, S. Kastner, L. Finka, S. P. L. Luna, D. S. Mills, H. A. Volk, A. Zamansky, A, Automated Video-Based Pain Recognition in Cats using Facial Landmarks. Scientific Reports. 2024."}],
 		 "authors": "George Martvel, Teddy Lazebnik, Marcelo Feighelstein, Lea Henze, Sebastian Meller, Ilan Shimshoni, Friederike Twele, Alexandra Schütter, Nora Foraita, Sabine Kästner, Lauren Finka, Stelio P. L. Luna, Daniel S. Mills, Holger A. Volk, Anna Zamansky",
          "year": 2024,
          "topic":"AI",
@@ -920,7 +861,7 @@
          "year": 2024,
          "topic":"Biomathematics",
          "type":"Paper",
-         "publisher":"Choas",
+         "publisher":"Chaos",
          "publicationStatus":"Published"
       }, 
 	{
@@ -998,7 +939,7 @@
 	{
          "name":"Symbolic regression as a feature engineering method for machine and deep learning regression tasks",
          "description":"In the realm of machine and deep learning (DL) regression tasks, the role of effective feature engineering (FE) is pivotal in enhancing model performance. Traditional approaches of FE often rely on domain expertise to manually design features for machine learning (ML) models. In the context of DL models, the FE is embedded in the neural network's architecture, making it hard for interpretation. In this study, we propose to integrate symbolic regression (SR) as an FE process before a ML model to improve its performance. We show, through extensive experimentation on synthetic and 21 real-world datasets, that the incorporation of SR-derived features significantly enhances the predictive capabilities of both machine and DL regression models with 34%–86% root mean square error (RMSE) improvement in synthetic datasets and 4%–11.5% improvement in real-world datasets. In an additional realistic use case, we show the proposed method improves the ML performance in predicting superconducting critical temperatures based on Eliashberg theory by more than 20% in terms of RMSE. These results outline the potential of SR as an FE component in data-driven models, improving them in terms of performance and interpretability.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/autoencoder.pdf"},
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/sr_1.pdf"},
 					  {"info": "cite", "type": 3, "link": "Shmuel, A., Glickman, O., Lazebnik, T., Symbolic regression as a feature engineering method for machine and deep learning regression tasks. Machine Learning: Science and Technology. 2024."}],
 		 "authors": "Assaf Shmuel, Oren Glickman, Teddy Lazebnik",
          "year": 2024,
@@ -1038,7 +979,7 @@
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Going a Step Deeper Down the Rabbit Hole: Deep Learning Model to Measure the Size of the Unregistered Economy. Computational Economics. 2024."}],
 		 "authors": "Teddy Lazebnik",
          "year": 2024,
-         "topic":"Economic",
+         "topic":"Economics",
          "type":"Paper",
          "publisher":"Computational Economics",
          "publicationStatus":"Published"
@@ -1096,7 +1037,7 @@
          "description":"There is a critical need to develop and validate non-invasive animal-based indicators of affective states in livestock species, in order to integrate them into on-farm assessment protocols, potentially via the use of precision livestock farming (PLF) tools. One such promising approach is the use of vocal indicators. The acoustic structure of vocalizations and their functions were extensively studied in important livestock species, such as pigs, horses, poultry, and goats, yet cattle remain understudied in this context to date. Cows were shown to produce two types of vocalizations: low-frequency calls (LF), produced with the mouth closed, or partially closed, for close distance contacts, and open mouth emitted high-frequency calls (HF), produced for long-distance communication, with the latter considered to be largely associated with negative affective states. Moreover, cattle vocalizations were shown to contain information on individuality across a wide range of contexts, both negative and positive. Nowadays, dairy cows are facing a series of negative challenges and stressors in a typical production cycle, making vocalizations during negative affective states of special interest for research. One contribution of this study is providing the largest to date pre-processed (clean from noises) dataset of lactating adult multiparous dairy cows during negative affective states induced by visual isolation challenges. Here, we present two computational frameworks—deep learning based and explainable machine learning based, to classify high and low-frequency cattle calls and individual cow voice recognition. Our models in these two frameworks reached 87.2 and 89.4% accuracy for LF and HF classification, with 68.9 and 72.5% accuracy rates for the cow individual identification, respectively.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/BovineTalk.pdf"},
 					  {"info": "cite", "type": 3, "link": "Gavojdian, D., Mincu1, M., Lazebnik, T., Oren, A., Nicolae, I., Zamansky, A., BovineTalk: machine learning for vocalization analysis of dairy cattle under the negative affective state of isolation. Frontiers in Veterinary Science. 2024."}],
-		 "authors": "Dinu Gavojdian, Madalina Mincu1, Teddy Lazebnik, Ariel Oren, Ioana Nicolae, Anna Zamansky",
+		 "authors": "Dinu Gavojdian, Madalina Mincu, Teddy Lazebnik, Ariel Oren, Ioana Nicolae, Anna Zamansky",
          "year": 2024,
          "topic":"Machine Learning",
          "type":"Paper",
@@ -1156,7 +1097,7 @@
          "description":"The present study aimed to employ machine learning algorithms based on sensor behavior data for (1) early-onset detection of digital dermatitis (DD) and (2) DD prediction in dairy cows. Our machine learning model, which was based on the Tree-Based Pipeline Optimization Tool (TPOT) automatic machine learning method, for DD detection on day 0 of the appearance of the clinical signs has reached an accuracy of 79% on the test set, while the model for the prediction of DD 2 days prior to the appearance of the first clinical signs, which was a combination of K-means and TPOT, has reached an accuracy of 64%. The proposed machine learning models have the potential to help achieve a real-time automated tool for monitoring and diagnosing DD in lactating dairy cows based on sensor data in conventional dairy barn environments. Our results suggest that alterations in behavioral patterns can be used as inputs in an early warning system for herd management in order to detect variances in the health and wellbeing of individual cows.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/anna_1.pdf"},
 					  {"info": "cite", "type": 3, "link": "Magana, J., Gavojdian, D., Menahem, Y., Lazebnik, T., Zamansky, A., Adams-Progar, A. Machine learning approaches to predict and detect early-onset of digital dermatitis in dairy cows using sensor data. Animal Behavior and Welfare. 2023."}],
-		 "authors": "Jennifer Magana1, Dinu Gavojdian, Yakir Menahem, Teddy Lazebnik, Anna Zamansky, Amber Adams-Progar",
+		 "authors": "Jennifer Magana, Dinu Gavojdian, Yakir Menahem, Teddy Lazebnik, Anna Zamansky, Amber Adams-Progar",
          "year": 2023,
          "topic":"Machine Learning",
          "type":"Paper",
@@ -1189,7 +1130,7 @@
       },
 	{
          "name":"Academic co-authorship is a risky game",
-         "description":"Trust has proven to be a predictor of organizational outcomes. In some cases, such as law enforcement, achieving organizational goals requires workers to be willing to risk their lives. Is there a link between street-level bureaucrats’ (SLBs) willingness to endanger their own lives for the public and their trust in their peers, managers, and the institution to which they belong? Using a national survey of 2,733 police officers in Brazil and machine-learning-based methods, we found that there is a significant link between their willingness to risk their lives for others and their trust in their peers, managers, and the institution to which they belong. Our findings indicate that while these SLBs were very willing to risk their lives for certain groups, their willingness declined sharply for others such as lesbian, gay, bisexual, transgender, and questioning (LGBTQ)+ people and the homeless. In addition, police officers’ perceptions about discrimination, police professionalism, and organizational commitment and support are linearly linked to their willingness to risk their lives. Our findings demonstrate the important role of trust in understanding public servants’ practices in the extreme context of risking their lives for others.",
+         "description":"Conducting a project with multiple participants is a complex task that involves multiple social, economic, and psychological interactions. Conducting academic research in general and the process of writing an academic manuscript, in particular, is notorious for being challenging to successfully navigate due to the current form of collaboration dynamics common in academia. In this study, we propose a game-theory-based model for a coauthorship writing project in which authors are allowed to raise an ultimatum, blocking the publishment of the manuscript if they do not get more credit for the work. Using the proposed model, we explore the influence of the contribution and utility of publishing the manuscript on the rate one or more authors would gain from raising an ultimatum. Similarly, we show that the project’s duration and the current state have a major impact on this rate, as well as the number of authors. In addition, we examine common student-advisor and colleague-colleague co-authorships scenarios. Our model reveals disturbing results and demonstrates that the current, broadly accepted, academic practices for collaborations are designed in a way that stimulates authors to raise an ultimatum and stopped only by their integrity and not by a systematic design.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/risky_game.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Beck, S., Shami, L. Academic co-authorship is a risky game. Scientometrics. 2023."}],
 		 "authors": "Teddy Lazebnik, Stephan Beck, Labib Shami",
@@ -1242,7 +1183,7 @@
 					  {"info": "cite", "type": 3, "link": "Alexi, A., Lazebnik, T., Shami, L. Microfounded Tax Revenue Forecast Model with Heterogeneous Population and Genetic Algorithm Approach. Computational Economics. 2023."}],
 		 "authors": "Ariel Alexi, Teddy Lazebnik, Labib Shami",
          "year": 2023,
-         "topic":"Economic",
+         "topic":"Economics",
          "type":"Paper",
          "publisher":"Computational Economics",
          "publicationStatus":"Published"
@@ -1385,7 +1326,7 @@
 					  {"info": "cite", "type": 3, "link": "Shami, L., Lazebnik, T., Implementing Machine Learning Methods in Estimating the Size of the Non-observed Economy. Computational Economics. 2023."}],
 		 "authors": "Labib Shami, Teddy Lazebnik",
          "year": 2023,
-         "topic":"Economic",
+         "topic":"Economics",
          "type":"Paper",
          "publisher":"Computational Economics",
          "publicationStatus":"Published"
@@ -1397,7 +1338,7 @@
 					  {"info": "cite", "type": 3, "link": "Shami, L., Lazebnik, T., Financing and managing epidemiological-economic crises: Are we ready for another outbreak?. Journal of Policy Modeling. 2023."}],
 		 "authors": "Labib Shami, Teddy Lazebnik",
          "year": 2023,
-         "topic":"Economic",
+         "topic":"Economics",
          "type":"Paper",
          "publisher":"Journal of Policy Modeling",
          "publicationStatus":"Published"
@@ -1454,7 +1395,7 @@
          "name":"Mathematical model of coffee tree’s rust control using snails as biological agents",
          "description":"Coffee rust is one of the main diseases that affect coffee plantations worldwide, causing large-scale ecological and economic damage. While multiple methods have been proposed to tackle this challenge, using snails as biological agents have shown to be the most consistent and promising approach. However, snails are an invasive species, and overusing them can cause devastating outcomes. In this paper, we develop and explore an ecological–epidemiological mathematical model for the coffee tree rust pandemic control using snails as biological agents. We analyze the equilibria of the proposed system with their stability properties. In addition, we perform numerical analysis to obtain the sensitivity of the system to different changes and manipulation of the snails pandemic control, under specific conditions. Finally, we propose an in silico mechanism to obtain an analytical connection between the system’s initial condition and the number of snails needed to optimally control the rust pandemic spread while preventing the snail population to grow unmanageably. Our model can be used to optimize the usage of snails as biological agents to control the rust pandemic in spatially-small areas, by predicting the number of snails one needs to introduce to the ecosystem in order to obtain a desired outcome.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/coffee_first.pdf"},
-					  {"info": "cite", "type": 3, "link": "Herskowitzת Y., Bunimovich-Mendrazitsky, S., Lazebnik, T., Mathematical model of coffee tree’s rust control using snails as biological agents. Biosystems. 2023."}],
+					  {"info": "cite", "type": 3, "link": "Herskowitz, Y., Bunimovich-Mendrazitsky, S., Lazebnik, T., Mathematical model of coffee tree’s rust control using snails as biological agents. Biosystems. 2023."}],
 		 "authors": "Yonatan Herskowitz, Svetlana Bunimovich-Mendrazitsky, Teddy Lazebnik",
          "year": 2023,
          "topic":"Epidemiology",
@@ -1488,7 +1429,7 @@
       },
 	{
          "name":"The Trade-Off between Airborne Pandemic Control and Energy Consumption Using Air Ventilation Solutions",
-         "description":"A single paragraph of about 200 words maximum. For research articles, abstracts should give a pertinent overview of the work. We strongly encourage authors to use the following style of structured abstracts, but without headings: (1) Background: place the question addressed in a broad context and highlight the purpose of the study; (2) Methods: describe briefly the main methods or treatments applied; (3) Results: summarize the article’s main findings; (4) Conclusions: indicate the main conclusions or interpretations. The abstract should be an objective representation of the article, it must not contain results which are not presented and substantiated in the main text and should not exaggerate the main conclusions. Airborne diseases cause high mortality and adverse socioeconomic consequences. Due to urbanization, more people spend more time indoors. According to recent research, air ventilation reduces long-range airborne transmission in indoor settings. However, air ventilation solutions often incur significant energy costs and ecological footprints. The trade-offs between energy consumption and pandemic control indoors have not yet been thoroughly analyzed. In this work, we use advanced sensors to monitor the energy consumption and pandemic control capabilities of an air-conditioning system, a pedestal fan, and an open window in hospital rooms, classrooms, and conference rooms. A simulation of an indoor airborne pandemic spread of Coronavirus (COVID-19) is used to analyze the Pareto front. For the three examined room types, the Pareto front consists of all three air ventilation solutions, with some ventilation configurations demonstrating significant inefficiencies. Specifically, air-conditioning is found to be efficient only at a very high energy cost and fans seem to pose a reasonable alternative. To conclude, a more informed ventilation policy can bring about a more desirable compromise between energy consumption and pandemic spread control.",
+         "description":"Airborne diseases cause high mortality and adverse socioeconomic consequences. Due to urbanization, more people spend more time indoors. According to recent research, air ventilation reduces long-range airborne transmission in indoor settings. However, air ventilation solutions often incur significant energy costs and ecological footprints. The tradeoffs between energy consumption and pandemic control indoors have not yet been thoroughly analyzed. In this work, we use advanced sensors to monitor the energy consumption and pandemic control capabilities of an air-conditioning system, a pedestal fan, and an open window in hospital rooms, classrooms, and conference rooms. A simulation of an indoor airborne pandemic spread of Coronavirus (COVID-19) is used to analyze the Pareto front. For the three examined room types, the Pareto front consists of all three air ventilation solutions, with some ventilation configurations demonstrating significant inefficiencies. Specifically, air-conditioning is found to be efficient only at a very high energy cost and fans seem to pose a reasonable alternative. To conclude, a more informed ventilation policy can bring about a more desirable compromise between energy consumption and pandemic spread control.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/sensors_alexi.pdf"},
 					  {"info": "cite", "type": 3, "link": "Alexi, A., Rosenfeld, A., Lazebnik, T., The Trade-Off between Airborne Pandemic Control and Energy Consumption Using Air Ventilation Solutions. Sensors. 2022."}],
 		 "authors": "Ariel Alexi, Ariel Rosenfeld, Teddy Lazebnik",
@@ -1644,7 +1585,7 @@
       },
       {
          "name":"PDE based geometry model for BCG immunotherapy of bladder cancer",
-         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling",
+         "description":"BCG immunotherapy has shown significant success for bladder cancer treatment, but due to the complexity of the interaction between immunity and cancer, clinical outcomes vary significantly between patients. A possible approach to overcome this difficulty may be to develop new methodologies for personally predicting the results of therapy by integrating patient data with dynamic mathematical model. We present a model describing a BCG immunotherapy dynamic taking into consideration an approximation of the bladder’s geometry using PDE. We show that the proposed model takes into account the initial distribution of the cancer cells in the geometry of the bladder and as such can provide more customized treatment by providing tumor polyp depth in the urothelium. In addition, time optimal treatment protocol for the average case and recover-rate optimal, personalized treatment protocol based on initial tumor distribution have been analyzed.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/pde_biosystem_paper.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Aaroni, N., Bunimovich-Mendrazitsky, S., PDE based geometry model for BCG immunotherapy of bladder cancer. BioSystems. 2020."}],
 		 "authors": "Teddy Lazebnik, Niva Aaroni, and Svetlana Bunimovich-Mendrazitsky",
@@ -1656,7 +1597,7 @@
       },
       {
          "name":"Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling",
-         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modelingOptimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
+         "description":"Immunotherapy with Bacillus Calmette-Guérin (BCG) – an attenuated strain of Mycobacterium bovis (M. bovis) used for antituberculosis immunization – is a clinically established procedure for the treatment of superficial bladder cancer. Bunimovich-Mendrazitsky et al. studied the role of BCG immunotherapy in bladder cancer dynamics in a system of nonlinear ODEs. The purpose of this paper is to develop a first mathematical model that uses PDEs to describe tumor-immune interactions in the bladder as a result of BCG therapy considering the geometrical configuration of the human bladder. A mathematical analysis of the BCG as a PDE model identifies multiple equilibrium points, and their stability properties are identified so that treatment that has potential to result in a tumor-free equilibrium can be determined. Estimating parameters and validating the model using published data are taken from in vitro, mouse and human studies. The model makes clear that intensity of immunotherapy must be kept within limited bounds. We use numerical analysis methods to find the solution of the PDE describing the tumor-immune interaction; in particular, analysis of the solution’s stability for a given parameters is presented using Computer Vision methodologies.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., Bunimovich-Mendrazitsky, S., Aaroni, N., Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations. 2019."}],
 		 "authors": "Teddy Lazebnik, Shlomo Yanetz, Svetlana Bunimovich-Mendrazitsky, and Niva Aaroni",
@@ -1668,7 +1609,7 @@
       },
       {
          "name":"PDE Modeling of Bladder Cancer Treatment Using BCG Immunotherapy",
-         "description":"Optimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modelingOptimal BCG-based immunotherapy treatment protocol for bladder cancer mathematical model that taking into considuration approximation of the geometrical configuration of the human bladder using PDE modeling.",
+         "description":"Immunotherapy with Bacillus Calmette-Guérin (BCG) – an attenuated strain of Mycobacterium bovis (M. bovis) used for antituberculosis immunization – is a clinically established procedure for the treatment of superficial bladder cancer. Bunimovich-Mendrazitsky et al. studied the role of BCG immunotherapy in bladder cancer dynamics in a system of nonlinear ODEs. The purpose of this paper is to develop a first mathematical model that uses PDEs to describe tumor-immune interactions in the bladder as a result of BCG therapy considering the geometrical configuration of the human bladder. A mathematical analysis of the BCG as a PDE model identifies multiple equilibrium points, and their stability properties are identified so that treatment that has potential to result in a tumor-free equilibrium can be determined. Estimating parameters and validating the model using published data are taken from in vitro, mouse and human studies. The model makes clear that intensity of immunotherapy must be kept within limited bounds. We use numerical analysis methods to find the solution of the PDE describing the tumor-immune interaction; in particular, analysis of the solution’s stability for a given parameters is presented using Computer Vision methodologies.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/Treatment_of_Bladder_Cancer_Using_BCG_Immunotherapy.pdf"},
 					  {"info": "cite", "type": 3, "link": "Lazebnik, T., Yanetz, S., Bunimovich-Mendrazitsky, S., Treatment of Bladder Cancer Using BCG Immunotherapy: PDE Modeling. Functional Differential Equations. 2019."}],
 		 "authors": "Teddy Lazebnik, Shlomo Yanetz, and Svetlana Bunimovich-Mendrazitsky",

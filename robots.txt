@@ -1,3 +1,26 @@
-Sitemap: /sitemap.xml
+# Research papers in /files/ may be indexed by search engines and Google Scholar.
+# Course material (homework, solutions, exams, exercises, lecture notes and the
+# course folders) stays out of search results.
 User-agent: *
-Disallow: /*.pdf
+Disallow: /files/*hw
+Disallow: /files/*home_work
+Disallow: /files/*answer
+Disallow: /files/*-sol.
+Disallow: /files/*exam
+Disallow: /files/*Exercise
+Disallow: /files/*lecture
+Disallow: /files/*lession
+Disallow: /files/*project
+Disallow: /files/*_course
+Disallow: /files/numerical_analysis_
+Disallow: /files/linear_optimization_
+Disallow: /files/dual_simplex_
+Disallow: /files/DOptimization
+Disallow: /files/haifa_rl_course/
+Disallow: /files/hit_math_cyber/
+Disallow: /files/ju_rl_course/
+Disallow: /files/rl_course/
+Disallow: /files/students/
+Disallow: /files/topology_course_papers/
+
+Sitemap: https://teddylazebnik.com/sitemap.xml
