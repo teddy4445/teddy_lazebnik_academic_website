@@ -1,6 +1,54 @@
 {
    "publications":[
 	{
+         "name":"Modeling the effects of pandemics on physiology-related fertility decline in society",
+         "description":"Pandemics throughout history have raised challenges in many forms, such as increased mortality rates, economic instability, and political shifts. Recent pandemics, coupled with globally declining fertility rates, pose unprecedented demographic challenges for humanity. A pandemic is inherently connected to a population’s fertility in many ways - psychological, economic, and, most importantly, physiological. Nevertheless, this connection is mostly left unintended, blinding us to the effects of the pandemic-caused physiological fertility decline on the population’s growth over time. In this study, we proposed a novel epidemiological model incorporating physiological fertility decline dynamics using an extended Susceptible-Infected-Recovered (SIR) model incorporating age groups, genders, birth and death dynamics, and infection-induced physiological fertility decline. Our model, based on real-world data from 10 large cities globally, demonstrates the impact of infection on fertility, which can persist for generations, creating demographic ripple effects that extend well beyond the immediate pandemic period. That said, the fertility drop is secondary to the pandemic spread, even for relatively high fertility decline due to the pathogen. These results have significant implications for public health policy and population planning. They highlight the need to integrate fertility considerations into pandemic preparedness strategies. Our study provides a quantitative framework for assessing the long-term demographic impacts of pandemics, offering policymakers tools to assess and potentially mitigate the impact of future disease outbreaks at the population level.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/fepid-6-1740829.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "T. Lazebnik, S. Bunimovich-Medrazitsky, A. Alexi, Modeling the effects of pandemics on physiology-related fertility decline in society. Frontiers in Epidemiology. 2026."}],
+         "topic":"Machine Learning",
+		 "authors": "Teddy Lazebnik, Svetlana Bunimovich-Medrazitsky, Ariel Alexi",
+         "year": 2026,
+         "type":"Paper",
+         "publisher":"Frontiers in Epidemiology",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Bi-national academic funding and collaboration dynamics: the case of the German-Israeli foundation",
+         "description":"Academic grant programs are widely used to motivate international research collaboration and boost scientific impact across borders. Among these, bi-national funding schemes–pairing researchers from just two designated countries–are common yet understudied compared with national and multinational funding. In this study, we explore whether bi-national programs are associated with new collaborations and lasting partnerships. To this end, we conducted an observationa bibliometric case study of the German–Israeli Foundation (GIF), covering 642 grants, 2386 researchers, and 52,847 publications. Our results show that GIF funding is associated with increased co-authorship behavior during, and even slightly before, the grant period, but it is rarely linked with long-lasting co-authorship patterns that persist once the funding concludes. By tracing co-authorship before, during, and after the funding period, clustering collaboration trajectories with temporally ware K-means, and predicting cluster membership with ML models, we find that 45% of teams with no prior co-authored publications become active while funded, yet activity declines rapidly post-award; roughly one-third sustain longer-term co-authorship activity, whereas only a small subset sustains high, lasting co-authorship activity. Moreover, the team’s composition and bibliometrics are found to be largely insufficient in predicting co-authorship activity during and after the grant.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/s11192-026-05769-w.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "E. Biffi,. Valsecchi, Bi-national academic funding and collaboration dynamics: the case of the German-Israeli foundation. Scientometrics . 2026."}],
+         "topic":"Machine Learning",
+		 "authors": "Amit Bengiat, Teddy Lazebnik, Philipp Mayr, Ariel Rosenfeld",
+         "year": 2026,
+         "type":"Paper",
+         "publisher":"Scientometrics",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Hearing shapes: the Bouba–Kiki effect in adult domestic dogs",
+         "description":"The ‘Bouba–Kiki effect’ is an example of spontaneous association between auditory and visual stimuli, described in humans as a case of sound symbolism, a predisposition linked to language. Recent evidence showed that 3-day-old chicks also exhibit a spontaneous association between round and spiky shapes and the sounds ‘Bouba’ and ‘Kiki,’ respectively, thus suggesting that the effect may rather be an instance of a more widespread cross-modal correspondence. We investigated whether the Bouba–Kiki effect is present in adult domestic dogs (Canis familiaris) by investigating dogs’ spontaneous tendency to associate a spiky or a rounded shape to the ‘Bouba’ and ‘Kiki’ sounds. Dogs looked significantly more at the rounded shape while ‘Bouba’ was played, and they looked at and explored the spiky shape when ‘Kiki’ was played. Our results suggest that a spontaneous sound–shape association akin to that of humans is also present in adult domestic dogs. Further studies are needed to investigate the function and ontogenesis of this cognitive process.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/rspb.2026.1209.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "E. Biffi, G. Pedretti, S. Normando, T. Lazebnik, M. Loconsole, P. Valsecchi, Hearing shapes: the Bouba–Kiki effect in adult domestic dogs. Proceedings of the Royal Society B. 2026."}],
+         "topic":"Machine Learning",
+		 "authors": "Eleonora Biffi, Giulia Pedretti, Simona Normando; Teddy Lazebnik, Maria Loconsole, Paola Valsecchi",
+         "year": 2026,
+         "type":"Paper",
+         "publisher":"Proceedings of the Royal Society B",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Less is more: comparison of automated spiral-drawing metrics with clinician-rated tremor scores after MRgFUS thalamotomy",
+         "description":"Objective measures of tremor could improve assessment of response to magnetic resonance-guided focused ultrasound (MRgFUS) for essential tremor in practice, but it is unclear whether image-derived metrics from spiral drawings reflect clinician judgment. In this study, we analyzed 410 spiral-drawing observations from 106 patients with essential tremor undergoing MRgFUS thalamotomy and compared two recent computer-vision measures with a simple geometric metric (total line length) against an ordinal clinical rating scale for tremor spiral scores using ordered logistic mixed-effects models. Only line length independently tracked worse clinician-rated severity (odds ratio(per 1 mm) 1.017, p < 0.01), whereas the two image-based scores showed no significant association. The model captured the expected treatment signature, with marked post-procedural improvement confined to the treated hand. These findings suggest that low-complexity interpretable features may better approximate clinically meaningful tremor severity than more elaborate image-processing metrics and support further validation against functional outcomes.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/fneur-17-1848802.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "M. Katson, T. Lazebnik, M. Har-Even, M. Glebov, F. Naamnih, A. Sinai, M. Nassar, I. Senderova, M. Constantinescu, L. Lev Tov, V. Aharonson, I. Schlesinger, Less is more: comparison of automated spiral-drawing metrics with clinician-rated tremor scores after MRgFUS thalamotomy. Frontiers in Neurology. 2026."}],
+         "topic":"Machine Learning",
+		 "authors": "Mark Katson, Teddy Lazebnik, Meirav Har-Even, Maxim Glebov, Fawzia Naamnih, Alon Sinai, Maria Nassar, Inna Senderova, Marius Constantinescu, Lior Lev Tov, Vered Aharonson, Ilana Schlesinger",
+         "year": 2026,
+         "type":"Paper",
+         "publisher":"Frontiers in Neurology",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Short communications: a methodological pilot comparing facial, endocrine, and observer-based welfare measures in service dogs (Canis lupus familiaris)",
          "description":"Service dogs perform complex tasks in cognitively demanding environments, yet their welfare during training is often inferred from performance rather than measured directly. Several behavioral and physiological measures characterize how dogs respond to training, but researchers rarely apply them concurrently to the same animals. For this reason, we compared three such measures in seven purpose-bred Labrador Retrievers from a single litter during standardized early-stage training: facial behaviors associated with negative affective contexts (coded using DogFACS), urinary cortisol, and observer-based behavioral assessments by experienced trainers and non-expert observers. For each measure, dogs were ranked within the cohort according to that measure's directional convention, and all pairings were compared using Kendall's tau (τ). Rankings varied substantially across measures. Expert assessments agreed most strongly with urinary cortisol (τ = 0.67), non-expert assessments agreed with cortisol at a similar level (τ = 0.60), and expert and non-expert assessments agreed strongly with one another (τ = 0.65). By contrast, facial-behavior rankings showed no agreement with cortisol (τ = 0.00) and weak to very weak agreement with the observer measures (τ = 0.25 and 0.14). Because this was a small, closely related cohort assessed without a non-training control condition, these results cannot establish the validity of any measure. They instead show that measures can characterize the same dogs differently, highlighting the methodological challenges of welfare assessment in working dogs and the need for larger, adequately designed studies.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/short_animal.pdf"},
