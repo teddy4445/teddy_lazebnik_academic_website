@@ -109,10 +109,16 @@
             },
             "updates": [
                 {
+                    "title": "No lecture this week (12.11.2026)",
+                    "description": "Please note the lecture is cancelled. You will be informed about a new date as soon as possible.",
+                    "date": "11.12.2026",
+                    "link": ""
+                },
+                {
                     "title": "Zoom link for the second lecture",
-                    "description": "A Zoom link for the second lecture (23.10.2026): https://www.google.com/url?q=https://us02web.zoom.us/j/88934126371&sa=D&source=calendar&usd=2&usg=AOvVaw2EwmyHHSULQflycejcTY-o",
+                    "description": "A Zoom link for the second lecture (23.10.2026): Removed",
                     "date": "10.23.2026",
-                    "link": "https://www.google.com/url?q=https://us02web.zoom.us/j/88934126371&sa=D&source=calendar&usd=2&usg=AOvVaw2EwmyHHSULQflycejcTY-o"
+                    "link": ""
                 },
                 {
                     "title": "Welcome to our RL course!",
