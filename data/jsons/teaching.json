@@ -110,9 +110,9 @@
             "updates": [
                 {
                     "title": "Zoom link for the second lecture",
-                    "description": "A Zoom link for the second lecture (23.10.2026): https://www.google.com/url?q=https://us02web.zoom.us/j/88934126371&sa=D&source=calendar&usd=2&usg=AOvVaw2EwmyHHSULQflycejcTY-o",
+                    "description": "A Zoom link for the second lecture (23.10.2026): Removed",
                     "date": "10.23.2026",
-                    "link": "https://www.google.com/url?q=https://us02web.zoom.us/j/88934126371&sa=D&source=calendar&usd=2&usg=AOvVaw2EwmyHHSULQflycejcTY-o"
+                    "link": " "
                 },
                 {
                     "title": "Welcome to our RL course!",
@@ -136,7 +136,7 @@
                             {
                                 "name": "Lession 1: recodings",
                                 "link": "",
-                                "description": "https://us02web.zoom.us/rec/share/uYigVbpLXTzoZK56EdfeJmxB-WlqS9vgEWctqrB1czMtOTWlr0EFBLjzUkdeP9qM.WPGWEXelOvxvK6c4?startTime=1792732739000",
+                                "link": "https://us02web.zoom.us/rec/share/lSVEHMkw0C3SO60J8QAKd9lDzPUVPn0VgeBIzaOrfSfGt_nKtm-wLFt6j5VXCXAq._9DRzlA12UWGbU3H",
                                 "type": "video"
                             },
                             {
@@ -177,7 +177,7 @@
                             },
                             {
                                 "name": "Lession 2: recodings",
-                                "link": "",
+                                "link": "https://us02web.zoom.us/rec/share/uYigVbpLXTzoZK56EdfeJmxB-WlqS9vgEWctqrB1czMtOTWlr0EFBLjzUkdeP9qM.WPGWEXelOvxvK6c4?startTime=1792732739000",
                                 "description": "https://us02web.zoom.us/rec/share/uYigVbpLXTzoZK56EdfeJmxB-WlqS9vgEWctqrB1czMtOTWlr0EFBLjzUkdeP9qM.WPGWEXelOvxvK6c4?startTime=1792732739000",
                                 "type": "video"
                             },
@@ -189,7 +189,7 @@
                             },
                             {
                                 "name": "Lession 3: recodings",
-                                "link": "",
+                                "link": "https://us02web.zoom.us/rec/share/Dwao3QBoWLWd3NEisJp_OOjMPPsf4Sw3gsNVgeA28xvWMhQO2hdJLLsEg8UoEyos.FfqyKx1BU9gJ4eSJ",
                                 "description": "https://us02web.zoom.us/rec/share/Dwao3QBoWLWd3NEisJp_OOjMPPsf4Sw3gsNVgeA28xvWMhQO2hdJLLsEg8UoEyos.FfqyKx1BU9gJ4eSJ",
                                 "type": "video"
                             }
@@ -209,8 +209,8 @@
                             },
                             {
                                 "name": "Lession 4: recodings",
-                                "link": "",
-                                "description": "",
+                                "link": "https://us02web.zoom.us/rec/share/GSbMsikIyQxriIDD2BkaJrhHey6F7qF18q9teB536os2NChFinWrs-qaW8wSFk2E.IQxWVZoDyuLtiCf8",
+                                "description": "https://us02web.zoom.us/rec/share/GSbMsikIyQxriIDD2BkaJrhHey6F7qF18q9teB536os2NChFinWrs-qaW8wSFk2E.IQxWVZoDyuLtiCf8",
                                 "type": "video"
                             },
                             {
@@ -522,7 +522,7 @@
         {
             "name": "Reinforcement Leanring",
             "passkey": "haifa2026",
-            "code": "2143704",
+            "code": "2143704_2026",
             "year": "2026",
             "topic": "cs",
             "semester": "2",
