@@ -1,5 +1,7 @@
 
 function descriptionTrim(desc, className, otherClass = "") {
+    // Descriptions are optional, including for course recordings.
+    desc = desc ?? "";
     var extandedClass = (otherClass=="")? "": " "+otherClass;
     if(desc.length > 150) {
         return '<p class="' + className + extandedClass +'">' + desc.slice(0, 150) + '<span class="dots">... </span><span class="more-section">'
