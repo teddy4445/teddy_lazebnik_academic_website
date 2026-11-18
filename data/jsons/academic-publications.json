@@ -1,6 +1,18 @@
 {
    "publications":[
 	{
+         "name":"A spatiotemporal ecological–epidemiological model for malaria-borne mosquito control",
+         "description":"Malaria remains one of the world's most persistent infectious diseases, driven by complex interactions among human mobility, vector ecology, and environmental heterogeneity. Because mosquito larvae concentrate in aquatic habitats, biological control using larvivorous fish has long been used as a sustainable complement to insecticides. However, introducing predatory fish creates a central ecological trade-off where the same intervention that suppresses mosquito emergence also disrupts native aquatic communities. Addressing this concern, we develop a spatiotemporal eco-epidemiological framework that links vector-borne human pandemic spread, mosquito population movement and reproduction dynamics, and two interacting fish populations in which one intervention fish is introduced to consume larvae, and a native fish population is to be conserved. Within this framework, we compare a one-time offline deployment strategy with a dynamic monitoring strategy that updates fish release in response to local system states. Our results identify conditions under which adaptive deployment achieves a better balance between reducing human infections and preserving native fish, offering a principled basis for ecologically informed malaria control in heterogeneous urban landscapes. Quantitatively, both the offline and the monitoring strategy avert roughly two-thirds of the no-intervention infection burden and differ only modestly in epidemiological outcome. The monitoring strategy attains comparable infection control at a lower native-fish loss.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/leeor_1.pdf"},
+		 					  {"info": "cite", "type": 3, "link": "L-O. Alon, T. Lazebnik, A spatiotemporal ecological–epidemiological model for malaria-borne mosquito control. Chaos. 2026."}],
+         "topic":"Machine Learning",
+		 "authors": "Lee-or Alon, Teddy Lazebnik",
+         "year": 2026,
+         "type":"Paper",
+         "publisher":"Chaos",
+         "publicationStatus":"Published"
+      },
+	{
          "name":"Capturing Thought Dynamics: Modeling the Structure of Spontaneous Associations",
          "description":"Human thought unfolds in patterns that vary across individuals; some move fluidly across ideas, whereas others return to narrower or more repetitive paths. Here, we asked whether structural aspects of associative thinking—its breadth, trajectory, and temporal pace—can account for individual differences in repetitive thought styles such as rumination. Participants completed brief free-association tasks, and their responses were quantified using a model trained on large-scale free association data to derive individual structural profiles of associative flow. Across two independent samples, these profiles predicted self-reported measures of rumination and repetitive thinking, with nonlinear models accounting for meaningful inter-individual variation and showing generalization across tasks and datasets. These findings suggest that individual differences in repetitive thought are reflected not only in what people think about but also in how associations are organized and unfold over time. Structural modeling therefore provides a viable approach to characterizing spontaneous cognition through patterns of associative organization.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/vardi.pdf"},
